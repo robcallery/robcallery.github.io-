@@ -30,7 +30,13 @@
   .under{position:absolute;top:calc(var(--pw)*-.025);bottom:calc(var(--pw)*-.025);width:calc(var(--pw)*1.025);background:linear-gradient(135deg,var(--burg),var(--burg2));box-shadow:0 30px 60px rgba(0,0,0,.5);transition:opacity .5s}
   .under.l{left:calc(var(--pw)*-.025);border-radius:14px 0 0 14px}
   .under.r{right:calc(var(--pw)*-.025);border-radius:0 14px 14px 0}
-  .stage.closed .under.l{opacity:0}
+  .under.l{transition:opacity .25s .85s}
+  .stage.closed .under.l{opacity:0;transition-delay:0s}
+  .page.inside{background:linear-gradient(135deg,var(--burg2),var(--burg));padding:calc(var(--pw)*.04)}
+  .page.inside .ep{position:relative;flex:1;border-radius:4px;background:var(--paper);display:grid;place-items:center;text-align:center;box-shadow:inset 0 0 0 1px rgba(0,0,0,.08)}
+  .page.inside .own{position:relative;display:flex;flex-direction:column;gap:.5em;align-items:center;color:#6f6450}
+  .page.inside .own span{font-size:.7em;letter-spacing:.12em;text-transform:uppercase}
+  .page.inside .own b{font-family:"Caveat",cursive;font-weight:700;font-size:2.4em;color:#1d3a8a;letter-spacing:0}
   .spine{position:absolute;left:calc(50% - 3px);top:0;bottom:0;width:6px;background:linear-gradient(90deg,rgba(0,0,0,.25),rgba(0,0,0,0));z-index:400;pointer-events:none}
   .stage.closed .spine{opacity:0}
   .leaf{position:absolute;top:0;left:50%;width:var(--pw);height:100%;transform-origin:0 50%;transform-style:preserve-3d;transition:transform 1s cubic-bezier(.45,.05,.25,1);cursor:pointer}
@@ -195,6 +201,7 @@
     while(x<300){var w=8+rnd()*22,h=12+rnd()*40;if(rnd()<.15){d+=' L'+x+' '+(60-h)+' L'+(x+w/2)+' '+(60-h-14)+' L'+(x+w)+' '+(60-h);}else{d+=' L'+x+' '+(60-h)+' L'+(x+w)+' '+(60-h);}x+=w;}
     return '<svg class="sky" viewBox="0 0 300 60" preserveAspectRatio="none"><path d="'+d+' L300 60 Z" fill="#000"/></svg>';
   }
+  var INSIDE='<div class="ep">'+wm()+'<div class="own"><span>This guide belongs to</span><b>ROB CALLERY</b><span>If found, return it to the nearest bar.</span></div></div>';
   var pages=[];
   pages.push({cls:'cover',html:'<div class="t1">TRAVEL GUIDES</div><svg class="gl" viewBox="190 157 700 700"><circle cx="540" cy="507" r="345" fill="#0a1838"/><path fill="#f7f2e4" fill-rule="evenodd" d="'+GLOBE+'"/></svg><div><div class="t3">one beer at a time</div></div><div class="by">ROB CALLERY</div><div class="hint">tap to open</div>'});
   var rows=[],lastC=null;beers.forEach(function(g,i){if(g.country!==lastC){rows.push({grp:g.country||''});lastC=g.country}rows.push({g:g,i:i})});
@@ -229,6 +236,7 @@
     stage.classList.toggle('single',single);
     leaves.forEach(function(l){l.remove()}); leaves=[];
     var list=pages.slice();
+    if(!single) list.splice(1,0,{cls:'inside',html:INSIDE});
     lastBack=false; if(!single){ if(list.length%2) list.push({cls:'',html:wm()}); else lastBack=true; }
     var step=single?1:2;
     for(var i=0;i<list.length;i+=step){
@@ -252,7 +260,7 @@
     var label;
     if(cur===0) label='Closed';
     else if(single){ label=cur<=C?'Contents':(cur-C<=beers.length?(beers[cur-1-C]?beers[cur-1-C].city:'')+' · '+(cur-C)+' of '+beers.length:'Next stop'); if(cur-C>beers.length) label='Next stop'; }
-    else { var a=2*cur-1; label=(a+1)<=C?'Contents':(cur===N?'Page '+a:'Pages '+a+'–'+(a+1)); }
+    else { var a=2*cur-2; label=(cur===1||a<=C)?'Contents':(cur===N?'Page '+a:'Pages '+a+'–'+(a+1)); }
     document.getElementById('count').textContent=label;
     if(moving>=0) setTimeout(function(){layout(-1)},1000);
   }
