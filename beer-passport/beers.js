@@ -19,7 +19,7 @@ window.BEERS = [
   { name: "Cruzcampo", brewery: "Cruzcampo", brewedIn: "Seville", brewedCountry: "Spain" },
   { name: "Cruzcampo Radler", brewery: "Cruzcampo", brewedIn: "Seville", brewedCountry: "Spain" },
   { name: "Disco King", brewery: "Turning Point Brew Co.", brewedIn: "Knaresborough", brewedCountry: "England" },
-  { name: "Dockside Haze" },
+  { name: "Dockside Haze", brewery: "Florida Avenue Brewing Co.", brewedIn: "Tampa, Florida", brewedCountry: "USA" },
   { name: "Easy Going Assassin", brewery: "Rooster's Brewing Co.", brewedIn: "Harrogate", brewedCountry: "England" },
   { name: "Echo Chamber", brewery: "Rooster's Brewing Co.", brewedIn: "Harrogate", brewedCountry: "England" },
   { name: "Estrella Damm", brewery: "Damm", brewedIn: "Barcelona", brewedCountry: "Spain" },
@@ -37,7 +37,7 @@ window.BEERS = [
   { name: "Peroni Red", brewery: "Peroni", brewedIn: "Rome", brewedCountry: "Italy" },
   { name: "Smithwick's Irish Pale Ale", brewery: "Smithwick's", brewedIn: "Dublin", brewedCountry: "Ireland" },
   { name: "Stanley Pilsner" },
-  { name: "Three Wishes IPA" },
+  { name: "Three Wishes IPA", brewery: "D3 Brewing Co.", brewedIn: "Orlando, Florida", brewedCountry: "USA" },
   { name: "Yankee", brewery: "Rooster's Brewing Co.", brewedIn: "Harrogate", brewedCountry: "England" },
   { name: "Yippy IPA", brewery: "Porterhouse Brew Co.", brewedIn: "Dublin", brewedCountry: "Ireland" }
 ];
