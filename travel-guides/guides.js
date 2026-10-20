@@ -47,7 +47,6 @@ window.GUIDES = [
   {
     city: "Dewsbury", region: "West Yorkshire", country: "United Kingdom", colour: "purple",
     pint: "~£4.50", localBeer: "Timothy Taylor Landlord", bestFor: "Station pub & canal pints",
-    spoons: { name: "The Union Rooms, Batley", note: "Dewsbury's Timepiece has closed, so it's a short hop to Batley", nearest: true },
     bars: [
       { name: "West Riding Refreshment Rooms", note: "on the station platform, ten handpumps" },
       { name: "Leggers Inn", note: "hayloft bar above old stables by the canal basin" }
@@ -128,7 +127,6 @@ window.GUIDES = [
   {
     city: "Boroughbridge", region: "North Yorkshire", country: "United Kingdom", colour: "purple",
     pint: "~£5", localBeer: "Rudgate Jorvik Blonde", bestFor: "Historic interiors",
-    spoons: { name: "The Unicorn Hotel, Ripon", note: "no Spoons in Boroughbridge - this is the nearest, on Ripon market place", nearest: true },
     bars: [
       { name: "Tap on the Tutt", note: "1930s interior CAMRA rates of national importance" },
       { name: "The Crown Hotel", note: "17th-century coaching inn on the old Great North Road" }
@@ -167,7 +165,6 @@ window.GUIDES = [
   {
     city: "Tokyo", region: "Kanto", country: "Japan", colour: "red",
     pint: "¥600–1,200", localBeer: "Japanese craft on tap", bestFor: "Craft bars & tiny back-alley drinking",
-    spoons: { none: true, note: "Spoons is UK & Ireland only" },
     bars: [
       { name: "Mikkeller Bar Tokyo", note: "Shibuya, 20 taps over two floors" },
       { name: "DevilCraft", note: "Kanda/Nihonbashi, house IPAs and deep-dish pizza" },
@@ -181,7 +178,6 @@ window.GUIDES = [
   {
     city: "Osaka", region: "Kansai", country: "Japan", colour: "orange",
     pint: "¥600–1,500", localBeer: "Minoh Beer", bestFor: "Street food & beer",
-    spoons: { none: true, note: "Spoons is UK & Ireland only" },
     bars: [
       { name: "Beer Belly Tenma", note: "Minoh Brewery's flagship, a dozen of their beers, no cover charge" },
       { name: "Dotonbori Brewery Factory", note: "brewed on site under the Shochikuza theatre" },
@@ -195,7 +191,6 @@ window.GUIDES = [
   {
     city: "Orlando", region: "Florida", country: "United States", colour: "purple",
     pint: "~$7–9", localBeer: "Ivanhoe Park Brewing", bestFor: "Breaks between the parks",
-    spoons: { none: true, note: "Spoons is UK & Ireland only" },
     bars: [
       { name: "Redlight Redlight", note: "Audubon Park, long-time beer bar turned microbrewery" },
       { name: "Ivanhoe Park Brewing Co.", note: "Ivanhoe Village, themed on a lost lakeside amusement park" },
@@ -209,7 +204,6 @@ window.GUIDES = [
   {
     city: "Tampa Bay", region: "Florida", country: "United States", colour: "teal",
     pint: "~$7–9", localBeer: "Cigar City Jai Alai", bestFor: "Brewery hopping",
-    spoons: { none: true, note: "Spoons is UK & Ireland only" },
     bars: [
       { name: "Sky Puppy Brewing", note: "Ybor City, inside Tampa's oldest original firehouse" },
       { name: "BarrieHaus Beer Co.", note: "Ybor City lager specialists with a beer-garden feel" },
@@ -223,7 +217,6 @@ window.GUIDES = [
   {
     city: "Kissimmee", region: "Florida", country: "United States", colour: "green",
     pint: "~$7–9", localBeer: "Florida craft on tap", bestFor: "Pints near the parks",
-    spoons: { none: true, note: "Spoons is UK & Ireland only" },
     bars: [
       { name: "The Fox & Hounds Public House", note: "British pub food and pints for when you're homesick" },
       { name: "Rock & Brews", note: "craft beer, comfort food and rock music" },
@@ -237,7 +230,6 @@ window.GUIDES = [
   {
     city: "Chicago", region: "Illinois", country: "United States", colour: "blue",
     pint: "~$7–9", localBeer: "Goose Island", bestFor: "Historic taverns",
-    spoons: { none: true, note: "Spoons is UK & Ireland only" },
     bars: [
       { name: "Billy Goat Tavern", note: "home of the 1945 'Curse of the Billy Goat' on the Cubs" },
       { name: "The Berghoff", note: "holds Chicago liquor licence No. 1" },
@@ -251,7 +243,6 @@ window.GUIDES = [
   {
     city: "Philadelphia", region: "Pennsylvania", country: "United States", colour: "red",
     pint: "~$7–9", localBeer: "Yards Brewing", bestFor: "Old taverns & Belgian beer",
-    spoons: { none: true, note: "Spoons is UK & Ireland only" },
     bars: [
       { name: "McGillin's Olde Ale House", note: "since 1860, the oldest continuously operating bar in Philly" },
       { name: "Monk's Café", note: "Rittenhouse, a Belgian beer emporium" },
