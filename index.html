@@ -141,9 +141,14 @@
 
     <!-- match on: the ball goes keeper to keeper above the roof while fans are inside -->
     <g class="ballx"><g class="bally"><g class="ballspin">
-      <circle r="10" fill="#ffffff" stroke="#1a1a1a" stroke-width="1.2"/>
-      <path d="M0 -3.6 L3.4 -1.1 L2.1 2.9 L-2.1 2.9 L-3.4 -1.1 Z" fill="#1a1a1a"/>
-      <path d="M0 -10 L0 -3.6 M3.4 -1.1 L9.5 -3 M2.1 2.9 L5.9 8.1 M-2.1 2.9 L-5.9 8.1 M-3.4 -1.1 L-9.5 -3" stroke="#1a1a1a" stroke-width="1.1"/>
+      <defs><clipPath id="ballClip"><circle r="10"/></clipPath><radialGradient id="ballShade" cx=".35" cy=".3" r=".8"><stop offset="0" stop-color="#ffffff"/><stop offset=".7" stop-color="#eef0f2"/><stop offset="1" stop-color="#b9bec6"/></radialGradient></defs>
+      <circle r="10" fill="url(#ballShade)"/>
+      <g clip-path="url(#ballClip)">
+        <path d="M0.00 -3.30 L3.14 -1.02 L1.94 2.67 L-1.94 2.67 L-3.14 -1.02 Z" fill="#151515"/>
+        <path d="M0.00 -5.90 L-3.14 -8.18 L-1.94 -11.87 L1.94 -11.87 L3.14 -8.18 Z" fill="#151515"/><path d="M5.61 -1.82 L6.81 -5.51 L10.69 -5.51 L11.89 -1.82 L8.75 0.46 Z" fill="#151515"/><path d="M3.47 4.77 L7.35 4.77 L8.55 8.46 L5.41 10.74 L2.27 8.46 Z" fill="#151515"/><path d="M-3.47 4.77 L-2.27 8.46 L-5.41 10.74 L-8.55 8.46 L-7.35 4.77 Z" fill="#151515"/><path d="M-5.61 -1.82 L-8.75 0.46 L-11.89 -1.82 L-10.69 -5.51 L-6.81 -5.51 Z" fill="#151515"/>
+        <path d="M0.00 -3.30 L0.00 -5.90 M3.14 -8.18 L6.81 -5.51 M4.97 -6.85 L5.88 -8.09 M3.14 -1.02 L5.61 -1.82 M8.75 0.46 L7.35 4.77 M8.05 2.62 L9.51 3.09 M1.94 2.67 L3.47 4.77 M2.27 8.46 L-2.27 8.46 M0.00 8.46 L0.00 10.00 M-1.94 2.67 L-3.47 4.77 M-7.35 4.77 L-8.75 0.46 M-8.05 2.62 L-9.51 3.09 M-3.14 -1.02 L-5.61 -1.82 M-6.81 -5.51 L-3.14 -8.18 M-4.97 -6.85 L-5.88 -8.09" stroke="#555" stroke-width=".7" fill="none"/>
+      </g>
+      <circle r="10" fill="none" stroke="#2a2a2a" stroke-width="1"/>
     </g></g></g>
 
     <!-- Elland Road from the outside: back of the East Stand -->
