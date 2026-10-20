@@ -91,6 +91,8 @@
   .sample{position:absolute;top:44%;left:50%;transform:translate(-50%,-50%) rotate(-24deg);font-family:"Bebas Neue",Impact,sans-serif;font-size:3.4em;letter-spacing:.2em;color:rgba(196,48,43,.16);border:.08em solid rgba(196,48,43,.16);padding:0 .3em;pointer-events:none;white-space:nowrap}
   .await .stamp{opacity:.35}
   .await .fields .v{color:transparent}
+  .unk{color:#a39675;font-style:normal;font-weight:400}
+  .stampbox{height:50%}
   .await-msg{text-align:center;font-family:"Caveat",cursive;font-size:1.35em;color:#8a7a58;margin-top:.6em}
   .backin{background:linear-gradient(135deg,var(--burg2),var(--burg));}
 
@@ -144,22 +146,47 @@
   function top(label,n){return '<div class="top"><span>'+label+'</span><span class="pno">'+(n<10?'0':'')+n+'</span></div>'}
   function mrz(a,b){var pad=function(s){s=s.toUpperCase().replace(/[^A-Z0-9]+/g,'<');return (s+Array(45).join('<')).slice(0,44).replace(/</g,'&lt;')};return '<div class="mrz">'+pad(a)+'<br>'+pad(b)+'</div>'}
   function pint(full){return '<svg viewBox="0 0 20 28"><path d="M3 4 L17 4 L15 26 L5 26 Z" fill="'+(full?'#e8a317':'none')+'" stroke="#6f6450" stroke-width="1.6" stroke-linejoin="round"/>'+(full?'<path d="M2.5 5 Q4 0 8 2 Q10 -1 13 2 Q17 0 17.5 5 Z" fill="#fff" stroke="#6f6450" stroke-width="1.2"/>':'')+'</svg>'}
+  var CINK={England:'blue',Scotland:'blue',Wales:'blue','United Kingdom':'blue',Spain:'red',USA:'purple','United States':'purple',Ireland:'green',Italy:'green',Netherlands:'orange',France:'blue',Japan:'red',Belgium:'black',Germany:'black'};
+  INK.orange='#c75a12';
+  function hash(t){var h=7;for(var k=0;k<t.length;k++)h=(h*31+t.charCodeAt(k))>>>0;return h}
+  function wrap(t){t=t.toUpperCase();if(t.length<=12||t.indexOf(' ')<0)return [t];var w=t.split(' '),best=null;
+    for(var k=1;k<w.length;k++){var l1=w.slice(0,k).join(' '),l2=w.slice(k).join(' '),m=Math.max(l1.length,l2.length);if(!best||m<best.m)best={m:m,l:[l1,l2]}}return best.l}
   function stamp(b,i,blank){
-    var c=blank?'#8a7a58':INK[b.ink]||INK[inks[i%4]], rot=blank?0:[-9,7,-4,11,-12,5][i%6], id='s'+i;
-    var t1=blank?'AWAITING STAMP':esc((b.brewery||'').toUpperCase()), t2=blank?'UNITED KINGDOM OF ALES':esc(((b.city||'')+(b.country?' · '+b.country:'')).toUpperCase());
-    var name=blank?'?':esc((b.name||'').toUpperCase());
-    var nl=name.length, fs=nl>14?18:nl>10?22:nl>7?26:30;
+    var known=!!b.brewery;
+    var c=blank?'#8a7a58':INK[b.ink]||INK[CINK[b.brewedCountry]]||(known?INK[inks[i%4]]:INK.black);
+    var h=hash((b.name||'')+i), rot=blank?0:((h%25)-12), id='s'+i, shape=blank?'circle':['circle','rect','oval'][h%3];
+    var top=blank?'AWAITING STAMP':esc((b.brewery||'BREWERY UNKNOWN').toUpperCase());
+    var bot=blank?'UNITED KINGDOM OF ALES':esc((known&&(b.brewedIn||b.brewedCountry)?[b.brewedIn,b.brewedCountry].filter(Boolean).join(' · '):'UNITED KINGDOM OF ALES').toUpperCase());
+    var lines=blank?['?']:wrap(b.name||'').map(esc), ml=Math.max.apply(null,lines.map(function(l){return l.length}));
+    var fs=blank?44:ml<=7?30:ml<=10?24:ml<=13?20:17;
+    var foot=blank?'':(b.date?fmtDate(b.date):'ADMITTED');
+    var fit=function(t,max,per){return t.length*per>max?' textLength="'+max+'" lengthAdjust="spacingAndGlyphs"':''};
+    var g='<g fill="'+c+'" stroke="none" font-family="Bebas Neue, Impact, sans-serif">', body='';
+    function nameAt(cy,maxW){var lh=fs*1.02,y0=cy-(lines.length-1)*lh/2+fs*.36;return lines.map(function(l,k){return '<text x="110" y="'+(y0+k*lh).toFixed(1)+'" text-anchor="middle" font-size="'+fs+'"'+fit(l,maxW,fs*.5)+'>'+l+'</text>'}).join('')}
+    if(shape==='circle'){
+      body='<defs><path id="a'+id+'" d="M30 110 A80 80 0 0 1 190 110"/><path id="b'+id+'" d="M22 110 A88 88 0 0 0 198 110"/></defs>'+
+        '<circle cx="110" cy="110" r="104" stroke-width="5"/><circle cx="110" cy="110" r="92" stroke-width="2"/><circle cx="110" cy="110" r="60" stroke-width="2"/>'+g+
+        '<text font-size="17" letter-spacing="2"><textPath href="#a'+id+'" startOffset="50%" text-anchor="middle"'+fit(top,236,11)+'>'+top+'</textPath></text>'+
+        '<text font-size="13" letter-spacing="1.5"><textPath href="#b'+id+'" startOffset="50%" text-anchor="middle" dominant-baseline="hanging"'+fit(bot,250,8.5)+'>'+bot+'</textPath></text>'+
+        nameAt(blank?110:100,104)+(foot?'<text x="110" y="148" text-anchor="middle" font-size="12" letter-spacing="2.5">'+foot+'</text>':'')+
+        '<text x="20" y="116" font-size="16">★</text><text x="188" y="116" font-size="16">★</text></g>';
+    } else if(shape==='rect'){
+      body='<rect x="8" y="42" width="204" height="136" rx="10" stroke-width="5"/><rect x="18" y="52" width="184" height="116" rx="5" stroke-width="2"/>'+
+        '<line x1="18" y1="76" x2="202" y2="76" stroke-width="2"/><line x1="18" y1="146" x2="202" y2="146" stroke-width="2"/>'+g+
+        '<text x="110" y="70" text-anchor="middle" font-size="16" letter-spacing="2"'+fit(top,170,10)+'>'+top+'</text>'+
+        nameAt(111,170)+
+        '<text x="110" y="163" text-anchor="middle" font-size="12.5" letter-spacing="1.5"'+fit(bot,172,8)+'>'+bot+'</text>'+
+        (foot?'<text x="110" y="34" text-anchor="middle" font-size="12" letter-spacing="3">✦ '+foot+' ✦</text>':'')+'</g>';
+    } else {
+      body='<defs><path id="a'+id+'" d="M20 110 A90 66 0 0 1 200 110"/><path id="b'+id+'" d="M20 110 A90 66 0 0 0 200 110"/></defs>'+
+        '<ellipse cx="110" cy="110" rx="106" ry="82" stroke-width="5"/><ellipse cx="110" cy="110" rx="78" ry="56" stroke-width="2"/>'+g+
+        '<text font-size="15" letter-spacing="2"><textPath href="#a'+id+'" startOffset="50%" text-anchor="middle"'+fit(top,210,10)+'>'+top+'</textPath></text>'+
+        '<text font-size="12" letter-spacing="1.5"><textPath href="#b'+id+'" startOffset="50%" text-anchor="middle" dominant-baseline="hanging"'+fit(bot,230,8)+'>'+bot+'</textPath></text>'+
+        nameAt(lines.length>1?97:104,124)+(foot?'<text x="110" y="'+(lines.length>1?146:137)+'" text-anchor="middle" font-size="11.5" letter-spacing="2.5">'+foot+'</text>':'')+'</g>';
+    }
     return '<svg class="stamp" viewBox="0 0 220 220" style="transform:rotate('+rot+'deg)">'+
-      '<defs><filter id="r'+id+'"><feTurbulence type="fractalNoise" baseFrequency="1.1" numOctaves="2" seed="'+(i+3)+'"/><feColorMatrix values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -2.2 1.35"/><feComposite in="SourceGraphic" operator="in"/></filter>'+
-      '<path id="a'+id+'" d="M30 110 A80 80 0 0 1 190 110"/><path id="b'+id+'" d="M22 110 A88 88 0 0 0 198 110"/></defs>'+
-      '<g filter="url(#r'+id+')" fill="none" stroke="'+c+'"'+(blank?' stroke-dasharray="6 5"':'')+'>'+
-      '<circle cx="110" cy="110" r="104" stroke-width="5"/><circle cx="110" cy="110" r="92" stroke-width="2"/><circle cx="110" cy="110" r="58" stroke-width="2"/>'+
-      '<g fill="'+c+'" stroke="none" font-family="Bebas Neue, Impact, sans-serif">'+
-      '<text font-size="17" letter-spacing="2"><textPath href="#a'+id+'" startOffset="50%" text-anchor="middle">'+t1+'</textPath></text>'+
-      '<text font-size="13" letter-spacing="2"><textPath href="#b'+id+'" startOffset="50%" text-anchor="middle" dominant-baseline="hanging">'+t2+'</textPath></text>'+
-      '<text x="110" y="'+(blank?126:104)+'" text-anchor="middle" font-size="'+(blank?44:fs)+'"'+(nl>12?' textLength="104" lengthAdjust="spacingAndGlyphs"':'')+'>'+name+'</text>'+
-      (blank?'':'<text x="110" y="126" text-anchor="middle" font-size="13" letter-spacing="1">'+fmtDate(b.date)+'</text><text x="110" y="146" text-anchor="middle" font-size="12" letter-spacing="3">ADMITTED</text>')+
-      '<text x="20" y="116" font-size="16">★</text><text x="188" y="116" font-size="16">★</text></g></g></svg>';
+      '<defs><filter id="r'+id+'"><feTurbulence type="fractalNoise" baseFrequency="1.1" numOctaves="2" seed="'+(i+3)+'"/><feColorMatrix values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -1.5 1.4"/><feComposite in="SourceGraphic" operator="in"/></filter></defs>'+
+      '<g filter="url(#r'+id+')" fill="none" stroke="'+c+'"'+(blank?' stroke-dasharray="6 5"':'')+'>'+body+'</g></svg>';
   }
   var pages=[];
   pages.push({cls:'cover',html:'<div class="t1">UNITED KINGDOM<br>OF ALES</div><svg class="crest" viewBox="0 0 120 110" fill="none" stroke="#d9b45a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><circle cx="60" cy="55" r="44"/><path d="M44 30 L76 30 L72 84 L48 84 Z"/><path d="M43 30 Q45 20 54 23 Q60 15 67 22 Q77 19 77 30"/><path d="M54 44 L54 72" stroke-width="2"/><path d="M16 80 Q4 55 16 30M104 80 Q116 55 104 30" stroke-width="2"/></svg><div><div class="t2">BEER PASSPORT</div><div class="t3">PASSEPORT DE BIÈRE</div></div><div class="chip"></div><div class="hint">tap to open</div>'});
@@ -171,12 +198,16 @@
     '<p class="idnote">This passport entitles the bearer to try one beer at a time, in every bar, in every city, and to report back honestly.</p>'+mrz('P<LDS CALLERY ROB','ELLAND ROAD MOT 1919')});
   beers.forEach(function(b,i){
     var r=Math.max(0,Math.min(5,Math.round(b.rating||0))),p='';for(var k=0;k<5;k++)p+=pint(k<r);
-    pages.push({html:wm()+top('ENTRY · '+esc((b.country||'').toUpperCase()),i+2)+'<div class="stampbox">'+stamp(b,i,false)+'</div>'+
-      '<div class="fields"><div class="fld full"><div class="k">Beer</div><div class="v">'+esc(b.name)+'</div></div>'+
-      '<div class="fld"><div class="k">Brewery</div><div class="v">'+esc(b.brewery)+'</div></div><div class="fld"><div class="k">Style · ABV</div><div class="v">'+esc(b.style)+(b.abv?' · '+esc(b.abv)+'%':'')+'</div></div>'+
-      '<div class="fld full"><div class="k">Where</div><div class="v">'+esc(b.where)+(b.city?', '+esc(b.city):'')+'</div></div>'+
-      '<div class="fld"><div class="k">Date</div><div class="v">'+fmtDate(b.date)+'</div></div><div class="fld"><div class="k">Verdict</div><div class="v pints">'+p+'</div></div></div>'+
-      (b.notes?'<div class="notes">“'+esc(b.notes)+'”</div>':'')+(demo&&!(window.BEERS||[]).length?'<div class="sample">SAMPLE</div>':'')+mrz('V<'+(b.name||''),(b.city||'')+' '+(b.date||''))});
+    var fld=function(k,v,full){return '<div class="fld'+(full?' full':'')+'"><div class="k">'+k+'</div><div class="v'+(k==='Verdict'?' pints':'')+'">'+v+'</div></div>'};
+    var loc=[b.brewedIn,b.brewedCountry].filter(Boolean).join(', ');
+    var f=fld('Beer',esc(b.name),true)+fld('Brewery',b.brewery?esc(b.brewery):'<i class="unk">Unknown</i>')+fld('Brewed in',loc?esc(loc):'<i class="unk">Unknown</i>');
+    if(b.style||b.abv) f+=fld('Style · ABV',esc(b.style||'')+(b.abv?(b.style?' · ':'')+esc(b.abv)+'%':''),true);
+    if(b.where||b.city) f+=fld('Where I had it',esc(b.where||'')+(b.where&&b.city?', ':'')+esc(b.city||''),true);
+    if(b.date) f+=fld('Date',fmtDate(b.date));
+    if(r) f+=fld('Verdict',p);
+    pages.push({html:wm()+top('ENTRY · '+esc((b.brewedCountry||'UNKNOWN').toUpperCase()),i+2)+'<div class="stampbox">'+stamp(b,i,false)+'</div>'+
+      '<div class="fields">'+f+'</div>'+(b.notes?'<div class="notes">“'+esc(b.notes)+'”</div>':'')+
+      (demo&&!(window.BEERS||[]).length?'<div class="sample">SAMPLE</div>':'')+mrz('V<'+(b.name||''),(b.brewery||'')+' '+(b.brewedIn||''))});
   });
   pages.push({cls:'await',html:wm()+top('ENTRY · PENDING',beers.length+2)+'<div class="stampbox">'+stamp({},beers.length,true)+'</div>'+
     '<div class="fields"><div class="fld full"><div class="k">Beer</div><div class="v">-</div></div><div class="fld"><div class="k">Brewery</div><div class="v">-</div></div><div class="fld"><div class="k">Style · ABV</div><div class="v">-</div></div><div class="fld full"><div class="k">Where</div><div class="v">-</div></div></div>'+
