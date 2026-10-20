@@ -31,7 +31,7 @@
   #stars{opacity:var(--starAmt,var(--night))}
   .nightonly{opacity:calc(.25 + .75*var(--night))}
   .hero{transition:background 2s}
-  .logo{display:block;margin:0 auto 10px;width:auto;height:clamp(150px,30vh,300px);color:var(--white);filter:drop-shadow(0 3px 14px rgba(6,16,42,.5))}
+  .logo{display:block;margin:0 auto 10px;width:auto;height:clamp(130px,25vh,260px);color:var(--white);filter:drop-shadow(0 3px 14px rgba(6,16,42,.5))}
   @media (max-width:900px){.logo{height:200px}}
   .logo .globe,.logo .pint{transform-box:view-box;transform-origin:540px 507px}
   .logo .globe{animation:globeSpin 12s ease-in-out infinite}
@@ -126,9 +126,14 @@
   @keyframes party{0%{fill:#ff4dd2}25%{fill:#4dd2ff}50%{fill:#7dff7a}75%{fill:#ffcd00}}
   .bal{animation:bob2 2.5s ease-in-out infinite alternate}@keyframes bob2{to{transform:translateY(-2px)}}
   #fx{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+  @media (min-width:901px){.hero{min-height:max(100vh,calc(37vw + 330px))}}
+  .enter{display:inline-flex;align-items:center;gap:.5em;margin-top:.9rem;padding:.7em 1.6em;border-radius:999px;background:#ffcd00;color:#0a1838;font-weight:700;font-size:1.05rem;letter-spacing:.03em;text-decoration:none;box-shadow:0 6px 24px rgba(6,16,42,.35),0 0 0 0 rgba(255,205,0,.6);animation:enterPulse 2.6s ease-in-out infinite;transition:transform .15s}
+  .enter:hover,.enter:focus-visible{transform:translateY(-2px) scale(1.03)}
+  .enter:focus-visible{outline:3px solid #fff;outline-offset:3px}
+  @keyframes enterPulse{0%,100%{box-shadow:0 6px 24px rgba(6,16,42,.35),0 0 0 0 rgba(255,205,0,.55)}50%{box-shadow:0 6px 24px rgba(6,16,42,.35),0 0 0 12px rgba(255,205,0,0)}}
   .blink{animation:tw 1s steps(2) infinite}
   @media (max-width:900px){.hero{min-height:auto}.hero>svg{position:relative;order:2;height:auto;margin-top:24px}.hero-text{padding-top:48px}}
-  @media (prefers-reduced-motion:reduce){.bob,.twinkle,.dash,.blink,.logo .globe,.logo .pint{animation:none}.plane,.walker,.ballx{display:none}.flame,.ember,.partylights rect{animation:none}#clouds .cloud{animation-play-state:paused}}
+  @media (prefers-reduced-motion:reduce){.bob,.twinkle,.dash,.blink,.logo .globe,.logo .pint{animation:none}.plane,.walker,.ballx{display:none}.enter{animation:none}.flame,.ember,.partylights rect{animation:none}#clouds .cloud{animation-play-state:paused}}
 </style>
 </head>
 <body>
@@ -380,6 +385,7 @@
   </svg>
     <p class="lede">A pint at every stop, and always heading home to Elland Road. Bars, breweries, away days and the odd terrible lager along the way.</p>
     <p class="wxnote" id="wxnote"></p>
+    <a class="enter" href="/explore/">Click to enter <span aria-hidden="true">→</span></a>
   </div>
 </header>
 
