@@ -56,6 +56,8 @@
     .soon p{margin:0 auto}
   }
   .brand,.back{white-space:nowrap}
+  .sheen{transition:transform 1s ease}
+  .item:hover .sheen,.item:focus-visible .sheen{transform:skewX(-20deg) translateX(420px)}
   @media (max-width:480px){.brand{font-size:1.3rem}.brand svg{width:30px;height:30px}.back{font-size:.8rem}}
   @media (prefers-reduced-motion:reduce){.item .art{transition:none}}
 </style>
