@@ -95,9 +95,18 @@
   @keyframes ts17{0%{transform:translate(664px,774px) scale(1.00);opacity:0}2.83%{transform:translate(664px,774px) scale(1.00);opacity:0}3.43%{opacity:1}7.83%{transform:translate(597px,723px) scale(.72);opacity:1}8.43%{transform:translate(597px,723px) scale(.72);opacity:0}84.46%{transform:translate(597px,723px) scale(.72);opacity:0}85.06%{opacity:1}93.66%{transform:translate(814px,771px) scale(0.99);opacity:1}94.36%{transform:translate(814px,771px) scale(0.99);opacity:0}100%{transform:translate(814px,771px) scale(0.99);opacity:0}}.ts17{animation:ts17 50s linear infinite both}
   @keyframes ts18{0%{transform:translate(402px,764px) scale(0.94);opacity:0}8.65%{transform:translate(402px,764px) scale(0.94);opacity:0}9.25%{opacity:1}13.65%{transform:translate(445px,723px) scale(.72);opacity:1}14.25%{transform:translate(445px,723px) scale(.72);opacity:0}80.79%{transform:translate(445px,723px) scale(.72);opacity:0}81.39%{opacity:1}85.79%{transform:translate(428px,774px) scale(1.00);opacity:1}86.49%{transform:translate(428px,774px) scale(1.00);opacity:0}100%{transform:translate(428px,774px) scale(1.00);opacity:0}}.ts18{animation:ts18 50s linear infinite both}
   @keyframes ts19{0%{transform:translate(483px,760px) scale(0.92);opacity:0}9.77%{transform:translate(483px,760px) scale(0.92);opacity:0}10.37%{opacity:1}19.20%{transform:translate(749px,723px) scale(.72);opacity:1}19.80%{transform:translate(749px,723px) scale(.72);opacity:0}86.83%{transform:translate(749px,723px) scale(.72);opacity:0}87.43%{opacity:1}93.19%{transform:translate(866px,764px) scale(0.94);opacity:1}93.89%{transform:translate(866px,764px) scale(0.94);opacity:0}100%{transform:translate(866px,764px) scale(0.94);opacity:0}}.ts19{animation:ts19 50s linear infinite both}
+  .ballx{animation:ballx 50s linear infinite both}
+  .bally{animation:bally 50s infinite both}
+  .ballspin{animation:spinball .6s linear infinite}
+  @keyframes ballx{0%,24%{transform:translateX(420px)}32%,44%{transform:translateX(800px)}52%,62%{transform:translateX(420px)}70%,100%{transform:translateX(800px)}
+    0%,23.9%{opacity:0}24%,32%{opacity:1}32.1%,43.9%{opacity:0}44%,52%{opacity:1}52.1%,61.9%{opacity:0}62%,70%{opacity:1}70.1%,100%{opacity:0}}
+  @keyframes bally{0%,24%{transform:translateY(470px);animation-timing-function:ease-out}28%{transform:translateY(372px);animation-timing-function:ease-in}
+    32%,44%{transform:translateY(470px);animation-timing-function:ease-out}48%{transform:translateY(380px);animation-timing-function:ease-in}
+    52%,62%{transform:translateY(470px);animation-timing-function:ease-out}66%{transform:translateY(368px);animation-timing-function:ease-in}70%,100%{transform:translateY(470px)}}
+  @keyframes spinball{to{transform:rotate(360deg)}}
   .blink{animation:tw 1s steps(2) infinite}
   @media (max-width:900px){.hero{min-height:auto}.hero>svg{position:relative;order:2;height:auto;margin-top:24px}.hero-text{padding-top:48px}}
-  @media (prefers-reduced-motion:reduce){.bob,.twinkle,.dash,.blink,.logo .globe,.logo .pint{animation:none}.plane,.walker{display:none}}
+  @media (prefers-reduced-motion:reduce){.bob,.twinkle,.dash,.blink,.logo .globe,.logo .pint{animation:none}.plane,.walker,.ballx{display:none}}
 </style>
 </head>
 <body>
@@ -129,6 +138,13 @@
     <defs><radialGradient id="sunglow"><stop offset=".35" stop-color="#fff3b0"/><stop offset=".5" stop-color="#ffd76a" stop-opacity=".6"/><stop offset="1" stop-color="#ffb347" stop-opacity="0"/></radialGradient></defs>
     <g id="sun" transform="translate(-200 -200)"><circle r="90" fill="url(#sunglow)"/><circle r="30" fill="#fff6c8"/></g>
     <g id="moon" transform="translate(1040 260)"><path d="M0 -26 A26 26 0 1 0 0 26 A19 26 0 1 1 0 -26 Z" fill="#f4f1e0" transform="rotate(-25)"/></g>
+
+    <!-- match on: the ball goes keeper to keeper above the roof while fans are inside -->
+    <g class="ballx"><g class="bally"><g class="ballspin">
+      <circle r="10" fill="#ffffff" stroke="#1a1a1a" stroke-width="1.2"/>
+      <path d="M0 -3.6 L3.4 -1.1 L2.1 2.9 L-2.1 2.9 L-3.4 -1.1 Z" fill="#1a1a1a"/>
+      <path d="M0 -10 L0 -3.6 M3.4 -1.1 L9.5 -3 M2.1 2.9 L5.9 8.1 M-2.1 2.9 L-5.9 8.1 M-3.4 -1.1 L-9.5 -3" stroke="#1a1a1a" stroke-width="1.1"/>
+    </g></g></g>
 
     <!-- Elland Road from the outside: back of the East Stand -->
     <g transform="translate(0 -160) scale(1 1.2)">
