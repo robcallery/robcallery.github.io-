@@ -143,6 +143,9 @@
       <a class="item item-travel-guides" href="/travel-guides/" style="--r:2deg">
         <div class="art"><svg viewBox="0 0 230 300" role="img" aria-label="Travel guides">
   <rect x="14" y="6" width="208" height="290" rx="4" fill="#efe6cf"/>
+  <rect class="pg pg0" x="2" y="3" width="208" height="284" rx="4" fill="#fbf7ec" stroke="#d8cba8" stroke-width="1"/><rect class="pg pg1" x="2" y="3" width="208" height="284" rx="4" fill="#fbf7ec" stroke="#d8cba8" stroke-width="1"/><rect class="pg pg2" x="2" y="3" width="208" height="284" rx="4" fill="#fbf7ec" stroke="#d8cba8" stroke-width="1"/><rect class="pg pg3" x="2" y="3" width="208" height="284" rx="4" fill="#fbf7ec" stroke="#d8cba8" stroke-width="1"/><rect class="pg pg4" x="2" y="3" width="208" height="284" rx="4" fill="#fbf7ec" stroke="#d8cba8" stroke-width="1"/><rect class="pg pg5" x="2" y="3" width="208" height="284" rx="4" fill="#fbf7ec" stroke="#d8cba8" stroke-width="1"/>
+  <g class="cv-inside"><rect x="0" y="0" width="214" height="290" rx="6" fill="#0a4a4d"/><rect x="8" y="8" width="198" height="274" rx="4" fill="#fbf7ec"/><g stroke="#cbbd99" stroke-width="3"><line x1="24" y1="50" x2="190" y2="50"/><line x1="24" y1="68" x2="190" y2="68"/><line x1="24" y1="86" x2="190" y2="86"/><line x1="24" y1="104" x2="190" y2="104"/><line x1="24" y1="122" x2="190" y2="122"/><line x1="24" y1="140" x2="190" y2="140"/><line x1="24" y1="158" x2="190" y2="158"/><line x1="24" y1="176" x2="190" y2="176"/><line x1="24" y1="194" x2="190" y2="194"/><line x1="24" y1="212" x2="190" y2="212"/><line x1="24" y1="230" x2="190" y2="230"/><line x1="24" y1="248" x2="190" y2="248"/></g></g>
+  <g class="cv-front">
   <rect x="0" y="0" width="214" height="290" rx="6" fill="#f6edd6"/>
   <rect x="0" y="0" width="20" height="290" rx="6" fill="#0f6f73"/><rect x="18" y="0" width="3" height="290" fill="#0b5558"/>
   <rect x="21" y="0" width="193" height="62" fill="#0f6f73"/>
@@ -152,6 +155,7 @@
   <path d="M196 170 l-14 -2 l3 5 l-6 4 l4 1 l6 -3 l2 6 l3 -1 z" fill="#0a1838" transform="rotate(-30 190 172)"/>
   <text x="118" y="232" text-anchor="middle" font-family="DM Serif Display, Georgia, serif" font-style="italic" font-size="17" fill="#0a1838" textLength="136" lengthAdjust="spacingAndGlyphs">one beer at a time</text>
   <text x="118" y="270" text-anchor="middle" font-family="Bebas Neue, Impact, sans-serif" font-size="15" letter-spacing="4" fill="#0f6f73" textLength="108" lengthAdjust="spacingAndGlyphs">ROB CALLERY</text>
+</g>
 </svg></div>
         <div class="label"><h2>Travel Guides</h2><p>City guides from a pint-first point of view.</p></div>
       </a>
@@ -237,7 +241,7 @@
 <script>
 // flick through the passport before opening it
 (function(){
-  var a=document.querySelector('.item-beer-passport'); if(!a) return;
+  document.querySelectorAll('.item-beer-passport,.item-travel-guides').forEach(function(a){
   var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
   a.addEventListener('click',function(e){
     if(reduce||e.metaKey||e.ctrlKey||e.shiftKey||e.button) return;
@@ -245,6 +249,7 @@
     setTimeout(function(){location.href=a.href},1350);
   });
   addEventListener('pageshow',function(){a.classList.remove('flick')});
+  });
 })();
 </script>
 <footer>© <span id="yr">2026</span> Rob Callery · callery.co.uk · Drink responsibly</footer>
