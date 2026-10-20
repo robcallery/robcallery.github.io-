@@ -25,6 +25,7 @@ window.BEERS = [
   { name: "Echo Chamber", brewery: "Rooster's Brewing Co.", brewedIn: "Harrogate", brewedCountry: "England" },
   { name: "Elvis Juice", brewery: "BrewDog", brewedIn: "Ellon, Aberdeenshire", brewedCountry: "Scotland" },
   { name: "Estrella Damm", brewery: "Damm", brewedIn: "Barcelona", brewedCountry: "Spain" },
+  { name: "Hazy Faced Assassin", brewery: "Rooster's Brewing Co.", brewedIn: "Harrogate", brewedCountry: "England" },
   { name: "Hazy Jane", brewery: "BrewDog", brewedIn: "Ellon, Aberdeenshire", brewedCountry: "Scotland" },
   { name: "Heineken", brewery: "Heineken", brewedIn: "Amsterdam", brewedCountry: "Netherlands" },
   { name: "Island Citrus Blonde Ale", brewery: "Islamorada Brewing Co.", brewedIn: "Islamorada, Florida", brewedCountry: "USA" },
