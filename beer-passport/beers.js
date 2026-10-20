@@ -28,7 +28,7 @@ window.BEERS = [
   { name: "Hazy Faced Assassin", brewery: "Rooster's Brewing Co.", brewedIn: "Harrogate", brewedCountry: "England" },
   { name: "Hazy Jane", brewery: "BrewDog", brewedIn: "Ellon, Aberdeenshire", brewedCountry: "Scotland" },
   { name: "Heineken", brewery: "Heineken", brewedIn: "Amsterdam", brewedCountry: "Netherlands" },
-  { name: "Island Citrus Blonde Ale", brewery: "Islamorada Brewing Co.", brewedIn: "Islamorada, Florida", brewedCountry: "USA" },
+  { name: "Island Citrus Ale", brewery: "Islamorada Beer Company", brewedIn: "Islamorada, Florida", brewedCountry: "USA" },
   { name: "Kronenbourg 1664", brewery: "Kronenbourg", brewedIn: "Strasbourg", brewedCountry: "France" },
   { name: "Lagunitas IPA", brewery: "Lagunitas Brewing Co.", brewedIn: "Petaluma, California", brewedCountry: "USA" },
   { name: "Mahou", brewery: "Mahou", brewedIn: "Madrid", brewedCountry: "Spain" },
