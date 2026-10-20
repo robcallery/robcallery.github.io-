@@ -64,6 +64,12 @@
   @keyframes w3{0%{transform:translate(897px,762px) scale(1);opacity:0}8%{opacity:1}80%{transform:translate(1047px,724px) scale(0.85);opacity:1}88%,100%{transform:translate(1047px,724px) scale(0.85);opacity:0}}.w3{animation:w3 12s linear 1.5s infinite both}
   @keyframes w4{0%{transform:translate(927px,774px) scale(1);opacity:0}8%{opacity:1}80%{transform:translate(1047px,724px) scale(0.85);opacity:1}88%,100%{transform:translate(1047px,724px) scale(0.85);opacity:0}}.w4{animation:w4 14s linear 7s infinite both}
   @keyframes w5{0%{transform:translate(1047px,724px) scale(0.85);opacity:0}10%{transform:translate(1047px,724px) scale(0.85);opacity:1}88%{transform:translate(877px,752px) scale(1);opacity:1}96%,100%{transform:translate(877px,752px) scale(1);opacity:0}}.w5{animation:w5 11s linear 4s infinite both}
+  .bannerplane{animation:fly3 80s linear 9s infinite both}
+  @keyframes fly3{0%{transform:translate(-80px,0)}38%{transform:translate(1620px,-6px)}100%{transform:translate(1620px,-6px)}}
+  .flutter{animation:flutter 1.4s ease-in-out infinite alternate;transform-origin:-60px 0}
+  @keyframes flutter{to{transform:skewY(1.5deg) scaleY(.96)}}
+  .prop{animation:prop .12s linear infinite alternate;transform-box:fill-box;transform-origin:center}
+  @keyframes prop{to{transform:scaleY(.2)}}
   .blink{animation:tw 1s steps(2) infinite}
   @media (max-width:900px){.hero{min-height:auto}.hero>svg{position:relative;order:2;height:auto;margin-top:24px}.hero-text{padding-top:48px}}
   @media (prefers-reduced-motion:reduce){.bob,.twinkle,.dash,.blink{animation:none}.plane,.walker{display:none}}
@@ -207,7 +213,7 @@
       <rect x="972" y="622" width="180" height="98" fill="url(#wall)"/>
       <path d="M968 622 q6 -7 12 0" fill="#c0532e" stroke="#93391d" stroke-width="1"/><path d="M980 622 q6 -7 12 0" fill="#c0532e" stroke="#93391d" stroke-width="1"/><path d="M992 622 q6 -7 12 0" fill="#c0532e" stroke="#93391d" stroke-width="1"/><path d="M1004 622 q6 -7 12 0" fill="#c0532e" stroke="#93391d" stroke-width="1"/><path d="M1016 622 q6 -7 12 0" fill="#c0532e" stroke="#93391d" stroke-width="1"/><path d="M1028 622 q6 -7 12 0" fill="#c0532e" stroke="#93391d" stroke-width="1"/><path d="M1040 622 q6 -7 12 0" fill="#c0532e" stroke="#93391d" stroke-width="1"/><path d="M1052 622 q6 -7 12 0" fill="#c0532e" stroke="#93391d" stroke-width="1"/><path d="M1064 622 q6 -7 12 0" fill="#c0532e" stroke="#93391d" stroke-width="1"/><path d="M1076 622 q6 -7 12 0" fill="#c0532e" stroke="#93391d" stroke-width="1"/><path d="M1088 622 q6 -7 12 0" fill="#c0532e" stroke="#93391d" stroke-width="1"/><path d="M1100 622 q6 -7 12 0" fill="#c0532e" stroke="#93391d" stroke-width="1"/><path d="M1112 622 q6 -7 12 0" fill="#c0532e" stroke="#93391d" stroke-width="1"/><path d="M1124 622 q6 -7 12 0" fill="#c0532e" stroke="#93391d" stroke-width="1"/><path d="M1136 622 q6 -7 12 0" fill="#c0532e" stroke="#93391d" stroke-width="1"/><path d="M1148 622 q6 -7 12 0" fill="#c0532e" stroke="#93391d" stroke-width="1"/>
       <rect x="986" y="600" width="152" height="20" rx="3" fill="#1d6fd8"/>
-      <text x="1062" y="615" text-anchor="middle" font-family="Bebas Neue, Impact, sans-serif" font-size="14" letter-spacing="1" fill="#ffffff" textLength="136" lengthAdjust="spacingAndGlyphs">EL CHIRINGUITO</text>
+      <text x="1062" y="615" text-anchor="middle" font-family="Bebas Neue, Impact, sans-serif" font-size="14" letter-spacing="1" fill="#ffffff" textLength="136" lengthAdjust="spacingAndGlyphs">FIRPO’T OF CALL</text>
       <!-- striped awning + festoon lights -->
       <path d="M976 640 L992 640 L992 656 Q984 662 976 656 Z" fill="#1d6fd8"/><path d="M992 640 L1008 640 L1008 656 Q1000 662 992 656 Z" fill="#ffffff"/><path d="M1008 640 L1024 640 L1024 656 Q1016 662 1008 656 Z" fill="#1d6fd8"/><path d="M1024 640 L1040 640 L1040 656 Q1032 662 1024 656 Z" fill="#ffffff"/><path d="M1040 640 L1056 640 L1056 656 Q1048 662 1040 656 Z" fill="#1d6fd8"/><path d="M1056 640 L1072 640 L1072 656 Q1064 662 1056 656 Z" fill="#ffffff"/><path d="M1072 640 L1088 640 L1088 656 Q1080 662 1072 656 Z" fill="#1d6fd8"/><path d="M1088 640 L1104 640 L1104 656 Q1096 662 1088 656 Z" fill="#ffffff"/><path d="M1104 640 L1120 640 L1120 656 Q1112 662 1104 656 Z" fill="#1d6fd8"/><path d="M1120 640 L1136 640 L1136 656 Q1128 662 1120 656 Z" fill="#ffffff"/><path d="M1136 640 L1152 640 L1152 656 Q1144 662 1136 656 Z" fill="#1d6fd8"/>
       <path d="M978 650 Q1062 662 1148 650" fill="none" stroke="#333" stroke-width="1"/>
@@ -234,6 +240,25 @@
     <g><g class="walker w0"><g class="step"><circle cy="-22" r="4" fill="#e8c4a0"/><rect x="-5" y="-17" width="10" height="13" rx="3" fill="#ffcd00"/><rect x="-4" y="-4" width="3" height="10" fill="#0a1838"/><rect x="1" y="-4" width="3" height="10" fill="#0a1838"/></g></g><g class="walker w1"><g class="step"><circle cy="-22" r="4" fill="#e8c4a0"/><rect x="-5" y="-17" width="10" height="13" rx="3" fill="#f7f7f2"/><rect x="-4" y="-4" width="3" height="10" fill="#0a1838"/><rect x="1" y="-4" width="3" height="10" fill="#0a1838"/></g></g><g class="walker w2"><g class="step"><circle cy="-22" r="4" fill="#e8c4a0"/><rect x="-5" y="-17" width="10" height="13" rx="3" fill="#1d4ed8"/><rect x="-4" y="-4" width="3" height="10" fill="#0a1838"/><rect x="1" y="-4" width="3" height="10" fill="#0a1838"/></g></g><g class="walker w3"><g class="step"><circle cy="-22" r="4" fill="#e8c4a0"/><rect x="-5" y="-17" width="10" height="13" rx="3" fill="#f7f7f2"/><rect x="-4" y="-4" width="3" height="10" fill="#0a1838"/><rect x="1" y="-4" width="3" height="10" fill="#0a1838"/></g></g><g class="walker w4"><g class="step"><circle cy="-22" r="4" fill="#e8c4a0"/><rect x="-5" y="-17" width="10" height="13" rx="3" fill="#1d4ed8"/><rect x="-4" y="-4" width="3" height="10" fill="#0a1838"/><rect x="1" y="-4" width="3" height="10" fill="#0a1838"/></g></g><g class="walker w5"><g class="step"><circle cy="-22" r="4" fill="#e8c4a0"/><rect x="-5" y="-17" width="10" height="13" rx="3" fill="#ffcd00"/><rect x="-4" y="-4" width="3" height="10" fill="#0a1838"/><rect x="1" y="-4" width="3" height="10" fill="#0a1838"/></g></g></g>
 
     </g>
+
+    <!-- every so often: a prop plane towing a banner -->
+    <g class="plane bannerplane"><g transform="translate(0 378)">
+      <g class="flutter">
+        <rect x="-330" y="-13" width="270" height="26" fill="#ffffff" stroke="#ffcd00" stroke-width="3"/>
+        <rect x="-330" y="-13" width="8" height="26" fill="#1d4ed8"/>
+        <text x="-191" y="7" text-anchor="middle" font-family="Bebas Neue, Impact, sans-serif" font-size="19" letter-spacing="2" fill="#1d4ed8" textLength="240" lengthAdjust="spacingAndGlyphs">MARCHING ON TOGETHER</text>
+      </g>
+      <line x1="-60" y1="0" x2="-4" y2="-2" stroke="#e9eef8" stroke-width="1.2" stroke-opacity=".8"/>
+      <!-- little high-wing prop plane -->
+      <path d="M-4 -2 L8 -6 L40 -6 Q50 -5 52 0 Q50 4 40 4 L8 3 Z" fill="#f7f7f2"/>
+      <path d="M10 -1 L46 -1" stroke="#1d4ed8" stroke-width="2"/>
+      <path d="M-4 -2 L-8 -14 L2 -14 L8 -5 Z" fill="#ffcd00"/>
+      <rect x="14" y="-11" width="22" height="4" rx="2" fill="#ffcd00"/>
+      <path d="M38 -5 L44 -5 L44 -1 L36 -1 Z" fill="#9fd0ff"/>
+      <line x1="22" y1="4" x2="20" y2="10" stroke="#555" stroke-width="1.2"/><circle cx="20" cy="11" r="2" fill="#333"/>
+      <ellipse class="prop" cx="53" cy="0" rx="1.5" ry="9" fill="#ccc" opacity=".7"/>
+      <circle class="blink" cx="25" cy="-12" r="1.5" fill="#ff4d4d"/>
+    </g></g>
 
     <!-- the occasional plane overhead -->
     <g class="plane p1"><g transform="translate(0 250) scale(-1 1)">
