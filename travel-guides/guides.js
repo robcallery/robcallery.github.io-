@@ -163,5 +163,103 @@ window.GUIDES = [
     dontMiss: "Market day on the High Street (Wednesdays and Saturdays).",
     football: "Northallerton Town at the Calvert Stadium.",
     gettingThere: "Northallerton is on the East Coast Main Line."
+  },
+  {
+    city: "Tokyo", region: "Kanto", country: "Japan", colour: "red",
+    pint: "¥600–1,200", localBeer: "Japanese craft on tap", bestFor: "Craft bars & tiny back-alley drinking",
+    spoons: { none: true, note: "Spoons is UK & Ireland only" },
+    bars: [
+      { name: "Mikkeller Bar Tokyo", note: "Shibuya, 20 taps over two floors" },
+      { name: "DevilCraft", note: "Kanda/Nihonbashi, house IPAs and deep-dish pizza" },
+      { name: "Tokyo Beerzilla", note: "Asakusa, British craft beer and cider" }
+    ],
+    eat: "Yakitori and a cold one in the tiny bars under the train tracks.",
+    dontMiss: "Bar-hopping the tiny alley bars of Golden Gai in Shinjuku.",
+    football: "FC Tokyo at Ajinomoto Stadium.",
+    gettingThere: "Direct flights from London to Haneda and Narita."
+  },
+  {
+    city: "Osaka", region: "Kansai", country: "Japan", colour: "orange",
+    pint: "¥600–1,500", localBeer: "Minoh Beer", bestFor: "Street food & beer",
+    spoons: { none: true, note: "Spoons is UK & Ireland only" },
+    bars: [
+      { name: "Beer Belly Tenma", note: "Minoh Brewery's flagship, a dozen of their beers, no cover charge" },
+      { name: "Dotonbori Brewery Factory", note: "brewed on site under the Shochikuza theatre" },
+      { name: "Craft Beer Works Kamikaze", note: "west of Shinsaibashi, almost two dozen taps" }
+    ],
+    eat: "Takoyaki and okonomiyaki on the go around Dotonbori.",
+    dontMiss: "Dotonbori's neon canal at night, then Osaka Castle by day.",
+    football: "Gamba Osaka or Cerezo Osaka - two J.League clubs in one city.",
+    gettingThere: "Shinkansen from Tokyo in about 2.5 hours, or fly into Kansai Airport."
+  },
+  {
+    city: "Orlando", region: "Florida", country: "United States", colour: "purple",
+    pint: "~$7–9", localBeer: "Ivanhoe Park Brewing", bestFor: "Breaks between the parks",
+    spoons: { none: true, note: "Spoons is UK & Ireland only" },
+    bars: [
+      { name: "Redlight Redlight", note: "Audubon Park, long-time beer bar turned microbrewery" },
+      { name: "Ivanhoe Park Brewing Co.", note: "Ivanhoe Village, themed on a lost lakeside amusement park" },
+      { name: "Hammered Lamb", note: "downtown, lake views and 70+ beers" }
+    ],
+    eat: "Mills 50 for the best Vietnamese and Asian food in town.",
+    dontMiss: "A sunset lap of Lake Eola downtown, away from the theme parks.",
+    football: "Orlando City SC at Inter&Co Stadium, downtown.",
+    gettingThere: "Direct flights from the UK into Orlando International (MCO)."
+  },
+  {
+    city: "Tampa Bay", region: "Florida", country: "United States", colour: "teal",
+    pint: "~$7–9", localBeer: "Cigar City Jai Alai", bestFor: "Brewery hopping",
+    spoons: { none: true, note: "Spoons is UK & Ireland only" },
+    bars: [
+      { name: "Sky Puppy Brewing", note: "Ybor City, inside Tampa's oldest original firehouse" },
+      { name: "BarrieHaus Beer Co.", note: "Ybor City lager specialists with a beer-garden feel" },
+      { name: "Angry Chair Brewing", note: "Seminole Heights, famous for its stouts" }
+    ],
+    eat: "A Cuban sandwich in Ybor City, where Tampa reckons it was invented.",
+    dontMiss: "A stroll along the Tampa Riverwalk, then out to Ybor's 7th Avenue.",
+    football: "Tampa Bay Rowdies at Al Lang Stadium, St. Petersburg.",
+    gettingThere: "Fly into Tampa International, or drive about 1.5 hours from Orlando."
+  },
+  {
+    city: "Kissimmee", region: "Florida", country: "United States", colour: "green",
+    pint: "~$7–9", localBeer: "Florida craft on tap", bestFor: "Pints near the parks",
+    spoons: { none: true, note: "Spoons is UK & Ireland only" },
+    bars: [
+      { name: "The Fox & Hounds Public House", note: "British pub food and pints for when you're homesick" },
+      { name: "Rock & Brews", note: "craft beer, comfort food and rock music" },
+      { name: "Charley's Pub", note: "happy hour noon till 7, Monday to Saturday" }
+    ],
+    eat: "Pub grub at the Fox & Hounds, or a giant American breakfast anywhere on the 192.",
+    dontMiss: "Old Town's Saturday night classic car cruise.",
+    football: "Orlando City SC are about half an hour away downtown.",
+    gettingThere: "Right next to Walt Disney World, about 25 minutes from Orlando airport."
+  },
+  {
+    city: "Chicago", region: "Illinois", country: "United States", colour: "blue",
+    pint: "~$7–9", localBeer: "Goose Island", bestFor: "Historic taverns",
+    spoons: { none: true, note: "Spoons is UK & Ireland only" },
+    bars: [
+      { name: "Billy Goat Tavern", note: "home of the 1945 'Curse of the Billy Goat' on the Cubs" },
+      { name: "The Berghoff", note: "holds Chicago liquor licence No. 1" },
+      { name: "Marge's Still", note: "Old Town, claims to be the city's oldest tavern, from 1885" }
+    ],
+    eat: "Deep dish pizza, an Italian beef, or a Chicago dog - no ketchup.",
+    dontMiss: "A Cubs game at Wrigley Field, then the bars of Wrigleyville.",
+    football: "Chicago Fire FC at Soldier Field.",
+    gettingThere: "Direct flights from London into O'Hare."
+  },
+  {
+    city: "Philadelphia", region: "Pennsylvania", country: "United States", colour: "red",
+    pint: "~$7–9", localBeer: "Yards Brewing", bestFor: "Old taverns & Belgian beer",
+    spoons: { none: true, note: "Spoons is UK & Ireland only" },
+    bars: [
+      { name: "McGillin's Olde Ale House", note: "since 1860, the oldest continuously operating bar in Philly" },
+      { name: "Monk's Café", note: "Rittenhouse, a Belgian beer emporium" },
+      { name: "Yards Brewing", note: "the city's own brewery and taproom" }
+    ],
+    eat: "A cheesesteak, obviously, then graze Reading Terminal Market.",
+    dontMiss: "The Liberty Bell and Independence Hall, then run the Rocky steps.",
+    football: "Philadelphia Union at Subaru Park in Chester.",
+    gettingThere: "Direct flights from London into Philadelphia International."
   }
 ];

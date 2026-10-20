@@ -105,6 +105,7 @@
   .cover::before{border-color:rgba(255,205,0,.45)}
   .contents h2{font-family:"DM Serif Display",Georgia,serif;font-weight:400;font-size:1.7em;line-height:1;margin:.5em 0 .1em;color:#0a4a4d}
   .toc{list-style:none;margin-top:.4em}
+  .contents h2.cont small{font-size:.5em;color:#8a7a58}
   .toc li{display:flex;align-items:baseline;gap:.4em;font-size:.78em;padding:.2em 0;border-bottom:1px dotted var(--line)}
   .toc li.grp{font-family:"Bebas Neue",Impact,sans-serif;letter-spacing:.2em;color:#0f6f73;font-size:.82em;border-bottom:1.5px solid #0f6f73;padding-top:.3em}
   .toc li b{font-family:"DM Serif Display",Georgia,serif;font-weight:400;font-size:1.15em}
@@ -127,6 +128,7 @@
   .sec ul{list-style:none}
   .sec li b{font-weight:700}
   .badge{display:inline-block;font-family:"Bebas Neue",Impact,sans-serif;font-size:.95em;letter-spacing:.08em;line-height:1;background:#1b3a8f;color:#fff;border-radius:3px;padding:.15em .35em .1em;vertical-align:.08em}
+  .badge.none{background:#8a7a58}
   .rate{display:flex;align-items:center;gap:.5em;margin-top:.4em;font-size:.6em;letter-spacing:.12em;text-transform:uppercase;color:#8a7a58}
   .rate .pints svg{width:1.6em}
   .page .notes{font-size:1.12em;margin-top:.3em}
@@ -193,17 +195,22 @@
   }
   var pages=[];
   pages.push({cls:'cover',html:'<div class="t1">TRAVEL GUIDES</div><svg class="gl" viewBox="190 157 700 700"><circle cx="540" cy="507" r="345" fill="#0a1838"/><path fill="#f7f2e4" fill-rule="evenodd" d="'+GLOBE+'"/></svg><div><div class="t3">one beer at a time</div></div><div class="by">ROB CALLERY</div><div class="hint">tap to open</div>'});
-  var toc='',lastC=null;beers.forEach(function(g,i){if(g.country!==lastC){toc+='<li class="grp">'+esc(g.country||'')+'</li>';lastC=g.country}toc+='<li><b>'+esc(g.city)+'</b><span class="c">'+esc(g.region||g.country)+'</span><span class="p">'+(i+2<10?'0':'')+(i+2)+'</span></li>'});
-  pages.push({cls:'contents',html:wm()+top('TRAVEL GUIDES · CONTENTS',1)+'<h2>Where I\'ve been</h2>'+
-    (beers.length?'<ul class="toc">'+toc+'</ul>':'<p class="legend" style="font-size:.8em">The first guides are being written. Check back soon!</p>')+
-    '<p class="legend">Every guide is pint-first: what a pint costs, the local beer, the local Spoons, the bars worth the walk, where to eat, and where to watch the football. Rated on whether I\'d go back.</p>'+
-    '<div class="foot"><span>ROB CALLERY</span><span>EDITION '+new Date().getFullYear()+'</span></div>'});
+  var rows=[],lastC=null;beers.forEach(function(g,i){if(g.country!==lastC){rows.push({grp:g.country||''});lastC=g.country}rows.push({g:g,i:i})});
+  var FIRST=13,MORE=19,chunks=[];if(!rows.length)chunks=[[]];else{chunks.push(rows.slice(0,FIRST));for(var k=FIRST;k<rows.length;k+=MORE)chunks.push(rows.slice(k,k+MORE));}
+  var C=chunks.length;
+  chunks.forEach(function(ch,ci){
+    var toc=ch.map(function(r){if(r.grp!=null)return '<li class="grp">'+esc(r.grp)+'</li>';var n=r.i+1+C;return '<li><b>'+esc(r.g.city)+'</b><span class="c">'+esc(r.g.region||r.g.country)+'</span><span class="p">'+(n<10?'0':'')+n+'</span></li>'}).join('');
+    pages.push({cls:'contents',html:wm()+top('TRAVEL GUIDES · CONTENTS',ci+1)+(ci===0?'<h2>Where I\'ve been</h2>':'<h2 class="cont">Where I\'ve been <small>(cont.)</small></h2>')+
+      (beers.length?'<ul class="toc">'+toc+'</ul>':'<p class="legend" style="font-size:.8em">The first guides are being written. Check back soon!</p>')+
+      (ci===0?'<p class="legend">Every guide is pint-first: what a pint costs, the local beer, the local Spoons, the bars worth the walk, where to eat, and where to watch the football. Rated on whether I\'d go back.</p>':'')+
+      '<div class="foot"><span>ROB CALLERY</span><span>EDITION '+new Date().getFullYear()+'</span></div>'});
+  });
   beers.forEach(function(g,i){
     var c=COL[g.colour]||COL[cols[i%cols.length]], r=Math.max(0,Math.min(5,Math.round(g.rating||0))), p='';for(var k=0;k<5;k++)p+=pint(k<r);
     var bars=(g.bars||[]).slice(0,3).map(function(b){return '<li><b>'+esc(b.name)+'</b>'+(b.note?' – '+esc(b.note):'')+'</li>'}).join('');
-    if(g.spoons) bars='<li class="spoons"><span class="badge">'+(g.spoons.nearest?'NEAREST SPOONS':'SPOONS')+'</span> <b>'+esc(g.spoons.name)+'</b>'+(g.spoons.note?' – '+esc(g.spoons.note):'')+'</li>'+bars;
+    if(g.spoons) bars='<li class="spoons"><span class="badge'+(g.spoons.none?' none':'')+'">'+(g.spoons.none?'NO SPOONS':g.spoons.nearest?'NEAREST SPOONS':'SPOONS')+'</span> '+(g.spoons.name?'<b>'+esc(g.spoons.name)+'</b>'+(g.spoons.note?' – ':''):'')+esc(g.spoons.note||'')+'</li>'+bars;
     var sec=function(k,v){return v?'<div class="sec"><div class="k">'+k+'</div>'+v+'</div>':''};
-    pages.push({cls:'city',style:'--c:'+c,html:wm()+top('TRAVEL GUIDES · '+esc((g.region||g.country||'').toUpperCase()),i+2)+
+    pages.push({cls:'city',style:'--c:'+c,html:wm()+top('TRAVEL GUIDES · '+esc((g.region||g.country||'').toUpperCase()),i+1+C)+
       '<div class="hero">'+skyline(i+3)+'<div class="country">'+esc(((g.region?g.region+' · ':'')+({'United Kingdom':'UK'}[g.country]||g.country||'')).toUpperCase())+'</div><h2>'+esc(g.city)+'</h2>'+(g.visited?'<div class="vis">Visited '+fmtMonth(g.visited)+'</div>':'')+'</div>'+
       '<div class="glance"><div><div class="k">A pint</div><div class="v">'+esc(g.pint||'–')+'</div></div><div><div class="k">Local beer</div><div class="v">'+esc(g.localBeer||'–')+'</div></div><div><div class="k">Best for</div><div class="v">'+esc(g.bestFor||'–')+'</div></div></div>'+
       sec('Where to drink',bars?'<ul>'+bars+'</ul>':'')+sec('Eat','<p>'+esc(g.eat||'')+'</p>'.replace('<p></p>',''))+sec('Don\'t miss',g.dontMiss?'<p>'+esc(g.dontMiss)+'</p>':'')+sec('Football',g.football?'<p>'+esc(g.football)+'</p>':'')+sec('Getting there',g.gettingThere?'<p>'+esc(g.gettingThere)+'</p>':'')+
@@ -211,7 +218,7 @@
       (g.notes?'<div class="notes">“'+esc(g.notes)+'”</div>':'')+
       (demo&&!(window.GUIDES||[]).length?'<div class="sample">SAMPLE</div>':'')});
   });
-  pages.push({cls:'await',html:wm()+top('TRAVEL GUIDES · NEXT STOP',beers.length+2)+'<div class="tag">NEXT DESTINATION<br>TBC</div><div class="await-msg">'+(beers.length?'Bags are packed. Next guide coming soon…':'The first guides are being written.<br>Check back soon!')+'</div><div class="foot"><span>ROB CALLERY</span><span>ONE BEER AT A TIME</span></div>'});
+  pages.push({cls:'await',html:wm()+top('TRAVEL GUIDES · NEXT STOP',beers.length+1+C)+'<div class="tag">NEXT DESTINATION<br>TBC</div><div class="await-msg">'+(beers.length?'Bags are packed. Next guide coming soon…':'The first guides are being written.<br>Check back soon!')+'</div><div class="foot"><span>ROB CALLERY</span><span>ONE BEER AT A TIME</span></div>'});
   var stage=document.getElementById('stage'), leaves=[], cur=0, single=false, lastBack=false;
   function maxCur(){return single?leaves.length-1:(lastBack?leaves.length:leaves.length-1)}
   function face(p,side){return '<div class="face '+side+'"><div class="page '+(p&&p.cls||'')+'"'+(p&&p.style?' style="'+p.style+'"':'')+'>'+(p?p.html:wm())+'</div></div>'}
@@ -242,8 +249,8 @@
     document.getElementById('next').disabled=cur>=maxC;
     var label;
     if(cur===0) label='Closed';
-    else if(single){ label=cur===1?'Contents':(cur-1<=beers.length?(beers[cur-2]?beers[cur-2].city:'')+' · '+(cur-1)+' of '+beers.length:'Next stop'); if(cur-1>beers.length) label='Next stop'; }
-    else { var a=2*cur-1; label=a===1?'Contents':(cur===N?'Page '+a:'Pages '+a+'–'+(a+1)); }
+    else if(single){ label=cur<=C?'Contents':(cur-C<=beers.length?(beers[cur-1-C]?beers[cur-1-C].city:'')+' · '+(cur-C)+' of '+beers.length:'Next stop'); if(cur-C>beers.length) label='Next stop'; }
+    else { var a=2*cur-1; label=(a+1)<=C?'Contents':(cur===N?'Page '+a:'Pages '+a+'–'+(a+1)); }
     document.getElementById('count').textContent=label;
     if(moving>=0) setTimeout(function(){layout(-1)},1000);
   }
