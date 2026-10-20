@@ -7,6 +7,7 @@ window.GUIDES = [
   {
     city: "Leeds", region: "West Yorkshire", country: "United Kingdom", colour: "blue",
     pint: "~£5", localBeer: "Kirkstall Brewery", bestFor: "Historic pubs & matchdays",
+    spoons: { name: "Stick or Twist", note: "big city-centre Spoons near the Arena" },
     bars: [
       { name: "Whitelock's Ale House", note: "dates back to 1715, tucked down a city-centre yard" },
       { name: "The Victoria & Commercial", note: "restored Grade II-listed Victorian interior" },
@@ -20,6 +21,7 @@ window.GUIDES = [
   {
     city: "Wakefield", region: "West Yorkshire", country: "United Kingdom", colour: "red",
     pint: "~£5", localBeer: "Ossett Brewery", bestFor: "Real ale crawl",
+    spoons: { name: "The Six Chimneys", note: "Kirkgate, open from 8am, award-winning loos" },
     bars: [
       { name: "Harry's Bar", note: "log fires, timber beams, up to eight casks" },
       { name: "The Black Rock", note: "Grade II-listed, near the cathedral" },
@@ -33,6 +35,7 @@ window.GUIDES = [
   {
     city: "Batley", region: "West Yorkshire", country: "United Kingdom", colour: "green",
     pint: "~£4.50", localBeer: "Yorkshire cask guests", bestFor: "No-frills locals",
+    spoons: { name: "The Union Rooms", note: "in the grand old Union Bank, local guest ales" },
     bars: [
       { name: "Irish Democratic League Club (Batley Nash)", note: "friendly club, interesting guest ales, Leeds on the telly" }
     ],
@@ -44,6 +47,7 @@ window.GUIDES = [
   {
     city: "Dewsbury", region: "West Yorkshire", country: "United Kingdom", colour: "purple",
     pint: "~£4.50", localBeer: "Timothy Taylor Landlord", bestFor: "Station pub & canal pints",
+    spoons: { name: "The Union Rooms, Batley", note: "Dewsbury's Timepiece has closed, so it's a short hop to Batley", nearest: true },
     bars: [
       { name: "West Riding Refreshment Rooms", note: "on the station platform, ten handpumps" },
       { name: "Leggers Inn", note: "hayloft bar above old stables by the canal basin" }
@@ -56,6 +60,7 @@ window.GUIDES = [
   {
     city: "Huddersfield", region: "West Yorkshire", country: "United Kingdom", colour: "teal",
     pint: "~£4.50", localBeer: "Magic Rock", bestFor: "Real ale trail",
+    spoons: { name: "The Lord Wilson", note: "King Street, up to five guest ales" },
     bars: [
       { name: "King's Head", note: "inside the Grade I-listed station, two wood burners" },
       { name: "Magic Rock Tap", note: "brewery taproom, food trucks at weekends" },
@@ -69,6 +74,7 @@ window.GUIDES = [
   {
     city: "Sheffield", region: "South Yorkshire", country: "United Kingdom", colour: "orange",
     pint: "~£4.50", localBeer: "Abbeydale Moonshine", bestFor: "Kelham Island pub crawl",
+    spoons: { name: "The Bankers Draft", note: "1904 bank by Castle Square, one of Sheffield's first Spoons" },
     bars: [
       { name: "Sheffield Tap", note: "right in the station, with its own Tapped brewery" },
       { name: "Kelham Island Tavern", note: "rotating real ales and a leafy beer garden" },
@@ -82,10 +88,10 @@ window.GUIDES = [
   {
     city: "Morley", region: "West Yorkshire", country: "United Kingdom", colour: "blue",
     pint: "~£4.50", localBeer: "West Yorkshire guests", bestFor: "Queen Street bar hop",
+    spoons: { name: "The Picture House", note: "bigger than it looks, balcony and West Yorkshire guests" },
     bars: [
       { name: "Dyeworks", note: "micropub and bottle shop with local keg and cans" },
-      { name: "Nomad", note: "small bar, good keg range and platters" },
-      { name: "The Picture House", note: "big Wetherspoon with local guest ales" }
+      { name: "Nomad", note: "small bar, good keg range and platters" }
     ],
     eat: "Platters of dips and charcuterie at Nomad.",
     dontMiss: "Morley Town Hall - Grade I listed, with a 160ft domed clock tower.",
@@ -95,6 +101,7 @@ window.GUIDES = [
   {
     city: "Harrogate", region: "North Yorkshire", country: "United Kingdom", colour: "green",
     pint: "~£5", localBeer: "Cold Bath Brewing Co", bestFor: "Spa town pints",
+    spoons: { name: "The Winter Gardens", note: "inside the Victorian Royal Baths, with a grand staircase" },
     bars: [
       { name: "Cold Bath Brewing Co", note: "taproom with ever-changing small batches" },
       { name: "The Little Ale House", note: "cosy micropub, good ale range" },
@@ -108,6 +115,7 @@ window.GUIDES = [
   {
     city: "Knaresborough", region: "North Yorkshire", country: "United Kingdom", colour: "red",
     pint: "~£5", localBeer: "Blind Jack's beer board", bestFor: "Riverside pubs",
+    spoons: { name: "The Crown Inn", note: "High Street, twelve handpumps" },
     bars: [
       { name: "Blind Jack's", note: "named UK's Best Beer Pub at the 2025 Great British Pub Awards" },
       { name: "The World's End", note: "good beer and home cooking by the River Nidd" }
@@ -120,6 +128,7 @@ window.GUIDES = [
   {
     city: "Boroughbridge", region: "North Yorkshire", country: "United Kingdom", colour: "purple",
     pint: "~£5", localBeer: "Rudgate Jorvik Blonde", bestFor: "Historic interiors",
+    spoons: { name: "The Unicorn Hotel, Ripon", note: "no Spoons in Boroughbridge - this is the nearest, on Ripon market place", nearest: true },
     bars: [
       { name: "Tap on the Tutt", note: "1930s interior CAMRA rates of national importance" },
       { name: "The Crown Hotel", note: "17th-century coaching inn on the old Great North Road" }
@@ -131,6 +140,7 @@ window.GUIDES = [
   {
     city: "Thirsk", region: "North Yorkshire", country: "United Kingdom", colour: "teal",
     pint: "~£5", localBeer: "Black Sheep & Hambleton", bestFor: "Market town pubs",
+    spoons: { name: "The Three Tuns", note: "1740 coaching inn where James Herriot drank" },
     bars: [
       { name: "Little 3", note: "low-beamed warren of nooks, history back to 1214" },
       { name: "Golden Fleece Hotel", note: "grand old hotel on the market place, Black Sheep on" }
@@ -143,6 +153,7 @@ window.GUIDES = [
   {
     city: "Northallerton", region: "North Yorkshire", country: "United Kingdom", colour: "orange",
     pint: "~£5", localBeer: "Black Sheep Best Bitter", bestFor: "High Street pubs",
+    spoons: { name: "The Buck Inn", note: "north end of the High Street, six changing casks" },
     bars: [
       { name: "Harewood Arms", note: "narrow single-bar pub with changing local guests" },
       { name: "Golden Lion Hotel", note: "listed coaching inn with a golden lion over the porch" },
