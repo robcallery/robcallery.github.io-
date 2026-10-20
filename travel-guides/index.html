@@ -91,6 +91,8 @@
   .sample{position:absolute;top:44%;left:50%;transform:translate(-50%,-50%) rotate(-24deg);font-family:"Bebas Neue",Impact,sans-serif;font-size:3.4em;letter-spacing:.2em;color:rgba(196,48,43,.16);border:.08em solid rgba(196,48,43,.16);padding:0 .3em;pointer-events:none;white-space:nowrap}
   .await .stamp{opacity:.35}
   .await .fields .v{color:transparent}
+  .unk{color:#a39675;font-style:normal;font-weight:400}
+  .stampbox{height:50%}
   .await-msg{text-align:center;font-family:"Caveat",cursive;font-size:1.35em;color:#8a7a58;margin-top:.6em}
   .backin{background:linear-gradient(135deg,var(--burg2),var(--burg));}
 
@@ -196,7 +198,7 @@
   var pages=[];
   pages.push({cls:'cover',html:'<div class="t1">TRAVEL GUIDES</div><svg class="gl" viewBox="190 157 700 700"><circle cx="540" cy="507" r="345" fill="#0a1838"/><path fill="#f7f2e4" fill-rule="evenodd" d="'+GLOBE+'"/></svg><div><div class="t3">one beer at a time</div></div><div class="by">ROB CALLERY</div><div class="hint">tap to open</div>'});
   var rows=[],lastC=null;beers.forEach(function(g,i){if(g.country!==lastC){rows.push({grp:g.country||''});lastC=g.country}rows.push({g:g,i:i})});
-  var FIRST=13,MORE=19,chunks=[];if(!rows.length)chunks=[[]];else{chunks.push(rows.slice(0,FIRST));for(var k=FIRST;k<rows.length;k+=MORE)chunks.push(rows.slice(k,k+MORE));}
+  var FIRST=13,MORE=19,chunks=[];if(!rows.length)chunks=[[]];else{var k=0;while(k<rows.length){var n=chunks.length?MORE:FIRST,ch=rows.slice(k,k+n);if(k+n<rows.length&&ch.length>1&&ch[ch.length-1].grp!=null)ch.pop();chunks.push(ch);k+=ch.length;}}
   var C=chunks.length;
   chunks.forEach(function(ch,ci){
     var toc=ch.map(function(r){if(r.grp!=null)return '<li class="grp">'+esc(r.grp)+'</li>';var n=r.i+1+C;return '<li><b>'+esc(r.g.city)+'</b><span class="c">'+esc(r.g.region||r.g.country)+'</span><span class="p">'+(n<10?'0':'')+n+'</span></li>'}).join('');
