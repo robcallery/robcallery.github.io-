@@ -55,6 +55,18 @@
     .soon .art{max-width:230px;margin:0 auto}
     .soon p{margin:0 auto}
   }
+  .pg,.cv-front,.cv-inside{transform-box:view-box;transform-origin:0px 145px}
+  .pg,.cv-inside{transform:scaleX(0)}
+  .pg{opacity:0}
+  .flick .art{transform:rotate(0) translateY(-10px) scale(1.04)!important}
+  .flick .cv-front{animation:cvF .32s ease-in forwards}
+  .flick .cv-inside{animation:cvI .32s .32s ease-out forwards}
+  .flick .pg{animation:pgFlip .26s ease-in-out forwards}
+  .flick .pg0{animation-delay:.42s}.flick .pg1{animation-delay:.52s}.flick .pg2{animation-delay:.62s}.flick .pg3{animation-delay:.72s}.flick .pg4{animation-delay:.82s}.flick .pg5{animation-delay:.92s}
+  @keyframes cvF{to{transform:scaleX(0)}}
+  @keyframes cvI{to{transform:scaleX(-.72)}}
+  @keyframes pgFlip{0%{opacity:1;transform:scaleX(1)}100%{opacity:1;transform:scaleX(-.7)}}
+  .pg{animation-fill-mode:forwards}
   .brand,.back{white-space:nowrap}
   .tvstack{width:min(230px,100%)}
   .telly .art{display:block;text-decoration:none;width:100%}
