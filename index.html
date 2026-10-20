@@ -177,7 +177,7 @@
       <!-- dark green pub frontage -->
       <rect x="28" y="640" width="244" height="80" fill="#14402c"/>
       <rect x="22" y="618" width="256" height="24" fill="#0f3322"/>
-      <text x="150" y="636" text-anchor="middle" font-family="Bebas Neue, Impact, sans-serif" font-size="18" letter-spacing="2" fill="#ffcd00">THE CALLERY ARMS</text>
+      <text x="150" y="636" text-anchor="middle" font-family="Bebas Neue, Impact, sans-serif" font-size="18" letter-spacing="1" fill="#ffcd00" textLength="226" lengthAdjust="spacingAndGlyphs">THE FARKE &amp; FIRKIN</text>
       <!-- glowing windows -->
       <rect x="40" y="652" width="70" height="46" fill="url(#glass)"/><rect x="190" y="652" width="70" height="46" fill="url(#glass)"/>
       <g stroke="#14402c" stroke-width="3"><line x1="75" y1="652" x2="75" y2="698"/><line x1="40" y1="675" x2="110" y2="675"/><line x1="225" y1="652" x2="225" y2="698"/><line x1="190" y1="675" x2="260" y2="675"/></g>
@@ -354,6 +354,26 @@
     moon.style.opacity=night;
   }
   update(); setInterval(update,60000);
+})();
+</script>
+<script>
+// spin the logo faster while a plane is flying across it
+(function(){
+  var logo=document.querySelector('.logo'); if(!logo) return;
+  var spins=[logo.querySelector('.globe'),logo.querySelector('.pint')];
+  var planes=[].slice.call(document.querySelectorAll('.plane path:first-of-type'));
+  var fast=false;
+  function setRate(r){spins.forEach(function(el){(el.getAnimations?el.getAnimations():[]).forEach(function(a){a.updatePlaybackRate?a.updatePlaybackRate(r):a.playbackRate=r})})}
+  function tick(){
+    var L=logo.getBoundingClientRect(), hit=false;
+    for(var i=0;i<planes.length;i++){
+      var P=planes[i].getBoundingClientRect();
+      if(P.width&&P.right>L.left+L.width*.12&&P.left<L.right-L.width*.12&&P.bottom>L.top&&P.top<L.bottom-L.height*.15){hit=true;break}
+    }
+    if(hit!==fast){fast=hit;setRate(hit?5:1)}
+    requestAnimationFrame(tick);
+  }
+  requestAnimationFrame(tick);
 })();
 </script>
 <script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
