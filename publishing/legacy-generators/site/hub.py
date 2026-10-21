@@ -366,30 +366,33 @@ def soon_page(slug,title,blurb,art,r,back,backtxt,tagtxt="Coming soon"):
     open(f'/home/claude/site/{slug}/index.html','w').write(pg)
 
 soon_page("football-tales","Football: Tales of a Leeds Fan","Stories from Elland Road and away days up and down the country, the highs, the lows and the pubs either side, collected one card at a time. The first pack is being printed.",PACK,-2,"/stadium/","← Back to the stadium")
-from pub_parts import pub_scene, leeds_tv_art, teletext_page
+from pub_parts import pub_scene, leeds_tv_art, teletext_page, PUB_CSS, hub_tv_svg, leeds_tv_svg, world_tv_svg, poster_leeds, poster_world, shelf_svg, bar_top_svg
 import json as _json, subprocess as _sp
 _GC=_json.loads(_sp.run(['node','-e',"global.window={};require('/home/claude/site/travel-guides/guides.js');process.stdout.write(JSON.stringify(window.GUIDES.map(g=>g.city)))"],capture_output=True,text=True).stdout)
 soon_page("match-hub/leeds","Leeds United Match Hub","Live scores, fixtures, the table, team news and matchday pubs for Leeds United, all on one telly. It's being wired up now.",leeds_tv_art(),0,"/match-hub/","← Back to the pub")
 os.makedirs('/home/claude/site/match-hub/world',exist_ok=True)
 open('/home/claude/site/match-hub/world/index.html','w').write(teletext_page(_GC))
 mh=HEAD.format(title="Match Hub - Rob Callery",desc="The Match Hub pub: a Leeds United telly and a retro teletext telly showing a random live game somewhere in the world, with the local beer.",globe=globe_d,backhref="/stadium/",backtxt="← Back to the stadium")
-mh+='''<main>
-  <section class="intro">
-    <h1>The <em>Match Hub.</em></h1>
-    <p>Two tellies above the bar. Leeds on the left, the rest of the world on the right.</p>
-  </section>
-  <section class="stadium" aria-label="The pub">
-    <svg viewBox="0 0 1200 640" role="img" aria-label="Two tellies above a pub bar">
-'''+pub_scene()+'''
-    </svg>
-  </section>
-  <nav class="spots" aria-label="Pick a telly">
-    <a class="spot" href="/match-hub/leeds/"><h2>Leeds United <span class="tag">Soon</span></h2><p>The Leeds match hub: scores, fixtures and matchday.</p></a>
-    <a class="spot" href="/match-hub/world/"><h2>Around the World</h2><p>A random live game somewhere on the planet, and the local beer to go with it.</p></a>
-  </nav>
+mh=mh.replace('</style>\n</head>\n<body>', PUB_CSS+'</style>\n</head>\n<body class="pubpage">\n<div class="lamps" aria-hidden="true"><i></i><i></i><i></i></div>',1)
+_pL='<a class="poster tvl" style="--r:-4deg" href="/match-hub/leeds/"><span class="sr">Leeds United match hub (coming soon)</span>'+poster_leeds()+'</a>'
+_pW='<a class="poster tvl" style="--r:3deg" href="/match-hub/world/"><span class="sr">Around the World: a random live game and the local beer</span>'+poster_world()+'</a>'
+mh+='''<main class="wall">
+  <h1 class="sr">The Match Hub</h1>
+  <div class="tier top">
+    '''+_pL+'''
+    <div class="hubtv">'''+hub_tv_svg()+'''</div>
+    '''+_pW+'''
+  </div>
+  <div class="tier low">
+    <a class="tvl tv-leeds" id="tvLeeds" href="/match-hub/leeds/"><span class="sr">Leeds United telly: the Leeds match hub (coming soon)</span>'''+leeds_tv_svg()+'''</a>
+    <div class="shelf">'''+shelf_svg()+'''</div>
+    <a class="tvl tv-world" id="tvWorld" href="/match-hub/world/"><span class="sr">Retro telly: CALFAX 302, a random live game around the world</span>'''+world_tv_svg()+'''</a>
+  </div>
+  <div class="tier posters">'''+_pL.replace('class="poster tvl"','class="poster tvl" aria-hidden="true" tabindex="-1"')+_pW.replace('class="poster tvl"','class="poster tvl" aria-hidden="true" tabindex="-1"')+'''</div>
 </main>
+<div class="pbar" aria-hidden="true"><div class="bartop">'''+bar_top_svg()+'''</div><div class="counter"></div><div class="front"></div></div>
 <script>
-(function(){var c=[].slice.call(document.querySelectorAll('.ttclock'));function t(){try{var s=new Intl.DateTimeFormat('en-GB',{hour:'2-digit',minute:'2-digit',timeZone:'Europe/London'}).format(new Date());c.forEach(function(e){e.textContent=s})}catch(e){}}t();setInterval(t,15000)})();
+(function(){var c=[].slice.call(document.querySelectorAll('.ttclock,.hubclock'));function t(){try{var s=new Intl.DateTimeFormat('en-GB',{hour:'2-digit',minute:'2-digit',timeZone:'Europe/London'}).format(new Date());c.forEach(function(e){e.textContent=s})}catch(e){}}t();setInterval(t,15000)})();
 </script>
 '''+FOOT
 open('/home/claude/site/match-hub/index.html','w').write(mh)

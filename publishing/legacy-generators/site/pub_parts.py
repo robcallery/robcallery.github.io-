@@ -308,3 +308,160 @@ var DATA=''' + data + ''';
 </body>
 </html>
 '''
+
+
+# ====================================================================== full-screen pub (v2)
+def _defs(sfx):
+    return ('<defs>'
+            f'<linearGradient id="screenSheen{sfx}" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".16"/><stop offset=".45" stop-color="#fff" stop-opacity="0"/></linearGradient>'
+            f'<radialGradient id="crtSheen{sfx}" cx=".35" cy=".3" r=".8"><stop offset="0" stop-color="#fff" stop-opacity=".18"/><stop offset=".6" stop-color="#fff" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".35"/></radialGradient>'
+            f'<radialGradient id="lufcGlow{sfx}" cx=".5" cy=".3" r=".8"><stop offset="0" stop-color="#2a56c8"/><stop offset="1" stop-color="#0b1f63" stop-opacity="0"/></radialGradient>'
+            '</defs>')
+
+def _sfx(svg, sfx):
+    for k in ('screenSheen', 'crtSheen', 'lufcGlow'):
+        svg = svg.replace(f'url(#{k})', f'url(#{k}{sfx})')
+    return svg
+
+def leeds_tv_svg():
+    return ('<svg viewBox="-20 -72 340 258" role="img" aria-label="Leeds United match hub telly">' + _defs('L') + _sfx(modern_tv(0, 0, 300), 'L') + '</svg>')
+
+def world_tv_svg():
+    return ('<svg viewBox="-8 -72 316 312" role="img" aria-label="Retro telly showing teletext football">' + _defs('W') + _sfx(retro_tv(0, 0, 300), 'W') + '</svg>')
+
+def hub_tv_svg():
+    # the big middle telly: a sports-news style title screen
+    return '''<svg viewBox="-14 -46 668 420" role="img" aria-label="The Match Hub">
+  <defs>
+    <linearGradient id="hubBg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0d1f5c"/><stop offset=".55" stop-color="#081236"/><stop offset="1" stop-color="#050816"/></linearGradient>
+    <linearGradient id="hubRed" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#e3001b"/><stop offset="1" stop-color="#a30016"/></linearGradient>
+    <linearGradient id="hubSheen" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".12"/><stop offset=".4" stop-color="#fff" stop-opacity="0"/></linearGradient>
+    <clipPath id="hubClip"><rect x="0" y="0" width="640" height="360"/></clipPath>
+  </defs>
+  <rect x="300" y="-46" width="40" height="40" fill="#2a2a30"/><rect x="250" y="-46" width="140" height="10" rx="3" fill="#3a3a42"/>
+  <rect x="-14" y="-14" width="668" height="388" rx="10" fill="#111216"/><rect x="-14" y="-14" width="668" height="388" rx="10" fill="none" stroke="#2c2e36" stroke-width="2"/>
+  <g clip-path="url(#hubClip)">
+    <rect width="640" height="360" fill="url(#hubBg)"/>
+    <path d="M380 0 L640 0 L640 360 L250 360 Z" fill="#ffffff" opacity=".04"/>
+    <path d="M470 0 L640 0 L640 360 L380 360 Z" fill="#ffffff" opacity=".04"/>
+    <g opacity=".22" stroke="#4d7cff" stroke-width="1">''' + ''.join(f'<line x1="{x}" y1="0" x2="{x-120}" y2="360"/>' for x in range(80, 760, 40)) + '''</g>
+    <rect x="28" y="26" width="64" height="26" fill="url(#hubRed)"/><text x="60" y="45" text-anchor="middle" font-family="Bebas Neue, Impact, sans-serif" font-size="20" fill="#fff" letter-spacing="2">LIVE</text>
+    <rect x="92" y="26" width="76" height="26" fill="#ffffff"/><text x="130" y="45" text-anchor="middle" font-family="Bebas Neue, Impact, sans-serif" font-size="20" fill="#0d1f5c" class="hubclock">22:00</text>
+    <g transform="skewX(-8)">
+      <text x="70" y="150" font-family="Bebas Neue, Impact, sans-serif" font-size="44" fill="#ffcd00" letter-spacing="4">THE</text>
+      <text x="70" y="226" font-family="Bebas Neue, Impact, sans-serif" font-size="96" fill="#ffffff" letter-spacing="2" textLength="380" lengthAdjust="spacingAndGlyphs">MATCH HUB</text>
+      <rect x="72" y="240" width="370" height="10" fill="url(#hubRed)"/>
+    </g>
+    <text x="48" y="282" font-family="Inter, system-ui, sans-serif" font-weight="600" font-size="17" fill="#c8d3f5">Leeds on the left. The rest of the world on the right.</text>
+    <rect x="0" y="316" width="640" height="44" fill="#ffffff"/>
+    <rect x="0" y="316" width="118" height="44" fill="url(#hubRed)"/><text x="59" y="345" text-anchor="middle" font-family="Bebas Neue, Impact, sans-serif" font-size="22" fill="#fff" letter-spacing="2">LATEST</text>
+    <svg x="118" y="316" width="522" height="44" viewBox="0 0 522 44"><g class="ticker"><text x="0" y="29" font-family="Bebas Neue, Impact, sans-serif" font-size="22" fill="#0d1f5c" letter-spacing="1">CALFAX 302 NOW SHOWING ON THE OLD SET  ·  LEEDS MATCH HUB COMING SOON  ·  MARCHING ON TOGETHER  ·  ONE BEER AT A TIME  ·  FOLLOW @CALZ88  ·  CALFAX 302 NOW SHOWING ON THE OLD SET  ·  LEEDS MATCH HUB COMING SOON  ·  MARCHING ON TOGETHER  ·  ONE BEER AT A TIME  ·  FOLLOW @CALZ88  ·</text></g></svg>
+    <rect width="640" height="360" fill="url(#hubSheen)"/>
+  </g>
+  <circle cx="630" cy="368" r="2.5" fill="#3dff7a"/>
+</svg>'''
+
+def poster_leeds():
+    return '''<svg viewBox="0 0 150 205" role="img" aria-label="Poster: Leeds United Match Hub, coming soon">
+  <rect x="2" y="4" width="146" height="199" rx="2" fill="#f7f2e4"/>
+  <rect x="10" y="12" width="130" height="140" fill="#1e3f9a"/>
+  <path d="M10 112 L140 74 L140 92 L10 130 Z" fill="#ffcd00"/><path d="M10 121 L140 83 L140 87 L10 125 Z" fill="#ffffff"/>
+  <circle cx="75" cy="56" r="22" fill="#ffffff"/><path d="M68 49 l7 -5 l7 5 l-3 8 h-8 z" fill="#1e3f9a"/>''' + ''.join(f'<path d="M75 56 L{75+22*__import__("math").cos(a):.1f} {56+22*__import__("math").sin(a):.1f}" stroke="#1e3f9a" stroke-width="1.2"/>' for a in (0.6, 2.2, 3.8, 5.4)) + '''
+  <text x="75" y="172" text-anchor="middle" font-family="Bebas Neue, Impact, sans-serif" font-size="22" fill="#0a1838" letter-spacing="1" textLength="118" lengthAdjust="spacingAndGlyphs">LEEDS UNITED</text>
+  <text x="75" y="187" text-anchor="middle" font-family="Bebas Neue, Impact, sans-serif" font-size="11" fill="#1e3f9a" letter-spacing="3">MATCH HUB</text>
+  <g transform="rotate(-14 104 140)"><rect x="70" y="128" width="72" height="22" rx="3" fill="none" stroke="#d22630" stroke-width="2.4"/><text x="106" y="144" text-anchor="middle" font-family="Bebas Neue, Impact, sans-serif" font-size="14" fill="#d22630" letter-spacing="2" textLength="62" lengthAdjust="spacingAndGlyphs">COMING SOON</text></g>
+  <circle cx="75" cy="10" r="3.5" fill="#d22630"/><circle cx="74" cy="9" r="1.2" fill="#fff" opacity=".7"/>
+</svg>'''
+
+def poster_world():
+    cols = ['#ff0000', '#00ff00', '#ffff00', '#00ffff', '#ff00ff', '#ffffff']
+    return '''<svg viewBox="0 0 150 205" role="img" aria-label="Poster: Around the World on CALFAX 302">
+  <rect x="2" y="4" width="146" height="199" rx="2" fill="#111"/>
+  <rect x="10" y="12" width="130" height="140" fill="#000"/>
+  <text x="16" y="26" font-family="'Courier New', monospace" font-weight="700" font-size="9" fill="#fff">P302</text><text x="134" y="26" text-anchor="end" font-family="'Courier New', monospace" font-weight="700" font-size="9" fill="#ff0">CALFAX</text>
+  ''' + ''.join(f'<rect x="{14+i*12.2:.1f}" y="32" width="10" height="{6+(i*7)%8}" fill="#0ff" opacity="{.6+(i%3)*.2:.1f}"/>' for i in range(10)) + '''
+  <circle cx="75" cy="92" r="34" fill="#00f"/><path d="M50 80 Q60 70 72 78 T96 74 L100 92 Q86 100 72 96 T48 100 Z M60 108 Q72 104 84 110 L80 120 Q70 118 62 120 Z" fill="#0f0"/>
+  <ellipse cx="75" cy="92" rx="34" ry="12" fill="none" stroke="#0ff" stroke-width="1"/><ellipse cx="75" cy="92" rx="14" ry="34" fill="none" stroke="#0ff" stroke-width="1"/>
+  <text x="75" y="145" text-anchor="middle" font-family="'Courier New', monospace" font-weight="700" font-size="11" fill="#ff0" textLength="118" lengthAdjust="spacingAndGlyphs">LIVE + LOCAL BEER</text>
+  <text x="75" y="172" text-anchor="middle" font-family="Bebas Neue, Impact, sans-serif" font-size="21" fill="#ffffff" letter-spacing="1" textLength="124" lengthAdjust="spacingAndGlyphs">AROUND THE WORLD</text>
+  ''' + ''.join(f'<rect x="{10+i*21.7:.1f}" y="180" width="21.7" height="8" fill="{c}"/>' for i, c in enumerate(cols)) + '''
+  <circle cx="75" cy="10" r="3.5" fill="#1e3f9a"/><circle cx="74" cy="9" r="1.2" fill="#fff" opacity=".7"/>
+</svg>'''
+
+def shelf_svg():
+    rnd = random.Random(9)
+    g = ['<svg viewBox="0 0 220 240" aria-hidden="true">']
+    g.append('<rect x="70" y="0" width="80" height="58" rx="4" fill="#0a1838"/><text x="110" y="25" text-anchor="middle" font-family="Bebas Neue, Impact, sans-serif" font-size="17" fill="#ffcd00" letter-spacing="2">THE</text><text x="110" y="46" text-anchor="middle" font-family="Bebas Neue, Impact, sans-serif" font-size="17" fill="#ffcd00" letter-spacing="1">LOCAL</text>')
+    for shelf in (140, 230):
+        g.append(f'<rect x="0" y="{shelf}" width="220" height="10" fill="#5a361b"/>')
+        x = 8
+        while x < 205:
+            w = rnd.choice([12, 14, 16]); h = rnd.randint(38, 62); c = rnd.choice(['#2f6b3c', '#7a4b27', '#c9a227', '#3a5aa0', '#a8322e', '#d8d2c4'])
+            g.append(f'<rect x="{x}" y="{shelf-h}" width="{w}" height="{h-14}" rx="3" fill="{c}" opacity=".9"/><rect x="{x+w/2-2}" y="{shelf-h-10}" width="4" height="12" fill="{c}"/><rect x="{x+2}" y="{shelf-h+14}" width="{w-4}" height="10" fill="#f7f2e4" opacity=".75"/>')
+            x += w + 6
+    g.append('</svg>')
+    return ''.join(g)
+
+def bar_top_svg():
+    # pumps and pints sitting on the bar (stretches across the screen)
+    g = ['<svg viewBox="0 0 1200 90" preserveAspectRatio="xMidYMax meet" aria-hidden="true">']
+    for i, x in enumerate((470, 520, 570, 630, 680, 730)):
+        g.append(f'<rect x="{x-5}" y="38" width="10" height="52" rx="3" fill="#f2efe6"/><rect x="{x-9}" y="14" width="18" height="28" rx="4" fill="{["#1e3f9a", "#a8322e", "#2f6b3c", "#c9a227", "#1e3f9a", "#7a1f2b"][i]}"/><rect x="{x-7}" y="22" width="14" height="10" fill="#f7f2e4"/>')
+    for x, full in ((260, 1), (310, .6), (900, 1), (950, .8), (1080, 1), (130, .9)):
+        g.append(f'<path d="M{x-12} 90 L{x-15} 50 L{x+15} 50 L{x+12} 90 Z" fill="#f7f2e4" opacity=".35"/><path d="M{x-12} 90 L{x-14.5} {90-40*full:.0f} L{x+14.5} {90-40*full:.0f} L{x+12} 90 Z" fill="#e8a317"/><rect x="{x-15}" y="{86-40*full:.0f}" width="30" height="6" rx="3" fill="#ffffff"/>')
+    g.append('</svg>')
+    return ''.join(g)
+
+PUB_CSS = """
+  html{height:100%}
+  body.pubpage{min-height:100vh;min-height:100dvh;overflow-x:hidden;
+    background:
+      radial-gradient(ellipse 20% 34% at 12% 0,rgba(255,217,138,.30),transparent 70%),
+      radial-gradient(ellipse 24% 38% at 50% 0,rgba(255,217,138,.30),transparent 70%),
+      radial-gradient(ellipse 20% 34% at 88% 0,rgba(255,217,138,.30),transparent 70%),
+      repeating-linear-gradient(90deg,rgba(255,255,255,.035) 0 18px,transparent 18px 40px),
+      linear-gradient(#1f3d30,#14261c)}
+  body.pubpage header{position:relative;z-index:3;max-width:none;padding:14px clamp(16px,3vw,40px)}
+  .lamps{position:absolute;left:22%;right:22%;top:0;justify-content:space-between!important;display:flex;justify-content:space-around;pointer-events:none;z-index:1}
+  .lamps i{display:block;width:40px;height:38px;position:relative}
+  .lamps i::before{content:"";position:absolute;left:19px;top:0;width:2px;height:22px;background:#2a2a2a}
+  .lamps i::after{content:"";position:absolute;left:0;top:22px;width:40px;height:16px;background:#c9a227;clip-path:polygon(22% 0,78% 0,100% 100%,0 100%)}
+  main.wall{position:relative;z-index:2;flex:1;display:flex;flex-direction:column;justify-content:space-evenly;gap:clamp(8px,1.6vh,20px);padding:0 16px}
+  .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+  .hubtv>svg,.tvl>svg,.shelf>svg{width:100%;height:auto;display:block;overflow:visible}
+  .tier{display:flex;align-items:center;justify-content:center;gap:clamp(14px,4vw,70px)}
+  .tier.low{align-items:flex-end;gap:clamp(10px,2.6vw,44px)}
+  .hubtv{width:min(46vw,46vh,720px);filter:drop-shadow(0 18px 22px rgba(0,0,0,.5))}
+  .tvl{display:block;text-decoration:none;outline:none;transition:transform .3s ease,filter .3s ease;filter:drop-shadow(0 16px 18px rgba(0,0,0,.45))}
+  .tvl:hover,.tvl:focus-visible{transform:translateY(-6px) scale(1.03);filter:drop-shadow(0 0 22px rgba(255,205,0,.55)) drop-shadow(0 16px 18px rgba(0,0,0,.45))}
+  .tvl:focus-visible{outline:3px solid #fff;outline-offset:6px;border-radius:12px}
+  .tv-leeds{width:min(28vw,39vh,480px)}
+  .tv-world{width:min(25vw,33vh,430px)}
+  .shelf{width:min(13vw,20vh,210px)}
+  .poster{width:min(12vw,24vh,200px);transform:rotate(var(--r));transform-origin:50% 0}
+  .poster:hover,.poster:focus-visible{transform:rotate(0) translateY(-6px) scale(1.06)}
+  .pbar{position:relative;z-index:2;margin-top:clamp(4px,1vh,10px)}
+  .bartop{width:min(100%,1400px);margin:0 auto;height:clamp(44px,8vh,84px)}
+  .bartop>svg{width:100%;height:100%;display:block}
+  .counter{height:16px;background:linear-gradient(#b07a4a 0 5px,#8a5a32 5px);box-shadow:0 4px 8px rgba(0,0,0,.35)}
+  .front{height:clamp(40px,7vh,80px);background:repeating-linear-gradient(90deg,transparent 0 16px,#3b2312 16px 20px,transparent 20px 116px,#3b2312 116px 120px),linear-gradient(#5a361b,#4a2c16)}
+  body.pubpage footer{padding:12px 16px}
+  .ticker{animation:tick 28s linear infinite}
+  @keyframes tick{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+  @media (max-width:820px),(max-aspect-ratio:1/1){
+    main.wall{justify-content:flex-start;gap:20px;padding-top:4px}
+    .hubtv{width:min(92vw,560px);margin:0 auto}
+    .lamps{display:none}
+    .tier.top{flex-wrap:wrap}
+    .tier.top .poster{display:none}
+    .tier.low{flex-direction:column;align-items:center;gap:22px}
+    .tier.low .shelf{display:none}
+    .tv-leeds{width:min(84vw,420px)}
+    .tv-world{width:min(76vw,380px)}
+    .tier.posters{display:flex!important;gap:26px;padding-top:8px}
+    .tier.posters .poster{width:min(36vw,170px)}
+  }
+  .tier.posters{display:none}
+  @media (max-height:700px) and (min-aspect-ratio:1/1){body.pubpage header{padding-top:8px;padding-bottom:4px}.front{height:24px}body.pubpage footer{padding:6px 16px}}
+  @media (prefers-reduced-motion:reduce){.ticker{animation:none}.tvl,.poster{transition:none}}
+"""
