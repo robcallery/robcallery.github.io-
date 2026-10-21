@@ -1838,6 +1838,159 @@ window.GUIDES = [
     ]
   },
   {
+    "city": "Glasgow",
+    "region": "Scotland",
+    "country": "United Kingdom",
+    "group": "Scotland",
+    "colour": "blue",
+    "pint": "~£5",
+    "localBeer": "Tennent's / Drygate",
+    "bestFor": "Big nights & big bars",
+    "eat": "A late-night chippy - or a deep-fried Mars bar if you dare.",
+    "dontMiss": "Kelvingrove Art Gallery, then the West End.",
+    "gettingThere": "Glasgow Central or Queen Street - about 4.5 hours from Leeds.",
+    "tip": "Look up at the Duke of Wellington statue outside GoMA - he'll be wearing a traffic cone.",
+    "football": "Celtic at Celtic Park, Rangers at Ibrox.",
+    "spoons": {
+      "name": "The Counting House",
+      "note": "George Square, in a grand old bank"
+    },
+    "bars": [
+      {
+        "name": "The Horse Shoe Bar",
+        "note": "Drury Street, one of the longest bars in Europe"
+      },
+      {
+        "name": "The Pot Still",
+        "note": "Hope Street, hundreds of whiskies"
+      },
+      {
+        "name": "Drygate",
+        "note": "brewery and bar next door to Tennent's Wellpark"
+      }
+    ]
+  },
+  {
+    "city": "Edinburgh",
+    "region": "Scotland",
+    "country": "United Kingdom",
+    "group": "Scotland",
+    "colour": "green",
+    "pint": "~£6",
+    "localBeer": "Scottish cask",
+    "bestFor": "Old Town pubs",
+    "eat": "Haggis, neeps and tatties.",
+    "dontMiss": "Edinburgh Castle, then walk down the Royal Mile.",
+    "gettingThere": "Edinburgh Waverley on the East Coast Main Line, about 3 hours from Leeds.",
+    "tip": "Walk up Arthur's Seat and down to the Sheep Heid for a pint.",
+    "football": "Hearts at Tynecastle, Hibs at Easter Road.",
+    "spoons": {
+      "name": "The Standing Order",
+      "note": "George Street, in an old bank with a huge safe"
+    },
+    "bars": [
+      {
+        "name": "Café Royal",
+        "note": "West Register Street, Victorian tiles and an oyster bar"
+      },
+      {
+        "name": "The Bow Bar",
+        "note": "Victoria Street, tiny, cask ale and whisky"
+      },
+      {
+        "name": "The Sheep Heid Inn",
+        "note": "Duddingston - claims to be Scotland's oldest pub"
+      }
+    ]
+  },
+  {
+    "city": "Aberdeen",
+    "region": "Scotland",
+    "country": "United Kingdom",
+    "group": "Scotland",
+    "colour": "orange",
+    "pint": "~£5",
+    "localBeer": "Scottish cask",
+    "bestFor": "Granite & whisky",
+    "eat": "A buttery (rowie) - Aberdeen's salty flat croissant.",
+    "dontMiss": "Marischal College, then down to Footdee by the harbour.",
+    "gettingThere": "Aberdeen station, about 2.5 hours from Edinburgh.",
+    "tip": "The Prince of Wales bar is 60 feet long - one of the longest in the city.",
+    "football": "Aberdeen at Pittodrie.",
+    "spoons": {
+      "name": "The Archibald Simpson",
+      "note": "Castle Street, in a granite former bank"
+    },
+    "bars": [
+      {
+        "name": "Prince of Wales",
+        "note": "St Nicholas Lane, one of the oldest bars in town, 60ft bar"
+      },
+      {
+        "name": "The Grill",
+        "note": "Union Street, Aberdeen's classic whisky bar"
+      }
+    ]
+  },
+  {
+    "city": "Dundee",
+    "region": "Scotland",
+    "country": "United Kingdom",
+    "group": "Scotland",
+    "colour": "blue",
+    "pint": "~£4.50",
+    "localBeer": "Scottish cask",
+    "bestFor": "Discovery & the V&A",
+    "eat": "A Dundee cake - or Keiller's marmalade, which made the city famous.",
+    "dontMiss": "The V&A Dundee and RRS Discovery next door.",
+    "gettingThere": "Dundee station, about 1.5 hours from Edinburgh.",
+    "tip": "Dens Park and Tannadice are 100 yards apart - the closest grounds in Britain.",
+    "football": "Dundee and Dundee United - their grounds are on the same street.",
+    "spoons": {
+      "name": "The Counting House",
+      "note": "Reform Street, in the city centre"
+    },
+    "bars": [
+      {
+        "name": "Speedwell Bar",
+        "note": "Perth Road, \"Mennie's\" - Edwardian, 150 malts"
+      }
+    ]
+  },
+  {
+    "city": "Belfast",
+    "region": "Northern Ireland",
+    "country": "United Kingdom",
+    "group": "Northern Ireland",
+    "colour": "orange",
+    "pint": "~£5",
+    "localBeer": "Guinness",
+    "bestFor": "Victorian pubs",
+    "eat": "An Ulster fry.",
+    "dontMiss": "Titanic Belfast, then a black taxi tour.",
+    "gettingThere": "Fly into Belfast City or ferry from Liverpool or Cairnryan.",
+    "tip": "Grab one of the Crown's snugs - they still have the bells to call the barman.",
+    "football": "Linfield at Windsor Park; Ulster Rugby at Kingspan Stadium.",
+    "spoons": {
+      "name": "The Bridge House",
+      "note": "Bedford Street, in the city centre"
+    },
+    "bars": [
+      {
+        "name": "The Crown Liquor Saloon",
+        "note": "Great Victoria Street, gas-lit Victorian snugs"
+      },
+      {
+        "name": "Kelly's Cellars",
+        "note": "Bank Street, from 1720, trad music"
+      },
+      {
+        "name": "The Duke of York",
+        "note": "Commercial Court, Cathedral Quarter"
+      }
+    ]
+  },
+  {
     "city": "Llanrwst",
     "region": "Wales",
     "country": "United Kingdom",
@@ -1856,6 +2009,60 @@ window.GUIDES = [
     "gettingThere": "Conwy Valley line from Llandudno Junction.",
     "tip": "Tea at Tu Hwnt i'r Bont by the old bridge before the Pen-y-Bryn.",
     "group": "Wales"
+  },
+  {
+    "city": "Cardiff",
+    "region": "Wales",
+    "country": "United Kingdom",
+    "group": "Wales",
+    "colour": "teal",
+    "pint": "~£5",
+    "localBeer": "Brains",
+    "bestFor": "Match days",
+    "eat": "Welsh cakes from the market, or a Clark's Pie.",
+    "dontMiss": "Cardiff Castle, then Cardiff Bay.",
+    "gettingThere": "Cardiff Central, about 3.5 hours from Leeds.",
+    "tip": "The City Arms is mobbed on international days - go early or go after.",
+    "football": "Cardiff City at Cardiff City Stadium; Wales at the Principality Stadium.",
+    "spoons": {
+      "name": "The Ivor Davies",
+      "note": "Cowbridge Road East - plus the Mount Stuart down in the Bay"
+    },
+    "bars": [
+      {
+        "name": "The City Arms",
+        "note": "Quay Street, right by the Principality Stadium"
+      },
+      {
+        "name": "The Goat Major",
+        "note": "High Street, named after the Royal Welsh regiment's goat"
+      }
+    ]
+  },
+  {
+    "city": "Swansea",
+    "region": "Wales",
+    "country": "United Kingdom",
+    "group": "Wales",
+    "colour": "red",
+    "pint": "~£4.50",
+    "localBeer": "Welsh cask",
+    "bestFor": "Dylan Thomas & the bay",
+    "eat": "Cockles and laverbread from Swansea Market.",
+    "dontMiss": "A walk round the bay to Mumbles.",
+    "gettingThere": "Swansea station, 3 hours from London.",
+    "tip": "Head out to Mumbles for a pint on the front and an ice cream at Joe's.",
+    "football": "Swansea City at the Swansea.com Stadium.",
+    "spoons": {
+      "name": "The Potters Wheel",
+      "note": "The Kingsway, in the city centre"
+    },
+    "bars": [
+      {
+        "name": "No Sign Bar",
+        "note": "Wind Street, roots back to 1690, a Dylan Thomas haunt"
+      }
+    ]
   },
   {
     "city": "Bakewell",
