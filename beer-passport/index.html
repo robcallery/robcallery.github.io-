@@ -165,7 +165,7 @@
     var bot=blank?'UNITED KINGDOM OF ALES':esc((known&&(b.brewedIn||b.brewedCountry)?[b.brewedIn,b.brewedCountry].filter(Boolean).join(' · '):'UNITED KINGDOM OF ALES').toUpperCase());
     var lines=blank?['?']:wrap(b.name||'').map(esc), ml=Math.max.apply(null,lines.map(function(l){return l.length}));
     var fs=blank?44:ml<=7?30:ml<=10?24:ml<=13?20:17;
-    var foot=blank?'':(b.date?fmtDate(b.date):'ADMITTED');
+    var foot=blank?'':((b.date||b.added)?fmtDate(b.date||b.added):'ADMITTED');
     var fit=function(t,max,per){return t.length*per>max?' textLength="'+max+'" lengthAdjust="spacingAndGlyphs"':''};
     var g='<g fill="'+c+'" stroke="none" font-family="Bebas Neue, Impact, sans-serif">', body='';
     function nameAt(cy,maxW){var lh=fs*1.02,y0=cy-(lines.length-1)*lh/2+fs*.36;return lines.map(function(l,k){return '<text x="110" y="'+(y0+k*lh).toFixed(1)+'" text-anchor="middle" font-size="'+fs+'"'+fit(l,maxW,fs*.5)+'>'+l+'</text>'}).join('')}
@@ -197,11 +197,10 @@
   var INSIDE='<div class="ep">'+wm()+'<div class="own"><span>This passport is the property of</span><b>ROB CALLERY</b><span>If found, please return to the nearest pub.</span></div></div>';
   var pages=[];
   pages.push({cls:'cover',html:'<div class="t1">UNITED KINGDOM<br>OF ALES</div><svg class="crest" viewBox="0 0 120 110" fill="none" stroke="#d9b45a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><circle cx="60" cy="55" r="44"/><path d="M44 30 L76 30 L72 84 L48 84 Z"/><path d="M43 30 Q45 20 54 23 Q60 15 67 22 Q77 19 77 30"/><path d="M54 44 L54 72" stroke-width="2"/><path d="M16 80 Q4 55 16 30M104 80 Q116 55 104 30" stroke-width="2"/></svg><div><div class="t2">BEER PASSPORT</div><div class="t3">PASSEPORT DE BIÈRE</div></div><div class="chip"></div><div class="hint">tap to open</div>'});
-  pages.push({html:wm()+top('PASSPORT · HOLDER',1)+'<div class="idgrid"><div class="photo"><svg viewBox="0 0 100 120"><circle cx="50" cy="44" r="22" fill="#9c8f72"/><path d="M8 120 Q12 76 50 74 Q88 76 92 120 Z" fill="#9c8f72"/><path d="M70 82 L86 82 L84 108 L72 108 Z" fill="#e8a317" stroke="#6f6450" stroke-width="2"/><path d="M69 83 Q71 77 76 79 Q79 75 83 79 Q88 77 87 83 Z" fill="#fff" stroke="#6f6450" stroke-width="1.5"/></svg></div><div>'+
+  pages.push({html:wm()+top('PASSPORT · HOLDER',1)+'<div class="idgrid"><div class="photo"><svg viewBox="0 0 100 120"><rect x="38" y="96" width="9" height="24" fill="#0a1838"/><rect x="53" y="96" width="9" height="24" fill="#0a1838"/><rect x="26" y="58" width="48" height="44" rx="14" fill="#ffcd00"/><circle cx="50" cy="36" r="17" fill="#f2b8a6"/></svg></div><div>'+
     '<div class="fld"><div class="k">Surname</div><div class="v">CALLERY</div></div><div class="fld"><div class="k">Given names</div><div class="v">ROB</div></div>'+
     '<div class="fld"><div class="k">Nationality</div><div class="v">LEEDS</div></div><div class="fld"><div class="k">Home ground</div><div class="v">ELLAND ROAD</div></div>'+
     '<div class="fld"><div class="k">Beers stamped</div><div class="v">'+(beers.length<10?'0':'')+beers.length+'</div></div></div></div>'+
-    '<div class="fld" style="margin-top:.6em"><div class="k">Holder\'s signature</div><div class="sig">Rob Callery</div></div>'+
     '<p class="idnote">This passport entitles the bearer to try one beer at a time, in every bar, in every city, and to report back honestly.</p>'+mrz('P<LDS CALLERY ROB','ELLAND ROAD MOT 1919')});
   beers.forEach(function(b,i){
     var r=Math.max(0,Math.min(5,Math.round(b.rating||0))),p='';for(var k=0;k<5;k++)p+=pint(k<r);
@@ -211,6 +210,7 @@
     if(b.style||b.abv) f+=fld('Style · ABV',esc(b.style||'')+(b.abv?(b.style?' · ':'')+esc(b.abv)+'%':''),true);
     if(b.where||b.city) f+=fld('Where I had it',esc(b.where||'')+(b.where&&b.city?', ':'')+esc(b.city||''),true);
     if(b.date) f+=fld('Date',fmtDate(b.date));
+    else if(b.added) f+=fld('Stamped',fmtDate(b.added));
     if(r) f+=fld('Verdict',p);
     pages.push({html:wm()+top('ENTRY · '+esc((b.brewedCountry||'UNKNOWN').toUpperCase()),i+2)+'<div class="stampbox">'+stamp(b,i,false)+'</div>'+
       '<div class="fields">'+f+'</div>'+(b.notes?'<div class="notes">“'+esc(b.notes)+'”</div>':'')+
