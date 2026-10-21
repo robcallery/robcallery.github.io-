@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /starting-soon.html
+
+Sitemap: https://callery.co.uk/sitemap.xml
