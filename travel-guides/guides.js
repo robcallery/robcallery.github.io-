@@ -413,34 +413,6 @@ window.GUIDES = [
     "tip": "Wetherby Brew Co's taproom is only open Thursday to Sunday."
   },
   {
-    "city": "Yeadon",
-    "region": "West Yorkshire",
-    "country": "United Kingdom",
-    "colour": "blue",
-    "pint": "~£4.50",
-    "localBeer": "West Yorkshire cask",
-    "bestFor": "Pre-flight pints",
-    "spoons": {
-      "name": "The Clothier's Arms",
-      "note": "Yeadon's Spoons, a short hop from the airport"
-    },
-    "bars": [
-      {
-        "name": "Nest",
-        "note": "neighbourhood bar in the old NatWest bank"
-      },
-      {
-        "name": "Beer House",
-        "note": "airside at Leeds Bradford Airport, by gates 7-8"
-      }
-    ],
-    "eat": "Breakfast in town before heading up to the airport.",
-    "dontMiss": "Yeadon Tarn - watch the planes come in over the water.",
-    "football": "Guiseley AFC at Nethermoor Park, next door.",
-    "gettingThere": "Right by Leeds Bradford Airport; buses from Leeds and Bradford.",
-    "tip": "The airport Beer House opens at 5am for early flights."
-  },
-  {
     "city": "Bingley",
     "region": "West Yorkshire",
     "country": "United Kingdom",
@@ -1594,5 +1566,347 @@ window.GUIDES = [
     "football": "Orlando City SC, about half an hour away downtown.",
     "gettingThere": "About 25 minutes from Orlando International Airport.",
     "tip": "Rose & Crown in Epcot - the closest thing to a proper pint in Florida."
+  },
+  {
+    "city": "Magic Kingdom",
+    "region": "Walt Disney World",
+    "country": "United States",
+    "colour": "blue",
+    "pint": "~$11–13",
+    "localBeer": "Florida craft (sit-down only)",
+    "bestFor": "Castle, classics & fireworks",
+    "bars": [
+      {
+        "name": "Liberty Tree Tavern",
+        "note": "Liberty Square, colonial-style sit-down with beer"
+      },
+      {
+        "name": "Jungle Navigation Co. Skipper Canteen",
+        "note": "Adventureland, jungle-cruise puns and a cold one"
+      },
+      {
+        "name": "Be Our Guest Restaurant",
+        "note": "Beast's castle, beer and wine with dinner"
+      }
+    ],
+    "eat": "A Dole Whip in Adventureland, and a turkey leg on the walk round.",
+    "dontMiss": "Happily Ever After fireworks from Main Street.",
+    "gettingThere": "Monorail or ferry from the Transportation & Ticket Center; Disney buses from the resorts.",
+    "tip": "No bars here - beer is only at the table-service restaurants, so book one for a mid-afternoon sit-down."
+  },
+  {
+    "city": "EPCOT",
+    "region": "Walt Disney World",
+    "country": "United States",
+    "colour": "purple",
+    "pint": "~$10–13",
+    "localBeer": "Rose & Crown cask & world beers",
+    "bestFor": "Drinking around the world",
+    "bars": [
+      {
+        "name": "Rose & Crown Pub",
+        "note": "UK pavilion, Bass, Boddingtons and Guinness"
+      },
+      {
+        "name": "Biergarten",
+        "note": "Germany pavilion, steins and an oompah band"
+      },
+      {
+        "name": "Block & Hans",
+        "note": "American Adventure kiosk, rotating US craft beer"
+      }
+    ],
+    "eat": "Fish and chips at Yorkshire County Fish Shop, round the back of the UK pavilion.",
+    "dontMiss": "Luminous: The Symphony of Us over World Showcase Lagoon.",
+    "gettingThere": "Monorail from the Transportation & Ticket Center, Skyliner from Hollywood Studios, or walk from the BoardWalk.",
+    "tip": "Do World Showcase clockwise from Mexico and finish at the Rose & Crown for the fireworks."
+  },
+  {
+    "city": "Hollywood Studios",
+    "region": "Walt Disney World",
+    "country": "United States",
+    "colour": "red",
+    "pint": "~$10–13",
+    "localBeer": "BaseLine's California craft",
+    "bestFor": "Star Wars & thrill rides",
+    "bars": [
+      {
+        "name": "Oga's Cantina",
+        "note": "Galaxy's Edge, Star Wars bar with a droid DJ"
+      },
+      {
+        "name": "BaseLine Tap House",
+        "note": "Grand Avenue, California craft on tap"
+      },
+      {
+        "name": "Tune-In Lounge",
+        "note": "next to 50's Prime Time Café, old-school bar"
+      }
+    ],
+    "eat": "Woody's Lunch Box in Toy Story Land.",
+    "dontMiss": "Fantasmic! at the Hollywood Hills Amphitheater.",
+    "gettingThere": "Skyliner gondola from Epcot and the Skyliner resorts, or the boat from the BoardWalk.",
+    "tip": "Book Oga's ahead - walk-ups wait ages - and grab a pint at BaseLine to dodge the queue."
+  },
+  {
+    "city": "Animal Kingdom",
+    "region": "Walt Disney World",
+    "country": "United States",
+    "colour": "green",
+    "pint": "~$10–13",
+    "localBeer": "Safari Amber & African lagers",
+    "bestFor": "Safaris & Pandora",
+    "bars": [
+      {
+        "name": "Nomad Lounge",
+        "note": "Discovery Island, terrace over the river"
+      },
+      {
+        "name": "Dawa Bar",
+        "note": "Harambe, outdoor bar with live African music"
+      },
+      {
+        "name": "Warung Outpost",
+        "note": "Asia, margaritas and beer on the go"
+      }
+    ],
+    "eat": "Satu'li Canteen in Pandora - the best quick-service food at Disney.",
+    "dontMiss": "Kilimanjaro Safaris first thing, when the animals are up.",
+    "gettingThere": "Disney buses from the resorts, or drive - it's out on its own on the west side.",
+    "tip": "Go at opening; the animals and the queues both get lazy by lunch."
+  },
+  {
+    "city": "Universal Islands of Adventure",
+    "region": "Universal Orlando",
+    "country": "United States",
+    "colour": "orange",
+    "pint": "~$10–13",
+    "localBeer": "Hog's Head Brew",
+    "bestFor": "Hogwarts & big coasters",
+    "bars": [
+      {
+        "name": "Hog's Head",
+        "note": "Hogsmeade, the only place pouring Hog's Head Brew"
+      },
+      {
+        "name": "Three Broomsticks",
+        "note": "Hogsmeade, beer with your fish and chips"
+      }
+    ],
+    "eat": "Fish and chips at Three Broomsticks.",
+    "dontMiss": "Hagrid's Magical Creatures Motorbike Adventure.",
+    "gettingThere": "Walk through CityWalk from the Universal resort hotels, or the water taxis.",
+    "tip": "Hog's Head Brew is only on at the Hog's Head - Wizard's Brew is over in Diagon Alley."
+  },
+  {
+    "city": "Universal Studios Florida",
+    "region": "Universal Orlando",
+    "country": "United States",
+    "colour": "teal",
+    "pint": "~$10–13",
+    "localBeer": "Duff",
+    "bestFor": "Diagon Alley & Springfield",
+    "bars": [
+      {
+        "name": "Moe's Tavern",
+        "note": "Springfield, Duff and a Flaming Moe"
+      },
+      {
+        "name": "Duff Brewery",
+        "note": "Springfield, outdoor bar by the lagoon"
+      },
+      {
+        "name": "Fountain of Fair Fortune",
+        "note": "Diagon Alley, the only spot for Wizard's Brew"
+      }
+    ],
+    "eat": "Krusty Burger in Springfield, or bangers and mash at the Leaky Cauldron.",
+    "dontMiss": "Hogwarts Express to Islands of Adventure (park-to-park ticket).",
+    "gettingThere": "Walk through CityWalk from the Universal resort hotels, or the water taxis.",
+    "tip": "Duff Brewery's outdoor bar is the quietest pint in the park."
+  },
+  {
+    "city": "Leeds Bradford Airport",
+    "region": "LBA · West Yorkshire",
+    "country": "United Kingdom",
+    "group": "Airports",
+    "colour": "blue",
+    "pint": "~£7.50",
+    "localBeer": "Salt Brewery",
+    "bestFor": "Pre-flight pints",
+    "spoons": {
+      "nearest": true,
+      "name": "The Clothier's Arms",
+      "note": "in Yeadon, a short hop down the hill"
+    },
+    "bars": [
+      {
+        "name": "Tap + Brew",
+        "note": "new terminal extension, Salt's Alpacalypse on tap"
+      }
+    ],
+    "eat": "Breakfast in Yeadon before heading up the hill.",
+    "dontMiss": "Yeadon Tarn - watch the planes come in over the water.",
+    "football": "There's a Leeds United shop airside.",
+    "gettingThere": "Buses from Leeds and Bradford; parking is pricey, so book ahead.",
+    "tip": "Tap + Brew opens at 3am for the early flights."
+  },
+  {
+    "city": "Manchester Airport",
+    "region": "MAN · Greater Manchester",
+    "country": "United Kingdom",
+    "group": "Airports",
+    "colour": "red",
+    "pint": "~£7",
+    "localBeer": "Manchester cask",
+    "bestFor": "Long-haul departures",
+    "spoons": {
+      "name": "The Belle Vue",
+      "note": "Terminal 2 departures, the airport's first Spoons"
+    },
+    "eat": "A proper Spoons breakfast before a long-haul.",
+    "dontMiss": "The Runway Visitor Park and its Concorde.",
+    "gettingThere": "Trains from Leeds and Manchester Piccadilly straight into the airport station.",
+    "tip": "The Belle Vue is themed on Manchester's old zoo and speedway track."
+  },
+  {
+    "city": "Dublin Airport",
+    "region": "DUB · County Dublin",
+    "country": "Ireland",
+    "group": "Airports",
+    "colour": "green",
+    "pint": "~€8",
+    "localBeer": "Guinness",
+    "bestFor": "A last proper Guinness",
+    "bars": [
+      {
+        "name": "The Arthur Guinness Bar",
+        "note": "Terminal 1, airside"
+      },
+      {
+        "name": "Ryan's",
+        "note": "Terminal 2, airside, old pub bar and live music"
+      },
+      {
+        "name": "The Garden Terrace",
+        "note": "Terminal 1, airside"
+      }
+    ],
+    "eat": "Smoked salmon plate and a toastie at Ryan's.",
+    "dontMiss": "One last pint of the black stuff before the flight home.",
+    "gettingThere": "Aircoach and Dublin Express buses from the city centre, about 30 minutes.",
+    "tip": "Ryan's is named after Mary Ryan - hanging her washing out with a jumbo jet behind her."
+  },
+  {
+    "city": "Amsterdam Schiphol",
+    "region": "AMS · North Holland",
+    "country": "Netherlands",
+    "group": "Airports",
+    "colour": "orange",
+    "pint": "~€8",
+    "localBeer": "Heineken",
+    "bestFor": "Connections",
+    "bars": [
+      {
+        "name": "Dutch Kitchen, Bar & Cocktails",
+        "note": "Holland Boulevard, airside between piers"
+      },
+      {
+        "name": "Tastes from the Lowlands",
+        "note": "Holland Boulevard, Dutch bites"
+      }
+    ],
+    "eat": "Bitterballen with a Heineken.",
+    "dontMiss": "Holland Boulevard - a mini Rijksmuseum and an airport library.",
+    "gettingThere": "Train to Amsterdam Centraal in about 15 minutes.",
+    "tip": "Schiphol is huge - check the walk to your pier before ordering another."
+  },
+  {
+    "city": "Paris Charles de Gaulle",
+    "region": "CDG · Île-de-France",
+    "country": "France",
+    "group": "Airports",
+    "colour": "blue",
+    "pint": "~€10",
+    "localBeer": "Kronenbourg 1664",
+    "bestFor": "Connections",
+    "bars": [
+      {
+        "name": "Terminal 2 brasseries",
+        "note": "pricey, but there's always a 1664"
+      }
+    ],
+    "eat": "A jambon-beurre baguette - the safest bet in any terminal.",
+    "dontMiss": "Not missing the transfer bus - terminals are miles apart.",
+    "gettingThere": "RER B into Paris, or straight to Disneyland Paris on the TGV from Terminal 2.",
+    "tip": "Leave plenty of time between terminals - CDG transfers are a slog."
+  },
+  {
+    "city": "Málaga Costa del Sol",
+    "region": "AGP · Andalusia",
+    "country": "Spain",
+    "group": "Airports",
+    "colour": "orange",
+    "pint": "~€6",
+    "localBeer": "Victoria",
+    "bestFor": "Holidays home and away",
+    "bars": [
+      {
+        "name": "Terminal 3 bars",
+        "note": "a caña of Victoria before boarding"
+      }
+    ],
+    "eat": "One last plate of jamón before the flight home.",
+    "dontMiss": "The Cercanías train to the beaches.",
+    "gettingThere": "Cercanías train to Málaga centro in 12 minutes, or along the coast to Benalmádena and Fuengirola.",
+    "tip": "Prices go up after security - have the last Victoria in town."
+  },
+  {
+    "city": "Orlando International",
+    "region": "MCO · Florida",
+    "country": "United States",
+    "group": "Airports",
+    "colour": "purple",
+    "pint": "~$10",
+    "localBeer": "Ravenous Pig / Orange County Brewers",
+    "bestFor": "Florida arrivals",
+    "bars": [
+      {
+        "name": "Cask & Larder",
+        "note": "Terminal C Palm Court and gates 100-129, Orlando's own brewpub"
+      },
+      {
+        "name": "Ravenous Pig Brewing",
+        "note": "Terminal C, local brewery"
+      },
+      {
+        "name": "Orange County Brewers",
+        "note": "Terminal C, Florida craft"
+      }
+    ],
+    "eat": "Cask & Larder - proper local food for once.",
+    "dontMiss": "Terminal C's huge media walls.",
+    "gettingThere": "Brightline trains, Disney transfers, or a hire car via the toll roads.",
+    "tip": "Cask & Larder and the Ravenous Pig are both from the same Orlando restaurant family."
+  },
+  {
+    "city": "Tokyo Narita",
+    "region": "NRT · Chiba",
+    "country": "Japan",
+    "group": "Airports",
+    "colour": "red",
+    "pint": "~¥1,000",
+    "localBeer": "Narita Airport Ale",
+    "bestFor": "Long-haul departures",
+    "bars": [
+      {
+        "name": "NRT Beer Flight Cafe",
+        "note": "Terminal 2, airside, Japanese craft flights"
+      }
+    ],
+    "eat": "One last bowl of ramen before the long flight.",
+    "dontMiss": "The Narita Airport Ale - only brewed for the airport.",
+    "gettingThere": "Narita Express or Skyliner into Tokyo, about an hour.",
+    "tip": "Get a flight at the Beer Flight Cafe - it's the only place to try the Narita Airport Ale."
   }
 ];
