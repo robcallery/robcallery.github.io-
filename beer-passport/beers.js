@@ -47,7 +47,7 @@ window.BEERS = [
   { name: "Cuddly Toy", added: "2026-10-21", date: "2019-02-23", brewerSays: "A crisp, refreshing pale ale.", style: "Golden", abv: 3.6, brewery: "Beer Monkey Brew Co", brewedIn: "Skipton", brewedCountry: "England" },
   { name: "Daleside Lager", added: "2026-10-21", date: "2019-02-23", brewerSays: "An authentic craft lager with a delicate floral aroma and refreshing finish.", style: "Lager", abv: 4.2, brewery: "Daleside Brewery", brewedIn: "Harrogate", brewedCountry: "England" },
   { name: "Desperados", added: "2026-10-21", date: "2014-12-19", brewery: "Heineken", brewedIn: "Schiltigheim, Alsace", brewedCountry: "France" },
-  { name: "Devil's Beer IPA", added: "2026-10-21", date: "2023-01-27", style: "IPA", brewery: "Kizakura", brewedIn: "Fushimi, Kyoto", brewedCountry: "Japan", city: "Osaka" },
+  { name: "Devil's Beer Red Session IPA", added: "2026-10-21", date: "2023-01-27", style: "Session IPA", brewery: "Kizakura", brewedIn: "Fushimi, Kyoto", brewedCountry: "Japan", city: "Osaka" },
   { name: "Disco King", added: "2026-10-20", brewerSays: "Their flagship American pale (5.1%) - Mosaic and Chinook, 'a real juicy little disco of a beer'.", brewery: "Turning Point Brew Co.", brewedIn: "Knaresborough", brewedCountry: "England" },
   { name: "Dockside Haze", added: "2026-10-20", brewery: "Florida Avenue Brewing Co.", brewedIn: "Tampa, Florida", brewedCountry: "USA" },
   { name: "Double Cross IPA", added: "2026-10-21", date: "2019-02-23", brewerSays: "Classic IPA with English hops - rich tea biscuit base with dry lemon and grapefruit.", style: "IPA", abv: 4.2, brewery: "T&R Theakston", brewedIn: "Masham", brewedCountry: "England" },
