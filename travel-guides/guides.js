@@ -2812,6 +2812,382 @@ window.GUIDES = [
     }
   },
   {
+    "city": "Luton",
+    "region": "Bedfordshire",
+    "country": "United Kingdom",
+    "group": "East of England",
+    "colour": "red",
+    "pint": "~£5",
+    "localBeer": "Bedfordshire cask",
+    "bestFor": "The Hatters",
+    "eat": "Something from the market before the match.",
+    "dontMiss": "Wardown House Museum and its hat collection.",
+    "gettingThere": "Luton station, 25 minutes from London St Pancras.",
+    "tip": "Kenilworth Road's away turnstiles are in a row of houses - honestly.",
+    "football": "Luton Town at Kenilworth Road - the away end is through the back gardens of a terraced street."
+  },
+  {
+    "city": "Norwich",
+    "region": "Norfolk",
+    "country": "United Kingdom",
+    "group": "East of England",
+    "colour": "purple",
+    "pint": "~£4.80",
+    "localBeer": "Woodforde's",
+    "bestFor": "A pub for every day",
+    "eat": "Anything with Colman's mustard - it's made here.",
+    "dontMiss": "The cathedral close, then Elm Hill's cobbles.",
+    "gettingThere": "Norwich station, under 2 hours from London.",
+    "tip": "Norwich claims a pub for every day of the year - start at the Adam & Eve.",
+    "football": "Norwich City at Carrow Road.",
+    "spoons": {
+      "name": "The Bell Hotel",
+      "note": "Orford Hill - plus The Whiffler out of town"
+    },
+    "bars": [
+      {
+        "name": "Adam & Eve",
+        "note": "Bishopgate, Norwich's oldest pub, from 1249"
+      },
+      {
+        "name": "The Fat Cat",
+        "note": "West End Street, legendary free house"
+      },
+      {
+        "name": "Gardeners Arms",
+        "note": "Timber Hill, known to all as the Murderers"
+      }
+    ]
+  },
+  {
+    "city": "Peterborough",
+    "region": "Cambridgeshire",
+    "country": "United Kingdom",
+    "group": "East of England",
+    "colour": "teal",
+    "pint": "~£4.50",
+    "localBeer": "Oakham Ales",
+    "bestFor": "Cathedral & the Nene",
+    "eat": "Something in Cathedral Square.",
+    "dontMiss": "Peterborough Cathedral's huge west front.",
+    "gettingThere": "Peterborough station, 45 minutes from London on the East Coast Main Line.",
+    "tip": "Charters is a pub on a boat - the beer garden is huge in summer.",
+    "football": "Peterborough United at London Road.",
+    "spoons": {
+      "name": "The Draper's Arms",
+      "note": "Cowgate, in the city centre"
+    },
+    "bars": [
+      {
+        "name": "Charters",
+        "note": "a Dutch barge on the River Nene"
+      }
+    ]
+  },
+  {
+    "city": "Southend-on-Sea",
+    "region": "Essex",
+    "country": "United Kingdom",
+    "group": "East of England",
+    "colour": "red",
+    "pint": "~£5",
+    "localBeer": "Essex cask",
+    "bestFor": "The longest pier",
+    "eat": "Fish and chips or cockles on the seafront.",
+    "dontMiss": "The pier train out to the end.",
+    "gettingThere": "Southend Central or Victoria, under an hour from London.",
+    "tip": "Take the pier train out and walk back - it's 1.3 miles.",
+    "football": "Southend United at Roots Hall.",
+    "spoons": {
+      "name": "The Last Post",
+      "note": "Weston Road, in the old post office"
+    }
+  },
+  {
+    "city": "Cambridge",
+    "region": "Cambridgeshire",
+    "country": "United Kingdom",
+    "group": "East of England",
+    "colour": "purple",
+    "pint": "~£5.50",
+    "localBeer": "Cambridge cask",
+    "bestFor": "Punts & old pubs",
+    "eat": "A Chelsea bun from Fitzbillies.",
+    "dontMiss": "King's College Chapel, then a punt down the Backs.",
+    "gettingThere": "Cambridge station, 50 minutes from London King's Cross.",
+    "tip": "Look up in the Eagle's back bar - WWII airmen burned their names into the ceiling.",
+    "football": "Cambridge United at the Abbey Stadium.",
+    "bars": [
+      {
+        "name": "The Eagle",
+        "note": "Bene't Street, where the discovery of DNA was announced in 1953"
+      },
+      {
+        "name": "The Free Press",
+        "note": "Prospect Row, no TV, no music, just beer"
+      },
+      {
+        "name": "The Mill",
+        "note": "by the river, right where the punts set off"
+      }
+    ]
+  },
+  {
+    "city": "Ipswich",
+    "region": "Suffolk",
+    "country": "United Kingdom",
+    "group": "East of England",
+    "colour": "teal",
+    "pint": "~£4.80",
+    "localBeer": "Adnams",
+    "bestFor": "Portman Road",
+    "eat": "Something on the Waterfront.",
+    "dontMiss": "The Ancient House with its plasterwork, then the Waterfront.",
+    "gettingThere": "Ipswich station, about an hour from London.",
+    "tip": "Portman Road is a five-minute walk from the station - easy matchday.",
+    "football": "Ipswich Town at Portman Road.",
+    "spoons": {
+      "name": "The Cricketers",
+      "note": "Crown Street, in the town centre"
+    },
+    "bars": [
+      {
+        "name": "Dove Street Inn",
+        "note": "St Helen's Street, dozens of real ales"
+      }
+    ]
+  },
+  {
+    "city": "Chelmsford",
+    "region": "Essex",
+    "country": "United Kingdom",
+    "group": "East of England",
+    "colour": "red",
+    "pint": "~£5",
+    "localBeer": "Essex cask",
+    "bestFor": "Birthplace of radio",
+    "eat": "Something in Hylands Park.",
+    "dontMiss": "Hylands House and park.",
+    "gettingThere": "Chelmsford station, 35 minutes from London.",
+    "tip": "Essex cricket at Chelmsford is a great day out in summer.",
+    "football": "Chelmsford City at Melbourne Park; Essex cricket at the Cloud County Ground.",
+    "spoons": {
+      "name": "The Ivory Peg",
+      "note": "in the city centre"
+    }
+  },
+  {
+    "city": "Colchester",
+    "region": "Essex",
+    "country": "United Kingdom",
+    "group": "East of England",
+    "colour": "purple",
+    "pint": "~£4.80",
+    "localBeer": "Essex cask",
+    "bestFor": "Britain's oldest town",
+    "eat": "Colchester oysters from Mersea Island.",
+    "dontMiss": "Colchester Castle and Jumbo, the Victorian water tower.",
+    "gettingThere": "Colchester station, under an hour from London.",
+    "tip": "Get out to Mersea Island for oysters straight from the water.",
+    "football": "Colchester United at the JobServe Community Stadium.",
+    "spoons": {
+      "name": "The Playhouse",
+      "note": "St John's Street, in an old theatre"
+    }
+  },
+  {
+    "city": "Watford",
+    "region": "Hertfordshire",
+    "country": "United Kingdom",
+    "group": "East of England",
+    "colour": "teal",
+    "pint": "~£5",
+    "localBeer": "Hertfordshire cask",
+    "bestFor": "Vicarage Road",
+    "eat": "Something on the High Street.",
+    "dontMiss": "Cassiobury Park and the Grand Union Canal.",
+    "gettingThere": "Watford Junction, 20 minutes from London Euston.",
+    "tip": "Walk Cassiobury Park along the canal - it's surprisingly lovely.",
+    "football": "Watford at Vicarage Road - Elton John is honorary life president.",
+    "spoons": {
+      "name": "The Moon Under Water",
+      "note": "High Street, in the town centre"
+    }
+  },
+  {
+    "city": "Bedford",
+    "region": "Bedfordshire",
+    "country": "United Kingdom",
+    "group": "East of England",
+    "colour": "red",
+    "pint": "~£4.80",
+    "localBeer": "Wells",
+    "bestFor": "River & Bunyan",
+    "eat": "Something on the Embankment.",
+    "dontMiss": "The river Embankment and the Bunyan Museum.",
+    "gettingThere": "Bedford station, 40 minutes from London St Pancras.",
+    "tip": "The Embankment by the suspension bridge is perfect for a summer pint.",
+    "football": "Bedford Blues rugby at Goldington Road.",
+    "spoons": {
+      "name": "The Pilgrim's Progress",
+      "note": "named after John Bunyan's book"
+    }
+  },
+  {
+    "city": "Stevenage",
+    "region": "Hertfordshire",
+    "country": "United Kingdom",
+    "group": "East of England",
+    "colour": "purple",
+    "pint": "~£4.80",
+    "localBeer": "Hertfordshire cask",
+    "bestFor": "The first New Town",
+    "eat": "Something in the old town high street.",
+    "dontMiss": "The 1950s town square and clock tower.",
+    "gettingThere": "Stevenage station, 25 minutes from London King's Cross.",
+    "tip": "The old town high street is where the proper pubs are.",
+    "football": "Stevenage FC at the Lamex Stadium.",
+    "spoons": {
+      "name": "The Standing Order",
+      "note": "in the old town"
+    }
+  },
+  {
+    "city": "Harlow",
+    "region": "Essex",
+    "country": "United Kingdom",
+    "group": "East of England",
+    "colour": "teal",
+    "pint": "~£4.80",
+    "localBeer": "Essex cask",
+    "bestFor": "Sculpture Town",
+    "eat": "Something in the Water Gardens.",
+    "dontMiss": "Spot the sculptures - Harlow has dozens around town.",
+    "gettingThere": "Harlow Town station, 35 minutes from London Liverpool Street.",
+    "tip": "Harlow calls itself Sculpture Town - there's a trail to follow.",
+    "football": "Harlow Town at the Harlow Arena.",
+    "spoons": {
+      "name": "The William Aylmer",
+      "note": "in the town centre"
+    }
+  },
+  {
+    "city": "Basildon",
+    "region": "Essex",
+    "country": "United Kingdom",
+    "group": "East of England",
+    "colour": "red",
+    "pint": "~£4.80",
+    "localBeer": "Essex cask",
+    "bestFor": "New town",
+    "eat": "Something at Festival Leisure Park.",
+    "dontMiss": "Wat Tyler Country Park by the creeks.",
+    "gettingThere": "Basildon station, 40 minutes from London Fenchurch Street.",
+    "tip": "Wat Tyler Country Park has a little railway and great walks.",
+    "football": "Southend United are 20 minutes away."
+  },
+  {
+    "city": "Brentwood",
+    "region": "Essex",
+    "country": "United Kingdom",
+    "group": "East of England",
+    "colour": "purple",
+    "pint": "~£5.50",
+    "localBeer": "Essex cask",
+    "bestFor": "High street & TOWIE",
+    "eat": "Something on the high street.",
+    "dontMiss": "Brentwood Cathedral, then Weald Country Park.",
+    "gettingThere": "Brentwood station on the Elizabeth line.",
+    "tip": "The Elizabeth line makes Brentwood an easy day out from London.",
+    "football": "Brentwood Town at the Brentwood Arena.",
+    "spoons": {
+      "name": "The Dairyman",
+      "note": "in the town centre"
+    }
+  },
+  {
+    "city": "King's Lynn",
+    "region": "Norfolk",
+    "country": "United Kingdom",
+    "group": "East of England",
+    "colour": "teal",
+    "pint": "~£4.50",
+    "localBeer": "Elgood's",
+    "bestFor": "Medieval port",
+    "eat": "Cromer crab, up the coast.",
+    "dontMiss": "The Custom House and the old quayside.",
+    "gettingThere": "King's Lynn station, 1h40 from London King's Cross.",
+    "tip": "Saturday Market Place and Tuesday Market Place are both worth a wander.",
+    "football": "King's Lynn Town at the Walks.",
+    "spoons": {
+      "name": "The Globe Hotel",
+      "note": "Tuesday Market Place"
+    }
+  },
+  {
+    "city": "Great Yarmouth",
+    "region": "Norfolk",
+    "country": "United Kingdom",
+    "group": "East of England",
+    "colour": "red",
+    "pint": "~£4.50",
+    "localBeer": "Norfolk cask",
+    "bestFor": "Seaside & the Golden Mile",
+    "eat": "Fish and chips on the Golden Mile.",
+    "dontMiss": "Britannia Pier and the Golden Mile.",
+    "gettingThere": "Great Yarmouth station, 35 minutes from Norwich.",
+    "tip": "Nelson's Monument here is older than the one in Trafalgar Square.",
+    "football": "Norwich City are half an hour away.",
+    "spoons": {
+      "name": "The Troll Cart",
+      "note": "Regent Road, in the town centre"
+    }
+  },
+  {
+    "city": "Lowestoft",
+    "region": "Suffolk",
+    "country": "United Kingdom",
+    "group": "East of England",
+    "colour": "purple",
+    "pint": "~£4.50",
+    "localBeer": "Adnams",
+    "bestFor": "The most easterly point",
+    "eat": "Fish and chips on the seafront.",
+    "dontMiss": "Ness Point - the most easterly point in the UK.",
+    "gettingThere": "Lowestoft station, 40 minutes from Norwich.",
+    "tip": "Be first to see the sunrise in Britain at Ness Point.",
+    "football": "Ipswich and Norwich are both an hour away.",
+    "spoons": {
+      "name": "The Joseph Conrad",
+      "note": "Station Square - Conrad first landed in England here"
+    }
+  },
+  {
+    "city": "Bury St Edmunds",
+    "region": "Suffolk",
+    "country": "United Kingdom",
+    "group": "East of England",
+    "colour": "teal",
+    "pint": "~£4.80",
+    "localBeer": "Greene King",
+    "bestFor": "The smallest pub",
+    "eat": "Something at the Saturday market.",
+    "dontMiss": "The Abbey Gardens, then the Greene King brewery tour.",
+    "gettingThere": "Bury St Edmunds station, trains from Cambridge and Ipswich.",
+    "tip": "The Nutshell fits about a dozen people - drink up and make room.",
+    "football": "Ipswich Town are 40 minutes away.",
+    "spoons": {
+      "name": "The Corn Exchange",
+      "note": "Abbeygate Street, in the grand old corn exchange"
+    },
+    "bars": [
+      {
+        "name": "The Nutshell",
+        "note": "The Traverse - Britain's smallest pub"
+      }
+    ]
+  },
+  {
     "city": "Westminster",
     "region": "London",
     "country": "United Kingdom",
