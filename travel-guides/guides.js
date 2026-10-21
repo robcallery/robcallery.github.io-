@@ -3915,6 +3915,413 @@ window.GUIDES = [
     }
   },
   {
+    "city": "Bristol",
+    "region": "Bristol",
+    "country": "United Kingdom",
+    "group": "South West",
+    "colour": "green",
+    "pint": "~£5.50",
+    "localBeer": "Bristol Beer Factory",
+    "bestFor": "Harbourside & cider",
+    "eat": "A cider on the harbourside.",
+    "dontMiss": "Clifton Suspension Bridge and the SS Great Britain.",
+    "gettingThere": "Bristol Temple Meads, about 3.5 hours from Leeds.",
+    "tip": "King Street has the Llandoger Trow and the Old Duke facing each other - do both.",
+    "football": "Bristol City at Ashton Gate; Bristol Rovers at the Memorial Stadium.",
+    "spoons": {
+      "name": "The Commercial Rooms",
+      "note": "Corn Street, Bristol's first Spoons in an 1810 merchants' club"
+    },
+    "bars": [
+      {
+        "name": "The Llandoger Trow",
+        "note": "King Street, from 1664 - said to have inspired Treasure Island"
+      },
+      {
+        "name": "The Old Duke",
+        "note": "King Street, live jazz every night"
+      },
+      {
+        "name": "The Bag O'Nails",
+        "note": "Hotwells, tiny cask ale pub"
+      }
+    ]
+  },
+  {
+    "city": "Plymouth",
+    "region": "Devon",
+    "country": "United Kingdom",
+    "group": "South West",
+    "colour": "orange",
+    "pint": "~£5",
+    "localBeer": "Plymouth Gin",
+    "bestFor": "The Hoe & the Barbican",
+    "eat": "A Cornish pasty on the Barbican.",
+    "dontMiss": "Smeaton's Tower on the Hoe, and the Plymouth Gin distillery.",
+    "gettingThere": "Plymouth station, about 3 hours from London.",
+    "tip": "The Plymouth Gin distillery is the oldest working gin distillery in England - do the tour.",
+    "football": "Plymouth Argyle at Home Park.",
+    "spoons": {
+      "name": "The Britannia Inn",
+      "note": "Milehouse - plus The Mannamead"
+    },
+    "bars": [
+      {
+        "name": "The Dolphin",
+        "note": "the Barbican, Bass poured straight from the barrel"
+      },
+      {
+        "name": "The Minerva Inn",
+        "note": "Looe Street, said to be the oldest pub in Plymouth"
+      }
+    ]
+  },
+  {
+    "city": "Bournemouth",
+    "region": "Dorset",
+    "country": "United Kingdom",
+    "group": "South West",
+    "colour": "blue",
+    "pint": "~£5.50",
+    "localBeer": "Dorset cask",
+    "bestFor": "Beaches & the pier",
+    "eat": "Fish and chips on the beach.",
+    "dontMiss": "Bournemouth Pier and the zip wire to the beach.",
+    "gettingThere": "Bournemouth station, 2 hours from London Waterloo.",
+    "tip": "Walk along the sand to Boscombe Pier - it's quieter.",
+    "football": "AFC Bournemouth at the Vitality Stadium.",
+    "spoons": {
+      "name": "The Moon in the Square",
+      "note": "Exeter Road, near the Square"
+    }
+  },
+  {
+    "city": "Swindon",
+    "region": "Wiltshire",
+    "country": "United Kingdom",
+    "group": "South West",
+    "colour": "green",
+    "pint": "~£4.80",
+    "localBeer": "Arkell's",
+    "bestFor": "Railways & roundabouts",
+    "eat": "Something in the Designer Outlet in the old railway works.",
+    "dontMiss": "STEAM, the museum of the Great Western Railway.",
+    "gettingThere": "Swindon station, under an hour from London Paddington.",
+    "tip": "Drive round the Magic Roundabout at least once. Just once.",
+    "football": "Swindon Town at the County Ground.",
+    "spoons": {
+      "name": "The Savoy",
+      "note": "Regent Street, in an old cinema - plus the Dockle Farmhouse"
+    }
+  },
+  {
+    "city": "Poole",
+    "region": "Dorset",
+    "country": "United Kingdom",
+    "group": "South West",
+    "colour": "orange",
+    "pint": "~£5.50",
+    "localBeer": "Dorset cask",
+    "bestFor": "The harbour",
+    "eat": "Fish on the quay.",
+    "dontMiss": "Poole Quay, then the boat to Brownsea Island.",
+    "gettingThere": "Poole station, 2 hours from London Waterloo.",
+    "tip": "Get the boat to Brownsea Island - red squirrels and great views.",
+    "football": "Bournemouth are 15 minutes away.",
+    "spoons": {
+      "name": "The Lord Wimborne",
+      "note": "in the town centre - plus The Quay on the waterfront"
+    }
+  },
+  {
+    "city": "Exeter",
+    "region": "Devon",
+    "country": "United Kingdom",
+    "group": "South West",
+    "colour": "blue",
+    "pint": "~£5",
+    "localBeer": "Devon cask",
+    "bestFor": "Cathedral & the quay",
+    "eat": "A cream tea - jam first in Devon, cream on top.",
+    "dontMiss": "Exeter Cathedral, then Exeter Quay.",
+    "gettingThere": "Exeter St Davids, 2 hours from London.",
+    "tip": "Hire a bike at the Quay and ride the canal path to the Turf pub.",
+    "football": "Exeter City at St James Park; Exeter Chiefs rugby at Sandy Park.",
+    "spoons": {
+      "name": "The Imperial",
+      "note": "with its old orangery - plus George's Meeting House in a chapel"
+    },
+    "bars": [
+      {
+        "name": "The Ship Inn",
+        "note": "Martin's Lane, said to be a Sir Francis Drake favourite"
+      }
+    ]
+  },
+  {
+    "city": "Gloucester",
+    "region": "Gloucestershire",
+    "country": "United Kingdom",
+    "group": "South West",
+    "colour": "green",
+    "pint": "~£4.80",
+    "localBeer": "Gloucestershire cask",
+    "bestFor": "Cathedral & docks",
+    "eat": "Something at Gloucester Quays.",
+    "dontMiss": "Gloucester Cathedral and the historic docks.",
+    "gettingThere": "Gloucester station, 2 hours from London.",
+    "tip": "The Lord High Constable is by the docks - sit outside by the old warehouses.",
+    "football": "Gloucester Rugby at Kingsholm.",
+    "spoons": {
+      "name": "The Regal",
+      "note": "in an old cinema - plus the Lord High Constable at the docks"
+    }
+  },
+  {
+    "city": "Salisbury",
+    "region": "Wiltshire",
+    "country": "United Kingdom",
+    "group": "South West",
+    "colour": "orange",
+    "pint": "~£5",
+    "localBeer": "Wiltshire cask",
+    "bestFor": "Cathedral & Stonehenge",
+    "eat": "A pub lunch in the cathedral close.",
+    "dontMiss": "Salisbury Cathedral and Magna Carta - then Stonehenge.",
+    "gettingThere": "Salisbury station, 90 minutes from London Waterloo.",
+    "tip": "Ask about the mummified hand at the Haunch of Venison - they keep it behind glass.",
+    "football": "Salisbury FC at the Raymond McEnhill Stadium.",
+    "spoons": {
+      "name": "The King's Head Inn",
+      "note": "by the river, in the city centre"
+    },
+    "bars": [
+      {
+        "name": "The Haunch of Venison",
+        "note": "Minster Street, from the 1300s - with a mummified hand"
+      }
+    ]
+  },
+  {
+    "city": "Bath",
+    "region": "Somerset",
+    "country": "United Kingdom",
+    "group": "South West",
+    "colour": "blue",
+    "pint": "~£6",
+    "localBeer": "Bath Ales",
+    "bestFor": "Roman Baths & Georgian streets",
+    "eat": "A Sally Lunn bun.",
+    "dontMiss": "The Roman Baths, then the Royal Crescent.",
+    "gettingThere": "Bath Spa station, 90 minutes from London.",
+    "tip": "The Star still serves Bass from a jug - sit on the bench they call Death Row.",
+    "football": "Bath Rugby at the Rec.",
+    "spoons": {
+      "name": "The King of Wessex",
+      "note": "James Street West, in the city centre"
+    },
+    "bars": [
+      {
+        "name": "The Star Inn",
+        "note": "Vineyards, CAMRA heritage pub with \"Death Row\" bench"
+      },
+      {
+        "name": "The Old Green Tree",
+        "note": "Green Street, tiny wood-panelled rooms"
+      }
+    ]
+  },
+  {
+    "city": "Weston-super-Mare",
+    "region": "Somerset",
+    "country": "United Kingdom",
+    "group": "South West",
+    "colour": "green",
+    "pint": "~£5",
+    "localBeer": "Somerset cider",
+    "bestFor": "Seaside & donkeys",
+    "eat": "Fish and chips on the prom.",
+    "dontMiss": "The Grand Pier and a donkey ride on the beach.",
+    "gettingThere": "Weston-super-Mare station, 30 minutes from Bristol.",
+    "tip": "The tide goes out a very long way - don't chase the sea.",
+    "football": "Bristol City are half an hour away.",
+    "spoons": {
+      "name": "The Cabot Court Hotel",
+      "note": "Knightstone Road, on the seafront"
+    }
+  },
+  {
+    "city": "Taunton",
+    "region": "Somerset",
+    "country": "United Kingdom",
+    "group": "South West",
+    "colour": "orange",
+    "pint": "~£5",
+    "localBeer": "Somerset cider",
+    "bestFor": "Cricket & cider",
+    "eat": "A Somerset cider and a cheddar ploughman's.",
+    "dontMiss": "The Museum of Somerset in Taunton Castle.",
+    "gettingThere": "Taunton station, 2 hours from London.",
+    "tip": "A summer day at the cricket here is hard to beat.",
+    "football": "Somerset cricket at the County Ground.",
+    "spoons": {
+      "name": "The Perkin Warbeck",
+      "note": "East Street, in the town centre"
+    }
+  },
+  {
+    "city": "Yeovil",
+    "region": "Somerset",
+    "country": "United Kingdom",
+    "group": "South West",
+    "colour": "blue",
+    "pint": "~£5",
+    "localBeer": "Somerset cider",
+    "bestFor": "Helicopters",
+    "eat": "A cheddar ploughman's.",
+    "dontMiss": "The Fleet Air Arm Museum at Yeovilton.",
+    "gettingThere": "Yeovil Junction or Pen Mill stations.",
+    "tip": "The Fleet Air Arm Museum has Concorde 002 - walk through it.",
+    "football": "Yeovil Town at Huish Park.",
+    "spoons": {
+      "name": "The William Dampier",
+      "note": "Middle Street - named after the explorer from nearby"
+    }
+  },
+  {
+    "city": "Torquay",
+    "region": "Devon",
+    "country": "United Kingdom",
+    "group": "South West",
+    "colour": "green",
+    "pint": "~£5",
+    "localBeer": "Devon cask",
+    "bestFor": "English Riviera",
+    "eat": "Fish on the harbour.",
+    "dontMiss": "Torquay harbour and the palm trees, then Kents Cavern.",
+    "gettingThere": "Torquay station, 3 hours from London.",
+    "tip": "Agatha Christie was born in Torquay - there's a walking trail.",
+    "football": "Torquay United at Plainmoor.",
+    "spoons": {
+      "name": "The Green Ginger",
+      "note": "Fleet Street, in the town centre"
+    }
+  },
+  {
+    "city": "Paignton",
+    "region": "Devon",
+    "country": "United Kingdom",
+    "group": "South West",
+    "colour": "orange",
+    "pint": "~£5",
+    "localBeer": "Devon cask",
+    "bestFor": "Steam & sand",
+    "eat": "Fish and chips on the green.",
+    "dontMiss": "The steam railway to Kingswear and the Dartmouth ferry.",
+    "gettingThere": "Paignton station, 3 hours from London.",
+    "tip": "Get the steam train to Kingswear, then the ferry to Dartmouth.",
+    "football": "Torquay United are 10 minutes away.",
+    "spoons": {
+      "name": "The Talk of the Town",
+      "note": "in the town centre"
+    }
+  },
+  {
+    "city": "Newton Abbot",
+    "region": "Devon",
+    "country": "United Kingdom",
+    "group": "South West",
+    "colour": "blue",
+    "pint": "~£5",
+    "localBeer": "Devon cask",
+    "bestFor": "Railway town",
+    "eat": "A pasty from the market.",
+    "dontMiss": "Tuckers Maltings, a working Victorian malthouse.",
+    "gettingThere": "Newton Abbot station on the main line to Plymouth.",
+    "tip": "Tuckers Maltings tours end with a beer - naturally.",
+    "football": "Newton Abbot races at the racecourse; Torquay United are close.",
+    "spoons": {
+      "name": "The Richard Hopkins",
+      "note": "Queen Street, in the town centre"
+    }
+  },
+  {
+    "city": "Weymouth",
+    "region": "Dorset",
+    "country": "United Kingdom",
+    "group": "South West",
+    "colour": "green",
+    "pint": "~£5",
+    "localBeer": "Dorset cask",
+    "bestFor": "Beach & harbour",
+    "eat": "Fish and chips on the harbour.",
+    "dontMiss": "The Jubilee Clock on the seafront and the old harbour.",
+    "gettingThere": "Weymouth station, under 3 hours from London Waterloo.",
+    "tip": "George III made Weymouth fashionable - his statue is on the front.",
+    "football": "Weymouth FC at the Bob Lucas Stadium.",
+    "spoons": {
+      "name": "The Swan",
+      "note": "in the town - plus The William Henry"
+    }
+  },
+  {
+    "city": "Dorchester",
+    "region": "Dorset",
+    "country": "United Kingdom",
+    "group": "South West",
+    "colour": "orange",
+    "pint": "~£5",
+    "localBeer": "Dorset cask",
+    "bestFor": "Thomas Hardy country",
+    "eat": "A Dorset apple cake.",
+    "dontMiss": "Thomas Hardy's statue and his cottage nearby.",
+    "gettingThere": "Dorchester South or West stations.",
+    "tip": "Dorchester is Hardy's \"Casterbridge\" - read up before you go.",
+    "football": "Dorchester Town at the Avenue Stadium.",
+    "spoons": {
+      "name": "The Royal Oak",
+      "note": "High West Street, in the town centre"
+    }
+  },
+  {
+    "city": "Cheltenham",
+    "region": "Gloucestershire",
+    "country": "United Kingdom",
+    "group": "South West",
+    "colour": "blue",
+    "pint": "~£5.50",
+    "localBeer": "Gloucestershire cask",
+    "bestFor": "Race week",
+    "eat": "Afternoon tea on the Promenade.",
+    "dontMiss": "Cheltenham Racecourse in March.",
+    "gettingThere": "Cheltenham Spa station, 2 hours from London.",
+    "tip": "Book the Festival early - the town fills up for Gold Cup week.",
+    "football": "Cheltenham Town at Whaddon Road.",
+    "spoons": {
+      "name": "The Moon Under Water",
+      "note": "in the town centre - plus The Bank House"
+    }
+  },
+  {
+    "city": "Stroud",
+    "region": "Gloucestershire",
+    "country": "United Kingdom",
+    "group": "South West",
+    "colour": "green",
+    "pint": "~£5",
+    "localBeer": "Stroud Brewery",
+    "bestFor": "Valleys & markets",
+    "eat": "Something from the Saturday farmers' market.",
+    "dontMiss": "The five valleys and the canal.",
+    "gettingThere": "Stroud station, 90 minutes from London Paddington.",
+    "tip": "Stroud's Saturday farmers' market is one of the best in the country.",
+    "football": "Forest Green Rovers in Nailsworth, five minutes away.",
+    "spoons": {
+      "name": "The Lord John",
+      "note": "in the town centre"
+    }
+  },
+  {
     "city": "Dublin",
     "region": "Leinster",
     "country": "Ireland",
