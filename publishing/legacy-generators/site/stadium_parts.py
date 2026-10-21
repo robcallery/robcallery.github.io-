@@ -91,33 +91,66 @@ def stadium_scene():
     # side stands
     a('<path d="M0 120 L90 150 L90 268 L-40 420 L0 420 Z" fill="#132a6c"/><path d="M1200 120 L1110 150 L1110 268 L1240 420 L1200 420 Z" fill="#132a6c"/>')
     a(_crowd_dots(4, 86, 150, 330, 160, 12) + _crowd_dots(1114, 1196, 150, 330, 160, 13))
-    # pitch with stripes
-    a('<path d="M90 268 L1110 268 L1400 700 L-200 700 Z" fill="url(#stPitch)"/>')
-    ys = [268 + (700 - 268) * ((i / 12) ** 1.35) for i in range(13)]
-    for i in range(12):
+    # ---- pitch drawn with a real perspective projection (metres -> screen)
+    F, FH, YH, CX = 1408.0, 78565.0, -185.6, 600.0
+    ZN = 100.0                      # near touchline distance from camera
+    def P(X, Z, up=0.0):            # X along the pitch (-52.5..52.5), Z depth (ZN..ZN+68), up = height in m
+        return (CX + F * X / Z, YH + FH / Z - F * up / Z)
+    def pts(*xz): return ' '.join(f'{x:.1f},{y:.1f}' for x, y in (P(*q) for q in xz))
+    def poly(xz, **kw):
+        attrs = ' '.join(f'{k.replace("_", "-")}="{v}"' for k, v in kw.items())
+        return f'<polygon points="{pts(*xz)}" {attrs}/>'
+    def pline(xz, w=3):
+        return f'<polyline points="{pts(*xz)}" fill="none" stroke="#f4f4ee" stroke-width="{w}" stroke-linejoin="round"/>'
+    ZF, ZM = ZN + 68, ZN + 34
+    a(poly([(-58, ZF + 4), (58, ZF + 4), (58, ZN - 30), (-58, ZN - 30)], fill='url(#stPitch)'))
+    for i in range(12):            # mowing stripes
         if i % 2: continue
-        y0, y1 = ys[i], ys[i + 1]
-        def xl(y): return 90 - (y - 268) / 432 * 290
-        def xr(y): return 1110 + (y - 268) / 432 * 290
-        a(f'<path d="M{xl(y0):.1f} {y0:.1f} L{xr(y0):.1f} {y0:.1f} L{xr(y1):.1f} {y1:.1f} L{xl(y1):.1f} {y1:.1f} Z" fill="#ffffff" opacity=".06"/>')
-    line = 'fill="none" stroke="#f4f4ee" stroke-width="3" stroke-linejoin="round"'
-    a(f'<path d="M120 282 L1080 282 L1300 640" {line}/><path d="M120 282 L-100 640" {line}/>')
-    a(f'<path d="M600 282 L600 700" {line}/><ellipse cx="600" cy="420" rx="170" ry="52" {line}/><circle cx="600" cy="420" r="4" fill="#f4f4ee"/>')
-    a(f'<path d="M150 300 L330 300 L250 420 L40 420" {line}/><path d="M1050 300 L870 300 L950 420 L1160 420" {line}/>')
-    # goals
-    for x, s in ((96, 1), (1104, -1)):
-        a(f'<path d="M{x} 300 L{x} 274 L{x+s*44} 286 L{x+s*44} 316" fill="none" stroke="#ffffff" stroke-width="4"/><path d="M{x} 300 L{x+s*44} 316" stroke="#ffffff" stroke-width="1" opacity=".5"/>')
-    # players warming up
-    def player(x, y, s, kit='#ffffff'):
-        return (f'<g transform="translate({x} {y}) scale({s})"><rect x="-3.5" y="-9" width="3" height="9" fill="#1e3f9a"/><rect x=".5" y="-9" width="3" height="9" fill="#1e3f9a"/>'
+        z0, z1 = ZF - i * 68 / 12, ZF - (i + 1) * 68 / 12
+        a(poly([(-58, z0), (58, z0), (58, z1), (-58, z1)], fill='#ffffff', opacity='.06'))
+    # touchlines, goal lines, halfway line
+    a(pline([(-52.5, ZN), (-52.5, ZF), (52.5, ZF), (52.5, ZN)]))
+    a(pline([(0, ZF), (0, ZN - 30)]))
+    circ = [(9.15 * math.cos(t), ZM + 9.15 * math.sin(t)) for t in [k * math.pi / 24 for k in range(49)]]
+    a(pline(circ)); cx_, cy_ = P(0, ZM); a(f'<circle cx="{cx_:.1f}" cy="{cy_:.1f}" r="4" fill="#f4f4ee"/>')
+    for s in (-1, 1):
+        g0 = 52.5 * s
+        # penalty area 16.5 m deep x 40.32 m wide, six-yard box 5.5 x 18.32
+        a(pline([(g0, ZM - 20.16), (g0 - s * 16.5, ZM - 20.16), (g0 - s * 16.5, ZM + 20.16), (g0, ZM + 20.16)]))
+        a(pline([(g0, ZM - 9.16), (g0 - s * 5.5, ZM - 9.16), (g0 - s * 5.5, ZM + 9.16), (g0, ZM + 9.16)], 2.4))
+        sx, sy = P(g0 - s * 11, ZM); a(f'<circle cx="{sx:.1f}" cy="{sy:.1f}" r="3" fill="#f4f4ee"/>')
+        arc = [(g0 - s * 11 - s * 9.15 * math.cos(t), ZM + 9.15 * math.sin(t)) for t in [k * math.pi / 30 for k in range(-30, 31)]]
+        arc = [q for q in arc if abs(q[0]) < abs(g0) - 16.5]
+        if arc: a(pline(arc, 2.4))
+        # the goal: posts 7.32 m apart, 2.44 m high, 2 m deep net behind the line
+        za, zb = ZM - 3.66, ZM + 3.66
+        back = g0 + s * 2.0
+        a(poly([(back, za), (back, zb), (g0, zb), (g0, za)], fill='#ffffff', opacity='.12'))
+        net = (f'<polygon points="{pts((g0, za, 2.44), (back, za, 2.0), (back, zb, 2.0), (g0, zb, 2.44))}" fill="#ffffff" opacity=".22"/>'
+               f'<polygon points="{pts((back, za, 2.0), (back, zb, 2.0), (back, zb), (back, za))}" fill="#ffffff" opacity=".18"/>')
+        a(net)
+        a(f'<polyline points="{pts((g0, za), (g0, za, 2.44), (g0, zb, 2.44), (g0, zb))}" fill="none" stroke="#ffffff" stroke-width="4" stroke-linejoin="round"/>')
+        a(f'<polyline points="{pts((g0, za, 2.44), (back, za, 2.0), (back, za))}" fill="none" stroke="#dfe3ea" stroke-width="1.4"/>'
+          f'<polyline points="{pts((g0, zb, 2.44), (back, zb, 2.0), (back, zb))}" fill="none" stroke="#dfe3ea" stroke-width="1.4"/>')
+        # corner flags
+        for zc in (ZF, ZN):
+            fx, fy = P(g0, zc); tx, ty = P(g0, zc, 1.5)
+            a(f'<line x1="{fx:.1f}" y1="{fy:.1f}" x2="{tx:.1f}" y2="{ty:.1f}" stroke="#ffffff" stroke-width="1.6"/><path d="M{tx:.1f} {ty:.1f} l{8*-s} 3 l{8*s} 3 z" fill="#ffcd00"/>')
+    # players warming up, placed on the pitch in metres
+    def player(X, Z, kit='#ffffff'):
+        x, y = P(X, Z); s = 150.0 / Z
+        return (f'<g transform="translate({x:.1f} {y:.1f}) scale({s:.2f})"><rect x="-3.5" y="-9" width="3" height="9" fill="#1e3f9a"/><rect x=".5" y="-9" width="3" height="9" fill="#1e3f9a"/>'
                 f'<rect x="-5" y="-21" width="10" height="13" rx="2.5" fill="{kit}"/><circle cy="-25" r="4" fill="#e8c09a"/></g>')
-    a(player(470, 360, 1.6) + player(700, 400, 1.9) + player(820, 330, 1.4) + player(380, 470, 2.3) + player(560, 330, 1.3, '#ffcd00'))
-    a('<circle cx="640" cy="404" r="5" fill="#ffffff"/><path d="M637 401 l3 2 l3 -2" stroke="#222" stroke-width="1" fill="none"/>')
-    # advertising boards along near side
-    a('<path d="M-40 600 L1240 600 L1240 640 L-40 640 Z" fill="#0a1838"/>')
-    for i, t in enumerate(['MARCHING ON TOGETHER', 'CALLERY.CO.UK', 'ONE BEER AT A TIME', 'LEEDS · LEEDS · LEEDS']):
-        a(f'<text x="{150 + i*300}" y="628" text-anchor="middle" font-family="Bebas Neue, Impact, sans-serif" font-size="24" fill="{["#ffcd00", "#ffffff"][i % 2]}" textLength="230" lengthAdjust="spacingAndGlyphs">{t}</text>')
-    a('<rect x="-40" y="640" width="1280" height="60" fill="#30364a"/>')
+    a(player(-14, 150) + player(9, 128) + player(18, 158) + player(-22, 112) + player(-4, 160, '#ffcd00') + player(-49, ZM, '#2f7d3a') + player(30, 120))
+    bx, by = P(4, 132); a(f'<circle cx="{bx:.1f}" cy="{by:.1f}" r="5" fill="#ffffff"/><path d="M{bx-3:.1f} {by-3:.1f} l3 2 l3 -2" stroke="#222" stroke-width="1" fill="none"/>')
+    # rotating LED advertising hoardings along the near side
+    a('<rect x="-40" y="600" width="1280" height="44" fill="#05070d"/>')
+    for i in range(3):
+        x0 = i * 400
+        a(f'<a class="board" id="board{i}" href="/" aria-label="Advertising board">'
+          f'<rect class="bbg" x="{x0+4}" y="603" width="392" height="38" rx="2" fill="#0a1838"/>'
+          f'<g class="bmsg"><text x="{x0+200}" y="630" text-anchor="middle" font-family="Bebas Neue, Impact, sans-serif" font-size="25" fill="#ffcd00" textLength="330" lengthAdjust="spacingAndGlyphs">MARCHING ON TOGETHER</text></g></a>')
+    a('<rect x="-40" y="644" width="1280" height="56" fill="#30364a"/>')
     return '\n'.join(g)
 
 def scoreboard_link():
@@ -144,5 +177,5 @@ def cards_link():
                 f'<rect x="-42" y="32" width="84" height="16" fill="#ffcd00"/><text y="44" text-anchor="middle" font-family="Bebas Neue, Impact, sans-serif" font-size="13" fill="#0a1838" textLength="70" lengthAdjust="spacingAndGlyphs">{title}</text>'
                 f'<text y="60" text-anchor="middle" font-family="Bebas Neue, Impact, sans-serif" font-size="9" fill="#1e3f9a" textLength="74" lengthAdjust="spacingAndGlyphs">FOOTBALL TALES</text></g>')
     return ('<a href="/football-tales/" class="hot cards" aria-label="Football Tales: open the trading cards">'
-            '<ellipse cx="1000" cy="652" rx="120" ry="14" fill="#000" opacity=".3"/>'
-            + card(945, 578, -14, 'AWAY DAYS', '#1e3f9a') + card(1000, 568, 0, 'HOME DAYS', '#2f7d3a') + card(1058, 582, 13, 'THE PUBS', '#c0392b') + '</a>')
+            '<ellipse cx="860" cy="594" rx="120" ry="12" fill="#000" opacity=".25"/>'
+            + card(805, 520, -14, 'AWAY DAYS', '#1e3f9a') + card(860, 510, 0, 'HOME DAYS', '#2f7d3a') + card(918, 524, 13, 'THE PUBS', '#c0392b') + '</a>')
