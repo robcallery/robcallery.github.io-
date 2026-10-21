@@ -3,10 +3,12 @@ SITE="https://callery.co.uk"
 SOCIAL=["https://www.youtube.com/@calz88","https://www.twitch.tv/robcallery","https://www.instagram.com/calz88","https://x.com/calz88","https://www.tiktok.com/@calz88","https://www.facebook.com/calz88","https://www.linkedin.com/in/rob-callery-98465216b"]
 PAGES={
  "index.html":("/","Rob Callery – Travelling the world one beer at a time","Rob Callery: travelling the world one beer at a time and always heading home to Elland Road. Beer passport, pint-first travel guides and Leeds United tales."),
- "site/explore/index.html":("/explore/","Explore - Rob Callery","Pick a read from Rob Callery's bar: the beer passport, travel guides, football tales, and the telly for Twitch and YouTube."),
+ "site/explore/index.html":("/explore/","Explore - Rob Callery","Pick a read from Rob Callery's bar: the beer passport, travel guides, Elland Road, and the telly for Twitch and YouTube."),
  "site/beer-passport/index.html":("/beer-passport/","Beer Passport - Rob Callery","Rob Callery's beer passport: every beer stamped with its brewery and where it's brewed."),
  "site/travel-guides/index.html":("/travel-guides/","Travel Guides - Rob Callery","Rob Callery's pint-first travel guides: the local Spoons, the best pubs, food and football in every town and city."),
  "site/football-tales/index.html":("/football-tales/","Football Tales - Rob Callery","Football: Tales of a Leeds Fan by Rob Callery - away days, home days and the pubs either side."),
+ "site/stadium/index.html":("/stadium/","Elland Road - Rob Callery","Step inside Elland Road: football tales from a lifetime following Leeds United, and the match hub."),
+ "site/match-hub/index.html":("/match-hub/","Match Hub - Rob Callery","Rob Callery's Leeds United match hub: scores, fixtures and matchday, coming soon."),
 }
 person={"@context":"https://schema.org","@graph":[
  {"@type":"Person","@id":SITE+"/#rob","name":"Rob Callery","alternateName":"calz88","url":SITE+"/","image":SITE+"/og-image.png","description":"Travelling the world one beer at a time. Leeds United fan.","sameAs":SOCIAL},

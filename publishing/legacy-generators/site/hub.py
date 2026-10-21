@@ -151,9 +151,12 @@ VCR=f"""<svg viewBox="0 0 230 74" role="img" aria-label="Video recorder - watch 
   <rect x="14" y="60" width="20" height="6" rx="2" fill="#111"/><rect x="196" y="60" width="20" height="6" rx="2" fill="#111"/>
 </svg>"""
 
+import sys as _sys; _sys.path.insert(0,"/tmp/claude-0/-home-claude/9cac7207-2d1b-5bf4-969e-62974606aff5/scratchpad/")
+from stadium_parts import poster, scoreboard_art, stadium_scene, scoreboard_link, cards_link
+POSTER=poster()
 ITEMS=[("beer-passport","Beer Passport","Every beer, every bar, stamped and rated.",PASSPORT,-3),
        ("travel-guides","Travel Guides","City guides from a pint-first point of view.",GUIDE,2),
-       ("football-tales","Football Tales","Rip open a pack of away days, home days and everything in between.",PACK,-2)]
+       ("stadium","Elland Road","Through the turnstiles for football tales and the match hub.",POSTER,-2)]
 
 HEAD='''<!doctype html>
 <html lang="en">
@@ -253,6 +256,22 @@ HEAD='''<!doctype html>
   .sheen{{transition:transform 1s ease}}
   .item:hover .sheen,.item:focus-visible .sheen{{transform:skewX(-20deg) translateX(420px)}}
   @media (max-width:480px){{.brand{{font-size:1.3rem}}.brand svg{{width:30px;height:30px}}.back{{font-size:.8rem}}}}
+  .enter .art{{transition:transform .75s cubic-bezier(.6,0,.4,1),opacity .75s ease;transform:rotate(0) scale(3.2)!important;opacity:0}}
+  .enter .label{{opacity:0;transition:opacity .3s}}
+  .stadium{{position:relative;max-width:1200px;margin:6px auto 0;padding:0 16px}}
+  .stadium>svg{{width:100%;height:auto;display:block;border-radius:14px;box-shadow:0 20px 40px rgba(0,0,0,.45)}}
+  .hot{{cursor:pointer;outline:none}}
+  .hot rect,.hot g{{transition:transform .3s ease,filter .3s ease}}
+  .sb:hover>rect:first-child,.sb:focus-visible>rect:first-child{{filter:drop-shadow(0 0 14px #ffcd00)}}
+  .cards{{transition:transform .35s cubic-bezier(.2,.8,.2,1.2)}}
+  .cards:hover,.cards:focus-visible{{transform:translateY(-16px)}}
+  .hot:focus-visible{{outline:3px solid #fff}}
+  .spots{{display:flex;justify-content:center;gap:24px;flex-wrap:wrap;max-width:1200px;margin:26px auto 60px;padding:0 16px}}
+  .spot{{text-decoration:none;background:var(--cream);color:var(--navy);border-radius:10px;padding:12px 18px;min-width:260px;max-width:360px;box-shadow:0 6px 16px rgba(0,0,0,.35);transition:background .2s}}
+  .spot h2{{font-family:"Bebas Neue",Impact,sans-serif;font-weight:400;font-size:1.7rem;letter-spacing:.05em;line-height:1}}
+  .spot p{{font-size:.88rem;color:#4a5570;margin-top:3px}}
+  .spot:hover,.spot:focus-visible{{background:var(--yellow)}}
+  .spot .tag{{display:inline-block;background:#1e3f9a;color:#fff;font-size:.66rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:.2em .6em;border-radius:4px;margin-left:.4em;vertical-align:.3em}}
   @media (prefers-reduced-motion:reduce){{.item .art{{transition:none}}.static,.roll,.recdot,.clock{{animation:none}}}}
 </style>
 </head>
@@ -304,30 +323,67 @@ hub+='''    </div>
   });
   addEventListener('pageshow',function(){a.classList.remove('flick')});
   });
+  // walk through the poster into the stadium
+  document.querySelectorAll('.item-stadium').forEach(function(a){
+    var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+    a.addEventListener('click',function(e){
+      if(reduce||e.metaKey||e.ctrlKey||e.shiftKey||e.button) return;
+      e.preventDefault(); a.classList.add('enter');
+      setTimeout(function(){location.href=a.href},700);
+    });
+    addEventListener('pageshow',function(){a.classList.remove('enter')});
+  });
 })();
 </script>
 '''+FOOT
 open('/home/claude/site/explore/index.html','w').write(hub)
 
-SOON={"beer-passport":("Beer Passport","Every beer I've tried, stamped with where I had it, what it was like and whether it's worth the trip. The stamps are being collected now."),
-      "travel-guides":("Travel Guides","Pint-first guides to the cities I've visited: where to drink, what to eat, and how to get there for kick-off. First editions are being written."),
-      "football-tales":("Football: Tales of a Leeds Fan","Stories from Elland Road and away days up and down the country, the highs, the lows and the pubs either side, collected one card at a time. The first pack is being printed.")}
-for slug,name,desc,svg,r in ITEMS:
-    if slug in ('beer-passport','travel-guides'): continue
-    t,blurb=SOON[slug]
+def soon_page(slug,title,blurb,art,r,back,backtxt,tagtxt="Coming soon"):
     os.makedirs(f'/home/claude/site/{slug}',exist_ok=True)
-    pg=HEAD.format(title=f"{name} - Rob Callery",desc=blurb,globe=globe_d,backhref="/explore/",backtxt="← Back to the bar")
+    pg=HEAD.format(title=f"{title} - Rob Callery",desc=blurb,globe=globe_d,backhref=back,backtxt=backtxt)
     pg+=f'''<main>
   <section class="soon">
-    <div class="art" style="--r:{r}deg">{svg}</div>
+    <div class="art" style="--r:{r}deg">{art}</div>
     <div>
-      <span class="tag">Coming soon</span>
-      <h1>{t}</h1>
+      <span class="tag">{tagtxt}</span>
+      <h1>{title}</h1>
       <p>{blurb}</p>
-      <a class="btn" href="/explore/">← Back to the bar</a>
+      <a class="btn" href="{back}">{backtxt}</a>
     </div>
   </section>
 </main>
 '''+FOOT
     open(f'/home/claude/site/{slug}/index.html','w').write(pg)
+
+soon_page("football-tales","Football: Tales of a Leeds Fan","Stories from Elland Road and away days up and down the country, the highs, the lows and the pubs either side, collected one card at a time. The first pack is being printed.",PACK,-2,"/stadium/","← Back to the stadium")
+soon_page("match-hub","Match Hub","Scores, fixtures, the table and matchday notes for Leeds United, all in one place. The scoreboard's being wired up.",scoreboard_art(),0,"/stadium/","← Back to the stadium")
+
+# the stadium
+os.makedirs('/home/claude/site/stadium',exist_ok=True)
+st=HEAD.format(title="Elland Road - Rob Callery",desc="Step inside Elland Road: football tales from a lifetime following Leeds United, and the match hub.",globe=globe_d,backhref="/explore/",backtxt="← Back to the bar")
+st+='''<main>
+  <section class="intro">
+    <h1>Welcome to <em>Elland Road.</em></h1>
+    <p>Pick up the cards for the stories, or look up at the scoreboard for the match hub.</p>
+  </section>
+  <section class="stadium" aria-label="Inside the stadium">
+    <svg viewBox="0 0 1200 700" role="img" aria-label="Inside Elland Road under the floodlights">
+'''+stadium_scene()+scoreboard_link()+cards_link()+'''
+    </svg>
+  </section>
+  <nav class="spots" aria-label="In the stadium">
+    <a class="spot" href="/football-tales/"><h2>Football Tales</h2><p>Away days, home days and the pubs either side, one card at a time.</p></a>
+    <a class="spot" href="/match-hub/"><h2>Match Hub <span class="tag">Soon</span></h2><p>Scores, fixtures and matchday, up on the big screen.</p></a>
+  </nav>
+</main>
+<script>
+(function(){
+  var c=document.getElementById('sbClock'),t=document.getElementById('sbTicker'),msgs=['KICK-OFF SOON','MARCHING ON TOGETHER','MATCH HUB COMING SOON'],i=0;
+  function tick(){try{c.textContent=new Intl.DateTimeFormat('en-GB',{hour:'2-digit',minute:'2-digit',timeZone:'Europe/London'}).format(new Date())}catch(e){}}
+  tick();setInterval(tick,15000);
+  if(!matchMedia('(prefers-reduced-motion: reduce)').matches)setInterval(function(){i=(i+1)%msgs.length;t.textContent=msgs[i]},3000);
+})();
+</script>
+'''+FOOT
+open('/home/claude/site/stadium/index.html','w').write(st)
 print("built")
