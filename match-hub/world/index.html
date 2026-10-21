@@ -124,7 +124,8 @@ var DATA={"city": {"London": "London Pride (Fuller's)", "Manchester": "Boddingto
     $('score').innerHTML='<b class="w">'+pad(g.home,16)+'</b><b class="y">'+(isLive?(g.hs||'0'):'')+'</b><b class="w">'+pad(g.away,16)+'</b><b class="y">'+(isLive?(g.as||'0'):'')+'</b>';
     if(isLive){$('status').innerHTML='<span class="blink">LIVE</span>  '+up(g.clock||g.detail)}
     else{var mins=Math.max(0,Math.round((new Date(g.date)-new Date())/60000)),h=Math.floor(mins/60),m=mins%60;
-      $('status').textContent='NO GAMES IN PLAY - NEXT KICK-OFF IN '+(h?h+'H ':'')+m+'M'}
+      var ko=new Intl.DateTimeFormat('en-GB',{hour:'2-digit',minute:'2-digit',timeZone:'Europe/London'}).format(new Date(g.date));
+      $('status').textContent='NO GAMES IN PLAY - KICK-OFF '+ko+' UK (IN '+(h?h+'H ':'')+m+'M)'}
     $('venue').textContent=up([g.venue,g.city,g.country].filter(Boolean).join(', '));
     var b=beerFor(g);$('beer').textContent=up(b.beer);
     $('beerline').textContent='When in '+b.where+', do as the locals do.';
