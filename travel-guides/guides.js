@@ -1344,6 +1344,500 @@ window.GUIDES = [
     "group": "North West"
   },
   {
+    "city": "Bolton",
+    "region": "Greater Manchester",
+    "country": "United Kingdom",
+    "group": "North West",
+    "colour": "orange",
+    "pint": "~£4.20",
+    "localBeer": "Lancashire cask",
+    "bestFor": "Ancient pubs",
+    "eat": "A Lancashire hotpot.",
+    "dontMiss": "Bolton Town Hall and the Victorian market hall.",
+    "football": "Bolton Wanderers at the Toughsheet Community Stadium.",
+    "gettingThere": "Bolton station, 20 minutes from Manchester.",
+    "tip": "Ask about the Earl of Derby's chair at the Man & Scythe - he spent his last night there in 1651.",
+    "spoons": {
+      "name": "The Spinning Mule",
+      "note": "Nelson Square, named after Samuel Crompton's invention"
+    },
+    "bars": [
+      {
+        "name": "Ye Olde Man & Scythe",
+        "note": "Churchgate, dating back to 1251 - one of England's oldest pubs"
+      }
+    ]
+  },
+  {
+    "city": "Warrington",
+    "region": "Cheshire",
+    "country": "United Kingdom",
+    "group": "North West",
+    "colour": "blue",
+    "pint": "~£4.20",
+    "localBeer": "Cheshire cask",
+    "bestFor": "Rugby league",
+    "eat": "Something from the market in Time Square.",
+    "dontMiss": "The Golden Gates outside the Town Hall.",
+    "football": "Warrington Wolves rugby league at the Halliwell Jones Stadium.",
+    "gettingThere": "Warrington Bank Quay and Central stations - on the West Coast Main Line.",
+    "tip": "The Golden Gates are best seen on the walk in from Bank Quay station.",
+    "spoons": {
+      "name": "The Friar Penketh",
+      "note": "Barbauld Street, in the town centre"
+    }
+  },
+  {
+    "city": "Stockport",
+    "region": "Greater Manchester",
+    "country": "United Kingdom",
+    "group": "North West",
+    "colour": "green",
+    "pint": "~£4.50",
+    "localBeer": "Robinsons",
+    "bestFor": "Historic pubs",
+    "eat": "A wander round the market hall and Underbanks.",
+    "dontMiss": "The 1840 railway viaduct, then a Robinsons brewery tour.",
+    "football": "Stockport County at Edgeley Park.",
+    "gettingThere": "Stockport station, 10 minutes from Manchester Piccadilly.",
+    "tip": "The Arden Arms snug is only reached by walking through the bar - it's allowed.",
+    "spoons": {
+      "name": "The Calverts Court",
+      "note": "St Petersgate, by the market"
+    },
+    "bars": [
+      {
+        "name": "The Arden Arms",
+        "note": "Millgate, Robinsons pub with a snug you reach through the bar"
+      },
+      {
+        "name": "Swan with Two Necks",
+        "note": "Princes Street, protected historic interior"
+      }
+    ]
+  },
+  {
+    "city": "Oldham",
+    "region": "Greater Manchester",
+    "country": "United Kingdom",
+    "group": "North West",
+    "colour": "orange",
+    "pint": "~£4",
+    "localBeer": "Greater Manchester micros",
+    "bestFor": "Pub of the year",
+    "eat": "A Lancashire pasty from the market.",
+    "dontMiss": "Gallery Oldham and the old Town Hall.",
+    "football": "Oldham Athletic at Boundary Park.",
+    "gettingThere": "Metrolink tram from Manchester city centre.",
+    "tip": "Churchill started his political career as Oldham's MP in 1900.",
+    "spoons": {
+      "name": "The Up Steps Inn",
+      "note": "up the steps off High Street"
+    },
+    "bars": [
+      {
+        "name": "Fox & Pine",
+        "note": "Greaves Street, Greater Manchester CAMRA Pub of the Year"
+      }
+    ]
+  },
+  {
+    "city": "Rochdale",
+    "region": "Greater Manchester",
+    "country": "United Kingdom",
+    "group": "North West",
+    "colour": "blue",
+    "pint": "~£4",
+    "localBeer": "Lancashire cask",
+    "bestFor": "Co-op history",
+    "eat": "Pie and peas.",
+    "dontMiss": "The Rochdale Pioneers Museum - birthplace of the Co-op in 1844.",
+    "football": "Rochdale AFC at Spotland.",
+    "gettingThere": "Metrolink tram or train from Manchester Victoria.",
+    "tip": "The Flying Horse is right across from the Town Hall - do both.",
+    "spoons": {
+      "name": "The Regal Moon",
+      "note": "in an old art deco cinema"
+    },
+    "bars": [
+      {
+        "name": "Flying Horse Hotel",
+        "note": "Packer Street, opposite the Town Hall - Rochdale's best for real ale"
+      },
+      {
+        "name": "The Baum",
+        "note": "Toad Lane, next to the Rochdale Pioneers Museum"
+      }
+    ]
+  },
+  {
+    "city": "Wigan",
+    "region": "Greater Manchester",
+    "country": "United Kingdom",
+    "group": "North West",
+    "colour": "green",
+    "pint": "~£4",
+    "localBeer": "Wigan Brewhouse",
+    "bestFor": "Rugby & railway arches",
+    "eat": "A pie barm - a meat pie inside a bread roll.",
+    "dontMiss": "Wigan Pier and Trencherfield Mill on the canal.",
+    "football": "Wigan Athletic and the Warriors at the Brick Community Stadium.",
+    "gettingThere": "Wigan North Western and Wallgate stations.",
+    "tip": "Start at Wigan Central - it's right between the two stations.",
+    "spoons": {
+      "name": "The Moon Under Water",
+      "note": "Market Place, in the town centre"
+    },
+    "bars": [
+      {
+        "name": "Wigan Central",
+        "note": "under the railway arches, train-compartment booths"
+      },
+      {
+        "name": "The Anvil",
+        "note": "long-standing town-centre local"
+      },
+      {
+        "name": "Sherrington's",
+        "note": "Kenyon Road, Wigan CAMRA Pub of the Year 2025"
+      }
+    ]
+  },
+  {
+    "city": "Salford",
+    "region": "Greater Manchester",
+    "country": "United Kingdom",
+    "group": "North West",
+    "colour": "orange",
+    "pint": "~£4.80",
+    "localBeer": "Greater Manchester micros",
+    "bestFor": "Quays & riverside",
+    "eat": "Food at MediaCity on the Quays.",
+    "dontMiss": "The Lowry, then a walk round Salford Quays.",
+    "football": "Salford City at the Peninsula Stadium; the Red Devils play rugby league in Salford.",
+    "gettingThere": "Salford Central and Crescent stations; Metrolink to the Quays.",
+    "tip": "Old Trafford is a short walk across the water from the Quays.",
+    "bars": [
+      {
+        "name": "Old Pint Pot",
+        "note": "Adelphi Street, terrace over the River Irwell"
+      }
+    ]
+  },
+  {
+    "city": "Carlisle",
+    "region": "Cumbria",
+    "country": "United Kingdom",
+    "group": "North West",
+    "colour": "blue",
+    "pint": "~£4.20",
+    "localBeer": "Cumbrian cask",
+    "bestFor": "Border history",
+    "eat": "Cumberland sausage.",
+    "dontMiss": "Carlisle Castle and the cathedral.",
+    "football": "Carlisle United at Brunton Park.",
+    "gettingThere": "Carlisle station on the West Coast Main Line and the Settle-Carlisle line.",
+    "tip": "Take the Settle-Carlisle line in - best railway ride in England.",
+    "spoons": {
+      "name": "The Woodrow Wilson",
+      "note": "Botchergate - President Wilson's mother was from Carlisle"
+    }
+  },
+  {
+    "city": "Blackburn",
+    "region": "Lancashire",
+    "country": "United Kingdom",
+    "group": "North West",
+    "colour": "green",
+    "pint": "~£4",
+    "localBeer": "Thwaites",
+    "bestFor": "Rovers matchdays",
+    "eat": "A Lancashire cheese and onion pie.",
+    "dontMiss": "Blackburn Cathedral and its lantern tower.",
+    "football": "Blackburn Rovers at Ewood Park.",
+    "gettingThere": "Blackburn station, trains from Preston and Manchester.",
+    "tip": "The Beatles sang about 4,000 holes in Blackburn, Lancashire.",
+    "spoons": {
+      "name": "The Postal Order",
+      "note": "in the old post office on Darwen Street"
+    }
+  },
+  {
+    "city": "Burnley",
+    "region": "Lancashire",
+    "country": "United Kingdom",
+    "group": "North West",
+    "colour": "orange",
+    "pint": "~£4",
+    "localBeer": "Moorhouse's",
+    "bestFor": "Turf Moor & Bénédictine",
+    "eat": "A Bénédictine and hot water - Burnley Miners Club is said to be its biggest buyer in the world.",
+    "dontMiss": "The Weavers' Triangle along the canal.",
+    "football": "Burnley at Turf Moor.",
+    "gettingThere": "Burnley Manchester Road station, under an hour from Manchester.",
+    "tip": "Bridge Bier Huis opens early on Burnley home days, even on Mondays and Tuesdays.",
+    "spoons": {
+      "name": "The Boot Inn",
+      "note": "St James's Street, in the town centre"
+    },
+    "bars": [
+      {
+        "name": "Bridge Bier Huis",
+        "note": "Bank Parade, small-brewery cask and German beers"
+      }
+    ]
+  },
+  {
+    "city": "Preston",
+    "region": "Lancashire",
+    "country": "United Kingdom",
+    "group": "North West",
+    "colour": "blue",
+    "pint": "~£4.20",
+    "localBeer": "Lancashire cask",
+    "bestFor": "Deepdale days",
+    "eat": "Butter pie - a Preston classic.",
+    "dontMiss": "The Harris Museum and the market canopy.",
+    "football": "Preston North End at Deepdale - the first ever league champions, 1888-89.",
+    "gettingThere": "Preston station on the West Coast Main Line.",
+    "tip": "Preston Guild only happens every 20 years - next one is 2032.",
+    "spoons": {
+      "name": "The Twelve Tellers",
+      "note": "in an old bank on Church Street"
+    },
+    "bars": [
+      {
+        "name": "The Black Horse",
+        "note": "Friargate, Grade II-listed Robinsons pub"
+      }
+    ]
+  },
+  {
+    "city": "Lancaster",
+    "region": "Lancashire",
+    "country": "United Kingdom",
+    "group": "North West",
+    "colour": "green",
+    "pint": "~£4.50",
+    "localBeer": "Lancaster Brewery",
+    "bestFor": "Canal & castle",
+    "eat": "Morecambe Bay shrimps.",
+    "dontMiss": "Lancaster Castle and the Ashton Memorial in Williamson Park.",
+    "football": "Lancaster City at the Giant Axe.",
+    "gettingThere": "Lancaster station on the West Coast Main Line.",
+    "tip": "Walk up to the Ashton Memorial for the view over Morecambe Bay.",
+    "spoons": {
+      "name": "The Sir Richard Owen",
+      "note": "Spring Garden Street, named after the man who coined \"dinosaur\""
+    },
+    "bars": [
+      {
+        "name": "The Water Witch",
+        "note": "canalside in an old stable block, Lancaster's first canal pub"
+      }
+    ]
+  },
+  {
+    "city": "Chester",
+    "region": "Cheshire",
+    "country": "United Kingdom",
+    "group": "North West",
+    "colour": "orange",
+    "pint": "~£5",
+    "localBeer": "Spitting Feathers",
+    "bestFor": "Rows & Roman walls",
+    "eat": "Afternoon tea in the Rows.",
+    "dontMiss": "Walk the city walls - the most complete in Britain.",
+    "football": "Chester FC - their stadium sits right on the England-Wales border.",
+    "gettingThere": "Chester station, trains from Manchester, Liverpool and London.",
+    "tip": "The Brewery Tap is in a 17th-century hall - look up at the ceiling.",
+    "spoons": {
+      "name": "The Square Bottle",
+      "note": "Foregate Street, in the city centre"
+    },
+    "bars": [
+      {
+        "name": "Old Harkers Arms",
+        "note": "canalside warehouse pub"
+      },
+      {
+        "name": "The Brewery Tap",
+        "note": "Lower Bridge Street, in a Jacobean great hall"
+      }
+    ]
+  },
+  {
+    "city": "Crewe",
+    "region": "Cheshire",
+    "country": "United Kingdom",
+    "group": "North West",
+    "colour": "blue",
+    "pint": "~£4.20",
+    "localBeer": "Cheshire cask",
+    "bestFor": "Railway town",
+    "eat": "Something from the market hall.",
+    "dontMiss": "The Crewe Heritage Centre next to the line.",
+    "football": "Crewe Alexandra at Gresty Road.",
+    "gettingThere": "Crewe station - one of the great railway junctions.",
+    "tip": "Hops is the place - consistently one of the best bars in South Cheshire.",
+    "bars": [
+      {
+        "name": "Hops Belgian Bar",
+        "note": "Prince Albert Street, Belgian beers and real ale"
+      }
+    ]
+  },
+  {
+    "city": "Macclesfield",
+    "region": "Cheshire",
+    "country": "United Kingdom",
+    "group": "North West",
+    "colour": "green",
+    "pint": "~£4.50",
+    "localBeer": "Cheshire cask",
+    "bestFor": "Silk town",
+    "eat": "The Treacle Market, last Sunday of the month.",
+    "dontMiss": "Paradise Mill and the Silk Museum.",
+    "football": "Macclesfield FC at Moss Rose.",
+    "gettingThere": "Macclesfield station, 25 minutes from Manchester.",
+    "tip": "Go on Treacle Market Sunday - the whole town comes out.",
+    "spoons": {
+      "name": "The Society Rooms",
+      "note": "Park Green, in the town centre"
+    }
+  },
+  {
+    "city": "St Helens",
+    "region": "Merseyside",
+    "country": "United Kingdom",
+    "group": "North West",
+    "colour": "orange",
+    "pint": "~£4",
+    "localBeer": "Merseyside cask",
+    "bestFor": "Rugby league & real ale",
+    "eat": "Pie and peas at the rugby.",
+    "dontMiss": "The World of Glass museum.",
+    "football": "St Helens rugby league at the Totally Wicked Stadium.",
+    "gettingThere": "St Helens Central, trains from Liverpool and Manchester.",
+    "tip": "The Turks Head and Cowley Vaults are next door to each other.",
+    "spoons": {
+      "name": "The Glass House",
+      "note": "Market Street, named after the town's glass-making"
+    },
+    "bars": [
+      {
+        "name": "Turks Head",
+        "note": "Morley Street, 14 real ales"
+      },
+      {
+        "name": "Cricketers Arms",
+        "note": "Peter Street, National CAMRA Pub of the Year 2017"
+      }
+    ]
+  },
+  {
+    "city": "Widnes",
+    "region": "Cheshire",
+    "country": "United Kingdom",
+    "group": "North West",
+    "colour": "blue",
+    "pint": "~£4",
+    "localBeer": "Cheshire cask",
+    "bestFor": "Rugby league",
+    "eat": "Chippy tea by the river.",
+    "dontMiss": "Spike Island and the Catalyst science museum.",
+    "football": "Widnes Vikings rugby league at the DCBL Stadium.",
+    "gettingThere": "Widnes station, between Liverpool and Manchester.",
+    "tip": "Look for the plaque on the station - Paul Simon is said to have written Homeward Bound there.",
+    "spoons": {
+      "name": "The Premier",
+      "note": "in an old cinema on Victoria Road"
+    }
+  },
+  {
+    "city": "Birkenhead",
+    "region": "Merseyside",
+    "country": "United Kingdom",
+    "group": "North West",
+    "colour": "green",
+    "pint": "~£4",
+    "localBeer": "Merseyside cask",
+    "bestFor": "Ferry across the Mersey",
+    "eat": "Scouse, the stew - same as over the water.",
+    "dontMiss": "The Mersey Ferry across to Liverpool.",
+    "football": "Tranmere Rovers at Prenton Park.",
+    "gettingThere": "Merseyrail, a few minutes from Liverpool city centre.",
+    "tip": "Get the ferry over to Liverpool rather than the train - it's the view.",
+    "spoons": {
+      "name": "The Brass Balance",
+      "note": "Argyle Street, in the town centre"
+    },
+    "bars": [
+      {
+        "name": "Gallaghers Pub & Barbers",
+        "note": "Chester Street, a pint and a haircut"
+      }
+    ]
+  },
+  {
+    "city": "Southport",
+    "region": "Merseyside",
+    "country": "United Kingdom",
+    "group": "North West",
+    "colour": "orange",
+    "pint": "~£4.20",
+    "localBeer": "Merseyside cask",
+    "bestFor": "Seaside & Lord Street",
+    "eat": "Fish and chips on the pier.",
+    "dontMiss": "Southport Pier and a stroll down Lord Street.",
+    "football": "Southport FC at Haig Avenue; Everton and Liverpool are 40 minutes away.",
+    "gettingThere": "Merseyrail from Liverpool, or trains from Manchester via Wigan.",
+    "tip": "Walk Lord Street under the glass verandas first, then down to the pier.",
+    "spoons": {
+      "name": "The Sir Henry Segrave",
+      "note": "Lord Street - he set a land speed record on Southport sands"
+    },
+    "bars": [
+      {
+        "name": "Baron's Bar",
+        "note": "inside the Scarisbrick Hotel"
+      },
+      {
+        "name": "Tap & Bottles",
+        "note": "micropub in Cambridge Walks"
+      }
+    ]
+  },
+  {
+    "city": "Blackpool",
+    "region": "Lancashire",
+    "country": "United Kingdom",
+    "group": "North West",
+    "colour": "blue",
+    "pint": "~£4",
+    "localBeer": "Lancashire cask",
+    "bestFor": "The Prom & micropubs",
+    "eat": "Fish and chips, rock and a stick of candyfloss.",
+    "dontMiss": "Blackpool Tower and the Illuminations.",
+    "football": "Blackpool at Bloomfield Road.",
+    "gettingThere": "Blackpool North station, about 1.5 hours from Leeds via Preston.",
+    "tip": "Cask & Tap is two minutes from the Tower and nowhere near as busy.",
+    "spoons": {
+      "name": "The Layton Rakes",
+      "note": "Market Street, in the town centre"
+    },
+    "bars": [
+      {
+        "name": "Cask & Tap",
+        "note": "Topping Street, up to eight real ales"
+      },
+      {
+        "name": "No.10 Ale House",
+        "note": "Whitegate Drive, Blackpool's first micropub"
+      }
+    ]
+  },
+  {
     "city": "Llanrwst",
     "region": "Wales",
     "country": "United Kingdom",
