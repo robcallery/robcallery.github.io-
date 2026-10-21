@@ -9,7 +9,7 @@
 window.BEERS = [
   { name: "54° North Lager", added: "2026-10-21", date: "2019-03-23", brewery: "Black Sheep Brewery", brewedIn: "Masham", brewedCountry: "England" },
   { name: "Ald IPA", added: "2026-10-21", date: "2020-10-10", brewery: "BrewDog", brewedIn: "Ellon, Aberdeenshire", brewedCountry: "Scotland" },
-  { name: "Ale to the King", added: "2026-10-21", date: "2023-05-05", brewery: "St Austell Brewery", brewedIn: "St Austell, Cornwall", brewedCountry: "England" },
+  { name: "Ale to the King", added: "2026-10-21", date: "2023-05-05", brewery: "BrewDog", brewedIn: "Ellon, Aberdeenshire", brewedCountry: "Scotland" },
   { name: "Amstel", added: "2026-10-21", date: "2015-12-24", brewery: "Heineken", brewedIn: "Amsterdam", brewedCountry: "Netherlands" },
   { name: "Asahi Super Dry", added: "2026-10-21", date: "2023-10-14", brewery: "Asahi Breweries", brewedIn: "Tokyo", brewedCountry: "Japan" },
   { name: "Baby-Faced Assassin", added: "2026-10-20", brewerSays: "100% Citra hops - mango, apricot, grapefruit and mandarin, with a lasting juicy tropical bitterness.", brewery: "Rooster's Brewing Co.", brewedIn: "Harrogate", brewedCountry: "England", date: "2019-02-23", style: "IPA", abv: 6.1 },
