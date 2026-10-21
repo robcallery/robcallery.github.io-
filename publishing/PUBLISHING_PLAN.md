@@ -1,6 +1,8 @@
 # Travel Guides publishing system: technical plan
 
-*Draft 1, 21 October 2026. Plan only: nothing here changes the live website.*
+*Draft 2, 21 October 2026. Plan only: nothing here changes the live website.*
+
+*Draft 2 corrects the 8.25" × 11" paperback availability, confirms the hardcover page range and adds KDP UK printing costs for each option (section 3).*
 
 ## 1. Goals
 
@@ -37,7 +39,8 @@ KDP specifications checked October 2026 (Paper and Trim Size Options, Print Opti
 
 - 8.25" × 11" is KDP's largest hardcover trim, and hardcover is premium colour only.
 - It gives about 60% more page area than the Traveller's Edition. That leaves room for the bigger layout described in section 4.
-- **Paperback option:** if you want a large paperback too, use **8.5" × 11"** premium colour (24–590 pages). That is a separate render of the same template. KDP's paperback list has no 8.25" × 11".
+- **Paperback option:** KDP also offers **8.25" × 11" as a premium colour paperback** (24–590 pages). One layout and one interior PDF can therefore serve both the hardcover and a paperback; only the covers differ.
+- **Page range:** hardcover premium colour is 75–550 pages; paperback premium colour at this size is 24–590.
 - **Bleed:** yes. The hero bands and polaroid backgrounds run to the edge.
 - **Page size with bleed:** 8.375" × 11.25".
 
@@ -51,7 +54,20 @@ KDP specifications checked October 2026 (Paper and Trim Size Options, Print Opti
 
 ### Page counts drive cost
 
-The full guide is 207 destinations × 2 pages plus about 16 pages of front and back matter, so about 430 pages. In premium colour that is an expensive book to print. Two recommendations:
+The full guide is 207 destinations × 2 pages plus front and back matter. With region divider spreads (which also keep every destination on a left/right pair) it comes to roughly **430–476 pages**.
+
+KDP UK paperback printing cost is a fixed £0.85 plus a cost per page (KDP *Printing costs* page, checked 21 October 2026). "Large" means wider than 6.12" or taller than 9". The KDP royalty on a paperback is 60% of list price minus printing, so the break-even list price is printing cost ÷ 0.6.
+
+| Book | Trim and ink | Per page | Print cost (476 pp) | Break-even list price |
+|---|---|---|---|---|
+| Collector's, full guide | 8.25" × 11" premium colour (large) | £0.0598 | **about £29.31** | about £48.85 |
+| Traveller's, full guide | 6" × 9" standard colour (regular) | £0.020 | **about £10.37** | about £17.28 |
+| Traveller's, full guide | 5.5" × 8.5" premium colour (regular) | £0.0435 | about £21.56 | about £35.93 |
+| Traveller's, *Yorkshire* (33 places, about 82 pp) | 6" × 9" standard colour | £0.020 | about £2.49 | about £4.15 |
+
+Hardcover printing costs are on a separate KDP page and need checking before pricing the Collector's hardback. Standard colour is the main reason the Traveller's Edition is 6" × 9": the same 476-page book costs about half as much to print as in premium colour. The quality trade-off has to be judged on a proof copy.
+
+Two recommendations:
 
 1. **Plan regional volumes,** for example "Yorkshire" (33 destinations, about 82 pages) or "North of England" (66 destinations, about 150 pages). The full Collector's Edition becomes a flagship rather than the only product.
 2. **Use a compact layout for the Traveller's Edition** (section 4.3), which roughly halves the page count.
@@ -62,7 +78,7 @@ Check every selection against the format's minimum page count:
 |---|---|
 | Standard colour paperback | 72–600 |
 | Premium colour paperback | 24–828; 24–590 at 8.5" × 11" |
-| Hardcover | 75–550 (confirm for premium colour) |
+| Hardcover (premium colour, incl. 8.25" × 11") | 75–550 |
 
 **Gutter margins by page count:** these follow KDP's table.
 
@@ -388,7 +404,7 @@ All five fonts are under the **SIL Open Font License 1.1**: Inter, Bebas Neue, C
 **Description and discovery**
 - A description up to 4,000 characters.
 - 7 KDP keyword slots.
-- Categories: BISAC Travel (e.g. TRV009060 "Travel / Europe / Great Britain" for the UK volumes) plus Thema WTH (travel guides).
+- Categories: the BISAC *Travel / Europe / Great Britain* code for the UK volumes (look up the exact TRV009… code on the BISG list at release) plus Thema WTH (travel guides).
 - Language `en-GB`.
 - Publication date and territories.
 
@@ -455,7 +471,7 @@ All five fonts are under the **SIL Open Font License 1.1**: Inter, Bebas Neue, C
 
 1. Your own ISBNs (Nielsen) or KDP's free ones?
 2. Should the first book be a regional volume (Yorkshire is my suggestion) or the full guide?
-3. Should the Collector's Edition be hardback only, or also an 8.5" × 11" paperback?
+3. Should the Collector's Edition be hardback only, or also an 8.25" × 11" paperback (same interior)?
 4. Should we create a private repository for book production, or keep it on the public repo's `publishing` branch?
 5. For the commercial editions, should we redraw or remove the brand-heavy polaroids (the Disney and Universal parks)?
 6. What publisher or imprint name should go on the books?
@@ -465,5 +481,7 @@ All five fonts are under the **SIL Open Font License 1.1**: Inter, Bebas Neue, C
 - KDP: Paper and trim size options; print options (bleed, margins, page ranges): https://kdp.amazon.com/en_US/help/topic/GVBQ3CMEQW3W2VL6
 - KDP: Standard colour: https://kdp.amazon.com/en_US/help/topic/GX56BFPW4BKNPGFW
 - KDP: Supported ebook formats (MOBI no longer accepted for fixed layout from March 2025): https://kdp.amazon.com/en_US/help/topic/G200634390
+- KDP: Fixed-layout eBooks (EPUB, DOCX or KPF): https://kdp.amazon.com/en_US/help/topic/GULSQMHU5MNH4EZM
+- KDP: Printing costs (paperback premium/standard colour, UK and US): https://kdp.amazon.com/en_US/help/topic/G201834340
 - Apple Books Asset Guide: Defining book layout metadata: https://help.apple.com/itc/booksassetguide/en.lproj/itc2cf4d26eb.html
 - EPUB 3 Fixed-Layout Documents: https://idpf.org/epub/fxl/
