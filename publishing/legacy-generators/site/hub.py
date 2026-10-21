@@ -266,6 +266,9 @@ HEAD='''<!doctype html>
   .cards{{transition:transform .35s cubic-bezier(.2,.8,.2,1.2)}}
   .cards:hover,.cards:focus-visible{{transform:translateY(-16px)}}
   .hot:focus-visible{{outline:3px solid #fff}}
+  .pl .body{{transform-box:fill-box;transform-origin:50% 100%}}
+  .pl .body.kick{{animation:kick .35s ease-out}}
+  @keyframes kick{{30%{{transform:translateY(-3px) rotate(-6deg)}}100%{{transform:none}}}}
   .bmsg{{transition:opacity .35s ease,transform .35s ease;transform-box:fill-box}}
   .bmsg.out{{opacity:0;transform:translateY(-14px)}}
   .bbg{{transition:fill .35s ease}}
@@ -412,6 +415,47 @@ st+='''<main>
   }
   paint(false);
   var still=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  // players knocking the ball about (world metres -> screen, same projection as the drawing)
+  (function(){
+    if(still) return;
+    var F=1408,FH=78565,YH=-185.6,CX=600;
+    function proj(x,z,up){return [CX+F*x/z, YH+FH/z-F*(up||0)/z]}
+    var host=document.getElementById('players');
+    var P=[].map.call(document.querySelectorAll('.pl'),function(el,i){var x=+el.dataset.x,z=+el.dataset.z;
+      return {el:el,body:el.querySelector('.body'),x:x,z:z,hx:x,hz:z,tx:x,tz:z,keeper:Math.abs(x)>45,wander:0}});
+    var shadow=document.getElementById('ballShadow'),ball=document.getElementById('ballBody');
+    var holder=3,recv=-1,t0=0,dur=0,from=null,to=null,loft=0,wait=performance.now()+800,last=performance.now();
+    var bx=P[holder].x+.6,bz=P[holder].z,bh=0;
+    function place(p){var q=proj(p.x,p.z);p.el.setAttribute('transform','translate('+q[0].toFixed(1)+' '+q[1].toFixed(1)+') scale('+(150/p.z).toFixed(2)+')')}
+    function drawBall(){var g=proj(bx,bz),b=proj(bx,bz,bh),k=130/bz;
+      shadow.setAttribute('cx',g[0].toFixed(1));shadow.setAttribute('cy',g[1].toFixed(1));shadow.setAttribute('rx',(5*k).toFixed(1));shadow.setAttribute('ry',(2*k).toFixed(1));
+      ball.setAttribute('transform','translate('+b[0].toFixed(1)+' '+(b[1]-4*k).toFixed(1)+') scale('+k.toFixed(2)+')')}
+    function pick(){var h=P[holder],c=[];
+      P.forEach(function(p,i){if(i===holder)return;var d=Math.hypot(p.x-h.x,p.z-h.z);if(d<8||d>48)return;var w=p.keeper?.35:1;c.push([i,w])});
+      if(!c.length)return (holder+1)%P.length;var s=c.reduce(function(a,b){return a+b[1]},0),r=Math.random()*s;
+      for(var j=0;j<c.length;j++){r-=c[j][1];if(r<=0)return c[j][0]}return c[0][0]}
+    function kick(p){p.body.classList.remove('kick');void p.body.getBBox();p.body.classList.add('kick')}
+    function order(){var s=P.slice().sort(function(a,b){return b.z-a.z});s.forEach(function(p){host.appendChild(p.el)})}
+    function frame(now){
+      var dt=Math.min(.05,(now-last)/1000);last=now;
+      P.forEach(function(p,i){
+        if(i!==recv&&i!==holder&&now>p.wander){var r=p.keeper?2.5:6;p.tx=p.hx+(Math.random()*2-1)*r;p.tz=p.hz+(Math.random()*2-1)*r*.6;p.wander=now+2500+Math.random()*3000}
+        var dx=p.tx-p.x,dz=p.tz-p.z,d=Math.hypot(dx,dz),v=(i===recv?5:2.2)*dt;
+        if(d>.05){p.x+=dx/d*Math.min(v,d);p.z+=dz/d*Math.min(v,d)}
+        place(p)});
+      if(recv<0){                       // ball at the holder's feet
+        var h=P[holder];bx=h.x+.6;bz=h.z+.2;bh=0;
+        if(now>wait){recv=pick();var r=P[recv];from=[bx,bz];
+          to=[r.x+(Math.random()*2-1)*1.5,r.z+(Math.random()*2-1)*1.2];r.tx=to[0]-.6;r.tz=to[1]-.2;
+          var dist=Math.hypot(to[0]-from[0],to[1]-from[1]);dur=Math.max(.6,dist/15);loft=dist>26?dist*.16:0;t0=now;kick(h)}
+      }else{
+        var u=Math.min(1,(now-t0)/1000/dur),e=u*(2-u);
+        bx=from[0]+(to[0]-from[0])*e;bz=from[1]+(to[1]-from[1])*e;bh=loft*4*u*(1-u);
+        if(u>=1){holder=recv;recv=-1;wait=now+500+Math.random()*900;kick(P[holder]);P[holder].tx=P[holder].x;P[holder].tz=P[holder].z}
+      }
+      drawBall();order();requestAnimationFrame(frame)}
+    requestAnimationFrame(frame);
+  })();
   setInterval(function(){step=(step+1)%ADS.length;paint(!still)},still?8000:4500);
 })();
 </script>

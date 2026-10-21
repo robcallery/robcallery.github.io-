@@ -137,12 +137,15 @@ def stadium_scene():
             fx, fy = P(g0, zc); tx, ty = P(g0, zc, 1.5)
             a(f'<line x1="{fx:.1f}" y1="{fy:.1f}" x2="{tx:.1f}" y2="{ty:.1f}" stroke="#ffffff" stroke-width="1.6"/><path d="M{tx:.1f} {ty:.1f} l{8*-s} 3 l{8*s} 3 z" fill="#ffcd00"/>')
     # players warming up, placed on the pitch in metres
-    def player(X, Z, kit='#ffffff'):
+    def player(i, X, Z, kit='#ffffff'):
         x, y = P(X, Z); s = 150.0 / Z
-        return (f'<g transform="translate({x:.1f} {y:.1f}) scale({s:.2f})"><rect x="-3.5" y="-9" width="3" height="9" fill="#1e3f9a"/><rect x=".5" y="-9" width="3" height="9" fill="#1e3f9a"/>'
-                f'<rect x="-5" y="-21" width="10" height="13" rx="2.5" fill="{kit}"/><circle cy="-25" r="4" fill="#e8c09a"/></g>')
-    a(player(-14, 150) + player(9, 128) + player(18, 158) + player(-22, 112) + player(-4, 160, '#ffcd00') + player(-49, ZM, '#2f7d3a') + player(30, 120))
-    bx, by = P(4, 132); a(f'<circle cx="{bx:.1f}" cy="{by:.1f}" r="5" fill="#ffffff"/><path d="M{bx-3:.1f} {by-3:.1f} l3 2 l3 -2" stroke="#222" stroke-width="1" fill="none"/>')
+        return (f'<g class="pl" id="pl{i}" data-x="{X}" data-z="{Z}" transform="translate({x:.1f} {y:.1f}) scale({s:.2f})"><g class="body"><rect x="-3.5" y="-9" width="3" height="9" fill="#1e3f9a"/><rect x=".5" y="-9" width="3" height="9" fill="#1e3f9a"/>'
+                f'<rect x="-5" y="-21" width="10" height="13" rx="2.5" fill="{kit}"/><circle cy="-25" r="4" fill="#e8c09a"/></g></g>')
+    squad = [(-14, 150), (9, 128), (18, 158), (-22, 112), (-4, 160, '#ffcd00'), (-49, ZM, '#f07a14'), (30, 120), (49, ZM, '#7c3aed')]
+    a('<g id="players">' + ''.join(player(i, *q) for i, q in enumerate(squad)) + '</g>')
+    bx, by = P(-22, 112)
+    a(f'<g id="ball"><ellipse id="ballShadow" cx="{bx:.1f}" cy="{by:.1f}" rx="5" ry="2" fill="#000" opacity=".3"/>'
+      f'<g id="ballBody" transform="translate({bx:.1f} {by-4:.1f})"><circle r="5" fill="#ffffff"/><path d="M-3 -2 l3 2 l3 -2 M0 0 l0 3" stroke="#222" stroke-width="1" fill="none"/></g></g>')
     # rotating LED advertising hoardings along the near side
     a('<rect x="-40" y="600" width="1280" height="44" fill="#05070d"/>')
     for i in range(3):
