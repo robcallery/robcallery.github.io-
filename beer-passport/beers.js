@@ -8,7 +8,7 @@
 //   ink: "red", "blue", "green", "purple", "orange" or "black" (otherwise picked by country)
 window.BEERS = [
   { name: "54° North Lager", added: "2026-10-21", date: "2019-03-23", brewery: "Black Sheep Brewery", brewedIn: "Masham", brewedCountry: "England" },
-  { name: "Ald IPA", added: "2026-10-21", date: "2020-10-10", brewery: "BrewDog", brewedIn: "Ellon, Aberdeenshire", brewedCountry: "Scotland" },
+  { name: "Ald IPA", added: "2026-10-21", date: "2020-10-10", style: "IPA", brewery: "BrewDog x Aldi", brewedIn: "Ellon, Aberdeenshire", brewedCountry: "Scotland", notes: "The Punk IPA lookalike row with Aldi, settled with a pint." },
   { name: "Ale to the King", added: "2026-10-21", date: "2023-05-05", brewery: "BrewDog", brewedIn: "Ellon, Aberdeenshire", brewedCountry: "Scotland" },
   { name: "Amstel", added: "2026-10-21", date: "2015-12-24", brewery: "Heineken", brewedIn: "Amsterdam", brewedCountry: "Netherlands" },
   { name: "Asahi Super Dry", added: "2026-10-21", date: "2023-10-14", brewery: "Asahi Breweries", brewedIn: "Tokyo", brewedCountry: "Japan" },
