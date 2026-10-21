@@ -110,6 +110,7 @@
   .sample{position:absolute;top:44%;left:50%;transform:translate(-50%,-50%) rotate(-24deg);font-family:"Bebas Neue",Impact,sans-serif;font-size:3.4em;letter-spacing:.2em;color:rgba(196,48,43,.16);border:.08em solid rgba(196,48,43,.16);padding:0 .3em;pointer-events:none;white-space:nowrap}
   .await .stamp{opacity:.35}
   .await .fields .v{color:transparent}
+  .says .v{font-family:Inter,system-ui,sans-serif;font-weight:400;font-style:italic;font-size:.72em;line-height:1.4;border-bottom:0}
   .unk{color:#a39675;font-style:normal;font-weight:400}
   .stampbox{height:50%}
   .await-msg{text-align:center;font-family:"Caveat",cursive;font-size:1.35em;color:#8a7a58;margin-top:.6em}
@@ -157,6 +158,8 @@
   .foot{margin-top:auto;display:flex;justify-content:space-between;font-family:"Bebas Neue",Impact,sans-serif;letter-spacing:.2em;font-size:.68em;color:#8a7a58;border-top:1px solid var(--line);padding-top:.4em}
   .tag{margin:2.2em auto .8em;width:62%;aspect-ratio:1.6;border:2px dashed #b9ab86;border-radius:.6em;display:grid;place-items:center;text-align:center;position:relative;color:#8a7a58;font-family:"Bebas Neue",Impact,sans-serif;letter-spacing:.15em;font-size:1.25em;line-height:1.2}
   .tag::before{content:"";position:absolute;left:-1.1em;top:50%;width:.7em;height:.7em;border:2px solid #b9ab86;border-radius:50%;transform:translateY(-50%)}
+  .biro{position:relative;margin:.55em .2em 0 .4em;font-family:"Caveat",cursive;font-weight:500;font-size:1.25em;line-height:1.1;color:#1f3fa8;transform:rotate(-1.6deg);text-shadow:0 0 .4px #1f3fa8;opacity:.92}
+  .biro .tt{font-weight:700;text-decoration:underline;text-decoration-thickness:1.5px;text-underline-offset:2px;text-decoration-style:wavy}
   .backin{background:linear-gradient(135deg,var(--burg2),var(--burg))}
   /* controls */
   .controls{display:flex;align-items:center;gap:14px;margin-top:22px;user-select:none}
@@ -238,6 +241,7 @@
       sec('Where to drink',bars?'<ul>'+bars+'</ul>':'')+sec('Eat','<p>'+esc(g.eat||'')+'</p>'.replace('<p></p>',''))+sec('Don\'t miss',g.dontMiss?'<p>'+esc(g.dontMiss)+'</p>':'')+sec('Football',g.football?'<p>'+esc(g.football)+'</p>':'')+sec('Getting there',g.gettingThere?'<p>'+esc(g.gettingThere)+'</p>':'')+
       (r?'<div class="rate">Would I go back? <span class="pints">'+p+'</span></div>':'')+
       (g.notes?'<div class="notes">“'+esc(g.notes)+'”</div>':'')+
+      (g.tip?'<div class="biro"><span class="tt">Top tip!</span> '+esc(g.tip)+'</div>':'')+
       (demo&&!(window.GUIDES||[]).length?'<div class="sample">SAMPLE</div>':'')});
   });
   pages.push({cls:'await',html:wm()+top('TRAVEL GUIDES · NEXT STOP',beers.length+1+C)+'<div class="tag">NEXT DESTINATION<br>TBC</div><div class="await-msg">'+(beers.length?'Bags are packed. Next guide coming soon…':'The first guides are being written.<br>Check back soon!')+'</div><div class="foot"><span>ROB CALLERY</span><span>ONE BEER AT A TIME</span></div>'});

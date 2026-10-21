@@ -110,6 +110,7 @@
   .sample{position:absolute;top:44%;left:50%;transform:translate(-50%,-50%) rotate(-24deg);font-family:"Bebas Neue",Impact,sans-serif;font-size:3.4em;letter-spacing:.2em;color:rgba(196,48,43,.16);border:.08em solid rgba(196,48,43,.16);padding:0 .3em;pointer-events:none;white-space:nowrap}
   .await .stamp{opacity:.35}
   .await .fields .v{color:transparent}
+  .says .v{font-family:Inter,system-ui,sans-serif;font-weight:400;font-style:italic;font-size:.72em;line-height:1.4;border-bottom:0}
   .unk{color:#a39675;font-style:normal;font-weight:400}
   .stampbox{height:50%}
   .await-msg{text-align:center;font-family:"Caveat",cursive;font-size:1.35em;color:#8a7a58;margin-top:.6em}
@@ -220,6 +221,7 @@
     var fld=function(k,v,full){return '<div class="fld'+(full?' full':'')+'"><div class="k">'+k+'</div><div class="v'+(k==='Verdict'?' pints':'')+'">'+v+'</div></div>'};
     var loc=[b.brewedIn,b.brewedCountry].filter(Boolean).join(', ');
     var f=fld('Beer',esc(b.name),true)+fld('Brewery',b.brewery?esc(b.brewery):'<i class="unk">Unknown</i>')+fld('Brewed in',loc?esc(loc):'<i class="unk">Unknown</i>');
+    if(b.brewerSays) f+='<div class="fld full says"><div class="k">The brewer says</div><div class="v">'+esc(b.brewerSays)+'</div></div>';
     if(b.style||b.abv) f+=fld('Style · ABV',esc(b.style||'')+(b.abv?(b.style?' · ':'')+esc(b.abv)+'%':''),true);
     if(b.where||b.city) f+=fld('Where I had it',esc(b.where||'')+(b.where&&b.city?', ':'')+esc(b.city||''),true);
     if(b.date) f+=fld('Date',fmtDate(b.date));

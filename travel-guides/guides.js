@@ -1,5 +1,6 @@
 // ===== Rob's Travel Guides =====
 // Add a city by copying one block below and filling it in. Leave out anything you don't need.
+// tip: a top tip, shown handwritten in biro.
 // visited: "YYYY-MM".  rating: 1-5 (would you go back?) - leave out to hide it.
 // colour: "teal", "red", "blue", "green", "orange" or "purple".
 // Pubs and facts were researched online in October 2026 - pint prices are rough estimates.
@@ -33,7 +34,8 @@ window.GUIDES = [
     "eat": "Graze Kirkgate Market, or steak and ale pie at the Lamb & Flag by the Minster.",
     "dontMiss": "A night match under the lights at Elland Road.",
     "football": "Leeds United at Elland Road. Headingley for the Rhinos and Yorkshire cricket.",
-    "gettingThere": "Leeds station is a major hub: direct trains from London, Manchester, York and beyond."
+    "gettingThere": "Leeds station is a major hub: direct trains from London, Manchester, York and beyond.",
+    "tip": "Get to Whitelock's early on matchday - it's tiny and fills fast."
   },
   {
     "city": "Wakefield",
@@ -64,7 +66,8 @@ window.GUIDES = [
     "eat": "Anything with Yorkshire forced rhubarb - Wakefield is the heart of the Rhubarb Triangle.",
     "dontMiss": "The Hepworth Wakefield gallery, then a pint at the Exchange Tap.",
     "football": "Wakefield Trinity rugby league at Belle Vue (DIY Kitchens Stadium).",
-    "gettingThere": "Wakefield Westgate is on the East Coast Main Line - quick from Leeds or London."
+    "gettingThere": "Wakefield Westgate is on the East Coast Main Line - quick from Leeds or London.",
+    "tip": "Do Westgate as a crawl - Harry's, Black Rock and the Hop are all within a few minutes."
   },
   {
     "city": "Batley",
@@ -87,7 +90,8 @@ window.GUIDES = [
     "eat": "Batley is home to Fox's Biscuits - grab some for the train.",
     "dontMiss": "Bagshaw Museum in Wilton Park, then up the road to Oakwell Hall.",
     "football": "Batley Bulldogs rugby league at Mount Pleasant - famous for its sloping pitch.",
-    "gettingThere": "Batley station is on the Huddersfield line between Leeds and Manchester."
+    "gettingThere": "Batley station is on the Huddersfield line between Leeds and Manchester.",
+    "tip": "The Union Rooms opens at 8am - breakfast and a pint in an old bank."
   },
   {
     "city": "Dewsbury",
@@ -110,7 +114,8 @@ window.GUIDES = [
     "eat": "Wander the market (Wednesdays and Saturdays) for a cheap lunch.",
     "dontMiss": "Dewsbury Minster - its bell 'Black Tom' tolls the Devil's Knell every Christmas Eve.",
     "football": "Dewsbury Rams rugby league at Crown Flatt (FLAIR Stadium).",
-    "gettingThere": "TransPennine trains stop here - a good start to the Transpennine Real Ale Trail."
+    "gettingThere": "TransPennine trains stop here - a good start to the Transpennine Real Ale Trail.",
+    "tip": "Start the Transpennine Ale Trail at the West Riding - it's on the platform."
   },
   {
     "city": "Huddersfield",
@@ -141,7 +146,8 @@ window.GUIDES = [
     "eat": "Pie and peas at the Slubbers Arms.",
     "dontMiss": "The station's grand frontage in St George's Square, then out along the ale trail.",
     "football": "Huddersfield Town at the Accu Stadium (the old John Smith's).",
-    "gettingThere": "On the TransPennine line - about 20 minutes from Leeds."
+    "gettingThere": "On the TransPennine line - about 20 minutes from Leeds.",
+    "tip": "Grab a pint at the King's Head before your train - it's in the station."
   },
   {
     "city": "Sheffield",
@@ -172,7 +178,8 @@ window.GUIDES = [
     "eat": "Anything with a splash of Henderson's Relish - it's the law round here.",
     "dontMiss": "A crawl round Kelham Island's old industrial streets.",
     "football": "Sheffield United at Bramall Lane, Sheffield Wednesday at Hillsborough.",
-    "gettingThere": "Sheffield station on the Midland Main Line; about 40 minutes from Leeds."
+    "gettingThere": "Sheffield station on the Midland Main Line; about 40 minutes from Leeds.",
+    "tip": "Walk Kelham Island in a loop - Fat Cat, Kelham Island Tavern, then the Riverside."
   },
   {
     "city": "Morley",
@@ -199,7 +206,8 @@ window.GUIDES = [
     "eat": "Platters of dips and charcuterie at Nomad.",
     "dontMiss": "Morley Town Hall - Grade I listed, with a 160ft domed clock tower.",
     "football": "A short hop to Elland Road for Leeds United.",
-    "gettingThere": "Morley station is on the Huddersfield line; buses run along Queen Street."
+    "gettingThere": "Morley station is on the Huddersfield line; buses run along Queen Street.",
+    "tip": "Nomad and Dyeworks are both closed early in the week - go Thursday to Sunday."
   },
   {
     "city": "Harrogate",
@@ -230,7 +238,8 @@ window.GUIDES = [
     "eat": "Tea and a Fat Rascal at Bettys, or small plates at the Fat Badger.",
     "dontMiss": "A stroll through Valley Gardens and across the Stray.",
     "football": "Harrogate Town at Wetherby Road (Marcy Fitness Stadium).",
-    "gettingThere": "Harrogate Line trains from Leeds and York."
+    "gettingThere": "Harrogate Line trains from Leeds and York.",
+    "tip": "The Winter Gardens staircase is worth the visit alone."
   },
   {
     "city": "Knaresborough",
@@ -257,7 +266,8 @@ window.GUIDES = [
     "eat": "Home-cooked pub food at the World's End.",
     "dontMiss": "The view of the railway viaduct over the Nidd from the castle, then Mother Shipton's Cave.",
     "football": "Knaresborough Town at Manse Lane.",
-    "gettingThere": "On the Harrogate Line between Leeds and York."
+    "gettingThere": "On the Harrogate Line between Leeds and York.",
+    "tip": "Have one by the river at the World's End, then walk up to the castle for the viaduct view."
   },
   {
     "city": "Boroughbridge",
@@ -279,7 +289,8 @@ window.GUIDES = [
     ],
     "eat": "Lunch or dinner at the Crown Hotel.",
     "dontMiss": "The Devil's Arrows - Bronze Age standing stones, the tallest 22ft.",
-    "gettingThere": "Just off the A1(M); no station, so it's a drive or bus from Harrogate or York."
+    "gettingThere": "Just off the A1(M); no station, so it's a drive or bus from Harrogate or York.",
+    "tip": "Ask for a look round Tap on the Tutt's 1930s rooms - they're barely changed."
   },
   {
     "city": "Thirsk",
@@ -306,7 +317,8 @@ window.GUIDES = [
     "eat": "Market day (Mondays and Saturdays), then the Golden Fleece restaurant.",
     "dontMiss": "The World of James Herriot, in the vet's old surgery. Racecourse in summer.",
     "football": "Thirsk Falcons in the Teesside League.",
-    "gettingThere": "Thirsk station is on the East Coast Main Line, about 1.5 miles out of town."
+    "gettingThere": "Thirsk station is on the East Coast Main Line, about 1.5 miles out of town.",
+    "tip": "Go on a Monday or Saturday for the market, then the Three Tuns."
   },
   {
     "city": "Northallerton",
@@ -337,7 +349,8 @@ window.GUIDES = [
     "eat": "Bettys on the High Street, or a meal at the Golden Lion.",
     "dontMiss": "Market day on the High Street (Wednesdays and Saturdays).",
     "football": "Northallerton Town at the Calvert Stadium.",
-    "gettingThere": "Northallerton is on the East Coast Main Line."
+    "gettingThere": "Northallerton is on the East Coast Main Line.",
+    "tip": "Wednesday and Saturday are market days - the High Street pubs are buzzing."
   },
   {
     "city": "York",
@@ -368,7 +381,8 @@ window.GUIDES = [
     "eat": "Wander the Shambles and Shambles Market for lunch.",
     "dontMiss": "York Minster, then a lap of the city walls.",
     "football": "York City at the LNER Community Stadium.",
-    "gettingThere": "On the East Coast Main Line - about 25 minutes from Leeds."
+    "gettingThere": "On the East Coast Main Line - about 25 minutes from Leeds.",
+    "tip": "Walk the walls first - then you've earned the York Tap."
   },
   {
     "city": "Wetherby",
@@ -395,7 +409,8 @@ window.GUIDES = [
     "eat": "Pub grub at the Swan & Talbot.",
     "dontMiss": "A walk along the River Wharfe from the old bridge.",
     "football": "Leeds United are about half an hour away.",
-    "gettingThere": "Buses from Leeds, Harrogate and York; just off the A1(M)."
+    "gettingThere": "Buses from Leeds, Harrogate and York; just off the A1(M).",
+    "tip": "Wetherby Brew Co's taproom is only open Thursday to Sunday."
   },
   {
     "city": "Yeadon",
@@ -422,7 +437,8 @@ window.GUIDES = [
     "eat": "Breakfast in town before heading up to the airport.",
     "dontMiss": "Yeadon Tarn - watch the planes come in over the water.",
     "football": "Guiseley AFC at Nethermoor Park, next door.",
-    "gettingThere": "Right by Leeds Bradford Airport; buses from Leeds and Bradford."
+    "gettingThere": "Right by Leeds Bradford Airport; buses from Leeds and Bradford.",
+    "tip": "The airport Beer House opens at 5am for early flights."
   },
   {
     "city": "Bingley",
@@ -449,7 +465,8 @@ window.GUIDES = [
     "eat": "Meals at the Brown Cow.",
     "dontMiss": "Bingley Five Rise Locks on the Leeds-Liverpool Canal.",
     "football": "Bradford City at Valley Parade, 15 minutes away.",
-    "gettingThere": "Airedale line trains from Leeds and Bradford."
+    "gettingThere": "Airedale line trains from Leeds and Bradford.",
+    "tip": "Walk the Five Rise Locks, then the Brown Cow by the old bridge."
   },
   {
     "city": "Halifax",
@@ -480,7 +497,8 @@ window.GUIDES = [
     "eat": "Grab something in the Piece Hall's courtyard.",
     "dontMiss": "The Piece Hall - a restored 18th-century cloth hall.",
     "football": "FC Halifax Town at The Shay.",
-    "gettingThere": "Trains from Leeds in about 35 minutes."
+    "gettingThere": "Trains from Leeds in about 35 minutes.",
+    "tip": "Go when there's something on in the Piece Hall - the Hop Yard is right inside."
   },
   {
     "city": "Ripon",
@@ -507,7 +525,8 @@ window.GUIDES = [
     "eat": "Market day on Thursday, then pub lunch.",
     "dontMiss": "The Hornblower sets the watch in the Market Square at 9pm every night.",
     "football": "Ripon Racecourse in summer; Harrogate Town are 20 minutes away.",
-    "gettingThere": "No station - buses from Harrogate and Leeds."
+    "gettingThere": "No station - buses from Harrogate and Leeds.",
+    "tip": "Be in the Market Square at 9pm for the Hornblower, then straight to the pub."
   },
   {
     "city": "Masham",
@@ -533,7 +552,8 @@ window.GUIDES = [
     ],
     "eat": "Lunch at the Black Sheep bistro or the White Bear.",
     "dontMiss": "Tours of both breweries - Theakston Old Peculier at source.",
-    "gettingThere": "No station - drive or bus from Ripon."
+    "gettingThere": "No station - drive or bus from Ripon.",
+    "tip": "Book both brewery tours on the same day - they're five minutes apart."
   },
   {
     "city": "Pateley Bridge",
@@ -555,7 +575,8 @@ window.GUIDES = [
     ],
     "eat": "A brew and a cake on the steep High Street.",
     "dontMiss": "Brimham Rocks, and the oldest sweet shop in England on the High Street.",
-    "gettingThere": "Buses from Harrogate; it's in the heart of Nidderdale."
+    "gettingThere": "Buses from Harrogate; it's in the heart of Nidderdale.",
+    "tip": "Park at the bottom and walk the High Street - it's steep."
   },
   {
     "city": "Malton",
@@ -581,7 +602,8 @@ window.GUIDES = [
     ],
     "eat": "Malton calls itself Yorkshire's food capital - try the monthly food market.",
     "dontMiss": "Castle Howard, a few miles down the road.",
-    "gettingThere": "Trains from York in about 25 minutes."
+    "gettingThere": "Trains from York in about 25 minutes.",
+    "tip": "Time it for the monthly food market, then Brass Castle's tap."
   },
   {
     "city": "Settle",
@@ -603,7 +625,8 @@ window.GUIDES = [
     ],
     "eat": "Pub food at the Talbot.",
     "dontMiss": "Malham Cove and Malham Tarn, a short drive away.",
-    "gettingThere": "On the Settle-Carlisle line - one of Britain's great railway journeys."
+    "gettingThere": "On the Settle-Carlisle line - one of Britain's great railway journeys.",
+    "tip": "Ride the Settle-Carlisle line out and back - the Talbot's by the station."
   },
   {
     "city": "Bentham",
@@ -621,7 +644,8 @@ window.GUIDES = [
     ],
     "eat": "Pub food at the Coach House.",
     "dontMiss": "The Great Stone of Fourstones on the heritage trail.",
-    "gettingThere": "Bentham station is on the Leeds-Morecambe line."
+    "gettingThere": "Bentham station is on the Leeds-Morecambe line.",
+    "tip": "Ring the Coach House ahead for food - it's the main pub left in town."
   },
   {
     "city": "Whitby",
@@ -648,7 +672,8 @@ window.GUIDES = [
     "eat": "Fish and chips by the harbour.",
     "dontMiss": "Climb the 199 steps to Whitby Abbey.",
     "football": "Whitby Town at the Turnbull Ground.",
-    "gettingThere": "Esk Valley line from Middlesbrough, or the steam railway from Pickering."
+    "gettingThere": "Esk Valley line from Middlesbrough, or the steam railway from Pickering.",
+    "tip": "Get fish and chips at the bottom of the 199 steps, after you've climbed them."
   },
   {
     "city": "Scarborough",
@@ -671,7 +696,8 @@ window.GUIDES = [
     "eat": "Fish and chips on the South Bay seafront.",
     "dontMiss": "Scarborough Castle, then the North Bay Railway.",
     "football": "Scarborough Athletic.",
-    "gettingThere": "Trains from York in about 50 minutes."
+    "gettingThere": "Trains from York in about 50 minutes.",
+    "tip": "South Bay for chips, North Bay for a quieter pint."
   },
   {
     "city": "Redcar",
@@ -688,7 +714,8 @@ window.GUIDES = [
     "eat": "Chips on the seafront.",
     "dontMiss": "Redcar Beacon and the long sandy beach.",
     "football": "Middlesbrough at the Riverside, 20 minutes away.",
-    "gettingThere": "Trains from Middlesbrough and Darlington."
+    "gettingThere": "Trains from Middlesbrough and Darlington.",
+    "tip": "The Plimsoll Line's beer garden runs right through to Lord Street - grab a table outside."
   },
   {
     "city": "Saltburn-by-the-Sea",
@@ -715,7 +742,8 @@ window.GUIDES = [
     "eat": "Homemade pies at the Guns on a Saturday.",
     "dontMiss": "The cliff lift and the pier.",
     "football": "Middlesbrough at the Riverside, half an hour away.",
-    "gettingThere": "End of the line from Darlington and Middlesbrough."
+    "gettingThere": "End of the line from Darlington and Middlesbrough.",
+    "tip": "Take the cliff lift down to the Ship Inn - and back up after."
   },
   {
     "city": "Keswick",
@@ -745,7 +773,8 @@ window.GUIDES = [
     ],
     "eat": "Goulash at the Dog & Gun.",
     "dontMiss": "A boat on Derwentwater, or the climb up Catbells.",
-    "gettingThere": "Train to Penrith, then the bus into Keswick."
+    "gettingThere": "Train to Penrith, then the bus into Keswick.",
+    "tip": "Book ahead for the Dog & Gun's goulash on a weekend."
   },
   {
     "city": "Alnwick",
@@ -771,7 +800,8 @@ window.GUIDES = [
     ],
     "eat": "Browse Barter Books in the old station, then a pub lunch.",
     "dontMiss": "Alnwick Castle, then out to Craster and Beadnell on the coast.",
-    "gettingThere": "Alnmouth station on the East Coast Main Line, then a short bus."
+    "gettingThere": "Alnmouth station on the East Coast Main Line, then a short bus.",
+    "tip": "Barter Books first, then the Tanners Arms."
   },
   {
     "city": "Bakewell",
@@ -789,7 +819,8 @@ window.GUIDES = [
     ],
     "eat": "A proper Bakewell pudding - not a tart.",
     "dontMiss": "Chatsworth House, and the plague village of Eyam nearby.",
-    "gettingThere": "Buses from Sheffield, Matlock and Buxton."
+    "gettingThere": "Buses from Sheffield, Matlock and Buxton.",
+    "tip": "Bakewell pudding, not tart - the locals will correct you."
   },
   {
     "city": "Manchester",
@@ -820,7 +851,8 @@ window.GUIDES = [
     "eat": "Curry Mile, or anything in the Northern Quarter.",
     "dontMiss": "A stadium tour - plus Salford Quays and the Lowry.",
     "football": "Man United at Old Trafford, Man City at the Etihad.",
-    "gettingThere": "About an hour from Leeds by train; big airport too."
+    "gettingThere": "About an hour from Leeds by train; big airport too.",
+    "tip": "Peveril of the Peak before anywhere else - it's an island of a pub."
   },
   {
     "city": "Liverpool",
@@ -851,7 +883,8 @@ window.GUIDES = [
     "eat": "Scouse, obviously.",
     "dontMiss": "The Albert Dock, then the Cavern Quarter.",
     "football": "Liverpool at Anfield; Everton at the Hill Dickinson Stadium.",
-    "gettingThere": "About 1.5 hours from Leeds by train."
+    "gettingThere": "About 1.5 hours from Leeds by train.",
+    "tip": "Visit the Philharmonic's gents - honestly, it's listed."
   },
   {
     "city": "Leicester",
@@ -874,7 +907,8 @@ window.GUIDES = [
     "eat": "Curry on the Golden Mile.",
     "dontMiss": "King Richard III Visitor Centre.",
     "football": "Leicester City at the King Power Stadium.",
-    "gettingThere": "Just off the M1; trains on the Midland Main Line."
+    "gettingThere": "Just off the M1; trains on the Midland Main Line.",
+    "tip": "The Corn Exchange is right on the market - handy for a quick stop."
   },
   {
     "city": "Daventry",
@@ -890,7 +924,8 @@ window.GUIDES = [
     },
     "eat": "Breakfast at the Saracens Head.",
     "dontMiss": "A walk up Borough Hill.",
-    "gettingThere": "Off the M1 near Watford Gap."
+    "gettingThere": "Off the M1 near Watford Gap.",
+    "tip": "The Saracens Head is a proper old inn - worth the M1 detour."
   },
   {
     "city": "Westminster",
@@ -916,7 +951,8 @@ window.GUIDES = [
     ],
     "eat": "Covent Garden or Chinatown.",
     "dontMiss": "Trafalgar Square, then Big Ben from Westminster Bridge.",
-    "gettingThere": "About 2h15 from Leeds to King's Cross, then the Tube."
+    "gettingThere": "About 2h15 from Leeds to King's Cross, then the Tube.",
+    "tip": "Victoria station's Spoons has terraces - good for watching the world go by."
   },
   {
     "city": "Southwark",
@@ -947,7 +983,8 @@ window.GUIDES = [
     "eat": "Borough Market.",
     "dontMiss": "Walk across Tower Bridge, then along to Shakespeare's Globe.",
     "football": "Millwall at The Den.",
-    "gettingThere": "London Bridge station, or the Jubilee line."
+    "gettingThere": "London Bridge station, or the Jubilee line.",
+    "tip": "The Market Porter opens early on market days."
   },
   {
     "city": "Tower Hamlets",
@@ -973,7 +1010,8 @@ window.GUIDES = [
     ],
     "eat": "Curry on Brick Lane.",
     "dontMiss": "The Tower of London, then the DLR out to Canary Wharf.",
-    "gettingThere": "Tower Hill or Canary Wharf on the Tube and DLR."
+    "gettingThere": "Tower Hill or Canary Wharf on the Tube and DLR.",
+    "tip": "Prospect of Whitby has a terrace right on the Thames."
   },
   {
     "city": "Newham",
@@ -1000,7 +1038,8 @@ window.GUIDES = [
     "eat": "Westfield Stratford City.",
     "dontMiss": "Queen Elizabeth Olympic Park and the ArcelorMittal Orbit.",
     "football": "West Ham at the London Stadium.",
-    "gettingThere": "Stratford station - Central line, Elizabeth line, DLR and Jubilee."
+    "gettingThere": "Stratford station - Central line, Elizabeth line, DLR and Jubilee.",
+    "tip": "Tap East is inside Westfield - easy pre-match on West Ham days."
   },
   {
     "city": "Brent",
@@ -1031,7 +1070,8 @@ window.GUIDES = [
     "eat": "Curry on Ealing Road.",
     "dontMiss": "Walking up Olympic Way with the arch in front of you.",
     "football": "Wembley Stadium - England, cup finals and play-offs.",
-    "gettingThere": "Wembley Park on the Jubilee/Metropolitan, or Wembley Stadium from Marylebone."
+    "gettingThere": "Wembley Park on the Jubilee/Metropolitan, or Wembley Stadium from Marylebone.",
+    "tip": "The Green Man goes one-in-one-out on matchdays - get there early."
   },
   {
     "city": "Greenwich",
@@ -1058,7 +1098,8 @@ window.GUIDES = [
     "eat": "Greenwich Market.",
     "dontMiss": "Stand on the Prime Meridian at the Royal Observatory.",
     "football": "Charlton Athletic at The Valley.",
-    "gettingThere": "DLR to Cutty Sark, or the Uber Boat from central London."
+    "gettingThere": "DLR to Cutty Sark, or the Uber Boat from central London.",
+    "tip": "Get the Uber Boat in from central London - it's the best way to arrive."
   },
   {
     "city": "Newport",
@@ -1074,7 +1115,8 @@ window.GUIDES = [
     },
     "eat": "Island seafood - crab if it's on.",
     "dontMiss": "Carisbrooke Castle, just outside town.",
-    "gettingThere": "Ferry from Portsmouth or Southampton, then the bus."
+    "gettingThere": "Ferry from Portsmouth or Southampton, then the bus.",
+    "tip": "The Man in the Moon is in an old church - look up."
   },
   {
     "city": "Llanrwst",
@@ -1092,7 +1134,8 @@ window.GUIDES = [
     ],
     "eat": "Tea and Welsh cakes at Tu Hwnt i'r Bont by the old bridge.",
     "dontMiss": "Swallow Falls and Betws-y-Coed, just up the valley.",
-    "gettingThere": "Conwy Valley line from Llandudno Junction."
+    "gettingThere": "Conwy Valley line from Llandudno Junction.",
+    "tip": "Tea at Tu Hwnt i'r Bont by the old bridge before the Pen-y-Bryn."
   },
   {
     "city": "Dublin",
@@ -1123,7 +1166,8 @@ window.GUIDES = [
     "eat": "Stew and soda bread.",
     "dontMiss": "The Guinness Storehouse and its Gravity Bar.",
     "football": "Shamrock Rovers or Bohemians; Ireland at the Aviva.",
-    "gettingThere": "Short flight from Leeds Bradford or Manchester."
+    "gettingThere": "Short flight from Leeds Bradford or Manchester.",
+    "tip": "Skip Temple Bar's prices - Mulligan's and the Long Hall pour a better pint."
   },
   {
     "city": "Málaga",
@@ -1150,7 +1194,8 @@ window.GUIDES = [
     "eat": "Espetos - sardines grilled on the beach.",
     "dontMiss": "The Alcazaba and the Gibralfaro castle view.",
     "football": "Málaga CF at La Rosaleda.",
-    "gettingThere": "Direct flights from the UK; the airport is 15 minutes from town."
+    "gettingThere": "Direct flights from the UK; the airport is 15 minutes from town.",
+    "tip": "Antigua Casa de Guardia chalks your bill on the bar - don't wipe it off."
   },
   {
     "city": "Benalmádena",
@@ -1177,7 +1222,8 @@ window.GUIDES = [
     "eat": "Seafood along the promenade.",
     "dontMiss": "The cable car up Monte Calamorro, and the Buddhist Stupa.",
     "football": "Junior Firpo grew up here; Málaga CF are 20 minutes away.",
-    "gettingThere": "15 minutes from Málaga airport; the coastal train stops here."
+    "gettingThere": "15 minutes from Málaga airport; the coastal train stops here.",
+    "tip": "Get the cable car up Calamorro for the view, then the marina bars at sunset."
   },
   {
     "city": "Paris",
@@ -1200,7 +1246,8 @@ window.GUIDES = [
     "eat": "Steak frites at any proper brasserie.",
     "dontMiss": "Sunset from Montmartre.",
     "football": "PSG at the Parc des Princes.",
-    "gettingThere": "Eurostar from London, or fly into Charles de Gaulle."
+    "gettingThere": "Eurostar from London, or fly into Charles de Gaulle.",
+    "tip": "A pint costs a fortune - drink wine or a demi instead."
   },
   {
     "city": "Marne-la-Vallée",
@@ -1222,7 +1269,8 @@ window.GUIDES = [
     ],
     "eat": "Disney Village, or head into Paris.",
     "dontMiss": "The fireworks over the castle at closing time.",
-    "gettingThere": "TGV or RER to Marne-la-Vallée-Chessy; shuttles from CDG."
+    "gettingThere": "TGV or RER to Marne-la-Vallée-Chessy; shuttles from CDG.",
+    "tip": "Stay for the castle fireworks, then the Royal Pub in Disney Village."
   },
   {
     "city": "Amsterdam",
@@ -1249,7 +1297,8 @@ window.GUIDES = [
     "eat": "Bitterballen with every round.",
     "dontMiss": "The Heineken Experience, then a canal boat.",
     "football": "Ajax at the Johan Cruijff ArenA.",
-    "gettingThere": "Fly into Schiphol - 15 minutes by train to Centraal."
+    "gettingThere": "Fly into Schiphol - 15 minutes by train to Centraal.",
+    "tip": "Brouwerij 't IJ under the windmill - go early, it's packed by six."
   },
   {
     "city": "Malia",
@@ -1272,7 +1321,8 @@ window.GUIDES = [
     "eat": "Gyros late at night, or a slow taverna dinner in the old town.",
     "dontMiss": "The Minoan Palace of Malia, just outside town.",
     "football": "OFI Crete in Heraklion.",
-    "gettingThere": "About 40 minutes from Heraklion airport."
+    "gettingThere": "About 40 minutes from Heraklion airport.",
+    "tip": "Old Town tavernas for dinner, Beach Road after midnight."
   },
   {
     "city": "Tokyo",
@@ -1299,7 +1349,8 @@ window.GUIDES = [
     "eat": "Yakitori and a cold one in the tiny bars under the train tracks.",
     "dontMiss": "Bar-hopping the tiny alley bars of Golden Gai in Shinjuku.",
     "football": "FC Tokyo at Ajinomoto Stadium.",
-    "gettingThere": "Direct flights from London to Haneda and Narita."
+    "gettingThere": "Direct flights from London to Haneda and Narita.",
+    "tip": "Golden Gai bars are tiny and some charge a cover - check the sign on the door."
   },
   {
     "city": "Osaka",
@@ -1326,7 +1377,8 @@ window.GUIDES = [
     "eat": "Takoyaki and okonomiyaki on the go around Dotonbori.",
     "dontMiss": "Dotonbori's neon canal at night, then Osaka Castle by day.",
     "football": "Gamba Osaka or Cerezo Osaka - two J.League clubs in one city.",
-    "gettingThere": "Shinkansen from Tokyo in about 2.5 hours, or fly into Kansai Airport."
+    "gettingThere": "Shinkansen from Tokyo in about 2.5 hours, or fly into Kansai Airport.",
+    "tip": "Beer Belly Tenma has no cover charge - a rarity in Osaka."
   },
   {
     "city": "Narita",
@@ -1344,7 +1396,8 @@ window.GUIDES = [
     ],
     "eat": "Grilled eel along the Naritasan Omotesando.",
     "dontMiss": "Naritasan Shinshoji temple.",
-    "gettingThere": "Right by Narita Airport; trains into Tokyo."
+    "gettingThere": "Right by Narita Airport; trains into Tokyo.",
+    "tip": "The Barge Inn is a short taxi from the airport - perfect for a long layover."
   },
   {
     "city": "Kyoto",
@@ -1371,7 +1424,8 @@ window.GUIDES = [
     "eat": "Kaiseki, or street food in Nishiki Market.",
     "dontMiss": "The torii gate tunnels at Fushimi Inari.",
     "football": "Kyoto Sanga at Sanga Stadium by Kyocera.",
-    "gettingThere": "Shinkansen from Tokyo in about 2h15; 15 minutes from Osaka."
+    "gettingThere": "Shinkansen from Tokyo in about 2h15; 15 minutes from Osaka.",
+    "tip": "Fushimi Inari at sunrise, Kyoto Brewing Co at the weekend."
   },
   {
     "city": "Orlando",
@@ -1398,7 +1452,8 @@ window.GUIDES = [
     "eat": "Mills 50 for the best Vietnamese and Asian food in town.",
     "dontMiss": "A sunset lap of Lake Eola downtown, away from the theme parks.",
     "football": "Orlando City SC at Inter&Co Stadium, downtown.",
-    "gettingThere": "Direct flights from the UK into Orlando International (MCO)."
+    "gettingThere": "Direct flights from the UK into Orlando International (MCO).",
+    "tip": "Redlight Redlight for the best beer list in town."
   },
   {
     "city": "Tampa Bay",
@@ -1425,7 +1480,8 @@ window.GUIDES = [
     "eat": "A Cuban sandwich in Ybor City, where Tampa reckons it was invented.",
     "dontMiss": "A stroll along the Tampa Riverwalk, then out to Ybor's 7th Avenue.",
     "football": "Tampa Bay Rowdies at Al Lang Stadium, St. Petersburg.",
-    "gettingThere": "Fly into Tampa International, or drive about 1.5 hours from Orlando."
+    "gettingThere": "Fly into Tampa International, or drive about 1.5 hours from Orlando.",
+    "tip": "Ybor City on 7th Avenue for brewery-hopping - Sky Puppy's in the old firehouse."
   },
   {
     "city": "Kissimmee",
@@ -1452,7 +1508,8 @@ window.GUIDES = [
     "eat": "Pub grub at the Fox & Hounds, or a giant American breakfast anywhere on the 192.",
     "dontMiss": "Old Town's Saturday night classic car cruise.",
     "football": "Orlando City SC are about half an hour away downtown.",
-    "gettingThere": "Right next to Walt Disney World, about 25 minutes from Orlando airport."
+    "gettingThere": "Right next to Walt Disney World, about 25 minutes from Orlando airport.",
+    "tip": "The Fox & Hounds does a proper British breakfast when you're homesick."
   },
   {
     "city": "Chicago",
@@ -1479,7 +1536,8 @@ window.GUIDES = [
     "eat": "Deep dish pizza, an Italian beef, or a Chicago dog - no ketchup.",
     "dontMiss": "A Cubs game at Wrigley Field, then the bars of Wrigleyville.",
     "football": "Chicago Fire FC at Soldier Field.",
-    "gettingThere": "Direct flights from London into O'Hare."
+    "gettingThere": "Direct flights from London into O'Hare.",
+    "tip": "Order a 'cheezborger' at the Billy Goat - no fries, chips."
   },
   {
     "city": "Philadelphia",
@@ -1506,7 +1564,8 @@ window.GUIDES = [
     "eat": "A cheesesteak, obviously, then graze Reading Terminal Market.",
     "dontMiss": "The Liberty Bell and Independence Hall, then run the Rocky steps.",
     "football": "Philadelphia Union at Subaru Park in Chester.",
-    "gettingThere": "Direct flights from London into Philadelphia International."
+    "gettingThere": "Direct flights from London into Philadelphia International.",
+    "tip": "McGillin's has every bar's sign from Philly's history on its walls."
   },
   {
     "city": "Lake Buena Vista",
@@ -1533,6 +1592,7 @@ window.GUIDES = [
     "eat": "Disney Springs has everything.",
     "dontMiss": "Magic Kingdom fireworks.",
     "football": "Orlando City SC, about half an hour away downtown.",
-    "gettingThere": "About 25 minutes from Orlando International Airport."
+    "gettingThere": "About 25 minutes from Orlando International Airport.",
+    "tip": "Rose & Crown in Epcot - the closest thing to a proper pint in Florida."
   }
 ];
