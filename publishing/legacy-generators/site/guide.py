@@ -171,6 +171,13 @@ PAGE = PAGE.replace("label=cur===1?'Holder page':(cur-1<=beers.length?'Beer '+(c
                     "label=cur<=C?'Contents':(pages[cur]&&pages[cur].gi!=null?beers[pages[cur].gi].city+' · '+(pages[cur].gi+1)+' of '+beers.length:'Next stop');")
 PAGE = PAGE.replace("label=cur===1?'Holder page':(cur===N", "label=(cur===1||a<=C)?'Contents':(pages[a]&&pages[a].gi!=null)?beers[pages[a].gi].city+' · pages '+a+'–'+(a+1):(cur===N")
 PAGE = PAGE.replace("This passport is the property of","This guide belongs to").replace("If found, please return to the nearest pub.","If found, return it to the nearest bar.")
+_SA = "  var startAt=parseInt((location.search.match(/[?&]page=(\\d+)/)||[])[1]||'1',10);"
+assert _SA in PAGE
+PAGE = PAGE.replace(_SA, _SA + r"""
+  var cityQ=(location.search.match(/[?&]city=([^&]+)/)||[])[1];
+  if(cityQ){try{cityQ=decodeURIComponent(cityQ.replace(/\+/g,' '))}catch(e){}
+    var gi=-1;beers.forEach(function(g,i){if(gi<0&&g.city.toLowerCase()===cityQ.toLowerCase())gi=i});
+    if(gi>=0){var k=-1;pages.forEach(function(p,i){if(k<0&&p.gi===gi&&p.cls==='city')k=i});if(k>=0)startAt=single?k:(k+2)/2}}""",1)
 assert "'Contents'" in PAGE and 'guides.js' in PAGE
 
 os.makedirs('/home/claude/site/travel-guides', exist_ok=True)

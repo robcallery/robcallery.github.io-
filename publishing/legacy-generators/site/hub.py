@@ -269,6 +269,8 @@ HEAD='''<!doctype html>
   .pl .body{{transform-box:fill-box;transform-origin:50% 100%}}
   .pl .body.kick{{animation:kick .35s ease-out}}
   @keyframes kick{{30%{{transform:translateY(-3px) rotate(-6deg)}}100%{{transform:none}}}}
+  .tvlink{{transition:transform .3s ease,filter .3s ease;transform-box:fill-box;transform-origin:50% 100%}}
+  .tvlink:hover,.tvlink:focus-visible{{transform:translateY(-8px) scale(1.03);filter:drop-shadow(0 0 18px rgba(255,205,0,.55))}}
   .bmsg{{transition:opacity .35s ease,transform .35s ease;transform-box:fill-box}}
   .bmsg.out{{opacity:0;transform:translateY(-14px)}}
   .bbg{{transition:fill .35s ease}}
@@ -364,7 +366,33 @@ def soon_page(slug,title,blurb,art,r,back,backtxt,tagtxt="Coming soon"):
     open(f'/home/claude/site/{slug}/index.html','w').write(pg)
 
 soon_page("football-tales","Football: Tales of a Leeds Fan","Stories from Elland Road and away days up and down the country, the highs, the lows and the pubs either side, collected one card at a time. The first pack is being printed.",PACK,-2,"/stadium/","← Back to the stadium")
-soon_page("match-hub","Match Hub","Scores, fixtures, the table and matchday notes for Leeds United, all in one place. The scoreboard's being wired up.",scoreboard_art(),0,"/stadium/","← Back to the stadium")
+from pub_parts import pub_scene, leeds_tv_art, teletext_page
+import json as _json, subprocess as _sp
+_GC=_json.loads(_sp.run(['node','-e',"global.window={};require('/home/claude/site/travel-guides/guides.js');process.stdout.write(JSON.stringify(window.GUIDES.map(g=>g.city)))"],capture_output=True,text=True).stdout)
+soon_page("match-hub/leeds","Leeds United Match Hub","Live scores, fixtures, the table, team news and matchday pubs for Leeds United, all on one telly. It's being wired up now.",leeds_tv_art(),0,"/match-hub/","← Back to the pub")
+os.makedirs('/home/claude/site/match-hub/world',exist_ok=True)
+open('/home/claude/site/match-hub/world/index.html','w').write(teletext_page(_GC))
+mh=HEAD.format(title="Match Hub - Rob Callery",desc="The Match Hub pub: a Leeds United telly and a retro teletext telly showing a random live game somewhere in the world, with the local beer.",globe=globe_d,backhref="/stadium/",backtxt="← Back to the stadium")
+mh+='''<main>
+  <section class="intro">
+    <h1>The <em>Match Hub.</em></h1>
+    <p>Two tellies above the bar. Leeds on the left, the rest of the world on the right.</p>
+  </section>
+  <section class="stadium" aria-label="The pub">
+    <svg viewBox="0 0 1200 640" role="img" aria-label="Two tellies above a pub bar">
+'''+pub_scene()+'''
+    </svg>
+  </section>
+  <nav class="spots" aria-label="Pick a telly">
+    <a class="spot" href="/match-hub/leeds/"><h2>Leeds United <span class="tag">Soon</span></h2><p>The Leeds match hub: scores, fixtures and matchday.</p></a>
+    <a class="spot" href="/match-hub/world/"><h2>Around the World</h2><p>A random live game somewhere on the planet, and the local beer to go with it.</p></a>
+  </nav>
+</main>
+<script>
+(function(){var c=[].slice.call(document.querySelectorAll('.ttclock'));function t(){try{var s=new Intl.DateTimeFormat('en-GB',{hour:'2-digit',minute:'2-digit',timeZone:'Europe/London'}).format(new Date());c.forEach(function(e){e.textContent=s})}catch(e){}}t();setInterval(t,15000)})();
+</script>
+'''+FOOT
+open('/home/claude/site/match-hub/index.html','w').write(mh)
 
 # the stadium
 os.makedirs('/home/claude/site/stadium',exist_ok=True)
