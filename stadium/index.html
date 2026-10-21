@@ -119,6 +119,9 @@
   .cards{transition:transform .35s cubic-bezier(.2,.8,.2,1.2)}
   .cards:hover,.cards:focus-visible{transform:translateY(-16px)}
   .hot:focus-visible{outline:3px solid #fff}
+  .pl .body{transform-box:fill-box;transform-origin:50% 100%}
+  .pl .body.kick{animation:kick .35s ease-out}
+  @keyframes kick{30%{transform:translateY(-3px) rotate(-6deg)}100%{transform:none}}
   .bmsg{transition:opacity .35s ease,transform .35s ease;transform-box:fill-box}
   .bmsg.out{opacity:0;transform:translateY(-14px)}
   .bbg{transition:fill .35s ease}
@@ -198,8 +201,8 @@
 <polyline points="1167.1,390.8 1188.7,395.6 1188.7,417.2" fill="none" stroke="#dfe3ea" stroke-width="1.4"/><polyline points="1137.0,360.2 1157.4,364.7 1157.4,385.1" fill="none" stroke="#dfe3ea" stroke-width="1.4"/>
 <line x1="1040.0" y1="282.0" x2="1040.0" y2="269.5" stroke="#ffffff" stroke-width="1.6"/><path d="M1040.0 269.5 l-8 3 l8 3 z" fill="#ffcd00"/>
 <line x1="1339.2" y1="600.0" x2="1339.2" y2="578.9" stroke="#ffffff" stroke-width="1.6"/><path d="M1339.2 578.9 l-8 3 l8 3 z" fill="#ffcd00"/>
-<g transform="translate(468.6 338.2) scale(1.00)"><rect x="-3.5" y="-9" width="3" height="9" fill="#1e3f9a"/><rect x=".5" y="-9" width="3" height="9" fill="#1e3f9a"/><rect x="-5" y="-21" width="10" height="13" rx="2.5" fill="#ffffff"/><circle cy="-25" r="4" fill="#e8c09a"/></g><g transform="translate(699.0 428.2) scale(1.17)"><rect x="-3.5" y="-9" width="3" height="9" fill="#1e3f9a"/><rect x=".5" y="-9" width="3" height="9" fill="#1e3f9a"/><rect x="-5" y="-21" width="10" height="13" rx="2.5" fill="#ffffff"/><circle cy="-25" r="4" fill="#e8c09a"/></g><g transform="translate(760.4 311.6) scale(0.95)"><rect x="-3.5" y="-9" width="3" height="9" fill="#1e3f9a"/><rect x=".5" y="-9" width="3" height="9" fill="#1e3f9a"/><rect x="-5" y="-21" width="10" height="13" rx="2.5" fill="#ffffff"/><circle cy="-25" r="4" fill="#e8c09a"/></g><g transform="translate(323.4 515.9) scale(1.34)"><rect x="-3.5" y="-9" width="3" height="9" fill="#1e3f9a"/><rect x=".5" y="-9" width="3" height="9" fill="#1e3f9a"/><rect x="-5" y="-21" width="10" height="13" rx="2.5" fill="#ffffff"/><circle cy="-25" r="4" fill="#e8c09a"/></g><g transform="translate(564.8 305.4) scale(0.94)"><rect x="-3.5" y="-9" width="3" height="9" fill="#1e3f9a"/><rect x=".5" y="-9" width="3" height="9" fill="#1e3f9a"/><rect x="-5" y="-21" width="10" height="13" rx="2.5" fill="#ffcd00"/><circle cy="-25" r="4" fill="#e8c09a"/></g><g transform="translate(85.1 400.7) scale(1.12)"><rect x="-3.5" y="-9" width="3" height="9" fill="#1e3f9a"/><rect x=".5" y="-9" width="3" height="9" fill="#1e3f9a"/><rect x="-5" y="-21" width="10" height="13" rx="2.5" fill="#2f7d3a"/><circle cy="-25" r="4" fill="#e8c09a"/></g><g transform="translate(952.0 469.1) scale(1.25)"><rect x="-3.5" y="-9" width="3" height="9" fill="#1e3f9a"/><rect x=".5" y="-9" width="3" height="9" fill="#1e3f9a"/><rect x="-5" y="-21" width="10" height="13" rx="2.5" fill="#ffffff"/><circle cy="-25" r="4" fill="#e8c09a"/></g>
-<circle cx="642.7" cy="409.6" r="5" fill="#ffffff"/><path d="M639.7 406.6 l3 2 l3 -2" stroke="#222" stroke-width="1" fill="none"/>
+<g id="players"><g class="pl" id="pl0" data-x="-14" data-z="150" transform="translate(468.6 338.2) scale(1.00)"><g class="body"><rect x="-3.5" y="-9" width="3" height="9" fill="#1e3f9a"/><rect x=".5" y="-9" width="3" height="9" fill="#1e3f9a"/><rect x="-5" y="-21" width="10" height="13" rx="2.5" fill="#ffffff"/><circle cy="-25" r="4" fill="#e8c09a"/></g></g><g class="pl" id="pl1" data-x="9" data-z="128" transform="translate(699.0 428.2) scale(1.17)"><g class="body"><rect x="-3.5" y="-9" width="3" height="9" fill="#1e3f9a"/><rect x=".5" y="-9" width="3" height="9" fill="#1e3f9a"/><rect x="-5" y="-21" width="10" height="13" rx="2.5" fill="#ffffff"/><circle cy="-25" r="4" fill="#e8c09a"/></g></g><g class="pl" id="pl2" data-x="18" data-z="158" transform="translate(760.4 311.6) scale(0.95)"><g class="body"><rect x="-3.5" y="-9" width="3" height="9" fill="#1e3f9a"/><rect x=".5" y="-9" width="3" height="9" fill="#1e3f9a"/><rect x="-5" y="-21" width="10" height="13" rx="2.5" fill="#ffffff"/><circle cy="-25" r="4" fill="#e8c09a"/></g></g><g class="pl" id="pl3" data-x="-22" data-z="112" transform="translate(323.4 515.9) scale(1.34)"><g class="body"><rect x="-3.5" y="-9" width="3" height="9" fill="#1e3f9a"/><rect x=".5" y="-9" width="3" height="9" fill="#1e3f9a"/><rect x="-5" y="-21" width="10" height="13" rx="2.5" fill="#ffffff"/><circle cy="-25" r="4" fill="#e8c09a"/></g></g><g class="pl" id="pl4" data-x="-4" data-z="160" transform="translate(564.8 305.4) scale(0.94)"><g class="body"><rect x="-3.5" y="-9" width="3" height="9" fill="#1e3f9a"/><rect x=".5" y="-9" width="3" height="9" fill="#1e3f9a"/><rect x="-5" y="-21" width="10" height="13" rx="2.5" fill="#ffcd00"/><circle cy="-25" r="4" fill="#e8c09a"/></g></g><g class="pl" id="pl5" data-x="-49" data-z="134.0" transform="translate(85.1 400.7) scale(1.12)"><g class="body"><rect x="-3.5" y="-9" width="3" height="9" fill="#1e3f9a"/><rect x=".5" y="-9" width="3" height="9" fill="#1e3f9a"/><rect x="-5" y="-21" width="10" height="13" rx="2.5" fill="#f07a14"/><circle cy="-25" r="4" fill="#e8c09a"/></g></g><g class="pl" id="pl6" data-x="30" data-z="120" transform="translate(952.0 469.1) scale(1.25)"><g class="body"><rect x="-3.5" y="-9" width="3" height="9" fill="#1e3f9a"/><rect x=".5" y="-9" width="3" height="9" fill="#1e3f9a"/><rect x="-5" y="-21" width="10" height="13" rx="2.5" fill="#ffffff"/><circle cy="-25" r="4" fill="#e8c09a"/></g></g><g class="pl" id="pl7" data-x="49" data-z="134.0" transform="translate(1114.9 400.7) scale(1.12)"><g class="body"><rect x="-3.5" y="-9" width="3" height="9" fill="#1e3f9a"/><rect x=".5" y="-9" width="3" height="9" fill="#1e3f9a"/><rect x="-5" y="-21" width="10" height="13" rx="2.5" fill="#7c3aed"/><circle cy="-25" r="4" fill="#e8c09a"/></g></g></g>
+<g id="ball"><ellipse id="ballShadow" cx="323.4" cy="515.9" rx="5" ry="2" fill="#000" opacity=".3"/><g id="ballBody" transform="translate(323.4 511.9)"><circle r="5" fill="#ffffff"/><path d="M-3 -2 l3 2 l3 -2 M0 0 l0 3" stroke="#222" stroke-width="1" fill="none"/></g></g>
 <rect x="-40" y="600" width="1280" height="44" fill="#05070d"/>
 <a class="board" id="board0" href="/" aria-label="Advertising board"><rect class="bbg" x="4" y="603" width="392" height="38" rx="2" fill="#0a1838"/><g class="bmsg"><text x="200" y="630" text-anchor="middle" font-family="Bebas Neue, Impact, sans-serif" font-size="25" fill="#ffcd00" textLength="330" lengthAdjust="spacingAndGlyphs">MARCHING ON TOGETHER</text></g></a>
 <a class="board" id="board1" href="/" aria-label="Advertising board"><rect class="bbg" x="404" y="603" width="392" height="38" rx="2" fill="#0a1838"/><g class="bmsg"><text x="600" y="630" text-anchor="middle" font-family="Bebas Neue, Impact, sans-serif" font-size="25" fill="#ffcd00" textLength="330" lengthAdjust="spacingAndGlyphs">MARCHING ON TOGETHER</text></g></a>
@@ -253,6 +256,47 @@
   }
   paint(false);
   var still=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  // players knocking the ball about (world metres -> screen, same projection as the drawing)
+  (function(){
+    if(still) return;
+    var F=1408,FH=78565,YH=-185.6,CX=600;
+    function proj(x,z,up){return [CX+F*x/z, YH+FH/z-F*(up||0)/z]}
+    var host=document.getElementById('players');
+    var P=[].map.call(document.querySelectorAll('.pl'),function(el,i){var x=+el.dataset.x,z=+el.dataset.z;
+      return {el:el,body:el.querySelector('.body'),x:x,z:z,hx:x,hz:z,tx:x,tz:z,keeper:Math.abs(x)>45,wander:0}});
+    var shadow=document.getElementById('ballShadow'),ball=document.getElementById('ballBody');
+    var holder=3,recv=-1,t0=0,dur=0,from=null,to=null,loft=0,wait=performance.now()+800,last=performance.now();
+    var bx=P[holder].x+.6,bz=P[holder].z,bh=0;
+    function place(p){var q=proj(p.x,p.z);p.el.setAttribute('transform','translate('+q[0].toFixed(1)+' '+q[1].toFixed(1)+') scale('+(150/p.z).toFixed(2)+')')}
+    function drawBall(){var g=proj(bx,bz),b=proj(bx,bz,bh),k=130/bz;
+      shadow.setAttribute('cx',g[0].toFixed(1));shadow.setAttribute('cy',g[1].toFixed(1));shadow.setAttribute('rx',(5*k).toFixed(1));shadow.setAttribute('ry',(2*k).toFixed(1));
+      ball.setAttribute('transform','translate('+b[0].toFixed(1)+' '+(b[1]-4*k).toFixed(1)+') scale('+k.toFixed(2)+')')}
+    function pick(){var h=P[holder],c=[];
+      P.forEach(function(p,i){if(i===holder)return;var d=Math.hypot(p.x-h.x,p.z-h.z);if(d<8||d>48)return;var w=p.keeper?.35:1;c.push([i,w])});
+      if(!c.length)return (holder+1)%P.length;var s=c.reduce(function(a,b){return a+b[1]},0),r=Math.random()*s;
+      for(var j=0;j<c.length;j++){r-=c[j][1];if(r<=0)return c[j][0]}return c[0][0]}
+    function kick(p){p.body.classList.remove('kick');void p.body.getBBox();p.body.classList.add('kick')}
+    function order(){var s=P.slice().sort(function(a,b){return b.z-a.z});s.forEach(function(p){host.appendChild(p.el)})}
+    function frame(now){
+      var dt=Math.min(.05,(now-last)/1000);last=now;
+      P.forEach(function(p,i){
+        if(i!==recv&&i!==holder&&now>p.wander){var r=p.keeper?2.5:6;p.tx=p.hx+(Math.random()*2-1)*r;p.tz=p.hz+(Math.random()*2-1)*r*.6;p.wander=now+2500+Math.random()*3000}
+        var dx=p.tx-p.x,dz=p.tz-p.z,d=Math.hypot(dx,dz),v=(i===recv?5:2.2)*dt;
+        if(d>.05){p.x+=dx/d*Math.min(v,d);p.z+=dz/d*Math.min(v,d)}
+        place(p)});
+      if(recv<0){                       // ball at the holder's feet
+        var h=P[holder];bx=h.x+.6;bz=h.z+.2;bh=0;
+        if(now>wait){recv=pick();var r=P[recv];from=[bx,bz];
+          to=[r.x+(Math.random()*2-1)*1.5,r.z+(Math.random()*2-1)*1.2];r.tx=to[0]-.6;r.tz=to[1]-.2;
+          var dist=Math.hypot(to[0]-from[0],to[1]-from[1]);dur=Math.max(.6,dist/15);loft=dist>26?dist*.16:0;t0=now;kick(h)}
+      }else{
+        var u=Math.min(1,(now-t0)/1000/dur),e=u*(2-u);
+        bx=from[0]+(to[0]-from[0])*e;bz=from[1]+(to[1]-from[1])*e;bh=loft*4*u*(1-u);
+        if(u>=1){holder=recv;recv=-1;wait=now+500+Math.random()*900;kick(P[holder]);P[holder].tx=P[holder].x;P[holder].tz=P[holder].z}
+      }
+      drawBall();order();requestAnimationFrame(frame)}
+    requestAnimationFrame(frame);
+  })();
   setInterval(function(){step=(step+1)%ADS.length;paint(!still)},still?8000:4500);
 })();
 </script>
