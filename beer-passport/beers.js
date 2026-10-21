@@ -63,7 +63,7 @@ window.BEERS = [
   { name: "Floridian Hefeweizen", added: "2026-10-21", date: "2015-05-03", brewery: "Funky Buddha Brewery", brewedIn: "Oakland Park, Florida", brewedCountry: "USA" },
   { name: "Flying IPA", added: "2026-10-21", date: "2023-01-27", style: "American IPA", abv: 6, brewery: "Echigo Beer", brewedIn: "Niigata", brewedCountry: "Japan", city: "Osaka" },
   { name: "For Pete's Sake", added: "2026-10-21", date: "2019-02-23", brewerSays: "Dry hopped to maximise flavour.", style: "Pale", abv: 3.9, brewery: "Beer Monkey Brew Co", brewedIn: "Skipton", brewedCountry: "England" },
-  { name: "Foster's Premium", added: "2026-10-21", date: "2024-09-03", brewery: "Heineken UK", brewedIn: "Manchester", brewedCountry: "England" },
+  { name: "Foster's Premium Ale", added: "2026-10-21", date: "2024-09-03", style: "Amber Lager", abv: 5.5, brewery: "Foster's (Oil Can Breweries)", brewedIn: "Fort Worth, Texas", brewedCountry: "USA", city: "Orlando" },
   { name: "Gamma Ray", added: "2026-10-21", date: "2023-03-17", brewery: "Beavertown", brewedIn: "London", brewedCountry: "England" },
   { name: "Golden Sheep", added: "2026-10-21", date: "2020-05-24", brewery: "Black Sheep Brewery", brewedIn: "Masham", brewedCountry: "England" },
   { name: "Goose Lee", added: "2026-10-21", brewerSays: "Imperial gooseberry fool sour (7.5%) - Brew York.", style: "Sour", abv: 7.5, brewery: "Brew York", brewedIn: "York", brewedCountry: "England", where: "Brew York Beer Hall", city: "York" },
