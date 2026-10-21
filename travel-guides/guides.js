@@ -3386,6 +3386,535 @@ window.GUIDES = [
     "group": "South East"
   },
   {
+    "city": "Brighton and Hove",
+    "region": "East Sussex",
+    "country": "United Kingdom",
+    "group": "South East",
+    "colour": "red",
+    "pint": "~£6",
+    "localBeer": "Harvey's",
+    "bestFor": "Lanes & the seafront",
+    "eat": "Fish and chips on the beach.",
+    "dontMiss": "The Royal Pavilion, then the Palace Pier.",
+    "gettingThere": "Brighton station, an hour from London Victoria.",
+    "tip": "Start at the Evening Star off the train, then wander down through North Laine.",
+    "football": "Brighton & Hove Albion at the Amex.",
+    "spoons": {
+      "name": "The Bright Helm",
+      "note": "West Street, down towards the seafront"
+    },
+    "bars": [
+      {
+        "name": "The Basketmakers Arms",
+        "note": "North Laine, walls covered in old tins"
+      },
+      {
+        "name": "The Evening Star",
+        "note": "Surrey Street, by the station - cask heaven"
+      },
+      {
+        "name": "The Cricketers",
+        "note": "Black Lion Street, Brighton's oldest pub"
+      }
+    ]
+  },
+  {
+    "city": "Milton Keynes",
+    "region": "Buckinghamshire",
+    "country": "United Kingdom",
+    "group": "South East",
+    "colour": "purple",
+    "pint": "~£5",
+    "localBeer": "Buckinghamshire cask",
+    "bestFor": "Concrete cows",
+    "eat": "Something at Xscape.",
+    "dontMiss": "The concrete cows, and Bletchley Park down the road.",
+    "gettingThere": "Milton Keynes Central, 35 minutes from London Euston.",
+    "tip": "Bletchley Park, where the codebreakers worked, is 10 minutes away.",
+    "football": "MK Dons at Stadium MK.",
+    "spoons": {
+      "name": "Wetherspoons",
+      "note": "in Central Milton Keynes"
+    }
+  },
+  {
+    "city": "Southampton",
+    "region": "Hampshire",
+    "country": "United Kingdom",
+    "group": "South East",
+    "colour": "teal",
+    "pint": "~£5",
+    "localBeer": "Hampshire cask",
+    "bestFor": "Old walls & the docks",
+    "eat": "Fish by the water at Town Quay.",
+    "dontMiss": "The Bargate and the old town walls.",
+    "gettingThere": "Southampton Central, 80 minutes from London Waterloo.",
+    "tip": "The SeaCity Museum tells the Titanic story - most of the crew were from here.",
+    "football": "Southampton at St Mary's.",
+    "spoons": {
+      "name": "The Red Lion",
+      "note": "High Street, in a medieval hall"
+    },
+    "bars": [
+      {
+        "name": "The Platform Tavern",
+        "note": "Town Quay, built into the old town wall"
+      },
+      {
+        "name": "Duke of Wellington",
+        "note": "Bugle Street, timber-framed from the 1490s"
+      }
+    ]
+  },
+  {
+    "city": "Portsmouth",
+    "region": "Hampshire",
+    "country": "United Kingdom",
+    "group": "South East",
+    "colour": "red",
+    "pint": "~£5",
+    "localBeer": "Hampshire cask",
+    "bestFor": "Ships & the harbour",
+    "eat": "Fish and chips on Southsea front.",
+    "dontMiss": "HMS Victory at the Historic Dockyard, and the Spinnaker Tower.",
+    "gettingThere": "Portsmouth Harbour station, 90 minutes from London Waterloo.",
+    "tip": "Sit outside the Still & West as the ferries and warships pass a few feet away.",
+    "football": "Portsmouth at Fratton Park.",
+    "spoons": {
+      "name": "The John Jacques",
+      "note": "Fratton Road - plus the Lord Palmerston in Southsea"
+    },
+    "bars": [
+      {
+        "name": "The Still & West",
+        "note": "Old Portsmouth, right on the harbour mouth"
+      },
+      {
+        "name": "The Spice Island Inn",
+        "note": "next door, watching the ships come in"
+      }
+    ]
+  },
+  {
+    "city": "Reading",
+    "region": "Berkshire",
+    "country": "United Kingdom",
+    "group": "South East",
+    "colour": "purple",
+    "pint": "~£5.50",
+    "localBeer": "Berkshire cask",
+    "bestFor": "Abbey & riverside",
+    "eat": "Something at the Oracle by the river.",
+    "dontMiss": "The Abbey Ruins and the Forbury Gardens lion.",
+    "gettingThere": "Reading station, 25 minutes from London Paddington.",
+    "tip": "King Henry I is buried in Reading Abbey - his grave was never found.",
+    "football": "Reading at the Select Car Leasing Stadium.",
+    "spoons": {
+      "name": "The Back of Beyond",
+      "note": "Kings Road, with a big canalside garden"
+    },
+    "bars": [
+      {
+        "name": "The Nag's Head",
+        "note": "Russell Street, a real-ale institution"
+      }
+    ]
+  },
+  {
+    "city": "Slough",
+    "region": "Berkshire",
+    "country": "United Kingdom",
+    "group": "South East",
+    "colour": "teal",
+    "pint": "~£5",
+    "localBeer": "Berkshire cask",
+    "bestFor": "Windsor next door",
+    "eat": "A curry - Slough does them well.",
+    "dontMiss": "Windsor Castle, just over the river.",
+    "gettingThere": "Slough station on the Elizabeth line.",
+    "tip": "Windsor is five minutes away on the branch line - make a day of it.",
+    "football": "Reading and Brentford are both close.",
+    "spoons": {
+      "name": "The Moon and Spoon",
+      "note": "High Street, in the town centre"
+    }
+  },
+  {
+    "city": "Oxford",
+    "region": "Oxfordshire",
+    "country": "United Kingdom",
+    "group": "South East",
+    "colour": "red",
+    "pint": "~£6",
+    "localBeer": "Oxfordshire cask",
+    "bestFor": "Dreaming spires",
+    "eat": "Something from the Covered Market.",
+    "dontMiss": "The Radcliffe Camera and the Bodleian.",
+    "gettingThere": "Oxford station, an hour from London.",
+    "tip": "The Turf is hidden down a twisting alley - follow the signs from Holywell Street.",
+    "football": "Oxford United at the Kassam Stadium.",
+    "bars": [
+      {
+        "name": "The Turf Tavern",
+        "note": "down a tiny alley off Holywell Street"
+      },
+      {
+        "name": "The Bear Inn",
+        "note": "Alfred Street, walls covered in snipped-off ties"
+      },
+      {
+        "name": "The Lamb & Flag",
+        "note": "St Giles, an old Inklings haunt"
+      }
+    ]
+  },
+  {
+    "city": "Woking",
+    "region": "Surrey",
+    "country": "United Kingdom",
+    "group": "South East",
+    "colour": "purple",
+    "pint": "~£5.50",
+    "localBeer": "Surrey cask",
+    "bestFor": "War of the Worlds",
+    "eat": "Something in the town centre.",
+    "dontMiss": "The Martian tripod sculpture in the town centre.",
+    "gettingThere": "Woking station, 25 minutes from London Waterloo.",
+    "tip": "H.G. Wells had the Martians land on Horsell Common in The War of the Worlds.",
+    "football": "Woking FC at the Kingfield Stadium."
+  },
+  {
+    "city": "Guildford",
+    "region": "Surrey",
+    "country": "United Kingdom",
+    "group": "South East",
+    "colour": "teal",
+    "pint": "~£5.50",
+    "localBeer": "Surrey cask",
+    "bestFor": "Cobbled high street",
+    "eat": "Afternoon tea on the High Street.",
+    "dontMiss": "The castle grounds and the cobbled High Street.",
+    "gettingThere": "Guildford station, 35 minutes from London Waterloo.",
+    "tip": "Look for the huge Guildhall clock hanging over the High Street.",
+    "football": "Guildford City play at the Spectrum."
+  },
+  {
+    "city": "Crawley",
+    "region": "West Sussex",
+    "country": "United Kingdom",
+    "group": "South East",
+    "colour": "red",
+    "pint": "~£5",
+    "localBeer": "Sussex cask",
+    "bestFor": "Gatwick next door",
+    "eat": "Something at the County Mall.",
+    "dontMiss": "Tilgate Park.",
+    "gettingThere": "Crawley or Three Bridges stations; Gatwick is next door.",
+    "tip": "Handy for a last pint before an early Gatwick flight.",
+    "football": "Crawley Town at the Broadfield Stadium.",
+    "spoons": {
+      "name": "The Jubilee Oak",
+      "note": "in the town centre"
+    }
+  },
+  {
+    "city": "Worthing",
+    "region": "West Sussex",
+    "country": "United Kingdom",
+    "group": "South East",
+    "colour": "purple",
+    "pint": "~£5",
+    "localBeer": "Harvey's",
+    "bestFor": "Pier & promenade",
+    "eat": "Fish and chips on the pier.",
+    "dontMiss": "The art deco Worthing Pier.",
+    "gettingThere": "Worthing station, 20 minutes from Brighton.",
+    "tip": "Walk to the end of the pier at sunset.",
+    "football": "Worthing FC at Woodside Road; Brighton are 20 minutes away.",
+    "spoons": {
+      "name": "The Three Fishes",
+      "note": "Chapel Road, in the town centre"
+    }
+  },
+  {
+    "city": "Eastbourne",
+    "region": "East Sussex",
+    "country": "United Kingdom",
+    "group": "South East",
+    "colour": "teal",
+    "pint": "~£5",
+    "localBeer": "Harvey's",
+    "bestFor": "Seaside & Beachy Head",
+    "eat": "Fish and chips on the front.",
+    "dontMiss": "Beachy Head and the Seven Sisters cliffs.",
+    "gettingThere": "Eastbourne station, 90 minutes from London Victoria.",
+    "tip": "Walk up to Beachy Head - the view of the lighthouse below is unreal.",
+    "football": "Eastbourne Borough at Priory Lane.",
+    "spoons": {
+      "name": "The London & County",
+      "note": "Terminus Road - plus the Cornfield Garage"
+    }
+  },
+  {
+    "city": "Hastings",
+    "region": "East Sussex",
+    "country": "United Kingdom",
+    "group": "South East",
+    "colour": "red",
+    "pint": "~£5",
+    "localBeer": "Sussex cask",
+    "bestFor": "Old Town & the beach",
+    "eat": "Fresh fish from the Stade.",
+    "dontMiss": "The Old Town, the tall black net huts and the cliff railways.",
+    "gettingThere": "Hastings station, 90 minutes from London.",
+    "tip": "The Battle of Hastings was actually fought seven miles away - at Battle.",
+    "football": "Hastings United at the Pilot Field.",
+    "spoons": {
+      "name": "The John Logie Baird",
+      "note": "Havelock Road - he made his early TV experiments in Hastings"
+    }
+  },
+  {
+    "city": "Basingstoke",
+    "region": "Hampshire",
+    "country": "United Kingdom",
+    "group": "South East",
+    "colour": "purple",
+    "pint": "~£5",
+    "localBeer": "Hampshire cask",
+    "bestFor": "Jane Austen country",
+    "eat": "Something in Festival Place.",
+    "dontMiss": "The Jane Austen statue in Market Place.",
+    "gettingThere": "Basingstoke station, 45 minutes from London Waterloo.",
+    "tip": "Jane Austen grew up in Steventon, just down the road.",
+    "football": "Southampton and Reading are both half an hour away.",
+    "spoons": {
+      "name": "The Maidenhead Inn",
+      "note": "Winchester Street, in the old town"
+    }
+  },
+  {
+    "city": "Aldershot",
+    "region": "Hampshire",
+    "country": "United Kingdom",
+    "group": "South East",
+    "colour": "teal",
+    "pint": "~£5",
+    "localBeer": "Hampshire cask",
+    "bestFor": "Home of the British Army",
+    "eat": "Something on the high street.",
+    "dontMiss": "The Wellington Statue on Round Hill.",
+    "gettingThere": "Aldershot station, an hour from London Waterloo.",
+    "tip": "The Duke of Wellington statue stood at Hyde Park Corner until 1883.",
+    "football": "Aldershot Town at the Recreation Ground.",
+    "spoons": {
+      "name": "The Queen Hotel",
+      "note": "Grosvenor Road, in the town centre"
+    }
+  },
+  {
+    "city": "Farnborough",
+    "region": "Hampshire",
+    "country": "United Kingdom",
+    "group": "South East",
+    "colour": "red",
+    "pint": "~£5",
+    "localBeer": "Hampshire cask",
+    "bestFor": "Aviation",
+    "eat": "Something at the Meads.",
+    "dontMiss": "The Farnborough Air Sciences Trust museum.",
+    "gettingThere": "Farnborough Main station, 45 minutes from London Waterloo.",
+    "tip": "Come for the Airshow - it's held in July on even years.",
+    "football": "Farnborough FC at Cherrywood Road.",
+    "spoons": {
+      "name": "The Tilly Shilling",
+      "note": "named after the engineer who fixed the Spitfire's engine"
+    }
+  },
+  {
+    "city": "Fareham",
+    "region": "Hampshire",
+    "country": "United Kingdom",
+    "group": "South East",
+    "colour": "purple",
+    "pint": "~£5",
+    "localBeer": "Hampshire cask",
+    "bestFor": "Portchester Castle",
+    "eat": "Fish and chips by the creek.",
+    "dontMiss": "Portchester Castle, inside a Roman fort.",
+    "gettingThere": "Fareham station, between Portsmouth and Southampton.",
+    "tip": "Portchester's Roman walls are the most complete in northern Europe.",
+    "football": "Portsmouth are 20 minutes away.",
+    "spoons": {
+      "name": "The Crown Inn",
+      "note": "West Street, in the town centre"
+    }
+  },
+  {
+    "city": "Gosport",
+    "region": "Hampshire",
+    "country": "United Kingdom",
+    "group": "South East",
+    "colour": "teal",
+    "pint": "~£5",
+    "localBeer": "Hampshire cask",
+    "bestFor": "Submarines & the ferry",
+    "eat": "Fish and chips on the waterfront.",
+    "dontMiss": "The Submarine Museum and HMS Alliance.",
+    "gettingThere": "The Gosport Ferry from Portsmouth Harbour - four minutes.",
+    "tip": "The ferry is the best way in - great view of the Spinnaker.",
+    "football": "Portsmouth are across the harbour - get the ferry.",
+    "spoons": {
+      "name": "The Star",
+      "note": "High Street, near the ferry"
+    }
+  },
+  {
+    "city": "Winchester",
+    "region": "Hampshire",
+    "country": "United Kingdom",
+    "group": "South East",
+    "colour": "red",
+    "pint": "~£6",
+    "localBeer": "Hampshire cask",
+    "bestFor": "Ancient capital",
+    "eat": "Something at the farmers' market.",
+    "dontMiss": "Winchester Cathedral and King Arthur's Round Table in the Great Hall.",
+    "gettingThere": "Winchester station, an hour from London Waterloo.",
+    "tip": "Jane Austen is buried in the cathedral - look for her grave in the north aisle.",
+    "football": "Southampton are 20 minutes away.",
+    "spoons": {
+      "name": "The Old Gaolhouse",
+      "note": "Jewry Street, in the old jail"
+    },
+    "bars": [
+      {
+        "name": "The Wykeham Arms",
+        "note": "Kingsgate Street, old school desks and tankards"
+      }
+    ]
+  },
+  {
+    "city": "Canterbury",
+    "region": "Kent",
+    "country": "United Kingdom",
+    "group": "South East",
+    "colour": "purple",
+    "pint": "~£5.50",
+    "localBeer": "Shepherd Neame",
+    "bestFor": "Cathedral city",
+    "eat": "Something on the river.",
+    "dontMiss": "Canterbury Cathedral, then a river punt.",
+    "gettingThere": "Canterbury West, under an hour from London St Pancras.",
+    "tip": "Thomas Becket was murdered in the cathedral in 1170 - you can see where.",
+    "football": "Kent cricket at the St Lawrence Ground.",
+    "spoons": {
+      "name": "The Thomas Ingoldsby",
+      "note": "Burgate - plus the West Gate Inn"
+    },
+    "bars": [
+      {
+        "name": "The Foundry Brew Pub",
+        "note": "brewing its own beer in an old foundry"
+      }
+    ]
+  },
+  {
+    "city": "Maidstone",
+    "region": "Kent",
+    "country": "United Kingdom",
+    "group": "South East",
+    "colour": "teal",
+    "pint": "~£5",
+    "localBeer": "Shepherd Neame",
+    "bestFor": "Leeds Castle",
+    "eat": "Kentish apples and a pint of cider.",
+    "dontMiss": "Leeds Castle - yes, it's in Kent.",
+    "gettingThere": "Maidstone East, an hour from London.",
+    "tip": "Get your photo at Leeds Castle - it's a must for a Leeds fan.",
+    "football": "Maidstone United at the Gallagher Stadium.",
+    "spoons": {
+      "name": "The Muggleton Inn",
+      "note": "High Street - plus the Society Rooms"
+    }
+  },
+  {
+    "city": "Ashford",
+    "region": "Kent",
+    "country": "United Kingdom",
+    "group": "South East",
+    "colour": "red",
+    "pint": "~£5",
+    "localBeer": "Shepherd Neame",
+    "bestFor": "Gateway to Europe",
+    "eat": "Something at the market.",
+    "dontMiss": "The First World War tank in St George's Square.",
+    "gettingThere": "Ashford International - 37 minutes from London St Pancras.",
+    "tip": "The tank was given to the town in 1919 for its war savings.",
+    "football": "Ashford United at the Homelands.",
+    "spoons": {
+      "name": "The County Hotel",
+      "note": "High Street, in the town centre"
+    }
+  },
+  {
+    "city": "Dover",
+    "region": "Kent",
+    "country": "United Kingdom",
+    "group": "South East",
+    "colour": "purple",
+    "pint": "~£5",
+    "localBeer": "Shepherd Neame",
+    "bestFor": "White cliffs",
+    "eat": "Fish and chips on the seafront.",
+    "dontMiss": "Dover Castle and the White Cliffs walk.",
+    "gettingThere": "Dover Priory, an hour from London St Pancras.",
+    "tip": "Walk the cliffs to the South Foreland lighthouse - on a clear day you can see France.",
+    "football": "Dover Athletic at Crabble.",
+    "spoons": {
+      "name": "The Eight Bells",
+      "note": "Cannon Street, in the town centre"
+    }
+  },
+  {
+    "city": "Folkestone",
+    "region": "Kent",
+    "country": "United Kingdom",
+    "group": "South East",
+    "colour": "teal",
+    "pint": "~£5",
+    "localBeer": "Kent cask",
+    "bestFor": "Harbour Arm",
+    "eat": "Seafood on the Harbour Arm.",
+    "dontMiss": "The Harbour Arm and the Creative Quarter.",
+    "gettingThere": "Folkestone Central, under an hour from London.",
+    "tip": "Weekends on the Harbour Arm - food stalls, bars and sea views.",
+    "football": "Folkestone Invicta at Cheriton Road.",
+    "spoons": {
+      "name": "The Samuel Peto",
+      "note": "Rendezvous Street, in an old church"
+    }
+  },
+  {
+    "city": "Margate",
+    "region": "Kent",
+    "country": "United Kingdom",
+    "group": "South East",
+    "colour": "red",
+    "pint": "~£5",
+    "localBeer": "Kent cask",
+    "bestFor": "Dreamland & art",
+    "eat": "Fish and chips on the sands.",
+    "dontMiss": "Dreamland and the Turner Contemporary.",
+    "gettingThere": "Margate station, 90 minutes from London.",
+    "tip": "Ride the Scenic Railway at Dreamland - the oldest rollercoaster in the UK.",
+    "football": "Margate FC at Hartsdown Park.",
+    "spoons": {
+      "name": "The Mechanical Elephant",
+      "note": "Marine Terrace, on the seafront"
+    }
+  },
+  {
     "city": "Dublin",
     "region": "Leinster",
     "country": "Ireland",
