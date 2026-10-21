@@ -315,6 +315,10 @@
   var mq=matchMedia('(max-width:760px)'); (mq.addEventListener?mq.addEventListener('change',build):mq.addListener(build));
   build();
   var startAt=parseInt((location.search.match(/[?&]page=(\d+)/)||[])[1]||'1',10);
+  var cityQ=(location.search.match(/[?&]city=([^&]+)/)||[])[1];
+  if(cityQ){try{cityQ=decodeURIComponent(cityQ.replace(/\+/g,' '))}catch(e){}
+    var gi=-1;beers.forEach(function(g,i){if(gi<0&&g.city.toLowerCase()===cityQ.toLowerCase())gi=i});
+    if(gi>=0){var k=-1;pages.forEach(function(p,i){if(k<0&&p.gi===gi&&p.cls==='city')k=i});if(k>=0)startAt=single?k:(k+2)/2}}
   setTimeout(function(){go(startAt)},450);
   document.getElementById('yr').textContent=new Date().getFullYear();
 })();
