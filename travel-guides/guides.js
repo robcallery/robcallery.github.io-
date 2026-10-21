@@ -35,7 +35,8 @@ window.GUIDES = [
     "dontMiss": "A night match under the lights at Elland Road.",
     "football": "Leeds United at Elland Road. Headingley for the Rhinos and Yorkshire cricket.",
     "gettingThere": "Leeds station is a major hub: direct trains from London, Manchester, York and beyond.",
-    "tip": "Get to Whitelock's early on matchday - it's tiny and fills fast."
+    "tip": "Get to Whitelock's early on matchday - it's tiny and fills fast.",
+    "group": "Yorkshire"
   },
   {
     "city": "Wakefield",
@@ -67,7 +68,8 @@ window.GUIDES = [
     "dontMiss": "The Hepworth Wakefield gallery, then a pint at the Exchange Tap.",
     "football": "Wakefield Trinity rugby league at Belle Vue (DIY Kitchens Stadium).",
     "gettingThere": "Wakefield Westgate is on the East Coast Main Line - quick from Leeds or London.",
-    "tip": "Do Westgate as a crawl - Harry's, Black Rock and the Hop are all within a few minutes."
+    "tip": "Do Westgate as a crawl - Harry's, Black Rock and the Hop are all within a few minutes.",
+    "group": "Yorkshire"
   },
   {
     "city": "Batley",
@@ -91,7 +93,8 @@ window.GUIDES = [
     "dontMiss": "Bagshaw Museum in Wilton Park, then up the road to Oakwell Hall.",
     "football": "Batley Bulldogs rugby league at Mount Pleasant - famous for its sloping pitch.",
     "gettingThere": "Batley station is on the Huddersfield line between Leeds and Manchester.",
-    "tip": "The Union Rooms opens at 8am - breakfast and a pint in an old bank."
+    "tip": "The Union Rooms opens at 8am - breakfast and a pint in an old bank.",
+    "group": "Yorkshire"
   },
   {
     "city": "Dewsbury",
@@ -115,7 +118,8 @@ window.GUIDES = [
     "dontMiss": "Dewsbury Minster - its bell 'Black Tom' tolls the Devil's Knell every Christmas Eve.",
     "football": "Dewsbury Rams rugby league at Crown Flatt (FLAIR Stadium).",
     "gettingThere": "TransPennine trains stop here - a good start to the Transpennine Real Ale Trail.",
-    "tip": "Start the Transpennine Ale Trail at the West Riding - it's on the platform."
+    "tip": "Start the Transpennine Ale Trail at the West Riding - it's on the platform.",
+    "group": "Yorkshire"
   },
   {
     "city": "Huddersfield",
@@ -147,7 +151,8 @@ window.GUIDES = [
     "dontMiss": "The station's grand frontage in St George's Square, then out along the ale trail.",
     "football": "Huddersfield Town at the Accu Stadium (the old John Smith's).",
     "gettingThere": "On the TransPennine line - about 20 minutes from Leeds.",
-    "tip": "Grab a pint at the King's Head before your train - it's in the station."
+    "tip": "Grab a pint at the King's Head before your train - it's in the station.",
+    "group": "Yorkshire"
   },
   {
     "city": "Sheffield",
@@ -179,7 +184,8 @@ window.GUIDES = [
     "dontMiss": "A crawl round Kelham Island's old industrial streets.",
     "football": "Sheffield United at Bramall Lane, Sheffield Wednesday at Hillsborough.",
     "gettingThere": "Sheffield station on the Midland Main Line; about 40 minutes from Leeds.",
-    "tip": "Walk Kelham Island in a loop - Fat Cat, Kelham Island Tavern, then the Riverside."
+    "tip": "Walk Kelham Island in a loop - Fat Cat, Kelham Island Tavern, then the Riverside.",
+    "group": "Yorkshire"
   },
   {
     "city": "Morley",
@@ -207,7 +213,8 @@ window.GUIDES = [
     "dontMiss": "Morley Town Hall - Grade I listed, with a 160ft domed clock tower.",
     "football": "A short hop to Elland Road for Leeds United.",
     "gettingThere": "Morley station is on the Huddersfield line; buses run along Queen Street.",
-    "tip": "Nomad and Dyeworks are both closed early in the week - go Thursday to Sunday."
+    "tip": "Nomad and Dyeworks are both closed early in the week - go Thursday to Sunday.",
+    "group": "Yorkshire"
   },
   {
     "city": "Harrogate",
@@ -239,7 +246,8 @@ window.GUIDES = [
     "dontMiss": "A stroll through Valley Gardens and across the Stray.",
     "football": "Harrogate Town at Wetherby Road (Marcy Fitness Stadium).",
     "gettingThere": "Harrogate Line trains from Leeds and York.",
-    "tip": "The Winter Gardens staircase is worth the visit alone."
+    "tip": "The Winter Gardens staircase is worth the visit alone.",
+    "group": "Yorkshire"
   },
   {
     "city": "Knaresborough",
@@ -267,7 +275,8 @@ window.GUIDES = [
     "dontMiss": "The view of the railway viaduct over the Nidd from the castle, then Mother Shipton's Cave.",
     "football": "Knaresborough Town at Manse Lane.",
     "gettingThere": "On the Harrogate Line between Leeds and York.",
-    "tip": "Have one by the river at the World's End, then walk up to the castle for the viaduct view."
+    "tip": "Have one by the river at the World's End, then walk up to the castle for the viaduct view.",
+    "group": "Yorkshire"
   },
   {
     "city": "Boroughbridge",
@@ -290,7 +299,8 @@ window.GUIDES = [
     "eat": "Lunch or dinner at the Crown Hotel.",
     "dontMiss": "The Devil's Arrows - Bronze Age standing stones, the tallest 22ft.",
     "gettingThere": "Just off the A1(M); no station, so it's a drive or bus from Harrogate or York.",
-    "tip": "Ask for a look round Tap on the Tutt's 1930s rooms - they're barely changed."
+    "tip": "Ask for a look round Tap on the Tutt's 1930s rooms - they're barely changed.",
+    "group": "Yorkshire"
   },
   {
     "city": "Thirsk",
@@ -318,7 +328,8 @@ window.GUIDES = [
     "dontMiss": "The World of James Herriot, in the vet's old surgery. Racecourse in summer.",
     "football": "Thirsk Falcons in the Teesside League.",
     "gettingThere": "Thirsk station is on the East Coast Main Line, about 1.5 miles out of town.",
-    "tip": "Go on a Monday or Saturday for the market, then the Three Tuns."
+    "tip": "Go on a Monday or Saturday for the market, then the Three Tuns.",
+    "group": "Yorkshire"
   },
   {
     "city": "Northallerton",
@@ -350,7 +361,8 @@ window.GUIDES = [
     "dontMiss": "Market day on the High Street (Wednesdays and Saturdays).",
     "football": "Northallerton Town at the Calvert Stadium.",
     "gettingThere": "Northallerton is on the East Coast Main Line.",
-    "tip": "Wednesday and Saturday are market days - the High Street pubs are buzzing."
+    "tip": "Wednesday and Saturday are market days - the High Street pubs are buzzing.",
+    "group": "Yorkshire"
   },
   {
     "city": "York",
@@ -382,7 +394,8 @@ window.GUIDES = [
     "dontMiss": "York Minster, then a lap of the city walls.",
     "football": "York City at the LNER Community Stadium.",
     "gettingThere": "On the East Coast Main Line - about 25 minutes from Leeds.",
-    "tip": "Walk the walls first - then you've earned the York Tap."
+    "tip": "Walk the walls first - then you've earned the York Tap.",
+    "group": "Yorkshire"
   },
   {
     "city": "Wetherby",
@@ -410,7 +423,8 @@ window.GUIDES = [
     "dontMiss": "A walk along the River Wharfe from the old bridge.",
     "football": "Leeds United are about half an hour away.",
     "gettingThere": "Buses from Leeds, Harrogate and York; just off the A1(M).",
-    "tip": "Wetherby Brew Co's taproom is only open Thursday to Sunday."
+    "tip": "Wetherby Brew Co's taproom is only open Thursday to Sunday.",
+    "group": "Yorkshire"
   },
   {
     "city": "Bingley",
@@ -438,7 +452,8 @@ window.GUIDES = [
     "dontMiss": "Bingley Five Rise Locks on the Leeds-Liverpool Canal.",
     "football": "Bradford City at Valley Parade, 15 minutes away.",
     "gettingThere": "Airedale line trains from Leeds and Bradford.",
-    "tip": "Walk the Five Rise Locks, then the Brown Cow by the old bridge."
+    "tip": "Walk the Five Rise Locks, then the Brown Cow by the old bridge.",
+    "group": "Yorkshire"
   },
   {
     "city": "Halifax",
@@ -470,7 +485,8 @@ window.GUIDES = [
     "dontMiss": "The Piece Hall - a restored 18th-century cloth hall.",
     "football": "FC Halifax Town at The Shay.",
     "gettingThere": "Trains from Leeds in about 35 minutes.",
-    "tip": "Go when there's something on in the Piece Hall - the Hop Yard is right inside."
+    "tip": "Go when there's something on in the Piece Hall - the Hop Yard is right inside.",
+    "group": "Yorkshire"
   },
   {
     "city": "Ripon",
@@ -498,7 +514,8 @@ window.GUIDES = [
     "dontMiss": "The Hornblower sets the watch in the Market Square at 9pm every night.",
     "football": "Ripon Racecourse in summer; Harrogate Town are 20 minutes away.",
     "gettingThere": "No station - buses from Harrogate and Leeds.",
-    "tip": "Be in the Market Square at 9pm for the Hornblower, then straight to the pub."
+    "tip": "Be in the Market Square at 9pm for the Hornblower, then straight to the pub.",
+    "group": "Yorkshire"
   },
   {
     "city": "Masham",
@@ -525,7 +542,8 @@ window.GUIDES = [
     "eat": "Lunch at the Black Sheep bistro or the White Bear.",
     "dontMiss": "Tours of both breweries - Theakston Old Peculier at source.",
     "gettingThere": "No station - drive or bus from Ripon.",
-    "tip": "Book both brewery tours on the same day - they're five minutes apart."
+    "tip": "Book both brewery tours on the same day - they're five minutes apart.",
+    "group": "Yorkshire"
   },
   {
     "city": "Pateley Bridge",
@@ -548,7 +566,8 @@ window.GUIDES = [
     "eat": "A brew and a cake on the steep High Street.",
     "dontMiss": "Brimham Rocks, and the oldest sweet shop in England on the High Street.",
     "gettingThere": "Buses from Harrogate; it's in the heart of Nidderdale.",
-    "tip": "Park at the bottom and walk the High Street - it's steep."
+    "tip": "Park at the bottom and walk the High Street - it's steep.",
+    "group": "Yorkshire"
   },
   {
     "city": "Malton",
@@ -575,7 +594,8 @@ window.GUIDES = [
     "eat": "Malton calls itself Yorkshire's food capital - try the monthly food market.",
     "dontMiss": "Castle Howard, a few miles down the road.",
     "gettingThere": "Trains from York in about 25 minutes.",
-    "tip": "Time it for the monthly food market, then Brass Castle's tap."
+    "tip": "Time it for the monthly food market, then Brass Castle's tap.",
+    "group": "Yorkshire"
   },
   {
     "city": "Settle",
@@ -598,7 +618,8 @@ window.GUIDES = [
     "eat": "Pub food at the Talbot.",
     "dontMiss": "Malham Cove and Malham Tarn, a short drive away.",
     "gettingThere": "On the Settle-Carlisle line - one of Britain's great railway journeys.",
-    "tip": "Ride the Settle-Carlisle line out and back - the Talbot's by the station."
+    "tip": "Ride the Settle-Carlisle line out and back - the Talbot's by the station.",
+    "group": "Yorkshire"
   },
   {
     "city": "Bentham",
@@ -617,7 +638,8 @@ window.GUIDES = [
     "eat": "Pub food at the Coach House.",
     "dontMiss": "The Great Stone of Fourstones on the heritage trail.",
     "gettingThere": "Bentham station is on the Leeds-Morecambe line.",
-    "tip": "Ring the Coach House ahead for food - it's the main pub left in town."
+    "tip": "Ring the Coach House ahead for food - it's the main pub left in town.",
+    "group": "Yorkshire"
   },
   {
     "city": "Whitby",
@@ -645,7 +667,8 @@ window.GUIDES = [
     "dontMiss": "Climb the 199 steps to Whitby Abbey.",
     "football": "Whitby Town at the Turnbull Ground.",
     "gettingThere": "Esk Valley line from Middlesbrough, or the steam railway from Pickering.",
-    "tip": "Get fish and chips at the bottom of the 199 steps, after you've climbed them."
+    "tip": "Get fish and chips at the bottom of the 199 steps, after you've climbed them.",
+    "group": "Yorkshire"
   },
   {
     "city": "Scarborough",
@@ -669,7 +692,8 @@ window.GUIDES = [
     "dontMiss": "Scarborough Castle, then the North Bay Railway.",
     "football": "Scarborough Athletic.",
     "gettingThere": "Trains from York in about 50 minutes.",
-    "tip": "South Bay for chips, North Bay for a quieter pint."
+    "tip": "South Bay for chips, North Bay for a quieter pint.",
+    "group": "Yorkshire"
   },
   {
     "city": "Redcar",
@@ -687,7 +711,8 @@ window.GUIDES = [
     "dontMiss": "Redcar Beacon and the long sandy beach.",
     "football": "Middlesbrough at the Riverside, 20 minutes away.",
     "gettingThere": "Trains from Middlesbrough and Darlington.",
-    "tip": "The Plimsoll Line's beer garden runs right through to Lord Street - grab a table outside."
+    "tip": "The Plimsoll Line's beer garden runs right through to Lord Street - grab a table outside.",
+    "group": "Yorkshire"
   },
   {
     "city": "Saltburn-by-the-Sea",
@@ -715,7 +740,247 @@ window.GUIDES = [
     "dontMiss": "The cliff lift and the pier.",
     "football": "Middlesbrough at the Riverside, half an hour away.",
     "gettingThere": "End of the line from Darlington and Middlesbrough.",
-    "tip": "Take the cliff lift down to the Ship Inn - and back up after."
+    "tip": "Take the cliff lift down to the Ship Inn - and back up after.",
+    "group": "Yorkshire"
+  },
+  {
+    "city": "Bradford",
+    "region": "West Yorkshire",
+    "country": "United Kingdom",
+    "group": "Yorkshire",
+    "colour": "blue",
+    "pint": "~£4.50",
+    "localBeer": "Wallers Brewery",
+    "bestFor": "Curry & cellar bars",
+    "spoons": {
+      "name": "The Turls Green",
+      "note": "on Centenary Square, by City Park"
+    },
+    "bars": [
+      {
+        "name": "Jacob's Beer House",
+        "note": "Kent Street, 1811 building, cask and real cider"
+      },
+      {
+        "name": "Exchange Craft Beer House",
+        "note": "vaulted cellars under the old Wool Exchange"
+      },
+      {
+        "name": "Record Café",
+        "note": "North Parade, beer bar and record shop"
+      }
+    ],
+    "eat": "A proper curry - Bradford has won Curry Capital of Britain more than once.",
+    "dontMiss": "Saltaire, the UNESCO mill village, a short hop up the line.",
+    "football": "Bradford City at Valley Parade; the Bulls play rugby league at Odsal.",
+    "gettingThere": "Forster Square and Interchange stations, about 20 minutes from Leeds.",
+    "tip": "Do North Parade as a crawl - Record Café, then work your way along."
+  },
+  {
+    "city": "Hull",
+    "region": "East Yorkshire",
+    "country": "United Kingdom",
+    "group": "Yorkshire",
+    "colour": "green",
+    "pint": "~£4.50",
+    "localBeer": "Old Town cask",
+    "bestFor": "Old Town pubs",
+    "spoons": {
+      "name": "The Three John Scotts",
+      "note": "old post office on Lowgate, in the Old Town"
+    },
+    "bars": [
+      {
+        "name": "Ye Olde White Harte",
+        "note": "down an alley off Silver Street, one of the oldest pubs in England"
+      },
+      {
+        "name": "Ye Olde Black Boy",
+        "note": "High Street, around 1720, Hull's oldest pub"
+      },
+      {
+        "name": "The Bonny Boat",
+        "note": "trading since 1791, nautical bits everywhere"
+      }
+    ],
+    "eat": "A Hull pattie - mashed potato and sage, battered and fried. Only in Hull.",
+    "dontMiss": "The Deep aquarium, then a pint on Humber Street.",
+    "football": "Hull City and Hull FC at the MKM Stadium; Hull KR at Craven Park.",
+    "gettingThere": "Hull Paragon Interchange, about an hour from Leeds by train.",
+    "tip": "The George Hotel has England's smallest window - look for it on the way to the White Harte."
+  },
+  {
+    "city": "Rotherham",
+    "region": "South Yorkshire",
+    "country": "United Kingdom",
+    "group": "Yorkshire",
+    "colour": "orange",
+    "pint": "~£4",
+    "localBeer": "Chantry Brewery",
+    "bestFor": "Chantry beers",
+    "spoons": {
+      "name": "The Bluecoat",
+      "note": "in the old Bluecoat charity school on The Crofts"
+    },
+    "bars": [
+      {
+        "name": "The Cutlers Arms",
+        "note": "Westgate, Grade II Edwardian gem restored by Chantry"
+      },
+      {
+        "name": "Chantry Brewery Tap",
+        "note": "Parkgate, Fri and Sat only, live bands"
+      }
+    ],
+    "eat": "Pickled eggs and pork pies at the Cutlers - proper pub snacks.",
+    "dontMiss": "Magna, the science centre inside an old steelworks.",
+    "football": "Rotherham United at the New York Stadium.",
+    "gettingThere": "Rotherham Central station; the tram-train runs from Sheffield.",
+    "tip": "The Cutlers Arms' tiles and stained glass are worth the trip on their own."
+  },
+  {
+    "city": "Doncaster",
+    "region": "South Yorkshire",
+    "country": "United Kingdom",
+    "group": "Yorkshire",
+    "colour": "blue",
+    "pint": "~£4.20",
+    "localBeer": "Yorkshire cask",
+    "bestFor": "Race days",
+    "spoons": {
+      "name": "The Red Lion",
+      "note": "right on the Market Place"
+    },
+    "bars": [
+      {
+        "name": "The Draughtsman Alehouse",
+        "note": "on Platform 3 of the station"
+      },
+      {
+        "name": "Little Plough",
+        "note": "West Laith Gate, a village pub in the middle of town"
+      },
+      {
+        "name": "The Masons Arms",
+        "note": "Market Place, friendly old local"
+      }
+    ],
+    "eat": "Graze Doncaster Market - one of the biggest in the north.",
+    "dontMiss": "The St Leger in September - the oldest classic horse race, run since 1776.",
+    "football": "Doncaster Rovers at the Eco-Power Stadium.",
+    "gettingThere": "On the East Coast Main Line - under two hours from London, 30 minutes from Leeds.",
+    "tip": "Missed your train? The Draughtsman is literally on the platform."
+  },
+  {
+    "city": "Barnsley",
+    "region": "South Yorkshire",
+    "country": "United Kingdom",
+    "group": "Yorkshire",
+    "colour": "green",
+    "pint": "~£4",
+    "localBeer": "Acorn Brewery",
+    "bestFor": "Town-centre crawl",
+    "spoons": {
+      "name": "The Joseph Bramah",
+      "note": "Market Hill, two floors and a courtyard"
+    },
+    "bars": [
+      {
+        "name": "Old No 7",
+        "note": "Market Hill, Acorn's pub, with a cellar bar"
+      },
+      {
+        "name": "Jolly Tap on the Arcade",
+        "note": "Barnsley's first micropub, in the Victorian arcade"
+      },
+      {
+        "name": "George & Dragon",
+        "note": "Summer Lane, CAMRA Pub of the Year 2025"
+      }
+    ],
+    "eat": "A Barnsley chop - a double lamb chop cut right across the loin.",
+    "dontMiss": "The Victorian arcade, then the Glass Works.",
+    "football": "Barnsley FC at Oakwell.",
+    "gettingThere": "Barnsley Interchange, trains from Leeds and Sheffield.",
+    "tip": "Old No 7 and the Bramah are next door on Market Hill - start there."
+  },
+  {
+    "city": "Grimsby",
+    "region": "North East Lincolnshire",
+    "country": "United Kingdom",
+    "group": "Yorkshire",
+    "colour": "orange",
+    "pint": "~£4",
+    "localBeer": "Docks Beers",
+    "bestFor": "Fish & a brewery in a church",
+    "spoons": {
+      "name": "The Yarborough Hotel",
+      "note": "listed Victorian hotel next to the station"
+    },
+    "bars": [
+      {
+        "name": "Docks Beers",
+        "note": "brewery taproom inside an old church on King Edward Street"
+      }
+    ],
+    "eat": "Grimsby smoked fish, then fish and chips - it's the law.",
+    "dontMiss": "The Fishing Heritage Centre - climb aboard a real trawler.",
+    "football": "Grimsby Town at Blundell Park (technically in Cleethorpes).",
+    "gettingThere": "Grimsby Town station, via Doncaster.",
+    "tip": "Docks Beers is shut Monday and Tuesday - plan round it."
+  },
+  {
+    "city": "Scunthorpe",
+    "region": "North Lincolnshire",
+    "country": "United Kingdom",
+    "group": "Yorkshire",
+    "colour": "blue",
+    "pint": "~£4",
+    "localBeer": "Lincolnshire cask",
+    "bestFor": "Steel town pints",
+    "spoons": {
+      "name": "The Blue Bell Inn",
+      "note": "Oswald Road, in the town centre"
+    },
+    "bars": [
+      {
+        "name": "The Honest Lawyer",
+        "note": "Oswald Road, legal-themed real ale pub"
+      }
+    ],
+    "eat": "Breakfast at the Honest Lawyer before a long day out.",
+    "dontMiss": "Normanby Hall country park and its walled garden.",
+    "football": "Scunthorpe United at Glanford Park.",
+    "gettingThere": "On the Doncaster to Cleethorpes line.",
+    "tip": "The Blue Bell and Honest Lawyer are on the same road - easy pair."
+  },
+  {
+    "city": "Alnwick",
+    "region": "Northumberland",
+    "country": "United Kingdom",
+    "colour": "purple",
+    "pint": "~£5",
+    "localBeer": "Northumberland cask",
+    "bestFor": "Castle town & coast",
+    "bars": [
+      {
+        "name": "The Tanners Arms",
+        "note": "CAMRA's best pub in north Northumberland"
+      },
+      {
+        "name": "The Dirty Bottles",
+        "note": "1600s inn with ales and cocktails"
+      },
+      {
+        "name": "The Hog's Head Inn",
+        "note": "named after the Harry Potter tavern"
+      }
+    ],
+    "eat": "Browse Barter Books in the old station, then a pub lunch.",
+    "dontMiss": "Alnwick Castle, then out to Craster and Beadnell on the coast.",
+    "gettingThere": "Alnmouth station on the East Coast Main Line, then a short bus.",
+    "tip": "Barter Books first, then the Tanners Arms.",
+    "group": "North East"
   },
   {
     "city": "Keswick",
@@ -746,53 +1011,8 @@ window.GUIDES = [
     "eat": "Goulash at the Dog & Gun.",
     "dontMiss": "A boat on Derwentwater, or the climb up Catbells.",
     "gettingThere": "Train to Penrith, then the bus into Keswick.",
-    "tip": "Book ahead for the Dog & Gun's goulash on a weekend."
-  },
-  {
-    "city": "Alnwick",
-    "region": "Northumberland",
-    "country": "United Kingdom",
-    "colour": "purple",
-    "pint": "~£5",
-    "localBeer": "Northumberland cask",
-    "bestFor": "Castle town & coast",
-    "bars": [
-      {
-        "name": "The Tanners Arms",
-        "note": "CAMRA's best pub in north Northumberland"
-      },
-      {
-        "name": "The Dirty Bottles",
-        "note": "1600s inn with ales and cocktails"
-      },
-      {
-        "name": "The Hog's Head Inn",
-        "note": "named after the Harry Potter tavern"
-      }
-    ],
-    "eat": "Browse Barter Books in the old station, then a pub lunch.",
-    "dontMiss": "Alnwick Castle, then out to Craster and Beadnell on the coast.",
-    "gettingThere": "Alnmouth station on the East Coast Main Line, then a short bus.",
-    "tip": "Barter Books first, then the Tanners Arms."
-  },
-  {
-    "city": "Bakewell",
-    "region": "Derbyshire",
-    "country": "United Kingdom",
-    "colour": "orange",
-    "pint": "~£5",
-    "localBeer": "Thornbridge",
-    "bestFor": "Peak District pints",
-    "bars": [
-      {
-        "name": "Thornbridge Brewery Tap Room",
-        "note": "at the brewery, cask, keg and pizzas"
-      }
-    ],
-    "eat": "A proper Bakewell pudding - not a tart.",
-    "dontMiss": "Chatsworth House, and the plague village of Eyam nearby.",
-    "gettingThere": "Buses from Sheffield, Matlock and Buxton.",
-    "tip": "Bakewell pudding, not tart - the locals will correct you."
+    "tip": "Book ahead for the Dog & Gun's goulash on a weekend.",
+    "group": "North West"
   },
   {
     "city": "Manchester",
@@ -824,7 +1044,8 @@ window.GUIDES = [
     "dontMiss": "A stadium tour - plus Salford Quays and the Lowry.",
     "football": "Man United at Old Trafford, Man City at the Etihad.",
     "gettingThere": "About an hour from Leeds by train; big airport too.",
-    "tip": "Peveril of the Peak before anywhere else - it's an island of a pub."
+    "tip": "Peveril of the Peak before anywhere else - it's an island of a pub.",
+    "group": "North West"
   },
   {
     "city": "Liverpool",
@@ -856,7 +1077,48 @@ window.GUIDES = [
     "dontMiss": "The Albert Dock, then the Cavern Quarter.",
     "football": "Liverpool at Anfield; Everton at the Hill Dickinson Stadium.",
     "gettingThere": "About 1.5 hours from Leeds by train.",
-    "tip": "Visit the Philharmonic's gents - honestly, it's listed."
+    "tip": "Visit the Philharmonic's gents - honestly, it's listed.",
+    "group": "North West"
+  },
+  {
+    "city": "Llanrwst",
+    "region": "Wales",
+    "country": "United Kingdom",
+    "colour": "red",
+    "pint": "~£4.50",
+    "localBeer": "Welsh cask",
+    "bestFor": "Snowdonia pints",
+    "bars": [
+      {
+        "name": "Pen-y-Bryn",
+        "note": "17th-century coaching inn on Ancaster Square"
+      }
+    ],
+    "eat": "Tea and Welsh cakes at Tu Hwnt i'r Bont by the old bridge.",
+    "dontMiss": "Swallow Falls and Betws-y-Coed, just up the valley.",
+    "gettingThere": "Conwy Valley line from Llandudno Junction.",
+    "tip": "Tea at Tu Hwnt i'r Bont by the old bridge before the Pen-y-Bryn.",
+    "group": "Wales"
+  },
+  {
+    "city": "Bakewell",
+    "region": "Derbyshire",
+    "country": "United Kingdom",
+    "colour": "orange",
+    "pint": "~£5",
+    "localBeer": "Thornbridge",
+    "bestFor": "Peak District pints",
+    "bars": [
+      {
+        "name": "Thornbridge Brewery Tap Room",
+        "note": "at the brewery, cask, keg and pizzas"
+      }
+    ],
+    "eat": "A proper Bakewell pudding - not a tart.",
+    "dontMiss": "Chatsworth House, and the plague village of Eyam nearby.",
+    "gettingThere": "Buses from Sheffield, Matlock and Buxton.",
+    "tip": "Bakewell pudding, not tart - the locals will correct you.",
+    "group": "Midlands"
   },
   {
     "city": "Leicester",
@@ -880,7 +1142,8 @@ window.GUIDES = [
     "dontMiss": "King Richard III Visitor Centre.",
     "football": "Leicester City at the King Power Stadium.",
     "gettingThere": "Just off the M1; trains on the Midland Main Line.",
-    "tip": "The Corn Exchange is right on the market - handy for a quick stop."
+    "tip": "The Corn Exchange is right on the market - handy for a quick stop.",
+    "group": "Midlands"
   },
   {
     "city": "Daventry",
@@ -897,7 +1160,8 @@ window.GUIDES = [
     "eat": "Breakfast at the Saracens Head.",
     "dontMiss": "A walk up Borough Hill.",
     "gettingThere": "Off the M1 near Watford Gap.",
-    "tip": "The Saracens Head is a proper old inn - worth the M1 detour."
+    "tip": "The Saracens Head is a proper old inn - worth the M1 detour.",
+    "group": "Midlands"
   },
   {
     "city": "Westminster",
@@ -924,7 +1188,8 @@ window.GUIDES = [
     "eat": "Covent Garden or Chinatown.",
     "dontMiss": "Trafalgar Square, then Big Ben from Westminster Bridge.",
     "gettingThere": "About 2h15 from Leeds to King's Cross, then the Tube.",
-    "tip": "Victoria station's Spoons has terraces - good for watching the world go by."
+    "tip": "Victoria station's Spoons has terraces - good for watching the world go by.",
+    "group": "London"
   },
   {
     "city": "Southwark",
@@ -956,7 +1221,8 @@ window.GUIDES = [
     "dontMiss": "Walk across Tower Bridge, then along to Shakespeare's Globe.",
     "football": "Millwall at The Den.",
     "gettingThere": "London Bridge station, or the Jubilee line.",
-    "tip": "The Market Porter opens early on market days."
+    "tip": "The Market Porter opens early on market days.",
+    "group": "London"
   },
   {
     "city": "Tower Hamlets",
@@ -983,7 +1249,8 @@ window.GUIDES = [
     "eat": "Curry on Brick Lane.",
     "dontMiss": "The Tower of London, then the DLR out to Canary Wharf.",
     "gettingThere": "Tower Hill or Canary Wharf on the Tube and DLR.",
-    "tip": "Prospect of Whitby has a terrace right on the Thames."
+    "tip": "Prospect of Whitby has a terrace right on the Thames.",
+    "group": "London"
   },
   {
     "city": "Newham",
@@ -1011,7 +1278,8 @@ window.GUIDES = [
     "dontMiss": "Queen Elizabeth Olympic Park and the ArcelorMittal Orbit.",
     "football": "West Ham at the London Stadium.",
     "gettingThere": "Stratford station - Central line, Elizabeth line, DLR and Jubilee.",
-    "tip": "Tap East is inside Westfield - easy pre-match on West Ham days."
+    "tip": "Tap East is inside Westfield - easy pre-match on West Ham days.",
+    "group": "London"
   },
   {
     "city": "Brent",
@@ -1043,7 +1311,8 @@ window.GUIDES = [
     "dontMiss": "Walking up Olympic Way with the arch in front of you.",
     "football": "Wembley Stadium - England, cup finals and play-offs.",
     "gettingThere": "Wembley Park on the Jubilee/Metropolitan, or Wembley Stadium from Marylebone.",
-    "tip": "The Green Man goes one-in-one-out on matchdays - get there early."
+    "tip": "The Green Man goes one-in-one-out on matchdays - get there early.",
+    "group": "London"
   },
   {
     "city": "Greenwich",
@@ -1071,7 +1340,8 @@ window.GUIDES = [
     "dontMiss": "Stand on the Prime Meridian at the Royal Observatory.",
     "football": "Charlton Athletic at The Valley.",
     "gettingThere": "DLR to Cutty Sark, or the Uber Boat from central London.",
-    "tip": "Get the Uber Boat in from central London - it's the best way to arrive."
+    "tip": "Get the Uber Boat in from central London - it's the best way to arrive.",
+    "group": "London"
   },
   {
     "city": "Newport",
@@ -1088,26 +1358,8 @@ window.GUIDES = [
     "eat": "Island seafood - crab if it's on.",
     "dontMiss": "Carisbrooke Castle, just outside town.",
     "gettingThere": "Ferry from Portsmouth or Southampton, then the bus.",
-    "tip": "The Man in the Moon is in an old church - look up."
-  },
-  {
-    "city": "Llanrwst",
-    "region": "Wales",
-    "country": "United Kingdom",
-    "colour": "red",
-    "pint": "~£4.50",
-    "localBeer": "Welsh cask",
-    "bestFor": "Snowdonia pints",
-    "bars": [
-      {
-        "name": "Pen-y-Bryn",
-        "note": "17th-century coaching inn on Ancaster Square"
-      }
-    ],
-    "eat": "Tea and Welsh cakes at Tu Hwnt i'r Bont by the old bridge.",
-    "dontMiss": "Swallow Falls and Betws-y-Coed, just up the valley.",
-    "gettingThere": "Conwy Valley line from Llandudno Junction.",
-    "tip": "Tea at Tu Hwnt i'r Bont by the old bridge before the Pen-y-Bryn."
+    "tip": "The Man in the Moon is in an old church - look up.",
+    "group": "South East"
   },
   {
     "city": "Dublin",
