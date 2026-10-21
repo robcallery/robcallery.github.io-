@@ -154,6 +154,42 @@ COUNTRY_BEER = {
  'Qatar': "something from the hotel bar - it's tightly licensed", 'United Arab Emirates': 'something from a licensed hotel bar', 'Egypt': 'Stella (the Egyptian one)',
  'South Africa': 'Castle Lager', 'Nigeria': 'Star Lager', 'Morocco': 'Casablanca', 'India': 'Kingfisher', 'Thailand': 'Singha', 'Ukraine': 'Obolon', 'Russia': 'Baltika',
 }
+# where each beer is from, and its usual ABV in its home market (None = varies / not verified, so not shown)
+BEER_INFO = {
+ "London Pride (Fuller's)": ('England', 4.1), 'Boddingtons': ('England', 3.5), 'Kirkstall Pale': ('England', None),
+ 'Newcastle Brown Ale': ('England', 4.7), 'Maxim Double Maxim': ('England', 4.7), "Banks's": ('England', None),
+ 'Abbeydale Moonshine': ('England', 4.3), 'Castle Rock': ('England', None), 'Bristol Beer Factory': ('England', None),
+ "Marston's Pedigree": ('England', 4.5), "Woodforde's Wherry": ('England', 3.8), 'Adnams': ('England', None),
+ "Tennent's Lager": ('Scotland', 4.0), 'Belhaven Best': ('Scotland', 3.2), 'Brains SA': ('Wales', 4.2), 'Guinness': ('Ireland', 4.2),
+ 'Titanic Plum Porter': ('England', 4.9), "Harvey's Sussex Best": ('England', 4.0), 'Everards Tiger': ('England', 4.2),
+ 'BrewDog Punk IPA': ('Scotland', 5.4), 'Thwaites': ('England', None), "Moorhouse's": ('England', None),
+ 'Mahou Cinco Estrellas': ('Spain', 5.5), 'Estrella Damm': ('Spain', 5.4), 'Estrella Galicia': ('Spain', 5.5), 'Cruzcampo': ('Spain', 4.8),
+ 'Ambar': ('Spain', None), 'Turia': ('Spain', None), 'Victoria|Spain': ('Spain', 4.8),
+ 'Super Bock': ('Portugal', 5.2), 'Sagres': ('Portugal', 5.0),
+ 'Peroni': ('Italy', 5.1), 'Birra Moretti': ('Italy', 4.6), 'Menabrea': ('Italy', 4.8),
+ 'Pilsner Urquell': ('Czechia', 4.4), 'Heineken': ('Netherlands', 5.0), 'Dommelsch': ('Netherlands', 5.0),
+ 'Jupiler': ('Belgium', 5.2), 'Brugse Zot': ('Belgium', 6.0), 'Kronenbourg 1664': ('France', 5.5),
+ 'Efes Pilsen': ('Türkiye', 5.0), 'Mythos': ('Greece', 4.7), 'Stiegl': ('Austria', 4.9), 'Ottakringer': ('Austria', None),
+ 'Feldschlösschen': ('Switzerland', 4.8), 'Carlsberg': ('Denmark', 5.0), 'Mariestads': ('Sweden', 5.3), 'Ringnes': ('Norway', None),
+ 'Tyskie': ('Poland', 5.2), 'Ožujsko': ('Croatia', 5.0), 'Jelen': ('Serbia', 5.0), 'Obolon': ('Ukraine', None), 'Baltika': ('Russia', None),
+ 'Früh Kölsch': ('Germany', 4.8), 'Uerige Altbier': ('Germany', 4.7), 'Bolten Alt': ('Germany', None), 'Veltins': ('Germany', 4.8),
+ 'Berliner Kindl': ('Germany', None), 'Binding': ('Germany', None), 'Schlenkerla Rauchbier': ('Germany', 5.1),
+ 'Stuttgarter Hofbräu': ('Germany', None), 'Ur-Krostitzer': ('Germany', None), 'Astra': ('Germany', None),
+ 'Augustiner Helles': ('Germany', 5.2), "Beck's": ('Germany', 4.9),
+ 'Budweiser': ('USA', 5.0), 'Coors Banquet': ('USA', 5.0), 'Samuel Adams Boston Lager': ('USA', 5.0), 'Brooklyn Lager': ('USA', 5.2),
+ 'Goose Island IPA': ('USA', 5.9), 'Yuengling': ('USA', 4.5), 'SweetWater 420': ('USA', 5.4), 'Boulevard Wheat': ('USA', 4.4),
+ 'Saint Arnold': ('USA', None), 'Funky Buddha Floridian': ('USA', 5.2), 'Ivanhoe Park': ('USA', None),
+ 'Steam Whistle': ('Canada', 5.0), 'Molson Canadian': ('Canada', 5.0), 'Molson Export': ('Canada', 5.0), 'Granville Island': ('Canada', None),
+ 'Corona': ('Mexico', 4.5), 'Modelo Especial': ('Mexico', None), 'Tecate': ('Mexico', None), 'Victoria (the Mexican one)': ('Mexico', 4.0),
+ 'Quilmes': ('Argentina', 4.9), 'Brahma': ('Brazil', None), 'Polar|Brazil': ('Brazil', None), 'Club Colombia': ('Colombia', 4.7),
+ 'Cusqueña': ('Peru', None), 'Paceña': ('Bolivia', None), 'Pilsener': ('Ecuador', None), 'Escudo': ('Chile', None),
+ 'Pilsen|Uruguay': ('Uruguay', 5.1), 'Pilsen|Paraguay': ('Paraguay', None),
+ 'Castle Lager': ('South Africa', 5.0), 'Star Lager': ('Nigeria', None), 'Casablanca': ('Morocco', None),
+ 'Stella (the Egyptian one)': ('Egypt', None), 'Kingfisher': ('India', None), 'Singha': ('Thailand', 5.0), 'Tsingtao': ('China', 4.7),
+ 'Cass': ('South Korea', 4.5), 'Kirin Ichiban': ('Japan', 5.0), 'Sapporo Classic': ('Japan', 5.0), 'Asahi Super Dry': ('Japan', 5.0),
+ 'Coopers Pale Ale': ('Australia', 4.5), 'Tooheys New': ('Australia', 4.6), 'Victoria Bitter': ('Australia', 4.9), 'XXXX Gold': ('Australia', 3.5),
+}
+
 GUIDE_ALIAS = {'Newcastle': 'Newcastle upon Tyne', 'Brighton': 'Brighton and Hove', 'Falmer': 'Brighton and Hove', 'Stoke': 'Stoke-on-Trent', 'Malaga': 'Málaga'}
 
 LEAGUES = ['eng.1', 'eng.2', 'eng.3', 'eng.4', 'sco.1', 'esp.1', 'esp.2', 'ita.1', 'ger.1', 'fra.1', 'ned.1', 'por.1', 'bel.1', 'tur.1',
@@ -161,7 +197,7 @@ LEAGUES = ['eng.1', 'eng.2', 'eng.3', 'eng.4', 'sco.1', 'esp.1', 'esp.2', 'ita.1
            'uefa.champions', 'uefa.europa', 'uefa.europa.conf', 'conmebol.libertadores', 'conmebol.sudamericana', 'fifa.world', 'uefa.nations']
 
 def teletext_page(guide_cities):
-    data = json.dumps({'city': CITY_BEER, 'country': COUNTRY_BEER, 'alias': GUIDE_ALIAS, 'guides': guide_cities, 'leagues': LEAGUES}, ensure_ascii=False)
+    data = json.dumps({'city': CITY_BEER, 'country': COUNTRY_BEER, 'alias': GUIDE_ALIAS, 'guides': guide_cities, 'leagues': LEAGUES, 'info': BEER_INFO}, ensure_ascii=False)
     return '''<!doctype html>
 <html lang="en-GB">
 <head>
@@ -211,10 +247,12 @@ def teletext_page(guide_cities):
   <div class="row"> </div>
   <div class="score" id="score"></div>
   <div class="row g" id="status"></div>
+  <div class="row c" id="agg"></div>
   <div class="row w" id="venue"></div>
   <div class="row"> </div>
   <div class="row bg-bl"><span class="y"> LOCAL BEER </span></div>
   <div class="row c dh" id="beer"></div>
+  <div class="row y" id="beermeta"></div>
   <div class="row w muted" id="beerline"></div>
   <div class="row"> </div>
   <div class="row y" id="also"></div>
@@ -253,7 +291,8 @@ var DATA=''' + data + ''';
     var v=comp.venue||{},ad=v.address||{},st=(e.status||{}).type||{};
     return {id:e.id,slug:slug,league:lg,home:(h.team||{}).shortDisplayName||(h.team||{}).displayName,away:(a.team||{}).shortDisplayName||(a.team||{}).displayName,
       hs:h.score,as:a.score,state:st.state,detail:st.shortDetail||'',clock:(e.status||{}).displayClock||'',date:e.date,
-      venue:v.fullName||'',city:ad.city||'',country:ad.country||''};
+      venue:v.fullName||'',city:ad.city||'',country:ad.country||'',
+      leg:(comp.leg||{}).value||0,hid:(h.team||{}).id||h.id,aid:(a.team||{}).id||a.id,hagg:h.aggregateScore,aagg:a.aggregateScore};
   }
   function load(){
     var urls=DATA.leagues.map(function(l){return 'https://site.api.espn.com/apis/site/v2/sports/soccer/'+l+'/scoreboard'});
@@ -268,6 +307,30 @@ var DATA=''' + data + ''';
   }
   function rows(list){return list.map(function(g){
       return '<div class="row w">'+pad(g.home,12).padEnd(12)+' '+(g.hs||'0')+'-'+(g.as||'0')+' '+pad(g.away,12)+'</div>'}).join('')}
+  var legCache={};
+  function ymd(d){return d.toISOString().slice(0,10).replace(/-/g,'')}
+  function firstLeg(g){
+    if(legCache[g.id])return legCache[g.id];
+    var d=new Date(g.date),from=new Date(d.getTime()-70*864e5),to=new Date(d.getTime()-864e5);
+    var u='https://site.api.espn.com/apis/site/v2/sports/soccer/'+g.slug+'/scoreboard?limit=900&dates='+ymd(from)+'-'+ymd(to);
+    legCache[g.id]=fetch(u).then(function(r){return r.ok?r.json():null}).then(function(d){
+      var best=null;((d&&d.events)||[]).forEach(function(e){var c=(e.competitions||[])[0]||{},cs=c.competitors||[],sc={};
+        if(((e.status||{}).type||{}).state!=='post')return;
+        cs.forEach(function(t){sc[(t.team||{}).id||t.id]=parseInt(t.score,10)});
+        if(sc[g.hid]==null||sc[g.aid]==null||isNaN(sc[g.hid])||isNaN(sc[g.aid]))return;
+        if(!best||new Date(e.date)>new Date(best.date))best={date:e.date,sc:sc}});
+      return best?best.sc:null}).catch(function(){return null});
+    return legCache[g.id];
+  }
+  function showAgg(g,isLive){
+    var el=$('agg');el.textContent='';
+    if(g.leg!==2)return;
+    el.textContent='2ND LEG';
+    var hs=parseInt(g.hs,10)||0,as=parseInt(g.as,10)||0,lbl=isLive?'AGG ':'FIRST LEG ';
+    firstLeg(g).then(function(sc){if(current!==g)return;
+      if(sc){var h=sc[g.hid]+(isLive?hs:0),a=sc[g.aid]+(isLive?as:0);el.textContent='2ND LEG · '+lbl+h+'-'+a}
+      else if(g.hagg!=null&&g.aagg!=null){el.textContent='2ND LEG · AGG '+g.hagg+'-'+g.aagg}});
+  }
   function show(g,isLive){
     current=g;
     $('league').textContent=up(g.league);
@@ -278,6 +341,9 @@ var DATA=''' + data + ''';
       $('status').textContent='NO GAMES IN PLAY - KICK-OFF '+ko+' UK (IN '+(h?h+'H ':'')+m+'M)'}
     $('venue').textContent=up([g.venue,g.city,g.country].filter(Boolean).join(', '));
     var b=beerFor(g);$('beer').textContent=up(b.beer);
+    var bi=DATA.info[b.beer+'|'+g.country]||DATA.info[b.beer];
+    $('beermeta').textContent=bi?up(bi[0])+(bi[1]?' \u00b7 '+bi[1].toFixed(1)+'% ABV':''):'';
+    showAgg(g,isLive);
     $('beerline').textContent='When in '+b.where+', do as the locals do.';
     var gc=guideFor(g),gl=$('guide');
     if(gc){gl.textContent='OUR GUIDE';gl.href='/travel-guides/?city='+encodeURIComponent(gc)}else{gl.textContent='GUIDES';gl.href='/travel-guides/'}
