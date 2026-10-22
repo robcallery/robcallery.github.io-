@@ -61,7 +61,7 @@ def hk():
     for i, (x, w, h) in enumerate(((120, 20, 100), (150, 24, 124), (175, 22, 144), (200, 30, 164), (225, 22, 144), (250, 24, 124), (280, 20, 100))):
         b += turret(x, GY - 10, w, h, '#f3efe6', cols[i % 6])
     return b
-def mountain_bg(c): return P('M-10 230 L80 120 L160 180 L260 100 L410 200 L410 230 Z', c)
+def mountain_bg(c): return P('M-10 262 L-10 230 L80 120 L160 180 L260 100 L410 200 L410 262 Z', c)
 def shanghai():
     b = day() + water(250, '#4a7fa8', 7, 8) + lawn(GY + 10, '#5a9a4a')
     b += R(120, 170, 160, 80, '#f3efe6') + arch_win(184, 200, 32, 50, '#5a4a6a')
@@ -77,7 +77,7 @@ def blizzard():
     b += R(196, 66, 30, 8, '#8a5a3a') + water(250, '#3fb0d8', 9, 10) + palm(40, 260, 1.2, 6) + palm(370, 260, 1.2, -6)
     return b
 def uk_gardens():
-    b = day() + lawn(GY, '#5a9a4a')
+    b = day() + lawn(240, '#5a9a4a')
     b += R(40, 140, 120, 100, '#f3efe6') + ''.join(L(40 + k * 20, 140, 40 + k * 20, 240, '#3a2a1a', 3) for k in range(7)) + L(40, 190, 160, 190, '#3a2a1a', 3) + P('M34 142 L100 104 L166 142 Z', '#6a4a3a')
     b += R(240, 150, 120, 90, '#c9a07a') + windows(254, 166, 4, 2, 12, 16, 14, 14, WIN) + P('M234 152 L300 120 L366 152 Z', '#5a5a62')
     for x in (60, 130, 200, 270, 340):

@@ -127,7 +127,7 @@ def tower_bridge_sac():
     return b
 
 def union_station():
-    b = P('M-10 150 L60 110 L120 140 L200 96 L280 130 L340 100 L410 140 L410 200 L-10 200 Z', '#9fb3c8') + P('M200 96 L215 110 L190 108 Z', '#fff')
+    b = P('M-10 150 L60 110 L120 140 L200 96 L280 130 L340 100 L410 140 L410 262 L-10 262 Z', '#9fb3c8') + P('M200 96 L215 110 L190 108 Z', '#fff')
     b += road(GY) + R(0, GY - 4, W, 4, '#9aa0a8')
     b += R(50, 140, 300, 122, '#d8c3a0') + R(50, 132, 300, 10, '#c4ad86')
     for i in range(3):
@@ -361,8 +361,7 @@ def bats():
 
 def us_capitol():
     b = sun(330, 50, 13) + cloud(80, 46, .7) + lawn(GY, '#4f8a45')
-    b += capitol(200, GY - 10, 340, '#f3f0e8', '#f8f6f0', 1.15, 38, '#7a8a8a', 8, True, False, 34)
-    b += R(140, GY - 10, 120, 10, '#e2ddd2') + E(200, 296, 140, 14, '#7ab8e0') + tree(20, GY, 1.4) + tree(380, GY, 1.4)
+    b += capitol(200, GY, 340, '#f3f0e8', '#f8f6f0', 1.15, 38, '#7a8a8a', 8, True, False, 34) + E(200, 296, 140, 14, '#7ab8e0') + tree(20, GY, 1.4) + tree(380, GY, 1.4)
     return b
 
 # ---------- load the data and add every capital
@@ -427,7 +426,7 @@ cap_std('Raleigh', stone='#cfc6b5', dome=COPPER, rx=26, dh=.7, w=220)
 cap_std('Harrisburg', stone='#d8cfbe', dome='#5f9a7a', dh=1.2, statue=GOLD)
 cap_std('Columbia', stone='#d8cfbe', dome=COPPER, dh=1.0)
 cap_std('Pierre', stone='#d8cfbe', dome=COPPER, dh=1.05)
-cap_std('Salt Lake City', stone='#e3dccb', dome=COPPER, dh=1.15, back=P('M-10 200 L40 130 L90 170 L140 110 L190 160 L250 100 L310 150 L360 112 L410 170 L410 210 L-10 210 Z', '#9aa8b8') + P('M140 110 L156 126 L128 128 Z M250 100 L266 118 L236 118 Z', '#fff'))
+cap_std('Salt Lake City', stone='#e3dccb', dome=COPPER, dh=1.15, back=P('M-10 200 L40 130 L90 170 L140 110 L190 160 L250 100 L310 150 L360 112 L410 170 L410 262 L-10 262 Z', '#9aa8b8') + P('M140 110 L156 126 L128 128 Z M250 100 L266 118 L236 118 Z', '#fff'))
 cap_std('Montpelier', stone='#cfcac0', dome=GOLD, dh=1.0, statue='#c9a46a', w=230)
 cap_std('Olympia', stone='#efe9dc', dome='#e9e3d4', dh=1.35, rx=30, drum_h=36)
 cap_std('Charleston', stone='#e8e3d8', dome=GOLD, dh=1.25)
