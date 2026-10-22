@@ -15,7 +15,7 @@ def packet(kind):
         c1, c2, band, ink, title1, title2, arrow = '#1f4fb8', '#12306f', '#ffcd00', '#ffffff', 'CHEESE &amp; ONION', 'CRISPS', 'NEXT ›'
     gid = 'pk' + kind
     rnd = random.Random(7 if kind == 'prev' else 11)
-    g = [f'<svg viewBox="0 0 160 214" aria-hidden="true" focusable="false">',
+    g = [f'<svg viewBox="-6 0 172 228" aria-hidden="true" focusable="false"><path d="M10 26 Q6 117 10 210 L166 210 Q170 117 166 26 Z" fill="#000" opacity=".35"/>',
          f'<defs><linearGradient id="{gid}" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="{c1}"/><stop offset="1" stop-color="{c2}"/></linearGradient>',
          f'<linearGradient id="{gid}s" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".28"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient></defs>']
     # bag body with slightly bulging sides
@@ -99,11 +99,11 @@ TABLE_CSS = r'''
   .pint{grid-area:pint;align-self:end;margin-bottom:10px}
   .slip{grid-area:slip}
   .tablewrap>.tip{grid-area:tip}
-  .pack{appearance:none;border:0;background:none;padding:0;cursor:pointer;width:clamp(110px,11vw,165px);display:block;transform:rotate(var(--r));transition:transform .25s ease,filter .25s ease,opacity .3s;filter:drop-shadow(0 12px 10px rgba(0,0,0,.5))}
+  .pack{appearance:none;border:0;background:none;padding:0;cursor:pointer;width:clamp(110px,11vw,165px);display:block;transform:rotate(var(--r));transition:transform .25s ease,opacity .3s}
   .pack svg{width:100%;height:auto;display:block}
-  .pack:hover:not(:disabled),.pack:focus-visible{transform:rotate(0) translateY(-6px) scale(1.05);filter:drop-shadow(0 18px 14px rgba(0,0,0,.55)) drop-shadow(0 0 14px rgba(255,205,0,.35))}
+  .pack:hover:not(:disabled),.pack:focus-visible{transform:rotate(0) translateY(-6px) scale(1.05)}
   .pack:focus-visible{outline:3px solid #fff;outline-offset:6px;border-radius:8px}
-  .pack:disabled{cursor:default;opacity:.45;filter:grayscale(.5) drop-shadow(0 8px 8px rgba(0,0,0,.4))}
+  .pack:disabled{cursor:default;opacity:.4}
   .pint{width:clamp(130px,14vw,210px);transform:rotate(-12deg);pointer-events:none}
   .pint svg{width:100%;height:auto;display:block}
   .ring{position:absolute;border-radius:50%;border:3px solid rgba(30,12,2,.35);box-shadow:0 0 0 1px rgba(255,220,170,.06);pointer-events:none}
