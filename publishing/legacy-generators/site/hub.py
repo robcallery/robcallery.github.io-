@@ -354,12 +354,12 @@ soon_page("football-tales","Football: Tales of a Leeds Fan","Stories from Elland
 from pub_parts import pub_scene, leeds_tv_art, teletext_page, PUB_CSS, hub_tv_svg, leeds_tv_svg, world_tv_svg, poster_leeds, poster_world, shelf_svg, bar_top_svg
 import json as _json, subprocess as _sp
 _GC=_json.loads(_sp.run(['node','-e',"global.window={};require('/home/claude/site/travel-guides/guides.js');process.stdout.write(JSON.stringify(window.GUIDES.map(g=>g.city)))"],capture_output=True,text=True).stdout)
-soon_page("match-hub/leeds","Leeds United Match Hub","Live scores, fixtures, the table, team news and matchday pubs for Leeds United, all on one telly. It's being wired up now.",leeds_tv_art(),0,"/match-hub/","← Back to the pub")
+import subprocess as _sp2; _sp2.run(["python3","/tmp/claude-0/-home-claude/9cac7207-2d1b-5bf4-969e-62974606aff5/scratchpad/leeds_hub.py"],check=True)
 os.makedirs('/home/claude/site/match-hub/world',exist_ok=True)
 open('/home/claude/site/match-hub/world/index.html','w').write(teletext_page(_GC))
 mh=HEAD.format(title="Match Hub - Rob Callery",desc="The Match Hub pub: a Leeds United telly and a retro teletext telly showing a random live game somewhere in the world, with the local beer.",globe=globe_d,backhref="/stadium/",backtxt="← Back to the stadium")
 mh=mh.replace('</style>\n</head>\n<body>', PUB_CSS+'</style>\n</head>\n<body class="pubpage">\n<div class="lamps" aria-hidden="true"><i></i><i></i><i></i></div>',1)
-_pL='<a class="poster tvl" style="--r:-4deg" href="/match-hub/leeds/"><span class="sr">Leeds United match hub (coming soon)</span>'+poster_leeds()+'</a>'
+_pL='<a class="poster tvl" style="--r:-4deg" href="/match-hub/leeds/"><span class="sr">Leeds United match hub</span>'+poster_leeds()+'</a>'
 _pW='<a class="poster tvl" style="--r:3deg" href="/match-hub/world/"><span class="sr">Around the World: a random live game and the local beer</span>'+poster_world()+'</a>'
 mh+='''<main class="wall">
   <h1 class="sr">The Match Hub</h1>
@@ -369,7 +369,7 @@ mh+='''<main class="wall">
     '''+_pW+'''
   </div>
   <div class="tier low">
-    <a class="tvl tv-leeds" id="tvLeeds" href="/match-hub/leeds/"><span class="sr">Leeds United telly: the Leeds match hub (coming soon)</span>'''+leeds_tv_svg()+'''</a>
+    <a class="tvl tv-leeds" id="tvLeeds" href="/match-hub/leeds/"><span class="sr">Leeds United telly: the Leeds match hub</span>'''+leeds_tv_svg()+'''</a>
     <div class="shelf">'''+shelf_svg()+'''</div>
     <a class="tvl tv-world" id="tvWorld" href="/match-hub/world/"><span class="sr">Retro telly: CALFAX 302, a random live game around the world</span>'''+world_tv_svg()+'''</a>
   </div>

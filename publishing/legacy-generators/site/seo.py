@@ -10,7 +10,7 @@ PAGES={
  "site/football-tales/index.html":("/football-tales/","Football Tales - Rob Callery","Football: Tales of a Leeds Fan by Rob Callery - away days, home days and the pubs either side."),
  "site/stadium/index.html":("/stadium/","Elland Road - Rob Callery","Step inside Elland Road: football tales from a lifetime following Leeds United, and the match hub."),
  "site/match-hub/index.html":("/match-hub/","Match Hub - Rob Callery","The Match Hub pub: a Leeds United telly and a retro teletext telly showing a random live game somewhere in the world, with the local beer."),
- "site/match-hub/leeds/index.html":("/match-hub/leeds/","Leeds United Match Hub - Rob Callery","Rob Callery's Leeds United match hub: live scores, fixtures, the table and matchday pubs. Coming soon."),
+ "site/match-hub/leeds/index.html":("/match-hub/leeds/","Leeds United Match Hub - Rob Callery","Rob Callery's Leeds United match hub: next match, live score, results, fixtures and the table, from a seat at Elland Road."),
  "site/match-hub/world/index.html":("/match-hub/world/","CALFAX 302 - Rob Callery","Teletext-style football: a random live game somewhere in the world, and the local beer to drink with it."),
 }
 person={"@context":"https://schema.org","@graph":[

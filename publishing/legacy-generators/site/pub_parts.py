@@ -9,7 +9,7 @@ LEEDS_SCREEN = '''
   <text x="150" y="58" text-anchor="middle" font-family="Bebas Neue, Impact, sans-serif" font-size="34" fill="#ffffff" letter-spacing="3" textLength="230" lengthAdjust="spacingAndGlyphs">LEEDS UNITED</text>
   <text x="150" y="80" text-anchor="middle" font-family="Bebas Neue, Impact, sans-serif" font-size="15" fill="#ffcd00" letter-spacing="4">MATCH HUB</text>
   <rect x="96" y="146" width="108" height="16" rx="3" fill="#ffffff"/>
-  <text x="150" y="158" text-anchor="middle" font-family="Bebas Neue, Impact, sans-serif" font-size="11" fill="#0b1f63" letter-spacing="2">COMING SOON</text>
+  <text x="150" y="158" text-anchor="middle" font-family="Bebas Neue, Impact, sans-serif" font-size="11" fill="#0b1f63" letter-spacing="1" textLength="98" lengthAdjust="spacingAndGlyphs">FIXTURES · SCORES · TABLE</text>
 '''
 
 TELETEXT_SCREEN = '''
@@ -421,21 +421,21 @@ def hub_tv_svg():
     <text x="48" y="282" font-family="Inter, system-ui, sans-serif" font-weight="600" font-size="17" fill="#c8d3f5">Leeds on the left. The rest of the world on the right.</text>
     <rect x="0" y="316" width="640" height="44" fill="#ffffff"/>
     <rect x="0" y="316" width="118" height="44" fill="url(#hubRed)"/><text x="59" y="345" text-anchor="middle" font-family="Bebas Neue, Impact, sans-serif" font-size="22" fill="#fff" letter-spacing="2">LATEST</text>
-    <svg x="118" y="316" width="522" height="44" viewBox="0 0 522 44"><g class="ticker"><text x="0" y="29" font-family="Bebas Neue, Impact, sans-serif" font-size="22" fill="#0d1f5c" letter-spacing="1">CALFAX 302 NOW SHOWING ON THE OLD SET  ·  LEEDS MATCH HUB COMING SOON  ·  MARCHING ON TOGETHER  ·  ONE BEER AT A TIME  ·  FOLLOW @CALZ88  ·  CALFAX 302 NOW SHOWING ON THE OLD SET  ·  LEEDS MATCH HUB COMING SOON  ·  MARCHING ON TOGETHER  ·  ONE BEER AT A TIME  ·  FOLLOW @CALZ88  ·</text></g></svg>
+    <svg x="118" y="316" width="522" height="44" viewBox="0 0 522 44"><g class="ticker"><text x="0" y="29" font-family="Bebas Neue, Impact, sans-serif" font-size="22" fill="#0d1f5c" letter-spacing="1">CALFAX 302 NOW SHOWING ON THE OLD SET  ·  LEEDS MATCH HUB IS LIVE  ·  MARCHING ON TOGETHER  ·  ONE BEER AT A TIME  ·  FOLLOW @CALZ88  ·  CALFAX 302 NOW SHOWING ON THE OLD SET  ·  LEEDS MATCH HUB IS LIVE  ·  MARCHING ON TOGETHER  ·  ONE BEER AT A TIME  ·  FOLLOW @CALZ88  ·</text></g></svg>
     <rect width="640" height="360" fill="url(#hubSheen)"/>
   </g>
   <circle cx="630" cy="368" r="2.5" fill="#3dff7a"/>
 </svg>'''
 
 def poster_leeds():
-    return '''<svg viewBox="0 0 150 205" role="img" aria-label="Poster: Leeds United Match Hub, coming soon">
+    return '''<svg viewBox="0 0 150 205" role="img" aria-label="Poster: Leeds United Match Hub">
   <rect x="2" y="4" width="146" height="199" rx="2" fill="#f7f2e4"/>
   <rect x="10" y="12" width="130" height="140" fill="#1e3f9a"/>
   <path d="M10 112 L140 74 L140 92 L10 130 Z" fill="#ffcd00"/><path d="M10 121 L140 83 L140 87 L10 125 Z" fill="#ffffff"/>
   <circle cx="75" cy="56" r="22" fill="#ffffff"/><path d="M68 49 l7 -5 l7 5 l-3 8 h-8 z" fill="#1e3f9a"/>''' + ''.join(f'<path d="M75 56 L{75+22*__import__("math").cos(a):.1f} {56+22*__import__("math").sin(a):.1f}" stroke="#1e3f9a" stroke-width="1.2"/>' for a in (0.6, 2.2, 3.8, 5.4)) + '''
   <text x="75" y="172" text-anchor="middle" font-family="Bebas Neue, Impact, sans-serif" font-size="22" fill="#0a1838" letter-spacing="1" textLength="118" lengthAdjust="spacingAndGlyphs">LEEDS UNITED</text>
   <text x="75" y="187" text-anchor="middle" font-family="Bebas Neue, Impact, sans-serif" font-size="11" fill="#1e3f9a" letter-spacing="3">MATCH HUB</text>
-  <g transform="rotate(-14 104 140)"><rect x="70" y="128" width="72" height="22" rx="3" fill="none" stroke="#d22630" stroke-width="2.4"/><text x="106" y="144" text-anchor="middle" font-family="Bebas Neue, Impact, sans-serif" font-size="14" fill="#d22630" letter-spacing="2" textLength="62" lengthAdjust="spacingAndGlyphs">COMING SOON</text></g>
+  <g transform="rotate(-14 104 140)"><rect x="70" y="128" width="72" height="22" rx="3" fill="none" stroke="#1f8a43" stroke-width="2.4"/><text x="106" y="144" text-anchor="middle" font-family="Bebas Neue, Impact, sans-serif" font-size="14" fill="#1f8a43" letter-spacing="2" textLength="62" lengthAdjust="spacingAndGlyphs">ON NOW</text></g>
   <circle cx="75" cy="10" r="3.5" fill="#d22630"/><circle cx="74" cy="9" r="1.2" fill="#fff" opacity=".7"/>
 </svg>'''
 
