@@ -24,7 +24,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat:wght@500;700&family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <style>
-  :root{--navy:#0a1838;--yellow:#ffcd00;--cream:#f7f2e4;--muted:#b8c3dc;--burg:#6e1a2c;--burg2:#4a0f1d;--paper:#f6efdc;--ink:#2a2a35;--line:#cdbf9c;--gold:#d9b45a}
+  :root{--navy:#0a1838;--yellow:#ffcd00;--cream:#f7f2e4;--muted:#b8c3dc;--burg:#1b2b4d;--burg2:#0b1630;--paper:#f6efdc;--ink:#2a2a35;--line:#cdbf9c;--gold:#d9b45a}
   *{box-sizing:border-box;margin:0;padding:0}
   html,body{height:100%}
   body{min-height:100vh;background:radial-gradient(ellipse 90% 60% at 50% 0,#2b417e 0,#13285a 45%,#0a1838 100%);color:var(--cream);font-family:Inter,system-ui,sans-serif;display:flex;flex-direction:column;overflow-x:hidden}
@@ -78,8 +78,9 @@
   .mrz{margin-top:auto;font-family:"Space Mono",monospace;font-size:.62em;letter-spacing:.12em;color:#6f6450;line-height:1.5;white-space:nowrap;overflow:hidden;border-top:1px solid var(--line);padding-top:.45em}
 
   /* cover */
-  .cover{background:linear-gradient(135deg,var(--burg),var(--burg2));color:var(--gold);align-items:center;text-align:center;justify-content:space-between;padding:2.4em 1.5em}
-  .cover::before{content:"";position:absolute;inset:.8em;border:1.5px dashed rgba(217,180,90,.55);border-radius:6px}
+  .cover{background:#0e1a33;color:var(--gold);align-items:center;text-align:center;justify-content:flex-end;padding:0 1em .55em;overflow:hidden}
+  .cover .coverimg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+  .cover .hint{position:relative}
   .cover .t1{font-family:"Bebas Neue",Impact,sans-serif;font-size:1.25em;letter-spacing:.22em;line-height:1.25}
   .cover svg.crest{width:58%;height:auto}
   .cover .t2{font-family:"Bebas Neue",Impact,sans-serif;font-size:2.6em;letter-spacing:.08em;line-height:1}
@@ -162,7 +163,7 @@
   var inks=["red","blue","green","purple"];
   function esc(t){return String(t==null?'':t).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
   function fmtDate(d){if(!d)return'';var x=new Date(d+'T12:00:00');if(isNaN(x))return esc(d);return x.toLocaleDateString('en-GB',{day:'2-digit',month:'short',year:'numeric'}).toUpperCase()}
-  function wm(){return '<div class="wm"><svg viewBox="190 157 700 700"><path fill="#6e1a2c" fill-rule="evenodd" d="'+GLOBE+'"/></svg></div>'}
+  function wm(){return '<div class="wm"><svg viewBox="190 157 700 700"><path fill="#1b2b4d" fill-rule="evenodd" d="'+GLOBE+'"/></svg></div>'}
   function top(label,n){return '<div class="top"><span>'+label+'</span><span class="pno">'+(n<10?'0':'')+n+'</span></div>'}
   function mrz(a,b){var pad=function(s){s=s.toUpperCase().replace(/[^A-Z0-9]+/g,'<');return (s+Array(45).join('<')).slice(0,44).replace(/</g,'&lt;')};return '<div class="mrz">'+pad(a)+'<br>'+pad(b)+'</div>'}
   function pint(full){return '<svg viewBox="0 0 20 28"><path d="M3 4 L17 4 L15 26 L5 26 Z" fill="'+(full?'#e8a317':'none')+'" stroke="#6f6450" stroke-width="1.6" stroke-linejoin="round"/>'+(full?'<path d="M2.5 5 Q4 0 8 2 Q10 -1 13 2 Q17 0 17.5 5 Z" fill="#fff" stroke="#6f6450" stroke-width="1.2"/>':'')+'</svg>'}
@@ -210,7 +211,7 @@
   }
   var INSIDE='<div class="ep">'+wm()+'<div class="own"><span>This passport is the property of</span><b>ROB CALLERY</b><span>If found, please return to the nearest pub.</span></div></div>';
   var pages=[];
-  pages.push({cls:'cover',html:'<div class="t1">UNITED KINGDOM<br>OF ALES</div><svg class="crest" viewBox="0 0 120 110" fill="none" stroke="#d9b45a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><circle cx="60" cy="55" r="44"/><path d="M44 30 L76 30 L72 84 L48 84 Z"/><path d="M43 30 Q45 20 54 23 Q60 15 67 22 Q77 19 77 30"/><path d="M54 44 L54 72" stroke-width="2"/><path d="M16 80 Q4 55 16 30M104 80 Q116 55 104 30" stroke-width="2"/></svg><div><div class="t2">BEER PASSPORT</div><div class="t3">PASSEPORT DE BIÈRE</div></div><div class="chip"></div><div class="hint">tap to open</div>'});
+  pages.push({cls:'cover',html:'<img class="coverimg" src="/beer-passport/cover.webp" alt="Beer Passport cover: a gold coat of arms with two lions holding a pint and a bottle, a crowned pint above a shield of hops, barley, a barrel and waves, and the mottos Good Beer, Good People, Great Places" decoding="async"><div class="hint">tap to open</div>'});
   pages.push({html:wm()+top('PASSPORT · HOLDER',1)+'<div class="idgrid"><div class="photo"><svg viewBox="0 0 100 120"><rect x="38" y="96" width="9" height="24" fill="#0a1838"/><rect x="53" y="96" width="9" height="24" fill="#0a1838"/><rect x="26" y="58" width="48" height="44" rx="14" fill="#ffcd00"/><circle cx="50" cy="36" r="17" fill="#f2b8a6"/></svg></div><div>'+
     '<div class="fld"><div class="k">Surname</div><div class="v">CALLERY</div></div><div class="fld"><div class="k">Given names</div><div class="v">ROB</div></div>'+
     '<div class="fld"><div class="k">Nationality</div><div class="v">LEEDS</div></div><div class="fld"><div class="k">Home ground</div><div class="v">ELLAND ROAD</div></div>'+
