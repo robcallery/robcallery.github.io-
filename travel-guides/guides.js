@@ -4232,122 +4232,6 @@ window.GUIDES = [
     ]
   },
   {
-    "city": "Magic Kingdom",
-    "region": "Walt Disney World",
-    "country": "United States",
-    "colour": "blue",
-    "pint": "~$11–13",
-    "localBeer": "Florida craft (sit-down only)",
-    "bestFor": "Castle, classics & fireworks",
-    "bars": [
-      {
-        "name": "Liberty Tree Tavern",
-        "note": "Liberty Square, colonial-style sit-down with beer"
-      },
-      {
-        "name": "Jungle Navigation Co. Skipper Canteen",
-        "note": "Adventureland, jungle-cruise puns and a cold one"
-      }
-    ],
-    "eat": "A Dole Whip in Adventureland, and a turkey leg on the walk round.",
-    "dontMiss": "Happily Ever After fireworks from Main Street.",
-    "gettingThere": "Monorail or ferry from the Transportation & Ticket Center; Disney buses from the resorts.",
-    "tip": "No bars here - beer is only at the table-service restaurants, so book one for a mid-afternoon sit-down.",
-    "archivedBars": [
-      {
-        "name": "Be Our Guest Restaurant",
-        "note": "Beast's castle, beer and wine with dinner"
-      }
-    ]
-  },
-  {
-    "city": "EPCOT",
-    "region": "Walt Disney World",
-    "country": "United States",
-    "colour": "purple",
-    "pint": "~$10–13",
-    "localBeer": "Rose & Crown cask & world beers",
-    "bestFor": "Drinking around the world",
-    "bars": [
-      {
-        "name": "Rose & Crown Pub",
-        "note": "UK pavilion, Bass, Boddingtons and Guinness"
-      },
-      {
-        "name": "Biergarten",
-        "note": "Germany pavilion, steins and an oompah band"
-      }
-    ],
-    "eat": "Fish and chips at Yorkshire County Fish Shop, round the back of the UK pavilion.",
-    "dontMiss": "Luminous: The Symphony of Us over World Showcase Lagoon.",
-    "gettingThere": "Monorail from the Transportation & Ticket Center, Skyliner from Hollywood Studios, or walk from the BoardWalk.",
-    "tip": "Do World Showcase clockwise from Mexico and finish at the Rose & Crown for the fireworks.",
-    "archivedBars": [
-      {
-        "name": "Block & Hans",
-        "note": "American Adventure kiosk, rotating US craft beer"
-      }
-    ]
-  },
-  {
-    "city": "Hollywood Studios",
-    "region": "Walt Disney World",
-    "country": "United States",
-    "colour": "red",
-    "pint": "~$10–13",
-    "localBeer": "BaseLine's California craft",
-    "bestFor": "Star Wars & thrill rides",
-    "bars": [
-      {
-        "name": "Oga's Cantina",
-        "note": "Galaxy's Edge, Star Wars bar with a droid DJ"
-      },
-      {
-        "name": "BaseLine Tap House",
-        "note": "Grand Avenue, California craft on tap"
-      }
-    ],
-    "eat": "Woody's Lunch Box in Toy Story Land.",
-    "dontMiss": "Fantasmic! at the Hollywood Hills Amphitheater.",
-    "gettingThere": "Skyliner gondola from Epcot and the Skyliner resorts, or the boat from the BoardWalk.",
-    "tip": "Book Oga's ahead - walk-ups wait ages - and grab a pint at BaseLine to dodge the queue.",
-    "archivedBars": [
-      {
-        "name": "Tune-In Lounge",
-        "note": "next to 50's Prime Time Café, old-school bar"
-      }
-    ]
-  },
-  {
-    "city": "Animal Kingdom",
-    "region": "Walt Disney World",
-    "country": "United States",
-    "colour": "green",
-    "pint": "~$10–13",
-    "localBeer": "Safari Amber & African lagers",
-    "bestFor": "Safaris & Pandora",
-    "bars": [
-      {
-        "name": "Nomad Lounge",
-        "note": "Discovery Island, terrace over the river"
-      },
-      {
-        "name": "Dawa Bar",
-        "note": "Harambe, outdoor bar with live African music"
-      }
-    ],
-    "eat": "Satu'li Canteen in Pandora - the best quick-service food at Disney.",
-    "dontMiss": "Kilimanjaro Safaris first thing, when the animals are up.",
-    "gettingThere": "Disney buses from the resorts, or drive - it's out on its own on the west side.",
-    "tip": "Go at opening; the animals and the queues both get lazy by lunch.",
-    "archivedBars": [
-      {
-        "name": "Warung Outpost",
-        "note": "Asia, margaritas and beer on the go"
-      }
-    ]
-  },
-  {
     "city": "Universal Islands of Adventure",
     "region": "Universal Orlando",
     "country": "United States",
@@ -7830,5 +7714,649 @@ window.GUIDES = [
     "football": "Soccer: CPD Y Rhyl 1879 at Belle Vue.",
     "gettingThere": "On the North Wales Coast line.",
     "tip": "Walk the promenade east to the Marine Lake."
+  },
+  {
+    "city": "Magic Kingdom",
+    "region": "Walt Disney World",
+    "country": "United States",
+    "shelf": "disney-parks",
+    "group": "Walt Disney World",
+    "colour": "purple",
+    "pint": "~$12-14 a draught",
+    "localBeer": "Beer with your meal - it is sold at table-service restaurants",
+    "bestFor": "Classic Disney magic",
+    "bars": [
+      {
+        "name": "Jungle Navigation Co. Ltd Skipper Canteen"
+      },
+      {
+        "name": "Be Our Guest Restaurant"
+      }
+    ],
+    "eat": "Fish and chips at Columbia Harbour House.",
+    "dontMiss": "TRON Lightcycle / Run.",
+    "football": "Instead of football: the parades and fireworks.",
+    "gettingThere": "Monorail or ferry from the Transportation and Ticket Center.",
+    "tip": "Beer and wine are only served at the table-service restaurants, so book one."
+  },
+  {
+    "city": "EPCOT",
+    "region": "Walt Disney World",
+    "country": "United States",
+    "shelf": "disney-parks",
+    "group": "Walt Disney World",
+    "colour": "blue",
+    "pint": "~$12.75 (Rose & Crown)",
+    "localBeer": "World Showcase beers - from Harp at the Rose & Crown to Bitburger in Germany",
+    "bestFor": "Global food & culture",
+    "bars": [
+      {
+        "name": "Rose & Crown Pub"
+      },
+      {
+        "name": "Biergarten Restaurant"
+      }
+    ],
+    "eat": "Pastries at Les Halles Boulangerie-Patisserie in France.",
+    "dontMiss": "Spaceship Earth.",
+    "football": "Instead of football: World Showcase entertainment.",
+    "gettingThere": "Monorail, Skyliner, bus, or walk from the nearby resorts.",
+    "tip": "Pace yourself on a World Showcase drinking route - there are 11 countries."
+  },
+  {
+    "city": "Hollywood Studios",
+    "region": "Walt Disney World",
+    "country": "United States",
+    "shelf": "disney-parks",
+    "group": "Walt Disney World",
+    "colour": "teal",
+    "pint": "~$12-14 a draught",
+    "localBeer": "Draught beers vary by bar",
+    "bestFor": "Star Wars & big thrills",
+    "bars": [
+      {
+        "name": "BaseLine Tap House"
+      },
+      {
+        "name": "Oga's Cantina"
+      }
+    ],
+    "eat": "Docking Bay 7 Food and Cargo.",
+    "dontMiss": "Star Wars: Galaxy's Edge.",
+    "football": "Instead of football: the live shows.",
+    "gettingThere": "Skyliner, bus or boat.",
+    "tip": "Plan ahead for Oga's Cantina - booking rules vary."
+  },
+  {
+    "city": "Animal Kingdom",
+    "region": "Walt Disney World",
+    "country": "United States",
+    "shelf": "disney-parks",
+    "group": "Walt Disney World",
+    "colour": "red",
+    "pint": "~$12-14 a draught",
+    "localBeer": "Safari Amber, plus local taps that change",
+    "bestFor": "Wildlife & Pandora",
+    "bars": [
+      {
+        "name": "Dawa Bar"
+      },
+      {
+        "name": "Nomad Lounge"
+      }
+    ],
+    "eat": "Satu'li Canteen in Pandora.",
+    "dontMiss": "Avatar Flight of Passage.",
+    "football": "Instead of football: the animal trails.",
+    "gettingThere": "Disney bus or car.",
+    "tip": "Do the animal trails in the morning, when the animals are most active."
+  },
+  {
+    "city": "Typhoon Lagoon",
+    "region": "Walt Disney World",
+    "country": "United States",
+    "shelf": "disney-parks",
+    "group": "Walt Disney World",
+    "colour": "orange",
+    "pint": "~$12-14 a draught",
+    "localBeer": "Beer and cocktails when the bars are open (seasonal)",
+    "bestFor": "Tropical wave-pool fun",
+    "bars": [
+      {
+        "name": "Let's Go Slurpin'"
+      },
+      {
+        "name": "High 'n Dry"
+      }
+    ],
+    "eat": "Leaning Palms.",
+    "dontMiss": "The Surf Pool.",
+    "football": "Instead of football: the lazy river.",
+    "gettingThere": "Disney transport or car - check it is open first.",
+    "tip": "Opening is seasonal - check the calendar before you go."
+  },
+  {
+    "city": "Blizzard Beach",
+    "region": "Walt Disney World",
+    "country": "United States",
+    "shelf": "disney-parks",
+    "group": "Walt Disney World",
+    "colour": "green",
+    "pint": "~$12-14 a draught",
+    "localBeer": "Beer and cocktails when the bars are open (seasonal)",
+    "bestFor": "Snow-themed waterslides",
+    "bars": [
+      {
+        "name": "Polar Pub"
+      },
+      {
+        "name": "Arctic Expeditions"
+      }
+    ],
+    "eat": "Lottawatta Lodge.",
+    "dontMiss": "Summit Plummet.",
+    "football": "Instead of football: the lazy river.",
+    "gettingThere": "Disney transport or car - check it is open first.",
+    "tip": "The two water parks can take turns to close - check before you go."
+  },
+  {
+    "city": "EPCOT Flower & Garden Festival",
+    "region": "Walt Disney World",
+    "country": "United States",
+    "shelf": "disney-parks",
+    "group": "Walt Disney World",
+    "colour": "purple",
+    "pint": "~$12-14 a draught",
+    "localBeer": "Festival beers - the menu changes every year",
+    "bestFor": "Fresh seasonal flavours",
+    "bars": [
+      {
+        "name": "Florida Fresh"
+      },
+      {
+        "name": "The Citrus Blossom"
+      }
+    ],
+    "eat": "Florida Fresh outdoor kitchen.",
+    "dontMiss": "The gardens and topiaries.",
+    "football": "Instead of football: festival entertainment.",
+    "gettingThere": "Into EPCOT by Skyliner, monorail, bus or on foot.",
+    "tip": "Pick up the current festival passport - booths and menus change each year."
+  },
+  {
+    "city": "EPCOT Food & Wine Festival",
+    "region": "Walt Disney World",
+    "country": "United States",
+    "shelf": "disney-parks",
+    "group": "Walt Disney World",
+    "colour": "blue",
+    "pint": "~$12-14 a draught",
+    "localBeer": "Festival beers - the menu changes every year",
+    "bestFor": "Global food & beer tastings",
+    "bars": [
+      {
+        "name": "Germany marketplace"
+      },
+      {
+        "name": "Brewers Collection"
+      }
+    ],
+    "eat": "The Global Marketplaces.",
+    "dontMiss": "Eat to the Beat concerts.",
+    "football": "Instead of football: festival entertainment.",
+    "gettingThere": "Into EPCOT by Skyliner, monorail, bus or on foot.",
+    "tip": "Pick up the current festival passport - booths and menus change each year."
+  },
+  {
+    "city": "EPCOT Festival of the Arts",
+    "region": "Walt Disney World",
+    "country": "United States",
+    "shelf": "disney-parks",
+    "group": "Walt Disney World",
+    "colour": "teal",
+    "pint": "~$12-14 a draught",
+    "localBeer": "Festival beers - the menu changes every year",
+    "bestFor": "Creative food & art",
+    "bars": [
+      {
+        "name": "The Deconstructed Dish"
+      },
+      {
+        "name": "Pop Eats!"
+      }
+    ],
+    "eat": "The festival food studios.",
+    "dontMiss": "Disney on Broadway concerts.",
+    "football": "Instead of football: festival entertainment.",
+    "gettingThere": "Into EPCOT by Skyliner, monorail, bus or on foot.",
+    "tip": "Pick up the current festival passport - booths and menus change each year."
+  },
+  {
+    "city": "EPCOT Festival of the Holidays",
+    "region": "Walt Disney World",
+    "country": "United States",
+    "shelf": "disney-parks",
+    "group": "Walt Disney World",
+    "colour": "red",
+    "pint": "~$12-14 a draught",
+    "localBeer": "Festival beers - the menu changes every year",
+    "bestFor": "Holiday food from around the world",
+    "bars": [
+      {
+        "name": "Holiday Kitchen - Germany"
+      },
+      {
+        "name": "Holiday Kitchen - UK"
+      }
+    ],
+    "eat": "The Holiday Kitchens around World Showcase.",
+    "dontMiss": "The Candlelight Processional.",
+    "football": "Instead of football: festival entertainment.",
+    "gettingThere": "Into EPCOT by Skyliner, monorail, bus or on foot.",
+    "tip": "Pick up the current festival passport - booths and menus change each year."
+  },
+  {
+    "city": "Disney Springs",
+    "region": "Walt Disney World",
+    "country": "United States",
+    "shelf": "disney-parks",
+    "group": "Walt Disney World",
+    "colour": "orange",
+    "pint": "~$12-14 a draught",
+    "localBeer": "Florida craft beer on rotating taps",
+    "bestFor": "Waterfront dining & nightlife",
+    "bars": [
+      {
+        "name": "Jock Lindsey's Hangar Bar"
+      },
+      {
+        "name": "City Works Eatery & Pour House"
+      }
+    ],
+    "eat": "The BOATHOUSE, or Chicken Guy!",
+    "dontMiss": "The waterfront and World of Disney.",
+    "football": "Instead of football: live music.",
+    "gettingThere": "Disney bus, car or rideshare - no park ticket needed.",
+    "tip": "Go after sunset for the waterfront at its best."
+  },
+  {
+    "city": "Disneyland Park, California",
+    "region": "Disneyland Resort",
+    "country": "United States",
+    "shelf": "disney-parks",
+    "group": "Disneyland Resort",
+    "colour": "green",
+    "localBeer": "Beer is sold at a few spots - fewer than next door",
+    "bestFor": "The original Disney park",
+    "bars": [
+      {
+        "name": "Oga's Cantina"
+      },
+      {
+        "name": "Blue Bayou Restaurant"
+      }
+    ],
+    "eat": "Docking Bay 7 Food and Cargo.",
+    "dontMiss": "Pirates of the Caribbean.",
+    "football": "Instead of football: Fantasmic!",
+    "gettingThere": "Walk in from the resort entrances.",
+    "tip": "There are far fewer places to get a drink here than at California Adventure."
+  },
+  {
+    "city": "Disney California Adventure",
+    "region": "Disneyland Resort",
+    "country": "United States",
+    "shelf": "disney-parks",
+    "group": "Disneyland Resort",
+    "colour": "purple",
+    "localBeer": "California craft beer",
+    "bestFor": "Pixar & California vibes",
+    "bars": [
+      {
+        "name": "Lamplight Lounge"
+      },
+      {
+        "name": "Carthay Circle Lounge"
+      }
+    ],
+    "eat": "Pym Test Kitchen.",
+    "dontMiss": "Radiator Springs Racers.",
+    "football": "Instead of football: World of Color.",
+    "gettingThere": "Walk in from the resort entrances.",
+    "tip": "Explore the food and drink on Pixar Pier."
+  },
+  {
+    "city": "California Adventure Food & Wine Festival",
+    "region": "Disneyland Resort",
+    "country": "United States",
+    "shelf": "disney-parks",
+    "group": "Disneyland Resort",
+    "colour": "blue",
+    "pint": "~$17 a craft beer (2026 festival)",
+    "localBeer": "California craft beer and wine",
+    "bestFor": "California flavours & craft drinks",
+    "bars": [
+      {
+        "name": "California Craft Brews"
+      },
+      {
+        "name": "Paradise Beer Garden"
+      }
+    ],
+    "eat": "The festival marketplaces.",
+    "dontMiss": "The festival marketplaces.",
+    "football": "Instead of football: food and wine demonstrations.",
+    "gettingThere": "Disneyland Resort transport.",
+    "tip": "A four-beer California flight cost $18.50 in 2026 - better value than single pours."
+  },
+  {
+    "city": "California Adventure Festival of Holidays",
+    "region": "Disneyland Resort",
+    "country": "United States",
+    "shelf": "disney-parks",
+    "group": "Disneyland Resort",
+    "colour": "teal",
+    "localBeer": "Seasonal beer and cocktails",
+    "bestFor": "Holiday food & music",
+    "eat": "The Festive Foods Marketplaces.",
+    "dontMiss": "The holiday entertainment.",
+    "football": "Instead of football: seasonal shows.",
+    "gettingThere": "Disneyland Resort transport.",
+    "tip": "Use the current year's festival guide - the marketplaces change."
+  },
+  {
+    "city": "Downtown Disney District",
+    "region": "Disneyland Resort",
+    "country": "United States",
+    "shelf": "disney-parks",
+    "group": "Disneyland Resort",
+    "colour": "red",
+    "localBeer": "California craft beer",
+    "bestFor": "Open-air dining & shopping",
+    "bars": [
+      {
+        "name": "Ballast Point Brewing"
+      },
+      {
+        "name": "Splitsville Luxury Lanes"
+      }
+    ],
+    "eat": "Naples Ristorante e Bar.",
+    "dontMiss": "The Downtown Disney promenade.",
+    "football": "Instead of football: live entertainment.",
+    "gettingThere": "Walk from the resort hotels or park entrances - no park ticket needed.",
+    "tip": "Allow time for the security check on the way in."
+  },
+  {
+    "city": "Disneyland Park, Paris",
+    "region": "Disneyland Paris",
+    "country": "France",
+    "shelf": "disney-parks",
+    "group": "Disneyland Paris",
+    "colour": "orange",
+    "pint": "€8.80 a 50cl",
+    "localBeer": "French and European lagers",
+    "bestFor": "Fairytales & European Disney",
+    "bars": [
+      {
+        "name": "Captain Jack's Restaurant"
+      },
+      {
+        "name": "Auberge de Cendrillon"
+      }
+    ],
+    "eat": "Casa de Coco - Restaurante de Familia.",
+    "dontMiss": "Big Thunder Mountain.",
+    "football": "Instead of football: the night-time spectacular.",
+    "gettingThere": "RER A to Marne-la-Vallée-Chessy.",
+    "tip": "Not every restaurant serves alcohol - check before you sit down."
+  },
+  {
+    "city": "Disney Adventure World",
+    "region": "Disneyland Paris",
+    "country": "France",
+    "shelf": "disney-parks",
+    "group": "Disneyland Paris",
+    "colour": "green",
+    "pint": "€8.80 a 50cl",
+    "localBeer": "Beer at the park restaurants",
+    "bestFor": "Cinema, Frozen & Pixar",
+    "bars": [
+      {
+        "name": "Bistrot Chez Rémy"
+      },
+      {
+        "name": "Stark Factory"
+      }
+    ],
+    "eat": "PYM Kitchen.",
+    "dontMiss": "World of Frozen.",
+    "football": "Instead of football: the shows and themed lands.",
+    "gettingThere": "RER A to Marne-la-Vallée-Chessy.",
+    "tip": "Check which lands are open - the park has been rebuilding."
+  },
+  {
+    "city": "Le Rendez-vous Gourmand",
+    "region": "Disneyland Paris",
+    "country": "France",
+    "shelf": "disney-parks",
+    "group": "Disneyland Paris",
+    "colour": "purple",
+    "pint": "€8.80 a 50cl",
+    "localBeer": "French regional beers and wines",
+    "bestFor": "French regional food chalets",
+    "eat": "The regional food chalets.",
+    "dontMiss": "The seasonal food village.",
+    "football": "Instead of football: regional food tastings.",
+    "gettingThere": "RER A to Marne-la-Vallée-Chessy.",
+    "tip": "Check the event is running this season before you plan around it."
+  },
+  {
+    "city": "L'Hiver Gourmand",
+    "region": "Disneyland Paris",
+    "country": "France",
+    "shelf": "disney-parks",
+    "group": "Disneyland Paris",
+    "colour": "blue",
+    "pint": "€8.80 a 50cl",
+    "localBeer": "Mulled wine and winter drinks",
+    "bestFor": "Winter treats & festive chalets",
+    "eat": "The winter food chalets.",
+    "dontMiss": "The festive seasonal village.",
+    "football": "Instead of football: the Christmas celebrations.",
+    "gettingThere": "RER A to Marne-la-Vallée-Chessy.",
+    "tip": "Check the dates and where in the resort it is held this year."
+  },
+  {
+    "city": "Disney Village",
+    "region": "Disneyland Paris",
+    "country": "France",
+    "shelf": "disney-parks",
+    "group": "Disneyland Paris",
+    "colour": "teal",
+    "localBeer": "French beer and a rotating draught selection",
+    "bestFor": "Food and drink after the parks",
+    "bars": [
+      {
+        "name": "Sports Bar & Lounge"
+      },
+      {
+        "name": "Billy Bob's Country Western Saloon"
+      }
+    ],
+    "eat": "Annette's Diner.",
+    "dontMiss": "Lake Disney and the Village.",
+    "football": "Instead of football: entertainment and dining.",
+    "gettingThere": "Walk from Marne-la-Vallée-Chessy station or the parks - no park ticket needed.",
+    "tip": "Parts of the Village are being redeveloped - check what is open."
+  },
+  {
+    "city": "Tokyo Disneyland",
+    "region": "Tokyo Disney Resort",
+    "country": "Japan",
+    "shelf": "disney-parks",
+    "group": "Tokyo Disney Resort",
+    "colour": "red",
+    "localBeer": "Alcohol is only served at some restaurants",
+    "bestFor": "Classic Disney in Japan",
+    "bars": [
+      {
+        "name": "La Taverne de Gaston"
+      },
+      {
+        "name": "Eastside Cafe"
+      }
+    ],
+    "eat": "Queen of Hearts Banquet Hall.",
+    "dontMiss": "Enchanted Tale of Beauty and the Beast.",
+    "football": "Instead of football: the seasonal parades.",
+    "gettingThere": "JR to Maihama, then the Disney Resort Line.",
+    "tip": "Check the drinks menu before choosing a restaurant."
+  },
+  {
+    "city": "Tokyo DisneySea",
+    "region": "Tokyo Disney Resort",
+    "country": "Japan",
+    "shelf": "disney-parks",
+    "group": "Tokyo Disney Resort",
+    "colour": "orange",
+    "pint": "¥1,000 (Kirin draught)",
+    "localBeer": "Japanese beers - Kirin on draught",
+    "bestFor": "Unique nautical worlds",
+    "bars": [
+      {
+        "name": "Teddy Roosevelt Lounge"
+      },
+      {
+        "name": "Barnacle Bill's"
+      }
+    ],
+    "eat": "Magellan's.",
+    "dontMiss": "Journey to the Center of the Earth.",
+    "football": "Instead of football: the harbour shows.",
+    "gettingThere": "JR to Maihama, then the Disney Resort Line.",
+    "tip": "Reserve the popular table-service restaurants early."
+  },
+  {
+    "city": "DisneySea Food & Wine Festival",
+    "region": "Tokyo Disney Resort",
+    "country": "Japan",
+    "shelf": "disney-parks",
+    "group": "Tokyo Disney Resort",
+    "colour": "green",
+    "localBeer": "Japanese and international drinks",
+    "bestFor": "Global flavours across themed ports",
+    "eat": "The festival food stands and restaurants.",
+    "dontMiss": "The themed ports.",
+    "football": "Instead of football: seasonal entertainment.",
+    "gettingThere": "JR to Maihama, then the Disney Resort Line.",
+    "tip": "Use the official festival menu - the Japanese version is the most complete."
+  },
+  {
+    "city": "Ikspiari",
+    "region": "Tokyo Disney Resort",
+    "country": "Japan",
+    "shelf": "disney-parks",
+    "group": "Tokyo Disney Resort",
+    "colour": "purple",
+    "localBeer": "Japanese craft beer on a rotating selection",
+    "bestFor": "Shopping & dining outside the parks",
+    "bars": [
+      {
+        "name": "Roti's House"
+      },
+      {
+        "name": "TGI Fridays Ikspiari"
+      }
+    ],
+    "eat": "Japanese restaurants inside Ikspiari.",
+    "dontMiss": "The Ikspiari shopping streets.",
+    "football": "Instead of football: the cinema and shops.",
+    "gettingThere": "Walk from JR Maihama Station - no park ticket needed.",
+    "tip": "Look out for seasonal dining promotions."
+  },
+  {
+    "city": "Hong Kong Disneyland",
+    "region": "Hong Kong Disneyland Resort",
+    "country": "Hong Kong",
+    "shelf": "disney-parks",
+    "group": "Hong Kong Disneyland Resort",
+    "colour": "blue",
+    "localBeer": "Local and imported beer where it is sold",
+    "bestFor": "Frozen & Mystic Manor",
+    "bars": [
+      {
+        "name": "Explorer's Club Restaurant"
+      },
+      {
+        "name": "Royal Banquet Hall"
+      }
+    ],
+    "eat": "Tahitian Terrace.",
+    "dontMiss": "Mystic Manor.",
+    "football": "Instead of football: the castle shows.",
+    "gettingThere": "MTR Disneyland Resort Line from Sunny Bay.",
+    "tip": "Check menus - not every restaurant sells alcohol."
+  },
+  {
+    "city": "Inspiration Lake",
+    "region": "Hong Kong Disneyland Resort",
+    "country": "Hong Kong",
+    "shelf": "disney-parks",
+    "group": "Hong Kong Disneyland Resort",
+    "colour": "teal",
+    "localBeer": "No bar here - bring your own refreshments",
+    "bestFor": "Lakeside walks & relaxation",
+    "eat": "Bring a picnic - check what is open on site.",
+    "dontMiss": "The lake and its landscaped paths.",
+    "football": "Instead of football: walking and pedal boats.",
+    "gettingThere": "Local transport or taxi - check opening hours first.",
+    "tip": "This is a lakeside park, not a bar - come for a quiet walk."
+  },
+  {
+    "city": "Shanghai Disneyland",
+    "region": "Shanghai Disney Resort",
+    "country": "China",
+    "shelf": "disney-parks",
+    "group": "Shanghai Disney Resort",
+    "colour": "red",
+    "localBeer": "Beer at selected restaurants",
+    "bestFor": "TRON & Zootopia",
+    "bars": [
+      {
+        "name": "Barbossa's Bounty"
+      },
+      {
+        "name": "Royal Banquet Hall"
+      }
+    ],
+    "eat": "Wandering Moon Restaurant.",
+    "dontMiss": "TRON Lightcycle Power Run.",
+    "football": "Instead of football: Zootopia.",
+    "gettingThere": "Shanghai Metro Line 11 to Disney Resort.",
+    "tip": "Check the park app for what is open today."
+  },
+  {
+    "city": "Disneytown",
+    "region": "Shanghai Disney Resort",
+    "country": "China",
+    "shelf": "disney-parks",
+    "group": "Shanghai Disney Resort",
+    "colour": "orange",
+    "localBeer": "Chinese and imported beers",
+    "bestFor": "Lakeside dining & shopping",
+    "bars": [
+      {
+        "name": "The Cheesecake Factory"
+      },
+      {
+        "name": "Blue Frog"
+      }
+    ],
+    "eat": "The restaurants in Disneytown.",
+    "dontMiss": "The lakeside promenade.",
+    "football": "Instead of football: the shops and the theatre.",
+    "gettingThere": "Metro Line 11 to Disney Resort - no park ticket needed.",
+    "tip": "Check entry routes and opening hours."
   }
 ];
