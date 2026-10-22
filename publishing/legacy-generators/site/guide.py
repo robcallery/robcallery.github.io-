@@ -149,7 +149,7 @@ JS_PAGES = r'''
     var toc=ch.map(function(r){if(r.grp!=null)return '<li class="grp">'+esc(r.grp)+'</li>';var n=C+1+F+2*r.i;return '<li><b>'+esc(r.g.city)+'</b><span class="c">'+esc(r.g.region||r.g.country)+'</span><span class="p">'+(n<10?'0':'')+n+'</span></li>'}).join('');
     pages.push({cls:'contents',html:wm()+top('TRAVEL GUIDES · CONTENTS',ci+1)+(ci===0?'<h2>Where I\'ve been</h2>':'<h2 class="cont">Where I\'ve been <small>(cont.)</small></h2>')+
       (beers.length?'<ul class="toc">'+toc+'</ul>':'<p class="legend" style="font-size:.8em">The first guides are being written. Check back soon!</p>')+
-      (ci===0?'<p class="legend">Every guide is pint-first: what a pint costs, the local beer, the local Spoons where there is one, the bars worth the walk, where to eat, and where to watch the football. Rated on whether I\'d go back.</p>':'')+
+      (ci===0?'<p class="legend">Every guide is pint-first: what a pint costs, the local beer, the pubs worth the walk, where to eat, and where to watch the football. Rated on whether I\'d go back.</p>':'')+
       '<div class="foot"><span>ROB CALLERY</span><span>EDITION '+new Date().getFullYear()+'</span></div>'});
   });
   if(F) pages.push({cls:'blank',html:wm()+top('TRAVEL GUIDES · NOTES',pages.length)+'<div class="biro" style="margin-top:2em">Notes, beer mats and receipts go here…</div>'});
