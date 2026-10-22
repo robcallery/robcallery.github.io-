@@ -119,6 +119,16 @@
   .cards{transition:transform .35s cubic-bezier(.2,.8,.2,1.2)}
   .cards:hover,.cards:focus-visible{transform:translateY(-16px)}
   .hot:focus-visible{outline:3px solid #fff}
+  .pl .body{transform-box:fill-box;transform-origin:50% 100%}
+  .pl .body.kick{animation:kick .35s ease-out}
+  @keyframes kick{30%{transform:translateY(-3px) rotate(-6deg)}100%{transform:none}}
+  .tvlink{transition:transform .3s ease,filter .3s ease;transform-box:fill-box;transform-origin:50% 100%}
+  .tvlink:hover,.tvlink:focus-visible{transform:translateY(-8px) scale(1.03);filter:drop-shadow(0 0 18px rgba(255,205,0,.55))}
+  .bmsg{transition:opacity .35s ease,transform .35s ease;transform-box:fill-box}
+  .bmsg.out{opacity:0;transform:translateY(-14px)}
+  .bbg{transition:fill .35s ease}
+  .board[href]{cursor:pointer}
+  .board[href]:hover .bbg,.board[href]:focus-visible .bbg{filter:brightness(1.25)}
   .spots{display:flex;justify-content:center;gap:24px;flex-wrap:wrap;max-width:1200px;margin:26px auto 60px;padding:0 16px}
   .spot{text-decoration:none;background:var(--cream);color:var(--navy);border-radius:10px;padding:12px 18px;min-width:260px;max-width:360px;box-shadow:0 6px 16px rgba(0,0,0,.35);transition:background .2s}
   .spot h2{font-family:"Bebas Neue",Impact,sans-serif;font-weight:400;font-size:1.7rem;letter-spacing:.05em;line-height:1}

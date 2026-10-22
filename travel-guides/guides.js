@@ -4763,5 +4763,1078 @@ window.GUIDES = [
     "dontMiss": "The Narita Airport Ale - only brewed for the airport.",
     "gettingThere": "Narita Express or Skyliner into Tokyo, about an hour.",
     "tip": "Get a flight at the Beer Flight Cafe - it's the only place to try the Narita Airport Ale."
+  },
+  {
+    "city": "Hartford",
+    "region": "Connecticut",
+    "country": "United States",
+    "shelf": "us-capitals",
+    "group": "Northeast",
+    "pint": "~$7.00",
+    "localBeer": "Thomas Hooker Brewing",
+    "bestFor": "Literary history",
+    "bars": [
+      {
+        "name": "City Steam Brewery"
+      },
+      {
+        "name": "Thomas Hooker Brewery at Colt"
+      }
+    ],
+    "eat": "New Haven-style pizza",
+    "dontMiss": "Mark Twain House",
+    "colour": "red"
+  },
+  {
+    "city": "Augusta",
+    "region": "Maine",
+    "country": "United States",
+    "shelf": "us-capitals",
+    "group": "Northeast",
+    "pint": "~$7.16",
+    "localBeer": "Cushnoc Brewing",
+    "bestFor": "Riverside New England",
+    "bars": [
+      {
+        "name": "Cushnoc Brewing"
+      },
+      {
+        "name": "State Lunch"
+      }
+    ],
+    "eat": "Lobster roll",
+    "dontMiss": "Maine State Museum",
+    "colour": "blue"
+  },
+  {
+    "city": "Boston",
+    "region": "Massachusetts",
+    "country": "United States",
+    "shelf": "us-capitals",
+    "group": "Northeast",
+    "pint": "~$7.67",
+    "localBeer": "Samuel Adams Boston Brewery",
+    "bestFor": "History & sport",
+    "bars": [
+      {
+        "name": "Trillium Brewing"
+      },
+      {
+        "name": "Harpoon Brewery"
+      }
+    ],
+    "eat": "Clam chowder",
+    "dontMiss": "Freedom Trail",
+    "colour": "green"
+  },
+  {
+    "city": "Concord",
+    "region": "New Hampshire",
+    "country": "United States",
+    "shelf": "us-capitals",
+    "group": "Northeast",
+    "pint": "~$6.83",
+    "localBeer": "Concord Craft Brewing",
+    "bestFor": "Historic New England",
+    "bars": [
+      {
+        "name": "Concord Craft Brewing"
+      },
+      {
+        "name": "Lithermans Brewing Company"
+      }
+    ],
+    "eat": "Apple cider doughnuts",
+    "dontMiss": "New Hampshire State House",
+    "colour": "orange"
+  },
+  {
+    "city": "Trenton",
+    "region": "New Jersey",
+    "country": "United States",
+    "shelf": "us-capitals",
+    "group": "Northeast",
+    "pint": "~$6.81",
+    "localBeer": "River Horse Brewing (region)",
+    "bestFor": "Revolutionary history",
+    "bars": [
+      {
+        "name": "Trenton Social"
+      },
+      {
+        "name": "1911 Smokehouse Bar & Grill"
+      }
+    ],
+    "eat": "Pork roll sandwich",
+    "dontMiss": "Old Barracks Museum",
+    "colour": "purple"
+  },
+  {
+    "city": "Albany",
+    "region": "New York",
+    "country": "United States",
+    "shelf": "us-capitals",
+    "group": "Northeast",
+    "pint": "~$7.97",
+    "localBeer": "Nine Pin Cider (not beer); Common Roots regional",
+    "bestFor": "Empire State history",
+    "bars": [
+      {
+        "name": "Fort Orange Brewing"
+      },
+      {
+        "name": "Nine Pin Cider Works"
+      }
+    ],
+    "eat": "Albany-style steamed hams (regional)",
+    "dontMiss": "New York State Museum",
+    "colour": "teal"
+  },
+  {
+    "city": "Harrisburg",
+    "region": "Pennsylvania",
+    "country": "United States",
+    "shelf": "us-capitals",
+    "group": "Northeast",
+    "pint": "~$6.00",
+    "localBeer": "Troegs Independent Brewing",
+    "bestFor": "Riverfront & history",
+    "bars": [
+      {
+        "name": "Tröegs Independent Brewing"
+      },
+      {
+        "name": "Zeroday Brewing Company"
+      }
+    ],
+    "eat": "Pennsylvania Dutch pretzels",
+    "dontMiss": "Pennsylvania State Capitol",
+    "colour": "red"
+  },
+  {
+    "city": "Providence",
+    "region": "Rhode Island",
+    "country": "United States",
+    "shelf": "us-capitals",
+    "group": "Northeast",
+    "pint": "~$6.74",
+    "localBeer": "Narragansett Beer",
+    "bestFor": "Food & art",
+    "bars": [
+      {
+        "name": "Long Live Beerworks"
+      },
+      {
+        "name": "Moniker Brewery"
+      }
+    ],
+    "eat": "Stuffies (stuffed clams)",
+    "dontMiss": "RISD Museum",
+    "colour": "blue"
+  },
+  {
+    "city": "Montpelier",
+    "region": "Vermont",
+    "country": "United States",
+    "shelf": "us-capitals",
+    "group": "Northeast",
+    "pint": "~$7.26",
+    "localBeer": "Three Penny Taproom (beer bar)",
+    "bestFor": "Small-town charm",
+    "bars": [
+      {
+        "name": "Three Penny Taproom"
+      },
+      {
+        "name": "Hugo’s Bar & Grill"
+      }
+    ],
+    "eat": "Maple creemee",
+    "dontMiss": "Vermont State House",
+    "colour": "green"
+  },
+  {
+    "city": "Springfield",
+    "region": "Illinois",
+    "country": "United States",
+    "shelf": "us-capitals",
+    "group": "Midwest",
+    "pint": "~$6.41",
+    "localBeer": "Obed & Isaac's",
+    "bestFor": "Lincoln history",
+    "bars": [
+      {
+        "name": "Obed & Isaac’s Microbrewery"
+      },
+      {
+        "name": "Buzz Bomb Brewing Co."
+      }
+    ],
+    "eat": "Horseshoe sandwich",
+    "dontMiss": "Lincoln Home National Historic Site",
+    "colour": "orange"
+  },
+  {
+    "city": "Indianapolis",
+    "region": "Indiana",
+    "country": "United States",
+    "shelf": "us-capitals",
+    "group": "Midwest",
+    "pint": "~$5.79",
+    "localBeer": "Sun King Brewing",
+    "bestFor": "Motorsport & sport",
+    "bars": [
+      {
+        "name": "Sun King Brewing"
+      },
+      {
+        "name": "Metazoa Brewing Company"
+      }
+    ],
+    "eat": "Pork tenderloin sandwich",
+    "dontMiss": "Indianapolis Motor Speedway",
+    "colour": "purple"
+  },
+  {
+    "city": "Des Moines",
+    "region": "Iowa",
+    "country": "United States",
+    "shelf": "us-capitals",
+    "group": "Midwest",
+    "pint": "~$5.29",
+    "localBeer": "Confluence Brewing",
+    "bestFor": "Art & food markets",
+    "bars": [
+      {
+        "name": "Confluence Brewing"
+      },
+      {
+        "name": "Exile Brewing Company"
+      }
+    ],
+    "eat": "Pork tenderloin",
+    "dontMiss": "Pappajohn Sculpture Park",
+    "colour": "teal"
+  },
+  {
+    "city": "Topeka",
+    "region": "Kansas",
+    "country": "United States",
+    "shelf": "us-capitals",
+    "group": "Midwest",
+    "pint": "~$5.12",
+    "localBeer": "Blind Tiger Brewery",
+    "bestFor": "Prairie history",
+    "bars": [
+      {
+        "name": "Blind Tiger Brewery"
+      },
+      {
+        "name": "Iron Rail Brewing"
+      }
+    ],
+    "eat": "Kansas barbecue",
+    "dontMiss": "Brown v Board of Education National Historical Park",
+    "colour": "red"
+  },
+  {
+    "city": "Lansing",
+    "region": "Michigan",
+    "country": "United States",
+    "shelf": "us-capitals",
+    "group": "Midwest",
+    "pint": "~$5.44",
+    "localBeer": "Lansing Brewing Company",
+    "bestFor": "College-town breweries",
+    "bars": [
+      {
+        "name": "Lansing Brewing Company"
+      },
+      {
+        "name": "Ozone’s Brewhouse"
+      }
+    ],
+    "eat": "Michigan pasty",
+    "dontMiss": "Michigan State Capitol",
+    "colour": "blue"
+  },
+  {
+    "city": "Saint Paul",
+    "region": "Minnesota",
+    "country": "United States",
+    "shelf": "us-capitals",
+    "group": "Midwest",
+    "pint": "~$6.43",
+    "localBeer": "Summit Brewing",
+    "bestFor": "Victorian streets & culture",
+    "bars": [
+      {
+        "name": "Summit Brewing"
+      },
+      {
+        "name": "Bad Weather Brewing Company"
+      }
+    ],
+    "eat": "Juicy Lucy burger",
+    "dontMiss": "Cathedral of Saint Paul",
+    "colour": "green"
+  },
+  {
+    "city": "Jefferson City",
+    "region": "Missouri",
+    "country": "United States",
+    "shelf": "us-capitals",
+    "group": "Midwest",
+    "pint": "~$5.70",
+    "localBeer": "Prison Brews",
+    "bestFor": "Riverfront history",
+    "bars": [
+      {
+        "name": "Prison Brews"
+      },
+      {
+        "name": "Last Flight Brewing Company"
+      }
+    ],
+    "eat": "Toasted ravioli",
+    "dontMiss": "Missouri State Capitol",
+    "colour": "orange"
+  },
+  {
+    "city": "Lincoln, Nebraska",
+    "region": "Nebraska",
+    "country": "United States",
+    "shelf": "us-capitals",
+    "group": "Midwest",
+    "pint": "~$5.57",
+    "localBeer": "Zipline Brewing",
+    "bestFor": "College football",
+    "bars": [
+      {
+        "name": "Zipline Brewing"
+      },
+      {
+        "name": "Boiler Brewing Company"
+      }
+    ],
+    "eat": "Runza",
+    "dontMiss": "Sunken Gardens",
+    "colour": "purple"
+  },
+  {
+    "city": "Bismarck",
+    "region": "North Dakota",
+    "country": "United States",
+    "shelf": "us-capitals",
+    "group": "Midwest",
+    "pint": "~$5.40",
+    "localBeer": "Laughing Sun Brewing",
+    "bestFor": "Prairie & river scenery",
+    "bars": [
+      {
+        "name": "Laughing Sun Brewing"
+      },
+      {
+        "name": "Bismarck Brewing"
+      }
+    ],
+    "eat": "Knoephla soup",
+    "dontMiss": "North Dakota Heritage Center",
+    "colour": "teal"
+  },
+  {
+    "city": "Columbus",
+    "region": "Ohio",
+    "country": "United States",
+    "shelf": "us-capitals",
+    "group": "Midwest",
+    "pint": "~$5.37",
+    "localBeer": "Land-Grant Brewing",
+    "bestFor": "Arts districts & sport",
+    "bars": [
+      {
+        "name": "Land-Grant Brewing"
+      },
+      {
+        "name": "Seventh Son Brewing"
+      }
+    ],
+    "eat": "Buckeye candy",
+    "dontMiss": "Short North Arts District",
+    "colour": "red"
+  },
+  {
+    "city": "Pierre",
+    "region": "South Dakota",
+    "country": "United States",
+    "shelf": "us-capitals",
+    "group": "Midwest",
+    "pint": "~$5.22",
+    "localBeer": "Dakota Point Brewing (region)",
+    "bestFor": "Missouri River outdoors",
+    "bars": [
+      {
+        "name": "St Charles Lounge"
+      },
+      {
+        "name": "Jake’s Good Times Place"
+      }
+    ],
+    "eat": "Chislic",
+    "dontMiss": "South Dakota State Capitol",
+    "colour": "blue"
+  },
+  {
+    "city": "Madison",
+    "region": "Wisconsin",
+    "country": "United States",
+    "shelf": "us-capitals",
+    "group": "Midwest",
+    "pint": "~$5.17",
+    "localBeer": "Great Dane Pub & Brewing",
+    "bestFor": "Lakes & university life",
+    "bars": [
+      {
+        "name": "Great Dane Pub & Brewing"
+      },
+      {
+        "name": "The Old Fashioned"
+      }
+    ],
+    "eat": "Cheese curds",
+    "dontMiss": "Wisconsin State Capitol",
+    "colour": "green"
+  },
+  {
+    "city": "Montgomery",
+    "region": "Alabama",
+    "country": "United States",
+    "shelf": "us-capitals",
+    "group": "South",
+    "pint": "~$5.37",
+    "localBeer": "Common Bond Brewers",
+    "bestFor": "Civil rights history",
+    "bars": [
+      {
+        "name": "Common Bond Brewers"
+      },
+      {
+        "name": "Hilltop Public House"
+      }
+    ],
+    "eat": "Alabama-style barbecue",
+    "dontMiss": "Rosa Parks Museum",
+    "colour": "orange"
+  },
+  {
+    "city": "Little Rock",
+    "region": "Arkansas",
+    "country": "United States",
+    "shelf": "us-capitals",
+    "group": "South",
+    "pint": "~$5.44",
+    "localBeer": "Lost Forty Brewing",
+    "bestFor": "Riverfront & civil rights",
+    "bars": [
+      {
+        "name": "Lost Forty Brewing"
+      },
+      {
+        "name": "Flyway Brewing"
+      }
+    ],
+    "eat": "Arkansas barbecue",
+    "dontMiss": "Little Rock Central High School",
+    "colour": "purple"
+  },
+  {
+    "city": "Dover, Delaware",
+    "region": "Delaware",
+    "country": "United States",
+    "shelf": "us-capitals",
+    "group": "South",
+    "pint": "~$5.96",
+    "localBeer": "Fordham & Dominion",
+    "bestFor": "Colonial history",
+    "bars": [
+      {
+        "name": "Rail Haus Beer Garden"
+      },
+      {
+        "name": "Fordham & Dominion Brewing"
+      }
+    ],
+    "eat": "Scrapple",
+    "dontMiss": "First State Heritage Park",
+    "colour": "teal"
+  },
+  {
+    "city": "Washington, D.C.",
+    "region": "District of Columbia",
+    "country": "United States",
+    "shelf": "us-capitals",
+    "group": "South",
+    "localBeer": "DC Brau – The Public / Right Proper",
+    "bestFor": "Monuments, museums & history",
+    "bars": [
+      {
+        "name": "Bluejacket"
+      },
+      {
+        "name": "Right Proper Brewing Company"
+      }
+    ],
+    "eat": "Half-smoke at Ben’s Chili Bowl",
+    "dontMiss": "National Mall & Smithsonian museums",
+    "football": "American football: Washington Commanders (NFL, play in Maryland). Soccer: D.C. United (MLS).",
+    "gettingThere": "Fly into DCA, IAD or BWI; use Metrorail or Amtrak to Union Station.",
+    "tip": "Many Smithsonian museums are free; check timed-entry requirements.",
+    "colour": "red"
+  },
+  {
+    "city": "Tallahassee",
+    "region": "Florida",
+    "country": "United States",
+    "shelf": "us-capitals",
+    "group": "South",
+    "pint": "~$6.44",
+    "localBeer": "Proof Brewing",
+    "bestFor": "College-town energy",
+    "bars": [
+      {
+        "name": "Proof Brewing"
+      },
+      {
+        "name": "Ology Brewing"
+      }
+    ],
+    "eat": "Southern fried chicken",
+    "dontMiss": "Cascades Park",
+    "colour": "blue"
+  },
+  {
+    "city": "Atlanta",
+    "region": "Georgia",
+    "country": "United States",
+    "shelf": "us-capitals",
+    "group": "South",
+    "pint": "~$6.23",
+    "localBeer": "SweetWater Brewing",
+    "bestFor": "Music & civil rights",
+    "bars": [
+      {
+        "name": "SweetWater Brewing"
+      },
+      {
+        "name": "Monday Night Brewing"
+      }
+    ],
+    "eat": "Lemon pepper wings",
+    "dontMiss": "Martin Luther King Jr National Historical Park",
+    "colour": "green"
+  },
+  {
+    "city": "Frankfort",
+    "region": "Kentucky",
+    "country": "United States",
+    "shelf": "us-capitals",
+    "group": "South",
+    "pint": "~$5.58",
+    "localBeer": "West Sixth Farm",
+    "bestFor": "Bourbon country",
+    "bars": [
+      {
+        "name": "West Sixth Farm"
+      },
+      {
+        "name": "Sig Luscher Brewery"
+      }
+    ],
+    "eat": "Hot Brown sandwich",
+    "dontMiss": "Buffalo Trace Distillery",
+    "colour": "orange"
+  },
+  {
+    "city": "Baton Rouge",
+    "region": "Louisiana",
+    "country": "United States",
+    "shelf": "us-capitals",
+    "group": "South",
+    "pint": "~$5.32",
+    "localBeer": "Tin Roof Brewing",
+    "bestFor": "Cajun food & LSU",
+    "bars": [
+      {
+        "name": "Tin Roof Brewing"
+      },
+      {
+        "name": "Rally Cap Brewing Company"
+      }
+    ],
+    "eat": "Crawfish étouffée",
+    "dontMiss": "Old Louisiana State Capitol",
+    "colour": "purple"
+  },
+  {
+    "city": "Annapolis",
+    "region": "Maryland",
+    "country": "United States",
+    "shelf": "us-capitals",
+    "group": "South",
+    "pint": "~$6.34",
+    "localBeer": "Forward Brewing",
+    "bestFor": "Sailing & seafood",
+    "bars": [
+      {
+        "name": "Forward Brewing"
+      },
+      {
+        "name": "Galway Bay Irish Pub"
+      }
+    ],
+    "eat": "Maryland crab cakes",
+    "dontMiss": "US Naval Academy",
+    "colour": "teal"
+  },
+  {
+    "city": "Jackson",
+    "region": "Mississippi",
+    "country": "United States",
+    "shelf": "us-capitals",
+    "group": "South",
+    "pint": "~$4.80",
+    "localBeer": "Lucky Town Brewing (historic)",
+    "bestFor": "Blues & civil rights",
+    "bars": [
+      {
+        "name": "Fertile Ground Beer Co."
+      },
+      {
+        "name": "Fondren Public"
+      }
+    ],
+    "eat": "Southern catfish",
+    "dontMiss": "Mississippi Civil Rights Museum",
+    "colour": "red"
+  },
+  {
+    "city": "Raleigh",
+    "region": "North Carolina",
+    "country": "United States",
+    "shelf": "us-capitals",
+    "group": "South",
+    "pint": "~$6.00",
+    "localBeer": "Trophy Brewing",
+    "bestFor": "Museums & craft beer",
+    "bars": [
+      {
+        "name": "Trophy Brewing"
+      },
+      {
+        "name": "Crank Arm Brewing"
+      }
+    ],
+    "eat": "Eastern NC pulled pork",
+    "dontMiss": "North Carolina Museum of Natural Sciences",
+    "colour": "blue"
+  },
+  {
+    "city": "Oklahoma City",
+    "region": "Oklahoma",
+    "country": "United States",
+    "shelf": "us-capitals",
+    "group": "South",
+    "pint": "~$5.24",
+    "localBeer": "Prairie Artisan Ales (state)",
+    "bestFor": "Western heritage",
+    "bars": [
+      {
+        "name": "Stonecloud Brewing"
+      },
+      {
+        "name": "Prairie Artisan Ales OKC"
+      }
+    ],
+    "eat": "Chicken-fried steak",
+    "dontMiss": "Oklahoma City National Memorial",
+    "colour": "green"
+  },
+  {
+    "city": "Columbia",
+    "region": "South Carolina",
+    "country": "United States",
+    "shelf": "us-capitals",
+    "group": "South",
+    "pint": "~$5.94",
+    "localBeer": "River Rat Brewery (historic)",
+    "bestFor": "Southern culture",
+    "bars": [
+      {
+        "name": "Columbia Craft Brewing"
+      },
+      {
+        "name": "River Rat Brewery"
+      }
+    ],
+    "eat": "Shrimp and grits",
+    "dontMiss": "Riverbanks Zoo",
+    "colour": "orange"
+  },
+  {
+    "city": "Nashville",
+    "region": "Tennessee",
+    "country": "United States",
+    "shelf": "us-capitals",
+    "group": "South",
+    "pint": "~$6.01",
+    "localBeer": "Yazoo Brewing",
+    "bestFor": "Live country music",
+    "bars": [
+      {
+        "name": "Yazoo Brewing"
+      },
+      {
+        "name": "Jackalope Brewing Company"
+      }
+    ],
+    "eat": "Hot chicken",
+    "dontMiss": "Country Music Hall of Fame",
+    "colour": "purple"
+  },
+  {
+    "city": "Austin",
+    "region": "Texas",
+    "country": "United States",
+    "shelf": "us-capitals",
+    "group": "South",
+    "pint": "~$5.98",
+    "localBeer": "Austin Beerworks",
+    "bestFor": "Live music & barbecue",
+    "bars": [
+      {
+        "name": "Zilker Brewing Company"
+      },
+      {
+        "name": "Hold Out Brewing"
+      }
+    ],
+    "eat": "Texas brisket",
+    "dontMiss": "Texas State Capitol",
+    "colour": "teal"
+  },
+  {
+    "city": "Richmond",
+    "region": "Virginia",
+    "country": "United States",
+    "shelf": "us-capitals",
+    "group": "South",
+    "pint": "~$6.60",
+    "localBeer": "Hardywood Park Craft Brewery",
+    "bestFor": "History & river trails",
+    "bars": [
+      {
+        "name": "Hardywood Park Craft Brewery"
+      },
+      {
+        "name": "The Veil Brewing Co."
+      }
+    ],
+    "eat": "Virginia ham biscuits",
+    "dontMiss": "Virginia Museum of Fine Arts",
+    "colour": "red"
+  },
+  {
+    "city": "Charleston",
+    "region": "West Virginia",
+    "country": "United States",
+    "shelf": "us-capitals",
+    "group": "South",
+    "pint": "~$5.12",
+    "localBeer": "Charleston Nano Brewery",
+    "bestFor": "Appalachian culture",
+    "bars": [
+      {
+        "name": "Fife Street Brewing"
+      },
+      {
+        "name": "Charleston Brewing Company"
+      }
+    ],
+    "eat": "Pepperoni rolls",
+    "dontMiss": "West Virginia State Museum",
+    "colour": "blue"
+  },
+  {
+    "city": "Juneau",
+    "region": "Alaska",
+    "country": "United States",
+    "shelf": "us-capitals",
+    "group": "West",
+    "pint": "~$7.00",
+    "localBeer": "Alaskan Brewing Co.",
+    "bestFor": "Glaciers & wilderness",
+    "bars": [
+      {
+        "name": "Alaskan Brewing Tasting Room"
+      },
+      {
+        "name": "Devil’s Club Brewing Company"
+      }
+    ],
+    "eat": "Wild salmon",
+    "dontMiss": "Mendenhall Glacier",
+    "colour": "green"
+  },
+  {
+    "city": "Phoenix",
+    "region": "Arizona",
+    "country": "United States",
+    "shelf": "us-capitals",
+    "group": "West",
+    "pint": "~$6.62",
+    "localBeer": "Wren House Brewing",
+    "bestFor": "Desert sunsets & nightlife",
+    "bars": [
+      {
+        "name": "Arizona Wilderness DTPHX"
+      },
+      {
+        "name": "Wren House Brewing"
+      }
+    ],
+    "eat": "Sonoran hot dog",
+    "dontMiss": "Desert Botanical Garden",
+    "colour": "orange"
+  },
+  {
+    "city": "Sacramento",
+    "region": "California",
+    "country": "United States",
+    "shelf": "us-capitals",
+    "group": "West",
+    "pint": "~$7.96",
+    "localBeer": "Track 7 Brewing",
+    "bestFor": "Gold Rush & farm-to-fork",
+    "bars": [
+      {
+        "name": "Urban Roots Brewing"
+      },
+      {
+        "name": "Fieldwork Brewing Sacramento"
+      }
+    ],
+    "eat": "Farm-to-fork cuisine",
+    "dontMiss": "California State Railroad Museum",
+    "colour": "purple"
+  },
+  {
+    "city": "Denver",
+    "region": "Colorado",
+    "country": "United States",
+    "shelf": "us-capitals",
+    "group": "West",
+    "pint": "~$6.71",
+    "localBeer": "Great Divide Brewing",
+    "bestFor": "Craft beer & mountains",
+    "bars": [
+      {
+        "name": "Great Divide Brewing"
+      },
+      {
+        "name": "Wynkoop Brewing Company"
+      }
+    ],
+    "eat": "Green chile",
+    "dontMiss": "Red Rocks Amphitheatre",
+    "colour": "teal"
+  },
+  {
+    "city": "Honolulu",
+    "region": "Hawaii",
+    "country": "United States",
+    "shelf": "us-capitals",
+    "group": "West",
+    "pint": "~$8.00",
+    "localBeer": "Honolulu Beerworks",
+    "bestFor": "Beaches & island culture",
+    "bars": [
+      {
+        "name": "Honolulu Beerworks"
+      },
+      {
+        "name": "Waikiki Brewing Company"
+      }
+    ],
+    "eat": "Poke",
+    "dontMiss": "Pearl Harbor National Memorial",
+    "colour": "red"
+  },
+  {
+    "city": "Boise",
+    "region": "Idaho",
+    "country": "United States",
+    "shelf": "us-capitals",
+    "group": "West",
+    "pint": "~$5.91",
+    "localBeer": "Payette Brewing",
+    "bestFor": "Outdoor adventures",
+    "bars": [
+      {
+        "name": "Payette Brewing"
+      },
+      {
+        "name": "Boise Brewing"
+      }
+    ],
+    "eat": "Finger steaks",
+    "dontMiss": "Boise River Greenbelt",
+    "colour": "blue"
+  },
+  {
+    "city": "Helena",
+    "region": "Montana",
+    "country": "United States",
+    "shelf": "us-capitals",
+    "group": "West",
+    "pint": "~$5.44",
+    "localBeer": "Lewis & Clark Brewing",
+    "bestFor": "Gold Rush & mountains",
+    "bars": [
+      {
+        "name": "Lewis & Clark Brewing"
+      },
+      {
+        "name": "Ten Mile Creek Brewery"
+      }
+    ],
+    "eat": "Bison burger",
+    "dontMiss": "Montana State Capitol",
+    "colour": "green"
+  },
+  {
+    "city": "Carson City",
+    "region": "Nevada",
+    "country": "United States",
+    "shelf": "us-capitals",
+    "group": "West",
+    "pint": "~$7.18",
+    "localBeer": "Great Basin Brewing (region)",
+    "bestFor": "Wild West & Tahoe",
+    "bars": [
+      {
+        "name": "The Fox Brewpub"
+      },
+      {
+        "name": "Great Basin Brewing Co. Carson City"
+      }
+    ],
+    "eat": "Basque cuisine",
+    "dontMiss": "Nevada State Museum",
+    "colour": "orange"
+  },
+  {
+    "city": "Santa Fe",
+    "region": "New Mexico",
+    "country": "United States",
+    "shelf": "us-capitals",
+    "group": "West",
+    "pint": "~$6.40",
+    "localBeer": "Santa Fe Brewing",
+    "bestFor": "Adobe art & culture",
+    "bars": [
+      {
+        "name": "Santa Fe Brewing Company"
+      },
+      {
+        "name": "Second Street Brewery"
+      }
+    ],
+    "eat": "Green chile stew",
+    "dontMiss": "Georgia O'Keeffe Museum",
+    "colour": "purple"
+  },
+  {
+    "city": "Salem",
+    "region": "Oregon",
+    "country": "United States",
+    "shelf": "us-capitals",
+    "group": "West",
+    "pint": "~$6.52",
+    "localBeer": "Gilgamesh Brewing",
+    "bestFor": "Gardens & wine country",
+    "bars": [
+      {
+        "name": "Gilgamesh Brewing"
+      },
+      {
+        "name": "Santiam Brewing"
+      }
+    ],
+    "eat": "Marionberry pie",
+    "dontMiss": "Oregon State Capitol",
+    "colour": "teal"
+  },
+  {
+    "city": "Salt Lake City",
+    "region": "Utah",
+    "country": "United States",
+    "shelf": "us-capitals",
+    "group": "West",
+    "pint": "~$7.03",
+    "localBeer": "Squatters Craft Beers",
+    "bestFor": "Mountains & skiing",
+    "bars": [
+      {
+        "name": "Fisher Brewing"
+      },
+      {
+        "name": "Proper Brewing Co."
+      }
+    ],
+    "eat": "Pastrami burger",
+    "dontMiss": "Temple Square",
+    "colour": "red"
+  },
+  {
+    "city": "Olympia",
+    "region": "Washington",
+    "country": "United States",
+    "shelf": "us-capitals",
+    "group": "West",
+    "pint": "~$7.20",
+    "localBeer": "Three Magnets Brewing",
+    "bestFor": "Waterfront & evergreen forests",
+    "bars": [
+      {
+        "name": "Three Magnets Brewing"
+      },
+      {
+        "name": "Well 80 Brewhouse"
+      }
+    ],
+    "eat": "Pacific Northwest oysters",
+    "dontMiss": "Washington State Capitol",
+    "colour": "blue"
+  },
+  {
+    "city": "Cheyenne",
+    "region": "Wyoming",
+    "country": "United States",
+    "shelf": "us-capitals",
+    "group": "West",
+    "pint": "~$5.79",
+    "localBeer": "Freedom's Edge Brewing",
+    "bestFor": "Cowboy heritage",
+    "bars": [
+      {
+        "name": "Freedom’s Edge Brewing"
+      },
+      {
+        "name": "Black Tooth Brewing Cheyenne"
+      }
+    ],
+    "eat": "Bison steak",
+    "dontMiss": "Cheyenne Frontier Days Old West Museum",
+    "colour": "green"
   }
 ];

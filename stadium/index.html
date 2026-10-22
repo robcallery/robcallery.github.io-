@@ -122,6 +122,8 @@
   .pl .body{transform-box:fill-box;transform-origin:50% 100%}
   .pl .body.kick{animation:kick .35s ease-out}
   @keyframes kick{30%{transform:translateY(-3px) rotate(-6deg)}100%{transform:none}}
+  .tvlink{transition:transform .3s ease,filter .3s ease;transform-box:fill-box;transform-origin:50% 100%}
+  .tvlink:hover,.tvlink:focus-visible{transform:translateY(-8px) scale(1.03);filter:drop-shadow(0 0 18px rgba(255,205,0,.55))}
   .bmsg{transition:opacity .35s ease,transform .35s ease;transform-box:fill-box}
   .bmsg.out{opacity:0;transform:translateY(-14px)}
   .bbg{transition:fill .35s ease}
