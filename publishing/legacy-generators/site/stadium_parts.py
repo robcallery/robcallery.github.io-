@@ -47,7 +47,8 @@ def poster():
   <text x="115" y="284" text-anchor="middle" font-family="Bebas Neue, Impact, sans-serif" font-size="7.5" fill="#8a7a58" letter-spacing="2.5">LEEDS · LS11 · EST. 1919</text>
   <rect x="2" y="0" width="34" height="13" fill="rgba(250,240,200,.78)" transform="rotate(-28 19 6)"/>
   <rect x="194" y="0" width="34" height="13" fill="rgba(250,240,200,.78)" transform="rotate(26 211 6)"/>
-  <rect class="sheen" x="-120" y="8" width="60" height="286" fill="#fff" opacity=".18" transform="skewX(-20)"/>
+  <clipPath id="posterSheenClip"><rect x="8" y="8" width="214" height="286"/></clipPath>
+  <g clip-path="url(#posterSheenClip)"><rect class="sheen" x="-120" y="8" width="60" height="286" fill="#fff" opacity=".18" transform="skewX(-20)"/></g>
 </svg>'''
 
 # ---------------------------------------------------------------- scoreboard art (match hub page)
