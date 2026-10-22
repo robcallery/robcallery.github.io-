@@ -124,8 +124,9 @@ def book(sid):
     rnd = random.Random(sid)
     h = rnd.choice([88, 91, 94, 97]); lean = 0
     return (f'<a class="book" href="/travel-guides/guide/?shelf={sid}" data-shelf="{sid}" style="--c:{c};--b:{b};--i:{ink};--h:{h}%">'
-            f'<span class="band t"></span><span class="ti">{title}</span><span class="n" data-count="{sid}">{n}</span><span class="band u"></span>'
+            f'<span class="band t"></span><span class="ti"><small>Travelling</small><b>{title}</b><i>one beer at a time</i></span><span class="n" data-count="{sid}">{n}</span><span class="band u"></span>'
             f'<span class="sr"> – {n} guide{"s" if n != 1 else ""}</span></a>')
+
 
 ROWS = [
     (['north-england', 'south-england', 'east-england', 'west-england', 'wales', 'scotland'], ['stack']),
@@ -176,6 +177,10 @@ CSS = r'''
   .book .band{display:block;width:100%;height:7px;background:var(--b);margin-top:9%}
   .book .band.u{margin-top:auto;margin-bottom:12%}
   .book .ti{writing-mode:vertical-rl;font-family:"Bebas Neue",Impact,sans-serif;font-size:clamp(.95rem,min(1.45vw,2.2vh),1.3rem);letter-spacing:.05em;line-height:1.02;margin-top:8px;white-space:normal;text-transform:uppercase;flex:1 1 auto;min-height:0;max-width:100%;padding:0 3px;overflow:hidden;text-align:start}
+  .book .ti small,.book .ti i{white-space:nowrap}
+  .book .ti small{display:block;font-size:.58em;letter-spacing:.14em;opacity:.85}
+  .book .ti b{display:block;font-weight:400}
+  .book .ti i{display:block;font-family:"Caveat",cursive;font-style:normal;font-size:.72em;letter-spacing:0;text-transform:none;opacity:.9}
   .book .n{font-family:"Bebas Neue",Impact,sans-serif;font-size:.85rem;margin-top:4px;opacity:.85;flex:none}
   .book .n::after{content:"";}
   .book:hover,.book:focus-visible{transform:translateY(-14px)}

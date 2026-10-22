@@ -119,7 +119,7 @@ JS_PAGES = r'''
   var SH=null;SHELVES.forEach(function(s){if(s.id===shelfQ)SH=s});
   if(!SH&&!demo){location.replace('/travel-guides/');return}
   var beers=SH?ALL.filter(function(g){return shelfOf(g)===SH.id}):ALL;
-  if(SH){var rs=document.documentElement.style;rs.setProperty('--burg',SH.c);rs.setProperty('--burg2','#'+SH.c.slice(1).match(/../g).map(function(h){return ('0'+Math.round(parseInt(h,16)*.68).toString(16)).slice(-2)}).join(''));document.title=SH.t+' - Travel Guides - Rob Callery'}
+  if(SH){var rs=document.documentElement.style;rs.setProperty('--burg',SH.c);rs.setProperty('--burg2','#'+SH.c.slice(1).match(/../g).map(function(h){return ('0'+Math.round(parseInt(h,16)*.68).toString(16)).slice(-2)}).join(''));document.title='Travelling '+SH.t+' One Beer at a Time - Rob Callery'}
   if(demo&&!beers.length){beers=[
     {city:"Leeds",country:"England",visited:"2026-10",pint:"£5",localBeer:"Kirkstall Pale",bestFor:"Matchdays & real ale",bars:[{name:"A canal-side brewery tap",note:"pre-match pints"},{name:"An old Victorian boozer",note:"cask on every pump"}],eat:"Something hot from the market before the walk to the ground.",dontMiss:"A night match under the lights at Elland Road.",football:"Elland Road, obviously. Get there early.",rating:5,colour:"blue",notes:"Home. No guide needed, but here's one anyway."},
     {city:"Málaga",country:"Spain",visited:"2026-06",pint:"€3",localBeer:"Victoria",bestFor:"Beach bars & tapas",bars:[{name:"A chiringuito on the beach",note:"cold lager, sardines on the fire"},{name:"Old town tapas bars",note:"hop between three or four"}],eat:"Espetos (grilled sardines) right on the sand.",dontMiss:"Sunset from the castle walls, then back down for one more.",football:"Málaga CF at La Rosaleda.",rating:5,colour:"orange",notes:"Firpo't of Call territory. Would move there tomorrow."},
@@ -141,7 +141,7 @@ JS_PAGES = r'''
   }
   var INSIDE='<div class="ep">'+wm()+'<div class="own"><span>This guide belongs to</span><b>ROB CALLERY</b><span>If found, return it to the nearest bar.</span></div></div>';
   var pages=[];
-  pages.push({cls:'cover',html:'<div class="t1">TRAVEL GUIDES</div>'+(SH?'<div class="t2">'+esc(SH.t.toUpperCase())+'</div>':'')+'<svg class="gl" viewBox="190 157 700 700"><circle cx="540" cy="507" r="345" fill="#0a1838"/><path fill="#f7f2e4" fill-rule="evenodd" d="'+GLOBE+'"/></svg><div><div class="t3">one beer at a time</div></div><div class="by">ROB CALLERY</div><div class="hint">tap to open</div>'});
+  pages.push({cls:'cover',html:'<div class="t1">'+(SH?'TRAVELLING':'TRAVEL GUIDES')+'</div>'+(SH?'<div class="t2">'+esc(SH.t.toUpperCase())+'</div>':'')+'<svg class="gl" viewBox="190 157 700 700"><circle cx="540" cy="507" r="345" fill="#0a1838"/><path fill="#f7f2e4" fill-rule="evenodd" d="'+GLOBE+'"/></svg><div><div class="t3">one beer at a time</div></div><div class="by">ROB CALLERY</div><div class="hint">tap to open</div>'});
   var rows=[],lastC=null;beers.forEach(function(g,i){var gk=g.group||g.country;if(gk!==lastC){rows.push({grp:gk||''});lastC=gk}rows.push({g:g,i:i})});
   var FIRST=13,MORE=19,chunks=[];if(!rows.length)chunks=[[]];else{var k=0;while(k<rows.length){var n=chunks.length?MORE:FIRST,ch=rows.slice(k,k+n);if(k+n<rows.length&&ch.length>1&&ch[ch.length-1].grp!=null)ch.pop();chunks.push(ch);k+=ch.length;}}
   var C=chunks.length, F=(C+1)%2;
