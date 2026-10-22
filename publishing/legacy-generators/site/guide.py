@@ -201,6 +201,9 @@ assert "'Contents'" in PAGE and 'guides.js' in PAGE
 
 os.makedirs('/home/claude/site/travel-guides', exist_ok=True)
 os.makedirs('/home/claude/site/travel-guides/guide', exist_ok=True)
+import hashlib as _h
+def _ver(f): return _h.md5(open('/home/claude/site/travel-guides/'+f,'rb').read()).hexdigest()[:8]
+PAGE = PAGE.replace('/travel-guides/guides.js"', '/travel-guides/guides.js?v='+_ver('guides.js')+'"').replace("snaps/'+s+'.js\"", "snaps/'+s+'.js?v="+_ver('snaps.js')+'"')
 open('/home/claude/site/travel-guides/guide/index.html', 'w').write(PAGE.replace('__GLOBE__', globe))
 gj = '/home/claude/site/travel-guides/guides.js'
 if not os.path.exists(gj):

@@ -263,5 +263,7 @@ PAGE = f'''<!doctype html>
 </body>
 </html>
 '''
+import hashlib as _h
+PAGE = PAGE.replace('/travel-guides/guides.js"', '/travel-guides/guides.js?v='+_h.md5(open('/home/claude/site/travel-guides/guides.js','rb').read()).hexdigest()[:8]+'"')
 open('/home/claude/site/travel-guides/index.html', 'w').write(PAGE)
 print('room built', counts)
