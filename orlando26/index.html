@@ -630,6 +630,12 @@ function wxText(k){
   const hi=Math.round(d.hi),lo=Math.round(d.lo);
   return `<b>${cond}</b>, high ${F_(d.hi)}°F (${hi}°C), low ${F_(d.lo)}°F (${lo}°C). Rain ${d.rain<0.1?'none expected':(d.rain/25.4).toFixed(2)+' in ('+d.rain.toFixed(1)+' mm)'}, cloud ${Math.round(d.cloud)}%, wind ${cmp(d.dir)}${d.spd?' up to '+Math.round(d.spd)+' mph':''}. Forecast from Open-Meteo.`;
 }
+function wxStrip(k,from,to){
+  const d=wxDay(k);if(!d)return'';
+  const sl=d.ix.filter(i=>{const hh=+WX.time[i].slice(11,13);return hh>=from&&hh<=to});
+  if(!sl.length)return'';
+  return '<div class="wxs" style="display:flex;gap:10px;margin-top:8px;overflow-x:auto;padding-bottom:4px;-webkit-overflow-scrolling:touch">'+sl.map(i=>{const hh=+WX.time[i].slice(11,13);const lab=(hh%12||12)+(hh<12?'am':'pm');return `<div style="text-align:center;min-width:44px;flex:none"><div class="where">${lab}</div><b>${F_(WX.temperature_2m[i])}°</b><div class="where">${WX.rain[i]>0.1?'🌧':WX.cloud_cover[i]<30?'☀️':WX.cloud_cover[i]<70?'⛅':'☁️'}</div></div>`}).join('')+'</div>';
+}
 function hubWx(){
   try{const hd=document.getElementById('hubDate');if(hd){const v='<b>'+new Date().toLocaleDateString('en-GB',{weekday:'long',day:'numeric',month:'long',year:'numeric'})+'</b>';if(hd.dataset.v!==v){hd.dataset.v=v;hd.innerHTML=v;}}}catch(e){}
   const el=document.getElementById('hubWx');if(!el)return;
@@ -638,15 +644,14 @@ function hubWx(){
   try{const sn=document.getElementById('hubSun'),st=d?sunTimes(d):null;if(sn&&st){const v='<span>🌅 Sunrise <b>'+st.rise+'</b></span><span>🌇 Sunset <b>'+st.set+'</b></span>';if(sn.dataset.v!==v){sn.dataset.v=v;sn.innerHTML=v;}}}catch(e){}
   let body;
   if(day){
-    const slots=day.ix.filter(i=>{const hh=+WX.time[i].slice(11,13);return hh>=h&&hh%3===0}).slice(0,6);
-    const strip=slots.length?'<div style="display:flex;gap:8px;margin-top:8px;overflow-x:auto">'+slots.map(i=>{const hh=+WX.time[i].slice(11,13);const lab=(hh%12||12)+(hh<12?'am':'pm');return `<div style="text-align:center;min-width:46px"><div class="where">${lab}</div><b>${F_(WX.temperature_2m[i])}°</b><div class="where">${WX.rain[i]>0.1?'🌧':WX.cloud_cover[i]<30?'☀️':WX.cloud_cover[i]<70?'⛅':'☁️'}</div></div>`}).join('')+'</div>':'';
+    const strip=wxStrip(d,h,23);
     body=wxText(d)+strip;
   }else body='Live forecast not available in this app right now. Orlando in November is usually mid-to-high 70s °F (about 24–26 °C) by day.'+(WXF?' (Could not reach the weather service.)':'')+' <a href="https://forecast.weather.gov/MapClick.php?lat=28.40&lon=-81.50" target="_blank" rel="noopener" onclick="event.stopPropagation()">Open live forecast</a>';
   const t='<div class="trow"><div class="tbig">🌤️</div><div style="min-width:0"><b>Orlando today</b><div class="where">'+body+'</div></div></div>';
   if(el.dataset.v!==t){el.dataset.v=t;el.innerHTML=t;}
   el.hidden=false;
 }
-function wxRefresh(){hubWx();document.querySelectorAll('.wx[data-d]').forEach(e=>{const t=wxText(e.dataset.d);if(e.innerHTML!==t)e.innerHTML=t;});}
+function wxRefresh(){hubWx();document.querySelectorAll('.wx[data-d]').forEach(e=>{const t=wxText(e.dataset.d)+wxStrip(e.dataset.d,7,23);if(e.innerHTML!==t)e.innerHTML=t;});}
 (function(){
   try{const c=JSON.parse(localStorage.getItem('wxc2')||'null');if(c&&Date.now()-c.t<36e5&&c.d&&c.d.time)WX=c.d;}catch(e){}
   try{fetch(WX_URL).then(r=>r.ok?r.json():null).then(j=>{if(j&&j.hourly&&j.hourly.time){WX=j.hourly;try{localStorage.setItem('wxc2',JSON.stringify({t:Date.now(),d:WX}));}catch(e){}}else WXF=1;wxRefresh();}).catch(()=>{WXF=1;wxRefresh();});}catch(e){WXF=1;}
@@ -656,7 +661,7 @@ function sunHtml(k){
   if(!k)return'';
   const t=sunTimes(k);
   return `<div class="sun sunb"><span>🌅 Sunrise <b>${t.rise}</b></span><span>🌇 Sunset <b>${t.set}</b></span></div>
-  <div class="sun wxb"><div class="wx" data-d="${k}">${wxText(k)}</div>
+  <div class="sun wxb"><div class="wx" data-d="${k}">${wxText(k)}${wxStrip(k,7,23)}</div>
   <a href="https://forecast.weather.gov/MapClick.php?lat=28.40&lon=-81.50" target="_blank" rel="noopener">Live forecast</a></div>`;
 }
 // ---- Shopping hours ----
