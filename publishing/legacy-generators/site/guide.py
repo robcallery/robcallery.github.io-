@@ -145,7 +145,12 @@ JS_PAGES = r'''
   var pages=[];
   pages.push({cls:'cover',html:'<div class="t1">'+(SH?esc(SH.p.toUpperCase()):'TRAVEL GUIDES')+'</div>'+(SH?'<div class="t2">'+esc(SH.t.toUpperCase())+'</div>':'')+'<svg class="gl" viewBox="190 157 700 700"><circle cx="540" cy="507" r="345" fill="#0a1838"/><path fill="#f7f2e4" fill-rule="evenodd" d="'+GLOBE+'"/></svg><div><div class="t3">one beer at a time</div></div><div class="by">ROB CALLERY</div><div class="hint">tap to open</div>'});
   var rows=[],lastC=null;beers.forEach(function(g,i){var gk=g.group||g.country;if(gk!==lastC){rows.push({grp:gk||''});lastC=gk}rows.push({g:g,i:i})});
-  var FIRST=13,MORE=19,chunks=[];if(!rows.length)chunks=[[]];else{var k=0;while(k<rows.length){var n=chunks.length?MORE:FIRST,ch=rows.slice(k,k+n);if(k+n<rows.length&&ch.length>1&&ch[ch.length-1].grp!=null)ch.pop();chunks.push(ch);k+=ch.length;}}
+  // contents pages: fill by height (a region heading takes more room than a place), leaving room for the notes on page one
+  var FIRST=11-(SH&&SH.n?3:0),MORE=16,chunks=[];
+  if(!rows.length)chunks=[[]];else{var k=0;while(k<rows.length){var cap=chunks.length?MORE:FIRST,used=0,ch=[];
+    while(k<rows.length){var wgt=rows[k].grp!=null?1.8:1;if(used+wgt>cap&&ch.length)break;ch.push(rows[k]);used+=wgt;k++}
+    if(k<rows.length&&ch.length>1&&ch[ch.length-1].grp!=null){ch.pop();k--}
+    chunks.push(ch);}}
   var C=chunks.length, F=(C+1)%2;
   chunks.forEach(function(ch,ci){
     var toc=ch.map(function(r){if(r.grp!=null)return '<li class="grp">'+esc(r.grp)+'</li>';var n=C+1+F+2*r.i;return '<li><b>'+esc(r.g.city)+'</b><span class="c">'+esc(r.g.region||r.g.country)+'</span><span class="p">'+(n<10?'0':'')+n+'</span></li>'}).join('');
