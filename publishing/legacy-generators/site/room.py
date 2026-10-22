@@ -131,7 +131,7 @@ def book(sid):
 ROWS = [
     (['north-england', 'south-england', 'east-england', 'west-england', 'wales', 'scotland'], ['stack']),
     (['ireland', 'spain', 'france', 'usa', 'rest-of-world'], ['globe']),
-    (['airports', 'us-capitals'], ['scarf', 'plant', 'ball', 'bottle']),
+    (['airports', 'us-capitals', 'disney-parks'], ['scarf', 'plant', 'ball', 'bottle']),
 ]
 
 def case():
