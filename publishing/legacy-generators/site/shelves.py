@@ -14,8 +14,12 @@ SHELVES = [
  ('usa', 'USA', '#2c2b5e', '#b22234', '#ffffff'),
  ('rest-of-world', 'Rest of the World', '#6b4a2b', '#d9b45a', '#f3e2b8'),
  ('airports', 'Airports', '#3f4655', '#ffcd00', '#ffcd00'),
+ ('us-capitals', 'US State Capitals', '#7a1f2b', '#d9b45a', '#f3e2b8'),
 ]
-SHELF_JSON = json.dumps([{'id': a, 't': b, 'c': c, 'b': d, 'i': e} for a, b, c, d, e in SHELVES])
+# optional extras per book: words before the title, and a note printed in the contents
+PREFIX = {'us-capitals': 'Travelling the'}
+NOTE = {'us-capitals': 'Prices are the 2026 statewide median beer order (Toast), not a measured pint in the city. Bars and facts are research leads and are still being checked.'}
+SHELF_JSON = json.dumps([{'id': a, 't': b, 'c': c, 'b': d, 'i': e, 'p': PREFIX.get(a, 'Travelling'), 'n': NOTE.get(a, '')} for a, b, c, d, e in SHELVES])
 # which shelf a guide sits on (a guide can also say shelf:"..." itself)
 SHELF_OF_JS = r'''function shelfOf(g){
     if(g.shelf)return g.shelf;

@@ -13,3 +13,11 @@ out = {c: {'t': S[c][0], 'n': S[c][1], 'svg': S[c][2]} for c in cities if c in S
 js = '// Polaroid illustrations for the travel guides, keyed by city. Generated - edit snaps*.py and rebuild.\nwindow.SNAPS = ' + json.dumps(out, ensure_ascii=False) + ';\n'
 open('/home/claude/site/travel-guides/snaps.js', 'w').write(js)
 print(len(out), round(len(js) / 1024), 'KB')
+
+from shelves import SHELF_OF_JS
+sh = json.loads(subprocess.run(['node', '-e', "global.window={};require('" + p + "');" + SHELF_OF_JS + ";const o={};window.GUIDES.forEach(g=>o[g.city]=shelfOf(g));process.stdout.write(JSON.stringify(o))"], capture_output=True, text=True).stdout)
+os.makedirs('/home/claude/site/travel-guides/snaps', exist_ok=True)
+for b in sorted(set(sh.values())):
+    part = {c: v for c, v in out.items() if sh.get(c) == b}
+    open(f'/home/claude/site/travel-guides/snaps/{b}.js', 'w').write('// Polaroids for one book. Generated - edit snaps*.py and rebuild.\nwindow.SNAPS = ' + json.dumps(part, ensure_ascii=False) + ';\n')
+    print(b, len(part), round(len(json.dumps(part)) / 1024), 'KB')

@@ -36,7 +36,9 @@ window.GUIDES = [
 PAGE = PAGE.replace('<title>Beer Passport - Rob Callery</title>', '<title>Travel Guides - Rob Callery</title>')
 PAGE = re.sub(r'<meta name="description" content="[^"]*">', '<meta name="description" content="Rob Callery\'s pint-first travel guides: where to drink, eat and watch the football in every city.">', PAGE, count=1)
 PAGE = PAGE.replace("<h1 class=\"sr\">Rob Callery's Beer Passport</h1>", "<h1 class=\"sr\">Rob Callery's Travel Guides</h1>")
-PAGE = PAGE.replace('<script src="beers.js"></script>', '<script src="/travel-guides/guides.js"></script><script src="/travel-guides/snaps.js"></script>')
+import sys as _s; _s.path.insert(0,'/tmp/claude-0/-home-claude/9cac7207-2d1b-5bf4-969e-62974606aff5/scratchpad')
+from shelves import SHELF_OF_JS
+PAGE = PAGE.replace('<script src="beers.js"></script>', '<script src="/travel-guides/guides.js"></script><script>(function(){'+SHELF_OF_JS+';var q=location.search,s=(q.match(/[?&]shelf=([^&]+)/)||[])[1],c=(q.match(/[?&]city=([^&]+)/)||[])[1];try{c=c&&decodeURIComponent(c.replace(/\\+/g," "))}catch(e){}if(!s&&c)(window.GUIDES||[]).forEach(function(g){if(!s&&g.city.toLowerCase()===c.toLowerCase())s=shelfOf(g)});if(s&&/^[a-z-]+$/.test(s))document.write(\'<script src="/travel-guides/snaps/\'+s+\'.js"><\\/script>\')})()</script>')
 PAGE = PAGE.replace('<a class="back" href="/explore/">← Back to the bar</a>', '<a class="back" href="/travel-guides/">← Back to the shelf</a>')
 assert '--burg:#1b2b4d;--burg2:#0b1630;--paper:#f6efdc;' in PAGE
 PAGE = PAGE.replace('--burg:#1b2b4d;--burg2:#0b1630;--paper:#f6efdc;', '--burg:#0f6f73;--burg2:#0a4a4d;--paper:#fbf7ec;')
@@ -119,7 +121,7 @@ JS_PAGES = r'''
   var SH=null;SHELVES.forEach(function(s){if(s.id===shelfQ)SH=s});
   if(!SH&&!demo){location.replace('/travel-guides/');return}
   var beers=SH?ALL.filter(function(g){return shelfOf(g)===SH.id}):ALL;
-  if(SH){var rs=document.documentElement.style;rs.setProperty('--burg',SH.c);rs.setProperty('--burg2','#'+SH.c.slice(1).match(/../g).map(function(h){return ('0'+Math.round(parseInt(h,16)*.68).toString(16)).slice(-2)}).join(''));document.title='Travelling '+SH.t+' One Beer at a Time - Rob Callery'}
+  if(SH){var rs=document.documentElement.style;rs.setProperty('--burg',SH.c);rs.setProperty('--burg2','#'+SH.c.slice(1).match(/../g).map(function(h){return ('0'+Math.round(parseInt(h,16)*.68).toString(16)).slice(-2)}).join(''));document.title=SH.p+' '+SH.t+' One Beer at a Time - Rob Callery'}
   if(demo&&!beers.length){beers=[
     {city:"Leeds",country:"England",visited:"2026-10",pint:"£5",localBeer:"Kirkstall Pale",bestFor:"Matchdays & real ale",bars:[{name:"A canal-side brewery tap",note:"pre-match pints"},{name:"An old Victorian boozer",note:"cask on every pump"}],eat:"Something hot from the market before the walk to the ground.",dontMiss:"A night match under the lights at Elland Road.",football:"Elland Road, obviously. Get there early.",rating:5,colour:"blue",notes:"Home. No guide needed, but here's one anyway."},
     {city:"Málaga",country:"Spain",visited:"2026-06",pint:"€3",localBeer:"Victoria",bestFor:"Beach bars & tapas",bars:[{name:"A chiringuito on the beach",note:"cold lager, sardines on the fire"},{name:"Old town tapas bars",note:"hop between three or four"}],eat:"Espetos (grilled sardines) right on the sand.",dontMiss:"Sunset from the castle walls, then back down for one more.",football:"Málaga CF at La Rosaleda.",rating:5,colour:"orange",notes:"Firpo't of Call territory. Would move there tomorrow."},
@@ -141,7 +143,7 @@ JS_PAGES = r'''
   }
   var INSIDE='<div class="ep">'+wm()+'<div class="own"><span>This guide belongs to</span><b>ROB CALLERY</b><span>If found, return it to the nearest bar.</span></div></div>';
   var pages=[];
-  pages.push({cls:'cover',html:'<div class="t1">'+(SH?'TRAVELLING':'TRAVEL GUIDES')+'</div>'+(SH?'<div class="t2">'+esc(SH.t.toUpperCase())+'</div>':'')+'<svg class="gl" viewBox="190 157 700 700"><circle cx="540" cy="507" r="345" fill="#0a1838"/><path fill="#f7f2e4" fill-rule="evenodd" d="'+GLOBE+'"/></svg><div><div class="t3">one beer at a time</div></div><div class="by">ROB CALLERY</div><div class="hint">tap to open</div>'});
+  pages.push({cls:'cover',html:'<div class="t1">'+(SH?esc(SH.p.toUpperCase()):'TRAVEL GUIDES')+'</div>'+(SH?'<div class="t2">'+esc(SH.t.toUpperCase())+'</div>':'')+'<svg class="gl" viewBox="190 157 700 700"><circle cx="540" cy="507" r="345" fill="#0a1838"/><path fill="#f7f2e4" fill-rule="evenodd" d="'+GLOBE+'"/></svg><div><div class="t3">one beer at a time</div></div><div class="by">ROB CALLERY</div><div class="hint">tap to open</div>'});
   var rows=[],lastC=null;beers.forEach(function(g,i){var gk=g.group||g.country;if(gk!==lastC){rows.push({grp:gk||''});lastC=gk}rows.push({g:g,i:i})});
   var FIRST=13,MORE=19,chunks=[];if(!rows.length)chunks=[[]];else{var k=0;while(k<rows.length){var n=chunks.length?MORE:FIRST,ch=rows.slice(k,k+n);if(k+n<rows.length&&ch.length>1&&ch[ch.length-1].grp!=null)ch.pop();chunks.push(ch);k+=ch.length;}}
   var C=chunks.length, F=(C+1)%2;
@@ -149,7 +151,7 @@ JS_PAGES = r'''
     var toc=ch.map(function(r){if(r.grp!=null)return '<li class="grp">'+esc(r.grp)+'</li>';var n=C+1+F+2*r.i;return '<li><b>'+esc(r.g.city)+'</b><span class="c">'+esc(r.g.region||r.g.country)+'</span><span class="p">'+(n<10?'0':'')+n+'</span></li>'}).join('');
     pages.push({cls:'contents',html:wm()+top('TRAVEL GUIDES · CONTENTS',ci+1)+(ci===0?'<h2>Where I\'ve been</h2>':'<h2 class="cont">Where I\'ve been <small>(cont.)</small></h2>')+
       (beers.length?'<ul class="toc">'+toc+'</ul>':'<p class="legend" style="font-size:.8em">The first guides are being written. Check back soon!</p>')+
-      (ci===0?'<p class="legend">Every guide is pint-first: what a pint costs, the local beer, the pubs worth the walk, where to eat, and where to watch the football. Rated on whether I\'d go back.</p>':'')+
+      (ci===0?'<p class="legend">Every guide is pint-first: what a pint costs, the local beer, the pubs worth the walk, where to eat, and where to watch the football. Rated on whether I\'d go back.</p>'+(SH&&SH.n?'<p class="legend"><b>Note:</b> '+esc(SH.n)+'</p>':''):'')+
       '<div class="foot"><span>ROB CALLERY</span><span>EDITION '+new Date().getFullYear()+'</span></div>'});
   });
   if(F) pages.push({cls:'blank',html:wm()+top('TRAVEL GUIDES · NOTES',pages.length)+'<div class="biro" style="margin-top:2em">Notes, beer mats and receipts go here…</div>'});
@@ -160,7 +162,7 @@ JS_PAGES = r'''
     if(g.spoons) bars='<li class="spoons"><span class="badge'+(g.spoons.none?' none':'')+'">'+(g.spoons.none?'NO SPOONS':g.spoons.nearest?'NEAREST SPOONS':'SPOONS')+'</span> '+(g.spoons.name?'<b>'+esc(g.spoons.name)+'</b>'+(g.spoons.note?' – ':''):'')+esc(g.spoons.note||'')+'</li>'+bars;
     var sec=function(k,v){return v?'<div class="sec"><div class="k">'+k+'</div>'+v+'</div>':''};
     pages.push({cls:'city',gi:i,style:'--c:'+c,html:wm()+top('TRAVEL GUIDES · '+esc((g.region||g.country||'').toUpperCase()),pages.length)+
-      '<div class="hero">'+skyline(i+3)+'<div class="country">'+esc(((g.region?g.region+' · ':'')+({'United Kingdom':'UK'}[g.country]||g.country||'')).toUpperCase())+'</div><h2>'+esc(g.city)+'</h2>'+(g.visited?'<div class="vis">Visited '+fmtMonth(g.visited)+'</div>':'')+'</div>'+
+      '<div class="hero">'+skyline(i+3)+'<div class="country">'+esc(((g.region?g.region+' · ':'')+({'United Kingdom':'UK','United States':'USA'}[g.country]||g.country||'')).toUpperCase())+'</div><h2>'+esc(g.city)+'</h2>'+(g.visited?'<div class="vis">Visited '+fmtMonth(g.visited)+'</div>':'')+'</div>'+
       '<div class="glance"><div><div class="k">A pint</div><div class="v">'+esc(g.pint||'–')+'</div></div><div><div class="k">Local beer</div><div class="v">'+esc(g.localBeer||'–')+'</div></div><div><div class="k">Best for</div><div class="v">'+esc(g.bestFor||'–')+'</div></div></div>'+
       sec('Where to drink',bars?'<ul>'+bars+'</ul>':'')+sec('Eat','<p>'+esc(g.eat||'')+'</p>'.replace('<p></p>',''))+sec('Don\'t miss',g.dontMiss?'<p>'+esc(g.dontMiss)+'</p>':'')+sec('Football',g.football?'<p>'+esc(g.football)+'</p>':'')+sec('Getting there',g.gettingThere?'<p>'+esc(g.gettingThere)+'</p>':'')+
       (r?'<div class="rate">Would I go back? <span class="pints">'+p+'</span></div>':'')+

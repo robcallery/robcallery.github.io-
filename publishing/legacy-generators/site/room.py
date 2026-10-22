@@ -1,6 +1,6 @@
 import re, json, random, math, subprocess, sys
 sys.path.insert(0, '/tmp/claude-0/-home-claude/9cac7207-2d1b-5bf4-969e-62974606aff5/scratchpad')
-from shelves import SHELVES, SHELF_JSON, SHELF_OF_JS
+from shelves import SHELVES, SHELF_JSON, SHELF_OF_JS, PREFIX
 
 fav = open('/home/claude/favicon.svg').read()
 globe = re.search(r'<path fill="#f7f7f2" fill-rule="evenodd" d="([^"]+)"', fav).group(1)
@@ -124,14 +124,14 @@ def book(sid):
     rnd = random.Random(sid)
     h = rnd.choice([88, 91, 94, 97]); lean = 0
     return (f'<a class="book" href="/travel-guides/guide/?shelf={sid}" data-shelf="{sid}" style="--c:{c};--b:{b};--i:{ink};--h:{h}%">'
-            f'<span class="band t"></span><span class="ti"><small>Travelling</small><b>{title}</b><i>one beer at a time</i></span><span class="n" data-count="{sid}">{n}</span><span class="band u"></span>'
+            f'<span class="band t"></span><span class="ti"><small>{PREFIX.get(sid, "Travelling")}</small><b>{title}</b><i>one beer at a time</i></span><span class="n" data-count="{sid}">{n}</span><span class="band u"></span>'
             f'<span class="sr"> – {n} guide{"s" if n != 1 else ""}</span></a>')
 
 
 ROWS = [
     (['north-england', 'south-england', 'east-england', 'west-england', 'wales', 'scotland'], ['stack']),
     (['northern-ireland', 'ireland', 'spain', 'france', 'usa', 'rest-of-world'], ['globe']),
-    (['airports'], ['scarf', 'plant', 'ball', 'bottle']),
+    (['airports', 'us-capitals'], ['scarf', 'plant', 'ball', 'bottle']),
 ]
 
 def case():
