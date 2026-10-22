@@ -1,13 +1,13 @@
 # Travelling Disney Parks - from Rob's 29-page workbook, tidied, with prices checked 22 October 2026
 WDW, DLR, DLP, TDR, HK, SH = 'Walt Disney World', 'Disneyland Resort', 'Disneyland Paris', 'Tokyo Disney Resort', 'Hong Kong Disneyland Resort', 'Shanghai Disney Resort'
-WDW_P = '~$12-14 a draught'
+WDW_P = '$12-14 a draught'
 PARIS_P = '€8.80 a 50cl'
 # name: (sheet row name, resort, region, country, pint, local beer, best for, bars, eat, don't miss, alt, getting there, tip, snapshot, did you know)
 D = [
  ('Magic Kingdom','Magic Kingdom',WDW,'Florida','United States',WDW_P,'Beer with your meal - it is sold at table-service restaurants','Classic Disney magic',
   ['Jungle Navigation Co. Ltd Skipper Canteen','Be Our Guest Restaurant'],'Fish and chips at Columbia Harbour House.','TRON Lightcycle / Run.','Instead of football: the parades and fireworks.',
   'Monorail or ferry from the Transportation and Ticket Center.','Beer and wine are only served at the table-service restaurants, so book one.',None,'Magic Kingdom opened in 1971.'),
- ('EPCOT','EPCOT',WDW,'Florida','United States','~$12.75 (Rose & Crown)','World Showcase beers - from Harp at the Rose & Crown to Bitburger in Germany','Global food & culture',
+ ('EPCOT','EPCOT',WDW,'Florida','United States','$12.75 (Rose & Crown)','World Showcase beers - from Harp at the Rose & Crown to Bitburger in Germany','Global food & culture',
   ['Rose & Crown Pub','Biergarten Restaurant'],'Pastries at Les Halles Boulangerie-Patisserie in France.','Spaceship Earth.','Instead of football: World Showcase entertainment.',
   'Monorail, Skyliner, bus, or walk from the nearby resorts.','Pace yourself on a World Showcase drinking route - there are 11 countries.',None,'It opened in 1982 as EPCOT Center.'),
  ('Hollywood Studios',"Disney’s Hollywood Studios",WDW,'Florida','United States',WDW_P,'Draught beers vary by bar','Star Wars & big thrills',
@@ -43,7 +43,7 @@ D = [
  ('Disney California Adventure','Disney California Adventure',DLR,'California','United States',None,'California craft beer','Pixar & California vibes',
   ['Lamplight Lounge','Carthay Circle Lounge'],'Pym Test Kitchen.','Radiator Springs Racers.','Instead of football: World of Color.',
   'Walk in from the resort entrances.','Explore the food and drink on Pixar Pier.','The big wheel on Pixar Pier','It opened in 2001.'),
- ('California Adventure Food & Wine Festival','Disney California Adventure — Food & Wine',DLR,'California','United States','~$17 a craft beer (2026 festival)','California craft beer and wine','California flavours & craft drinks',
+ ('California Adventure Food & Wine Festival','Disney California Adventure — Food & Wine',DLR,'California','United States','$17 a craft beer (2026 festival)','California craft beer and wine','California flavours & craft drinks',
   ['California Craft Brews','Paradise Beer Garden'],'The festival marketplaces.','The festival marketplaces.','Instead of football: food and wine demonstrations.',
   'Disneyland Resort transport.','A four-beer California flight cost $18.50 in 2026 - better value than single pours.','Grizzly Peak in festival season','The festival focuses on California-inspired food and drink.'),
  ('California Adventure Festival of Holidays','Disney California Adventure — Festival of Holidays',DLR,'California','United States',None,'Seasonal beer and cocktails','Holiday food & music',
