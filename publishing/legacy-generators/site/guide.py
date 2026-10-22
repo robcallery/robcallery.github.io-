@@ -36,13 +36,18 @@ window.GUIDES = [
 PAGE = PAGE.replace('<title>Beer Passport - Rob Callery</title>', '<title>Travel Guides - Rob Callery</title>')
 PAGE = re.sub(r'<meta name="description" content="[^"]*">', '<meta name="description" content="Rob Callery\'s pint-first travel guides: where to drink, eat and watch the football in every city.">', PAGE, count=1)
 PAGE = PAGE.replace("<h1 class=\"sr\">Rob Callery's Beer Passport</h1>", "<h1 class=\"sr\">Rob Callery's Travel Guides</h1>")
-PAGE = PAGE.replace('<script src="beers.js"></script>', '<script src="guides.js"></script><script src="snaps.js"></script>')
-PAGE = PAGE.replace('--burg:#6e1a2c;--burg2:#4a0f1d;--paper:#f6efdc;', '--burg:#0f6f73;--burg2:#0a4a4d;--paper:#fbf7ec;')
+PAGE = PAGE.replace('<script src="beers.js"></script>', '<script src="/travel-guides/guides.js"></script><script src="/travel-guides/snaps.js"></script>')
+PAGE = PAGE.replace('<a class="back" href="/explore/">← Back to the bar</a>', '<a class="back" href="/travel-guides/">← Back to the shelf</a>')
+assert '--burg:#1b2b4d;--burg2:#0b1630;--paper:#f6efdc;' in PAGE
+PAGE = PAGE.replace('--burg:#1b2b4d;--burg2:#0b1630;--paper:#f6efdc;', '--burg:#0f6f73;--burg2:#0a4a4d;--paper:#fbf7ec;')
 PAGE = PAGE.replace("Tap a page, swipe, or use the arrow keys to flick through.", "Tap a page, swipe, or use the arrow keys to flick through the guide.")
 CSS = r'''
   /* ---------- guidebook ---------- */
   .page{font-family:Inter,system-ui,sans-serif}
+  .cover{background:linear-gradient(135deg,var(--burg),var(--burg2));justify-content:space-between;padding:2.4em 1.5em}
+  .cover::before{content:"";position:absolute;inset:.8em;border:1.5px dashed rgba(255,205,0,.45);border-radius:6px}
   .cover .t1{color:#ffcd00}
+  .cover .t2{font-family:"Bebas Neue",Impact,sans-serif;font-size:2.3em;letter-spacing:.06em;line-height:1;color:#ffcd00}
   .cover .gl{width:56%;height:auto}
   .cover .t2{color:#ffcd00}
   .cover .t3{font-family:"DM Serif Display",Georgia,serif;font-style:italic;font-size:1.05em;letter-spacing:0;color:#f7f2e4;opacity:1}
@@ -105,7 +110,16 @@ PAGE = PAGE.replace('  /* controls */', CSS + '  /* controls */', 1)
 JS_PAGES = r'''
   var GLOBE='__GLOBE__';
   var demo=/[?&]demo\b/.test(location.search);
-  var beers=(window.GUIDES||[]).slice();
+  var SHELVES=__SHELVES__;
+  __SHELFOF__
+  var Q=location.search, shelfQ=(Q.match(/[?&]shelf=([^&]+)/)||[])[1], cityQ0=(Q.match(/[?&]city=([^&]+)/)||[])[1];
+  try{cityQ0=cityQ0&&decodeURIComponent(cityQ0.replace(/\+/g,' '))}catch(e){}
+  var ALL=(window.GUIDES||[]).slice();
+  if(!shelfQ&&cityQ0){ALL.forEach(function(g){if(!shelfQ&&g.city.toLowerCase()===cityQ0.toLowerCase())shelfQ=shelfOf(g)})}
+  var SH=null;SHELVES.forEach(function(s){if(s.id===shelfQ)SH=s});
+  if(!SH&&!demo){location.replace('/travel-guides/');return}
+  var beers=SH?ALL.filter(function(g){return shelfOf(g)===SH.id}):ALL;
+  if(SH){var rs=document.documentElement.style;rs.setProperty('--burg',SH.c);rs.setProperty('--burg2','#'+SH.c.slice(1).match(/../g).map(function(h){return ('0'+Math.round(parseInt(h,16)*.68).toString(16)).slice(-2)}).join(''));document.title=SH.t+' - Travel Guides - Rob Callery'}
   if(demo&&!beers.length){beers=[
     {city:"Leeds",country:"England",visited:"2026-10",pint:"£5",localBeer:"Kirkstall Pale",bestFor:"Matchdays & real ale",bars:[{name:"A canal-side brewery tap",note:"pre-match pints"},{name:"An old Victorian boozer",note:"cask on every pump"}],eat:"Something hot from the market before the walk to the ground.",dontMiss:"A night match under the lights at Elland Road.",football:"Elland Road, obviously. Get there early.",rating:5,colour:"blue",notes:"Home. No guide needed, but here's one anyway."},
     {city:"Málaga",country:"Spain",visited:"2026-06",pint:"€3",localBeer:"Victoria",bestFor:"Beach bars & tapas",bars:[{name:"A chiringuito on the beach",note:"cold lager, sardines on the fire"},{name:"Old town tapas bars",note:"hop between three or four"}],eat:"Espetos (grilled sardines) right on the sand.",dontMiss:"Sunset from the castle walls, then back down for one more.",football:"Málaga CF at La Rosaleda.",rating:5,colour:"orange",notes:"Firpo't of Call territory. Would move there tomorrow."},
@@ -127,7 +141,7 @@ JS_PAGES = r'''
   }
   var INSIDE='<div class="ep">'+wm()+'<div class="own"><span>This guide belongs to</span><b>ROB CALLERY</b><span>If found, return it to the nearest bar.</span></div></div>';
   var pages=[];
-  pages.push({cls:'cover',html:'<div class="t1">TRAVEL GUIDES</div><svg class="gl" viewBox="190 157 700 700"><circle cx="540" cy="507" r="345" fill="#0a1838"/><path fill="#f7f2e4" fill-rule="evenodd" d="'+GLOBE+'"/></svg><div><div class="t3">one beer at a time</div></div><div class="by">ROB CALLERY</div><div class="hint">tap to open</div>'});
+  pages.push({cls:'cover',html:'<div class="t1">TRAVEL GUIDES</div>'+(SH?'<div class="t2">'+esc(SH.t.toUpperCase())+'</div>':'')+'<svg class="gl" viewBox="190 157 700 700"><circle cx="540" cy="507" r="345" fill="#0a1838"/><path fill="#f7f2e4" fill-rule="evenodd" d="'+GLOBE+'"/></svg><div><div class="t3">one beer at a time</div></div><div class="by">ROB CALLERY</div><div class="hint">tap to open</div>'});
   var rows=[],lastC=null;beers.forEach(function(g,i){var gk=g.group||g.country;if(gk!==lastC){rows.push({grp:gk||''});lastC=gk}rows.push({g:g,i:i})});
   var FIRST=13,MORE=19,chunks=[];if(!rows.length)chunks=[[]];else{var k=0;while(k<rows.length){var n=chunks.length?MORE:FIRST,ch=rows.slice(k,k+n);if(k+n<rows.length&&ch.length>1&&ch[ch.length-1].grp!=null)ch.pop();chunks.push(ch);k+=ch.length;}}
   var C=chunks.length, F=(C+1)%2;
@@ -161,6 +175,9 @@ JS_PAGES = r'''
   });
   pages.push({cls:'await',html:wm()+top('TRAVEL GUIDES · NEXT STOP',pages.length)+'<div class="tag">NEXT DESTINATION<br>TBC</div><div class="await-msg">'+(beers.length?'Bags are packed. Next guide coming soon…':'The first guides are being written.<br>Check back soon!')+'</div><div class="foot"><span>ROB CALLERY</span><span>ONE BEER AT A TIME</span></div>'});
 '''
+import sys; sys.path.insert(0,'/tmp/claude-0/-home-claude/9cac7207-2d1b-5bf4-969e-62974606aff5/scratchpad')
+from shelves import SHELF_JSON, SHELF_OF_JS
+JS_PAGES = JS_PAGES.replace('__SHELVES__', SHELF_JSON).replace('__SHELFOF__', SHELF_OF_JS)
 start = PAGE.index("  var GLOBE='__GLOBE__';")
 end = PAGE.index("  var stage=document.getElementById('stage')")
 PAGE = PAGE[:start] + JS_PAGES.lstrip('\n') + PAGE[end:]
@@ -181,7 +198,8 @@ PAGE = PAGE.replace(_SA, _SA + r"""
 assert "'Contents'" in PAGE and 'guides.js' in PAGE
 
 os.makedirs('/home/claude/site/travel-guides', exist_ok=True)
-open('/home/claude/site/travel-guides/index.html', 'w').write(PAGE.replace('__GLOBE__', globe))
+os.makedirs('/home/claude/site/travel-guides/guide', exist_ok=True)
+open('/home/claude/site/travel-guides/guide/index.html', 'w').write(PAGE.replace('__GLOBE__', globe))
 gj = '/home/claude/site/travel-guides/guides.js'
 if not os.path.exists(gj):
     open(gj, 'w').write(GUIDES_JS)
