@@ -21,10 +21,6 @@ window.GUIDES = [
       {
         "name": "The Victoria & Commercial",
         "note": "restored Grade II-listed Victorian interior"
-      },
-      {
-        "name": "Kirkstall Bridge Inn",
-        "note": "riverside, pouring Kirkstall's own beers"
       }
     ],
     "eat": "Graze Kirkgate Market, or steak and ale pie at the Lamb & Flag by the Minster.",
@@ -32,7 +28,13 @@ window.GUIDES = [
     "football": "Leeds United at Elland Road. Headingley for the Rhinos and Yorkshire cricket.",
     "gettingThere": "Leeds station is a major hub: direct trains from London, Manchester, York and beyond.",
     "tip": "Get to Whitelock's early on matchday - it's tiny and fills fast.",
-    "group": "Yorkshire"
+    "group": "Yorkshire",
+    "archivedBars": [
+      {
+        "name": "Kirkstall Bridge Inn",
+        "note": "riverside, pouring Kirkstall's own beers"
+      }
+    ]
   },
   {
     "city": "Wakefield",
@@ -50,10 +52,6 @@ window.GUIDES = [
       {
         "name": "The Black Rock",
         "note": "Grade II-listed, near the cathedral"
-      },
-      {
-        "name": "Luis Bar",
-        "note": "Ossett's bar in the old Fernandes maltings"
       }
     ],
     "eat": "Anything with Yorkshire forced rhubarb - Wakefield is the heart of the Rhubarb Triangle.",
@@ -61,7 +59,13 @@ window.GUIDES = [
     "football": "Wakefield Trinity rugby league at Belle Vue (DIY Kitchens Stadium).",
     "gettingThere": "Wakefield Westgate is on the East Coast Main Line - quick from Leeds or London.",
     "tip": "Do Westgate as a crawl - Harry's, Black Rock and the Hop are all within a few minutes.",
-    "group": "Yorkshire"
+    "group": "Yorkshire",
+    "archivedBars": [
+      {
+        "name": "Luis Bar",
+        "note": "Ossett's bar in the old Fernandes maltings"
+      }
+    ]
   },
   {
     "city": "Batley",
@@ -125,10 +129,6 @@ window.GUIDES = [
       {
         "name": "Magic Rock Tap",
         "note": "brewery taproom, food trucks at weekends"
-      },
-      {
-        "name": "The Sportsman",
-        "note": "1930s pub, a CAMRA favourite"
       }
     ],
     "eat": "Pie and peas at the Slubbers Arms.",
@@ -136,7 +136,13 @@ window.GUIDES = [
     "football": "Huddersfield Town at the Accu Stadium (the old John Smith's).",
     "gettingThere": "On the TransPennine line - about 20 minutes from Leeds.",
     "tip": "Grab a pint at the King's Head before your train - it's in the station.",
-    "group": "Yorkshire"
+    "group": "Yorkshire",
+    "archivedBars": [
+      {
+        "name": "The Sportsman",
+        "note": "1930s pub, a CAMRA favourite"
+      }
+    ]
   },
   {
     "city": "Sheffield",
@@ -154,10 +160,6 @@ window.GUIDES = [
       {
         "name": "Kelham Island Tavern",
         "note": "rotating real ales and a leafy beer garden"
-      },
-      {
-        "name": "The Fat Cat",
-        "note": "a Kelham Island classic"
       }
     ],
     "eat": "Anything with a splash of Henderson's Relish - it's the law round here.",
@@ -165,7 +167,13 @@ window.GUIDES = [
     "football": "Sheffield United at Bramall Lane, Sheffield Wednesday at Hillsborough.",
     "gettingThere": "Sheffield station on the Midland Main Line; about 40 minutes from Leeds.",
     "tip": "Walk Kelham Island in a loop - Fat Cat, Kelham Island Tavern, then the Riverside.",
-    "group": "Yorkshire"
+    "group": "Yorkshire",
+    "archivedBars": [
+      {
+        "name": "The Fat Cat",
+        "note": "a Kelham Island classic"
+      }
+    ]
   },
   {
     "city": "Morley",
@@ -208,10 +216,6 @@ window.GUIDES = [
       {
         "name": "The Little Ale House",
         "note": "cosy micropub, good ale range"
-      },
-      {
-        "name": "Harrogate Tap",
-        "note": "station pub that tops the 'best station pub' lists"
       }
     ],
     "eat": "Tea and a Fat Rascal at Bettys, or small plates at the Fat Badger.",
@@ -219,7 +223,13 @@ window.GUIDES = [
     "football": "Harrogate Town at Wetherby Road (Marcy Fitness Stadium).",
     "gettingThere": "Harrogate Line trains from Leeds and York.",
     "tip": "The Winter Gardens staircase is worth the visit alone.",
-    "group": "Yorkshire"
+    "group": "Yorkshire",
+    "archivedBars": [
+      {
+        "name": "Harrogate Tap",
+        "note": "station pub that tops the 'best station pub' lists"
+      }
+    ]
   },
   {
     "city": "Knaresborough",
@@ -311,10 +321,6 @@ window.GUIDES = [
       {
         "name": "Golden Lion Hotel",
         "note": "listed coaching inn with a golden lion over the porch"
-      },
-      {
-        "name": "The Fleece Inn",
-        "note": "15th-century building with oak-beamed ceilings"
       }
     ],
     "eat": "Bettys on the High Street, or a meal at the Golden Lion.",
@@ -322,7 +328,13 @@ window.GUIDES = [
     "football": "Northallerton Town at the Calvert Stadium.",
     "gettingThere": "Northallerton is on the East Coast Main Line.",
     "tip": "Wednesday and Saturday are market days - the High Street pubs are buzzing.",
-    "group": "Yorkshire"
+    "group": "Yorkshire",
+    "archivedBars": [
+      {
+        "name": "The Fleece Inn",
+        "note": "15th-century building with oak-beamed ceilings"
+      }
+    ]
   },
   {
     "city": "York",
@@ -340,10 +352,6 @@ window.GUIDES = [
       {
         "name": "House of the Trembling Madness",
         "note": "Stonegate, beers over a medieval hall"
-      },
-      {
-        "name": "Ye Olde Starre Inne",
-        "note": "Stonegate, one of York's oldest licensed pubs"
       }
     ],
     "eat": "Wander the Shambles and Shambles Market for lunch.",
@@ -351,7 +359,13 @@ window.GUIDES = [
     "football": "York City at the LNER Community Stadium.",
     "gettingThere": "On the East Coast Main Line - about 25 minutes from Leeds.",
     "tip": "Walk the walls first - then you've earned the York Tap.",
-    "group": "Yorkshire"
+    "group": "Yorkshire",
+    "archivedBars": [
+      {
+        "name": "Ye Olde Starre Inne",
+        "note": "Stonegate, one of York's oldest licensed pubs"
+      }
+    ]
   },
   {
     "city": "Wetherby",
@@ -419,10 +433,6 @@ window.GUIDES = [
       {
         "name": "Dukes",
         "note": "micropub in a Victorian arcade"
-      },
-      {
-        "name": "Westgate",
-        "note": "refurbished town-centre local, good for sport"
       }
     ],
     "eat": "Grab something in the Piece Hall's courtyard.",
@@ -430,7 +440,13 @@ window.GUIDES = [
     "football": "FC Halifax Town at The Shay.",
     "gettingThere": "Trains from Leeds in about 35 minutes.",
     "tip": "Go when there's something on in the Piece Hall - the Hop Yard is right inside.",
-    "group": "Yorkshire"
+    "group": "Yorkshire",
+    "archivedBars": [
+      {
+        "name": "Westgate",
+        "note": "refurbished town-centre local, good for sport"
+      }
+    ]
   },
   {
     "city": "Ripon",
@@ -473,17 +489,19 @@ window.GUIDES = [
       {
         "name": "Black Bull in Paradise",
         "note": "Theakston's brewery tap"
-      },
-      {
-        "name": "The White Bear",
-        "note": "gastropub next to Black Sheep"
       }
     ],
     "eat": "Lunch at the Black Sheep bistro or the White Bear.",
     "dontMiss": "Tours of both breweries - Theakston Old Peculier at source.",
     "gettingThere": "No station - drive or bus from Ripon.",
     "tip": "Book both brewery tours on the same day - they're five minutes apart.",
-    "group": "Yorkshire"
+    "group": "Yorkshire",
+    "archivedBars": [
+      {
+        "name": "The White Bear",
+        "note": "gastropub next to Black Sheep"
+      }
+    ]
   },
   {
     "city": "Pateley Bridge",
@@ -525,17 +543,19 @@ window.GUIDES = [
       {
         "name": "Royal Oak",
         "note": "Market Place, big dog-friendly beer garden"
-      },
-      {
-        "name": "Wentworth Arms",
-        "note": "coaching inn in Old Malton"
       }
     ],
     "eat": "Malton calls itself Yorkshire's food capital - try the monthly food market.",
     "dontMiss": "Castle Howard, a few miles down the road.",
     "gettingThere": "Trains from York in about 25 minutes.",
     "tip": "Time it for the monthly food market, then Brass Castle's tap.",
-    "group": "Yorkshire"
+    "group": "Yorkshire",
+    "archivedBars": [
+      {
+        "name": "Wentworth Arms",
+        "note": "coaching inn in Old Malton"
+      }
+    ]
   },
   {
     "city": "Settle",
@@ -662,10 +682,6 @@ window.GUIDES = [
       {
         "name": "The Victoria",
         "note": "near the station, wide range of regional ales"
-      },
-      {
-        "name": "The Guns Bar",
-        "note": "craft ale and gin on Milton Street"
       }
     ],
     "eat": "Homemade pies at the Guns on a Saturday.",
@@ -673,7 +689,13 @@ window.GUIDES = [
     "football": "Middlesbrough at the Riverside, half an hour away.",
     "gettingThere": "End of the line from Darlington and Middlesbrough.",
     "tip": "Take the cliff lift down to the Ship Inn - and back up after.",
-    "group": "Yorkshire"
+    "group": "Yorkshire",
+    "archivedBars": [
+      {
+        "name": "The Guns Bar",
+        "note": "craft ale and gin on Milton Street"
+      }
+    ]
   },
   {
     "city": "Bradford",
@@ -692,17 +714,19 @@ window.GUIDES = [
       {
         "name": "Exchange Craft Beer House",
         "note": "vaulted cellars under the old Wool Exchange"
-      },
-      {
-        "name": "Record Café",
-        "note": "North Parade, beer bar and record shop"
       }
     ],
     "eat": "A proper curry - Bradford has won Curry Capital of Britain more than once.",
     "dontMiss": "Saltaire, the UNESCO mill village, a short hop up the line.",
     "football": "Bradford City at Valley Parade; the Bulls play rugby league at Odsal.",
     "gettingThere": "Forster Square and Interchange stations, about 20 minutes from Leeds.",
-    "tip": "Do North Parade as a crawl - Record Café, then work your way along."
+    "tip": "Do North Parade as a crawl - Record Café, then work your way along.",
+    "archivedBars": [
+      {
+        "name": "Record Café",
+        "note": "North Parade, beer bar and record shop"
+      }
+    ]
   },
   {
     "city": "Hull",
@@ -721,17 +745,19 @@ window.GUIDES = [
       {
         "name": "Ye Olde Black Boy",
         "note": "High Street, around 1720, Hull's oldest pub"
-      },
-      {
-        "name": "The Bonny Boat",
-        "note": "trading since 1791, nautical bits everywhere"
       }
     ],
     "eat": "A Hull pattie - mashed potato and sage, battered and fried. Only in Hull.",
     "dontMiss": "The Deep aquarium, then a pint on Humber Street.",
     "football": "Hull City and Hull FC at the MKM Stadium; Hull KR at Craven Park.",
     "gettingThere": "Hull Paragon Interchange, about an hour from Leeds by train.",
-    "tip": "The George Hotel has England's smallest window - look for it on the way to the White Harte."
+    "tip": "The George Hotel has England's smallest window - look for it on the way to the White Harte.",
+    "archivedBars": [
+      {
+        "name": "The Bonny Boat",
+        "note": "trading since 1791, nautical bits everywhere"
+      }
+    ]
   },
   {
     "city": "Rotherham",
@@ -775,17 +801,19 @@ window.GUIDES = [
       {
         "name": "Little Plough",
         "note": "West Laith Gate, a village pub in the middle of town"
-      },
-      {
-        "name": "The Masons Arms",
-        "note": "Market Place, friendly old local"
       }
     ],
     "eat": "Graze Doncaster Market - one of the biggest in the north.",
     "dontMiss": "The St Leger in September - the oldest classic horse race, run since 1776.",
     "football": "Doncaster Rovers at the Eco-Power Stadium.",
     "gettingThere": "On the East Coast Main Line - under two hours from London, 30 minutes from Leeds.",
-    "tip": "Missed your train? The Draughtsman is literally on the platform."
+    "tip": "Missed your train? The Draughtsman is literally on the platform.",
+    "archivedBars": [
+      {
+        "name": "The Masons Arms",
+        "note": "Market Place, friendly old local"
+      }
+    ]
   },
   {
     "city": "Barnsley",
@@ -804,17 +832,19 @@ window.GUIDES = [
       {
         "name": "Jolly Tap on the Arcade",
         "note": "Barnsley's first micropub, in the Victorian arcade"
-      },
-      {
-        "name": "George & Dragon",
-        "note": "Summer Lane, CAMRA Pub of the Year 2025"
       }
     ],
     "eat": "A Barnsley chop - a double lamb chop cut right across the loin.",
     "dontMiss": "The Victorian arcade, then the Glass Works.",
     "football": "Barnsley FC at Oakwell.",
     "gettingThere": "Barnsley Interchange, trains from Leeds and Sheffield.",
-    "tip": "Old No 7 and the Bramah are next door on Market Hill - start there."
+    "tip": "Old No 7 and the Bramah are next door on Market Hill - start there.",
+    "archivedBars": [
+      {
+        "name": "George & Dragon",
+        "note": "Summer Lane, CAMRA Pub of the Year 2025"
+      }
+    ]
   },
   {
     "city": "Grimsby",
@@ -874,17 +904,19 @@ window.GUIDES = [
       {
         "name": "The Dirty Bottles",
         "note": "1600s inn with ales and cocktails"
-      },
-      {
-        "name": "The Hog's Head Inn",
-        "note": "named after the Harry Potter tavern"
       }
     ],
     "eat": "Browse Barter Books in the old station, then a pub lunch.",
     "dontMiss": "Alnwick Castle, then out to Craster and Beadnell on the coast.",
     "gettingThere": "Alnmouth station on the East Coast Main Line, then a short bus.",
     "tip": "Barter Books first, then the Tanners Arms.",
-    "group": "North East"
+    "group": "North East",
+    "archivedBars": [
+      {
+        "name": "The Hog's Head Inn",
+        "note": "named after the Harry Potter tavern"
+      }
+    ]
   },
   {
     "city": "Newcastle upon Tyne",
@@ -903,17 +935,19 @@ window.GUIDES = [
       {
         "name": "The Bridge Tavern",
         "note": "under the Tyne Bridge, brewing its own beer"
-      },
-      {
-        "name": "Free Trade Inn",
-        "note": "Ouseburn, best view of the bridges in town"
       }
     ],
     "eat": "A stottie with ham and pease pudding.",
     "dontMiss": "Walk the Quayside and across the Millennium Bridge to the Baltic.",
     "football": "Newcastle United at St James' Park.",
     "gettingThere": "Newcastle Central on the East Coast Main Line, about 1.5 hours from Leeds.",
-    "tip": "Go to the Free Trade for sunset - every Tyne bridge lines up in the window."
+    "tip": "Go to the Free Trade for sunset - every Tyne bridge lines up in the window.",
+    "archivedBars": [
+      {
+        "name": "Free Trade Inn",
+        "note": "Ouseburn, best view of the bridges in town"
+      }
+    ]
   },
   {
     "city": "Sunderland",
@@ -932,17 +966,19 @@ window.GUIDES = [
       {
         "name": "The Fitzgeralds",
         "note": "Green Terrace, long-time Good Beer Guide regular"
-      },
-      {
-        "name": "The Ship Isis",
-        "note": "Silksworth Row, restored Victorian local"
       }
     ],
     "eat": "Fish and chips on the seafront at Roker or Seaburn.",
     "dontMiss": "A walk out along Roker Pier to the lighthouse.",
     "football": "Sunderland AFC at the Stadium of Light.",
     "gettingThere": "Sunderland station - trains and the Tyne & Wear Metro from Newcastle.",
-    "tip": "The Dun Cow is the pre-show pub for the Empire - get in early on show nights."
+    "tip": "The Dun Cow is the pre-show pub for the Empire - get in early on show nights.",
+    "archivedBars": [
+      {
+        "name": "The Ship Isis",
+        "note": "Silksworth Row, restored Victorian local"
+      }
+    ]
   },
   {
     "city": "Middlesbrough",
@@ -961,17 +997,19 @@ window.GUIDES = [
       {
         "name": "The Twisted Lip",
         "note": "micropub in a converted terrace house"
-      },
-      {
-        "name": "Play Brew Co",
-        "note": "brewery taproom, the brewery right next to the bar"
       }
     ],
     "eat": "A chicken parmo - Teesside's finest, with chips.",
     "dontMiss": "A look at the Transporter Bridge, then mima, the art gallery.",
     "football": "Middlesbrough at the Riverside Stadium.",
     "gettingThere": "Middlesbrough station; TransPennine from Leeds via York.",
-    "tip": "The Infant Hercules is named after Gladstone's description of the town."
+    "tip": "The Infant Hercules is named after Gladstone's description of the town.",
+    "archivedBars": [
+      {
+        "name": "Play Brew Co",
+        "note": "brewery taproom, the brewery right next to the bar"
+      }
+    ]
   },
   {
     "city": "Darlington",
@@ -1036,17 +1074,19 @@ window.GUIDES = [
       {
         "name": "Tipsy Turtle",
         "note": "Regency West Mall, three cask and lots of keg"
-      },
-      {
-        "name": "Kopper Keg",
-        "note": "just off the high street, busy and friendly"
       }
     ],
     "eat": "A parmo, obviously.",
     "dontMiss": "The Infinity Bridge over the Tees, lit up at night.",
     "football": "Middlesbrough are 15 minutes away at the Riverside.",
     "gettingThere": "Stockton or Thornaby stations; Thornaby is closer for the river.",
-    "tip": "The high street is one of the widest in England - start at the Sheraton and work down."
+    "tip": "The high street is one of the widest in England - start at the Sheraton and work down.",
+    "archivedBars": [
+      {
+        "name": "Kopper Keg",
+        "note": "just off the high street, busy and friendly"
+      }
+    ]
   },
   {
     "city": "Gateshead",
@@ -1086,17 +1126,19 @@ window.GUIDES = [
       {
         "name": "Alum Ale House",
         "note": "Grade II, by the ferry landing"
-      },
-      {
-        "name": "The Marine",
-        "note": "Ocean Road, local CAMRA Pub of the Year 2024"
       }
     ],
     "eat": "A curry on Ocean Road - the town's famous for them.",
     "dontMiss": "Arbeia Roman Fort, then down to the beach.",
     "football": "Newcastle and Sunderland are both half an hour away.",
     "gettingThere": "Tyne & Wear Metro, or the Shields Ferry from North Shields.",
-    "tip": "Steamboat and the Alum are two minutes apart by the river."
+    "tip": "Steamboat and the Alum are two minutes apart by the river.",
+    "archivedBars": [
+      {
+        "name": "The Marine",
+        "note": "Ocean Road, local CAMRA Pub of the Year 2024"
+      }
+    ]
   },
   {
     "city": "Washington",
@@ -1133,17 +1175,19 @@ window.GUIDES = [
       {
         "name": "The George",
         "note": "the town's oldest drinking house"
-      },
-      {
-        "name": "Fox Tap",
-        "note": "Keswick Brewing Co's bar on Brewery Lane"
       }
     ],
     "eat": "Goulash at the Dog & Gun.",
     "dontMiss": "A boat on Derwentwater, or the climb up Catbells.",
     "gettingThere": "Train to Penrith, then the bus into Keswick.",
     "tip": "Book ahead for the Dog & Gun's goulash on a weekend.",
-    "group": "North West"
+    "group": "North West",
+    "archivedBars": [
+      {
+        "name": "Fox Tap",
+        "note": "Keswick Brewing Co's bar on Brewery Lane"
+      }
+    ]
   },
   {
     "city": "Manchester",
@@ -1161,10 +1205,6 @@ window.GUIDES = [
       {
         "name": "Marble Arch",
         "note": "Marble Brewery's original pub"
-      },
-      {
-        "name": "Port Street Beer House",
-        "note": "Northern Quarter craft bar"
       }
     ],
     "eat": "Curry Mile, or anything in the Northern Quarter.",
@@ -1172,7 +1212,13 @@ window.GUIDES = [
     "football": "Man United at Old Trafford, Man City at the Etihad.",
     "gettingThere": "About an hour from Leeds by train; big airport too.",
     "tip": "Peveril of the Peak before anywhere else - it's an island of a pub.",
-    "group": "North West"
+    "group": "North West",
+    "archivedBars": [
+      {
+        "name": "Port Street Beer House",
+        "note": "Northern Quarter craft bar"
+      }
+    ]
   },
   {
     "city": "Liverpool",
@@ -1190,10 +1236,6 @@ window.GUIDES = [
       {
         "name": "Baltic Fleet",
         "note": "dockside pub"
-      },
-      {
-        "name": "Ye Cracke",
-        "note": "back-street pub where John Lennon drank"
       }
     ],
     "eat": "Scouse, obviously.",
@@ -1201,7 +1243,13 @@ window.GUIDES = [
     "football": "Liverpool at Anfield; Everton at the Hill Dickinson Stadium.",
     "gettingThere": "About 1.5 hours from Leeds by train.",
     "tip": "Visit the Philharmonic's gents - honestly, it's listed.",
-    "group": "North West"
+    "group": "North West",
+    "archivedBars": [
+      {
+        "name": "Ye Cracke",
+        "note": "back-street pub where John Lennon drank"
+      }
+    ]
   },
   {
     "city": "Bolton",
@@ -1336,7 +1384,9 @@ window.GUIDES = [
       {
         "name": "The Anvil",
         "note": "long-standing town-centre local"
-      },
+      }
+    ],
+    "archivedBars": [
       {
         "name": "Sherrington's",
         "note": "Kenyon Road, Wigan CAMRA Pub of the Year 2025"
@@ -1667,7 +1717,9 @@ window.GUIDES = [
       {
         "name": "The Pot Still",
         "note": "Hope Street, hundreds of whiskies"
-      },
+      }
+    ],
+    "archivedBars": [
       {
         "name": "Drygate",
         "note": "brewery and bar next door to Tennent's Wellpark"
@@ -1696,7 +1748,9 @@ window.GUIDES = [
       {
         "name": "The Bow Bar",
         "note": "Victoria Street, tiny, cask ale and whisky"
-      },
+      }
+    ],
+    "archivedBars": [
       {
         "name": "The Sheep Heid Inn",
         "note": "Duddingston - claims to be Scotland's oldest pub"
@@ -1771,7 +1825,9 @@ window.GUIDES = [
       {
         "name": "Kelly's Cellars",
         "note": "Bank Street, from 1720, trad music"
-      },
+      }
+    ],
+    "archivedBars": [
       {
         "name": "The Duke of York",
         "note": "Commercial Court, Cathedral Quarter"
@@ -1925,7 +1981,9 @@ window.GUIDES = [
       {
         "name": "The Old Joint Stock",
         "note": "Temple Row, Fuller's pub in an old bank"
-      },
+      }
+    ],
+    "archivedBars": [
       {
         "name": "The Craven Arms",
         "note": "Upper Gough Street, blue-tiled Victorian corner pub"
@@ -1954,7 +2012,9 @@ window.GUIDES = [
       {
         "name": "Town Wall Tavern",
         "note": "Bond Street, tiny Victorian local"
-      },
+      }
+    ],
+    "archivedBars": [
       {
         "name": "The Golden Cross",
         "note": "Hay Lane, timber-framed from 1583"
@@ -1983,7 +2043,9 @@ window.GUIDES = [
       {
         "name": "The Bell Inn",
         "note": "Market Square, medieval sandstone cellars"
-      },
+      }
+    ],
+    "archivedBars": [
       {
         "name": "The Canalhouse",
         "note": "the canal actually runs into the pub"
@@ -2012,7 +2074,9 @@ window.GUIDES = [
       {
         "name": "Ye Olde Dolphin Inne",
         "note": "Queen Street, Derby's oldest, from 1530"
-      },
+      }
+    ],
+    "archivedBars": [
       {
         "name": "The Old Bell Hotel",
         "note": "Sadler Gate, Tudor coaching inn"
@@ -2580,7 +2644,9 @@ window.GUIDES = [
       {
         "name": "The Fat Cat",
         "note": "West End Street, legendary free house"
-      },
+      }
+    ],
+    "archivedBars": [
       {
         "name": "Gardeners Arms",
         "note": "Timber Hill, known to all as the Murderers"
@@ -2649,7 +2715,9 @@ window.GUIDES = [
       {
         "name": "The Free Press",
         "note": "Prospect Row, no TV, no music, just beer"
-      },
+      }
+    ],
+    "archivedBars": [
       {
         "name": "The Mill",
         "note": "by the river, right where the punts set off"
@@ -2942,10 +3010,6 @@ window.GUIDES = [
       {
         "name": "The Market Porter",
         "note": "early-opening pub by Borough Market"
-      },
-      {
-        "name": "The Anchor Bankside",
-        "note": "riverside on the South Bank"
       }
     ],
     "eat": "Borough Market.",
@@ -2953,7 +3017,13 @@ window.GUIDES = [
     "football": "Millwall at The Den.",
     "gettingThere": "London Bridge station, or the Jubilee line.",
     "tip": "The Market Porter opens early on market days.",
-    "group": "London"
+    "group": "London",
+    "archivedBars": [
+      {
+        "name": "The Anchor Bankside",
+        "note": "riverside on the South Bank"
+      }
+    ]
   },
   {
     "city": "Tower Hamlets",
@@ -3020,10 +3090,6 @@ window.GUIDES = [
       {
         "name": "The Torch",
         "note": "big beer garden east of the stadium"
-      },
-      {
-        "name": "The Robin",
-        "note": "big beer range, cheap food, 15 minutes' walk"
       }
     ],
     "eat": "Curry on Ealing Road.",
@@ -3031,7 +3097,13 @@ window.GUIDES = [
     "football": "Wembley Stadium - England, cup finals and play-offs.",
     "gettingThere": "Wembley Park on the Jubilee/Metropolitan, or Wembley Stadium from Marylebone.",
     "tip": "The Green Man goes one-in-one-out on matchdays - get there early.",
-    "group": "London"
+    "group": "London",
+    "archivedBars": [
+      {
+        "name": "The Robin",
+        "note": "big beer range, cheap food, 15 minutes' walk"
+      }
+    ]
   },
   {
     "city": "Greenwich",
@@ -3098,7 +3170,9 @@ window.GUIDES = [
       {
         "name": "The Evening Star",
         "note": "Surrey Street, by the station - cask heaven"
-      },
+      }
+    ],
+    "archivedBars": [
       {
         "name": "The Cricketers",
         "note": "Black Lion Street, Brighton's oldest pub"
@@ -3236,7 +3310,9 @@ window.GUIDES = [
       {
         "name": "The Bear Inn",
         "note": "Alfred Street, walls covered in snipped-off ties"
-      },
+      }
+    ],
+    "archivedBars": [
       {
         "name": "The Lamb & Flag",
         "note": "St Giles, an old Inklings haunt"
@@ -3603,7 +3679,9 @@ window.GUIDES = [
       {
         "name": "The Old Duke",
         "note": "King Street, live jazz every night"
-      },
+      }
+    ],
+    "archivedBars": [
       {
         "name": "The Bag O'Nails",
         "note": "Hotwells, tiny cask ale pub"
@@ -3984,17 +4062,19 @@ window.GUIDES = [
       {
         "name": "The Long Hall",
         "note": "Victorian bar on South Great George's Street"
-      },
-      {
-        "name": "Mulligan's",
-        "note": "legendary Guinness on Poolbeg Street"
       }
     ],
     "eat": "Stew and soda bread.",
     "dontMiss": "The Guinness Storehouse and its Gravity Bar.",
     "football": "Shamrock Rovers or Bohemians; Ireland at the Aviva.",
     "gettingThere": "Short flight from Leeds Bradford or Manchester.",
-    "tip": "Skip Temple Bar's prices - Mulligan's and the Long Hall pour a better pint."
+    "tip": "Skip Temple Bar's prices - Mulligan's and the Long Hall pour a better pint.",
+    "archivedBars": [
+      {
+        "name": "Mulligan's",
+        "note": "legendary Guinness on Poolbeg Street"
+      }
+    ]
   },
   {
     "city": "Málaga",
@@ -4012,17 +4092,19 @@ window.GUIDES = [
       {
         "name": "El Pimpi",
         "note": "huge old bodega by the Roman theatre"
-      },
-      {
-        "name": "La Tranca",
-        "note": "tiny, loud, brilliant tapas bar"
       }
     ],
     "eat": "Espetos - sardines grilled on the beach.",
     "dontMiss": "The Alcazaba and the Gibralfaro castle view.",
     "football": "Málaga CF at La Rosaleda.",
     "gettingThere": "Direct flights from the UK; the airport is 15 minutes from town.",
-    "tip": "Antigua Casa de Guardia chalks your bill on the bar - don't wipe it off."
+    "tip": "Antigua Casa de Guardia chalks your bill on the bar - don't wipe it off.",
+    "archivedBars": [
+      {
+        "name": "La Tranca",
+        "note": "tiny, loud, brilliant tapas bar"
+      }
+    ]
   },
   {
     "city": "Benalmádena",
@@ -4040,17 +4122,19 @@ window.GUIDES = [
       {
         "name": "Casey Dukes",
         "note": "Irish bar by 24 Hour Square"
-      },
-      {
-        "name": "The Drunken Sailor",
-        "note": "views by the windmill roundabout"
       }
     ],
     "eat": "Seafood along the promenade.",
     "dontMiss": "The cable car up Monte Calamorro, and the Buddhist Stupa.",
     "football": "Junior Firpo grew up here; Málaga CF are 20 minutes away.",
     "gettingThere": "15 minutes from Málaga airport; the coastal train stops here.",
-    "tip": "Get the cable car up Calamorro for the view, then the marina bars at sunset."
+    "tip": "Get the cable car up Calamorro for the view, then the marina bars at sunset.",
+    "archivedBars": [
+      {
+        "name": "The Drunken Sailor",
+        "note": "views by the windmill roundabout"
+      }
+    ]
   },
   {
     "city": "Paris",
@@ -4115,17 +4199,19 @@ window.GUIDES = [
       {
         "name": "In de Wildeman",
         "note": "classic beer café"
-      },
-      {
-        "name": "Café Hoppe",
-        "note": "brown café on the Spui since 1670"
       }
     ],
     "eat": "Bitterballen with every round.",
     "dontMiss": "The Heineken Experience, then a canal boat.",
     "football": "Ajax at the Johan Cruijff ArenA.",
     "gettingThere": "Fly into Schiphol - 15 minutes by train to Centraal.",
-    "tip": "Brouwerij 't IJ under the windmill - go early, it's packed by six."
+    "tip": "Brouwerij 't IJ under the windmill - go early, it's packed by six.",
+    "archivedBars": [
+      {
+        "name": "Café Hoppe",
+        "note": "brown café on the Spui since 1670"
+      }
+    ]
   },
   {
     "city": "Malia",
@@ -4167,17 +4253,19 @@ window.GUIDES = [
       {
         "name": "DevilCraft",
         "note": "Kanda/Nihonbashi, house IPAs and deep-dish pizza"
-      },
-      {
-        "name": "Tokyo Beerzilla",
-        "note": "Asakusa, British craft beer and cider"
       }
     ],
     "eat": "Yakitori and a cold one in the tiny bars under the train tracks.",
     "dontMiss": "Bar-hopping the tiny alley bars of Golden Gai in Shinjuku.",
     "football": "FC Tokyo at Ajinomoto Stadium.",
     "gettingThere": "Direct flights from London to Haneda and Narita.",
-    "tip": "Golden Gai bars are tiny and some charge a cover - check the sign on the door."
+    "tip": "Golden Gai bars are tiny and some charge a cover - check the sign on the door.",
+    "archivedBars": [
+      {
+        "name": "Tokyo Beerzilla",
+        "note": "Asakusa, British craft beer and cider"
+      }
+    ]
   },
   {
     "city": "Osaka",
@@ -4195,17 +4283,19 @@ window.GUIDES = [
       {
         "name": "Dotonbori Brewery Factory",
         "note": "brewed on site under the Shochikuza theatre"
-      },
-      {
-        "name": "Craft Beer Works Kamikaze",
-        "note": "west of Shinsaibashi, almost two dozen taps"
       }
     ],
     "eat": "Takoyaki and okonomiyaki on the go around Dotonbori.",
     "dontMiss": "Dotonbori's neon canal at night, then Osaka Castle by day.",
     "football": "Gamba Osaka or Cerezo Osaka - two J.League clubs in one city.",
     "gettingThere": "Shinkansen from Tokyo in about 2.5 hours, or fly into Kansai Airport.",
-    "tip": "Beer Belly Tenma has no cover charge - a rarity in Osaka."
+    "tip": "Beer Belly Tenma has no cover charge - a rarity in Osaka.",
+    "archivedBars": [
+      {
+        "name": "Craft Beer Works Kamikaze",
+        "note": "west of Shinsaibashi, almost two dozen taps"
+      }
+    ]
   },
   {
     "city": "Narita",
@@ -4242,17 +4332,19 @@ window.GUIDES = [
       {
         "name": "Bungalow",
         "note": "10 taps and fresh bread"
-      },
-      {
-        "name": "Beer Komachi",
-        "note": "tiny bar near Higashiyama, seven Japanese taps"
       }
     ],
     "eat": "Kaiseki, or street food in Nishiki Market.",
     "dontMiss": "The torii gate tunnels at Fushimi Inari.",
     "football": "Kyoto Sanga at Sanga Stadium by Kyocera.",
     "gettingThere": "Shinkansen from Tokyo in about 2h15; 15 minutes from Osaka.",
-    "tip": "Fushimi Inari at sunrise, Kyoto Brewing Co at the weekend."
+    "tip": "Fushimi Inari at sunrise, Kyoto Brewing Co at the weekend.",
+    "archivedBars": [
+      {
+        "name": "Beer Komachi",
+        "note": "tiny bar near Higashiyama, seven Japanese taps"
+      }
+    ]
   },
   {
     "city": "Orlando",
@@ -4270,17 +4362,19 @@ window.GUIDES = [
       {
         "name": "Ivanhoe Park Brewing Co.",
         "note": "Ivanhoe Village, themed on a lost lakeside amusement park"
-      },
-      {
-        "name": "Hammered Lamb",
-        "note": "downtown, lake views and 70+ beers"
       }
     ],
     "eat": "Mills 50 for the best Vietnamese and Asian food in town.",
     "dontMiss": "A sunset lap of Lake Eola downtown, away from the theme parks.",
     "football": "Orlando City SC at Inter&Co Stadium, downtown.",
     "gettingThere": "Direct flights from the UK into Orlando International (MCO).",
-    "tip": "Redlight Redlight for the best beer list in town."
+    "tip": "Redlight Redlight for the best beer list in town.",
+    "archivedBars": [
+      {
+        "name": "Hammered Lamb",
+        "note": "downtown, lake views and 70+ beers"
+      }
+    ]
   },
   {
     "city": "Tampa Bay",
@@ -4298,17 +4392,19 @@ window.GUIDES = [
       {
         "name": "BarrieHaus Beer Co.",
         "note": "Ybor City lager specialists with a beer-garden feel"
-      },
-      {
-        "name": "Angry Chair Brewing",
-        "note": "Seminole Heights, famous for its stouts"
       }
     ],
     "eat": "A Cuban sandwich in Ybor City, where Tampa reckons it was invented.",
     "dontMiss": "A stroll along the Tampa Riverwalk, then out to Ybor's 7th Avenue.",
     "football": "Tampa Bay Rowdies at Al Lang Stadium, St. Petersburg.",
     "gettingThere": "Fly into Tampa International, or drive about 1.5 hours from Orlando.",
-    "tip": "Ybor City on 7th Avenue for brewery-hopping - Sky Puppy's in the old firehouse."
+    "tip": "Ybor City on 7th Avenue for brewery-hopping - Sky Puppy's in the old firehouse.",
+    "archivedBars": [
+      {
+        "name": "Angry Chair Brewing",
+        "note": "Seminole Heights, famous for its stouts"
+      }
+    ]
   },
   {
     "city": "Kissimmee",
@@ -4326,17 +4422,19 @@ window.GUIDES = [
       {
         "name": "Rock & Brews",
         "note": "craft beer, comfort food and rock music"
-      },
-      {
-        "name": "Charley's Pub",
-        "note": "happy hour noon till 7, Monday to Saturday"
       }
     ],
     "eat": "Pub grub at the Fox & Hounds, or a giant American breakfast anywhere on the 192.",
     "dontMiss": "Old Town's Saturday night classic car cruise.",
     "football": "Orlando City SC are about half an hour away downtown.",
     "gettingThere": "Right next to Walt Disney World, about 25 minutes from Orlando airport.",
-    "tip": "The Fox & Hounds does a proper British breakfast when you're homesick."
+    "tip": "The Fox & Hounds does a proper British breakfast when you're homesick.",
+    "archivedBars": [
+      {
+        "name": "Charley's Pub",
+        "note": "happy hour noon till 7, Monday to Saturday"
+      }
+    ]
   },
   {
     "city": "Chicago",
@@ -4354,17 +4452,19 @@ window.GUIDES = [
       {
         "name": "The Berghoff",
         "note": "holds Chicago liquor licence No. 1"
-      },
-      {
-        "name": "Marge's Still",
-        "note": "Old Town, claims to be the city's oldest tavern, from 1885"
       }
     ],
     "eat": "Deep dish pizza, an Italian beef, or a Chicago dog - no ketchup.",
     "dontMiss": "A Cubs game at Wrigley Field, then the bars of Wrigleyville.",
     "football": "Chicago Fire FC at Soldier Field.",
     "gettingThere": "Direct flights from London into O'Hare.",
-    "tip": "Order a 'cheezborger' at the Billy Goat - no fries, chips."
+    "tip": "Order a 'cheezborger' at the Billy Goat - no fries, chips.",
+    "archivedBars": [
+      {
+        "name": "Marge's Still",
+        "note": "Old Town, claims to be the city's oldest tavern, from 1885"
+      }
+    ]
   },
   {
     "city": "Philadelphia",
@@ -4382,17 +4482,19 @@ window.GUIDES = [
       {
         "name": "Monk's Café",
         "note": "Rittenhouse, a Belgian beer emporium"
-      },
-      {
-        "name": "Yards Brewing",
-        "note": "the city's own brewery and taproom"
       }
     ],
     "eat": "A cheesesteak, obviously, then graze Reading Terminal Market.",
     "dontMiss": "The Liberty Bell and Independence Hall, then run the Rocky steps.",
     "football": "Philadelphia Union at Subaru Park in Chester.",
     "gettingThere": "Direct flights from London into Philadelphia International.",
-    "tip": "McGillin's has every bar's sign from Philly's history on its walls."
+    "tip": "McGillin's has every bar's sign from Philly's history on its walls.",
+    "archivedBars": [
+      {
+        "name": "Yards Brewing",
+        "note": "the city's own brewery and taproom"
+      }
+    ]
   },
   {
     "city": "Lake Buena Vista",
@@ -4410,17 +4512,19 @@ window.GUIDES = [
       {
         "name": "Rose & Crown Pub",
         "note": "Epcot's UK pavilion - a pint of home"
-      },
-      {
-        "name": "Jock Lindsey's Hangar Bar",
-        "note": "Disney Springs, Indiana Jones-themed"
       }
     ],
     "eat": "Disney Springs has everything.",
     "dontMiss": "Magic Kingdom fireworks.",
     "football": "Orlando City SC, about half an hour away downtown.",
     "gettingThere": "About 25 minutes from Orlando International Airport.",
-    "tip": "Rose & Crown in Epcot - the closest thing to a proper pint in Florida."
+    "tip": "Rose & Crown in Epcot - the closest thing to a proper pint in Florida.",
+    "archivedBars": [
+      {
+        "name": "Jock Lindsey's Hangar Bar",
+        "note": "Disney Springs, Indiana Jones-themed"
+      }
+    ]
   },
   {
     "city": "Magic Kingdom",
@@ -4438,16 +4542,18 @@ window.GUIDES = [
       {
         "name": "Jungle Navigation Co. Skipper Canteen",
         "note": "Adventureland, jungle-cruise puns and a cold one"
-      },
-      {
-        "name": "Be Our Guest Restaurant",
-        "note": "Beast's castle, beer and wine with dinner"
       }
     ],
     "eat": "A Dole Whip in Adventureland, and a turkey leg on the walk round.",
     "dontMiss": "Happily Ever After fireworks from Main Street.",
     "gettingThere": "Monorail or ferry from the Transportation & Ticket Center; Disney buses from the resorts.",
-    "tip": "No bars here - beer is only at the table-service restaurants, so book one for a mid-afternoon sit-down."
+    "tip": "No bars here - beer is only at the table-service restaurants, so book one for a mid-afternoon sit-down.",
+    "archivedBars": [
+      {
+        "name": "Be Our Guest Restaurant",
+        "note": "Beast's castle, beer and wine with dinner"
+      }
+    ]
   },
   {
     "city": "EPCOT",
@@ -4465,16 +4571,18 @@ window.GUIDES = [
       {
         "name": "Biergarten",
         "note": "Germany pavilion, steins and an oompah band"
-      },
-      {
-        "name": "Block & Hans",
-        "note": "American Adventure kiosk, rotating US craft beer"
       }
     ],
     "eat": "Fish and chips at Yorkshire County Fish Shop, round the back of the UK pavilion.",
     "dontMiss": "Luminous: The Symphony of Us over World Showcase Lagoon.",
     "gettingThere": "Monorail from the Transportation & Ticket Center, Skyliner from Hollywood Studios, or walk from the BoardWalk.",
-    "tip": "Do World Showcase clockwise from Mexico and finish at the Rose & Crown for the fireworks."
+    "tip": "Do World Showcase clockwise from Mexico and finish at the Rose & Crown for the fireworks.",
+    "archivedBars": [
+      {
+        "name": "Block & Hans",
+        "note": "American Adventure kiosk, rotating US craft beer"
+      }
+    ]
   },
   {
     "city": "Hollywood Studios",
@@ -4492,16 +4600,18 @@ window.GUIDES = [
       {
         "name": "BaseLine Tap House",
         "note": "Grand Avenue, California craft on tap"
-      },
-      {
-        "name": "Tune-In Lounge",
-        "note": "next to 50's Prime Time Café, old-school bar"
       }
     ],
     "eat": "Woody's Lunch Box in Toy Story Land.",
     "dontMiss": "Fantasmic! at the Hollywood Hills Amphitheater.",
     "gettingThere": "Skyliner gondola from Epcot and the Skyliner resorts, or the boat from the BoardWalk.",
-    "tip": "Book Oga's ahead - walk-ups wait ages - and grab a pint at BaseLine to dodge the queue."
+    "tip": "Book Oga's ahead - walk-ups wait ages - and grab a pint at BaseLine to dodge the queue.",
+    "archivedBars": [
+      {
+        "name": "Tune-In Lounge",
+        "note": "next to 50's Prime Time Café, old-school bar"
+      }
+    ]
   },
   {
     "city": "Animal Kingdom",
@@ -4519,16 +4629,18 @@ window.GUIDES = [
       {
         "name": "Dawa Bar",
         "note": "Harambe, outdoor bar with live African music"
-      },
-      {
-        "name": "Warung Outpost",
-        "note": "Asia, margaritas and beer on the go"
       }
     ],
     "eat": "Satu'li Canteen in Pandora - the best quick-service food at Disney.",
     "dontMiss": "Kilimanjaro Safaris first thing, when the animals are up.",
     "gettingThere": "Disney buses from the resorts, or drive - it's out on its own on the west side.",
-    "tip": "Go at opening; the animals and the queues both get lazy by lunch."
+    "tip": "Go at opening; the animals and the queues both get lazy by lunch.",
+    "archivedBars": [
+      {
+        "name": "Warung Outpost",
+        "note": "Asia, margaritas and beer on the go"
+      }
+    ]
   },
   {
     "city": "Universal Islands of Adventure",
@@ -4569,16 +4681,18 @@ window.GUIDES = [
       {
         "name": "Duff Brewery",
         "note": "Springfield, outdoor bar by the lagoon"
-      },
-      {
-        "name": "Fountain of Fair Fortune",
-        "note": "Diagon Alley, the only spot for Wizard's Brew"
       }
     ],
     "eat": "Krusty Burger in Springfield, or bangers and mash at the Leaky Cauldron.",
     "dontMiss": "Hogwarts Express to Islands of Adventure (park-to-park ticket).",
     "gettingThere": "Walk through CityWalk from the Universal resort hotels, or the water taxis.",
-    "tip": "Duff Brewery's outdoor bar is the quietest pint in the park."
+    "tip": "Duff Brewery's outdoor bar is the quietest pint in the park.",
+    "archivedBars": [
+      {
+        "name": "Fountain of Fair Fortune",
+        "note": "Diagon Alley, the only spot for Wizard's Brew"
+      }
+    ]
   },
   {
     "city": "Leeds Bradford Airport",
@@ -4641,16 +4755,18 @@ window.GUIDES = [
       {
         "name": "Ryan's",
         "note": "Terminal 2, airside, old pub bar and live music"
-      },
-      {
-        "name": "The Garden Terrace",
-        "note": "Terminal 1, airside"
       }
     ],
     "eat": "Smoked salmon plate and a toastie at Ryan's.",
     "dontMiss": "One last pint of the black stuff before the flight home.",
     "gettingThere": "Aircoach and Dublin Express buses from the city centre, about 30 minutes.",
-    "tip": "Ryan's is named after Mary Ryan - hanging her washing out with a jumbo jet behind her."
+    "tip": "Ryan's is named after Mary Ryan - hanging her washing out with a jumbo jet behind her.",
+    "archivedBars": [
+      {
+        "name": "The Garden Terrace",
+        "note": "Terminal 1, airside"
+      }
+    ]
   },
   {
     "city": "Amsterdam Schiphol",
@@ -4733,16 +4849,18 @@ window.GUIDES = [
       {
         "name": "Ravenous Pig Brewing",
         "note": "Terminal C, local brewery"
-      },
-      {
-        "name": "Orange County Brewers",
-        "note": "Terminal C, Florida craft"
       }
     ],
     "eat": "Cask & Larder - proper local food for once.",
     "dontMiss": "Terminal C's huge media walls.",
     "gettingThere": "Brightline trains, Disney transfers, or a hire car via the toll roads.",
-    "tip": "Cask & Larder and the Ravenous Pig are both from the same Orlando restaurant family."
+    "tip": "Cask & Larder and the Ravenous Pig are both from the same Orlando restaurant family.",
+    "archivedBars": [
+      {
+        "name": "Orange County Brewers",
+        "note": "Terminal C, Florida craft"
+      }
+    ]
   },
   {
     "city": "Tokyo Narita",
