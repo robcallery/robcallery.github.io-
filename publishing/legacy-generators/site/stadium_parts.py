@@ -180,6 +180,7 @@ def cards_link():
                 f'<circle cy="-20" r="20" fill="#f7f2e4" opacity=".9"/><path d="M-10 -20 l7 -9 l12 0 l7 9 l-7 9 l-12 0 z" fill="#0a1838" opacity=".8"/>'
                 f'<rect x="-42" y="32" width="84" height="16" fill="#ffcd00"/><text y="44" text-anchor="middle" font-family="Bebas Neue, Impact, sans-serif" font-size="13" fill="#0a1838" textLength="70" lengthAdjust="spacingAndGlyphs">{title}</text>'
                 f'<text y="60" text-anchor="middle" font-family="Bebas Neue, Impact, sans-serif" font-size="9" fill="#1e3f9a" textLength="74" lengthAdjust="spacingAndGlyphs">FOOTBALL TALES</text></g>')
-    return ('<a href="/football-tales/" class="hot cards" aria-label="Football Tales: open the trading cards">'
+    return ('<a href="/football-tales/" class="hot cards" aria-label="Football Tales (coming soon): open the trading cards">'
             '<ellipse cx="860" cy="594" rx="120" ry="12" fill="#000" opacity=".25"/>'
-            + card(805, 520, -14, 'AWAY DAYS', '#1e3f9a') + card(860, 510, 0, 'HOME DAYS', '#2f7d3a') + card(918, 524, 13, 'THE PUBS', '#c0392b') + '</a>')
+            + card(805, 520, -14, 'AWAY DAYS', '#1e3f9a') + card(860, 510, 0, 'HOME DAYS', '#2f7d3a') + card(918, 524, 13, 'THE PUBS', '#c0392b')
+            + '<g transform="rotate(-6 862 440)"><rect x="810" y="428" width="104" height="24" rx="4" fill="#d22630" stroke="#ffffff" stroke-width="2"/><text x="862" y="446" text-anchor="middle" font-family="Bebas Neue, Impact, sans-serif" font-size="17" fill="#ffffff" letter-spacing="2" textLength="88" lengthAdjust="spacingAndGlyphs">COMING SOON</text></g></a>')

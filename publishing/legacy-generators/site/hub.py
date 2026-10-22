@@ -381,13 +381,13 @@ st+='''<main>
     </svg>
   </section>
   <nav class="spots" aria-label="In the stadium">
-    <a class="spot" href="/football-tales/"><h2>Football Tales</h2><p>Away days, home days and the pubs either side, one card at a time.</p></a>
-    <a class="spot" href="/match-hub/"><h2>Match Hub <span class="tag">Soon</span></h2><p>Scores, fixtures and matchday, up on the big screen.</p></a>
+    <a class="spot" href="/football-tales/"><h2>Football Tales <span class="tag">Coming soon</span></h2><p>Away days, home days and the pubs either side, one card at a time.</p></a>
+    <a class="spot" href="/match-hub/"><h2>Match Hub</h2><p>Live scores, fixtures and the table, up on the big screen.</p></a>
   </nav>
 </main>
 <script>
 (function(){
-  var c=document.getElementById('sbClock'),t=document.getElementById('sbTicker'),msgs=['KICK-OFF SOON','MARCHING ON TOGETHER','MATCH HUB COMING SOON'],i=0;
+  var c=document.getElementById('sbClock'),t=document.getElementById('sbTicker'),msgs=['KICK-OFF SOON','MARCHING ON TOGETHER','MATCH HUB IS LIVE'],i=0;
   function tick(){try{c.textContent=new Intl.DateTimeFormat('en-GB',{hour:'2-digit',minute:'2-digit',timeZone:'Europe/London'}).format(new Date())}catch(e){}}
   tick();setInterval(tick,15000);
   if(!matchMedia('(prefers-reduced-motion: reduce)').matches)setInterval(function(){i=(i+1)%msgs.length;t.textContent=msgs[i]},3000);
