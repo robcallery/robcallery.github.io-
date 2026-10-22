@@ -7,7 +7,6 @@ SHELVES = [
  ('west-england', 'West England', '#2f6b3c', '#f2d27a', '#ffffff'),
  ('wales', 'Wales', '#c8102e', '#00a650', '#ffffff'),
  ('scotland', 'Scotland', '#0b3d91', '#ffffff', '#ffffff'),
- ('northern-ireland', 'Northern Ireland', '#41316e', '#d9b45a', '#ffffff'),
  ('ireland', 'Ireland', '#169b62', '#ff883e', '#ffffff'),
  ('spain', 'Spain', '#c60b1e', '#ffc400', '#ffc400'),
  ('france', 'France', '#0055a4', '#ef4135', '#ffffff'),
@@ -31,7 +30,7 @@ SHELF_OF_JS = r'''function shelfOf(g){
       if(gr==='South West')return 'west-england';
       if(gr==='East of England')return 'east-england';
       if(gr==='Midlands')return /^(West Midlands|Staffordshire|Shropshire|Herefordshire|Worcestershire|Warwickshire)$/.test(g.region||'')?'west-england':'east-england';
-      if(gr==='Wales')return 'wales';if(gr==='Scotland')return 'scotland';if(gr==='Northern Ireland')return 'northern-ireland';
+      if(gr==='Wales')return 'wales';if(gr==='Scotland')return 'scotland';if(gr==='Northern Ireland')return 'ireland';
       return 'north-england';
     }
     return {'Ireland':'ireland','Spain':'spain','France':'france','United States':'usa'}[c]||'rest-of-world';

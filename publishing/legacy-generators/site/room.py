@@ -130,7 +130,7 @@ def book(sid):
 
 ROWS = [
     (['north-england', 'south-england', 'east-england', 'west-england', 'wales', 'scotland'], ['stack']),
-    (['northern-ireland', 'ireland', 'spain', 'france', 'usa', 'rest-of-world'], ['globe']),
+    (['ireland', 'spain', 'france', 'usa', 'rest-of-world'], ['globe']),
     (['airports', 'us-capitals'], ['scarf', 'plant', 'ball', 'bottle']),
 ]
 
