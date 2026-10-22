@@ -16,29 +16,14 @@ zz_bot=" ".join(f"L{222-i*7.13:.1f} {282 if i%2==0 else 276}" for i in range(31)
 PACKPATH=f"M8 46 {zz_top} L222 276 {zz_bot} Z"
 BURST="M"+" L".join(f"{(24 if k%2==0 else 17)*math.cos(math.radians(k*15)):.1f} {(24 if k%2==0 else 17)*math.sin(math.radians(k*15)):.1f}" for k in range(24))+" Z"
 PASSPORT=f'''<svg viewBox="0 0 230 300" role="img" aria-label="Beer passport">
-  <defs><linearGradient id="pc" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8a2338"/><stop offset="1" stop-color="#5b1324"/></linearGradient></defs>
-  <rect x="12" y="8" width="210" height="288" rx="12" fill="#e9dfc6"/><rect x="10" y="6" width="210" height="288" rx="12" fill="#f4ecd8"/>
+    <rect x="12" y="8" width="210" height="288" rx="12" fill="#e9dfc6"/><rect x="10" y="6" width="210" height="288" rx="12" fill="#f4ecd8"/>
   <rect x="2" y="3" width="208" height="284" rx="10" fill="#f3ead4" stroke="#d8cba8" stroke-width="1"/><rect class="pg pg0" x="2" y="3" width="208" height="284" rx="10" fill="#f6efdc" stroke="#d8cba8" stroke-width="1"/><rect class="pg pg1" x="2" y="3" width="208" height="284" rx="10" fill="#f6efdc" stroke="#d8cba8" stroke-width="1"/><rect class="pg pg2" x="2" y="3" width="208" height="284" rx="10" fill="#f6efdc" stroke="#d8cba8" stroke-width="1"/><rect class="pg pg3" x="2" y="3" width="208" height="284" rx="10" fill="#f6efdc" stroke="#d8cba8" stroke-width="1"/><rect class="pg pg4" x="2" y="3" width="208" height="284" rx="10" fill="#f6efdc" stroke="#d8cba8" stroke-width="1"/><rect class="pg pg5" x="2" y="3" width="208" height="284" rx="10" fill="#f6efdc" stroke="#d8cba8" stroke-width="1"/>
-  <g class="cv-inside"><rect x="0" y="0" width="214" height="290" rx="12" fill="#5b1324"/><rect x="8" y="8" width="198" height="274" rx="8" fill="#f4ecd8"/><rect x="24" y="34" width="60" height="76" rx="4" fill="#e3d7b8"/><g stroke="#cbbd99" stroke-width="3"><line x1="98" y1="42" x2="190" y2="42"/><line x1="98" y1="56" x2="190" y2="56"/><line x1="98" y1="70" x2="190" y2="70"/><line x1="98" y1="84" x2="190" y2="84"/><line x1="98" y1="98" x2="190" y2="98"/></g></g>
+  <g class="cv-inside"><rect x="0" y="0" width="214" height="290" rx="12" fill="#0e1a33"/><rect x="8" y="8" width="198" height="274" rx="8" fill="#f4ecd8"/><rect x="24" y="34" width="60" height="76" rx="4" fill="#e3d7b8"/><g stroke="#cbbd99" stroke-width="3"><line x1="98" y1="42" x2="190" y2="42"/><line x1="98" y1="56" x2="190" y2="56"/><line x1="98" y1="70" x2="190" y2="70"/><line x1="98" y1="84" x2="190" y2="84"/><line x1="98" y1="98" x2="190" y2="98"/></g></g>
   <g class="cv-front">
-  <rect x="0" y="0" width="214" height="290" rx="12" fill="url(#pc)"/>
-  <rect x="12" y="12" width="190" height="266" rx="6" fill="none" stroke="#d9b45a" stroke-width="1.2" stroke-dasharray="3 3" opacity=".7"/>
-  <g fill="#d9b45a" font-family="Bebas Neue, Impact, sans-serif" text-anchor="middle">
-    <text x="107" y="44" font-size="14" letter-spacing="3" textLength="120" lengthAdjust="spacingAndGlyphs">UNITED KINGDOM</text>
-    <text x="107" y="60" font-size="14" letter-spacing="3" textLength="58" lengthAdjust="spacingAndGlyphs">OF ALES</text>
-  </g>
-  <g fill="none" stroke="#d9b45a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-    <circle cx="107" cy="134" r="44"/>
-    <path d="M91 108 L123 108 L119 162 L95 162 Z"/><path d="M90 108 Q92 98 101 101 Q107 93 114 100 Q124 97 124 108"/>
-    <path d="M101 122 L101 150" stroke-width="2"/>
-    <path d="M63 160 Q52 134 64 108" stroke-width="2"/><path d="M151 160 Q162 134 150 108" stroke-width="2"/>
-  </g>
-  <g fill="#d9b45a">{''.join(f'<ellipse cx="{x}" cy="{y}" rx="5" ry="2.6" transform="rotate({r} {x} {y})"/>' for x,y,r in [(58,150,-60),(56,134,-85),(58,118,-110),(156,150,60),(158,134,85),(156,118,110)])}</g>
-  <g fill="#d9b45a" font-family="Bebas Neue, Impact, sans-serif" text-anchor="middle">
-    <text x="107" y="222" font-size="36" letter-spacing="3" textLength="172" lengthAdjust="spacingAndGlyphs">BEER PASSPORT</text>
-    <text x="107" y="240" font-size="11" letter-spacing="2" opacity=".85" textLength="104" lengthAdjust="spacingAndGlyphs">PASSEPORT DE BIÈRE</text>
-  </g>
-  <g fill="none" stroke="#d9b45a" stroke-width="1.6"><rect x="94" y="252" width="26" height="17" rx="2"/><circle cx="107" cy="260.5" r="4"/><path d="M94 260.5h9M111 260.5h9"/></g>
+  <clipPath id="pcClip"><rect x="0" y="0" width="214" height="290" rx="12"/></clipPath>
+  <rect x="0" y="0" width="214" height="290" rx="12" fill="#0e1a33"/>
+  <image href="/beer-passport/cover-sm.webp" x="0" y="0" width="214" height="290" preserveAspectRatio="xMidYMid slice" clip-path="url(#pcClip)"/>
+  <rect x="0" y="0" width="214" height="290" rx="12" fill="none" stroke="#000" stroke-opacity=".25"/>
 </g>
 </svg>'''
 
