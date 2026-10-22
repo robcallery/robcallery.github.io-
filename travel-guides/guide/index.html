@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- seo -->
-<meta name="description" content="A Rob Callery pint-first travel guide: the local Spoons, the best pubs, food and football in every town and city.">
+<meta name="description" content="A Rob Callery pint-first travel guide: the best pubs, food and football in every town and city.">
 <link rel="canonical" href="https://callery.co.uk/travel-guides/guide/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Rob Callery">
 <meta property="og:title" content="Travel Guide - Rob Callery">
-<meta property="og:description" content="A Rob Callery pint-first travel guide: the local Spoons, the best pubs, food and football in every town and city.">
+<meta property="og:description" content="A Rob Callery pint-first travel guide: the best pubs, food and football in every town and city.">
 <meta property="og:url" content="https://callery.co.uk/travel-guides/guide/">
 <meta property="og:image" content="https://callery.co.uk/og-image.png">
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
@@ -311,7 +311,7 @@
     var toc=ch.map(function(r){if(r.grp!=null)return '<li class="grp">'+esc(r.grp)+'</li>';var n=C+1+F+2*r.i;return '<li><b>'+esc(r.g.city)+'</b><span class="c">'+esc(r.g.region||r.g.country)+'</span><span class="p">'+(n<10?'0':'')+n+'</span></li>'}).join('');
     pages.push({cls:'contents',html:wm()+top('TRAVEL GUIDES · CONTENTS',ci+1)+(ci===0?'<h2>Where I\'ve been</h2>':'<h2 class="cont">Where I\'ve been <small>(cont.)</small></h2>')+
       (beers.length?'<ul class="toc">'+toc+'</ul>':'<p class="legend" style="font-size:.8em">The first guides are being written. Check back soon!</p>')+
-      (ci===0?'<p class="legend">Every guide is pint-first: what a pint costs, the local beer, the local Spoons where there is one, the bars worth the walk, where to eat, and where to watch the football. Rated on whether I\'d go back.</p>':'')+
+      (ci===0?'<p class="legend">Every guide is pint-first: what a pint costs, the local beer, the pubs worth the walk, where to eat, and where to watch the football. Rated on whether I\'d go back.</p>':'')+
       '<div class="foot"><span>ROB CALLERY</span><span>EDITION '+new Date().getFullYear()+'</span></div>'});
   });
   if(F) pages.push({cls:'blank',html:wm()+top('TRAVEL GUIDES · NOTES',pages.length)+'<div class="biro" style="margin-top:2em">Notes, beer mats and receipts go here…</div>'});

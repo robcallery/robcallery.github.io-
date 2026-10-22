@@ -13,10 +13,6 @@ window.GUIDES = [
     "pint": "~£5",
     "localBeer": "Kirkstall Brewery",
     "bestFor": "Historic pubs & matchdays",
-    "spoons": {
-      "name": "Stick or Twist",
-      "note": "big city-centre Spoons near the Arena"
-    },
     "bars": [
       {
         "name": "Whitelock's Ale House",
@@ -46,10 +42,6 @@ window.GUIDES = [
     "pint": "~£5",
     "localBeer": "Ossett Brewery",
     "bestFor": "Real ale crawl",
-    "spoons": {
-      "name": "The Six Chimneys",
-      "note": "Kirkgate, open from 8am, award-winning loos"
-    },
     "bars": [
       {
         "name": "Harry's Bar",
@@ -79,10 +71,6 @@ window.GUIDES = [
     "pint": "~£4.50",
     "localBeer": "Yorkshire cask guests",
     "bestFor": "No-frills locals",
-    "spoons": {
-      "name": "The Union Rooms",
-      "note": "in the grand old Union Bank, local guest ales"
-    },
     "bars": [
       {
         "name": "Irish Democratic League Club (Batley Nash)",
@@ -129,10 +117,6 @@ window.GUIDES = [
     "pint": "~£4.50",
     "localBeer": "Magic Rock",
     "bestFor": "Real ale trail",
-    "spoons": {
-      "name": "The Lord Wilson",
-      "note": "King Street, up to five guest ales"
-    },
     "bars": [
       {
         "name": "King's Head",
@@ -162,10 +146,6 @@ window.GUIDES = [
     "pint": "~£4.50",
     "localBeer": "Abbeydale Moonshine",
     "bestFor": "Kelham Island pub crawl",
-    "spoons": {
-      "name": "The Bankers Draft",
-      "note": "1904 bank by Castle Square, one of Sheffield's first Spoons"
-    },
     "bars": [
       {
         "name": "Sheffield Tap",
@@ -195,10 +175,6 @@ window.GUIDES = [
     "pint": "~£4.50",
     "localBeer": "West Yorkshire guests",
     "bestFor": "Queen Street bar hop",
-    "spoons": {
-      "name": "The Picture House",
-      "note": "bigger than it looks, balcony and West Yorkshire guests"
-    },
     "bars": [
       {
         "name": "Dyeworks",
@@ -224,10 +200,6 @@ window.GUIDES = [
     "pint": "~£5",
     "localBeer": "Cold Bath Brewing Co",
     "bestFor": "Spa town pints",
-    "spoons": {
-      "name": "The Winter Gardens",
-      "note": "inside the Victorian Royal Baths, with a grand staircase"
-    },
     "bars": [
       {
         "name": "Cold Bath Brewing Co",
@@ -257,10 +229,6 @@ window.GUIDES = [
     "pint": "~£5",
     "localBeer": "Blind Jack's beer board",
     "bestFor": "Riverside pubs",
-    "spoons": {
-      "name": "The Crown Inn",
-      "note": "High Street, twelve handpumps"
-    },
     "bars": [
       {
         "name": "Blind Jack's",
@@ -310,10 +278,6 @@ window.GUIDES = [
     "pint": "~£5",
     "localBeer": "Black Sheep & Hambleton",
     "bestFor": "Market town pubs",
-    "spoons": {
-      "name": "The Three Tuns",
-      "note": "1740 coaching inn where James Herriot drank"
-    },
     "bars": [
       {
         "name": "Little 3",
@@ -339,10 +303,6 @@ window.GUIDES = [
     "pint": "~£5",
     "localBeer": "Black Sheep Best Bitter",
     "bestFor": "High Street pubs",
-    "spoons": {
-      "name": "The Buck Inn",
-      "note": "north end of the High Street, six changing casks"
-    },
     "bars": [
       {
         "name": "Harewood Arms",
@@ -372,10 +332,6 @@ window.GUIDES = [
     "pint": "~£5",
     "localBeer": "Brew York",
     "bestFor": "Medieval pub crawl",
-    "spoons": {
-      "name": "The Punch Bowl",
-      "note": "on Blossom Street, near Micklegate Bar"
-    },
     "bars": [
       {
         "name": "York Tap",
@@ -405,10 +361,6 @@ window.GUIDES = [
     "pint": "~£5",
     "localBeer": "Wetherby Brew Co",
     "bestFor": "Market-town pints",
-    "spoons": {
-      "name": "The Angel Inn",
-      "note": "High Street, opened Christmas 2025 in a listed building"
-    },
     "bars": [
       {
         "name": "Swan & Talbot",
@@ -434,10 +386,6 @@ window.GUIDES = [
     "pint": "~£4.50",
     "localBeer": "Timothy Taylor",
     "bestFor": "Canal-side pints",
-    "spoons": {
-      "name": "The Myrtle Grove",
-      "note": "Bingley's Spoons on Main Street"
-    },
     "bars": [
       {
         "name": "Brown Cow",
@@ -463,10 +411,6 @@ window.GUIDES = [
     "pint": "~£4.50",
     "localBeer": "Calderdale cask",
     "bestFor": "Piece Hall pints",
-    "spoons": {
-      "name": "The Barum Top Inn",
-      "note": "Rawson Street, in the town centre"
-    },
     "bars": [
       {
         "name": "Hop Yard",
@@ -496,10 +440,6 @@ window.GUIDES = [
     "pint": "~£5",
     "localBeer": "Theakston & Black Sheep",
     "bestFor": "Cathedral city pubs",
-    "spoons": {
-      "name": "The Unicorn Hotel",
-      "note": "on the Market Place"
-    },
     "bars": [
       {
         "name": "One Eyed Rat",
@@ -649,10 +589,6 @@ window.GUIDES = [
     "pint": "~£5",
     "localBeer": "Whitby Brewery",
     "bestFor": "Seaside pints & fish and chips",
-    "spoons": {
-      "name": "The Angel Hotel",
-      "note": "old coaching inn by the harbour"
-    },
     "bars": [
       {
         "name": "The Duke of York",
@@ -678,10 +614,6 @@ window.GUIDES = [
     "pint": "~£4.50",
     "localBeer": "North Riding Brewery",
     "bestFor": "Seaside pubs",
-    "spoons": {
-      "name": "The Lord Rosebery",
-      "note": "in the old Liberal Club"
-    },
     "bars": [
       {
         "name": "North Riding Hotel",
@@ -752,10 +684,6 @@ window.GUIDES = [
     "pint": "~£4.50",
     "localBeer": "Wallers Brewery",
     "bestFor": "Curry & cellar bars",
-    "spoons": {
-      "name": "The Turls Green",
-      "note": "on Centenary Square, by City Park"
-    },
     "bars": [
       {
         "name": "Jacob's Beer House",
@@ -785,10 +713,6 @@ window.GUIDES = [
     "pint": "~£4.50",
     "localBeer": "Old Town cask",
     "bestFor": "Old Town pubs",
-    "spoons": {
-      "name": "The Three John Scotts",
-      "note": "old post office on Lowgate, in the Old Town"
-    },
     "bars": [
       {
         "name": "Ye Olde White Harte",
@@ -818,10 +742,6 @@ window.GUIDES = [
     "pint": "~£4",
     "localBeer": "Chantry Brewery",
     "bestFor": "Chantry beers",
-    "spoons": {
-      "name": "The Bluecoat",
-      "note": "in the old Bluecoat charity school on The Crofts"
-    },
     "bars": [
       {
         "name": "The Cutlers Arms",
@@ -847,10 +767,6 @@ window.GUIDES = [
     "pint": "~£4.20",
     "localBeer": "Yorkshire cask",
     "bestFor": "Race days",
-    "spoons": {
-      "name": "The Red Lion",
-      "note": "right on the Market Place"
-    },
     "bars": [
       {
         "name": "The Draughtsman Alehouse",
@@ -880,10 +796,6 @@ window.GUIDES = [
     "pint": "~£4",
     "localBeer": "Acorn Brewery",
     "bestFor": "Town-centre crawl",
-    "spoons": {
-      "name": "The Joseph Bramah",
-      "note": "Market Hill, two floors and a courtyard"
-    },
     "bars": [
       {
         "name": "Old No 7",
@@ -913,10 +825,6 @@ window.GUIDES = [
     "pint": "~£4",
     "localBeer": "Docks Beers",
     "bestFor": "Fish & a brewery in a church",
-    "spoons": {
-      "name": "The Yarborough Hotel",
-      "note": "listed Victorian hotel next to the station"
-    },
     "bars": [
       {
         "name": "Docks Beers",
@@ -938,10 +846,6 @@ window.GUIDES = [
     "pint": "~£4",
     "localBeer": "Lincolnshire cask",
     "bestFor": "Steel town pints",
-    "spoons": {
-      "name": "The Blue Bell Inn",
-      "note": "Oswald Road, in the town centre"
-    },
     "bars": [
       {
         "name": "The Honest Lawyer",
@@ -991,10 +895,6 @@ window.GUIDES = [
     "pint": "~£5",
     "localBeer": "Wylam Brewery",
     "bestFor": "Quayside & bridges",
-    "spoons": {
-      "name": "The Quayside",
-      "note": "old warehouse right on the Quayside"
-    },
     "bars": [
       {
         "name": "Crown Posada",
@@ -1024,10 +924,6 @@ window.GUIDES = [
     "pint": "~£4.20",
     "localBeer": "North East cask",
     "bestFor": "Seafront pints",
-    "spoons": {
-      "name": "The William Jameson",
-      "note": "Fawcett Street, in the city centre"
-    },
     "bars": [
       {
         "name": "The Dun Cow",
@@ -1057,10 +953,6 @@ window.GUIDES = [
     "pint": "~£4",
     "localBeer": "Play Brew Co",
     "bestFor": "Micropubs & parmos",
-    "spoons": {
-      "name": "The Swatters Carr",
-      "note": "Linthorpe Road, in the town centre"
-    },
     "bars": [
       {
         "name": "The Infant Hercules",
@@ -1090,10 +982,6 @@ window.GUIDES = [
     "pint": "~£4",
     "localBeer": "Village Brewer",
     "bestFor": "Railway history",
-    "spoons": {
-      "name": "The Tanners Hall",
-      "note": "Skinnergate, in the town centre"
-    },
     "bars": [
       {
         "name": "Number Twenty-2",
@@ -1119,10 +1007,6 @@ window.GUIDES = [
     "pint": "~£3.80",
     "localBeer": "Camerons",
     "bestFor": "Maritime history",
-    "spoons": {
-      "name": "The Ward Jackson",
-      "note": "Church Square, near the station"
-    },
     "bars": [
       {
         "name": "Rat Race Ale House",
@@ -1144,10 +1028,6 @@ window.GUIDES = [
     "pint": "~£4",
     "localBeer": "Teesside cask",
     "bestFor": "Micropub crawl",
-    "spoons": {
-      "name": "The Thomas Sheraton",
-      "note": "in the old law courts on the High Street"
-    },
     "bars": [
       {
         "name": "Golden Smog",
@@ -1177,10 +1057,6 @@ window.GUIDES = [
     "pint": "~£4.50",
     "localBeer": "Tyneside micros",
     "bestFor": "Bridge views",
-    "spoons": {
-      "name": "The Tilley Stone",
-      "note": "in the town centre, near the Metro"
-    },
     "bars": [
       {
         "name": "The Central",
@@ -1202,10 +1078,6 @@ window.GUIDES = [
     "pint": "~£4",
     "localBeer": "Tyneside cask",
     "bestFor": "Riverside & sea",
-    "spoons": {
-      "name": "The Wouldhave",
-      "note": "Mile End Road, named after the lifeboat pioneer"
-    },
     "bars": [
       {
         "name": "Steamboat",
@@ -1253,10 +1125,6 @@ window.GUIDES = [
     "pint": "~£5",
     "localBeer": "Keswick Brewing Co",
     "bestFor": "Lake District pubs",
-    "spoons": {
-      "name": "Chief Justice of the Common Pleas",
-      "note": "Keswick's Spoons"
-    },
     "bars": [
       {
         "name": "Dog & Gun",
@@ -1285,10 +1153,6 @@ window.GUIDES = [
     "pint": "~£5.50",
     "localBeer": "Marble",
     "bestFor": "Football & Northern Quarter bars",
-    "spoons": {
-      "name": "The Moon Under Water",
-      "note": "Deansgate, one of the biggest Spoons"
-    },
     "bars": [
       {
         "name": "Peveril of the Peak",
@@ -1318,10 +1182,6 @@ window.GUIDES = [
     "pint": "~£5",
     "localBeer": "Neptune Brewery",
     "bestFor": "Grand old pubs & docks",
-    "spoons": {
-      "name": "The North Western",
-      "note": "in the old Lime Street station hotel"
-    },
     "bars": [
       {
         "name": "Philharmonic Dining Rooms",
@@ -1357,10 +1217,6 @@ window.GUIDES = [
     "football": "Bolton Wanderers at the Toughsheet Community Stadium.",
     "gettingThere": "Bolton station, 20 minutes from Manchester.",
     "tip": "Ask about the Earl of Derby's chair at the Man & Scythe - he spent his last night there in 1651.",
-    "spoons": {
-      "name": "The Spinning Mule",
-      "note": "Nelson Square, named after Samuel Crompton's invention"
-    },
     "bars": [
       {
         "name": "Ye Olde Man & Scythe",
@@ -1401,10 +1257,6 @@ window.GUIDES = [
     "football": "Stockport County at Edgeley Park.",
     "gettingThere": "Stockport station, 10 minutes from Manchester Piccadilly.",
     "tip": "The Arden Arms snug is only reached by walking through the bar - it's allowed.",
-    "spoons": {
-      "name": "The Calverts Court",
-      "note": "St Petersgate, by the market"
-    },
     "bars": [
       {
         "name": "The Arden Arms",
@@ -1430,10 +1282,6 @@ window.GUIDES = [
     "football": "Oldham Athletic at Boundary Park.",
     "gettingThere": "Metrolink tram from Manchester city centre.",
     "tip": "Churchill started his political career as Oldham's MP in 1900.",
-    "spoons": {
-      "name": "The Up Steps Inn",
-      "note": "up the steps off High Street"
-    },
     "bars": [
       {
         "name": "Fox & Pine",
@@ -1455,10 +1303,6 @@ window.GUIDES = [
     "football": "Rochdale AFC at Spotland.",
     "gettingThere": "Metrolink tram or train from Manchester Victoria.",
     "tip": "The Flying Horse is right across from the Town Hall - do both.",
-    "spoons": {
-      "name": "The Regal Moon",
-      "note": "in an old art deco cinema"
-    },
     "bars": [
       {
         "name": "Flying Horse Hotel",
@@ -1484,10 +1328,6 @@ window.GUIDES = [
     "football": "Wigan Athletic and the Warriors at the Brick Community Stadium.",
     "gettingThere": "Wigan North Western and Wallgate stations.",
     "tip": "Start at Wigan Central - it's right between the two stations.",
-    "spoons": {
-      "name": "The Moon Under Water",
-      "note": "Market Place, in the town centre"
-    },
     "bars": [
       {
         "name": "Wigan Central",
@@ -1576,10 +1416,6 @@ window.GUIDES = [
     "football": "Burnley at Turf Moor.",
     "gettingThere": "Burnley Manchester Road station, under an hour from Manchester.",
     "tip": "Bridge Bier Huis opens early on Burnley home days, even on Mondays and Tuesdays.",
-    "spoons": {
-      "name": "The Boot Inn",
-      "note": "St James's Street, in the town centre"
-    },
     "bars": [
       {
         "name": "Bridge Bier Huis",
@@ -1601,10 +1437,6 @@ window.GUIDES = [
     "football": "Preston North End at Deepdale - the first ever league champions, 1888-89.",
     "gettingThere": "Preston station on the West Coast Main Line.",
     "tip": "Preston Guild only happens every 20 years - next one is 2032.",
-    "spoons": {
-      "name": "The Twelve Tellers",
-      "note": "in an old bank on Church Street"
-    },
     "bars": [
       {
         "name": "The Black Horse",
@@ -1626,10 +1458,6 @@ window.GUIDES = [
     "football": "Lancaster City at the Giant Axe.",
     "gettingThere": "Lancaster station on the West Coast Main Line.",
     "tip": "Walk up to the Ashton Memorial for the view over Morecambe Bay.",
-    "spoons": {
-      "name": "The Sir Richard Owen",
-      "note": "Spring Garden Street, named after the man who coined \"dinosaur\""
-    },
     "bars": [
       {
         "name": "The Water Witch",
@@ -1651,10 +1479,6 @@ window.GUIDES = [
     "football": "Chester FC - their stadium sits right on the England-Wales border.",
     "gettingThere": "Chester station, trains from Manchester, Liverpool and London.",
     "tip": "The Brewery Tap is in a 17th-century hall - look up at the ceiling.",
-    "spoons": {
-      "name": "The Square Bottle",
-      "note": "Foregate Street, in the city centre"
-    },
     "bars": [
       {
         "name": "Old Harkers Arms",
@@ -1720,10 +1544,6 @@ window.GUIDES = [
     "football": "St Helens rugby league at the Totally Wicked Stadium.",
     "gettingThere": "St Helens Central, trains from Liverpool and Manchester.",
     "tip": "The Turks Head and Cowley Vaults are next door to each other.",
-    "spoons": {
-      "name": "The Glass House",
-      "note": "Market Street, named after the town's glass-making"
-    },
     "bars": [
       {
         "name": "Turks Head",
@@ -1768,10 +1588,6 @@ window.GUIDES = [
     "football": "Tranmere Rovers at Prenton Park.",
     "gettingThere": "Merseyrail, a few minutes from Liverpool city centre.",
     "tip": "Get the ferry over to Liverpool rather than the train - it's the view.",
-    "spoons": {
-      "name": "The Brass Balance",
-      "note": "Argyle Street, in the town centre"
-    },
     "bars": [
       {
         "name": "Gallaghers Pub & Barbers",
@@ -1793,10 +1609,6 @@ window.GUIDES = [
     "football": "Southport FC at Haig Avenue; Everton and Liverpool are 40 minutes away.",
     "gettingThere": "Merseyrail from Liverpool, or trains from Manchester via Wigan.",
     "tip": "Walk Lord Street under the glass verandas first, then down to the pier.",
-    "spoons": {
-      "name": "The Sir Henry Segrave",
-      "note": "Lord Street - he set a land speed record on Southport sands"
-    },
     "bars": [
       {
         "name": "Baron's Bar",
@@ -1822,10 +1634,6 @@ window.GUIDES = [
     "football": "Blackpool at Bloomfield Road.",
     "gettingThere": "Blackpool North station, about 1.5 hours from Leeds via Preston.",
     "tip": "Cask & Tap is two minutes from the Tower and nowhere near as busy.",
-    "spoons": {
-      "name": "The Layton Rakes",
-      "note": "Market Street, in the town centre"
-    },
     "bars": [
       {
         "name": "Cask & Tap",
@@ -1851,10 +1659,6 @@ window.GUIDES = [
     "gettingThere": "Glasgow Central or Queen Street - about 4.5 hours from Leeds.",
     "tip": "Look up at the Duke of Wellington statue outside GoMA - he'll be wearing a traffic cone.",
     "football": "Celtic at Celtic Park, Rangers at Ibrox.",
-    "spoons": {
-      "name": "The Counting House",
-      "note": "George Square, in a grand old bank"
-    },
     "bars": [
       {
         "name": "The Horse Shoe Bar",
@@ -1884,10 +1688,6 @@ window.GUIDES = [
     "gettingThere": "Edinburgh Waverley on the East Coast Main Line, about 3 hours from Leeds.",
     "tip": "Walk up Arthur's Seat and down to the Sheep Heid for a pint.",
     "football": "Hearts at Tynecastle, Hibs at Easter Road.",
-    "spoons": {
-      "name": "The Standing Order",
-      "note": "George Street, in an old bank with a huge safe"
-    },
     "bars": [
       {
         "name": "Café Royal",
@@ -1917,10 +1717,6 @@ window.GUIDES = [
     "gettingThere": "Aberdeen station, about 2.5 hours from Edinburgh.",
     "tip": "The Prince of Wales bar is 60 feet long - one of the longest in the city.",
     "football": "Aberdeen at Pittodrie.",
-    "spoons": {
-      "name": "The Archibald Simpson",
-      "note": "Castle Street, in a granite former bank"
-    },
     "bars": [
       {
         "name": "Prince of Wales",
@@ -1946,10 +1742,6 @@ window.GUIDES = [
     "gettingThere": "Dundee station, about 1.5 hours from Edinburgh.",
     "tip": "Dens Park and Tannadice are 100 yards apart - the closest grounds in Britain.",
     "football": "Dundee and Dundee United - their grounds are on the same street.",
-    "spoons": {
-      "name": "The Counting House",
-      "note": "Reform Street, in the city centre"
-    },
     "bars": [
       {
         "name": "Speedwell Bar",
@@ -1971,10 +1763,6 @@ window.GUIDES = [
     "gettingThere": "Fly into Belfast City or ferry from Liverpool or Cairnryan.",
     "tip": "Grab one of the Crown's snugs - they still have the bells to call the barman.",
     "football": "Linfield at Windsor Park; Ulster Rugby at Kingspan Stadium.",
-    "spoons": {
-      "name": "The Bridge House",
-      "note": "Bedford Street, in the city centre"
-    },
     "bars": [
       {
         "name": "The Crown Liquor Saloon",
@@ -2024,10 +1812,6 @@ window.GUIDES = [
     "gettingThere": "Cardiff Central, about 3.5 hours from Leeds.",
     "tip": "The City Arms is mobbed on international days - go early or go after.",
     "football": "Cardiff City at Cardiff City Stadium; Wales at the Principality Stadium.",
-    "spoons": {
-      "name": "The Ivor Davies",
-      "note": "Cowbridge Road East - plus the Mount Stuart down in the Bay"
-    },
     "bars": [
       {
         "name": "The City Arms",
@@ -2053,10 +1837,6 @@ window.GUIDES = [
     "gettingThere": "Swansea station, 3 hours from London.",
     "tip": "Head out to Mumbles for a pint on the front and an ice cream at Joe's.",
     "football": "Swansea City at the Swansea.com Stadium.",
-    "spoons": {
-      "name": "The Potters Wheel",
-      "note": "The Kingsway, in the city centre"
-    },
     "bars": [
       {
         "name": "No Sign Bar",
@@ -2092,10 +1872,6 @@ window.GUIDES = [
     "pint": "~£4.50",
     "localBeer": "Everards",
     "bestFor": "Motorway pit stop",
-    "spoons": {
-      "name": "The Corn Exchange",
-      "note": "on the Market Place"
-    },
     "bars": [
       {
         "name": "The Ale Wagon",
@@ -2141,10 +1917,6 @@ window.GUIDES = [
     "gettingThere": "Birmingham New Street, about 2 hours from Leeds.",
     "tip": "The Wellington gives you plates and cutlery for your own takeaway.",
     "football": "Aston Villa at Villa Park; Birmingham City at St Andrew's.",
-    "spoons": {
-      "name": "The Figure of Eight",
-      "note": "Broad Street, near the canals"
-    },
     "bars": [
       {
         "name": "The Wellington",
@@ -2174,10 +1946,6 @@ window.GUIDES = [
     "gettingThere": "Coventry station, an hour from London.",
     "tip": "Spon Street is the old timber-framed street - the Old Windmill is on it.",
     "football": "Coventry City at the Coventry Building Society Arena.",
-    "spoons": {
-      "name": "The Flying Standard",
-      "note": "Trinity Street - plus the City Arms in Earlsdon"
-    },
     "bars": [
       {
         "name": "The Old Windmill",
@@ -2207,10 +1975,6 @@ window.GUIDES = [
     "gettingThere": "Nottingham station, 1h40 from London.",
     "tip": "Sit in the rock-cut rooms at the Trip - mind your head.",
     "football": "Forest at the City Ground, Notts County at Meadow Lane - either side of the Trent.",
-    "spoons": {
-      "name": "The Joseph Else",
-      "note": "Market Square, right by the Council House"
-    },
     "bars": [
       {
         "name": "Ye Olde Trip to Jerusalem",
@@ -2240,10 +2004,6 @@ window.GUIDES = [
     "gettingThere": "Derby station, under 2 hours from Leeds.",
     "tip": "The Brunswick is a minute from the station - perfect first or last pint.",
     "football": "Derby County at Pride Park.",
-    "spoons": {
-      "name": "The Babington Arms",
-      "note": "Babington Lane, a long-time cask favourite"
-    },
     "bars": [
       {
         "name": "The Brunswick Inn",
@@ -2273,10 +2033,6 @@ window.GUIDES = [
     "gettingThere": "Stoke-on-Trent station, 1.5 hours from London.",
     "tip": "Oatcakes from a hole-in-the-wall shop are a must - get them for breakfast.",
     "football": "Stoke City at the bet365 Stadium; Port Vale at Vale Park.",
-    "spoons": {
-      "name": "The Reginald Mitchell",
-      "note": "Hanley - named after the Spitfire designer, a Potteries lad"
-    },
     "bars": [
       {
         "name": "The Bulls Head",
@@ -2302,10 +2058,6 @@ window.GUIDES = [
     "gettingThere": "Wolverhampton station, 20 minutes from Birmingham.",
     "tip": "The Great Western is right behind the station - a proper Black Country pub.",
     "football": "Wolves at Molineux.",
-    "spoons": {
-      "name": "The Moon Under Water",
-      "note": "in the city centre"
-    },
     "bars": [
       {
         "name": "The Great Western",
@@ -2327,10 +2079,6 @@ window.GUIDES = [
     "gettingThere": "Northampton station, 1 hour from London Euston.",
     "tip": "Do Saints on a Saturday - the atmosphere at Franklin's Gardens is great.",
     "football": "Northampton Town at Sixfields; Saints rugby at Franklin's Gardens.",
-    "spoons": {
-      "name": "The Cordwainer",
-      "note": "The Ridings - named after the town's shoemakers"
-    },
     "bars": [
       {
         "name": "Albion Brewery Bar",
@@ -2449,10 +2197,6 @@ window.GUIDES = [
     "gettingThere": "Walsall station, 20 minutes from Birmingham.",
     "tip": "The Black Country Arms is a must - it's right by the market.",
     "football": "Walsall at the Bescot Stadium - \"the Saddlers\".",
-    "spoons": {
-      "name": "St Matthew's Hall",
-      "note": "in the town centre"
-    },
     "bars": [
       {
         "name": "Black Country Arms",
@@ -2474,10 +2218,6 @@ window.GUIDES = [
     "gettingThere": "Burton station, 30 minutes from Derby or Birmingham.",
     "tip": "The Coopers Tavern is the one - sit in the tap room by the barrels.",
     "football": "Burton Albion at the Pirelli Stadium.",
-    "spoons": {
-      "name": "The Lord Burton",
-      "note": "High Street, named after the brewing baron"
-    },
     "bars": [
       {
         "name": "The Coopers Tavern",
@@ -2499,10 +2239,6 @@ window.GUIDES = [
     "gettingThere": "Chesterfield station, 15 minutes from Sheffield.",
     "tip": "Have a pint at the Rutland Arms and look up - the spire's right there.",
     "football": "Chesterfield FC at the SMH Group Stadium.",
-    "spoons": {
-      "name": "The Portland Hotel",
-      "note": "West Bars, in the town centre"
-    },
     "bars": [
       {
         "name": "The Rutland Arms",
@@ -2547,10 +2283,6 @@ window.GUIDES = [
     "gettingThere": "Lincoln Central station, via Newark or Doncaster.",
     "tip": "Walk up Steep Hill to the Strugglers - you'll have earned it.",
     "football": "Lincoln City at Sincil Bank.",
-    "spoons": {
-      "name": "The Ritz",
-      "note": "High Street, in an old cinema"
-    },
     "bars": [
       {
         "name": "The Strugglers Inn",
@@ -2840,10 +2572,6 @@ window.GUIDES = [
     "gettingThere": "Norwich station, under 2 hours from London.",
     "tip": "Norwich claims a pub for every day of the year - start at the Adam & Eve.",
     "football": "Norwich City at Carrow Road.",
-    "spoons": {
-      "name": "The Bell Hotel",
-      "note": "Orford Hill - plus The Whiffler out of town"
-    },
     "bars": [
       {
         "name": "Adam & Eve",
@@ -2873,10 +2601,6 @@ window.GUIDES = [
     "gettingThere": "Peterborough station, 45 minutes from London on the East Coast Main Line.",
     "tip": "Charters is a pub on a boat - the beer garden is huge in summer.",
     "football": "Peterborough United at London Road.",
-    "spoons": {
-      "name": "The Draper's Arms",
-      "note": "Cowgate, in the city centre"
-    },
     "bars": [
       {
         "name": "Charters",
@@ -2946,10 +2670,6 @@ window.GUIDES = [
     "gettingThere": "Ipswich station, about an hour from London.",
     "tip": "Portman Road is a five-minute walk from the station - easy matchday.",
     "football": "Ipswich Town at Portman Road.",
-    "spoons": {
-      "name": "The Cricketers",
-      "note": "Crown Street, in the town centre"
-    },
     "bars": [
       {
         "name": "Dove Street Inn",
@@ -3176,10 +2896,6 @@ window.GUIDES = [
     "gettingThere": "Bury St Edmunds station, trains from Cambridge and Ipswich.",
     "tip": "The Nutshell fits about a dozen people - drink up and make room.",
     "football": "Ipswich Town are 40 minutes away.",
-    "spoons": {
-      "name": "The Corn Exchange",
-      "note": "Abbeygate Street, in the grand old corn exchange"
-    },
     "bars": [
       {
         "name": "The Nutshell",
@@ -3195,10 +2911,6 @@ window.GUIDES = [
     "pint": "~£6.50",
     "localBeer": "Fuller's London Pride",
     "bestFor": "Sights & West End pubs",
-    "spoons": {
-      "name": "Wetherspoons, Victoria Station",
-      "note": "on the station concourse, with terraces"
-    },
     "bars": [
       {
         "name": "Lamb & Flag",
@@ -3212,7 +2924,6 @@ window.GUIDES = [
     "eat": "Covent Garden or Chinatown.",
     "dontMiss": "Trafalgar Square, then Big Ben from Westminster Bridge.",
     "gettingThere": "About 2h15 from Leeds to King's Cross, then the Tube.",
-    "tip": "Victoria station's Spoons has terraces - good for watching the world go by.",
     "group": "London"
   },
   {
@@ -3223,10 +2934,6 @@ window.GUIDES = [
     "pint": "~£6.50",
     "localBeer": "Southwark brewery taps",
     "bestFor": "Borough Market & riverside pubs",
-    "spoons": {
-      "name": "The Pommelers Rest",
-      "note": "Tower Bridge Road"
-    },
     "bars": [
       {
         "name": "The George Inn",
@@ -3256,10 +2963,6 @@ window.GUIDES = [
     "pint": "~£6.50",
     "localBeer": "East London craft",
     "bestFor": "Old riverside pubs & Docklands",
-    "spoons": {
-      "name": "The Ledger Building",
-      "note": "West India Quay, terrace over the moored boats"
-    },
     "bars": [
       {
         "name": "Prospect of Whitby",
@@ -3284,10 +2987,6 @@ window.GUIDES = [
     "pint": "~£6",
     "localBeer": "Tap East",
     "bestFor": "Matchdays at the Olympic Park",
-    "spoons": {
-      "name": "Goldengrove",
-      "note": "The Grove, Stratford"
-    },
     "bars": [
       {
         "name": "Tap East",
@@ -3313,10 +3012,6 @@ window.GUIDES = [
     "pint": "~£6",
     "localBeer": "Big-brand lagers",
     "bestFor": "Wembley days",
-    "spoons": {
-      "name": "J.J. Moon's",
-      "note": "Wembley High Road"
-    },
     "bars": [
       {
         "name": "Green Man",
@@ -3346,10 +3041,6 @@ window.GUIDES = [
     "pint": "~£6",
     "localBeer": "Meantime",
     "bestFor": "Riverside pints & maritime history",
-    "spoons": {
-      "name": "The Gate Clock",
-      "note": "Creek Road, near the Cutty Sark"
-    },
     "bars": [
       {
         "name": "Trafalgar Tavern",
@@ -3399,10 +3090,6 @@ window.GUIDES = [
     "gettingThere": "Brighton station, an hour from London Victoria.",
     "tip": "Start at the Evening Star off the train, then wander down through North Laine.",
     "football": "Brighton & Hove Albion at the Amex.",
-    "spoons": {
-      "name": "The Bright Helm",
-      "note": "West Street, down towards the seafront"
-    },
     "bars": [
       {
         "name": "The Basketmakers Arms",
@@ -3451,10 +3138,6 @@ window.GUIDES = [
     "gettingThere": "Southampton Central, 80 minutes from London Waterloo.",
     "tip": "The SeaCity Museum tells the Titanic story - most of the crew were from here.",
     "football": "Southampton at St Mary's.",
-    "spoons": {
-      "name": "The Red Lion",
-      "note": "High Street, in a medieval hall"
-    },
     "bars": [
       {
         "name": "The Platform Tavern",
@@ -3480,10 +3163,6 @@ window.GUIDES = [
     "gettingThere": "Portsmouth Harbour station, 90 minutes from London Waterloo.",
     "tip": "Sit outside the Still & West as the ferries and warships pass a few feet away.",
     "football": "Portsmouth at Fratton Park.",
-    "spoons": {
-      "name": "The John Jacques",
-      "note": "Fratton Road - plus the Lord Palmerston in Southsea"
-    },
     "bars": [
       {
         "name": "The Still & West",
@@ -3509,10 +3188,6 @@ window.GUIDES = [
     "gettingThere": "Reading station, 25 minutes from London Paddington.",
     "tip": "King Henry I is buried in Reading Abbey - his grave was never found.",
     "football": "Reading at the Select Car Leasing Stadium.",
-    "spoons": {
-      "name": "The Back of Beyond",
-      "note": "Kings Road, with a big canalside garden"
-    },
     "bars": [
       {
         "name": "The Nag's Head",
@@ -3783,10 +3458,6 @@ window.GUIDES = [
     "gettingThere": "Winchester station, an hour from London Waterloo.",
     "tip": "Jane Austen is buried in the cathedral - look for her grave in the north aisle.",
     "football": "Southampton are 20 minutes away.",
-    "spoons": {
-      "name": "The Old Gaolhouse",
-      "note": "Jewry Street, in the old jail"
-    },
     "bars": [
       {
         "name": "The Wykeham Arms",
@@ -3808,10 +3479,6 @@ window.GUIDES = [
     "gettingThere": "Canterbury West, under an hour from London St Pancras.",
     "tip": "Thomas Becket was murdered in the cathedral in 1170 - you can see where.",
     "football": "Kent cricket at the St Lawrence Ground.",
-    "spoons": {
-      "name": "The Thomas Ingoldsby",
-      "note": "Burgate - plus the West Gate Inn"
-    },
     "bars": [
       {
         "name": "The Foundry Brew Pub",
@@ -3928,10 +3595,6 @@ window.GUIDES = [
     "gettingThere": "Bristol Temple Meads, about 3.5 hours from Leeds.",
     "tip": "King Street has the Llandoger Trow and the Old Duke facing each other - do both.",
     "football": "Bristol City at Ashton Gate; Bristol Rovers at the Memorial Stadium.",
-    "spoons": {
-      "name": "The Commercial Rooms",
-      "note": "Corn Street, Bristol's first Spoons in an 1810 merchants' club"
-    },
     "bars": [
       {
         "name": "The Llandoger Trow",
@@ -3961,10 +3624,6 @@ window.GUIDES = [
     "gettingThere": "Plymouth station, about 3 hours from London.",
     "tip": "The Plymouth Gin distillery is the oldest working gin distillery in England - do the tour.",
     "football": "Plymouth Argyle at Home Park.",
-    "spoons": {
-      "name": "The Britannia Inn",
-      "note": "Milehouse - plus The Mannamead"
-    },
     "bars": [
       {
         "name": "The Dolphin",
@@ -4047,10 +3706,6 @@ window.GUIDES = [
     "gettingThere": "Exeter St Davids, 2 hours from London.",
     "tip": "Hire a bike at the Quay and ride the canal path to the Turf pub.",
     "football": "Exeter City at St James Park; Exeter Chiefs rugby at Sandy Park.",
-    "spoons": {
-      "name": "The Imperial",
-      "note": "with its old orangery - plus George's Meeting House in a chapel"
-    },
     "bars": [
       {
         "name": "The Ship Inn",
@@ -4091,10 +3746,6 @@ window.GUIDES = [
     "gettingThere": "Salisbury station, 90 minutes from London Waterloo.",
     "tip": "Ask about the mummified hand at the Haunch of Venison - they keep it behind glass.",
     "football": "Salisbury FC at the Raymond McEnhill Stadium.",
-    "spoons": {
-      "name": "The King's Head Inn",
-      "note": "by the river, in the city centre"
-    },
     "bars": [
       {
         "name": "The Haunch of Venison",
@@ -4116,10 +3767,6 @@ window.GUIDES = [
     "gettingThere": "Bath Spa station, 90 minutes from London.",
     "tip": "The Star still serves Bass from a jug - sit on the bench they call Death Row.",
     "football": "Bath Rugby at the Rec.",
-    "spoons": {
-      "name": "The King of Wessex",
-      "note": "James Street West, in the city centre"
-    },
     "bars": [
       {
         "name": "The Star Inn",
@@ -4329,10 +3976,6 @@ window.GUIDES = [
     "pint": "~€7",
     "localBeer": "Guinness",
     "bestFor": "The perfect pint",
-    "spoons": {
-      "name": "Keavan's Port",
-      "note": "Camden Street, pub and hotel"
-    },
     "bars": [
       {
         "name": "The Brazen Head",
