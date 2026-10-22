@@ -29,6 +29,12 @@ THEME = r'''
   .top a.back:hover, .top a.back:focus-visible { border-color: var(--accent); color: var(--accent); }
   .card-box { border: 2px solid rgba(255,255,255,.85); backdrop-filter: blur(3px); }
   .tr.hd { background: rgba(0,0,0,.45) !important; }
+  .tr { height: 29px; } .tr.hd { height: 26px; }
+  .swap { height: 614px; } .g { padding-top: 6px; padding-bottom: 6px; }
+  .g .s.pre { white-space: nowrap; }
+  .card-head { white-space: nowrap; gap: 14px; } .card-head > span { flex: none; } .card-head small { overflow: hidden; text-overflow: ellipsis; min-width: 0; }
+  #scores { height: 196px; overflow: hidden; }
+  .right { padding: 16px 0 14px; gap: 14px; }
   .side .tname { font-size: 54px; text-shadow: 0 4px 14px rgba(0,0,0,.8); }
   .venue, .top .meta { text-shadow: 0 2px 8px rgba(0,0,0,.8); }
   .ticker { background: rgba(6,14,34,.92) !important; border-top: 3px solid #fff !important; }
@@ -160,7 +166,7 @@ __SCRIPT__
       home: Object.assign(home, { xi: [], subs: [] }), away: Object.assign(away, { xi: [], subs: [] }),
       tickerSpeed: 90, tableSecs: 20, factsSecs: 20,
       manualStats: { xg: ['', ''], touchesOppBox: ['', ''], bigChances: ['', ''], bigChancesMissed: ['', ''] },
-      maxScoresShown: 6, zones: { ucl: [1, 4], uel: [5, 5], rel: [18, 20] }, pollSeconds: 20 };
+      maxScoresShown: 5, zones: { ucl: [1, 4], uel: [5, 5], rel: [18, 20] }, pollSeconds: 20 };
     if (pick.lg !== 'eng.1') cfg.zones = { ucl: [1, 2], uel: [3, 6], rel: [22, 24] };
     // the big screen in the stadium follows the game
     var bh = document.getElementById('bsHead'), bm = document.getElementById('bsMain'), bs = document.getElementById('bsSub');

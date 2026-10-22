@@ -53,30 +53,51 @@ function startCentre(CONFIG) {
   }
   const ymd = d => d.getFullYear() + pad(d.getMonth() + 1) + pad(d.getDate());
 
+  const mapEvent = e => {
+    const c = e.competitions[0];
+    const h = c.competitors.find(x => x.homeAway === 'home');
+    const a = c.competitors.find(x => x.homeAway === 'away');
+    const st = c.status || e.status;
+    return {
+      id: e.id, date: new Date(e.date), raw: c,
+      state: st.type.state, name: st.type.name, detail: st.type.shortDetail,
+      clock: Number(st.clock) || 0, displayClock: st.displayClock, period: st.period || 0,
+      home: { id: h.team.id, name: h.team.shortDisplayName || h.team.displayName, logo: logoOf(h.team), score: +h.score || 0, raw: h.team },
+      away: { id: a.team.id, name: a.team.shortDisplayName || a.team.displayName, logo: logoOf(a.team), score: +a.score || 0, raw: a.team }
+    };
+  };
+  const ukDay = d => d.toLocaleDateString('en-GB', { timeZone: 'Europe/London', year: 'numeric', month: '2-digit', day: '2-digit' });
+  const shortDay = d => d.toLocaleDateString('en-GB', { timeZone: 'Europe/London', weekday: 'short', day: 'numeric', month: 'short' }).toUpperCase().replace(/,/g, '');
+  let listMode = 'today', listLabel = '';
   async function fetchScoreboard() {
-    const data = await getJSON(`${API}/site/v2/sports/soccer/${CONFIG.league}/scoreboard?dates=${ymd(kickoff)}`);
-    const all = (data.events || []).map(e => {
-      const c = e.competitions[0];
-      const h = c.competitors.find(x => x.homeAway === 'home');
-      const a = c.competitors.find(x => x.homeAway === 'away');
-      const st = c.status || e.status;
-      return {
-        id: e.id, date: new Date(e.date), raw: c,
-        state: st.type.state, name: st.type.name, detail: st.type.shortDetail,
-        clock: Number(st.clock) || 0, displayClock: st.displayClock, period: st.period || 0,
-        home: { id: h.team.id, name: h.team.shortDisplayName || h.team.displayName, logo: logoOf(h.team), score: +h.score || 0, raw: h.team },
-        away: { id: a.team.id, name: a.team.shortDisplayName || a.team.displayName, logo: logoOf(a.team), score: +a.score || 0, raw: a.team }
-      };
-    });
-    allLive = all.filter(g => g.state === 'in');
-    const m = all.find(g => g.id === CONFIG.eventId) || all.find(g => g.home.id === CONFIG.home.id && g.away.id === CONFIG.away.id);
+    // the Leeds game itself (on its own date)
+    const md = await getJSON(`${API}/site/v2/sports/soccer/${CONFIG.league}/scoreboard?dates=${ymd(kickoff)}`);
+    const mall = (md.events || []).map(mapEvent);
+    const m = mall.find(g => g.id === CONFIG.eventId) || mall.find(g => g.home.id === CONFIG.home.id && g.away.id === CONFIG.away.id);
     if (m) {
       main = m; mainFetchedAt = Date.now(); mainId = m.id;
       mainTeamIds = { [m.home.id]: 'home', [m.away.id]: 'away' };
       setBadge($('home-badge'), null, m.home.logo);
       setBadge($('away-badge'), null, m.away.logo);
     }
-    others = all.filter(g => g !== m);
+    // the score list: today's games in this competition, otherwise the next round of fixtures
+    const today = new Date(), until = new Date(Date.now() + 21 * 864e5);
+    const td = await getJSON(`${API}/site/v2/sports/soccer/${CONFIG.league}/scoreboard?dates=${ymd(today)}`);
+    let list = (td.events || []).map(mapEvent).filter(g => ukDay(g.date) === ukDay(today));
+    if (list.length) { listMode = 'today'; listLabel = ''; }
+    else {
+      const nd = await getJSON(`${API}/site/v2/sports/soccer/${CONFIG.league}/scoreboard?dates=${ymd(today)}-${ymd(until)}&limit=300`);
+      const up = (nd.events || []).map(mapEvent).filter(g => g.state === 'pre' && g.date > today).sort((a, b) => a.date - b.date);
+      if (up.length) {
+        const first = up[0].date, round = up.filter(g => g.date - first < 4 * 864e5);   // one matchday: Fri/Sat to Mon
+        list = round; listMode = 'next';
+        const last = round[round.length - 1].date;
+        const wd = d => d.toLocaleDateString('en-GB', { timeZone: 'Europe/London', weekday: 'short', day: 'numeric' }).toUpperCase().replace(/,/g, '');
+        listLabel = ukDay(last) !== ukDay(first) ? wd(first) + '–' + shortDay(last) : shortDay(first);
+      } else { list = []; listMode = 'none'; listLabel = ''; }
+    }
+    allLive = list.filter(g => g.state === 'in');
+    others = list.filter(g => !main || g.id !== main.id);
     for (const g of others) {
       const k = g.home.score + '-' + g.away.score;
       if (lastScores[g.id] && lastScores[g.id] !== k) flashIds.add(g.id);
@@ -186,14 +207,15 @@ function startCentre(CONFIG) {
   // ---------- right column ----------
   let scorePage = 0;
   function renderScores() {
-    if (!others.length) { $('scores').innerHTML = '<div class="empty">No other games today</div>'; $('scores-sub').textContent = ''; return; }
+    $('scores-title').textContent = listMode === 'next' ? 'Next Fixtures' : "Today's Scores";
+    if (!others.length) { $('scores').innerHTML = `<div class="empty">${listMode === 'today' ? 'No other games today' : 'No games today'}</div>`; $('scores-sub').textContent = ''; return; }
     const per = CONFIG.maxScoresShown, pages = Math.ceil(others.length / per);
     if (scorePage >= pages) scorePage = 0;
     const list = others.slice(scorePage * per, scorePage * per + per);
-    $('scores-sub').textContent = pages > 1 ? `${scorePage + 1}/${pages}` : (allLive.length ? `${allLive.length} LIVE` : '');
+    $('scores-sub').textContent = (listMode === 'next' ? listLabel + (pages > 1 ? ' · ' : '') : '') + (pages > 1 ? `${scorePage + 1}/${pages}` : (allLive.length ? `${allLive.length} LIVE` : ''));
     $('scores').innerHTML = list.map(g => {
       let s, st = '', live = false;
-      if (g.state === 'pre') s = `<span class="s pre">${pad(g.date.getHours())}:${pad(g.date.getMinutes())}</span>`;
+      if (g.state === 'pre') s = `<span class="s pre">${listMode === 'next' ? g.date.toLocaleDateString('en-GB', { weekday: 'short', timeZone: 'Europe/London' }).toUpperCase() + ' ' : ''}${pad(g.date.getHours())}:${pad(g.date.getMinutes())}</span>`;
       else {
         s = `<span class="s">${g.home.score} - ${g.away.score}</span>`;
         if (g.state === 'post') st = 'FT';
@@ -278,7 +300,7 @@ function startCentre(CONFIG) {
 
   let showingFacts = false;
   function rotateRight() {
-    showingFacts = facts ? !showingFacts : false;
+    showingFacts = (facts && main && main.state !== 'pre') ? !showingFacts : false;
     $('table').classList.toggle('on', !showingFacts);
     $('facts').classList.toggle('on', showingFacts);
     $('table-title').textContent = showingFacts ? 'Match Facts' : (allLive.length ? 'Live Table' : 'Table');

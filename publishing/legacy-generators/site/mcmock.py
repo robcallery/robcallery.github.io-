@@ -14,6 +14,7 @@ main=ev("777","2026-10-22T19:30Z",SUN,LEE,0,1,'in',3780,2,'STATUS_IN_PROGRESS',d
 others=[ev("701","2026-10-22T19:30Z",team("359","Arsenal","ff0000"),team("364","Liverpool","c8102e"),2,1,'in' if LIVE else 'pre',3600,2,'STATUS_IN_PROGRESS'),
         ev("702","2026-10-22T19:30Z",team("382","Manchester City","6cabdd"),team("363","Chelsea","034694"),1,1,'in' if LIVE else 'pre',3600,2,'STATUS_IN_PROGRESS'),
         ev("703","2026-10-22T17:30Z",team("362","Aston Villa","670e36"),team("361","Everton","003399"),0,0,'post',5400,2,'STATUS_FULL_TIME')]
+sat=[ev(str(800+k),d,team(str(400+k),a,'333333'),team(str(500+k),b,'999999'),0,0,'pre') for k,(d,a,b) in enumerate([('2026-10-24T11:30Z','Arsenal','Everton'),('2026-10-24T14:00Z','Chelsea','Fulham'),('2026-10-24T14:00Z','Brentford','Burnley'),('2026-10-24T16:30Z','Liverpool','Aston Villa'),('2026-10-25T13:00Z','Manchester City','Brighton & Hove Albion'),('2026-10-25T14:00Z','Wolverhampton Wanderers','Bournemouth'),('2026-10-26T19:00Z','Newcastle United','Tottenham Hotspur')])]
 names=["Arsenal","Liverpool","Manchester City","Chelsea","Leeds United","Aston Villa","Newcastle United","Brighton & Hove Albion","Tottenham Hotspur","Fulham","Brentford","Crystal Palace","Everton","Bournemouth","West Ham United","Nottingham Forest","Wolverhampton Wanderers","Sunderland","Burnley","Coventry City"]
 ids={"Arsenal":"359","Liverpool":"364","Manchester City":"382","Chelsea":"363","Leeds United":"357","Aston Villa":"362","Everton":"361","Sunderland":"366"}
 ent=[{"team":{"id":ids.get(n,str(900+k)),"displayName":n,"shortDisplayName":n},"stats":[{"name":"rank","value":k+1},{"name":"gamesPlayed","value":8},{"name":"pointsFor","value":14-k//2},{"name":"pointsAgainst","value":6+k//2},{"name":"pointDifferential","value":8-k},{"name":"points","value":20-k}]} for k,n in enumerate(names)]
@@ -27,7 +28,13 @@ def h(route):
     if 'a.espncdn.com' in u: return route.fulfill(status=404,body='')
     if '/standings' in u: body={"children":[{"name":"Premier League","standings":{"entries":ent}}]}
     elif '/summary' in u: body=summary
-    elif 'eng.1/scoreboard' in u: body={"leagues":[{"name":"Premier League"}],"events":[main]+others}
+    elif 'eng.1/scoreboard' in u:
+        import re
+        m=re.search(r'dates=(\d{8})(?:-(\d{8}))?',u)
+        if LIVE or not m: body={"leagues":[{"name":"Premier League"}],"events":[main]+others}
+        elif m.group(2): body={"events":[main]+sat}
+        elif m.group(1)=='20261025': body={"events":[main]+sat}
+        else: body={"events":[]}
     elif 'eng.1/teams/357/schedule?fixture' in u: body={"leagues":[{"name":"Premier League"}],"events":[] if LIVE else [main]}
     else: body={"events":[]}
     route.fulfill(status=200,content_type='application/json',body=json.dumps(body),headers={'Access-Control-Allow-Origin':'*'})
