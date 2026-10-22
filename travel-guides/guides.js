@@ -1696,211 +1696,6 @@ window.GUIDES = [
     ]
   },
   {
-    "city": "Glasgow",
-    "region": "Scotland",
-    "country": "United Kingdom",
-    "group": "Scotland",
-    "colour": "blue",
-    "pint": "~£5",
-    "localBeer": "Tennent's / Drygate",
-    "bestFor": "Big nights & big bars",
-    "eat": "A late-night chippy - or a deep-fried Mars bar if you dare.",
-    "dontMiss": "Kelvingrove Art Gallery, then the West End.",
-    "gettingThere": "Glasgow Central or Queen Street - about 4.5 hours from Leeds.",
-    "tip": "Look up at the Duke of Wellington statue outside GoMA - he'll be wearing a traffic cone.",
-    "football": "Celtic at Celtic Park, Rangers at Ibrox.",
-    "bars": [
-      {
-        "name": "The Horse Shoe Bar",
-        "note": "Drury Street, one of the longest bars in Europe"
-      },
-      {
-        "name": "The Pot Still",
-        "note": "Hope Street, hundreds of whiskies"
-      }
-    ],
-    "archivedBars": [
-      {
-        "name": "Drygate",
-        "note": "brewery and bar next door to Tennent's Wellpark"
-      }
-    ]
-  },
-  {
-    "city": "Edinburgh",
-    "region": "Scotland",
-    "country": "United Kingdom",
-    "group": "Scotland",
-    "colour": "green",
-    "pint": "~£6",
-    "localBeer": "Scottish cask",
-    "bestFor": "Old Town pubs",
-    "eat": "Haggis, neeps and tatties.",
-    "dontMiss": "Edinburgh Castle, then walk down the Royal Mile.",
-    "gettingThere": "Edinburgh Waverley on the East Coast Main Line, about 3 hours from Leeds.",
-    "tip": "Walk up Arthur's Seat and down to the Sheep Heid for a pint.",
-    "football": "Hearts at Tynecastle, Hibs at Easter Road.",
-    "bars": [
-      {
-        "name": "Café Royal",
-        "note": "West Register Street, Victorian tiles and an oyster bar"
-      },
-      {
-        "name": "The Bow Bar",
-        "note": "Victoria Street, tiny, cask ale and whisky"
-      }
-    ],
-    "archivedBars": [
-      {
-        "name": "The Sheep Heid Inn",
-        "note": "Duddingston - claims to be Scotland's oldest pub"
-      }
-    ]
-  },
-  {
-    "city": "Aberdeen",
-    "region": "Scotland",
-    "country": "United Kingdom",
-    "group": "Scotland",
-    "colour": "orange",
-    "pint": "~£5",
-    "localBeer": "Scottish cask",
-    "bestFor": "Granite & whisky",
-    "eat": "A buttery (rowie) - Aberdeen's salty flat croissant.",
-    "dontMiss": "Marischal College, then down to Footdee by the harbour.",
-    "gettingThere": "Aberdeen station, about 2.5 hours from Edinburgh.",
-    "tip": "The Prince of Wales bar is 60 feet long - one of the longest in the city.",
-    "football": "Aberdeen at Pittodrie.",
-    "bars": [
-      {
-        "name": "Prince of Wales",
-        "note": "St Nicholas Lane, one of the oldest bars in town, 60ft bar"
-      },
-      {
-        "name": "The Grill",
-        "note": "Union Street, Aberdeen's classic whisky bar"
-      }
-    ]
-  },
-  {
-    "city": "Dundee",
-    "region": "Scotland",
-    "country": "United Kingdom",
-    "group": "Scotland",
-    "colour": "blue",
-    "pint": "~£4.50",
-    "localBeer": "Scottish cask",
-    "bestFor": "Discovery & the V&A",
-    "eat": "A Dundee cake - or Keiller's marmalade, which made the city famous.",
-    "dontMiss": "The V&A Dundee and RRS Discovery next door.",
-    "gettingThere": "Dundee station, about 1.5 hours from Edinburgh.",
-    "tip": "Dens Park and Tannadice are 100 yards apart - the closest grounds in Britain.",
-    "football": "Dundee and Dundee United - their grounds are on the same street.",
-    "bars": [
-      {
-        "name": "Speedwell Bar",
-        "note": "Perth Road, \"Mennie's\" - Edwardian, 150 malts"
-      }
-    ]
-  },
-  {
-    "city": "Belfast",
-    "region": "Northern Ireland",
-    "country": "United Kingdom",
-    "group": "Northern Ireland",
-    "colour": "orange",
-    "pint": "~£5",
-    "localBeer": "Guinness",
-    "bestFor": "Victorian pubs",
-    "eat": "An Ulster fry.",
-    "dontMiss": "Titanic Belfast, then a black taxi tour.",
-    "gettingThere": "Fly into Belfast City or ferry from Liverpool or Cairnryan.",
-    "tip": "Grab one of the Crown's snugs - they still have the bells to call the barman.",
-    "football": "Linfield at Windsor Park; Ulster Rugby at Kingspan Stadium.",
-    "bars": [
-      {
-        "name": "The Crown Liquor Saloon",
-        "note": "Great Victoria Street, gas-lit Victorian snugs"
-      },
-      {
-        "name": "Kelly's Cellars",
-        "note": "Bank Street, from 1720, trad music"
-      }
-    ],
-    "archivedBars": [
-      {
-        "name": "The Duke of York",
-        "note": "Commercial Court, Cathedral Quarter"
-      }
-    ]
-  },
-  {
-    "city": "Llanrwst",
-    "region": "Wales",
-    "country": "United Kingdom",
-    "colour": "red",
-    "pint": "~£4.50",
-    "localBeer": "Welsh cask",
-    "bestFor": "Snowdonia pints",
-    "bars": [
-      {
-        "name": "Pen-y-Bryn",
-        "note": "17th-century coaching inn on Ancaster Square"
-      }
-    ],
-    "eat": "Tea and Welsh cakes at Tu Hwnt i'r Bont by the old bridge.",
-    "dontMiss": "Swallow Falls and Betws-y-Coed, just up the valley.",
-    "gettingThere": "Conwy Valley line from Llandudno Junction.",
-    "tip": "Tea at Tu Hwnt i'r Bont by the old bridge before the Pen-y-Bryn.",
-    "group": "Wales"
-  },
-  {
-    "city": "Cardiff",
-    "region": "Wales",
-    "country": "United Kingdom",
-    "group": "Wales",
-    "colour": "teal",
-    "pint": "~£5",
-    "localBeer": "Brains",
-    "bestFor": "Match days",
-    "eat": "Welsh cakes from the market, or a Clark's Pie.",
-    "dontMiss": "Cardiff Castle, then Cardiff Bay.",
-    "gettingThere": "Cardiff Central, about 3.5 hours from Leeds.",
-    "tip": "The City Arms is mobbed on international days - go early or go after.",
-    "football": "Cardiff City at Cardiff City Stadium; Wales at the Principality Stadium.",
-    "bars": [
-      {
-        "name": "The City Arms",
-        "note": "Quay Street, right by the Principality Stadium"
-      },
-      {
-        "name": "The Goat Major",
-        "note": "High Street, named after the Royal Welsh regiment's goat"
-      }
-    ]
-  },
-  {
-    "city": "Swansea",
-    "region": "Wales",
-    "country": "United Kingdom",
-    "group": "Wales",
-    "colour": "red",
-    "pint": "~£4.50",
-    "localBeer": "Welsh cask",
-    "bestFor": "Dylan Thomas & the bay",
-    "eat": "Cockles and laverbread from Swansea Market.",
-    "dontMiss": "A walk round the bay to Mumbles.",
-    "gettingThere": "Swansea station, 3 hours from London.",
-    "tip": "Head out to Mumbles for a pint on the front and an ice cream at Joe's.",
-    "football": "Swansea City at the Swansea.com Stadium.",
-    "bars": [
-      {
-        "name": "No Sign Bar",
-        "note": "Wind Street, roots back to 1690, a Dylan Thomas haunt"
-      }
-    ]
-  },
-  {
     "city": "Bakewell",
     "region": "Derbyshire",
     "country": "United Kingdom",
@@ -4047,96 +3842,6 @@ window.GUIDES = [
     }
   },
   {
-    "city": "Dublin",
-    "region": "Leinster",
-    "country": "Ireland",
-    "colour": "green",
-    "pint": "~€7",
-    "localBeer": "Guinness",
-    "bestFor": "The perfect pint",
-    "bars": [
-      {
-        "name": "The Brazen Head",
-        "note": "claims to be Ireland's oldest pub"
-      },
-      {
-        "name": "The Long Hall",
-        "note": "Victorian bar on South Great George's Street"
-      }
-    ],
-    "eat": "Stew and soda bread.",
-    "dontMiss": "The Guinness Storehouse and its Gravity Bar.",
-    "football": "Shamrock Rovers or Bohemians; Ireland at the Aviva.",
-    "gettingThere": "Short flight from Leeds Bradford or Manchester.",
-    "tip": "Skip Temple Bar's prices - Mulligan's and the Long Hall pour a better pint.",
-    "archivedBars": [
-      {
-        "name": "Mulligan's",
-        "note": "legendary Guinness on Poolbeg Street"
-      }
-    ]
-  },
-  {
-    "city": "Málaga",
-    "region": "Andalusia",
-    "country": "Spain",
-    "colour": "orange",
-    "pint": "~€3",
-    "localBeer": "Victoria",
-    "bestFor": "Tapas & sweet wine",
-    "bars": [
-      {
-        "name": "Antigua Casa de Guardia",
-        "note": "pouring Málaga wine from the barrel since 1840"
-      },
-      {
-        "name": "El Pimpi",
-        "note": "huge old bodega by the Roman theatre"
-      }
-    ],
-    "eat": "Espetos - sardines grilled on the beach.",
-    "dontMiss": "The Alcazaba and the Gibralfaro castle view.",
-    "football": "Málaga CF at La Rosaleda.",
-    "gettingThere": "Direct flights from the UK; the airport is 15 minutes from town.",
-    "tip": "Antigua Casa de Guardia chalks your bill on the bar - don't wipe it off.",
-    "archivedBars": [
-      {
-        "name": "La Tranca",
-        "note": "tiny, loud, brilliant tapas bar"
-      }
-    ]
-  },
-  {
-    "city": "Benalmádena",
-    "region": "Andalusia",
-    "country": "Spain",
-    "colour": "red",
-    "pint": "~€3",
-    "localBeer": "Victoria",
-    "bestFor": "Marina bars & beaches",
-    "bars": [
-      {
-        "name": "Dec's at the Marina",
-        "note": "busy pub in Puerto Marina"
-      },
-      {
-        "name": "Casey Dukes",
-        "note": "Irish bar by 24 Hour Square"
-      }
-    ],
-    "eat": "Seafood along the promenade.",
-    "dontMiss": "The cable car up Monte Calamorro, and the Buddhist Stupa.",
-    "football": "Junior Firpo grew up here; Málaga CF are 20 minutes away.",
-    "gettingThere": "15 minutes from Málaga airport; the coastal train stops here.",
-    "tip": "Get the cable car up Calamorro for the view, then the marina bars at sunset.",
-    "archivedBars": [
-      {
-        "name": "The Drunken Sailor",
-        "note": "views by the windmill roundabout"
-      }
-    ]
-  },
-  {
     "city": "Paris",
     "region": "Île-de-France",
     "country": "France",
@@ -5954,5 +5659,2176 @@ window.GUIDES = [
     "eat": "Bison steak",
     "dontMiss": "Cheyenne Frontier Days Old West Museum",
     "colour": "green"
+  },
+  {
+    "city": "Dublin",
+    "region": "Leinster",
+    "country": "Ireland",
+    "colour": "green",
+    "pint": "~€7",
+    "localBeer": "Guinness",
+    "bestFor": "The perfect pint",
+    "bars": [
+      {
+        "name": "The Long Hall",
+        "note": "Victorian bar on South Great George's Street"
+      },
+      {
+        "name": "The Palace Bar",
+        "note": "Fleet Street, a literary pub since 1823"
+      }
+    ],
+    "eat": "Stew and soda bread.",
+    "dontMiss": "The Guinness Storehouse and its Gravity Bar.",
+    "football": "Shamrock Rovers or Bohemians; Ireland at the Aviva.",
+    "gettingThere": "Short flight from Leeds Bradford or Manchester.",
+    "tip": "Skip Temple Bar's prices - Mulligan's and the Long Hall pour a better pint.",
+    "archivedBars": [
+      {
+        "name": "Mulligan's",
+        "note": "legendary Guinness on Poolbeg Street"
+      },
+      {
+        "name": "The Brazen Head",
+        "note": "claims to be Ireland's oldest pub"
+      }
+    ],
+    "shelf": "ireland",
+    "group": "Leinster"
+  },
+  {
+    "city": "Kilkenny",
+    "region": "County Kilkenny",
+    "country": "Ireland",
+    "shelf": "ireland",
+    "group": "Leinster",
+    "colour": "teal",
+    "pint": "~€6",
+    "localBeer": "Smithwick's - founded in Kilkenny in 1710",
+    "bestFor": "Medieval streets & festivals",
+    "bars": [
+      {
+        "name": "Kyteler's Inn",
+        "note": "St Kieran's Street, linked to Dame Alice Kyteler, accused of witchcraft in 1324"
+      },
+      {
+        "name": "Cleere's Bar",
+        "note": "Parliament Street, music and theatre"
+      }
+    ],
+    "eat": "Irish stew by the fire in an old stone pub.",
+    "dontMiss": "Kilkenny Castle.",
+    "football": "GAA: Kilkenny hurling at Nowlan Park - the county is hurling royalty.",
+    "gettingThere": "MacDonagh station, about 1.5 hours from Dublin Heuston.",
+    "tip": "Visit the Smithwick's Experience - the brewery started here in 1710."
+  },
+  {
+    "city": "Athlone",
+    "region": "County Westmeath",
+    "country": "Ireland",
+    "shelf": "ireland",
+    "group": "Leinster",
+    "colour": "orange",
+    "pint": "~€5.60",
+    "localBeer": "Guinness at Sean's Bar",
+    "bestFor": "Shannon riverside",
+    "bars": [
+      {
+        "name": "Sean's Bar",
+        "note": "Main Street, said to date back to 900 AD"
+      },
+      {
+        "name": "The Snug Bar",
+        "note": "a cosy local in the town centre"
+      }
+    ],
+    "eat": "A toasted special at the bar.",
+    "dontMiss": "Athlone Castle.",
+    "football": "Soccer: Athlone Town at Athlone Town Stadium.",
+    "gettingThere": "On the Dublin-Galway line, about 1.5 hours from Dublin Heuston.",
+    "tip": "Sean's Bar is recognised by Guinness World Records as Ireland's oldest pub."
+  },
+  {
+    "city": "Wexford",
+    "region": "County Wexford",
+    "country": "Ireland",
+    "shelf": "ireland",
+    "group": "Leinster",
+    "colour": "blue",
+    "pint": "~€5.80",
+    "localBeer": "YellowBelly Beer",
+    "bestFor": "Heritage & seaside",
+    "bars": [
+      {
+        "name": "Simon Lambert & Sons",
+        "note": "Mallin Street, a pub with a deli counter"
+      },
+      {
+        "name": "The Sky and The Ground",
+        "note": "South Main Street, old-school with trad sessions"
+      }
+    ],
+    "eat": "Wexford strawberries in summer.",
+    "dontMiss": "Irish National Heritage Park.",
+    "football": "Soccer: Wexford FC at Ferrycarrig Park. GAA: Wexford hurling at Chadwicks Wexford Park.",
+    "gettingThere": "O'Hanrahan station, about 2.5 hours from Dublin along the coast; Rosslare ferry port is 20 minutes away.",
+    "tip": "Wexford Festival Opera runs every October and November."
+  },
+  {
+    "city": "Carlingford",
+    "region": "County Louth",
+    "country": "Ireland",
+    "shelf": "ireland",
+    "group": "Leinster",
+    "colour": "orange",
+    "pint": "~€6",
+    "localBeer": "Guinness, or a local craft guest",
+    "bestFor": "Medieval streets & lough",
+    "bars": [
+      {
+        "name": "PJ O'Hare's",
+        "note": "Tholsel Street, oysters and Guinness"
+      },
+      {
+        "name": "Taaffe's Castle Bar",
+        "note": "Newry Street, a pub beside a 16th-century tower house"
+      }
+    ],
+    "eat": "Carlingford Lough oysters.",
+    "dontMiss": "King John's Castle, Carlingford.",
+    "football": "Soccer: Dundalk FC at Oriel Park, 25 minutes away.",
+    "gettingThere": "Bus or drive from Dundalk, about 25 minutes.",
+    "tip": "Walk up Slieve Foye for views across the lough to the Mournes."
+  },
+  {
+    "city": "Cork",
+    "region": "County Cork",
+    "country": "Ireland",
+    "shelf": "ireland",
+    "group": "Munster",
+    "colour": "blue",
+    "pint": "~€6",
+    "localBeer": "Murphy's Irish Stout - brewed in the city",
+    "bestFor": "Food markets & rebel spirit",
+    "bars": [
+      {
+        "name": "Sin É",
+        "note": "Coburg Street, trad sessions most nights"
+      },
+      {
+        "name": "The Oval",
+        "note": "South Main Street, painted ceiling and candlelight"
+      }
+    ],
+    "eat": "Graze the English Market - try Clonakilty black pudding or drisheen if you're brave.",
+    "dontMiss": "English Market.",
+    "football": "Soccer: Cork City at Turners Cross. GAA: Cork hurling and football at Páirc Uí Chaoimh.",
+    "gettingThere": "Kent station, about 2.5 hours by train from Dublin Heuston; Cork Airport is 15 minutes away.",
+    "tip": "Order a Murphy's or a Beamish - in Cork, Guinness is the foreign stout."
+  },
+  {
+    "city": "Limerick",
+    "region": "County Limerick",
+    "country": "Ireland",
+    "shelf": "ireland",
+    "group": "Munster",
+    "colour": "red",
+    "pint": "~€5.80",
+    "localBeer": "Treaty City Brewery",
+    "bestFor": "Riverfront heritage",
+    "bars": [
+      {
+        "name": "The Locke Bar",
+        "note": "George's Quay, riverside, trad and rugby"
+      },
+      {
+        "name": "Nancy Blake's",
+        "note": "Denmark Street, a classic old bar with a beer garden"
+      }
+    ],
+    "eat": "Limerick ham - the city was once famous for curing it.",
+    "dontMiss": "King John's Castle.",
+    "football": "Soccer: Treaty United at Markets Field. Rugby: Munster at Thomond Park.",
+    "gettingThere": "Colbert station, about 2 hours from Dublin; Shannon Airport is 25 minutes away.",
+    "tip": "Thomond Park does stadium tours - worth it if Munster are away."
+  },
+  {
+    "city": "Waterford",
+    "region": "County Waterford",
+    "country": "Ireland",
+    "shelf": "ireland",
+    "group": "Munster",
+    "colour": "purple",
+    "pint": "~€5.70",
+    "localBeer": "Dungarvan Brewing Co.",
+    "bestFor": "Viking history & crystal",
+    "bars": [
+      {
+        "name": "Geoff's Café Bar",
+        "note": "John Street, a bohemian local favourite"
+      },
+      {
+        "name": "Tully's Bar",
+        "note": "O'Connell Street, live music"
+      }
+    ],
+    "eat": "A blaa - Waterford's soft floury bread roll - with butter or a rasher.",
+    "dontMiss": "Reginald's Tower.",
+    "football": "Soccer: Waterford FC at the RSC. GAA: Waterford hurling at Walsh Park.",
+    "gettingThere": "Plunkett station, about 2 hours from Dublin Heuston.",
+    "tip": "Get a blaa from a bakery early - they're best still warm."
+  },
+  {
+    "city": "Killarney",
+    "region": "County Kerry",
+    "country": "Ireland",
+    "shelf": "ireland",
+    "group": "Munster",
+    "colour": "blue",
+    "pint": "~€6.20",
+    "localBeer": "Killarney Brewing Co.",
+    "bestFor": "Lakes & national park",
+    "bars": [
+      {
+        "name": "O'Connor's Traditional Pub",
+        "note": "High Street, small and friendly with trad nightly"
+      },
+      {
+        "name": "Courtney's Bar",
+        "note": "Plunkett Street, a proper local"
+      }
+    ],
+    "eat": "Kerry lamb, or seafood chowder with brown bread.",
+    "dontMiss": "Ross Castle.",
+    "football": "GAA: Kerry football at Fitzgerald Stadium.",
+    "gettingThere": "Train from Dublin via Mallow, about 3.5 hours; Kerry Airport is 15 minutes away.",
+    "tip": "Hire a bike or take a jaunting car into the national park."
+  },
+  {
+    "city": "Dingle",
+    "region": "County Kerry",
+    "country": "Ireland",
+    "shelf": "ireland",
+    "group": "Munster",
+    "colour": "green",
+    "pint": "~€6.20",
+    "localBeer": "West Kerry Brewery",
+    "bestFor": "Coastal pubs & scenery",
+    "bars": [
+      {
+        "name": "Dick Mack's",
+        "note": "Green Street, a pub, leather shop and whiskey bar in one"
+      },
+      {
+        "name": "Foxy John's",
+        "note": "Main Street, a hardware shop and pub"
+      }
+    ],
+    "eat": "Fresh seafood on the pier, then Murphy's ice cream.",
+    "dontMiss": "Dingle harbour.",
+    "football": "GAA: Kerry football is the religion here.",
+    "gettingThere": "Bus from Tralee, about an hour; drive over the Conor Pass if the weather allows.",
+    "tip": "Dick Mack's still sells leather goods across the bar - look for the stars on the pavement outside."
+  },
+  {
+    "city": "Kinsale",
+    "region": "County Cork",
+    "country": "Ireland",
+    "shelf": "ireland",
+    "group": "Munster",
+    "colour": "green",
+    "pint": "~€6.30",
+    "localBeer": "Black's of Kinsale",
+    "bestFor": "Seafood & harbour",
+    "bars": [
+      {
+        "name": "The Spaniard",
+        "note": "Scilly, a 17th-century pub above the harbour"
+      },
+      {
+        "name": "The Bulman",
+        "note": "Summercove, on the water by Charles Fort"
+      }
+    ],
+    "eat": "Seafood - Kinsale calls itself Ireland's gourmet capital.",
+    "dontMiss": "Charles Fort.",
+    "football": "Soccer: Cork City are 30 minutes away at Turners Cross.",
+    "gettingThere": "Bus from Cork, about 45 minutes; Cork Airport is 20 minutes away.",
+    "tip": "Walk the Scilly Walk to Charles Fort and stop at The Bulman on the way."
+  },
+  {
+    "city": "Cobh",
+    "region": "County Cork",
+    "country": "Ireland",
+    "shelf": "ireland",
+    "group": "Munster",
+    "colour": "red",
+    "pint": "~€5.80",
+    "localBeer": "Murphy's Irish Stout",
+    "bestFor": "Maritime history",
+    "bars": [
+      {
+        "name": "Kelly's Bar",
+        "note": "Westbourne Place, on the waterfront"
+      },
+      {
+        "name": "Rob Roy Bar",
+        "note": "Pearse Square, one of the town's old pubs"
+      }
+    ],
+    "eat": "Seafood chowder on the harbour.",
+    "dontMiss": "St Colman's Cathedral.",
+    "football": "Soccer: Cobh Ramblers at St Colman's Park.",
+    "gettingThere": "Train from Cork Kent, about 25 minutes.",
+    "tip": "The Titanic Experience is in the old White Star Line ticket office."
+  },
+  {
+    "city": "Doolin",
+    "region": "County Clare",
+    "country": "Ireland",
+    "shelf": "ireland",
+    "group": "Munster",
+    "colour": "purple",
+    "pint": "~€6",
+    "localBeer": "Western Herd Brewing",
+    "bestFor": "Traditional music sessions",
+    "bars": [
+      {
+        "name": "Gus O'Connor's Pub",
+        "note": "Fisher Street, trad music since the 1970s"
+      },
+      {
+        "name": "McGann's Pub",
+        "note": "Roadford, a proper session pub"
+      }
+    ],
+    "eat": "Chowder and brown bread after a session.",
+    "dontMiss": "Doolin harbour.",
+    "football": "GAA: Clare hurling at Cusack Park in Ennis.",
+    "gettingThere": "Bus from Ennis or Galway; ferries run to the Aran Islands from the pier.",
+    "tip": "Take the boat under the Cliffs of Moher from Doolin pier - it's better than the clifftop."
+  },
+  {
+    "city": "Ennis",
+    "region": "County Clare",
+    "country": "Ireland",
+    "shelf": "ireland",
+    "group": "Munster",
+    "colour": "teal",
+    "pint": "~€5.80",
+    "localBeer": "Western Herd Brewing",
+    "bestFor": "Market town & heritage",
+    "bars": [
+      {
+        "name": "Cruises Bar",
+        "note": "Abbey Street, by the friary"
+      },
+      {
+        "name": "Brogan's Bar",
+        "note": "O'Connell Street, a long-standing music bar"
+      }
+    ],
+    "eat": "Burren smoked salmon.",
+    "dontMiss": "Ennis Friary.",
+    "football": "GAA: Clare hurling at Cusack Park.",
+    "gettingThere": "On the Limerick-Galway line; Shannon Airport is 20 minutes away.",
+    "tip": "Fleadh Nua, the trad festival, fills the town in late May."
+  },
+  {
+    "city": "Galway",
+    "region": "County Galway",
+    "country": "Ireland",
+    "shelf": "ireland",
+    "group": "Connacht",
+    "colour": "green",
+    "pint": "~€6",
+    "localBeer": "Galway Bay Brewery",
+    "bestFor": "Trad music & Atlantic culture",
+    "bars": [
+      {
+        "name": "Tigh Neachtain",
+        "note": "Cross Street, a painted landmark pub with snugs"
+      },
+      {
+        "name": "The Crane Bar",
+        "note": "Sea Road, trad music upstairs every night"
+      }
+    ],
+    "eat": "Galway Bay oysters - best during the oyster festival in September.",
+    "dontMiss": "Spanish Arch.",
+    "football": "Soccer: Galway United at Eamonn Deacy Park. GAA: Galway hurling at Pearse Stadium.",
+    "gettingThere": "Ceannt station, about 2.5 hours from Dublin Heuston.",
+    "tip": "Trad sessions rarely start before half nine - eat first, then settle in."
+  },
+  {
+    "city": "Westport",
+    "region": "County Mayo",
+    "country": "Ireland",
+    "shelf": "ireland",
+    "group": "Connacht",
+    "colour": "red",
+    "pint": "~€5.80",
+    "localBeer": "Mescan Brewery",
+    "bestFor": "Colourful streets & mountains",
+    "bars": [
+      {
+        "name": "Matt Molloy's",
+        "note": "Bridge Street, owned by a Chieftain"
+      },
+      {
+        "name": "The Porter House",
+        "note": "Bridge Street, trad sessions"
+      }
+    ],
+    "eat": "Clew Bay seafood or a Mayo steak.",
+    "dontMiss": "Croagh Patrick.",
+    "football": "GAA: Mayo football at MacHale Park in nearby Castlebar.",
+    "gettingThere": "Train from Dublin Heuston, about 3 hours; Ireland West Airport Knock is 50 minutes away.",
+    "tip": "Matt Molloy's has trad every night - Matt is the flute player from the Chieftains."
+  },
+  {
+    "city": "Sligo",
+    "region": "County Sligo",
+    "country": "Ireland",
+    "shelf": "ireland",
+    "group": "Connacht",
+    "colour": "purple",
+    "pint": "~€5.70",
+    "localBeer": "The White Hag",
+    "bestFor": "Atlantic coast & music",
+    "bars": [
+      {
+        "name": "Hargadon Bros",
+        "note": "O'Connell Street, old snugs and a grocery counter"
+      },
+      {
+        "name": "Shoot the Crows",
+        "note": "Castle Street, quirky and full of music"
+      }
+    ],
+    "eat": "Seafood chowder with brown bread.",
+    "dontMiss": "Sligo Abbey.",
+    "football": "Soccer: Sligo Rovers at the Showgrounds.",
+    "gettingThere": "Train from Dublin Connolly, about 3 hours.",
+    "tip": "Grab a snug at Hargadon Bros - it's barely changed in a century."
+  },
+  {
+    "city": "Belfast",
+    "region": "Northern Ireland",
+    "country": "United Kingdom",
+    "group": "Ulster",
+    "colour": "orange",
+    "pint": "~£5",
+    "localBeer": "Guinness",
+    "bestFor": "Victorian pubs",
+    "eat": "An Ulster fry.",
+    "dontMiss": "Titanic Belfast, then a black taxi tour.",
+    "gettingThere": "Fly into Belfast City or ferry from Liverpool or Cairnryan.",
+    "tip": "Grab one of the Crown's snugs - they still have the bells to call the barman.",
+    "football": "Linfield at Windsor Park; Ulster Rugby at Kingspan Stadium.",
+    "bars": [
+      {
+        "name": "The Crown Liquor Saloon",
+        "note": "Great Victoria Street, gas-lit Victorian snugs"
+      },
+      {
+        "name": "The Duke of York",
+        "note": "Commercial Court, a cobbled-alley favourite"
+      }
+    ],
+    "archivedBars": [
+      {
+        "name": "The Duke of York",
+        "note": "Commercial Court, Cathedral Quarter"
+      },
+      {
+        "name": "Kelly's Cellars",
+        "note": "Bank Street, from 1720, trad music"
+      }
+    ],
+    "shelf": "ireland"
+  },
+  {
+    "city": "Derry/Londonderry",
+    "region": "County Londonderry",
+    "country": "United Kingdom",
+    "shelf": "ireland",
+    "group": "Ulster",
+    "colour": "orange",
+    "pint": "~£5",
+    "localBeer": "Walled City Brewery",
+    "bestFor": "City walls & live music",
+    "bars": [
+      {
+        "name": "Peadar O'Donnell's",
+        "note": "Waterloo Street, trad sessions every night"
+      },
+      {
+        "name": "Sandinos",
+        "note": "Water Street, live music and a lively crowd"
+      }
+    ],
+    "eat": "An Ulster fry to set you up for the walls.",
+    "dontMiss": "Derry city walls.",
+    "football": "Soccer: Derry City at the Brandywell.",
+    "gettingThere": "Trains from Belfast take about 2 hours along the coast; City of Derry Airport is 15 minutes out.",
+    "tip": "Walk the full circuit of the walls - about a mile, and free."
+  },
+  {
+    "city": "Donegal Town",
+    "region": "County Donegal",
+    "country": "Ireland",
+    "shelf": "ireland",
+    "group": "Ulster",
+    "colour": "teal",
+    "pint": "~€5.70",
+    "localBeer": "Kinnegar Brewing",
+    "bestFor": "Wild Atlantic gateway",
+    "bars": [
+      {
+        "name": "The Reel Inn",
+        "note": "Bridge Street, trad every night"
+      },
+      {
+        "name": "McCafferty's Bar",
+        "note": "The Diamond, a lively local"
+      }
+    ],
+    "eat": "Donegal Bay seafood chowder.",
+    "dontMiss": "Donegal Castle.",
+    "football": "Soccer: Finn Harps at Finn Park in Ballybofey, half an hour away.",
+    "gettingThere": "No train - Bus Éireann from Dublin or Derry, or fly to Donegal Airport.",
+    "tip": "The Reel Inn has trad every night of the year."
+  },
+  {
+    "city": "Glasgow",
+    "region": "Scotland",
+    "country": "United Kingdom",
+    "group": "Central Belt",
+    "colour": "blue",
+    "pint": "~£5",
+    "localBeer": "Tennent's / Drygate",
+    "bestFor": "Big nights & big bars",
+    "eat": "A late-night chippy - or a deep-fried Mars bar if you dare.",
+    "dontMiss": "Kelvingrove Art Gallery, then the West End.",
+    "gettingThere": "Glasgow Central or Queen Street - about 4.5 hours from Leeds.",
+    "tip": "Look up at the Duke of Wellington statue outside GoMA - he'll be wearing a traffic cone.",
+    "football": "Celtic at Celtic Park, Rangers at Ibrox.",
+    "bars": [
+      {
+        "name": "The Pot Still",
+        "note": "Hope Street, hundreds of whiskies"
+      },
+      {
+        "name": "The Horse Shoe Bar",
+        "note": "Drury Street, one of the longest bars in Europe"
+      }
+    ],
+    "archivedBars": [
+      {
+        "name": "Drygate",
+        "note": "brewery and bar next door to Tennent's Wellpark"
+      }
+    ],
+    "shelf": "scotland"
+  },
+  {
+    "city": "Edinburgh",
+    "region": "Scotland",
+    "country": "United Kingdom",
+    "group": "Central Belt",
+    "colour": "green",
+    "pint": "~£6",
+    "localBeer": "Scottish cask",
+    "bestFor": "Old Town pubs",
+    "eat": "Haggis, neeps and tatties.",
+    "dontMiss": "Edinburgh Castle, then walk down the Royal Mile.",
+    "gettingThere": "Edinburgh Waverley on the East Coast Main Line, about 3 hours from Leeds.",
+    "tip": "Walk up Arthur's Seat and down to the Sheep Heid for a pint.",
+    "football": "Hearts at Tynecastle, Hibs at Easter Road.",
+    "bars": [
+      {
+        "name": "The Bow Bar",
+        "note": "Victoria Street, tiny, cask ale and whisky"
+      },
+      {
+        "name": "The Guildford Arms",
+        "note": "West Register Street, Victorian ceilings"
+      }
+    ],
+    "archivedBars": [
+      {
+        "name": "The Sheep Heid Inn",
+        "note": "Duddingston - claims to be Scotland's oldest pub"
+      },
+      {
+        "name": "Café Royal",
+        "note": "West Register Street, Victorian tiles and an oyster bar"
+      }
+    ],
+    "shelf": "scotland"
+  },
+  {
+    "city": "Stirling",
+    "region": "Stirling",
+    "country": "United Kingdom",
+    "shelf": "scotland",
+    "group": "Central Belt",
+    "colour": "orange",
+    "pint": "~£5",
+    "localBeer": "Harviestoun Brewery",
+    "bestFor": "Castle & history",
+    "bars": [
+      {
+        "name": "The Settle Inn",
+        "note": "St Mary's Wynd, from 1733, Stirling's oldest pub"
+      },
+      {
+        "name": "Nicky-Tams",
+        "note": "Baker Street, live music"
+      }
+    ],
+    "eat": "Haggis, neeps and tatties.",
+    "dontMiss": "Stirling Castle.",
+    "football": "Soccer: Stirling Albion at Forthbank Stadium.",
+    "gettingThere": "Under an hour by train from Glasgow or Edinburgh.",
+    "tip": "Walk the Back Walk below the castle walls."
+  },
+  {
+    "city": "Falkirk",
+    "region": "Falkirk",
+    "country": "United Kingdom",
+    "shelf": "scotland",
+    "group": "Central Belt",
+    "colour": "green",
+    "pint": "~£4.80",
+    "localBeer": "Tennent's Lager",
+    "bestFor": "Falkirk Wheel & Kelpies",
+    "bars": [
+      {
+        "name": "Behind the Wall",
+        "note": "Melville Street, a big bar with a beer garden"
+      },
+      {
+        "name": "The Wheatsheaf",
+        "note": "Baxters Wynd, a traditional old pub"
+      }
+    ],
+    "eat": "A Scotch pie at the football.",
+    "dontMiss": "The Kelpies.",
+    "football": "Soccer: Falkirk FC at the Falkirk Stadium.",
+    "gettingThere": "Trains from Edinburgh and Glasgow stop at Falkirk High and Grahamston.",
+    "tip": "See the Kelpies at night when they are lit up, then the Falkirk Wheel by day."
+  },
+  {
+    "city": "St Andrews",
+    "region": "Fife",
+    "country": "United Kingdom",
+    "shelf": "scotland",
+    "group": "Fife",
+    "colour": "green",
+    "pint": "~£5.50",
+    "localBeer": "St Andrews Brewing Co.",
+    "bestFor": "Golf & university",
+    "bars": [
+      {
+        "name": "The Central",
+        "note": "Market Street, a busy student favourite"
+      },
+      {
+        "name": "The Dunvegan",
+        "note": "by the 18th green of the Old Course"
+      }
+    ],
+    "eat": "Ice cream from Jannettas Gelateria.",
+    "dontMiss": "St Andrews Cathedral.",
+    "football": "Golf, not football: the Old Course is the home of golf.",
+    "gettingThere": "Train to Leuchars, then a 10-minute bus.",
+    "tip": "The Old Course closes for golf on Sundays and opens as a park - walk it."
+  },
+  {
+    "city": "Dunfermline",
+    "region": "Fife",
+    "country": "United Kingdom",
+    "shelf": "scotland",
+    "group": "Fife",
+    "colour": "blue",
+    "pint": "~£4.80",
+    "localBeer": "Tennent's Lager",
+    "bestFor": "Abbey & royal history",
+    "bars": [
+      {
+        "name": "The Commercial Inn",
+        "note": "Douglas Street, real ale"
+      },
+      {
+        "name": "The Creepy Wee Pub",
+        "note": "Bruce Street, a quirky small bar"
+      }
+    ],
+    "eat": "A steak pie.",
+    "dontMiss": "Dunfermline Abbey.",
+    "football": "Soccer: Dunfermline Athletic at East End Park.",
+    "gettingThere": "About 35 minutes by train from Edinburgh, over the Forth Bridge.",
+    "tip": "Andrew Carnegie was born here - his birthplace museum is free."
+  },
+  {
+    "city": "Aberdeen",
+    "region": "Scotland",
+    "country": "United Kingdom",
+    "group": "Tayside & the North East",
+    "colour": "orange",
+    "pint": "~£5",
+    "localBeer": "Scottish cask",
+    "bestFor": "Granite & whisky",
+    "eat": "A buttery (rowie) - Aberdeen's salty flat croissant.",
+    "dontMiss": "Marischal College, then down to Footdee by the harbour.",
+    "gettingThere": "Aberdeen station, about 2.5 hours from Edinburgh.",
+    "tip": "The Prince of Wales bar is 60 feet long - one of the longest in the city.",
+    "football": "Aberdeen at Pittodrie.",
+    "bars": [
+      {
+        "name": "The Grill",
+        "note": "Union Street, Aberdeen's classic whisky bar"
+      },
+      {
+        "name": "The Prince of Wales",
+        "note": "St Nicholas Lane, one of the oldest bars in town, 60ft bar"
+      }
+    ],
+    "shelf": "scotland"
+  },
+  {
+    "city": "Dundee",
+    "region": "Scotland",
+    "country": "United Kingdom",
+    "group": "Tayside & the North East",
+    "colour": "blue",
+    "pint": "~£4.50",
+    "localBeer": "Scottish cask",
+    "bestFor": "Discovery & the V&A",
+    "eat": "A Dundee cake - or Keiller's marmalade, which made the city famous.",
+    "dontMiss": "The V&A Dundee and RRS Discovery next door.",
+    "gettingThere": "Dundee station, about 1.5 hours from Edinburgh.",
+    "tip": "Dens Park and Tannadice are 100 yards apart - the closest grounds in Britain.",
+    "football": "Dundee and Dundee United - their grounds are on the same street.",
+    "bars": [
+      {
+        "name": "The Phoenix",
+        "note": "Nethergate, a Victorian pub"
+      },
+      {
+        "name": "Duke's Corner",
+        "note": "Brown Street, live music"
+      }
+    ],
+    "archivedBars": [
+      {
+        "name": "Speedwell Bar",
+        "note": "Perth Road, \"Mennie's\" - Edwardian, 150 malts"
+      }
+    ],
+    "shelf": "scotland"
+  },
+  {
+    "city": "Perth",
+    "region": "Perth and Kinross",
+    "country": "United Kingdom",
+    "shelf": "scotland",
+    "group": "Tayside & the North East",
+    "colour": "blue",
+    "pint": "~£5",
+    "localBeer": "Scottish cask",
+    "bestFor": "River Tay & heritage",
+    "bars": [
+      {
+        "name": "The Bothy",
+        "note": "Kinnoull Street, a bar and grill"
+      },
+      {
+        "name": "The Old Ship Inn",
+        "note": "Skinnergate, one of Perth's oldest pubs"
+      }
+    ],
+    "eat": "A Scotch pie.",
+    "dontMiss": "Scone Palace.",
+    "football": "Soccer: St Johnstone at McDiarmid Park.",
+    "gettingThere": "About an hour by train from Edinburgh or Glasgow.",
+    "tip": "Scone Palace is two miles out of town - take the bus or a taxi."
+  },
+  {
+    "city": "Pitlochry",
+    "region": "Perth and Kinross",
+    "country": "United Kingdom",
+    "shelf": "scotland",
+    "group": "Tayside & the North East",
+    "colour": "teal",
+    "pint": "~£5.20",
+    "localBeer": "Moulin Brewery",
+    "bestFor": "Highland scenery",
+    "bars": [
+      {
+        "name": "Moulin Inn",
+        "note": "Moulin, a 1695 inn with its own brewery"
+      },
+      {
+        "name": "Old Mill Inn",
+        "note": "Mill Lane, beside the burn"
+      }
+    ],
+    "eat": "Highland venison or a hearty stovies.",
+    "dontMiss": "Pitlochry Dam.",
+    "football": "Shinty: Pitlochry Camanachd.",
+    "gettingThere": "On the Highland Main Line, about 1.5 hours from Edinburgh.",
+    "tip": "Moulin Inn brews its own ale in the old coach house."
+  },
+  {
+    "city": "Inverness",
+    "region": "Highland",
+    "country": "United Kingdom",
+    "shelf": "scotland",
+    "group": "Highlands & Islands",
+    "colour": "teal",
+    "pint": "~£5.20",
+    "localBeer": "Black Isle Brewery",
+    "bestFor": "Highland gateway",
+    "bars": [
+      {
+        "name": "Hootananny",
+        "note": "Church Street, live folk and trad"
+      },
+      {
+        "name": "The Castle Tavern",
+        "note": "Castle Street, beer garden below the castle"
+      }
+    ],
+    "eat": "Cullen skink - smoked haddock soup.",
+    "dontMiss": "Inverness Castle.",
+    "football": "Soccer: Inverness Caledonian Thistle at the Caledonian Stadium.",
+    "gettingThere": "Trains from Edinburgh and Glasgow take about 3.5 hours; the Caledonian Sleeper runs from London.",
+    "tip": "Hootananny has live trad music most nights."
+  },
+  {
+    "city": "Oban",
+    "region": "Argyll and Bute",
+    "country": "United Kingdom",
+    "shelf": "scotland",
+    "group": "Highlands & Islands",
+    "colour": "red",
+    "pint": "~£5.50",
+    "localBeer": "Fyne Ales",
+    "bestFor": "Seafood & ferries",
+    "bars": [
+      {
+        "name": "The Oban Inn",
+        "note": "Stafford Street, from 1790, by the harbour"
+      },
+      {
+        "name": "Aulay's Bar",
+        "note": "Airds Crescent, a cosy local"
+      }
+    ],
+    "eat": "Seafood from the green shack on the pier.",
+    "dontMiss": "McCaig's Tower.",
+    "football": "Shinty: Oban Camanachd.",
+    "gettingThere": "West Highland Line from Glasgow, about 3 hours; CalMac ferries to Mull and the isles.",
+    "tip": "Book the Oban Distillery tour - it's right in the middle of town."
+  },
+  {
+    "city": "Fort William",
+    "region": "Highland",
+    "country": "United Kingdom",
+    "shelf": "scotland",
+    "group": "Highlands & Islands",
+    "colour": "purple",
+    "pint": "~£5.20",
+    "localBeer": "Ben Nevis whisky, or Fyne Ales",
+    "bestFor": "Ben Nevis & outdoors",
+    "bars": [
+      {
+        "name": "Grog & Gruel",
+        "note": "High Street, real ale and food"
+      },
+      {
+        "name": "The Ben Nevis Bar",
+        "note": "High Street, loch views"
+      }
+    ],
+    "eat": "Highland venison.",
+    "dontMiss": "Ben Nevis.",
+    "football": "Soccer: Fort William FC at Claggan Park.",
+    "gettingThere": "West Highland Line from Glasgow, about 3 hours 45; the Caledonian Sleeper runs from London.",
+    "tip": "Ben Nevis takes 7-9 hours up and down - start early and check the forecast."
+  },
+  {
+    "city": "Portree",
+    "region": "Isle of Skye",
+    "country": "United Kingdom",
+    "shelf": "scotland",
+    "group": "Highlands & Islands",
+    "colour": "orange",
+    "pint": "~£5.50",
+    "localBeer": "Isle of Skye Brewing Co.",
+    "bestFor": "Skye landscapes",
+    "bars": [
+      {
+        "name": "The Isles Inn",
+        "note": "Somerled Square, a cosy bar"
+      },
+      {
+        "name": "The Merchant Bar",
+        "note": "Wentworth Street"
+      }
+    ],
+    "eat": "Skye langoustines and scallops.",
+    "dontMiss": "Old Man of Storr.",
+    "football": "Shinty: Skye Camanachd.",
+    "gettingThere": "Drive or bus over the Skye Bridge from Kyle of Lochalsh.",
+    "tip": "Get to the Old Man of Storr car park early - it fills fast."
+  },
+  {
+    "city": "Kirkwall",
+    "region": "Orkney",
+    "country": "United Kingdom",
+    "shelf": "scotland",
+    "group": "Highlands & Islands",
+    "colour": "blue",
+    "pint": "~£5.50",
+    "localBeer": "Orkney Brewery and Swannay",
+    "bestFor": "Orkney heritage",
+    "bars": [
+      {
+        "name": "The Bothy Bar",
+        "note": "in the Albert Hotel, Mounthoolie Lane"
+      },
+      {
+        "name": "The Reel",
+        "note": "Broad Street, folk music by the cathedral"
+      }
+    ],
+    "eat": "Orkney cheese and fudge.",
+    "dontMiss": "St Magnus Cathedral.",
+    "football": "The Ba': a mass street game played every Christmas Day and New Year's Day.",
+    "gettingThere": "Flights from Aberdeen and Edinburgh; NorthLink ferries from Aberdeen and Scrabster.",
+    "tip": "Watch the Ba' game at Christmas or New Year - and stand well back."
+  },
+  {
+    "city": "Lerwick",
+    "region": "Shetland",
+    "country": "United Kingdom",
+    "shelf": "scotland",
+    "group": "Highlands & Islands",
+    "colour": "green",
+    "pint": "~£5.50",
+    "localBeer": "Lerwick Brewery",
+    "bestFor": "Shetland culture",
+    "bars": [
+      {
+        "name": "The Lounge Bar",
+        "note": "Mounthooly Street, traditional music upstairs"
+      },
+      {
+        "name": "The Douglas Arms",
+        "note": "Commercial Street, known as the Noost"
+      }
+    ],
+    "eat": "Shetland mussels or lamb.",
+    "dontMiss": "Lerwick waterfront.",
+    "gettingThere": "Overnight NorthLink ferry from Aberdeen; flights to Sumburgh.",
+    "tip": "Come for Up Helly Aa on the last Tuesday of January, when a Viking longship is burned."
+  },
+  {
+    "city": "Ayr",
+    "region": "South Ayrshire",
+    "country": "United Kingdom",
+    "shelf": "scotland",
+    "group": "South of Scotland",
+    "colour": "orange",
+    "pint": "~£5",
+    "localBeer": "Ayr Brewing Company",
+    "bestFor": "Beaches & Burns",
+    "bars": [
+      {
+        "name": "The Tam O'Shanter Inn",
+        "note": "High Street, linked to Burns' poem"
+      },
+      {
+        "name": "The Smoking Goat",
+        "note": "Newmarket Street, craft beer"
+      }
+    ],
+    "eat": "A fish supper on the seafront.",
+    "dontMiss": "Ayr beach.",
+    "football": "Soccer: Ayr United at Somerset Park.",
+    "gettingThere": "About 50 minutes by train from Glasgow Central; Prestwick Airport is 10 minutes away.",
+    "tip": "Robert Burns' birthplace in Alloway is a short bus ride south."
+  },
+  {
+    "city": "Dumfries",
+    "region": "Dumfries and Galloway",
+    "country": "United Kingdom",
+    "shelf": "scotland",
+    "group": "South of Scotland",
+    "colour": "red",
+    "pint": "~£4.80",
+    "localBeer": "Sulwath Brewers",
+    "bestFor": "Burns country",
+    "bars": [
+      {
+        "name": "The Globe Inn",
+        "note": "High Street, Burns' favourite howff since 1610"
+      },
+      {
+        "name": "The Cavens Arms",
+        "note": "Buccleuch Street, real ale"
+      }
+    ],
+    "eat": "Galloway beef.",
+    "dontMiss": "Robert Burns House.",
+    "football": "Soccer: Queen of the South at Palmerston Park.",
+    "gettingThere": "Trains from Glasgow and Carlisle.",
+    "tip": "At the Globe Inn, sit in Burns' chair and you'll be asked to recite a line of his poetry."
+  },
+  {
+    "city": "Peebles",
+    "region": "Scottish Borders",
+    "country": "United Kingdom",
+    "shelf": "scotland",
+    "group": "South of Scotland",
+    "colour": "purple",
+    "pint": "~£5",
+    "localBeer": "Broughton Ales",
+    "bestFor": "Borders walks",
+    "bars": [
+      {
+        "name": "The Crown Hotel",
+        "note": "High Street, an old coaching inn"
+      },
+      {
+        "name": "The Bridge Inn",
+        "note": "Port Brae, by the Tweed"
+      }
+    ],
+    "eat": "Borders lamb.",
+    "dontMiss": "River Tweed.",
+    "football": "Rugby: Peebles RFC.",
+    "gettingThere": "Bus from Edinburgh, about an hour.",
+    "tip": "Walk the Tweed out to Neidpath Castle."
+  },
+  {
+    "city": "Melrose",
+    "region": "Scottish Borders",
+    "country": "United Kingdom",
+    "shelf": "scotland",
+    "group": "South of Scotland",
+    "colour": "teal",
+    "pint": "~£5",
+    "localBeer": "Tempest Brewing Co.",
+    "bestFor": "Abbeys & rugby",
+    "bars": [
+      {
+        "name": "The Ship Inn",
+        "note": "East Port, the town's rugby pub"
+      },
+      {
+        "name": "The Townhouse Hotel Bar",
+        "note": "Market Square"
+      }
+    ],
+    "eat": "A Selkirk bannock.",
+    "dontMiss": "Melrose Abbey.",
+    "football": "Rugby: rugby sevens were invented in Melrose in 1883 - the Melrose Sevens are every April.",
+    "gettingThere": "Borders Railway from Edinburgh to Tweedbank, then a short walk.",
+    "tip": "The Melrose Sevens in April are the original sevens tournament."
+  },
+  {
+    "city": "Madrid",
+    "region": "Community of Madrid",
+    "country": "Spain",
+    "shelf": "spain",
+    "group": "Madrid & the centre",
+    "colour": "teal",
+    "pint": "~€3 a caña",
+    "localBeer": "Mahou",
+    "bestFor": "Art museums & tapas",
+    "bars": [
+      {
+        "name": "La Venencia",
+        "note": "Calle Echegaray, sherry straight from the barrel"
+      },
+      {
+        "name": "El Penta",
+        "note": "Malasaña, a famous Movida-era bar"
+      }
+    ],
+    "eat": "A bocadillo de calamares near Plaza Mayor.",
+    "dontMiss": "Royal Palace.",
+    "football": "Soccer: Real Madrid at the Santiago Bernabéu; Atlético Madrid at the Metropolitano.",
+    "gettingThere": "Barajas airport, then Metro line 8 into town; AVE trains from all over Spain.",
+    "tip": "La Venencia serves only sherry - no photos and no tipping."
+  },
+  {
+    "city": "Toledo",
+    "region": "Castile-La Mancha",
+    "country": "Spain",
+    "shelf": "spain",
+    "group": "Madrid & the centre",
+    "colour": "red",
+    "pint": "~€2.50 a caña",
+    "localBeer": "Mahou",
+    "bestFor": "Medieval streets",
+    "bars": [
+      {
+        "name": "Cervecería El Trébol",
+        "note": "Calle Santa Fe, famous for its bombas"
+      },
+      {
+        "name": "La Abadía",
+        "note": "Plaza de San Nicolás, craft beer in an old cellar"
+      }
+    ],
+    "eat": "Marzipan, or carcamusas stew.",
+    "dontMiss": "Alcázar of Toledo.",
+    "football": "Soccer: CD Toledo at the Salto del Caballo.",
+    "gettingThere": "Avant train from Madrid Atocha in about 33 minutes.",
+    "tip": "Use the escalators from the riverside car park up into the old town."
+  },
+  {
+    "city": "Salamanca",
+    "region": "Castile and León",
+    "country": "Spain",
+    "shelf": "spain",
+    "group": "Madrid & the centre",
+    "colour": "purple",
+    "pint": "~€2.20 a caña",
+    "localBeer": "Mahou",
+    "bestFor": "University & sandstone",
+    "bars": [
+      {
+        "name": "Café Novelty",
+        "note": "Plaza Mayor, the oldest café in town"
+      },
+      {
+        "name": "Bar Niebla",
+        "note": "cocktail bar"
+      }
+    ],
+    "eat": "Hornazo - a pie filled with pork.",
+    "dontMiss": "Plaza Mayor.",
+    "football": "Soccer: Unionistas de Salamanca.",
+    "gettingThere": "Alvia trains from Madrid in about 1 hour 35.",
+    "tip": "Find the frog on the university façade - spotting it is said to bring good luck."
+  },
+  {
+    "city": "Málaga",
+    "region": "Andalusia",
+    "country": "Spain",
+    "colour": "orange",
+    "pint": "~€3",
+    "localBeer": "Victoria",
+    "bestFor": "Tapas & sweet wine",
+    "bars": [
+      {
+        "name": "Antigua Casa de Guardia",
+        "note": "pouring Málaga wine from the barrel since 1840"
+      },
+      {
+        "name": "El Pimpi",
+        "note": "huge old bodega by the Roman theatre"
+      }
+    ],
+    "eat": "Espetos - sardines grilled on the beach.",
+    "dontMiss": "The Alcazaba and the Gibralfaro castle view.",
+    "football": "Málaga CF at La Rosaleda.",
+    "gettingThere": "Direct flights from the UK; the airport is 15 minutes from town.",
+    "tip": "Antigua Casa de Guardia chalks your bill on the bar - don't wipe it off.",
+    "archivedBars": [
+      {
+        "name": "La Tranca",
+        "note": "tiny, loud, brilliant tapas bar"
+      }
+    ],
+    "shelf": "spain",
+    "group": "Andalusia"
+  },
+  {
+    "city": "Benalmádena",
+    "region": "Andalusia",
+    "country": "Spain",
+    "colour": "red",
+    "pint": "~€3",
+    "localBeer": "Victoria",
+    "bestFor": "Marina bars & beaches",
+    "bars": [
+      {
+        "name": "Dec's at the Marina",
+        "note": "busy pub in Puerto Marina"
+      },
+      {
+        "name": "Casey Dukes",
+        "note": "Irish bar by 24 Hour Square"
+      }
+    ],
+    "eat": "Seafood along the promenade.",
+    "dontMiss": "The cable car up Monte Calamorro, and the Buddhist Stupa.",
+    "football": "Junior Firpo grew up here; Málaga CF are 20 minutes away.",
+    "gettingThere": "15 minutes from Málaga airport; the coastal train stops here.",
+    "tip": "Get the cable car up Calamorro for the view, then the marina bars at sunset.",
+    "archivedBars": [
+      {
+        "name": "The Drunken Sailor",
+        "note": "views by the windmill roundabout"
+      }
+    ],
+    "group": "Andalusia",
+    "shelf": "spain"
+  },
+  {
+    "city": "Seville",
+    "region": "Andalusia",
+    "country": "Spain",
+    "shelf": "spain",
+    "group": "Andalusia",
+    "colour": "blue",
+    "pint": "~€2 a caña",
+    "localBeer": "Cruzcampo",
+    "bestFor": "Flamenco & tapas",
+    "bars": [
+      {
+        "name": "El Rinconcillo",
+        "note": "Calle Gerona, since 1670"
+      },
+      {
+        "name": "Las Teresas",
+        "note": "Santa Cruz, hams hanging from the ceiling"
+      }
+    ],
+    "eat": "Espinacas con garbanzos, or salmorejo in summer.",
+    "dontMiss": "Plaza de España.",
+    "football": "Soccer: Sevilla FC at the Ramón Sánchez-Pizjuán; Real Betis at the Benito Villamarín.",
+    "gettingThere": "San Pablo airport; AVE from Madrid to Santa Justa takes about 2.5 hours.",
+    "tip": "El Rinconcillo still chalks your bill on the wooden bar."
+  },
+  {
+    "city": "Granada",
+    "region": "Andalusia",
+    "country": "Spain",
+    "shelf": "spain",
+    "group": "Andalusia",
+    "colour": "purple",
+    "pint": "~€2.50 a caña",
+    "localBeer": "Alhambra",
+    "bestFor": "Alhambra & tapas",
+    "bars": [
+      {
+        "name": "Bodegas Castañeda",
+        "note": "Calle Almireceros, an old bodega"
+      },
+      {
+        "name": "Bar Los Diamantes",
+        "note": "fried fish tapas"
+      }
+    ],
+    "eat": "Free tapas - one arrives with every drink.",
+    "dontMiss": "Alhambra.",
+    "football": "Soccer: Granada CF at Nuevo Los Cármenes.",
+    "gettingThere": "Small airport; AVE from Madrid about 3.5 hours; buses from Málaga in 1.5 hours.",
+    "tip": "Book Alhambra tickets weeks ahead - the Nasrid Palaces have timed entry."
+  },
+  {
+    "city": "Córdoba",
+    "region": "Andalusia",
+    "country": "Spain",
+    "shelf": "spain",
+    "group": "Andalusia",
+    "colour": "teal",
+    "pint": "~€2 a caña",
+    "localBeer": "Cruzcampo",
+    "bestFor": "Mezquita & patios",
+    "bars": [
+      {
+        "name": "Bodegas Mezquita",
+        "note": "by the Mezquita"
+      },
+      {
+        "name": "Taberna Salinas",
+        "note": "Calle Tundidores, an old patio tavern"
+      }
+    ],
+    "eat": "Salmorejo and flamenquín.",
+    "dontMiss": "Mezquita-Catedral.",
+    "football": "Soccer: Córdoba CF at El Arcángel.",
+    "gettingThere": "AVE from Madrid in about 1 hour 45; under an hour from Seville or Málaga.",
+    "tip": "Come in May for the Festival de los Patios."
+  },
+  {
+    "city": "Cádiz",
+    "region": "Andalusia",
+    "country": "Spain",
+    "shelf": "spain",
+    "group": "Andalusia",
+    "colour": "green",
+    "pint": "~€2 a caña",
+    "localBeer": "Cruzcampo",
+    "bestFor": "Seafood & Atlantic coast",
+    "bars": [
+      {
+        "name": "Casa Manteca",
+        "note": "La Viña, a bullfighting-poster bar"
+      },
+      {
+        "name": "La Manzanilla",
+        "note": "Calle Feduchy, sherry bar"
+      }
+    ],
+    "eat": "Tortillitas de camarones - shrimp fritters.",
+    "dontMiss": "Cádiz Cathedral.",
+    "football": "Soccer: Cádiz CF at the Nuevo Mirandilla.",
+    "gettingThere": "Train from Seville in about 1 hour 40; Jerez airport is 45 minutes away.",
+    "tip": "Watch the sunset at La Caleta beach."
+  },
+  {
+    "city": "Ronda",
+    "region": "Andalusia",
+    "country": "Spain",
+    "shelf": "spain",
+    "group": "Andalusia",
+    "colour": "red",
+    "pint": "~€2.20 a caña",
+    "localBeer": "Cruzcampo",
+    "bestFor": "Clifftop views",
+    "bars": [
+      {
+        "name": "El Lechuguita",
+        "note": "Calle Virgen de los Remedios, cheap fixed-price tapas"
+      },
+      {
+        "name": "Tragatá",
+        "note": "modern tapas"
+      }
+    ],
+    "eat": "Rabo de toro - oxtail stew.",
+    "dontMiss": "Puente Nuevo.",
+    "football": "Bullring: the Real Maestranza is one of the oldest in Spain.",
+    "gettingThere": "Bus or train from Málaga in about 1 hour 45.",
+    "tip": "Walk down the path below the bridge for the classic view."
+  },
+  {
+    "city": "Barcelona",
+    "region": "Catalonia",
+    "country": "Spain",
+    "shelf": "spain",
+    "group": "Catalonia & the east",
+    "colour": "orange",
+    "pint": "~€3.20 a caña",
+    "localBeer": "Estrella Damm or Moritz",
+    "bestFor": "Architecture & beaches",
+    "bars": [
+      {
+        "name": "Bar Marsella",
+        "note": "El Raval, absinthe since 1820"
+      },
+      {
+        "name": "Bodega La Palma",
+        "note": "Gothic Quarter, an old wine bodega"
+      }
+    ],
+    "eat": "Bombas in Barceloneta, or pan con tomate anywhere.",
+    "dontMiss": "Sagrada Família.",
+    "football": "Soccer: FC Barcelona at the Spotify Camp Nou; Espanyol at the RCDE Stadium.",
+    "gettingThere": "El Prat airport, then the Aerobús into the city; AVE trains to Sants.",
+    "tip": "Book Sagrada Família tickets online - they sell out."
+  },
+  {
+    "city": "Valencia",
+    "region": "Valencian Community",
+    "country": "Spain",
+    "shelf": "spain",
+    "group": "Catalonia & the east",
+    "colour": "green",
+    "pint": "~€2.50 a caña",
+    "localBeer": "Turia",
+    "bestFor": "Paella & modern design",
+    "bars": [
+      {
+        "name": "Café de las Horas",
+        "note": "near the cathedral, home of agua de Valencia"
+      },
+      {
+        "name": "Casa Montaña",
+        "note": "El Cabanyal, a bodega since 1836"
+      }
+    ],
+    "eat": "Paella valenciana - eaten at lunchtime, never dinner.",
+    "dontMiss": "City of Arts and Sciences.",
+    "football": "Soccer: Valencia CF at Mestalla; Levante at the Ciutat de València.",
+    "gettingThere": "Airport metro into town; AVE from Madrid in about 1 hour 40.",
+    "tip": "Try agua de Valencia - cava, orange juice and spirits. It's stronger than it tastes."
+  },
+  {
+    "city": "Alicante",
+    "region": "Valencian Community",
+    "country": "Spain",
+    "shelf": "spain",
+    "group": "Catalonia & the east",
+    "colour": "orange",
+    "pint": "~€2.50 a caña",
+    "localBeer": "Estrella de Levante",
+    "bestFor": "Castles & seafront",
+    "bars": [
+      {
+        "name": "Cervecería Sento",
+        "note": "Calle Teniente Coronel Chápuli, small and busy"
+      },
+      {
+        "name": "El Portal",
+        "note": "Calle Bilbao, upmarket tapas"
+      }
+    ],
+    "eat": "Arroz a banda.",
+    "dontMiss": "Santa Bárbara Castle.",
+    "football": "Soccer: Hércules CF at the José Rico Pérez.",
+    "gettingThere": "Alicante airport, then the bus into the centre.",
+    "tip": "Take the lift through Mount Benacantil up to the castle."
+  },
+  {
+    "city": "Murcia",
+    "region": "Region of Murcia",
+    "country": "Spain",
+    "shelf": "spain",
+    "group": "Catalonia & the east",
+    "colour": "blue",
+    "pint": "~€2 a caña",
+    "localBeer": "Estrella de Levante",
+    "bestFor": "Cathedral & tapas",
+    "bars": [
+      {
+        "name": "Las Jarras",
+        "note": "tapas bar"
+      },
+      {
+        "name": "El Pasaje de Zabalburu",
+        "note": "tapas in a covered passage"
+      }
+    ],
+    "eat": "Zarangollo or a pastel de carne.",
+    "dontMiss": "Murcia Cathedral.",
+    "football": "Soccer: Real Murcia at the Enrique Roca.",
+    "gettingThere": "Región de Murcia airport at Corvera; AVE trains from Madrid.",
+    "tip": "Do tapas on Plaza de las Flores."
+  },
+  {
+    "city": "Benidorm",
+    "region": "Valencian Community",
+    "country": "Spain",
+    "shelf": "spain",
+    "group": "Catalonia & the east",
+    "colour": "teal",
+    "pint": "~€3.50 a pint",
+    "localBeer": "San Miguel",
+    "bestFor": "Beaches & nightlife",
+    "bars": [
+      {
+        "name": "Heartbreak Rock Bar",
+        "note": "rock music"
+      },
+      {
+        "name": "Tiki Beach",
+        "note": "beach bar on the Levante side"
+      }
+    ],
+    "eat": "A full English, or a proper paella in the old town.",
+    "dontMiss": "Levante Beach.",
+    "gettingThere": "About 45 minutes by bus from Alicante airport; the TRAM runs from Alicante.",
+    "tip": "Walk up to the Balcón del Mediterráneo for sunset."
+  },
+  {
+    "city": "Tarragona",
+    "region": "Catalonia",
+    "country": "Spain",
+    "shelf": "spain",
+    "group": "Catalonia & the east",
+    "colour": "orange",
+    "pint": "~€2.50 a caña",
+    "localBeer": "Estrella Damm",
+    "bestFor": "Roman ruins & coast",
+    "bars": [
+      {
+        "name": "El Cau",
+        "note": "cave-like bar in the old town"
+      }
+    ],
+    "eat": "Romesco sauce, or calçots in late winter.",
+    "dontMiss": "Roman amphitheatre.",
+    "football": "Soccer: Gimnàstic de Tarragona at the Nou Estadi Costa Daurada.",
+    "gettingThere": "About an hour by train from Barcelona; AVE to Camp de Tarragona; Reus airport nearby.",
+    "tip": "Come for Santa Tecla in September to see the human towers (castells)."
+  },
+  {
+    "city": "Bilbao",
+    "region": "Basque Country",
+    "country": "Spain",
+    "shelf": "spain",
+    "group": "The north",
+    "colour": "orange",
+    "pint": "~€2.80 a caña",
+    "localBeer": "La Salve",
+    "bestFor": "Guggenheim & pintxos",
+    "bars": [
+      {
+        "name": "Café Bar Bilbao",
+        "note": "Plaza Nueva, award-winning pintxos"
+      },
+      {
+        "name": "El Globo",
+        "note": "Calle Diputación, famous for its txangurro gratin"
+      }
+    ],
+    "eat": "Pintxos along the Casco Viejo.",
+    "dontMiss": "Guggenheim Museum.",
+    "football": "Soccer: Athletic Club at San Mamés.",
+    "gettingThere": "Airport bus to the centre in about 20 minutes; ferries from the UK arrive at Santander, about an hour away.",
+    "tip": "Do txikiteo - hop between bars with small glasses."
+  },
+  {
+    "city": "San Sebastián",
+    "region": "Basque Country",
+    "country": "Spain",
+    "shelf": "spain",
+    "group": "The north",
+    "colour": "blue",
+    "pint": "~€3 a caña",
+    "localBeer": "Keler",
+    "bestFor": "Pintxos & beaches",
+    "bars": [
+      {
+        "name": "Bar Néstor",
+        "note": "Calle Pescadería, famous tortilla - put your name down"
+      },
+      {
+        "name": "La Cuchara de San Telmo",
+        "note": "cooked-to-order pintxos"
+      }
+    ],
+    "eat": "Pintxos - try a gilda, the original.",
+    "dontMiss": "La Concha beach.",
+    "football": "Soccer: Real Sociedad at the Reale Arena (Anoeta).",
+    "gettingThere": "Bus from Bilbao airport in about 1 hour 15; trains from Madrid.",
+    "tip": "Take a plate, point at what you want, and tell the barman what you had at the end."
+  },
+  {
+    "city": "Zaragoza",
+    "region": "Aragon",
+    "country": "Spain",
+    "shelf": "spain",
+    "group": "The north",
+    "colour": "green",
+    "pint": "~€2.20 a caña",
+    "localBeer": "Ambar",
+    "bestFor": "Basilica & tapas",
+    "bars": [
+      {
+        "name": "El Tubo",
+        "note": "the tapas lanes off Calle Estébanes"
+      },
+      {
+        "name": "Bodegas Almau",
+        "note": "Calle Estébanes, anchovies and vermouth since 1870"
+      }
+    ],
+    "eat": "Ternasco de Aragón - roast lamb.",
+    "dontMiss": "Basílica del Pilar.",
+    "football": "Soccer: Real Zaragoza, while La Romareda is rebuilt.",
+    "gettingThere": "AVE stop between Madrid and Barcelona.",
+    "tip": "El Tubo is a maze of lanes full of tapas bars - just wander."
+  },
+  {
+    "city": "Santiago de Compostela",
+    "region": "Galicia",
+    "country": "Spain",
+    "shelf": "spain",
+    "group": "The north",
+    "colour": "teal",
+    "pint": "~€2 a caña",
+    "localBeer": "Estrella Galicia",
+    "bestFor": "Pilgrimage & old town",
+    "bars": [
+      {
+        "name": "O Gato Negro",
+        "note": "Rúa da Raíña, a tiny old tavern"
+      },
+      {
+        "name": "Casa das Crechas",
+        "note": "Galician folk and jazz"
+      }
+    ],
+    "eat": "Pulpo á feira, then tarta de Santiago.",
+    "dontMiss": "Santiago Cathedral.",
+    "football": "Soccer: SD Compostela at San Lázaro.",
+    "gettingThere": "Santiago airport; trains from A Coruña and Vigo.",
+    "tip": "Check the cathedral schedule if you want to see the botafumeiro swing."
+  },
+  {
+    "city": "Palma de Mallorca",
+    "region": "Balearic Islands",
+    "country": "Spain",
+    "shelf": "spain",
+    "group": "The islands",
+    "colour": "purple",
+    "pint": "~€3.50 a caña",
+    "localBeer": "Estrella Damm",
+    "bestFor": "Cathedral & island life",
+    "bars": [
+      {
+        "name": "Bar Bosch",
+        "note": "Plaça del Rei Joan Carles I, a classic meeting spot"
+      },
+      {
+        "name": "La Rosa Vermutería",
+        "note": "vermouth and tapas"
+      }
+    ],
+    "eat": "An ensaïmada from Can Joan de s'Aigo.",
+    "dontMiss": "La Seu Cathedral.",
+    "football": "Soccer: RCD Mallorca at Son Moix.",
+    "gettingThere": "Palma airport, then the bus into town in about 20 minutes.",
+    "tip": "Get breakfast at Can Joan de s'Aigo, a café since 1700."
+  },
+  {
+    "city": "Cardiff",
+    "region": "Wales",
+    "country": "United Kingdom",
+    "group": "South Wales",
+    "colour": "teal",
+    "pint": "~£5",
+    "localBeer": "Brains",
+    "bestFor": "Match days",
+    "eat": "Welsh cakes from the market, or a Clark's Pie.",
+    "dontMiss": "Cardiff Castle, then Cardiff Bay.",
+    "gettingThere": "Cardiff Central, about 3.5 hours from Leeds.",
+    "tip": "The City Arms is mobbed on international days - go early or go after.",
+    "football": "Cardiff City at Cardiff City Stadium; Wales at the Principality Stadium.",
+    "bars": [
+      {
+        "name": "The City Arms",
+        "note": "Quay Street, right by the Principality Stadium"
+      },
+      {
+        "name": "The Cambrian Tap",
+        "note": "St Mary Street, craft beer"
+      }
+    ],
+    "archivedBars": [
+      {
+        "name": "The Goat Major",
+        "note": "High Street, named after the Royal Welsh regiment's goat"
+      }
+    ],
+    "shelf": "wales"
+  },
+  {
+    "city": "Swansea",
+    "region": "Wales",
+    "country": "United Kingdom",
+    "group": "South Wales",
+    "colour": "red",
+    "pint": "~£4.50",
+    "localBeer": "Welsh cask",
+    "bestFor": "Dylan Thomas & the bay",
+    "eat": "Cockles and laverbread from Swansea Market.",
+    "dontMiss": "A walk round the bay to Mumbles.",
+    "gettingThere": "Swansea station, 3 hours from London.",
+    "tip": "Head out to Mumbles for a pint on the front and an ice cream at Joe's.",
+    "football": "Swansea City at the Swansea.com Stadium.",
+    "bars": [
+      {
+        "name": "The No Sign Wine Bar",
+        "note": "Wind Street, roots back to 1690, a Dylan Thomas haunt"
+      },
+      {
+        "name": "The Queens Hotel",
+        "note": "Gloucester Place, by the marina"
+      }
+    ],
+    "shelf": "wales"
+  },
+  {
+    "city": "Newport, Wales",
+    "region": "Newport",
+    "country": "United Kingdom",
+    "shelf": "wales",
+    "group": "South Wales",
+    "colour": "teal",
+    "pint": "~£4.80",
+    "localBeer": "Tiny Rebel Brewing",
+    "bestFor": "Roman history & markets",
+    "bars": [
+      {
+        "name": "The Murenger",
+        "note": "High Street, a Tudor-fronted Sam Smith's pub"
+      },
+      {
+        "name": "The Pen & Wig",
+        "note": "Stow Hill, a beer garden near the cathedral"
+      }
+    ],
+    "eat": "Welsh rarebit.",
+    "dontMiss": "Newport Transporter Bridge.",
+    "football": "Soccer: Newport County at Rodney Parade. Rugby: Dragons at Rodney Parade too.",
+    "gettingThere": "On the South Wales main line, about 1 hour 45 from London Paddington.",
+    "tip": "Check whether the Transporter Bridge gondola is running - it has been under restoration."
+  },
+  {
+    "city": "Chepstow",
+    "region": "Monmouthshire",
+    "country": "United Kingdom",
+    "shelf": "wales",
+    "group": "South Wales",
+    "colour": "purple",
+    "pint": "~£4.80",
+    "localBeer": "Kingstone Brewery",
+    "bestFor": "Castle & river",
+    "bars": [
+      {
+        "name": "The Three Tuns",
+        "note": "Bridge Street, below the castle"
+      },
+      {
+        "name": "The Boat Inn",
+        "note": "The Back, on the riverside"
+      }
+    ],
+    "eat": "Welsh rarebit.",
+    "dontMiss": "Chepstow Castle.",
+    "football": "Horse racing: Chepstow Racecourse, home of the Welsh Grand National.",
+    "gettingThere": "Station on the Gloucester-Newport line.",
+    "tip": "Walk the Wye Valley to Tintern Abbey, about five miles."
+  },
+  {
+    "city": "Monmouth",
+    "region": "Monmouthshire",
+    "country": "United Kingdom",
+    "shelf": "wales",
+    "group": "South Wales",
+    "colour": "teal",
+    "pint": "~£4.80",
+    "localBeer": "Kingstone Brewery",
+    "bestFor": "Market town & Wye Valley",
+    "bars": [
+      {
+        "name": "The Punch House",
+        "note": "Agincourt Square, an old coaching inn"
+      },
+      {
+        "name": "The Queen's Head",
+        "note": "St James Street"
+      }
+    ],
+    "eat": "Welsh cakes.",
+    "dontMiss": "Monnow Bridge.",
+    "football": "Rugby: Monmouth RFC.",
+    "gettingThere": "No railway - buses from Newport and Abergavenny.",
+    "tip": "Walk up the Kymin for views over two countries."
+  },
+  {
+    "city": "St Davids",
+    "region": "Pembrokeshire",
+    "country": "United Kingdom",
+    "shelf": "wales",
+    "group": "West Wales",
+    "colour": "green",
+    "pint": "~£4.80",
+    "localBeer": "Bluestone Brewing",
+    "bestFor": "Cathedral & coast",
+    "bars": [
+      {
+        "name": "The Farmers Arms",
+        "note": "Goat Street, with a beer garden facing the cathedral"
+      },
+      {
+        "name": "The Bishops",
+        "note": "Cross Square"
+      }
+    ],
+    "eat": "Pembrokeshire crab.",
+    "dontMiss": "St Davids Cathedral.",
+    "gettingThere": "No station - buses run from Haverfordwest.",
+    "tip": "Walk the coast path to St Non's Chapel, where St David is said to have been born."
+  },
+  {
+    "city": "Tenby",
+    "region": "Pembrokeshire",
+    "country": "United Kingdom",
+    "shelf": "wales",
+    "group": "West Wales",
+    "colour": "orange",
+    "pint": "~£4.80",
+    "localBeer": "Tenby Brewing Co.",
+    "bestFor": "Harbour & beaches",
+    "bars": [
+      {
+        "name": "The Buccaneer",
+        "note": "St Julian Street, near the harbour"
+      },
+      {
+        "name": "The Hope & Anchor",
+        "note": "St Julian Street"
+      }
+    ],
+    "eat": "Pembrokeshire crab or an ice cream on the harbour.",
+    "dontMiss": "Tenby harbour.",
+    "football": "Rugby: Tenby United RFC.",
+    "gettingThere": "On the Pembroke Dock branch line from Swansea.",
+    "tip": "Take the boat to Caldey Island, run by Cistercian monks (seasonal)."
+  },
+  {
+    "city": "Cardigan",
+    "region": "Ceredigion",
+    "country": "United Kingdom",
+    "shelf": "wales",
+    "group": "West Wales",
+    "colour": "red",
+    "pint": "~£4.60",
+    "localBeer": "Mantle Brewery",
+    "bestFor": "Coastal heritage",
+    "bars": [
+      {
+        "name": "The Copper Pot",
+        "note": "Pendre"
+      },
+      {
+        "name": "The Black Lion",
+        "note": "High Street, one of the oldest coaching inns in Wales"
+      }
+    ],
+    "eat": "Cardigan Bay crab.",
+    "dontMiss": "Cardigan Castle.",
+    "gettingThere": "No railway - buses from Aberystwyth and Carmarthen.",
+    "tip": "Drive out to Mwnt beach - dolphins are often seen offshore."
+  },
+  {
+    "city": "Aberystwyth",
+    "region": "Ceredigion",
+    "country": "United Kingdom",
+    "shelf": "wales",
+    "group": "Mid Wales",
+    "colour": "blue",
+    "pint": "~£4.60",
+    "localBeer": "Felinfoel Double Dragon",
+    "bestFor": "University & promenade",
+    "bars": [
+      {
+        "name": "The Ship and Castle",
+        "note": "High Street, real ale"
+      },
+      {
+        "name": "Rummers Wine Bar",
+        "note": "by the harbour bridge"
+      }
+    ],
+    "eat": "Welsh lamb.",
+    "dontMiss": "Aberystwyth promenade.",
+    "football": "Soccer: Aberystwyth Town at Park Avenue.",
+    "gettingThere": "Cambrian Line from Shrewsbury and Birmingham, about 3 hours from Birmingham.",
+    "tip": "Kick the bar at the end of the prom - it's a local tradition."
+  },
+  {
+    "city": "Brecon",
+    "region": "Powys",
+    "country": "United Kingdom",
+    "shelf": "wales",
+    "group": "Mid Wales",
+    "colour": "green",
+    "pint": "~£4.60",
+    "localBeer": "Brecon Brewing",
+    "bestFor": "Beacons & walking",
+    "bars": [
+      {
+        "name": "The Brecon Tap",
+        "note": "The Bulwark, Brecon Brewing's tap room"
+      },
+      {
+        "name": "The Clarence Inn",
+        "note": "The Watton"
+      }
+    ],
+    "eat": "Welsh lamb after a walk in the Beacons.",
+    "dontMiss": "Brecon Cathedral.",
+    "gettingThere": "No railway - buses from Merthyr Tydfil and Abergavenny.",
+    "tip": "Brecon Jazz Festival takes over the town in August."
+  },
+  {
+    "city": "Hay-on-Wye",
+    "region": "Powys",
+    "country": "United Kingdom",
+    "shelf": "wales",
+    "group": "Mid Wales",
+    "colour": "red",
+    "pint": "~£4.60",
+    "localBeer": "Wye Valley Brewery",
+    "bestFor": "Bookshops & festivals",
+    "bars": [
+      {
+        "name": "The Blue Boar",
+        "note": "Castle Street, a wood-panelled local"
+      },
+      {
+        "name": "The Old Black Lion",
+        "note": "Lion Street, a 17th-century coaching inn"
+      }
+    ],
+    "eat": "A cream tea between bookshops.",
+    "dontMiss": "Hay bookshops.",
+    "gettingThere": "No railway - buses from Hereford.",
+    "tip": "Hay Festival takes over in late May - book beds early."
+  },
+  {
+    "city": "Llanrwst",
+    "region": "Wales",
+    "country": "United Kingdom",
+    "colour": "red",
+    "pint": "~£4.50",
+    "localBeer": "Welsh cask",
+    "bestFor": "Snowdonia pints",
+    "bars": [
+      {
+        "name": "Pen-y-Bryn",
+        "note": "17th-century coaching inn on Ancaster Square"
+      }
+    ],
+    "eat": "Tea and Welsh cakes at Tu Hwnt i'r Bont by the old bridge.",
+    "dontMiss": "Swallow Falls and Betws-y-Coed, just up the valley.",
+    "gettingThere": "Conwy Valley line from Llandudno Junction.",
+    "tip": "Tea at Tu Hwnt i'r Bont by the old bridge before the Pen-y-Bryn.",
+    "group": "North Wales",
+    "shelf": "wales"
+  },
+  {
+    "city": "Wrexham",
+    "region": "Wrexham",
+    "country": "United Kingdom",
+    "shelf": "wales",
+    "group": "North Wales",
+    "colour": "orange",
+    "pint": "~£4.60",
+    "localBeer": "Wrexham Lager",
+    "bestFor": "Football & industrial heritage",
+    "bars": [
+      {
+        "name": "The Turf",
+        "note": "Mold Road, built into the corner of the Racecourse"
+      },
+      {
+        "name": "The Fat Boar",
+        "note": "Rhosddu Road, food and drink"
+      }
+    ],
+    "eat": "Welsh cawl.",
+    "dontMiss": "Pontcysyllte Aqueduct.",
+    "football": "Soccer: Wrexham AFC at the Racecourse Ground (STōK Cae Ras).",
+    "gettingThere": "Wrexham General, with trains from Chester and Shrewsbury.",
+    "tip": "On matchdays The Turf, next to the ground, fills up hours before kick-off."
+  },
+  {
+    "city": "Bangor",
+    "region": "Gwynedd",
+    "country": "United Kingdom",
+    "shelf": "wales",
+    "group": "North Wales",
+    "colour": "blue",
+    "pint": "~£4.60",
+    "localBeer": "Cwrw Ogwen",
+    "bestFor": "University & coast",
+    "bars": [
+      {
+        "name": "The Skerries",
+        "note": "Bangor"
+      },
+      {
+        "name": "The Blue Sky Café",
+        "note": "a café-bar in the old town"
+      }
+    ],
+    "eat": "Menai Strait mussels.",
+    "dontMiss": "Penrhyn Castle.",
+    "football": "Soccer: Bangor 1876.",
+    "gettingThere": "On the North Wales Coast line, about 3 hours 15 from London Euston.",
+    "tip": "Walk out on Garth Pier, the second-longest pier in Wales."
+  },
+  {
+    "city": "Caernarfon",
+    "region": "Gwynedd",
+    "country": "United Kingdom",
+    "shelf": "wales",
+    "group": "North Wales",
+    "colour": "red",
+    "pint": "~£4.60",
+    "localBeer": "Cwrw Llŷn",
+    "bestFor": "Castle & Welsh history",
+    "bars": [
+      {
+        "name": "The Black Boy Inn",
+        "note": "Northgate Street, inside the walls since the 1500s"
+      },
+      {
+        "name": "The Anglesey Arms",
+        "note": "on the Promenade below the castle"
+      }
+    ],
+    "eat": "Welsh cakes warm from the griddle.",
+    "dontMiss": "Caernarfon Castle.",
+    "football": "Soccer: Caernarfon Town at The Oval.",
+    "gettingThere": "Bus from Bangor; the Welsh Highland Railway runs from Porthmadog.",
+    "tip": "Climb the Eagle Tower for views over the Menai Strait."
+  },
+  {
+    "city": "Conwy",
+    "region": "Conwy",
+    "country": "United Kingdom",
+    "shelf": "wales",
+    "group": "North Wales",
+    "colour": "purple",
+    "pint": "~£4.80",
+    "localBeer": "Conwy Brewery",
+    "bestFor": "Walled town & castle",
+    "bars": [
+      {
+        "name": "The Albion Ale House",
+        "note": "Upper Gate Street, run by four Welsh breweries"
+      },
+      {
+        "name": "The Liverpool Arms",
+        "note": "on the quay"
+      }
+    ],
+    "eat": "Conwy mussels.",
+    "dontMiss": "Conwy Castle.",
+    "football": "Soccer: Conwy Borough.",
+    "gettingThere": "On the North Wales Coast line; Llandudno Junction is across the river.",
+    "tip": "Squeeze into the smallest house in Great Britain, on the quay."
+  },
+  {
+    "city": "Llandudno",
+    "region": "Conwy",
+    "country": "United Kingdom",
+    "shelf": "wales",
+    "group": "North Wales",
+    "colour": "teal",
+    "pint": "~£4.80",
+    "localBeer": "Great Orme Brewery",
+    "bestFor": "Victorian seaside",
+    "bars": [
+      {
+        "name": "The Cottage Loaf",
+        "note": "Market Street, flagstone floors"
+      },
+      {
+        "name": "The Kings Head",
+        "note": "Old Road, by the tram station"
+      }
+    ],
+    "eat": "Fish and chips on the prom.",
+    "dontMiss": "Great Orme.",
+    "football": "Soccer: Llandudno FC at Maesdu Park.",
+    "gettingThere": "Branch line from Llandudno Junction, on the North Wales Coast line.",
+    "tip": "Take the tram up the Great Orme and the cable car down."
+  },
+  {
+    "city": "Porthmadog",
+    "region": "Gwynedd",
+    "country": "United Kingdom",
+    "shelf": "wales",
+    "group": "North Wales",
+    "colour": "orange",
+    "pint": "~£4.60",
+    "localBeer": "Purple Moose Brewery",
+    "bestFor": "Steam trains & coast",
+    "bars": [
+      {
+        "name": "The Australia",
+        "note": "High Street, Purple Moose's own pub"
+      },
+      {
+        "name": "The Ship Inn",
+        "note": "Lombard Street"
+      }
+    ],
+    "eat": "An ice cream on the harbour.",
+    "dontMiss": "Ffestiniog Railway.",
+    "football": "Soccer: Porthmadog FC at Y Traeth.",
+    "gettingThere": "Cambrian Coast line, or the Ffestiniog Railway from Blaenau Ffestiniog.",
+    "tip": "Ride the Ffestiniog Railway up to Blaenau and back."
+  },
+  {
+    "city": "Betws-y-Coed",
+    "region": "Conwy",
+    "country": "United Kingdom",
+    "shelf": "wales",
+    "group": "North Wales",
+    "colour": "blue",
+    "pint": "~£4.80",
+    "localBeer": "Purple Moose Brewery",
+    "bestFor": "Snowdonia adventures",
+    "bars": [
+      {
+        "name": "The Stables Bar",
+        "note": "Royal Oak Hotel, Holyhead Road"
+      },
+      {
+        "name": "The Pont-y-Pair Inn",
+        "note": "by the Pont-y-Pair bridge"
+      }
+    ],
+    "eat": "Welsh rarebit after a day on the hills.",
+    "dontMiss": "Swallow Falls.",
+    "gettingThere": "Conwy Valley line from Llandudno Junction.",
+    "tip": "Go to Swallow Falls early, before the coaches arrive."
+  },
+  {
+    "city": "Llangollen",
+    "region": "Denbighshire",
+    "country": "United Kingdom",
+    "shelf": "wales",
+    "group": "North Wales",
+    "colour": "green",
+    "pint": "~£4.60",
+    "localBeer": "Wrexham Lager",
+    "bestFor": "Canal & railway",
+    "bars": [
+      {
+        "name": "The Corn Mill",
+        "note": "Dee Lane, a converted mill over the river"
+      },
+      {
+        "name": "The Bridge End Hotel",
+        "note": "Mill Street, by the old bridge"
+      }
+    ],
+    "eat": "Welsh cakes.",
+    "dontMiss": "Pontcysyllte Aqueduct.",
+    "gettingThere": "No mainline station - train to Ruabon then a bus; steam trains run on the Llangollen Railway.",
+    "tip": "Walk across Pontcysyllte Aqueduct on the towpath - it's 38 metres high."
+  },
+  {
+    "city": "Rhyl",
+    "region": "Denbighshire",
+    "country": "United Kingdom",
+    "shelf": "wales",
+    "group": "North Wales",
+    "colour": "purple",
+    "pint": "~£4.50",
+    "localBeer": "Great Orme Brewery",
+    "bestFor": "Classic seaside",
+    "bars": [
+      {
+        "name": "The Cob & Pen",
+        "note": "High Street, a big beer garden and a snug"
+      }
+    ],
+    "eat": "Fish and chips on the front.",
+    "dontMiss": "Rhyl Pavilion.",
+    "football": "Soccer: CPD Y Rhyl 1879 at Belle Vue.",
+    "gettingThere": "On the North Wales Coast line.",
+    "tip": "Walk the promenade east to the Marine Lake."
   }
 ];
