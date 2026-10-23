@@ -692,7 +692,7 @@ const PARKS=[
  {n:'Magic Kingdom',q:'Magic Kingdom Park, Lake Buena Vista, FL',o:()=> '9am',c:i=>MKP.includes(i)?'6pm':'10pm',note:i=>MKP.includes(i)?'Mickey’s Very Merry Christmas Party tonight. The park closes to day guests at 6pm.':''},
  {n:'EPCOT',q:'EPCOT, Lake Buena Vista, FL',o:()=> '9am',c:()=> '9pm',note:()=> ''},
  {n:'Hollywood Studios',q:'Disney’s Hollywood Studios, Lake Buena Vista, FL',o:()=> '9am',c:i=>JW.includes(i)?'7pm':'9pm',note:i=>JW.includes(i)?'Jollywood Nights tonight. The park closes to day guests at 7pm.':''},
- {n:'Animal Kingdom',q:'Disney’s Animal Kingdom Theme Park, Lake Buena Vista, FL',o:()=> '8am',c:()=> '6pm',note:()=> ''}
+ {n:'Animal Kingdom',q:'Disney’s Animal Kingdom Theme Park, Lake Buena Vista, FL',o:i=>i===8?'9am':'8am',c:i=>i===0?'8pm':'6pm',note:i=>i===8?'Opens later today, at 9am.':''}
 ];
 const SD=Array.from({length:15},(_,i)=>'2026-11-'+String(7+i).padStart(2,'0'));
 let shopDay=Math.max(0,SD.indexOf(new Date().toISOString().slice(0,10)));
