@@ -11,6 +11,7 @@ PAGES={
  "site/stadium/index.html":("/stadium/","Elland Road - Rob Callery","Step inside Elland Road: football tales from a lifetime following Leeds United, and the match hub."),
  "site/match-hub/index.html":("/match-hub/","Match Hub - Rob Callery","The Match Hub pub: a Leeds United telly and a retro teletext telly showing a random live game somewhere in the world, with the local beer."),
  "site/match-hub/leeds/index.html":("/match-hub/leeds/","Leeds United Match Centre - Rob Callery","Rob Callery's Leeds United match centre: live score, goals and cards, line-ups, today's scores, the live table and match facts, from a seat at Elland Road."),
+ "site/match-hub/leeds/ceefax/index.html":("/match-hub/leeds/ceefax/","CALFAX 303 - Rob Callery","Leeds United on teletext: the Leeds game, the other scores and the league table, Ceefax style."),
  "site/match-hub/world/index.html":("/match-hub/world/","CALFAX 302 - Rob Callery","Teletext-style football: a random live game somewhere in the world, and the local beer to drink with it."),
 }
 person={"@context":"https://schema.org","@graph":[
