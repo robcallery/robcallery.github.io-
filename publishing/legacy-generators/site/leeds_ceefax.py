@@ -29,7 +29,7 @@ PAGE = r'''<!doctype html>
   .band i{display:block;flex:1;height:.55em;background:var(--cy)}
   .band i:nth-child(3n){height:.85em}.band i:nth-child(4n){opacity:.65}
   .strap{display:flex;justify-content:space-between;background:var(--bl);padding:0 .3em;margin:.2em 0 .1em}
-  .title{font-size:2.15em;line-height:1;color:var(--ye);letter-spacing:.04em;margin:.12em 0 .2em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .title{font-size:2.15em;line-height:1;color:var(--ye);letter-spacing:.04em;margin:.12em 0 .2em;white-space:nowrap;overflow:hidden;text-overflow:clip}
   .screen{min-height:17em}
   .page{display:none}.page.on{display:block}
   .dh{font-size:1.5em;line-height:1.05}
@@ -273,7 +273,7 @@ PAGE = r'''<!doctype html>
     renderLeeds();
     var otherHead = renderOther();
     var T = liveTable(), half = Math.ceil(T.rows.length / 2);
-    PAGES = [{ id: 'pg-leeds', title: S.main.state === 'in' ? 'LEEDS LIVE' : S.main.state === 'post' ? 'LEEDS RESULT' : 'LEEDS NEXT' },
+    PAGES = [{ id: 'pg-leeds', title: S.main.state === 'in' ? 'LIVE' : S.main.state === 'post' ? 'LEEDS RESULT' : 'NEXT LEEDS MATCH' },
              { id: 'pg-other', title: otherHead === 'TODAY' ? 'TODAY’S SCORES' : otherHead }];
     if (T.rows.length) {
       renderTable($('pg-top'), 0, half, T); renderTable($('pg-bot'), half, T.rows.length, T);
@@ -287,8 +287,15 @@ PAGE = r'''<!doctype html>
     var P = PAGES[i];
     $(P.id).classList.add('on');
     $('title').textContent = P.title;
+    fitTitle();
     $('sub').textContent = (i + 1) + '/' + PAGES.length;
   }
+  function fitTitle() {   // shrink the double-height title on narrow screens so it never gets cut off
+    var t = $('title'), f = 2.15;
+    t.style.fontSize = '';
+    while (t.scrollWidth > t.clientWidth && f > 1.2) { f -= 0.05; t.style.fontSize = f + 'em'; }
+  }
+  addEventListener('resize', fitTitle);
   function step() { if (PAGES.length) show((cur + 1) % PAGES.length); }
   function schedule() {
     clearTimeout(timer);
