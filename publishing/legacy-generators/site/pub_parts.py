@@ -1,4 +1,4 @@
-# Match Hub: the pub with two tellies, the Leeds TV art, and the CALFAX teletext page.
+# VAR & Grill: the sports bar with two tellies, the Leeds TV art, and the CALFAX teletext page.
 import json, random
 
 LEEDS_SCREEN = '''
@@ -7,7 +7,7 @@ LEEDS_SCREEN = '''
   <path d="M0 120 L300 70 L300 96 L0 146 Z" fill="#ffcd00" opacity=".95"/>
   <path d="M0 132 L300 82 L300 88 L0 138 Z" fill="#ffffff" opacity=".9"/>
   <text x="150" y="58" text-anchor="middle" font-family="Bebas Neue, Impact, sans-serif" font-size="34" fill="#ffffff" letter-spacing="3" textLength="230" lengthAdjust="spacingAndGlyphs">LEEDS UNITED</text>
-  <text x="150" y="80" text-anchor="middle" font-family="Bebas Neue, Impact, sans-serif" font-size="15" fill="#ffcd00" letter-spacing="4">MATCH HUB</text>
+  <text x="150" y="80" text-anchor="middle" font-family="Bebas Neue, Impact, sans-serif" font-size="15" fill="#ffcd00" letter-spacing="4">MATCH CENTRE</text>
   <rect x="96" y="146" width="108" height="16" rx="3" fill="#ffffff"/>
   <text x="150" y="158" text-anchor="middle" font-family="Bebas Neue, Impact, sans-serif" font-size="11" fill="#0b1f63" letter-spacing="1" textLength="98" lengthAdjust="spacingAndGlyphs">FIXTURES · SCORES · TABLE</text>
 '''
@@ -79,8 +79,8 @@ def pub_scene():
             x += w + 6
     a('<rect x="560" y="140" width="80" height="60" rx="4" fill="#0a1838"/><text x="600" y="168" text-anchor="middle" font-family="Bebas Neue, Impact, sans-serif" font-size="16" fill="#ffcd00" letter-spacing="2">THE</text><text x="600" y="188" text-anchor="middle" font-family="Bebas Neue, Impact, sans-serif" font-size="16" fill="#ffcd00" letter-spacing="1">LOCAL</text>')
     # the tellies (links)
-    a('<a href="/match-hub/leeds/" class="hot tvlink" id="tvLeeds" aria-label="Leeds United match hub">' + modern_tv(95, 150, 340) + '</a>')
-    a('<a href="/match-hub/world/" class="hot tvlink" id="tvWorld" aria-label="Around the world: a random live game and the local beer">' + retro_tv(790, 150, 320) + '</a>')
+    a('<a href="/var-and-grill/leeds/" class="hot tvlink" id="tvLeeds" aria-label="Leeds United match centre">' + modern_tv(95, 150, 340) + '</a>')
+    a('<a href="/var-and-grill/world/" class="hot tvlink" id="tvWorld" aria-label="Around the world: a random live game and the local beer">' + retro_tv(790, 150, 320) + '</a>')
     # bar counter
     a('<rect y="470" width="1200" height="22" fill="#8a5a32"/><rect y="470" width="1200" height="5" fill="#b07a4a"/>')
     a('<rect y="492" width="1200" height="148" fill="#5a361b"/>' + ''.join(f'<rect x="{20+i*120}" y="510" width="100" height="110" rx="4" fill="none" stroke="#3b2312" stroke-width="4"/>' for i in range(10)))
@@ -96,7 +96,7 @@ def pub_scene():
     return '\n'.join(g)
 
 def leeds_tv_art():
-    return ('<svg viewBox="-20 -80 340 270" role="img" aria-label="Leeds United match hub telly"><defs>'
+    return ('<svg viewBox="-20 -80 340 270" role="img" aria-label="Leeds United match centre telly"><defs>'
             '<linearGradient id="screenSheen" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".16"/><stop offset=".45" stop-color="#fff" stop-opacity="0"/></linearGradient>'
             '<radialGradient id="lufcGlow" cx=".5" cy=".3" r=".8"><stop offset="0" stop-color="#2a56c8"/><stop offset="1" stop-color="#0b1f63" stop-opacity="0"/></radialGradient></defs>'
             + modern_tv(0, 0, 300) + '</svg>')
@@ -260,7 +260,7 @@ def teletext_page(guide_cities):
   <div class="fastext">
     <a href="#" class="k-r" id="another">NEXT GAME</a>
     <a href="/travel-guides/" class="k-g" id="guide">GUIDES</a>
-    <a href="/match-hub/" class="k-y">THE BAR</a>
+    <a href="/var-and-grill/" class="k-y">THE BAR</a>
     <a href="/stadium/" class="k-c">STADIUM</a>
   </div>
   <div class="row muted" style="margin-top:.6em;font-size:.75em">Scores from ESPN's public scoreboard feed. Not affiliated with any league or club. Drink responsibly.</div>
@@ -390,14 +390,14 @@ def _sfx(svg, sfx):
     return svg
 
 def leeds_tv_svg():
-    return ('<svg viewBox="-20 -72 340 258" role="img" aria-label="Leeds United match hub telly">' + _defs('L') + _sfx(modern_tv(0, 0, 300), 'L') + '</svg>')
+    return ('<svg viewBox="-20 -72 340 258" role="img" aria-label="Leeds United match centre telly">' + _defs('L') + _sfx(modern_tv(0, 0, 300), 'L') + '</svg>')
 
 def world_tv_svg():
     return ('<svg viewBox="-8 -72 316 312" role="img" aria-label="Retro telly showing teletext football">' + _defs('W') + _sfx(retro_tv(0, 0, 300), 'W') + '</svg>')
 
 def hub_tv_svg():
     # the big middle telly: a sports-news style title screen
-    return '''<svg viewBox="-14 -46 668 420" role="img" aria-label="The Match Hub">
+    return '''<svg viewBox="-14 -46 668 420" role="img" aria-label="The VAR &amp; Grill">
   <defs>
     <linearGradient id="hubBg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0d1f5c"/><stop offset=".55" stop-color="#081236"/><stop offset="1" stop-color="#050816"/></linearGradient>
     <linearGradient id="hubRed" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#e3001b"/><stop offset="1" stop-color="#a30016"/></linearGradient>
@@ -414,27 +414,27 @@ def hub_tv_svg():
     <rect x="28" y="26" width="64" height="26" fill="url(#hubRed)"/><text x="60" y="45" text-anchor="middle" font-family="Bebas Neue, Impact, sans-serif" font-size="20" fill="#fff" letter-spacing="2">LIVE</text>
     <rect x="92" y="26" width="76" height="26" fill="#ffffff"/><text x="130" y="45" text-anchor="middle" font-family="Bebas Neue, Impact, sans-serif" font-size="20" fill="#0d1f5c" class="hubclock">22:00</text>
     <g transform="skewX(-8)">
-      <text x="70" y="150" font-family="Bebas Neue, Impact, sans-serif" font-size="44" fill="#ffcd00" letter-spacing="4">THE</text>
-      <text x="70" y="226" font-family="Bebas Neue, Impact, sans-serif" font-size="96" fill="#ffffff" letter-spacing="2" textLength="380" lengthAdjust="spacingAndGlyphs">MATCH HUB</text>
+      <text x="70" y="150" font-family="Bebas Neue, Impact, sans-serif" font-size="44" fill="#ffcd00" letter-spacing="4">THE SPORTS BAR</text>
+      <text x="70" y="226" font-family="Bebas Neue, Impact, sans-serif" font-size="96" fill="#ffffff" letter-spacing="2" textLength="380" lengthAdjust="spacingAndGlyphs">VAR &amp; GRILL</text>
       <rect x="72" y="240" width="370" height="10" fill="url(#hubRed)"/>
     </g>
-    <text x="48" y="282" font-family="Inter, system-ui, sans-serif" font-weight="600" font-size="17" fill="#c8d3f5">Leeds on the left. The rest of the world on the right.</text>
+    <text x="48" y="282" font-family="Inter, system-ui, sans-serif" font-weight="600" font-size="17" fill="#c8d3f5">Leeds on the left. The world on the right. F1 by the bar.</text>
     <rect x="0" y="316" width="640" height="44" fill="#ffffff"/>
     <rect x="0" y="316" width="118" height="44" fill="url(#hubRed)"/><text x="59" y="345" text-anchor="middle" font-family="Bebas Neue, Impact, sans-serif" font-size="22" fill="#fff" letter-spacing="2">LATEST</text>
-    <svg x="118" y="316" width="522" height="44" viewBox="0 0 522 44"><g class="ticker"><text x="0" y="29" font-family="Bebas Neue, Impact, sans-serif" font-size="22" fill="#0d1f5c" letter-spacing="1">CALFAX 302 NOW SHOWING ON THE OLD SET  ·  LEEDS MATCH HUB IS LIVE  ·  MARCHING ON TOGETHER  ·  ONE BEER AT A TIME  ·  FOLLOW @CALZ88  ·  CALFAX 302 NOW SHOWING ON THE OLD SET  ·  LEEDS MATCH HUB IS LIVE  ·  MARCHING ON TOGETHER  ·  ONE BEER AT A TIME  ·  FOLLOW @CALZ88  ·</text></g></svg>
+    <svg x="118" y="316" width="522" height="44" viewBox="0 0 522 44"><g class="ticker"><text x="0" y="29" font-family="Bebas Neue, Impact, sans-serif" font-size="22" fill="#0d1f5c" letter-spacing="1">NOW OPEN: THE VAR &amp; GRILL  ·  CALFAX 302 ON THE OLD SET  ·  F1 PIT WALL BY THE BAR  ·  MARCHING ON TOGETHER  ·  ONE BEER AT A TIME  ·  FOLLOW @CALZ88  ·  NOW OPEN: THE VAR &amp; GRILL  ·  CALFAX 302 ON THE OLD SET  ·  F1 PIT WALL BY THE BAR  ·  MARCHING ON TOGETHER  ·  ONE BEER AT A TIME  ·  FOLLOW @CALZ88  ·</text></g></svg>
     <rect width="640" height="360" fill="url(#hubSheen)"/>
   </g>
   <circle cx="630" cy="368" r="2.5" fill="#3dff7a"/>
 </svg>'''
 
 def poster_leeds():
-    return '''<svg viewBox="0 0 150 205" role="img" aria-label="Poster: Leeds United Match Hub">
+    return '''<svg viewBox="0 0 150 205" role="img" aria-label="Poster: Leeds United Match Centre">
   <rect x="2" y="4" width="146" height="199" rx="2" fill="#f7f2e4"/>
   <rect x="10" y="12" width="130" height="140" fill="#1e3f9a"/>
   <path d="M10 112 L140 74 L140 92 L10 130 Z" fill="#ffcd00"/><path d="M10 121 L140 83 L140 87 L10 125 Z" fill="#ffffff"/>
   <circle cx="75" cy="56" r="22" fill="#ffffff"/><path d="M68 49 l7 -5 l7 5 l-3 8 h-8 z" fill="#1e3f9a"/>''' + ''.join(f'<path d="M75 56 L{75+22*__import__("math").cos(a):.1f} {56+22*__import__("math").sin(a):.1f}" stroke="#1e3f9a" stroke-width="1.2"/>' for a in (0.6, 2.2, 3.8, 5.4)) + '''
   <text x="75" y="172" text-anchor="middle" font-family="Bebas Neue, Impact, sans-serif" font-size="22" fill="#0a1838" letter-spacing="1" textLength="118" lengthAdjust="spacingAndGlyphs">LEEDS UNITED</text>
-  <text x="75" y="187" text-anchor="middle" font-family="Bebas Neue, Impact, sans-serif" font-size="11" fill="#1e3f9a" letter-spacing="3">MATCH HUB</text>
+  <text x="75" y="187" text-anchor="middle" font-family="Bebas Neue, Impact, sans-serif" font-size="11" fill="#1e3f9a" letter-spacing="3">MATCH CENTRE</text>
   <g transform="rotate(-14 104 140)"><rect x="70" y="128" width="72" height="22" rx="3" fill="none" stroke="#1f8a43" stroke-width="2.4"/><text x="106" y="144" text-anchor="middle" font-family="Bebas Neue, Impact, sans-serif" font-size="14" fill="#1f8a43" letter-spacing="2" textLength="62" lengthAdjust="spacingAndGlyphs">ON NOW</text></g>
   <circle cx="75" cy="10" r="3.5" fill="#d22630"/><circle cx="74" cy="9" r="1.2" fill="#fff" opacity=".7"/>
 </svg>'''

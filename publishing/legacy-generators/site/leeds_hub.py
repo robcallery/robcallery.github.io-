@@ -137,8 +137,8 @@ __SCRIPT__
 (function () {
   var meta = document.getElementById('meta'), wrap = document.createElement('div'); wrap.className = 'right-bits';
   meta.parentNode.insertBefore(wrap, meta); wrap.appendChild(meta);
-  var t = document.createElement('a'); t.className = 'back'; t.href = '/match-hub/leeds/ceefax/'; t.textContent = 'Ceefax view'; wrap.appendChild(t);
-  var a = document.createElement('a'); a.className = 'back'; a.href = '/match-hub/'; a.textContent = '\\u2190 Back to the pub'; wrap.appendChild(a);
+  var t = document.createElement('a'); t.className = 'back'; t.href = '/var-and-grill/leeds/ceefax/'; t.textContent = 'Ceefax view'; wrap.appendChild(t);
+  var a = document.createElement('a'); a.className = 'back'; a.href = '/var-and-grill/'; a.textContent = '\\u2190 Back to the pub'; wrap.appendChild(a);
 })();
 /* ---------- pick Leeds' live, latest or next game automatically ---------- */
 (function () {
@@ -202,6 +202,6 @@ __SCRIPT__
 '''
 out = (PAGE.replace('__STYLE__', STYLE).replace('__THEME__', THEME).replace('__SVG__', svg).replace('__LOGO__', LOGO)
        .replace('__BODY__', BODY).replace('__SCRIPT__', SCRIPT))
-os.makedirs('/home/claude/site/match-hub/leeds', exist_ok=True)
-open('/home/claude/site/match-hub/leeds/index.html', 'w').write(out)
+os.makedirs('/home/claude/site/var-and-grill/leeds', exist_ok=True)
+open('/home/claude/site/var-and-grill/leeds/index.html', 'w').write(out)
 print('match centre', len(out) // 1024, 'KB')

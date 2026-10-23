@@ -1,7 +1,7 @@
 # CALFAX 303: the Leeds match centre as a Ceefax page.
 # Rotates: Leeds game -> other games -> table top half -> table bottom half.
 import os
-OUT = '/home/claude/site/match-hub/leeds/ceefax/index.html'
+OUT = '/home/claude/site/var-and-grill/leeds/ceefax/index.html'
 
 PAGE = r'''<!doctype html>
 <html lang="en-GB">
@@ -76,10 +76,10 @@ PAGE = r'''<!doctype html>
     <section class="page" id="pg-bot"></section>
   </div>
   <div class="fastext">
-    <a href="/match-hub/leeds/" class="k-r">MATCH CTR</a>
+    <a href="/var-and-grill/leeds/" class="k-r">MATCH CTR</a>
     <button type="button" class="k-g" id="hold" aria-pressed="false">HOLD</button>
     <button type="button" class="k-y" id="next">NEXT</button>
-    <a href="/match-hub/" class="k-c">THE BAR</a>
+    <a href="/var-and-grill/" class="k-c">THE BAR</a>
   </div>
   <div class="row muted small" style="margin-top:.6em">Scores from ESPN's public feed. Not affiliated with Leeds United or any league. Drink responsibly.</div>
 </main>

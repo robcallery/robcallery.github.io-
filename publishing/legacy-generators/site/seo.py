@@ -8,12 +8,12 @@ PAGES={
  "site/travel-guides/index.html":("/travel-guides/","Travel Guides - Rob Callery","Rob Callery's pint-first travel guides, shelved by region: the best pubs, food and football in every town and city."),
  "site/travel-guides/guide/index.html":("/travel-guides/guide/","Travel Guide - Rob Callery","A Rob Callery pint-first travel guide: the best pubs, food and football in every town and city."),
  "site/football-tales/index.html":("/football-tales/","Football Tales - Rob Callery","Football: Tales of a Leeds Fan by Rob Callery - away days, home days and the pubs either side."),
- "site/stadium/index.html":("/stadium/","Elland Road - Rob Callery","Step inside Elland Road: football tales from a lifetime following Leeds United, and the match hub."),
- "site/match-hub/index.html":("/match-hub/","Match Hub - Rob Callery","The Match Hub pub: a Leeds United telly and a retro teletext telly showing a random live game somewhere in the world, with the local beer."),
- "site/match-hub/leeds/index.html":("/match-hub/leeds/","Leeds United Match Centre - Rob Callery","Rob Callery's Leeds United match centre: live score, goals and cards, line-ups, today's scores, the live table and match facts, from a seat at Elland Road."),
- "site/match-hub/leeds/ceefax/index.html":("/match-hub/leeds/ceefax/","CALFAX 303 - Rob Callery","Leeds United on teletext: the Leeds game, the other scores and the league table, Ceefax style."),
- "site/match-hub/f1/index.html":("/match-hub/f1/","F1 Pit Wall - Rob Callery","Rob Callery's F1 pit wall: live timing tower on race weekends, the next Grand Prix countdown, results, both championships and a local beer for every race."),
- "site/match-hub/world/index.html":("/match-hub/world/","CALFAX 302 - Rob Callery","Teletext-style football: a random live game somewhere in the world, and the local beer to drink with it."),
+ "site/stadium/index.html":("/stadium/","Elland Road - Rob Callery","Step inside Elland Road: football tales from a lifetime following Leeds United, and the VAR &amp; Grill."),
+ "site/var-and-grill/index.html":("/var-and-grill/","VAR &amp; Grill - Rob Callery","The VAR &amp; Grill: Rob Callery's sports bar, with the Leeds United match centre, CALFAX teletext football from around the world and the F1 pit wall."),
+ "site/var-and-grill/leeds/index.html":("/var-and-grill/leeds/","Leeds United Match Centre - Rob Callery","Rob Callery's Leeds United match centre: live score, goals and cards, line-ups, today's scores, the live table and match facts, from a seat at Elland Road."),
+ "site/var-and-grill/leeds/ceefax/index.html":("/var-and-grill/leeds/ceefax/","CALFAX 303 - Rob Callery","Leeds United on teletext: the Leeds game, the other scores and the league table, Ceefax style."),
+ "site/var-and-grill/f1/index.html":("/var-and-grill/f1/","F1 Pit Wall - Rob Callery","Rob Callery's F1 pit wall: live timing tower on race weekends, the next Grand Prix countdown, results, both championships and a local beer for every race."),
+ "site/var-and-grill/world/index.html":("/var-and-grill/world/","CALFAX 302 - Rob Callery","Teletext-style football: a random live game somewhere in the world, and the local beer to drink with it."),
 }
 person={"@context":"https://schema.org","@graph":[
  {"@type":"Person","@id":SITE+"/#rob","name":"Rob Callery","alternateName":"calz88","url":SITE+"/","image":SITE+"/og-image.png","description":"Travelling the world one beer at a time. Leeds United fan.","sameAs":SOCIAL},

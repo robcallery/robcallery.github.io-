@@ -126,7 +126,7 @@ from stadium_parts import poster, scoreboard_art, stadium_scene, scoreboard_link
 POSTER=poster()
 ITEMS=[("beer-passport","Beer Passport","Every beer, every bar, stamped and rated.",PASSPORT,-3),
        ("travel-guides","Travel Guides","A whole shelf of them, one beer at a time.",GUIDE,2),
-       ("stadium","Elland Road","Through the turnstiles for football tales and the match hub.",POSTER,-2)]
+       ("stadium","Elland Road","Through the turnstiles for football tales and the VAR &amp; Grill.",POSTER,-2)]
 
 HEAD='''<!doctype html>
 <html lang="en">
@@ -340,25 +340,25 @@ from pub_parts import pub_scene, leeds_tv_art, teletext_page, PUB_CSS, hub_tv_sv
 import json as _json, subprocess as _sp
 _GC=_json.loads(_sp.run(['node','-e',"global.window={};require('/home/claude/site/travel-guides/guides.js');process.stdout.write(JSON.stringify(window.GUIDES.map(g=>g.city)))"],capture_output=True,text=True).stdout)
 import subprocess as _sp2; _sp2.run(["python3","/tmp/claude-0/-home-claude/9cac7207-2d1b-5bf4-969e-62974606aff5/scratchpad/leeds_hub.py"],check=True); _sp2.run(["python3","/tmp/claude-0/-home-claude/9cac7207-2d1b-5bf4-969e-62974606aff5/scratchpad/leeds_ceefax.py"],check=True); _sp2.run(["python3","/tmp/claude-0/-home-claude/9cac7207-2d1b-5bf4-969e-62974606aff5/scratchpad/f1_hub.py"],check=True)
-os.makedirs('/home/claude/site/match-hub/world',exist_ok=True)
-open('/home/claude/site/match-hub/world/index.html','w').write(teletext_page(_GC))
-mh=HEAD.format(title="Match Hub - Rob Callery",desc="The Match Hub pub: a Leeds United telly and a retro teletext telly showing a random live game somewhere in the world, with the local beer.",globe=globe_d,backhref="/stadium/",backtxt="← Back to the stadium")
+os.makedirs('/home/claude/site/var-and-grill/world',exist_ok=True)
+open('/home/claude/site/var-and-grill/world/index.html','w').write(teletext_page(_GC))
+mh=HEAD.format(title="VAR &amp; Grill - Rob Callery",desc="The VAR &amp; Grill: Rob Callery's sports bar, with the Leeds United match centre, CALFAX teletext football from around the world and the F1 pit wall.",globe=globe_d,backhref="/stadium/",backtxt="← Back to the stadium")
 mh=mh.replace('</style>\n</head>\n<body>', PUB_CSS+'</style>\n</head>\n<body class="pubpage">\n<div class="lamps" aria-hidden="true"><i></i><i></i><i></i></div>',1)
-_pL='<a class="poster tvl" style="--r:-4deg" href="/match-hub/leeds/"><span class="sr">Leeds United match hub</span>'+poster_leeds()+'</a>'
-_pF='<a class="poster tvl" style="--r:-3deg" href="/match-hub/f1/"><span class="sr">F1 Pit Wall: live timing, results and the race weekend beer</span>'+poster_f1()+'</a>'
-_pW='<a class="poster tvl" style="--r:3deg" href="/match-hub/world/"><span class="sr">Around the World: a random live game and the local beer</span>'+poster_world()+'</a>'
+_pL='<a class="poster tvl" style="--r:-4deg" href="/var-and-grill/leeds/"><span class="sr">Leeds United match centre</span>'+poster_leeds()+'</a>'
+_pF='<a class="poster tvl" style="--r:-3deg" href="/var-and-grill/f1/"><span class="sr">F1 Pit Wall: live timing, results and the race weekend beer</span>'+poster_f1()+'</a>'
+_pW='<a class="poster tvl" style="--r:3deg" href="/var-and-grill/world/"><span class="sr">Around the World: a random live game and the local beer</span>'+poster_world()+'</a>'
 mh+='''<main class="wall">
-  <h1 class="sr">The Match Hub</h1>
+  <h1 class="sr">The VAR &amp; Grill</h1>
   <div class="tier top">
     '''+_pL+'''
     <div class="hubtv">'''+hub_tv_svg()+'''</div>
     '''+_pW+'''
   </div>
   <div class="tier low">
-    <a class="tvl tv-leeds" id="tvLeeds" href="/match-hub/leeds/"><span class="sr">Leeds United telly: the Leeds match hub</span>'''+leeds_tv_svg()+'''</a>
+    <a class="tvl tv-leeds" id="tvLeeds" href="/var-and-grill/leeds/"><span class="sr">Leeds United telly: the Leeds match centre</span>'''+leeds_tv_svg()+'''</a>
     <div class="shelf">'''+shelf_svg()+'''</div>
     '''+_pF+'''
-    <a class="tvl tv-world" id="tvWorld" href="/match-hub/world/"><span class="sr">Retro telly: CALFAX 302, a random live game around the world</span>'''+world_tv_svg()+'''</a>
+    <a class="tvl tv-world" id="tvWorld" href="/var-and-grill/world/"><span class="sr">Retro telly: CALFAX 302, a random live game around the world</span>'''+world_tv_svg()+'''</a>
   </div>
   <div class="tier posters">'''+_pL.replace('class="poster tvl"','class="poster tvl" aria-hidden="true" tabindex="-1"')+_pW.replace('class="poster tvl"','class="poster tvl" aria-hidden="true" tabindex="-1"')+_pF.replace('class="poster tvl"','class="poster tvl" aria-hidden="true" tabindex="-1"')+'''</div>
 </main>
@@ -367,15 +367,15 @@ mh+='''<main class="wall">
 (function(){var c=[].slice.call(document.querySelectorAll('.ttclock,.hubclock'));function t(){try{var s=new Intl.DateTimeFormat('en-GB',{hour:'2-digit',minute:'2-digit',timeZone:'Europe/London'}).format(new Date());c.forEach(function(e){e.textContent=s})}catch(e){}}t();setInterval(t,15000)})();
 </script>
 '''+FOOT
-open('/home/claude/site/match-hub/index.html','w').write(mh)
+open('/home/claude/site/var-and-grill/index.html','w').write(mh)
 
 # the stadium
 os.makedirs('/home/claude/site/stadium',exist_ok=True)
-st=HEAD.format(title="Elland Road - Rob Callery",desc="Step inside Elland Road: football tales from a lifetime following Leeds United, and the match hub.",globe=globe_d,backhref="/explore/",backtxt="← Back to the bar")
+st=HEAD.format(title="Elland Road - Rob Callery",desc="Step inside Elland Road: football tales from a lifetime following Leeds United, and the VAR &amp; Grill.",globe=globe_d,backhref="/explore/",backtxt="← Back to the bar")
 st+='''<main>
   <section class="intro">
     <h1>Welcome to <em>Elland Road.</em></h1>
-    <p>Pick up the cards for the stories, or look up at the scoreboard for the match hub.</p>
+    <p>Pick up the cards for the stories, or look up at the scoreboard for the VAR &amp; Grill.</p>
   </section>
   <section class="stadium" aria-label="Inside the stadium">
     <svg viewBox="0 0 1200 700" role="img" aria-label="Inside Elland Road under the floodlights">
@@ -384,12 +384,12 @@ st+='''<main>
   </section>
   <nav class="spots" aria-label="In the stadium">
     <a class="spot" href="/football-tales/"><h2>Football Tales <span class="tag">Coming soon</span></h2><p>Away days, home days and the pubs either side, one card at a time.</p></a>
-    <a class="spot" href="/match-hub/"><h2>Match Hub</h2><p>Live scores, fixtures and the table, up on the big screen.</p></a>
+    <a class="spot" href="/var-and-grill/"><h2>VAR &amp; Grill</h2><p>The sports bar: Leeds, world football and F1 on the tellies.</p></a>
   </nav>
 </main>
 <script>
 (function(){
-  var c=document.getElementById('sbClock'),t=document.getElementById('sbTicker'),msgs=['KICK-OFF SOON','MARCHING ON TOGETHER','MATCH HUB IS LIVE'],i=0;
+  var c=document.getElementById('sbClock'),t=document.getElementById('sbTicker'),msgs=['KICK-OFF SOON','MARCHING ON TOGETHER','VAR & GRILL IS OPEN'],i=0;
   function tick(){try{c.textContent=new Intl.DateTimeFormat('en-GB',{hour:'2-digit',minute:'2-digit',timeZone:'Europe/London'}).format(new Date())}catch(e){}}
   tick();setInterval(tick,15000);
   if(!matchMedia('(prefers-reduced-motion: reduce)').matches)setInterval(function(){i=(i+1)%msgs.length;t.textContent=msgs[i]},3000);

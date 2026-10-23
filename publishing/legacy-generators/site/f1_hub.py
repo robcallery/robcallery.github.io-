@@ -1,9 +1,9 @@
-# F1 Pit Wall: /match-hub/f1/
+# F1 Pit Wall: /var-and-grill/f1/
 import os, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from f1_scene import scene
 
-OUT = '/home/claude/site/match-hub/f1/index.html'
+OUT = '/home/claude/site/var-and-grill/f1/index.html'
 
 CSS = r'''
   :root { --bg:#070b16; --panel:rgba(10,14,26,.86); --panel2:rgba(255,255,255,.04); --line:rgba(255,255,255,.85); --text:#fff; --muted:#a3acbf; --red:#e10600; --live:#ff2a2a; --ok:#27f4d2; }
@@ -123,7 +123,7 @@ CSS = r'''
 BODY = '''
 <div class="top">
   <div class="brand"><div class="tag"><span>Pit Wall</span></div><div class="comp" id="season">Formula 1</div></div>
-  <div class="right-bits"><div class="meta" id="meta">Loading the calendar…</div><a class="back" href="/match-hub/">&larr; Back to the pub</a></div>
+  <div class="right-bits"><div class="meta" id="meta">Loading the calendar…</div><a class="back" href="/var-and-grill/">&larr; Back to the pub</a></div>
 </div>
 <div class="cols">
   <section class="card tower" aria-label="Timing tower">

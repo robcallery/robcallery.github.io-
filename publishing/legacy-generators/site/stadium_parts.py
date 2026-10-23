@@ -51,12 +51,12 @@ def poster():
   <g clip-path="url(#posterSheenClip)"><rect class="sheen" x="-120" y="8" width="60" height="286" fill="#fff" opacity=".18" transform="skewX(-20)"/></g>
 </svg>'''
 
-# ---------------------------------------------------------------- scoreboard art (match hub page)
+# ---------------------------------------------------------------- scoreboard art (VAR & Grill page)
 def scoreboard_art():
     return '''<svg viewBox="0 0 300 220" role="img" aria-label="Elland Road scoreboard">
   <rect x="146" y="150" width="8" height="70" fill="#3a3f4b"/><rect x="100" y="150" width="8" height="70" fill="#3a3f4b"/><rect x="192" y="150" width="8" height="70" fill="#3a3f4b"/>
   <rect x="10" y="10" width="280" height="150" rx="8" fill="#14161c"/><rect x="18" y="18" width="264" height="134" rx="4" fill="#06070a"/>
-  <rect x="18" y="18" width="264" height="24" fill="#1e3f9a"/><text x="150" y="36" text-anchor="middle" font-family="Bebas Neue, Impact, sans-serif" font-size="17" fill="#ffcd00" letter-spacing="3">MATCH HUB</text>
+  <rect x="18" y="18" width="264" height="24" fill="#1e3f9a"/><text x="150" y="36" text-anchor="middle" font-family="Bebas Neue, Impact, sans-serif" font-size="17" fill="#ffcd00" letter-spacing="3">VAR &amp; GRILL</text>
   <g font-family="'Courier New', monospace" font-weight="700" fill="#ffcd00" style="filter:drop-shadow(0 0 3px #ffb000)">
     <text x="78" y="78" text-anchor="middle" font-size="16">LEEDS</text><text x="222" y="78" text-anchor="middle" font-size="16">AWAY</text>
     <text x="150" y="118" text-anchor="middle" font-size="40" class="clock">0 - 0</text>
@@ -158,10 +158,10 @@ def stadium_scene():
     return '\n'.join(g)
 
 def scoreboard_link():
-    # sits on the far-stand roof, links to the match hub
-    return '''<a href="/match-hub/" class="hot sb" aria-label="Scoreboard: open the Match Hub">
+    # sits on the far-stand roof, links to the VAR & Grill
+    return '''<a href="/var-and-grill/" class="hot sb" aria-label="Scoreboard: open the VAR &amp; Grill">
   <rect x="470" y="10" width="260" height="122" rx="6" fill="#14161c"/><rect x="478" y="18" width="244" height="106" rx="3" fill="#06070a"/>
-  <rect x="478" y="18" width="244" height="22" fill="#1e3f9a"/><text x="600" y="35" text-anchor="middle" font-family="Bebas Neue, Impact, sans-serif" font-size="17" fill="#ffcd00" letter-spacing="3">MATCH HUB</text>
+  <rect x="478" y="18" width="244" height="22" fill="#1e3f9a"/><text x="600" y="35" text-anchor="middle" font-family="Bebas Neue, Impact, sans-serif" font-size="17" fill="#ffcd00" letter-spacing="3">VAR &amp; GRILL</text>
   <g font-family="'Courier New', monospace" font-weight="700" fill="#ffcd00" style="filter:drop-shadow(0 0 3px #ffb000)">
     <text x="530" y="66" text-anchor="middle" font-size="15">LEEDS</text><text x="670" y="66" text-anchor="middle" font-size="15">AWAY</text>
     <text x="600" y="98" text-anchor="middle" font-size="30">0 - 0</text>
