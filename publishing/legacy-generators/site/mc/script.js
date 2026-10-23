@@ -6,7 +6,7 @@ function startCentre(CONFIG) {
   const API = 'https://site.api.espn.com/apis';
   const kickoff = new Date(CONFIG.kickoff);
   const fotmob = id => `https://images.fotmob.com/image_resources/logo/teamlogo/${id}.png`;
-  const logoOf = t => (String(t?.id) === '357' ? 'https://images.fotmob.com/image_resources/logo/teamlogo/8463.png' : '') || t?.logo || t?.logos?.[0]?.href || (t?.id ? `https://a.espncdn.com/i/teamlogos/soccer/500/${t.id}.png` : window.teamMarker(t));
+  const logoOf = t => window.fotmobLogo(t) || t?.logo || t?.logos?.[0]?.href || (t?.id ? `https://a.espncdn.com/i/teamlogos/soccer/500/${t.id}.png` : window.teamMarker(t));
   const matches = (team, wanted) => {
     const w = norm(wanted);
     return [team.displayName, team.shortDisplayName, team.name, team.location]
