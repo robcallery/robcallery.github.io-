@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- seo -->
-<meta name="description" content="Step inside Elland Road: football tales from a lifetime following Leeds United, and the match hub.">
+<meta name="description" content="Step inside Elland Road: football tales from a lifetime following Leeds United, and the VAR &amp; Grill.">
 <link rel="canonical" href="https://callery.co.uk/stadium/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Rob Callery">
 <meta property="og:title" content="Elland Road - Rob Callery">
-<meta property="og:description" content="Step inside Elland Road: football tales from a lifetime following Leeds United, and the match hub.">
+<meta property="og:description" content="Step inside Elland Road: football tales from a lifetime following Leeds United, and the VAR &amp; Grill.">
 <meta property="og:url" content="https://callery.co.uk/stadium/">
 <meta property="og:image" content="https://callery.co.uk/og-image.png">
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
@@ -146,7 +146,7 @@
 <main>
   <section class="intro">
     <h1>Welcome to <em>Elland Road.</em></h1>
-    <p>Pick up the cards for the stories, or look up at the scoreboard for the match hub.</p>
+    <p>Pick up the cards for the stories, or look up at the scoreboard for the VAR &amp; Grill.</p>
   </section>
   <section class="stadium" aria-label="Inside the stadium">
     <svg viewBox="0 0 1200 700" role="img" aria-label="Inside Elland Road under the floodlights">
@@ -209,9 +209,9 @@
 <a class="board" id="board0" href="/" aria-label="Advertising board"><rect class="bbg" x="4" y="603" width="392" height="38" rx="2" fill="#0a1838"/><g class="bmsg"><text x="200" y="630" text-anchor="middle" font-family="Bebas Neue, Impact, sans-serif" font-size="25" fill="#ffcd00" textLength="330" lengthAdjust="spacingAndGlyphs">MARCHING ON TOGETHER</text></g></a>
 <a class="board" id="board1" href="/" aria-label="Advertising board"><rect class="bbg" x="404" y="603" width="392" height="38" rx="2" fill="#0a1838"/><g class="bmsg"><text x="600" y="630" text-anchor="middle" font-family="Bebas Neue, Impact, sans-serif" font-size="25" fill="#ffcd00" textLength="330" lengthAdjust="spacingAndGlyphs">MARCHING ON TOGETHER</text></g></a>
 <a class="board" id="board2" href="/" aria-label="Advertising board"><rect class="bbg" x="804" y="603" width="392" height="38" rx="2" fill="#0a1838"/><g class="bmsg"><text x="1000" y="630" text-anchor="middle" font-family="Bebas Neue, Impact, sans-serif" font-size="25" fill="#ffcd00" textLength="330" lengthAdjust="spacingAndGlyphs">MARCHING ON TOGETHER</text></g></a>
-<rect x="-40" y="644" width="1280" height="56" fill="#30364a"/><a href="/match-hub/" class="hot sb" aria-label="Scoreboard: open the Match Hub">
+<rect x="-40" y="644" width="1280" height="56" fill="#30364a"/><a href="/var-and-grill/" class="hot sb" aria-label="Scoreboard: open the VAR &amp; Grill">
   <rect x="470" y="10" width="260" height="122" rx="6" fill="#14161c"/><rect x="478" y="18" width="244" height="106" rx="3" fill="#06070a"/>
-  <rect x="478" y="18" width="244" height="22" fill="#1e3f9a"/><text x="600" y="35" text-anchor="middle" font-family="Bebas Neue, Impact, sans-serif" font-size="17" fill="#ffcd00" letter-spacing="3">MATCH HUB</text>
+  <rect x="478" y="18" width="244" height="22" fill="#1e3f9a"/><text x="600" y="35" text-anchor="middle" font-family="Bebas Neue, Impact, sans-serif" font-size="17" fill="#ffcd00" letter-spacing="3">VAR &amp; GRILL</text>
   <g font-family="'Courier New', monospace" font-weight="700" fill="#ffcd00" style="filter:drop-shadow(0 0 3px #ffb000)">
     <text x="530" y="66" text-anchor="middle" font-size="15">LEEDS</text><text x="670" y="66" text-anchor="middle" font-size="15">AWAY</text>
     <text x="600" y="98" text-anchor="middle" font-size="30">0 - 0</text>
@@ -224,12 +224,12 @@
   </section>
   <nav class="spots" aria-label="In the stadium">
     <a class="spot" href="/football-tales/"><h2>Football Tales <span class="tag">Coming soon</span></h2><p>Away days, home days and the pubs either side, one card at a time.</p></a>
-    <a class="spot" href="/match-hub/"><h2>Match Hub</h2><p>Live scores, fixtures and the table, up on the big screen.</p></a>
+    <a class="spot" href="/var-and-grill/"><h2>VAR &amp; Grill</h2><p>The sports bar: Leeds, world football and F1 on the tellies.</p></a>
   </nav>
 </main>
 <script>
 (function(){
-  var c=document.getElementById('sbClock'),t=document.getElementById('sbTicker'),msgs=['KICK-OFF SOON','MARCHING ON TOGETHER','MATCH HUB IS LIVE'],i=0;
+  var c=document.getElementById('sbClock'),t=document.getElementById('sbTicker'),msgs=['KICK-OFF SOON','MARCHING ON TOGETHER','VAR & GRILL IS OPEN'],i=0;
   function tick(){try{c.textContent=new Intl.DateTimeFormat('en-GB',{hour:'2-digit',minute:'2-digit',timeZone:'Europe/London'}).format(new Date())}catch(e){}}
   tick();setInterval(tick,15000);
   if(!matchMedia('(prefers-reduced-motion: reduce)').matches)setInterval(function(){i=(i+1)%msgs.length;t.textContent=msgs[i]},3000);
