@@ -315,7 +315,9 @@
     .top { flex-wrap: wrap; gap: 8px; padding: 12px 0; }
     .brand .tag { font-size: 18px; } .brand .comp { font-size: 20px; }
     .top .meta { font-size: 15px; width: 100%; order: 3; }
-    .top a.back { font-size: 15px; padding: 3px 12px; }
+    .top a.back { font-size: 14px; padding: 3px 10px; white-space: nowrap; }
+    .top .right-bits { width: 100%; flex-wrap: wrap; gap: 8px; }
+    .brand { flex-wrap: wrap; row-gap: 6px; } .brand .tag { white-space: nowrap; }
     .main { gap: 18px; padding: 6px 0 0; }
     .status-pill { min-width: 0; width: min(100%, 340px); align-self: center; } .status-pill .pill-body { font-size: 26px; padding: 6px 14px; }
     .fixture { gap: 8px; grid-template-columns: minmax(0,1fr) auto minmax(0,1fr); }
@@ -907,6 +909,7 @@ function startCentre(CONFIG) {
 (function () {
   var meta = document.getElementById('meta'), wrap = document.createElement('div'); wrap.className = 'right-bits';
   meta.parentNode.insertBefore(wrap, meta); wrap.appendChild(meta);
+  var t = document.createElement('a'); t.className = 'back'; t.href = '/match-hub/leeds/ceefax/'; t.textContent = 'Ceefax view'; wrap.appendChild(t);
   var a = document.createElement('a'); a.className = 'back'; a.href = '/match-hub/'; a.textContent = '\u2190 Back to the pub'; wrap.appendChild(a);
 })();
 /* ---------- pick Leeds' live, latest or next game automatically ---------- */
