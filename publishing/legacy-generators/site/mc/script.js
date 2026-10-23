@@ -97,6 +97,7 @@ function startCentre(CONFIG) {
       } else { list = []; listMode = 'none'; listLabel = ''; }
     }
     allLive = list.filter(g => g.state === 'in');
+    if (main && main.state === 'in' && !allLive.some(g => g.id === main.id)) allLive.push(main);   // our game always counts while in play
     others = list.filter(g => !main || g.id !== main.id);
     for (const g of others) {
       const k = g.home.score + '-' + g.away.score;
@@ -254,7 +255,7 @@ function startCentre(CONFIG) {
       rows.map((r, i) => {
         const pos = i + 1;
         const mv = pos < r.rank ? '<span class="mv up">▲</span>' : pos > r.rank ? '<span class="mv down">▼</span>' : '';
-        const focus = mainTeamIds[r.id] ? ' focus' : '';
+        const focus = mainTeamIds[r.id] && playing.has(r.id) ? ' focus' : '';   // only highlight while in play
         return `<div class="tr ${zone(pos)}${playing.has(r.id) ? ' playing' : ''}${focus}">
           <span class="n">${pos}</span><img src="${esc(r.logo)}" onerror="this.style.visibility='hidden'">
           <span class="nm"><span>${esc(r.name)}</span>${playing.has(r.id) ? '<i class="ld"></i>' : ''}${mv}</span>
