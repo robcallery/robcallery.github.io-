@@ -3,7 +3,7 @@ import sys, re, os
 D = '/tmp/claude-0/-home-claude/9cac7207-2d1b-5bf4-969e-62974606aff5/scratchpad/'
 sys.path.insert(0, D)
 from leeds_scene import scene
-svg, _ = scene()
+svg, _ = scene(screen=False)
 STYLE = open(D + 'mc/style.css').read()
 BODY = open(D + 'mc/body.html').read()
 LOGO = open(D + 'mc/logo.html').read()
@@ -46,7 +46,11 @@ THEME = r'''
   .ticker { background: rgba(6,14,34,.92) !important; border-top: 3px solid #fff !important; }
   .tk-label, .tk-label::after { background: var(--accent) !important; color: var(--accent-fg) !important; }
   .tk-team { background: rgba(255,255,255,.08) !important; }
-  .status-pill { background: rgba(6,14,34,.8) !important; border: 2px solid rgba(255,255,255,.85) !important; }
+  .status-pill { display: block !important; padding: 0 !important; border-radius: 8px !important; min-width: 480px; text-align: center; overflow: hidden;
+    background: var(--panel) !important; border: 2px solid rgba(255,255,255,.85) !important; box-shadow: 0 8px 24px rgba(0,0,0,.4); }
+  .status-pill .card-head { justify-content: center; }
+  .status-pill .pill-body { display: flex; align-items: center; justify-content: center; gap: 14px; padding: 10px 30px 8px; font-size: 46px; font-weight: 800; letter-spacing: 3px; }
+  .status-pill.live .card-head { background: var(--live) !important; color: #fff !important; }
   .tr.focus, .tr.playing { background: rgba(255,205,0,.16) !important; }
   .tr.focus .nm span { color: var(--accent); }
   .crest { background: radial-gradient(circle, rgba(255,255,255,.14), rgba(255,255,255,0) 70%); }
@@ -64,7 +68,7 @@ THEME = r'''
     .top .meta { font-size: 15px; width: 100%; order: 3; }
     .top a.back { font-size: 15px; padding: 3px 12px; }
     .main { gap: 18px; padding: 6px 0 0; }
-    .status-pill { font-size: 20px; padding: 6px 16px; }
+    .status-pill { min-width: 0; width: min(100%, 340px); align-self: center; } .status-pill .pill-body { font-size: 26px; padding: 6px 14px; }
     .fixture { gap: 8px; grid-template-columns: minmax(0,1fr) auto minmax(0,1fr); }
     .crest { width: 96px; height: 96px; } .crest img { width: 80px; height: 80px; }
     .side .tname { font-size: clamp(13px, 3.9vw, 26px) !important; letter-spacing: 0; white-space: nowrap; max-width: 100%; overflow: hidden; text-overflow: ellipsis; }

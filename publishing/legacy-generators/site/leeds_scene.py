@@ -19,7 +19,7 @@ def line(pts, stroke='#f4f8f0', w=2.2):
 def seg(u0, v0, u1, v1, n=24): return [pt(u0 + (u1 - u0) * k / n, v0 + (v1 - v0) * k / n) for k in range(n + 1)]
 def arc(cu, cv, r, a0, a1, n=40): return [pt(cu + r * math.cos(a0 + (a1 - a0) * k / n), cv + r * math.sin(a0 + (a1 - a0) * k / n)) for k in range(n + 1)]
 
-def scene():
+def scene(screen=True):
     rnd = random.Random(1919)
     g = ['<defs>',
          '<linearGradient id="erSky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#9cc6e4"/><stop offset=".55" stop-color="#e6eef4"/><stop offset="1" stop-color="#f6f4ee"/></linearGradient>',
@@ -70,12 +70,13 @@ def scene():
         a(f'<text x="{x:.0f}" y="{y+6:.0f}" text-anchor="middle" font-family="Bebas Neue, Impact, sans-serif" font-size="{18+k*4}" fill="#ffffff" letter-spacing="2" transform="rotate({ang:.1f} {x:.0f} {y:.0f})">LEEDS UNITED</text>')
     # big screen (filled by script)
     sx, sy = fx[0] - 260, fx[1] - 178
-    a(f'<g id="bigScreen"><rect x="{sx-6}" y="{sy-6}" width="176" height="104" rx="4" fill="#1a1d24"/><rect x="{sx}" y="{sy}" width="164" height="92" fill="#0a1838"/>'
-      f'<rect x="{sx}" y="{sy}" width="164" height="18" fill="#ffcd00"/><text id="bsHead" x="{sx+82}" y="{sy+14}" text-anchor="middle" font-family="Bebas Neue, Impact, sans-serif" font-size="14" fill="#0a1838" letter-spacing="2">NEXT UP</text>'
-      f'<text id="bsMain" x="{sx+82}" y="{sy+46}" text-anchor="middle" font-family="Bebas Neue, Impact, sans-serif" font-size="22" fill="#ffffff" textLength="150" lengthAdjust="spacingAndGlyphs">LEEDS UNITED</text>'
-      f'<text id="bsSub" x="{sx+82}" y="{sy+68}" text-anchor="middle" font-family="Bebas Neue, Impact, sans-serif" font-size="15" fill="#ffcd00" letter-spacing="1" textLength="150" lengthAdjust="spacingAndGlyphs">MARCHING ON TOGETHER</text>'
-      f'<text id="bsFoot" x="{sx+82}" y="{sy+86}" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" fill="#9fb0d8"> </text>'
-      f'<rect x="{sx+78}" y="{sy+98}" width="8" height="40" fill="#2a2d34"/></g>')
+    if screen:
+        a(f'<g id="bigScreen"><rect x="{sx-6}" y="{sy-6}" width="176" height="104" rx="4" fill="#1a1d24"/><rect x="{sx}" y="{sy}" width="164" height="92" fill="#0a1838"/>'
+          f'<rect x="{sx}" y="{sy}" width="164" height="18" fill="#ffcd00"/><text id="bsHead" x="{sx+82}" y="{sy+14}" text-anchor="middle" font-family="Bebas Neue, Impact, sans-serif" font-size="14" fill="#0a1838" letter-spacing="2">NEXT UP</text>'
+          f'<text id="bsMain" x="{sx+82}" y="{sy+46}" text-anchor="middle" font-family="Bebas Neue, Impact, sans-serif" font-size="22" fill="#ffffff" textLength="150" lengthAdjust="spacingAndGlyphs">LEEDS UNITED</text>'
+          f'<text id="bsSub" x="{sx+82}" y="{sy+68}" text-anchor="middle" font-family="Bebas Neue, Impact, sans-serif" font-size="15" fill="#ffcd00" letter-spacing="1" textLength="150" lengthAdjust="spacingAndGlyphs">MARCHING ON TOGETHER</text>'
+          f'<text id="bsFoot" x="{sx+82}" y="{sy+86}" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" fill="#9fb0d8"> </text>'
+          f'<rect x="{sx+78}" y="{sy+98}" width="8" height="40" fill="#2a2d34"/></g>')
     sxy = (sx, sy)
     # ---- pitch
     a(poly([pt(-3, -3), pt(-3, 71), pt(108, 71), pt(108, -3)], '#2f8a34'))

@@ -163,8 +163,8 @@ function startCentre(CONFIG) {
       const diff = Math.floor((kickoff - now) / 1000);
       if (diff > 0) {
         const d = Math.floor(diff / 86400), h = Math.floor(diff % 86400 / 3600), m = Math.floor(diff % 3600 / 60), s = diff % 60;
-        text = 'KICK-OFF IN ' + (d ? d + 'D ' : '') + pad(h) + ':' + pad(m) + ':' + pad(s);
-      } else text = 'KICK-OFF';
+        text = (d ? d + (d === 1 ? ' DAY ' : ' DAYS ') : '') + pad(h) + ':' + pad(m) + ':' + pad(s);
+      } else text = 'ANY MINUTE NOW';
     }
 
     scoreEl.classList.toggle('pre', !showScore);
@@ -172,6 +172,7 @@ function startCentre(CONFIG) {
     $('home-score').textContent = hs;
     $('away-score').textContent = as;
     $('pill-text').textContent = text;
+    $('pill-head').textContent = !showScore ? 'Countdown to kick-off' : isLive ? 'Live' : 'Match status';
     pill.classList.toggle('live', isLive);
     $('added').textContent = added;
     $('added').classList.toggle('show', !!added);

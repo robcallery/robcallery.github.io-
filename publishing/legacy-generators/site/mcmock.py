@@ -45,6 +45,6 @@ with sync_playwright() as p:
         pg.route('**/*',lambda r: h(r) if ('espn' in r.request.url) else r.continue_())
         pg.goto('http://localhost:8765/match-hub/leeds/'); pg.wait_for_timeout(3500)
         pg.screenshot(path=D+f'mc_{w}{"_live" if LIVE else ""}.png',full_page=(w==390))
-        print(w, pg.evaluate('[document.documentElement.scrollWidth,document.documentElement.scrollHeight]'), pg.inner_text('#pill-text'), '|', pg.evaluate("document.getElementById('bsMain').textContent"))
+        print(w, pg.evaluate('[document.documentElement.scrollWidth,document.documentElement.scrollHeight]'), pg.inner_text('#pill-head'), '|', pg.inner_text('#pill-text'))
         pg.close()
     print(errs); b.close()
