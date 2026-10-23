@@ -70,6 +70,34 @@ CSS = r'''
   .ses.next { border-color:#fff; background:rgba(255,255,255,.12); }
   .ses.live { border-color:var(--live); background:rgba(255,42,42,.22); }
   .podium { flex:1; min-height:0; }
+  .ses[data-k] { cursor:pointer; font:inherit; color:inherit; }
+  .ses[data-k]:hover, .ses[data-k]:focus-visible { border-color:#fff; outline:none; background:rgba(255,255,255,.16); opacity:1; }
+  .ses.on { border-color:#ffd23f !important; box-shadow:inset 0 -4px 0 #ffd23f; opacity:1; }
+  .board { display:none; flex:1; min-height:0; }
+  .mid.boardmode .race, .mid.boardmode .podium { display:none; }
+  .mid.boardmode .board { display:flex; }
+  .board .head.live { background:var(--live); color:#fff; } .board .head.live small { color:#fff; font-size:20px; }
+  .bln { display:grid; grid-template-columns:56px 8px minmax(0,1.7fr) minmax(0,1fr) 130px 110px 64px; align-items:center; gap:12px; padding:0 18px 0 8px; }
+  .bhd { font-size:16px; letter-spacing:2px; color:var(--muted); font-weight:700; height:34px; border-bottom:1px solid rgba(255,255,255,.2); }
+  .bhd .t, .brow .t { text-align:right; font-variant-numeric:tabular-nums; }
+  #boardRows { flex:1; display:grid; grid-auto-rows:minmax(0,1fr); min-height:0; }
+  .brow { font-size:22px; font-weight:600; border-bottom:1px solid rgba(255,255,255,.06); min-height:0; overflow:hidden; transition:background .6s; }
+  .brow:nth-child(odd) { background:var(--panel2); }
+  .brow .p { text-align:center; font-weight:700; }
+  .brow.lead .p { color:#ffd23f; }
+  .brow .bar { height:68%; border-radius:2px; }
+  .brow .dn { white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+  .brow .dn b { letter-spacing:1px; margin-right:10px; }
+  .brow .dn span { color:#dfe4ee; font-weight:400; }
+  .brow .tm { color:var(--muted); font-size:18px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+  .brow .mv { font-size:15px; margin-left:8px; font-weight:700; } .brow .up { color:#2bd46b; } .brow .down { color:#ff5a52; }
+  .brow.moved { background:rgba(43,212,107,.18) !important; } .brow.dropped { background:rgba(255,90,82,.16) !important; }
+  .brow .dnf { color:#ff8f8a; }
+  .bnote { font-size:15px; color:var(--muted); padding:6px 18px; border-top:1px solid rgba(255,255,255,.12); white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+  .bfoot { display:flex; gap:10px; align-items:stretch; padding:0 18px 14px; }
+  .bfoot .sched { margin:0; flex:1; }
+  .bfoot #boardBack { font:inherit; font-size:17px; font-weight:700; letter-spacing:1px; text-transform:uppercase; color:#0b1020; background:#fff; border:0; padding:0 16px; cursor:pointer; white-space:nowrap; }
+  .bfoot #boardBack:hover, .bfoot #boardBack:focus-visible { background:#ffd23f; }
   #podium { flex:1; display:grid; grid-template-columns:1fr 1fr 1fr; grid-template-rows:minmax(0,1fr); gap:16px; padding:14px 20px 0; align-items:stretch; min-height:0; overflow:hidden; }
   .pd { display:flex; flex-direction:column; align-items:center; justify-content:flex-end; text-align:center; gap:4px; min-width:0; min-height:0; height:100%; }
   .pd .nm { font-size:26px; font-weight:700; line-height:1.05; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; max-width:100%; }
@@ -115,6 +143,11 @@ CSS = r'''
     #podium { padding:12px; gap:8px; } .pd .nm { font-size:16px; } .pd .tm { font-size:12px; } .pd .step { font-size:28px; }
     #podium { height:190px; flex:none; } .pd.p1 .step { height:52%; } .pd.p2 .step { height:38%; } .pd.p3 .step { height:26%; }
     .beer .bn { font-size:22px; } .beer .bl { font-size:15px; }
+    #boardRows { display:block; } .bln { grid-template-columns:30px 5px minmax(0,1fr) 0 86px 62px 0; gap:7px; padding:0 10px 0 4px; }
+    .bln > :nth-child(4), .bln > :nth-child(7) { visibility:hidden; overflow:hidden; }
+    .brow { height:36px; font-size:15px; } .brow .dn b { margin-right:6px; } .brow .dn span { font-size:13px; }
+    .board .head { flex-wrap:wrap; white-space:normal; row-gap:2px; } .board .head.live small { font-size:14px; } .bhd { font-size:12px; height:28px; }
+    .bfoot { flex-direction:column; padding:0 12px 12px; } .bfoot #boardBack { padding:10px; font-size:14px; } .bnote { font-size:12px; padding:6px 12px; white-space:normal; }
     .ticker { height:46px; } .ticker .lab, .ticker .track { font-size:15px; }
   }
   @media (prefers-reduced-motion:reduce) { #car, .ticker .track, .dot { animation:none; } }
@@ -140,6 +173,13 @@ BODY = '''
       </div>
       <div class="cd" id="cd"><div class="head"><span id="cdHead">Lights out in</span></div><div class="num" id="cdNum">--:--:--</div></div>
       <div class="sched" id="sched"></div>
+    </section>
+    <section class="card board" id="board" aria-label="Session timing">
+      <div class="head" id="boardHead"><span id="boardTitle">Timing</span><small id="boardSub"></small></div>
+      <div class="bln bhd"><span style="text-align:center">POS</span><span></span><span>DRIVER</span><span>TEAM</span><span class="t" id="bhTime">BEST LAP</span><span class="t">GAP</span><span class="t" id="bhLaps">LAPS</span></div>
+      <div id="boardRows"></div>
+      <div class="bnote" id="boardNote"></div>
+      <div class="bfoot"><div class="sched" id="sched2"></div><button type="button" id="boardBack">&larr; Race weekend</button></div>
     </section>
     <section class="card podium" aria-label="Last race podium">
       <div class="head"><span>Last time out</span><small id="podSub"></small></div>
@@ -230,7 +270,8 @@ SCRIPT = r'''
   }
   var LEN = { FirstPractice: 60, SecondPractice: 60, ThirdPractice: 60, SprintShootout: 45, SprintQualifying: 45, Sprint: 45, Qualifying: 60, Race: 120 };
 
-  var S = { races: [], drivers: [], cons: [], last: null, espn: null, next: null, ses: [] };
+  var S = { races: [], drivers: [], cons: [], last: null, espn: null, next: null, ses: [], view: 'auto', tcache: {}, prev: {}, mv: {} };
+  var OF = 'https://api.openf1.org/v1/';
 
   function load() {
     return Promise.all([
@@ -272,7 +313,7 @@ SCRIPT = r'''
       var A = x.athlete || {}, full = A.displayName || A.fullName || A.shortName || '';
       var last = full.split(' ').slice(1).join(' ') || full;
       var d = idx[norm(full)] || idx[norm(last)] || idx[norm(full.split(' ').pop())] || { code: last.slice(0, 3).toUpperCase(), team: { colour: '#9aa4b2', name: '' } };
-      return { pos: x.order || i + 1, code: d.code, team: d.team, v: '' };
+      return { pos: x.order || i + 1, code: d.code, name: d.name || full, team: d.team, v: '' };
     });
   }
 
@@ -287,7 +328,12 @@ SCRIPT = r'''
     var L = liveSession(), head = $('towerHead');
     head.classList.remove('live');
     var abbr = function (c) { var t = c.type || {}; return (t.text || t.abbreviation || 'Session').replace(/^Qual$/, 'Qualifying').replace(/^SS$/, 'Sprint Quali').replace(/^SR$/, 'Sprint'); };
+    S.lap = 0;
     if (L && L.state === 'in') {
+      var isR = /^(Race|SR|Sprint)$/i.test(((L.c.type || {}).abbreviation) || '');
+      S.lap = isR ? (+((L.c.status || {}).period) || 0) : 0;
+    }
+    if (L && L.state === 'in' && !boardShowing()) {
       head.classList.add('live');
       $('towerTitle').innerHTML = '<span class="dot"></span>Live';
       var isRace = /^(Race|SR|Sprint)$/i.test(((L.c.type || {}).abbreviation) || ''), lap = +((L.c.status || {}).period) || 0;
@@ -307,7 +353,7 @@ SCRIPT = r'''
       }));
       return;
     }
-    if (L && L.state === 'post') {
+    if (L && L.state === 'post' && !boardShowing()) {
       $('towerTitle').textContent = 'Classification';
       $('towerSub').textContent = abbr(L.c);
       $('tower').innerHTML = towerRows(espnRows(L.c));
@@ -350,10 +396,7 @@ SCRIPT = r'''
     if (EL && EL.state === 'in' && !live) live = nxt;
     S.ses = ses; S.liveSes = live; S.nextSes = nxt;
     $('sched').style.setProperty('--n', ses.length);
-    $('sched').innerHTML = ses.map(function (s) {
-      var cls = s === live ? 'live' : s.state === 'done' ? 'done' : s === nxt && !live ? 'next' : '';
-      return '<div class="ses ' + cls + '"><b>' + esc(s.name) + '</b><span>' + dayTime(s.date) + '</span></div>';
-    }).join('');
+    renderTiles();
     var raceDay = ses[ses.length - 1].date;
     $('raceSub').textContent = uk(raceDay, { day: 'numeric', month: 'short' }).toUpperCase() + ' · UK TIMES';
     $('meta').textContent = (r.raceName || '').replace('Grand Prix', 'GP') + ' · ' + uk(raceDay, { weekday: 'long', day: 'numeric', month: 'long' }) + ' · ' + uk(raceDay, { hour: '2-digit', minute: '2-digit' });
@@ -367,6 +410,135 @@ SCRIPT = r'''
     var gl = $('beerGuide');
     if (GUIDE[b.key]) { gl.hidden = false; gl.href = '/travel-guides/guide/?city=' + encodeURIComponent(GUIDE[b.key]); gl.innerHTML = 'Read the ' + esc(GUIDE[b.key]) + ' travel guide &rarr;'; } else gl.hidden = true;
   }
+  function renderTiles() {
+    var live = S.liveSes, nxt = S.nextSes, cur = boardKey();
+    var mk = function (short) { return S.ses.map(function (s) {
+      var cls = s === live ? 'live' : s.state === 'done' ? 'done' : s === nxt && !live ? 'next' : '';
+      var click = s === live || s.state === 'done';
+      var tag = click ? 'button type="button" data-k="' + s.key + '" title="Show ' + esc(s.name) + ' timing"' : 'div';
+      return '<' + tag + ' class="ses ' + cls + (cur === s.key ? ' on' : '') + '"><b>' + esc(short ? s.short : s.name) + '</b><span>' + (s === live ? 'LIVE' : dayTime(s.date)) + '</span></' + tag.split(' ')[0] + '>';
+    }).join(''); };
+    $('sched').style.setProperty('--n', S.ses.length); $('sched').innerHTML = mk(false);
+    $('sched2').style.setProperty('--n', S.ses.length); $('sched2').innerHTML = mk(true);
+  }
+  /* ---------- the big timing board ---------- */
+  var ABBR = { FirstPractice: 'FP1', SecondPractice: 'FP2', ThirdPractice: 'FP3', Qualifying: 'Qual', Race: 'Race', SprintQualifying: 'SS', SprintShootout: 'SS', Sprint: 'SR' };
+  var OFNAME = { FirstPractice: ['Practice 1'], SecondPractice: ['Practice 2'], ThirdPractice: ['Practice 3'], Qualifying: ['Qualifying'], Race: ['Race'],
+                 SprintQualifying: ['Sprint Qualifying', 'Sprint Shootout'], SprintShootout: ['Sprint Shootout', 'Sprint Qualifying'], Sprint: ['Sprint'] };
+  function boardKey() {
+    // which session the board shows, or null for the race weekend view
+    if (S.view === 'race') return null;
+    if (S.view !== 'auto') return S.view;
+    if (S.liveSes) return S.liveSes.key;
+    var now = Date.now(), recent = S.ses.filter(function (x) { var end = +x.date + (LEN[x.key] || 60) * 6e4; return x.state === 'done' && now - end < 90 * 6e4; }).pop();
+    return recent ? recent.key : null;
+  }
+  function boardShowing() { return !!boardKey(); }
+  function sesOf(k) { return S.ses.filter(function (x) { return x.key === k; })[0]; }
+  function espnComp(k) {
+    var out = null;
+    ((S.espn && S.espn.events) || []).forEach(function (e) { (e.competitions || []).forEach(function (c) { if (((c.type || {}).abbreviation) === ABBR[k]) out = c; }); });
+    return out;
+  }
+  function fmtT(sec) { if (sec == null || isNaN(sec)) return ''; var m = Math.floor(sec / 60), x = (sec - m * 60).toFixed(3); return (m ? m + ':' + (x < 10 ? '0' : '') : '') + x; }
+  function secs(t) { if (!t) return null; var p = String(t).split(':'); return p.length > 1 ? +p[0] * 60 + +p[1] : +p[0]; }
+  function lastOf(v) { if (!Array.isArray(v)) return v; for (var i = v.length - 1; i >= 0; i--) if (v[i] != null) return v[i]; return null; }
+  function openf1(k) {
+    return get(OF + 'sessions?meeting_key=latest').then(function (list) {
+      if (!Array.isArray(list)) return null;
+      var names = OFNAME[k] || [], ss = list.filter(function (x) { return names.indexOf(x.session_name) >= 0; })[0];
+      if (!ss) return null;
+      return Promise.all([get(OF + 'session_result?session_key=' + ss.session_key), get(OF + 'drivers?session_key=' + ss.session_key)]).then(function (r) {
+        var res = r[0], drv = r[1];
+        if (!Array.isArray(res) || !res.length) return null;
+        var by = {}; (Array.isArray(drv) ? drv : []).forEach(function (d) { by[d.driver_number] = d; });
+        var quali = /Qualifying|Shootout/.test(ss.session_name), race = /^(Race|Sprint)$/.test(ss.session_name);
+        var rows = res.slice().sort(function (a, b) { return (a.position || 99) - (b.position || 99); }).map(function (x, i) {
+          var d = by[x.driver_number] || {}, t = team({ name: d.team_name });
+          var out = x.dnf ? 'DNF' : x.dns ? 'DNS' : x.dsq ? 'DSQ' : '';
+          var dur = lastOf(x.duration), gap = lastOf(x.gap_to_leader);
+          var seg = Array.isArray(x.duration) ? ['Q1', 'Q2', 'Q3'][x.duration.reduce(function (a, v, j) { return v != null ? j : a; }, 0)] : '';
+          return { pos: x.position || i + 1, code: d.name_acronym || '', name: d.full_name ? d.full_name.split(' ').map(function (w) { return w.length > 1 && w === w.toUpperCase() ? w.charAt(0) + w.slice(1).toLowerCase() : w; }).join(' ') : '',
+            team: { colour: d.team_colour ? '#' + d.team_colour : t.colour, name: t.name || d.team_name || '' },
+            time: out || (race && i > 0 ? '' : fmtT(dur)), gap: out ? '' : (i === 0 ? '' : typeof gap === 'number' ? '+' + gap.toFixed(3) : (gap || '')),
+            laps: quali ? seg : (x.number_of_laps != null ? x.number_of_laps : ''), dnf: !!out };
+        });
+        return { rows: rows, src: 'Timing from OpenF1', timeHead: race ? 'TIME' : quali ? 'BEST' : 'BEST LAP', lapsHead: quali ? 'OUT' : 'LAPS' };
+      });
+    });
+  }
+  function jolpica(k) {
+    var r = S.next; if (!r || !/^(Qualifying|Sprint|Race)$/.test(k)) return Promise.resolve(null);
+    var file = k === 'Qualifying' ? 'qualifying' : k === 'Sprint' ? 'sprint' : 'results';
+    return get(J + r.season + '/' + r.round + '/' + file + '.json').then(function (d) {
+      var R = d && (((d.MRData || {}).RaceTable || {}).Races || [])[0];
+      var list = R && (R.QualifyingResults || R.SprintResults || R.Results);
+      if (!list || !list.length) return null;
+      var pole = k === 'Qualifying' ? secs(list[0].Q3 || list[0].Q2 || list[0].Q1) : null;
+      return { src: 'Results from Jolpica', timeHead: k === 'Qualifying' ? 'BEST' : 'TIME', lapsHead: k === 'Qualifying' ? 'OUT' : 'LAPS', rows: list.map(function (x) {
+        var D = x.Driver || {}, best = x.Q3 || x.Q2 || x.Q1, fin = (x.Time || {}).time;
+        var g = k === 'Qualifying' && x.Q3 && pole && x.position !== '1' ? '+' + (secs(x.Q3) - pole).toFixed(3) : '';
+        return { pos: x.position, code: D.code || (D.familyName || '').slice(0, 3).toUpperCase(), name: D.givenName + ' ' + D.familyName, team: team(x.Constructor),
+          time: k === 'Qualifying' ? (best || '') : (x.position === '1' ? fin : ''), gap: k === 'Qualifying' ? g : (x.position === '1' ? '' : fin || x.status || ''),
+          laps: k === 'Qualifying' ? (x.Q3 ? 'Q3' : x.Q2 ? 'Q2' : 'Q1') : x.laps, dnf: k !== 'Qualifying' && !fin && !/Lap/.test(x.status || '') };
+      }) };
+    });
+  }
+  function timing(k) {
+    var c = S.tcache[k];
+    if (c && (c.full || Date.now() - c.at < 5 * 6e4)) return Promise.resolve(c.data);
+    return openf1(k).catch(function () { return null; }).then(function (d) { return d || jolpica(k).catch(function () { return null; }); }).then(function (d) {
+      if (!d) { var ec = espnComp(k); if (ec && (ec.competitors || []).length) d = { rows: espnRows(ec).map(function (x) { return Object.assign(x, { time: '', gap: '', laps: '' }); }), src: 'Order from ESPN - lap times show here once OpenF1 has them (it locks while any session is live)', timeHead: 'BEST LAP', lapsHead: 'LAPS', partial: true }; }
+      if (d) S.tcache[k] = { data: d, at: Date.now(), full: !d.partial && Date.now() - +((sesOf(k) || {}).date || 0) > 3 * 36e5 };
+      return d;
+    });
+  }
+  function boardRows(rows, live) {
+    if (!rows || !rows.length) return '<div class="empty">No timing for this session yet.</div>';
+    return rows.map(function (r) {
+      var m = live && S.mv[r.code], mv = m ? (m.d > 0 ? '<span class="mv up">▲' + m.d + '</span>' : '<span class="mv down">▼' + (-m.d) + '</span>') : '';
+      return '<div class="bln brow' + (r.pos == 1 ? ' lead' : '') + (m ? (m.d > 0 ? ' moved' : ' dropped') : '') + '"><span class="p">' + esc(r.pos) + '</span><span class="bar" style="background:' + r.team.colour + '"></span>' +
+        '<span class="dn"><b>' + esc(r.code) + '</b><span>' + esc(r.name || '') + '</span>' + mv + '</span><span class="tm">' + esc(r.team.name) + '</span>' +
+        '<span class="t' + (r.dnf ? ' dnf' : '') + '">' + esc(r.time || '') + '</span><span class="t">' + esc(r.gap || '') + '</span><span class="t">' + esc(r.laps == null ? '' : r.laps) + '</span></div>';
+    }).join('');
+  }
+  var boardSeq = 0;
+  function renderBoard() {
+    var k = boardKey(), mid = document.querySelector('.mid');
+    mid.classList.toggle('boardmode', !!k);
+    renderTiles();
+    if (!k) return;
+    var s = sesOf(k) || { name: k }, live = S.liveSes && S.liveSes.key === k, head = $('boardHead');
+    head.classList.toggle('live', !!live);
+    $('boardTitle').innerHTML = live ? '<span class="dot"></span>Live timing · ' + esc(s.name) : esc(s.name) + ' · ' + (S.next ? esc(S.next.raceName.replace('Grand Prix', 'GP')) : '');
+    $('boardBack').hidden = !!live && S.view === 'auto' ? false : false;
+    if (live) {
+      var ec = espnComp(k) || ((liveSession() || {}).c);
+      var rows = ec ? espnRows(ec) : [], now = Date.now();
+      // movers since the last update stay lit for a minute
+      rows.forEach(function (r) { var was = S.prev[r.code]; if (was && was !== r.pos) S.mv[r.code] = { d: was - r.pos, until: now + 6e4 }; S.prev[r.code] = r.pos; });
+      Object.keys(S.mv).forEach(function (c) { if (S.mv[c].until < now) delete S.mv[c]; });
+      $('bhTime').textContent = 'BEST LAP'; $('bhLaps').textContent = 'LAPS';
+      $('boardRows').innerHTML = boardRows(rows.map(function (r) { return Object.assign(r, { time: '', gap: '', laps: '' }); }), true);
+      $('boardNote').textContent = 'Live running order from ESPN, updated every 15 seconds · lap times appear when the session ends';
+      tickCountdown();
+      return;
+    }
+    $('boardSub').textContent = 'Final';
+    var seq = ++boardSeq;
+    if (!S.tcache[k]) { $('boardRows').innerHTML = '<div class="empty">Loading the timing…</div>'; $('boardNote').textContent = ''; }
+    timing(k).then(function (d) {
+      if (seq !== boardSeq) return;
+      $('bhTime').textContent = d ? d.timeHead : 'TIME'; $('bhLaps').textContent = d ? d.lapsHead : 'LAPS';
+      $('boardRows').innerHTML = d ? boardRows(d.rows, false) : '<div class="empty">No timing for this session yet - try again in a few minutes.</div>';
+      $('boardNote').textContent = d ? d.src : '';
+    });
+  }
+  document.addEventListener('click', function (e) {
+    var t = e.target.closest && e.target.closest('.ses[data-k]');
+    if (t) { S.view = t.getAttribute('data-k'); renderBoard(); renderTower(Date.now()); return; }
+    if (e.target.closest && e.target.closest('#boardBack')) { S.view = 'race'; renderBoard(); renderTower(Date.now()); }
+  });
   function tickCountdown() {
     var cd = $('cd'), now = Date.now(), live = S.liveSes, nxt = S.nextSes;
     if (!S.next) return;
@@ -375,6 +547,7 @@ SCRIPT = r'''
       $('cdHead').innerHTML = '<span class="dot"></span>' + esc(live.name) + ' - live now';
       var left = Math.max(0, Math.floor((+live.date + (LEN[live.key] || 60) * 6e4 - now) / 1000));
       $('cdNum').textContent = live.key === 'Race' ? (S.lap ? 'LAP ' + S.lap : 'LIGHTS OUT') : pad(Math.floor(left / 60)) + ':' + pad(left % 60) + ' TO GO';
+      if (boardKey() === live.key) $('boardSub').textContent = /^(Race|Sprint)$/.test(live.key) ? (S.lap ? 'LAP ' + S.lap : 'RACING') : pad(Math.floor(left / 60)) + ':' + pad(left % 60) + ' TO GO';
       return;
     }
     cd.classList.remove('live');
@@ -418,8 +591,12 @@ SCRIPT = r'''
     if (!S.races.length && !S.drivers.length) { var m = $('msg'); m.textContent = 'The F1 timing feed is having a pit stop - try again in a minute.'; m.style.display = 'block'; return; }
     $('msg').style.display = 'none';
     $('season').textContent = 'Formula 1 · ' + (S.season || (S.races[0] || {}).season || '');
-    S.next = pickNext(now); S.lap = 0;
-    renderRace(now); renderTower(now); tickCountdown(); renderPodium(); renderCons(); renderTicker();
+    S.next = pickNext(now);
+    var wasLive = S.liveKey;
+    renderRace(now);
+    S.liveKey = S.liveSes ? S.liveSes.key : null;
+    if (S.liveKey && S.liveKey !== wasLive) { S.view = 'auto'; S.prev = {}; S.mv = {}; }   // a new session going live takes over the board
+    renderTower(now); tickCountdown(); renderBoard(); renderPodium(); renderCons(); renderTicker();
   }
 
   setInterval(tickCountdown, 1000);
@@ -436,7 +613,7 @@ SCRIPT = r'''
   (function loop() {
     load().then(function () {
       var live = S.liveSes || (liveSession() || {}).state === 'in';
-      setTimeout(loop, (live ? 20 : 300) * 1000);
+      setTimeout(loop, (live ? 15 : 300) * 1000);
     }, function () { setTimeout(loop, 60000); });
   })();
 })();
