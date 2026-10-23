@@ -279,13 +279,18 @@
     Qatar: ['a beer in a licensed hotel bar', 'Alcohol is tightly controlled in Qatar - hotel bars only.'],
     UAE: ['a cold lager at Yas Marina', 'Abu Dhabi licenses alcohol at the circuit and hotels.'],
     Portugal: ['Super Bock', 'The Portuguese favourite.'],
-    'Emilia Romagna': ['Birra Moretti', 'The Italian classic for an Imola weekend.']
+    'Emilia Romagna': ['Birra Moretti', 'The Italian classic for an Imola weekend.'],
+    Malaysia: ['Tiger', 'Brewed in Selangor - Sepang is just down the road.']
   };
-  var GUIDE = { Barcelona: 'Barcelona', Madrid: 'Madrid', USA: 'Austin', Netherlands: 'Amsterdam', UK: 'Northampton' };
+  // every race has a page in the "Travelling F1 in 2026" book
+  var BOOK = { Melbourne: 'Melbourne', Shanghai: 'Shanghai', Suzuka: 'Suzuka', Miami: 'Miami', Montreal: 'Montréal', 'Monte Carlo': 'Monaco', Monaco: 'Monaco',
+    Barcelona: 'Barcelona', Spielberg: 'Spielberg', Silverstone: 'Silverstone', Spa: 'Spa-Francorchamps', Budapest: 'Budapest', Zandvoort: 'Zandvoort', Monza: 'Monza',
+    Madrid: 'Madrid', Baku: 'Baku', 'Kuala Lumpur': 'Kuala Lumpur', 'Marina Bay': 'Singapore', Singapore: 'Singapore', Austin: 'Austin', 'Mexico City': 'Mexico City',
+    'São Paulo': 'São Paulo', 'Las Vegas': 'Las Vegas', Lusail: 'Lusail', 'Abu Dhabi': 'Abu Dhabi' };
   function beerFor(race) {
     var L = (race.Circuit || {}).Location || {}, c = L.country, loc = L.locality;
     var k = /Miami/.test(loc) ? 'Miami' : /Vegas/.test(loc) ? 'Las Vegas' : /Barcelona|Montmel/.test(loc) ? 'Barcelona' : /Madrid/.test(loc) ? 'Madrid' : /Imola/.test(loc) ? 'Emilia Romagna' : c;
-    return { key: k, beer: BEER[k], where: [loc, c].filter(Boolean).join(', ') };
+    return { key: k, beer: BEER[k], where: [loc, c].filter(Boolean).join(', '), book: BOOK[loc] || BOOK[c] };
   }
 
   var SESS = [['FirstPractice', 'Practice 1', 'FP1'], ['SecondPractice', 'Practice 2', 'FP2'], ['ThirdPractice', 'Practice 3', 'FP3'],
@@ -437,7 +442,7 @@
     $('beerName').textContent = b.beer ? b.beer[0].replace(/^\w/, function (c) { return c.toUpperCase(); }) : 'Whatever the locals drink';
     $('beerLine').textContent = b.beer ? b.beer[1] : 'Ask at the bar for something brewed nearby.';
     var gl = $('beerGuide');
-    if (GUIDE[b.key]) { gl.hidden = false; gl.href = '/travel-guides/guide/?city=' + encodeURIComponent(GUIDE[b.key]); gl.innerHTML = 'Read the ' + esc(GUIDE[b.key]) + ' travel guide &rarr;'; } else gl.hidden = true;
+    if (b.book) { gl.hidden = false; gl.href = '/travel-guides/guide/?shelf=f1-2026&city=' + encodeURIComponent(b.book); gl.innerHTML = 'Read the ' + esc(b.book) + ' race guide &rarr;'; } else gl.hidden = true;
   }
   function renderTiles() {
     var live = S.liveSes, nxt = S.nextSes, cur = boardKey();
