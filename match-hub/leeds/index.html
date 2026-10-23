@@ -449,14 +449,42 @@
     var code = (k && CODE[k]) || String(t.abbreviation || '').toUpperCase().replace(/[^A-Z]/g, '').slice(0, 3) ||
       norm(String(name).replace(/\b(fc|afc|city|town|united|athletic|rovers|county)\b/gi, '')).slice(0, 3).toUpperCase() || '???';
     var p = cols[0], s = cols[1], st = cols[2] || (lum(p) > .8 && lum(s) > .8 ? '#1E3F9A' : null);
-    var ink = lum(s) > .6 ? '#111827' : '#FFFFFF', edge = lum(p) > .85 ? '#c9ced8' : 'rgba(255,255,255,.9)';
-    var shield = 'M50 4 L90 15 V47 C90 73 72 89 50 97 C28 89 10 73 10 47 V15 Z';
-    var svg = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><clipPath id="c"><path d="' + shield + '"/></clipPath></defs>' +
-      '<path d="' + shield + '" fill="' + p + '"/>' +
-      '<g clip-path="url(#c)"><rect x="0" y="37" width="100" height="30" fill="' + s + '"/>' + (st ? '<rect x="0" y="67" width="100" height="5" fill="' + st + '"/>' : '') +
-      '<path d="M0 0 L100 0 L100 18 L0 30 Z" fill="#fff" opacity=".10"/></g>' +
-      '<path d="' + shield + '" fill="none" stroke="' + edge + '" stroke-width="3.5"/>' +
-      '<text x="50" y="61.5" text-anchor="middle" font-family="Barlow Condensed, Arial Narrow, Impact, sans-serif" font-weight="800" font-size="27" letter-spacing="1" fill="' + ink + '">' + code + '</text></svg>';
+    var inkOn = function (bg) { return lum(bg) > .6 ? '#111827' : '#FFFFFF'; };
+    var edgeOn = function (bg) { return lum(bg) > .85 ? '#c9ced8' : 'rgba(255,255,255,.92)'; };
+    var txt = function (y, fill, size) { return '<text x="50" y="' + y + '" text-anchor="middle" font-family="Barlow Condensed, Arial Narrow, Impact, sans-serif" font-weight="800" font-size="' + (size || 27) + '" letter-spacing="1" fill="' + fill + '">' + code + '</text>'; };
+    var shine = '<path d="M0 0 L100 0 L100 18 L0 30 Z" fill="#fff" opacity=".10"/>';
+    var style = hash((k || norm(name)) + 'pes') % 5, body = '';
+    if (style === 0) {            // classic shield with a band
+      var sh = 'M50 4 L90 15 V47 C90 73 72 89 50 97 C28 89 10 73 10 47 V15 Z';
+      body = '<defs><clipPath id="c"><path d="' + sh + '"/></clipPath></defs><path d="' + sh + '" fill="' + p + '"/>' +
+        '<g clip-path="url(#c)"><rect x="0" y="37" width="100" height="30" fill="' + s + '"/>' + (st ? '<rect x="0" y="67" width="100" height="5" fill="' + st + '"/>' : '') + shine + '</g>' +
+        '<path d="' + sh + '" fill="none" stroke="' + edgeOn(p) + '" stroke-width="3.5"/>' + txt(61.5, inkOn(s));
+    } else if (style === 1) {     // roundel: coloured ring, plain centre
+      body = '<circle cx="50" cy="50" r="46" fill="' + s + '" stroke="' + edgeOn(s) + '" stroke-width="3"/>' +
+        '<circle cx="50" cy="50" r="33" fill="' + p + '"/>' + (st ? '<circle cx="50" cy="50" r="33" fill="none" stroke="' + st + '" stroke-width="3"/>' : '') +
+        '<circle cx="50" cy="50" r="40" fill="none" stroke="' + inkOn(s) + '" stroke-width="1" stroke-dasharray="2 3" opacity=".7"/>' +
+        '<path d="M14 30 A40 40 0 0 1 86 30" fill="#fff" opacity=".08"/>' + txt(59.5, inkOn(p), 26);
+    } else if (style === 2) {     // striped circle with a name plate
+      var stripes = ''; for (var i = 0; i < 7; i++) stripes += '<rect x="' + (i * 14.3) + '" y="0" width="14.3" height="100" fill="' + (i % 2 ? s : p) + '"/>';
+      body = '<defs><clipPath id="c"><circle cx="50" cy="50" r="45"/></clipPath></defs><g clip-path="url(#c)">' + stripes + shine + '</g>' +
+        '<circle cx="50" cy="50" r="45" fill="none" stroke="' + edgeOn(p) + '" stroke-width="3.5"/>' +
+        '<rect x="16" y="37" width="68" height="27" rx="4" fill="' + (st || p) + '" stroke="' + edgeOn(p) + '" stroke-width="2"/>' + txt(59, inkOn(st || p), 24);
+    } else if (style === 3) {     // pointed shield with a diagonal sash
+      var sh3 = 'M14 8 H86 V44 C86 70 70 86 50 96 C30 86 14 70 14 44 Z';
+      body = '<defs><clipPath id="c"><path d="' + sh3 + '"/></clipPath></defs><path d="' + sh3 + '" fill="' + p + '"/>' +
+        '<g clip-path="url(#c)"><path d="M0 70 L100 10 L100 34 L0 94 Z" fill="' + s + '"/>' + (st ? '<path d="M0 94 L100 34 L100 39 L0 99 Z" fill="' + st + '"/>' : '') + shine + '</g>' +
+        '<path d="' + sh3 + '" fill="none" stroke="' + edgeOn(p) + '" stroke-width="3.5"/>' +
+        '<rect x="22" y="15" width="56" height="25" rx="3" fill="' + p + '" stroke="' + edgeOn(p) + '" stroke-width="1.5"/>' + txt(35.5, inkOn(p), 22);
+    } else {                      // half-and-half crest with a crown-like top bar
+      var sh4 = 'M12 20 Q12 10 22 10 H78 Q88 10 88 20 V50 C88 74 70 88 50 96 C30 88 12 74 12 50 Z';
+      body = '<defs><clipPath id="c"><path d="' + sh4 + '"/></clipPath></defs>' +
+        '<g clip-path="url(#c)"><rect x="0" y="0" width="50" height="100" fill="' + p + '"/><rect x="50" y="0" width="50" height="100" fill="' + s + '"/>' +
+        '<rect x="0" y="40" width="100" height="26" fill="' + (st || (lum(p) > .5 ? '#111827' : '#FFFFFF')) + '"/>' + shine + '</g>' +
+        '<path d="' + sh4 + '" fill="none" stroke="' + edgeOn(p) + '" stroke-width="3.5"/>' +
+        '<g fill="' + edgeOn(p) + '"><circle cx="30" cy="5" r="3"/><circle cx="50" cy="3" r="3.5"/><circle cx="70" cy="5" r="3"/></g>' +
+        txt(61, inkOn(st || (lum(p) > .5 ? '#111827' : '#FFFFFF')), 24);
+    }
+    var svg = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">' + body + '</svg>';
     return (cache[name] = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(svg));
   };
 })();
