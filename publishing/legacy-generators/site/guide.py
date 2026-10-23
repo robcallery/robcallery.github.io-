@@ -38,7 +38,7 @@ PAGE = re.sub(r'<meta name="description" content="[^"]*">', '<meta name="descrip
 PAGE = PAGE.replace("<h1 class=\"sr\">Rob Callery's Beer Passport</h1>", "<h1 class=\"sr\">Rob Callery's Travel Guides</h1>")
 import sys as _s; _s.path.insert(0,'/tmp/claude-0/-home-claude/9cac7207-2d1b-5bf4-969e-62974606aff5/scratchpad')
 from shelves import SHELF_OF_JS
-PAGE = PAGE.replace('<script src="beers.js"></script>', '<script src="/travel-guides/guides.js"></script><script>(function(){'+SHELF_OF_JS+';var q=location.search,s=(q.match(/[?&]shelf=([^&]+)/)||[])[1],c=(q.match(/[?&]city=([^&]+)/)||[])[1];try{c=c&&decodeURIComponent(c.replace(/\\+/g," "))}catch(e){}if(!s&&c)(window.GUIDES||[]).forEach(function(g){if(!s&&g.city.toLowerCase()===c.toLowerCase())s=shelfOf(g)});if(s&&/^[a-z-]+$/.test(s))document.write(\'<script src="/travel-guides/snaps/\'+s+\'.js"><\\/script>\')})()</script>')
+PAGE = PAGE.replace('<script src="beers.js"></script>', '<script src="/travel-guides/guides.js"></script><script>(function(){'+SHELF_OF_JS+';var q=location.search,s=(q.match(/[?&]shelf=([^&]+)/)||[])[1],c=(q.match(/[?&]city=([^&]+)/)||[])[1];try{c=c&&decodeURIComponent(c.replace(/\\+/g," "))}catch(e){}if(!s&&c)(window.GUIDES||[]).forEach(function(g){if(!s&&g.city.toLowerCase()===c.toLowerCase())s=shelfOf(g)});if(s&&/^[a-z0-9-]+$/.test(s))document.write(\'<script src="/travel-guides/snaps/\'+s+\'.js"><\\/script>\')})()</script>')
 PAGE = PAGE.replace('<a class="back" href="/explore/">← Back to the bar</a>', '<a class="back" href="/travel-guides/">← Back to the shelf</a>')
 assert '--burg:#1b2b4d;--burg2:#0b1630;--paper:#f6efdc;' in PAGE
 PAGE = PAGE.replace('--burg:#1b2b4d;--burg2:#0b1630;--paper:#f6efdc;', '--burg:#0f6f73;--burg2:#0a4a4d;--paper:#fbf7ec;')

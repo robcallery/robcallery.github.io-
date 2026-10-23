@@ -15,11 +15,12 @@ SHELVES = [
  ('airports', 'Airports', '#3f4655', '#ffcd00', '#ffcd00'),
  ('us-capitals', 'US State Capitals', '#7a1f2b', '#d9b45a', '#f3e2b8'),
  ('disney-parks', 'Disney Parks', '#2a3f8f', '#d9b45a', '#ffffff'),
+ ('f1-2026', 'F1 in 2026', '#e10600', '#111111', '#ffffff'),
 ]
 # optional extras per book: words before the title, and a note printed in the contents
 PREFIX = {'us-capitals': 'Travelling the'}
 DEFAULT_NOTE = 'Prices were researched in October 2026 and are a rough guide - check before you go.'
-NOTE = {'disney-parks': 'Prices are correct as of 22 October 2026, where shown. Beer is not sold everywhere in the parks, and menus, festival booths and prices change often - check before you go.', 'us-capitals': 'Prices are the 2026 statewide median beer order (Toast), not a measured pint in the city. Bars and facts are research leads and are still being checked.'}
+NOTE = {'f1-2026': "Prices are Numbeo's October 2026 average for a half-litre draught in the host city, or the nearest city it covers. Calendar as of October 2026 - Bahrain's race moved to Sepang and Saudi Arabia was dropped. Bars were checked in October 2026, but check before you go.", 'disney-parks': 'Prices are correct as of 22 October 2026, where shown. Beer is not sold everywhere in the parks, and menus, festival booths and prices change often - check before you go.', 'us-capitals': 'Prices are the 2026 statewide median beer order (Toast), not a measured pint in the city. Bars and facts are research leads and are still being checked.'}
 SHELF_JSON = json.dumps([{'id': a, 't': b, 'c': c, 'b': d, 'i': e, 'p': PREFIX.get(a, 'Travelling'), 'n': NOTE.get(a, DEFAULT_NOTE)} for a, b, c, d, e in SHELVES])
 # which shelf a guide sits on (a guide can also say shelf:"..." itself)
 SHELF_OF_JS = r'''function shelfOf(g){
