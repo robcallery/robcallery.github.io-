@@ -29,11 +29,17 @@ THEME = r'''
   .top a.back:hover, .top a.back:focus-visible { border-color: var(--accent); color: var(--accent); }
   .card-box { border: 2px solid rgba(255,255,255,.85); backdrop-filter: blur(3px); }
   .tr.hd { background: rgba(0,0,0,.45) !important; }
-  .tr { height: 29px; } .tr.hd { height: 26px; }
-  .swap { height: 614px; } .g { padding-top: 6px; padding-bottom: 6px; }
+  /* the right column always fills the space between the top bar and the ticker; the table shares what's left across its rows */
+  .right { display: flex; flex-direction: column; min-height: 0; overflow: hidden; }
+  .right .card-box:first-child { flex: none; }
+  .right .card-box:last-child { flex: 1 1 auto; min-height: 0; display: flex; flex-direction: column; }
+  .card-head { flex: none; }
+  .swap { flex: 1 1 auto; height: auto !important; min-height: 0; }
+  #table { display: grid; grid-template-rows: 26px; grid-auto-rows: minmax(0, 1fr); height: 100%; }
+  .tr { height: auto !important; min-height: 0; padding-top: 0; padding-bottom: 0; line-height: 1; overflow: hidden; } .g { padding-top: 6px; padding-bottom: 6px; }
   .g .s.pre { white-space: nowrap; }
   .card-head { white-space: nowrap; gap: 14px; } .card-head > span { flex: none; } .card-head small { overflow: hidden; text-overflow: ellipsis; min-width: 0; }
-  #scores { height: 196px; overflow: hidden; }
+  #scores { overflow: hidden; }
   .right { padding: 16px 0 14px; gap: 14px; }
   .side .tname { font-size: 54px; text-shadow: 0 4px 14px rgba(0,0,0,.8); }
   .venue, .top .meta { text-shadow: 0 2px 8px rgba(0,0,0,.8); }
@@ -71,7 +77,9 @@ THEME = r'''
     .right { padding: 0; gap: 14px; }
     .g { font-size: 17px; padding: 6px 8px; grid-template-columns: 1fr auto 1fr 34px; } .g .st { font-size: 13px; } .g .s.pre { font-size: 15px; }
     .card-head { font-size: 18px; }
-    .swap { height: auto; } .view { position: static; display: none; opacity: 1; } .view.on { display: block; }
+    .swap { height: auto !important; } .view { position: static; display: none; opacity: 1; } .view.on { display: block; }
+    #table { display: block; height: auto; } .right .card-box:last-child { display: block; } .right { overflow: visible; }
+    .tr { height: 28px !important; }
     .tr { font-size: 16px; height: 28px; grid-template-columns: 24px 22px 1fr 26px 36px 36px; }
     .fx-row { grid-template-columns: 80px 1fr 80px; font-size: 17px; height: 44px; padding: 0 10px; }
     .fx-teams { font-size: 17px; }
@@ -166,7 +174,7 @@ __SCRIPT__
       home: Object.assign(home, { xi: [], subs: [] }), away: Object.assign(away, { xi: [], subs: [] }),
       tickerSpeed: 90, tableSecs: 20, factsSecs: 20,
       manualStats: { xg: ['', ''], touchesOppBox: ['', ''], bigChances: ['', ''], bigChancesMissed: ['', ''] },
-      maxScoresShown: 5, zones: { ucl: [1, 4], uel: [5, 5], rel: [18, 20] }, pollSeconds: 20 };
+      maxScoresShown: 4, zones: { ucl: [1, 4], uel: [5, 5], rel: [18, 20] }, pollSeconds: 20 };
     if (pick.lg !== 'eng.1') cfg.zones = { ucl: [1, 2], uel: [3, 6], rel: [22, 24] };
     // the big screen in the stadium follows the game
     var bh = document.getElementById('bsHead'), bm = document.getElementById('bsMain'), bs = document.getElementById('bsSub');
