@@ -497,7 +497,7 @@ function startCentre(CONFIG) {
   const API = 'https://site.api.espn.com/apis';
   const kickoff = new Date(CONFIG.kickoff);
   const fotmob = id => `https://images.fotmob.com/image_resources/logo/teamlogo/${id}.png`;
-  const logoOf = t => window.teamMarker(t);   // our own markers, never club crests
+  const logoOf = t => t?.logo || t?.logos?.[0]?.href || (t?.id ? `https://a.espncdn.com/i/teamlogos/soccer/500/${t.id}.png` : window.teamMarker(t));
   const matches = (team, wanted) => {
     const w = norm(wanted);
     return [team.displayName, team.shortDisplayName, team.name, team.location]
@@ -886,7 +886,7 @@ function startCentre(CONFIG) {
   var SHORT = { 'Manchester United': 'Man Utd', 'Manchester City': 'Man City', 'Tottenham Hotspur': 'Spurs', 'Wolverhampton Wanderers': 'Wolves',
     'Brighton & Hove Albion': 'Brighton', 'Nottingham Forest': "Nott'm Forest", 'Newcastle United': 'Newcastle', 'West Ham United': 'West Ham', 'Leeds United': 'Leeds' };
   function teamOf(c) { var t = c.team || {}; var col = (t.color && !/^(000000|ffffff)$/i.test(t.color)) ? '#' + t.color : (t.alternateColor ? '#' + t.alternateColor : '#c9d2e6');
-    return { id: String(t.id || c.id), name: SHORT[t.displayName] || t.shortDisplayName || t.displayName || t.name || '', color: col, logo: window.teamMarker(t) }; }
+    return { id: String(t.id || c.id), name: SHORT[t.displayName] || t.shortDisplayName || t.displayName || t.name || '', color: col, logo: t.logo || ((t.logos || [])[0] || {}).href || (t.id ? 'https://a.espncdn.com/i/teamlogos/soccer/500/' + t.id + '.png' : window.teamMarker(t)) }; }
   var found = [];
   function scan(d, lg, label) {
     ((d && d.events) || []).forEach(function (e) {
