@@ -454,6 +454,21 @@ def poster_world():
   <circle cx="75" cy="10" r="3.5" fill="#1e3f9a"/><circle cx="74" cy="9" r="1.2" fill="#fff" opacity=".7"/>
 </svg>'''
 
+def poster_f1():
+    chq = ''.join(f'<rect x="{10+i*8.125:.2f}" y="{120+(j*8)}" width="8.125" height="8" fill="{"#111" if (i+j)%2 else "#fff"}"/>' for i in range(16) for j in range(2))
+    return '''<svg viewBox="0 0 150 205" role="img" aria-label="Poster: F1 Pit Wall">
+  <rect x="2" y="4" width="146" height="199" rx="2" fill="#f4f1ea"/>
+  <rect x="10" y="12" width="130" height="124" fill="#0d1120"/>
+  <path d="M10 92 L140 64 L140 80 L10 108 Z" fill="#e10600"/>
+  ''' + ''.join(f'<circle cx="{40+k*17}" cy="34" r="5.5" fill="#ff1a1a"/>' for k in range(5)) + '''
+  <rect x="30" y="25" width="90" height="18" rx="3" fill="none" stroke="#2a3048" stroke-width="2"/>
+  <g transform="translate(33 76) scale(.42)"><path d="M0 0 h120 l16 8 h40 l6 10 h-210 l8 -10 h20 z" fill="#fff"/><circle cx="18" cy="20" r="10" fill="#111" stroke="#fff" stroke-width="3"/><circle cx="150" cy="20" r="10" fill="#111" stroke="#fff" stroke-width="3"/><rect x="-14" y="-6" width="10" height="20" fill="#fff"/><rect x="176" y="6" width="14" height="12" fill="#fff"/></g>
+  ''' + chq + '''
+  <text x="75" y="166" text-anchor="middle" font-family="Bebas Neue, Impact, sans-serif" font-size="26" fill="#0d1120" letter-spacing="1" textLength="112" lengthAdjust="spacingAndGlyphs">F1 PIT WALL</text>
+  <text x="75" y="184" text-anchor="middle" font-family="Bebas Neue, Impact, sans-serif" font-size="11" fill="#e10600" letter-spacing="1" textLength="112" lengthAdjust="spacingAndGlyphs">TIMING · RESULTS · BEER</text>
+  <circle cx="75" cy="10" r="3.5" fill="#e10600"/><circle cx="74" cy="9" r="1.2" fill="#fff" opacity=".7"/>
+</svg>'''
+
 def shelf_svg():
     rnd = random.Random(9)
     g = ['<svg viewBox="0 0 220 240" aria-hidden="true">']
@@ -497,6 +512,7 @@ PUB_CSS = """
   .hubtv>svg,.tvl>svg,.shelf>svg{width:100%;height:auto;display:block;overflow:visible}
   .tier{display:flex;align-items:center;justify-content:center;gap:clamp(14px,4vw,70px)}
   .tier.low{align-items:flex-end;gap:clamp(10px,2.6vw,44px)}
+  .tier.low .poster{align-self:center;width:min(10vw,21vh,170px)}
   .hubtv{width:min(46vw,46vh,720px);filter:drop-shadow(0 18px 22px rgba(0,0,0,.5))}
   .tvl{display:block;text-decoration:none;outline:none;transition:transform .3s ease,filter .3s ease;filter:drop-shadow(0 16px 18px rgba(0,0,0,.45))}
   .tvl:hover,.tvl:focus-visible{transform:translateY(-6px) scale(1.03);filter:drop-shadow(0 0 22px rgba(255,205,0,.55)) drop-shadow(0 16px 18px rgba(0,0,0,.45))}
@@ -525,7 +541,9 @@ PUB_CSS = """
     .tv-leeds{width:min(84vw,420px)}
     .tv-world{width:min(76vw,380px)}
     .tier.posters{display:flex!important;gap:26px;padding-top:8px}
-    .tier.posters .poster{width:min(36vw,170px)}
+    .tier.low .poster{display:none}
+    .tier.posters{flex-wrap:wrap;justify-content:center;gap:16px!important}
+    .tier.posters .poster{width:min(26vw,150px)}
   }
   .tier.posters{display:none}
   @media (max-height:700px) and (min-aspect-ratio:1/1){body.pubpage header{padding-top:8px;padding-bottom:4px}.front{height:24px}body.pubpage footer{padding:6px 16px}}

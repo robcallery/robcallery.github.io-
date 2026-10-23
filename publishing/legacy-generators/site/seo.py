@@ -12,6 +12,7 @@ PAGES={
  "site/match-hub/index.html":("/match-hub/","Match Hub - Rob Callery","The Match Hub pub: a Leeds United telly and a retro teletext telly showing a random live game somewhere in the world, with the local beer."),
  "site/match-hub/leeds/index.html":("/match-hub/leeds/","Leeds United Match Centre - Rob Callery","Rob Callery's Leeds United match centre: live score, goals and cards, line-ups, today's scores, the live table and match facts, from a seat at Elland Road."),
  "site/match-hub/leeds/ceefax/index.html":("/match-hub/leeds/ceefax/","CALFAX 303 - Rob Callery","Leeds United on teletext: the Leeds game, the other scores and the league table, Ceefax style."),
+ "site/match-hub/f1/index.html":("/match-hub/f1/","F1 Pit Wall - Rob Callery","Rob Callery's F1 pit wall: live timing tower on race weekends, the next Grand Prix countdown, results, both championships and a local beer for every race."),
  "site/match-hub/world/index.html":("/match-hub/world/","CALFAX 302 - Rob Callery","Teletext-style football: a random live game somewhere in the world, and the local beer to drink with it."),
 }
 person={"@context":"https://schema.org","@graph":[
