@@ -146,7 +146,7 @@ __SCRIPT__
   var SHORT = { 'Manchester United': 'Man Utd', 'Manchester City': 'Man City', 'Tottenham Hotspur': 'Spurs', 'Wolverhampton Wanderers': 'Wolves',
     'Brighton & Hove Albion': 'Brighton', 'Nottingham Forest': "Nott'm Forest", 'Newcastle United': 'Newcastle', 'West Ham United': 'West Ham', 'Leeds United': 'Leeds' };
   function teamOf(c) { var t = c.team || {}; var col = (t.color && !/^(000000|ffffff)$/i.test(t.color)) ? '#' + t.color : (t.alternateColor ? '#' + t.alternateColor : '#c9d2e6');
-    return { id: String(t.id || c.id), name: SHORT[t.displayName] || t.shortDisplayName || t.displayName || t.name || '', color: col, logo: t.logo || ((t.logos || [])[0] || {}).href || (t.id ? 'https://a.espncdn.com/i/teamlogos/soccer/500/' + t.id + '.png' : window.teamMarker(t)) }; }
+    return { id: String(t.id || c.id), name: SHORT[t.displayName] || t.shortDisplayName || t.displayName || t.name || '', color: col, logo: (String(t.id || c.id) === '357' ? 'https://images.fotmob.com/image_resources/logo/teamlogo/8463.png' : '') || t.logo || ((t.logos || [])[0] || {}).href || (t.id ? 'https://a.espncdn.com/i/teamlogos/soccer/500/' + t.id + '.png' : window.teamMarker(t)) }; }
   var found = [];
   function scan(d, lg, label) {
     ((d && d.events) || []).forEach(function (e) {
