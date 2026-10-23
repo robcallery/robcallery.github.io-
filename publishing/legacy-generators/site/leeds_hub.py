@@ -7,7 +7,7 @@ svg, _ = scene(screen=False)
 STYLE = open(D + 'mc/style.css').read()
 BODY = open(D + 'mc/body.html').read()
 LOGO = open(D + 'mc/logo.html').read()
-SCRIPT = open(D + 'mc/script.js').read()
+SCRIPT = open(D + 'mc/markers.js').read() + '\n' + open(D + 'mc/script.js').read()
 
 # swap Rob's pitch theme for a stadium theme (keeps his layout and type)
 THEME = r'''
@@ -143,11 +143,10 @@ __SCRIPT__
   var LEAGUES = [['eng.1', 'Premier League'], ['eng.2', 'Championship'], ['eng.fa', 'FA Cup'], ['eng.league_cup', 'Carabao Cup']];
   var API = 'https://site.api.espn.com/apis/site/v2/sports/soccer/';
   function get(u) { return fetch(u, { cache: 'no-store' }).then(function (r) { return r.ok ? r.json() : null; }).catch(function () { return null; }); }
-  var logo = function (id) { return 'https://a.espncdn.com/i/teamlogos/soccer/500/' + id + '.png'; };
   var SHORT = { 'Manchester United': 'Man Utd', 'Manchester City': 'Man City', 'Tottenham Hotspur': 'Spurs', 'Wolverhampton Wanderers': 'Wolves',
     'Brighton & Hove Albion': 'Brighton', 'Nottingham Forest': "Nott'm Forest", 'Newcastle United': 'Newcastle', 'West Ham United': 'West Ham', 'Leeds United': 'Leeds' };
   function teamOf(c) { var t = c.team || {}; var col = (t.color && !/^(000000|ffffff)$/i.test(t.color)) ? '#' + t.color : (t.alternateColor ? '#' + t.alternateColor : '#c9d2e6');
-    return { id: String(t.id || c.id), name: SHORT[t.displayName] || t.shortDisplayName || t.displayName || t.name || '', color: col, logo: logo(t.id || c.id) }; }
+    return { id: String(t.id || c.id), name: SHORT[t.displayName] || t.shortDisplayName || t.displayName || t.name || '', color: col, logo: window.teamMarker(t) }; }
   var found = [];
   function scan(d, lg, label) {
     ((d && d.events) || []).forEach(function (e) {

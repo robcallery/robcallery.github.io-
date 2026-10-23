@@ -6,7 +6,7 @@ function startCentre(CONFIG) {
   const API = 'https://site.api.espn.com/apis';
   const kickoff = new Date(CONFIG.kickoff);
   const fotmob = id => `https://images.fotmob.com/image_resources/logo/teamlogo/${id}.png`;
-  const logoOf = t => t?.logo || t?.logos?.[0]?.href || '';
+  const logoOf = t => window.teamMarker(t);   // our own markers, never club crests
   const matches = (team, wanted) => {
     const w = norm(wanted);
     return [team.displayName, team.shortDisplayName, team.name, team.location]
