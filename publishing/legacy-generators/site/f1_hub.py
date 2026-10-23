@@ -290,7 +290,9 @@ SCRIPT = r'''
     if (L && L.state === 'in') {
       head.classList.add('live');
       $('towerTitle').innerHTML = '<span class="dot"></span>Live';
-      $('towerSub').textContent = abbr(L.c);
+      var isRace = /^(Race|SR|Sprint)$/i.test(((L.c.type || {}).abbreviation) || ''), lap = +((L.c.status || {}).period) || 0;
+      $('towerSub').textContent = abbr(L.c) + (isRace && lap ? ' · Lap ' + lap : '');
+      S.lap = isRace ? lap : 0;
       $('tower').innerHTML = towerRows(espnRows(L.c));
       return;
     }
@@ -372,7 +374,7 @@ SCRIPT = r'''
       cd.classList.add('live');
       $('cdHead').innerHTML = '<span class="dot"></span>' + esc(live.name) + ' - live now';
       var left = Math.max(0, Math.floor((+live.date + (LEN[live.key] || 60) * 6e4 - now) / 1000));
-      $('cdNum').textContent = live.key === 'Race' ? 'LIGHTS OUT' : pad(Math.floor(left / 60)) + ':' + pad(left % 60) + ' TO GO';
+      $('cdNum').textContent = live.key === 'Race' ? (S.lap ? 'LAP ' + S.lap : 'LIGHTS OUT') : pad(Math.floor(left / 60)) + ':' + pad(left % 60) + ' TO GO';
       return;
     }
     cd.classList.remove('live');
@@ -416,8 +418,8 @@ SCRIPT = r'''
     if (!S.races.length && !S.drivers.length) { var m = $('msg'); m.textContent = 'The F1 timing feed is having a pit stop - try again in a minute.'; m.style.display = 'block'; return; }
     $('msg').style.display = 'none';
     $('season').textContent = 'Formula 1 · ' + (S.season || (S.races[0] || {}).season || '');
-    S.next = pickNext(now);
-    renderRace(now); renderTower(now); renderPodium(); renderCons(); renderTicker();
+    S.next = pickNext(now); S.lap = 0;
+    renderRace(now); renderTower(now); tickCountdown(); renderPodium(); renderCons(); renderTicker();
   }
 
   setInterval(tickCountdown, 1000);
