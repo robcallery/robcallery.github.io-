@@ -306,7 +306,8 @@ SCRIPT = r'''
   function liveSession() {
     var evs = (S.espn && S.espn.events) || [], best = null;
     evs.forEach(function (e) { (e.competitions || []).forEach(function (c) {
-      var st = ((c.status || {}).type || {}).state;
+      var ty = (c.status || {}).type || {}, st = ty.state;
+      if (st === 'in' && /end of session|final|finished|complete/i.test((ty.detail || '') + ' ' + (ty.description || ''))) st = 'post';   // ESPN keeps 'in' for a while after the flag
       if (st === 'in') best = { e: e, c: c, state: 'in' };
       else if (st === 'post' && (!best || best.state !== 'in')) { var ago = Date.now() - new Date(c.date || e.date); if (ago > 0 && ago < 6 * 36e5) best = { e: e, c: c, state: 'post' }; }
     }); });
@@ -398,7 +399,10 @@ SCRIPT = r'''
     });
     // trust the timing feed if it says a session is running
     var EL = liveSession();
-    if (EL && EL.state === 'in' && !live) live = nxt;
+    if (EL && EL.state === 'in' && !live) {   // only the session ESPN names, and only once it has started
+      var m = ses.filter(function (x) { return ABBR[x.key] === ((EL.c.type || {}).abbreviation); })[0];
+      if (m && now >= +m.date) { live = m; m.state = 'live'; if (nxt === m) nxt = ses.filter(function (x) { return x.state === 'pre' && x !== m; })[0] || null; }
+    }
     S.ses = ses; S.liveSes = live; S.nextSes = nxt;
     $('sched').style.setProperty('--n', ses.length);
     renderTiles();
@@ -493,7 +497,7 @@ SCRIPT = r'''
     var c = S.tcache[k];
     if (c && (c.full || Date.now() - c.at < 5 * 6e4)) return Promise.resolve(c.data);
     return openf1(k).catch(function () { return null; }).then(function (d) { return d || jolpica(k).catch(function () { return null; }); }).then(function (d) {
-      if (!d) { var ec = espnComp(k); if (ec && (ec.competitors || []).length) d = { rows: espnRows(ec).map(function (x) { return Object.assign(x, { time: '', gap: '', laps: '' }); }), src: 'Order from ESPN - lap times show here once OpenF1 has them (it locks while any session is live)', timeHead: 'BEST LAP', lapsHead: 'LAPS', partial: true }; }
+      if (!d) { var ec = espnComp(k); if (ec && (ec.competitors || []).length) d = { rows: espnRows(ec).map(function (x) { return Object.assign(x, { time: '', gap: '', laps: '' }); }), src: 'Final order from ESPN - lap times appear here once OpenF1 unlocks (it stays locked during and for a while after each session). Checks again every 5 minutes.', timeHead: 'BEST LAP', lapsHead: 'LAPS', partial: true }; }
       if (d) S.tcache[k] = { data: d, at: Date.now(), full: !d.partial && Date.now() - +((sesOf(k) || {}).date || 0) > 3 * 36e5 };
       return d;
     });
