@@ -88,12 +88,12 @@
   .ses.next { border-color:#fff; background:rgba(255,255,255,.12); }
   .ses.live { border-color:var(--live); background:rgba(255,42,42,.22); }
   .podium { flex:1; min-height:0; }
-  #podium { flex:1; display:grid; grid-template-columns:1fr 1fr 1fr; gap:16px; padding:16px 20px; align-items:end; min-height:0; }
-  .pd { display:flex; flex-direction:column; align-items:center; text-align:center; gap:4px; min-width:0; }
+  #podium { flex:1; display:grid; grid-template-columns:1fr 1fr 1fr; grid-template-rows:minmax(0,1fr); gap:16px; padding:14px 20px 0; align-items:stretch; min-height:0; overflow:hidden; }
+  .pd { display:flex; flex-direction:column; align-items:center; justify-content:flex-end; text-align:center; gap:4px; min-width:0; min-height:0; height:100%; }
   .pd .nm { font-size:26px; font-weight:700; line-height:1.05; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; max-width:100%; }
   .pd .tm { font-size:18px; color:var(--muted); white-space:nowrap; }
   .pd .step { width:100%; display:flex; align-items:flex-start; justify-content:center; font-size:46px; font-weight:700; color:#0b1020; padding-top:4px; border-top:6px solid var(--c,#fff); background:#e9ecf3; }
-  .pd.p1 .step { height:190px; } .pd.p2 .step { height:140px; } .pd.p3 .step { height:100px; }
+  .pd .step { flex:0 1 auto; min-height:44px; } .pd.p1 .step { height:58%; } .pd.p2 .step { height:42%; } .pd.p3 .step { height:28%; }
   /* right */
   .right { display:flex; flex-direction:column; gap:22px; min-height:0; }
   .cons { flex:1; }
@@ -131,7 +131,7 @@
     #cons .tr { grid-template-columns:30px 5px minmax(0,1fr) 54px; }
     .tr .team { font-size:13px; }
     #podium { padding:12px; gap:8px; } .pd .nm { font-size:16px; } .pd .tm { font-size:12px; } .pd .step { font-size:28px; }
-    .pd.p1 .step { height:70px; } .pd.p2 .step { height:52px; } .pd.p3 .step { height:38px; }
+    #podium { height:190px; flex:none; } .pd.p1 .step { height:52%; } .pd.p2 .step { height:38%; } .pd.p3 .step { height:26%; }
     .beer .bn { font-size:22px; } .beer .bl { font-size:15px; }
     .ticker { height:46px; } .ticker .lab, .ticker .track { font-size:15px; }
   }
