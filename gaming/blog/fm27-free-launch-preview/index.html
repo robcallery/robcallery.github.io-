@@ -24,7 +24,7 @@
 <style>
 :root{--navy:#0a1838;--yellow:#ffcd00;--cream:#f7f2e4;--muted:#b8c3dc;--purple:#9b5cff}
 *{box-sizing:border-box;margin:0;padding:0}
-body{min-height:100vh;background:radial-gradient(ellipse 90% 60% at 50% 0,#2a1d5c 0,#141a3d 45%,#0a0e22 100%);color:var(--cream);font-family:Inter,system-ui,sans-serif;line-height:1.55;display:flex;flex-direction:column}
+body{min-height:100vh;background:radial-gradient(ellipse 90% 60% at 50% 0,#2a1d5c 0,#141a3d 45%,#0a0e22 100%) no-repeat,#0a0e22;color:var(--cream);font-family:Inter,system-ui,sans-serif;line-height:1.55;display:flex;flex-direction:column}
 a{color:inherit}
 header{display:flex;align-items:center;justify-content:space-between;gap:16px;max-width:1160px;width:100%;margin:0 auto;padding:22px 16px}
 .brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:"Bebas Neue",Impact,sans-serif;font-size:1.6rem;letter-spacing:.06em;white-space:nowrap}
@@ -38,8 +38,20 @@ footer{text-align:center;padding:22px 16px;color:var(--muted);font-size:.85rem;b
 .intro h1{font-family:"Bebas Neue",Impact,sans-serif;font-weight:400;font-size:clamp(2.6rem,7vw,4.6rem);letter-spacing:.06em;line-height:1}
 .intro h1 span{color:var(--yellow)}
 .intro p{color:var(--muted);margin-top:.5rem;font-size:1.08rem}
-.room{max-width:1200px;margin:22px auto 0;padding:0 16px}
-.room svg{display:block;width:100%;height:auto;border-radius:16px;box-shadow:0 30px 60px rgba(0,0,0,.55)}
+/* the hub page is the bedroom: wall, LED strip, neon sign, desk running off both edges */
+body.den{min-height:100dvh;overflow-x:hidden;overflow:clip;position:relative;
+  background:radial-gradient(ellipse 70% 55% at 50% 0,rgba(123,60,255,.42),rgba(58,73,255,.12) 55%,transparent 75%) no-repeat,
+  repeating-linear-gradient(90deg,transparent 0 118px,rgba(255,255,255,.025) 118px 120px),linear-gradient(#151b3a,#0c1027 75%) fixed,#0c1027}
+body.den::before{content:"";position:absolute;left:0;right:0;top:0;height:5px;background:#9b5cff;box-shadow:0 0 18px 4px rgba(155,92,255,.6)}
+body.den main{display:flex;flex-direction:column}
+body.den footer{position:relative;z-index:1}
+.neon{text-align:center;padding:4px 16px 18px;margin-block:auto}
+.neon h1{display:inline-block;font-family:"Bebas Neue",Impact,sans-serif;font-weight:400;font-size:clamp(2rem,10vw,4.4rem);letter-spacing:.08em;line-height:1;white-space:nowrap;padding:.12em .45em .08em;border:3px solid #ff3b8d;border-radius:14px;
+  color:#fff;text-shadow:0 0 6px #fff,0 0 16px #ff3b8d,0 0 32px #ff3b8d;box-shadow:0 0 14px rgba(255,59,141,.75),inset 0 0 14px rgba(255,59,141,.5)}
+.neon h1 span{color:#fff6c2;text-shadow:0 0 6px #fff,0 0 16px #ffcd00,0 0 32px #ffcd00}
+.neon p{color:var(--muted);margin-top:.7rem;font-size:1rem}
+.room{padding:0 16px;position:relative}
+.room svg{display:block;margin:0 auto;width:min(100%,1240px,calc((100dvh - 300px) * 1.58));min-width:min(100%,640px);height:auto;overflow:visible}
 .scr{cursor:pointer;outline:none}
 .scr .glass{transition:filter .25s}
 .scr:hover .glass,.scr:focus-visible .glass{filter:brightness(1.25) drop-shadow(0 0 18px rgba(155,92,255,.9))}
@@ -47,13 +59,14 @@ footer{text-align:center;padding:22px 16px;color:var(--muted);font-size:.85rem;b
 .rec{animation:blink 1.2s steps(2) infinite}
 @keyframes blink{50%{opacity:.25}}
 .picks{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;max-width:1200px;margin:22px auto 60px;padding:0 16px}
+body.den .picks{display:none}
 .pick{display:block;text-decoration:none;border-radius:12px;padding:14px 18px;background:#141a33;border:1.5px solid #2b3360;transition:border-color .2s,background .2s}
 .pick:hover,.pick:focus-visible{border-color:var(--yellow);background:#1b2245}
 .pick small{display:block;font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
 .pick b{display:block;font-family:"Bebas Neue",Impact,sans-serif;font-weight:400;font-size:1.7rem;letter-spacing:.05em;line-height:1.1}
 .pick span{font-size:.9rem;color:var(--muted)}
 .pick.tw b{color:#c9a8ff}.pick.yt b{color:#ff6b6b}.pick.bl b{color:var(--yellow)}
-@media (max-width:760px){.picks{grid-template-columns:1fr}}
+@media (max-width:760px){.picks{grid-template-columns:1fr}body.den .room{order:2;margin-top:22px}body.den .picks{order:3;position:relative;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:22px auto 26px;width:100%}body.den .pick{background:rgba(20,26,51,.85);padding:10px 8px;text-align:center}body.den .pick span{display:none}body.den .pick small{font-size:.62rem;letter-spacing:.1em}body.den .pick b{font-size:1.15rem}}
 @media (max-width:520px){.brand{font-size:1.3rem}.brand svg{width:30px;height:30px}.back{font-size:.8rem}}
 @media (prefers-reduced-motion:reduce){.rec{animation:none}}
 /* blog */
