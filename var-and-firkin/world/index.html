@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- seo -->
+<meta name="description" content="Teletext-style football: a random live game somewhere in the world, and the local beer to drink with it.">
+<link rel="canonical" href="https://callery.co.uk/var-and-firkin/world/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Rob Callery">
+<meta property="og:title" content="CALFAX 302 - Rob Callery">
+<meta property="og:description" content="Teletext-style football: a random live game somewhere in the world, and the local beer to drink with it.">
+<meta property="og:url" content="https://callery.co.uk/var-and-firkin/world/">
+<meta property="og:image" content="https://callery.co.uk/og-image.png">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@calz88">
+<meta name="twitter:image" content="https://callery.co.uk/og-image.png">
+<!-- /seo -->
+<title>CALFAX 302 - Rob Callery</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+<style>
+  :root{--bk:#000;--wh:#fff;--ye:#ff0;--cy:#0ff;--gr:#0f0;--re:#f00;--ma:#f0f;--bl:#00f}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{background:#000;color:var(--wh);min-height:100%}
+  body{font-family:VT323,'Courier New',monospace;display:flex;justify-content:center;align-items:center;min-height:100vh;min-height:100dvh;padding:16px}
+  .tv{width:min(100%,820px);font-size:clamp(14px,min(3.5vw,2.9vh),30px);line-height:1.12;position:relative;padding:.4em .6em .8em;border-radius:14px;background:#000;box-shadow:0 0 0 2px #111,0 0 60px rgba(0,255,255,.07) inset}
+  .tv::after{content:"";position:absolute;inset:0;border-radius:14px;pointer-events:none;background:repeating-linear-gradient(180deg,rgba(255,255,255,.04) 0 1px,transparent 1px 3px)}
+  .row{white-space:pre-wrap;min-height:1.12em}
+  .hdr{display:flex;justify-content:space-between;gap:.5em}
+  .w{color:var(--wh)}.y{color:var(--ye)}.c{color:var(--cy)}.g{color:var(--gr)}.r{color:var(--re)}.m{color:var(--ma)}
+  .band{display:flex;gap:.18em;margin:.25em 0 .1em}
+  .band i{display:block;flex:1;height:.55em;background:var(--cy)}.band i:nth-child(3n){height:.85em}.band i:nth-child(4n){opacity:.65}
+  .strap{display:flex;justify-content:space-between;background:var(--bl);padding:0 .3em;margin:.2em 0 .1em}
+  .title{font-size:2.15em;line-height:1;color:var(--ye);letter-spacing:.04em;margin:.12em 0 .2em;white-space:nowrap;overflow:hidden}
+  .screen{min-height:17.5em}
+  .ix{display:grid;grid-template-columns:minmax(0,1fr) auto 3.4ch;gap:0 1ch;text-decoration:none;color:var(--wh);white-space:nowrap}
+  .ix:hover .nm,.ix:focus-visible .nm{color:var(--ye)}.ix:focus-visible{outline:2px solid var(--cy)}
+  .ix .nm{overflow:hidden;text-overflow:clip}
+  .ix .nm::after{content:" ........................................................";color:#4a4a4a}
+  .ix .pg{color:var(--ye);text-align:right}
+  .ix.leeds .nm{color:var(--ye)}
+  .gm{display:grid;grid-template-columns:minmax(0,1fr) 5ch minmax(0,1fr) 7ch;gap:0 .6ch;white-space:nowrap}
+  .gm span{overflow:hidden;text-overflow:clip}
+  .gm .h{text-align:right}.gm .s{text-align:center}.gm .t{text-align:right}
+  .ev{display:grid;grid-template-columns:minmax(0,1fr) 5ch minmax(0,1fr) 7ch;gap:0 .6ch;font-size:.82em;line-height:1.18;color:#cfcfcf;margin-bottom:.15em}
+  .ev div{overflow:hidden;white-space:nowrap}.ev .eh{text-align:right}
+  .cd{display:inline-block;width:.5em;height:.72em;margin:0 .35em;vertical-align:-.05em}.cd.cy{background:var(--ye)}.cd.cr{background:var(--re)}
+  .dh{color:var(--cy);margin-top:.35em}
+  .live{color:var(--gr)}.ft{color:var(--cy)}
+  .blink{animation:bl 1s steps(2) infinite}@keyframes bl{50%{opacity:0}}
+  .fastext{display:grid;grid-template-columns:repeat(4,1fr);margin-top:.8em}
+  .fastext a{display:block;text-align:center;padding:.18em .2em;text-decoration:none;color:#000;font-size:.95em}
+  .fastext a:hover,.fastext a:focus-visible{outline:3px solid #fff;outline-offset:-3px}
+  .fastext a[aria-disabled="true"]{opacity:.35;pointer-events:none}
+  .k-r{background:var(--re);color:#fff!important}.k-g{background:var(--gr)}.k-y{background:var(--ye)}.k-c{background:var(--cy)}
+  .muted{opacity:.85}.small{font-size:.75em}
+  .typed{color:var(--ye)}
+  .back{display:inline-block;margin-top:.5em;color:var(--cy);text-decoration:none;font-size:.85em}
+  .back:hover{color:var(--ye)}
+  @media (prefers-reduced-motion:reduce){.blink{animation:none}}
+</style>
+</head>
+<body>
+<main class="tv">
+  <h1 style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">CALFAX latest football scores</h1>
+  <div class="row hdr"><span><span class="w" id="pnum">P302</span> <span class="y">CALFAX</span> <span class="typed" id="typed"></span></span><span><span class="w" id="date"></span> <span class="y" id="clock"></span></span></div>
+  <div class="band" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+  <div class="strap"><span class="y">FOOTBALL</span><span class="w" id="sub"></span></div>
+  <div class="title" id="title">LATEST SCORES</div>
+  <div class="screen" id="screen" aria-live="polite"><div class="row c">SEARCHING FOR A SIGNAL<span class="blink">...</span></div></div>
+  <nav class="fastext" aria-label="Fastext">
+    <a href="#302" class="k-r" id="kIndex">INDEX</a>
+    <a href="#" class="k-g" id="kPrev">&#9664; PREV</a>
+    <a href="#" class="k-y" id="kNext">NEXT &#9654;</a>
+    <a href="#310" class="k-c" id="kPrem">PREM</a>
+  </nav>
+  <div class="row muted small" style="margin-top:.6em">Scores from ESPN's public feed, UK times. Type a page number to jump. Drink responsibly.</div>
+  <a class="back" href="/var-and-firkin/">&larr; Back to the VAR &amp; Firkin</a>
+<!-- legal --><div class="row small" style="margin-top:.4em;color:#0ff"><a href="/privacy/" style="color:inherit">PRIVACY</a> <span style="color:#fff">&middot;</span> <a href="/cookies/" style="color:inherit">COOKIES</a></div><!-- /legal -->
+</main>
+<script>
+var COMPS=[{"p": 310, "s": "eng.1", "n": "PREMIER LEAGUE", "beer": "a pint of local cask bitter", "c": "England"}, {"p": 311, "s": "eng.2", "n": "CHAMPIONSHIP", "beer": "a pint of local cask bitter", "c": "England"}, {"p": 312, "s": "eng.3", "n": "LEAGUE ONE", "beer": "a pint of local cask bitter", "c": "England"}, {"p": 313, "s": "eng.4", "n": "LEAGUE TWO", "beer": "a pint of local cask bitter", "c": "England"}, {"p": 314, "s": "eng.fa", "n": "FA CUP", "beer": "a pint of local cask bitter", "c": "England"}, {"p": 315, "s": "eng.league_cup", "n": "CARABAO CUP", "beer": "a pint of local cask bitter", "c": "England"}, {"p": 320, "s": "sco.1", "n": "SCOTTISH PREMIERSHIP", "beer": "Tennent's Lager", "c": "Scotland"}, {"p": 321, "s": "irl.1", "n": "LEAGUE OF IRELAND", "beer": "Guinness", "c": "Ireland"}, {"p": 330, "s": "uefa.champions", "n": "CHAMPIONS LEAGUE", "beer": null, "c": null}, {"p": 331, "s": "uefa.europa", "n": "EUROPA LEAGUE", "beer": null, "c": null}, {"p": 332, "s": "uefa.europa.conf", "n": "CONFERENCE LEAGUE", "beer": null, "c": null}, {"p": 333, "s": "uefa.nations", "n": "NATIONS LEAGUE", "beer": null, "c": null}, {"p": 334, "s": "fifa.world", "n": "WORLD CUP", "beer": null, "c": null}, {"p": 340, "s": "esp.1", "n": "LA LIGA", "beer": "Mahou Cinco Estrellas", "c": "Spain"}, {"p": 341, "s": "esp.2", "n": "LA LIGA 2", "beer": "Mahou Cinco Estrellas", "c": "Spain"}, {"p": 342, "s": "ita.1", "n": "SERIE A", "beer": "Peroni", "c": "Italy"}, {"p": 343, "s": "ger.1", "n": "BUNDESLIGA", "beer": "the local Pils", "c": "Germany"}, {"p": 344, "s": "fra.1", "n": "LIGUE 1", "beer": "Kronenbourg 1664", "c": "France"}, {"p": 345, "s": "ned.1", "n": "EREDIVISIE", "beer": "Heineken", "c": "Netherlands"}, {"p": 346, "s": "por.1", "n": "PRIMEIRA LIGA", "beer": "Super Bock", "c": "Portugal"}, {"p": 347, "s": "bel.1", "n": "BELGIAN PRO LEAGUE", "beer": "Jupiler", "c": "Belgium"}, {"p": 348, "s": "tur.1", "n": "SUPER LIG", "beer": "Efes Pilsen", "c": "Turkey"}, {"p": 349, "s": "gre.1", "n": "GREEK SUPER LEAGUE", "beer": "Mythos", "c": "Greece"}, {"p": 350, "s": "den.1", "n": "DANISH SUPERLIGA", "beer": "Carlsberg", "c": "Denmark"}, {"p": 351, "s": "aut.1", "n": "AUSTRIAN BUNDESLIGA", "beer": "Stiegl", "c": "Austria"}, {"p": 352, "s": "sui.1", "n": "SWISS SUPER LEAGUE", "beer": "Feldschlösschen", "c": "Switzerland"}, {"p": 360, "s": "usa.1", "n": "MLS", "beer": "a local craft IPA", "c": "USA"}, {"p": 361, "s": "mex.1", "n": "LIGA MX", "beer": "Modelo Especial", "c": "Mexico"}, {"p": 362, "s": "bra.1", "n": "BRASILEIRAO", "beer": "Brahma", "c": "Brazil"}, {"p": 363, "s": "arg.1", "n": "ARGENTINE PRIMERA", "beer": "Quilmes", "c": "Argentina"}, {"p": 364, "s": "col.1", "n": "COLOMBIAN PRIMERA", "beer": "Club Colombia", "c": "Colombia"}, {"p": 365, "s": "chi.1", "n": "CHILEAN PRIMERA", "beer": "Escudo", "c": "Chile"}, {"p": 366, "s": "conmebol.libertadores", "n": "COPA LIBERTADORES", "beer": null, "c": null}, {"p": 367, "s": "conmebol.sudamericana", "n": "COPA SUDAMERICANA", "beer": null, "c": null}, {"p": 370, "s": "jpn.1", "n": "J1 LEAGUE", "beer": "Asahi Super Dry", "c": "Japan"}, {"p": 371, "s": "aus.1", "n": "A-LEAGUE", "beer": "Victoria Bitter", "c": "Australia"}, {"p": 372, "s": "ksa.1", "n": "SAUDI PRO LEAGUE", "beer": "nothing - it's a dry country, so a coffee", "c": "Saudi Arabia"}];
+(function(){
+  var $=function(id){return document.getElementById(id)};
+  var API='https://site.api.espn.com/apis/site/v2/sports/soccer/';
+  var esc=function(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})};
+  var pad=function(n){return(n<10?'0':'')+n};
+  var ukDay=function(d){return d.toLocaleDateString('en-GB',{timeZone:'Europe/London',year:'numeric',month:'2-digit',day:'2-digit'})};
+  var hm=function(d){return d.toLocaleTimeString('en-GB',{timeZone:'Europe/London',hour:'2-digit',minute:'2-digit'})};
+  var dayShort=function(d){return d.toLocaleDateString('en-GB',{timeZone:'Europe/London',weekday:'short'}).toUpperCase()};
+  var dayLong=function(d){return d.toLocaleDateString('en-GB',{timeZone:'Europe/London',weekday:'short',day:'numeric',month:'short'}).toUpperCase().replace(/,/g,'')};
+  var ymd=function(d){return d.getFullYear()+pad(d.getMonth()+1)+pad(d.getDate())};
+  function get(u){return fetch(u,{cache:'no-store'}).then(function(r){return r.ok?r.json():null}).catch(function(){return null})}
+  var BY={};COMPS.forEach(function(c){BY[c.p]=c});
+  var SHORT={'Manchester United':'Man Utd','Manchester City':'Man City','Tottenham Hotspur':'Spurs','Wolverhampton Wanderers':'Wolves','Brighton & Hove Albion':'Brighton',
+    'Nottingham Forest':"Nott'm Forest",'Newcastle United':'Newcastle','West Ham United':'West Ham','Leeds United':'Leeds','AFC Bournemouth':'Bournemouth','Queens Park Rangers':'QPR',
+    'West Bromwich Albion':'West Brom','Sheffield Wednesday':'Sheff Wed','Sheffield United':'Sheff Utd','Crystal Palace':'C Palace'};
+  function nm(t){t=t||{};return SHORT[t.displayName]||t.shortDisplayName||t.displayName||t.name||''}
+  function mapEv(e){
+    var c=(e.competitions||[])[0]||{},cs=c.competitors||[],h=null,a=null;
+    cs.forEach(function(t){if(t.homeAway==='home')h=t;else a=t});h=h||cs[0];a=a||cs[1];if(!h||!a)return null;
+    var st=c.status||e.status||{},ty=st.type||{};
+    return {id:e.id,date:new Date(e.date),state:ty.state||'pre',name:ty.name||'',detail:ty.shortDetail||'',clock:st.displayClock||'',
+      home:nm(h.team),away:nm(a.team),hs:h.score,as:a.score,ev:events(c,h,a),leeds:String((h.team||{}).id)==='357'||String((a.team||{}).id)==='357'};
+  }
+  function surname(d){var p=(d.athletesInvolved||[])[0]||{};return String(p.shortName||p.displayName||'').replace(/^([A-Z]\.\s*)+/,'')}
+  function mins(x){x=String(x||'').replace(/'/g,'');return x?x+"'":''}   // "45'+1'" -> "45+1"
+  function events(c,h,a){   // goals grouped by scorer, then cards, for each side
+    var hid=String((h.team||{}).id),out={h:{goals:[],cards:[]},a:{goals:[],cards:[]}};
+    (c.details||[]).forEach(function(d){
+      var who=surname(d);if(!who)return;
+      var side=String((d.team||{}).id)===hid?'h':'a',t=out[side];
+      if(d.scoringPlay){
+        var tag=d.ownGoal?' og':d.penaltyKick?' pen':'';
+        var ex=t.goals.filter(function(x){return x.who===who})[0];
+        if(ex)ex.m.push(mins((d.clock||{}).displayValue)+tag);else t.goals.push({who:who,m:[mins((d.clock||{}).displayValue)+tag]});
+      } else if(d.redCard||d.yellowCard){
+        t.cards.push({who:who,red:!!d.redCard,m:mins((d.clock||{}).displayValue)});
+      }
+    });
+    return out;
+  }
+  function evLines(t,side){
+    var L=t.goals.map(function(g){return '<div class="'+(side==='h'?'eh':'')+'"><span class="w">'+esc(g.who)+'</span> '+esc(g.m.join(', '))+'</div>'});
+    t.cards.forEach(function(k){var ic='<i class="cd '+(k.red?'cr':'cy')+'" title="'+(k.red?'Red':'Yellow')+' card"></i>';
+      L.push(side==='h'?'<div class="eh">'+esc(k.who)+' '+esc(k.m)+ic+'</div>':'<div>'+ic+esc(k.who)+' '+esc(k.m)+'</div>')});
+    return L;
+  }
+  function evBlock(g){   // two columns of scorers/cards under the score line
+    if(g.state==='pre'||!g.ev)return {html:'',n:0};
+    var H=evLines(g.ev.h,'h'),A=evLines(g.ev.a,'a'),n=Math.max(H.length,A.length);if(!n)return {html:'',n:0};
+    return {html:'<div class="ev"><div>'+H.join('')+'</div><div></div><div>'+A.join('')+'</div><div></div></div>',n:Math.ceil(n*.82*1.18/1.12)};
+  }
+  function status(g){
+    if(g.state==='in'){ if(/HALF_?TIME/i.test(g.name))return '<span class="t live">HT</span>'; return '<span class="t live">'+esc((g.clock||'').replace(/'?$/,"'"))+'</span>' }
+    if(g.state==='post'){ if(/POSTPONED|CANCEL/i.test(g.name))return '<span class="t r">P-P</span>'; return '<span class="t ft">'+(/PEN/i.test(g.detail+g.name)?'PENS':/AET|EXTRA/i.test(g.detail+g.name)?'AET':'FT')+'</span>' }
+    if(/POSTPONED|CANCEL/i.test(g.name))return '<span class="t r">P-P</span>';
+    return '<span class="t w">'+hm(g.date)+'</span>';
+  }
+
+  /* ---------- data ---------- */
+  var TODAY=[], GAMES={}, NEXT={}, loaded=false;
+  // ESPN returns nothing for date ranges, so ask one day at a time. Day keys use the UK calendar.
+  function ukYmd(d){var p=ukDay(d).split('/');return p[2]+p[1]+p[0]}
+  function evs(d){return ((d&&d.events)||[]).map(mapEv).filter(Boolean)}
+  function dedupe(list){var seen={};return list.filter(function(g){if(seen[g.id])return false;seen[g.id]=1;return true})}
+  function loadAll(){
+    var now=new Date(), key=ukDay(now), days=[ukYmd(now), ukYmd(new Date(now-864e5))];
+    return Promise.all(COMPS.map(function(c){
+      return Promise.all(days.map(function(dy){return get(API+c.s+'/scoreboard?dates='+dy)})).then(function(rs){
+        var list=dedupe([].concat.apply([],rs.map(evs))).filter(function(g){return ukDay(g.date)===key}).sort(function(a,b){return a.date-b.date});
+        GAMES[c.p]=list; return list.length?c:null;
+      });
+    })).then(function(r){TODAY=r.filter(Boolean);loaded=true});
+  }
+  function loadNext(c){   // nothing on today: find the next round of fixtures
+    if(NEXT[c.p])return Promise.resolve(NEXT[c.p]);
+    var now=new Date();
+    function upcoming(list){return list.filter(function(g){return g.state==='pre'&&g.date>now}).sort(function(a,b){return a.date-b.date})}
+    function round(first){   // that day plus the next three, one request per day
+      var ds=[0,1,2,3].map(function(i){return ukYmd(new Date(+first.date+i*864e5))});
+      return Promise.all(ds.map(function(dy){return get(API+c.s+'/scoreboard?dates='+dy)})).then(function(rs){
+        var up=upcoming(dedupe([].concat.apply([],rs.map(evs))));
+        return up.filter(function(g){return g.date-first.date<4*864e5});
+      });
+    }
+    function scan(i){   // fallback: walk forward a week at a time, up to four weeks
+      if(i>=28)return Promise.resolve([]);
+      var ds=[0,1,2,3,4,5,6].map(function(k){return ukYmd(new Date(+now+(i+k)*864e5))});
+      return Promise.all(ds.map(function(dy){return get(API+c.s+'/scoreboard?dates='+dy)})).then(function(rs){
+        var up=upcoming(dedupe([].concat.apply([],rs.map(evs))));
+        return up.length?round(up[0]):scan(i+7);
+      });
+    }
+    return get(API+c.s+'/scoreboard').then(function(d){
+      var up=upcoming(evs(d));
+      return up.length?round(up[0]):scan(1);
+    }).then(function(out){NEXT[c.p]=out;return out});
+  }
+
+  /* ---------- pages ---------- */
+  var cur=302, sub=0, subTimer=null;
+  function setNav(prev,next){
+    var kp=$('kPrev'),kn=$('kNext');
+    kp.href=prev?'#'+prev:'#';kp.setAttribute('aria-disabled',!prev);
+    kn.href=next?'#'+next:'#';kn.setAttribute('aria-disabled',!next);
+  }
+  function neighbours(p){   // prev/next among today's competitions, in page order
+    var list=TODAY.map(function(c){return c.p});
+    if(list.indexOf(p)<0){list=list.concat([p]).sort(function(a,b){return a-b})}
+    var i=list.indexOf(p);return [list[i-1]||null,list[i+1]||null];
+  }
+  function paginate(rows,per){
+    clearInterval(subTimer);
+    var pages=[],pg=[],used=0;
+    rows.forEach(function(r){var n=typeof r==='string'?1:r.n,h=typeof r==='string'?r:r.html;
+      if(used+n>per&&pg.length){pages.push(pg);pg=[];used=0}
+      if(!pg.length&&typeof r!=='string'&&r.head===false)return;   // never start a page with a spacer
+      pg.push(h);used+=n});
+    if(pg.length)pages.push(pg);if(!pages.length)pages=[[]];
+    if(sub>=pages.length)sub=0;
+    $('sub').textContent=pages.length>1?(sub+1)+'/'+pages.length:'';
+    if(pages.length>1)subTimer=setInterval(function(){sub=(sub+1)%pages.length;render(true)},12000);
+    return pages[sub];
+  }
+  function index(){
+    $('pnum').textContent='P302';$('title').textContent='LATEST SCORES';
+    var n=new Date(),rows=[];
+    rows.push('<a class="ix leeds" href="/var-and-firkin/leeds/ceefax/"><span class="nm">LEEDS UNITED</span><span class="y"></span><span class="pg">303</span></a>');
+    TODAY.forEach(function(c){
+      var g=GAMES[c.p]||[],live=g.filter(function(x){return x.state==='in'}).length,done=g.filter(function(x){return x.state==='post'}).length;
+      var tag=live?'<span class="live">'+live+' LIVE</span>':done===g.length?'<span class="ft">FT</span>':'<span class="w">'+g.length+(g.length===1?' GAME':' GAMES')+'</span>';
+      rows.push('<a class="ix" href="#'+c.p+'"><span class="nm">'+esc(c.n)+'</span>'+tag+'<span class="pg">'+c.p+'</span></a>');
+    });
+    var pg=paginate(rows,15);
+    $('screen').innerHTML='<div class="row c">TODAY\'S FOOTBALL  <span class="w">'+dayLong(n)+'</span></div><div class="row"> </div>'+pg.join('')+
+      (TODAY.length?'':'<div class="row"> </div><div class="row w">NO GAMES IN OUR LEAGUES TODAY.</div><div class="row c">TRY THE PREMIER LEAGUE (310) FOR</div><div class="row c">THE NEXT FIXTURES.</div>');
+    setNav(null,TODAY[0]?TODAY[0].p:null);
+  }
+  function gameLine(g){
+    var sc=g.state==='pre'?'<span class="s c">v</span>':'<span class="s y">'+esc(g.hs)+'-'+esc(g.as)+'</span>';
+    return '<div class="gm'+(g.leeds?' y':'')+'"><span class="h">'+esc(g.home)+'</span>'+sc+'<span>'+esc(g.away)+'</span>'+status(g)+'</div>';
+  }
+  function gameRows(list){   // today: each game plus its scorers and cards, kept together
+    return list.map(function(g){var e=evBlock(g);return {html:gameLine(g)+e.html,n:1+e.n}});
+  }
+  function fixtureRows(list){   // next fixtures, under a heading for each day
+    var rows=[],last='';
+    list.forEach(function(g){var d=dayLong(g.date);
+      if(d!==last){rows.push({html:'<div class="row dh">'+esc(d)+'</div>',n:1});last=d}
+      rows.push({html:gameLine(g),n:1});
+    });
+    return rows;
+  }
+  function comp(c,quiet){
+    $('pnum').textContent='P'+c.p;$('title').textContent=c.n;
+    var nb=neighbours(c.p);setNav(nb[0]||302,nb[1]);
+    var list=GAMES[c.p]||[], beer=c.beer?'<div class="row"> </div><div class="row m">PINT WITH THIS: <span class="w">'+esc(String(c.beer).toUpperCase())+'</span></div>':'';
+    if(list.length){
+      var pg=paginate(gameRows(list),15);
+      $('screen').innerHTML='<div class="row c">'+dayLong(new Date())+'</div><div class="row"> </div>'+pg.join('')+beer;
+      return;
+    }
+    $('sub').textContent='';
+    if(!quiet)$('screen').innerHTML='<div class="row w">NO GAMES TODAY.</div><div class="row c">LOOKING UP THE NEXT FIXTURES<span class="blink">...</span></div>';
+    loadNext(c).then(function(nx){
+      if(cur!==c.p)return;
+      $('screen').innerHTML='<div class="row w">NO GAMES TODAY.</div>'+(nx.length?'<div class="row c">NEXT FIXTURES</div>'+paginate(fixtureRows(nx),14).join(''):'<div class="row c">NO FIXTURES FOUND IN THE NEXT FOUR WEEKS.</div>')+beer;
+    });
+  }
+  function render(quiet){
+    if(!loaded)return;
+    if(cur===302||!BY[cur])return index();
+    comp(BY[cur],quiet);
+  }
+  function go(p){p=+p;if(p===303){location.href='/var-and-firkin/leeds/ceefax/';return}
+    if(p!==302&&!BY[p]){$('typed').textContent='P'+p+' NOT FOUND';setTimeout(function(){$('typed').textContent=''},1500);return}
+    if(String(p)!==location.hash.slice(1))location.hash=p;else{cur=p;sub=0;render()}}
+  addEventListener('hashchange',function(){var p=+location.hash.slice(1)||302;cur=BY[p]?p:302;sub=0;render();scrollTo(0,0)});
+  /* type a page number, like the real thing */
+  var typed='';
+  addEventListener('keydown',function(e){
+    if(/^[0-9]$/.test(e.key)){typed+=e.key;$('typed').textContent='P'+typed+'___'.slice(typed.length);if(typed.length===3){var p=typed;typed='';setTimeout(function(){$('typed').textContent='';go(p)},250)}}
+    else if(e.key==='ArrowRight'){var n=neighbours(cur===302?-1:cur)[1];if(n)go(n)}
+    else if(e.key==='ArrowLeft'&&cur!==302){var q=neighbours(cur)[0];go(q||302)}
+  });
+  /* clock */
+  function tick(){var d=new Date();$('date').textContent=d.toLocaleDateString('en-GB',{timeZone:'Europe/London',weekday:'short',day:'2-digit',month:'short'}).replace(/,/g,'');
+    $('clock').textContent=d.toLocaleTimeString('en-GB',{timeZone:'Europe/London'})}
+  tick();setInterval(tick,1000);
+  cur=+location.hash.slice(1)||302;if(!BY[cur])cur=302;
+  (function loop(){
+    loadAll().then(function(){render(true);
+      var live=Object.keys(GAMES).some(function(k){return (GAMES[k]||[]).some(function(g){return g.state==='in'})});
+      setTimeout(loop,(live?45:300)*1000)},function(){setTimeout(loop,60000)});
+  })();
+})();
+</script>
+</body>
+</html>

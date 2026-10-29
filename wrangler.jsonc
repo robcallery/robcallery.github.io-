@@ -1,0 +1,10 @@
+// Cloudflare Workers config for callery.co.uk.
+// The site is static files only, served by the "callery" Worker's static assets.
+// Cloudflare Workers Builds deploys this on every push to main (deploy command: npx wrangler deploy).
+{
+  "name": "callery",
+  "compatibility_date": "2026-10-28",
+  "assets": {
+    "directory": "."
+  }
+}
