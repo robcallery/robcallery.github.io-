@@ -1,0 +1,2338 @@
+{
+ "id": "boroughbridge",
+ "name": "Boroughbridge",
+ "lat": 54.0962,
+ "lon": -1.3957,
+ "checked": "2026-10-28",
+ "areas": [
+  {
+   "id": "town",
+   "name": "Boroughbridge town centre",
+   "parish": "Aldborough (Boroughbridge became a separate civil parish in 1866)",
+   "riding": "West Riding"
+  },
+  {
+   "id": "langthorpe",
+   "name": "Langthorpe",
+   "parish": "Kirby Hill",
+   "riding": "North Riding"
+  },
+  {
+   "id": "milby",
+   "name": "Milby",
+   "parish": "Humburton with Milby township, split between Aldborough and Kirby Hill parishes",
+   "riding": "North Riding"
+  },
+  {
+   "id": "kirby-hill",
+   "name": "Kirby Hill",
+   "parish": "Kirby Hill (Kirkby-on-the-Moor)",
+   "riding": "North Riding"
+  },
+  {
+   "id": "aldborough",
+   "name": "Aldborough",
+   "parish": "Aldborough",
+   "riding": "West Riding"
+  },
+  {
+   "id": "roecliffe",
+   "name": "Roecliffe",
+   "parish": "Aldborough",
+   "riding": "West Riding"
+  },
+  {
+   "id": "minskip",
+   "name": "Minskip",
+   "parish": "Aldborough (a separate civil parish before joining Boroughbridge in 1938)",
+   "riding": "West Riding"
+  }
+ ],
+ "story": {
+  "title": "A town built around the road, the river and the inn",
+  "paras": [
+   "For centuries, Boroughbridge was much more than a Yorkshire market town. Its position on the Great North Road made it an important stopping point for coaches, travellers and horses moving between northern and southern England.",
+   "The River Ure brought additional trade, while cattle drovers, horse dealers and visitors to local fairs all contributed to the town’s busy streets.",
+   "At its peak, Boroughbridge supported 22 inns. The Crown alone could stable around 100 horses, illustrating the scale of the coaching trade.",
+   "During the busy droving season, as many as 2,000 cattle a day crossed the bridge on their way from Scotland to southern markets.",
+   "Then the railways changed the town. By 1853, stagecoach transport had disappeared and seven of the original 22 inns had already been lost.",
+   "Some former inns became shops or homes. Others disappeared altogether. Several survived and continued to welcome customers.",
+   "Today, traces of this history remain hidden in old buildings, street names and the stories of local families.",
+   "This archive aims to recover those stories, one pub at a time."
+  ],
+  "src": [
+   "btc_history"
+  ]
+ },
+ "sources": {
+  "porter2010": {
+   "cite": "Bernard Porter, Hostelries in Boroughbridge (February 2010)",
+   "where": "Boroughbridge Town Council memories archive",
+   "url": "https://www.boroughbridge.org.uk/_UserFiles/Files/About%20BTC/Memories/Pubs%20and%20Hosteleries.pdf"
+  },
+  "porter_memories": {
+   "cite": "Memories and collected information by Mr Bernard Porter (February 2010)",
+   "where": "Boroughbridge Town Council memories archive",
+   "url": "https://www.boroughbridge.org.uk/_UserFiles/Files/About%20BTC/Memories/Mr%20Bernard%20Potter%20Memories.pdf"
+  },
+  "btc_history": {
+   "cite": "The History of Boroughbridge",
+   "where": "Boroughbridge Town Council",
+   "url": "https://www.boroughbridge.org.uk/History_42987.aspx"
+  },
+  "pubsgalore": {
+   "cite": "Pubs in Boroughbridge",
+   "where": "Pubs Galore (not re-checked: the site blocks automated reading)",
+   "url": "https://www.pubsgalore.co.uk/areas/boroughbridge/north-yorkshire/"
+  },
+  "btc_memories": {
+   "cite": "Boroughbridge memories archive",
+   "where": "Boroughbridge Town Council",
+   "url": "https://www.boroughbridge.org.uk/Memories_42988.aspx"
+  },
+  "loop": {
+   "cite": "Langthorpe Loop heritage walking guide",
+   "where": "Boroughbridge Town Council",
+   "url": "https://www.boroughbridge.org.uk/_UserFiles/Files/Local%20Boroughbridge%20Walks/Langthorpe_Loop.pdf"
+  },
+  "bulmer1890": {
+   "cite": "Bulmer's Directory, 1890: Kirby Hill parish trades and professions",
+   "where": "GENUKI transcription",
+   "url": "https://www.genuki.org.uk/big/eng/YKS/NRY/KirbyHill/KirbyHill90Dry"
+  },
+  "baines1823": {
+   "cite": "Baines's Directory, 1823: Kirby Hill parish trades and professions",
+   "where": "GENUKI transcription",
+   "url": "https://www.genuki.org.uk/big/eng/YKS/NRY/KirbyHill/KirbyHill23Dry"
+  },
+  "camra_place": {
+   "cite": "Pubs in Boroughbridge",
+   "where": "CAMRA WhatPub",
+   "url": "https://camra.org.uk/pubs/place/boroughbridge-2049"
+  },
+  "camra_tap": {
+   "cite": "Tap on the Tutt, Boroughbridge",
+   "where": "CAMRA WhatPub (checked 28 October 2026)",
+   "url": "https://camra.org.uk/pubs/tap-on-the-tutt-boroughbridge-181427"
+  },
+  "camra_crown": {
+   "cite": "Crown Hotel, Boroughbridge",
+   "where": "CAMRA WhatPub (checked 28 October 2026)",
+   "url": "https://camra.org.uk/pubs/crown-hotel-boroughbridge-181419"
+  },
+  "camra_blackbull": {
+   "cite": "Black Bull Inn, Boroughbridge",
+   "where": "CAMRA WhatPub (checked 28 October 2026)",
+   "url": "https://camra.org.uk/pubs/black-bull-inn-boroughbridge-181415"
+  },
+  "camra_anchor": {
+   "cite": "Anchor Inn, Boroughbridge",
+   "where": "CAMRA WhatPub",
+   "url": "https://camra.org.uk/pubs/anchor-inn-boroughbridge-181411"
+  },
+  "camra_fox": {
+   "cite": "Fox & Hounds Inn, Boroughbridge",
+   "where": "CAMRA WhatPub",
+   "url": "https://camra.org.uk/pubs/fox-hounds-inn-boroughbridge-181421"
+  },
+  "camra_grantham": {
+   "cite": "Grantham Arms, Boroughbridge",
+   "where": "CAMRA WhatPub",
+   "url": "https://camra.org.uk/pubs/grantham-arms-boroughbridge-181423"
+  },
+  "camra_bluebell": {
+   "cite": "Blue Bell Inn, Kirby Hill",
+   "where": "CAMRA WhatPub",
+   "url": "https://camra.org.uk/pubs/blue-bell-inn-boroughbridge-181417"
+  },
+  "camra_ship": {
+   "cite": "Ship Inn, Aldborough",
+   "where": "CAMRA WhatPub (checked 28 October 2026)",
+   "url": "https://camra.org.uk/pubs/ship-inn-aldborough-181387"
+  },
+  "camra_roecliffe": {
+   "cite": "Crown Inn, Roecliffe",
+   "where": "CAMRA WhatPub (updated 2 October 2026)",
+   "url": "https://camra.org.uk/pubs/crown-inn-roecliffe-181608"
+  },
+  "camra_wildswan": {
+   "cite": "Wild Swan, Minskip",
+   "where": "CAMRA WhatPub",
+   "url": "https://camra.org.uk/pubs/wild-swan-minskip-181575"
+  },
+  "camra_social": {
+   "cite": "Boroughbridge Social Club",
+   "where": "CAMRA WhatPub",
+   "url": "https://camra.org.uk/pubs/boroughbridge-social-club-boroughbridge-181655"
+  },
+  "ferret_wildswan": {
+   "cite": "Wild Swan at Minskip closes (8 January 2026)",
+   "where": "The Stray Ferret",
+   "url": "https://thestrayferret.co.uk/stories/wild-swan-at-minskip-closes"
+  },
+  "he_crown": {
+   "cite": "Crown Hotel, list entry 1150086",
+   "where": "Historic England",
+   "url": "https://historicengland.org.uk/listing/the-list/list-entry/1150086"
+  },
+  "he_blackbull": {
+   "cite": "The Black Bull, list entry 1315499",
+   "where": "Historic England",
+   "url": "https://historicengland.org.uk/listing/the-list/list-entry/1315499"
+  },
+  "he_greyhounds": {
+   "cite": "Post Office and Former Annexe to Three Greyhounds Hotel, list entry 1150090",
+   "where": "Historic England",
+   "url": "https://historicengland.org.uk/listing/the-list/list-entry/1150090"
+  },
+  "he_horseshoes": {
+   "cite": "The Three Horse Shoes Public House, list entry 1245941",
+   "where": "Historic England",
+   "url": "https://historicengland.org.uk/listing/the-list/list-entry/1245941"
+  },
+  "he_riverside": {
+   "cite": "Riverside Court (formerly listed as The Blinking Owl Public House), list entry 1150087",
+   "where": "Historic England",
+   "url": "https://historicengland.org.uk/listing/the-list/list-entry/1150087"
+  },
+  "he_yorkrose": {
+   "cite": "Stonefield House (formerly listed as Yorkshire Rose Public House), list entry 1150070",
+   "where": "Historic England",
+   "url": "https://historicengland.org.uk/listing/the-list/list-entry/1150070"
+  },
+  "he_ship": {
+   "cite": "The Ship Inn, list entry 1173823",
+   "where": "Historic England",
+   "url": "https://historicengland.org.uk/listing/the-list/list-entry/1173823"
+  },
+  "he_milestone": {
+   "cite": "Milestone approximately 10 metres south of Blue Bell public house, list entry 1315306",
+   "where": "Historic England",
+   "url": "https://historicengland.org.uk/listing/the-list/list-entry/1315306"
+  },
+  "wiki_station": {
+   "cite": "Boroughbridge railway station",
+   "where": "Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Boroughbridge_railway_station"
+  },
+  "wiki_bb": {
+   "cite": "Boroughbridge",
+   "where": "Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Boroughbridge"
+  },
+  "wiki_ship": {
+   "cite": "Ship Inn, Aldborough",
+   "where": "Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Ship_Inn,_Aldborough"
+  },
+  "wiki_minskip": {
+   "cite": "Minskip",
+   "where": "Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Minskip"
+  },
+  "wiki_milby": {
+   "cite": "Milby, North Yorkshire",
+   "where": "Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Milby,_North_Yorkshire"
+  },
+  "vch_kirby": {
+   "cite": "Parishes: Kirkby Hill or Kirkby on the Moor (Victoria County History, North Riding)",
+   "where": "British History Online",
+   "url": "https://www.british-history.ac.uk/node/55939"
+  },
+  "osm": {
+   "cite": "OpenStreetMap",
+   "where": "© OpenStreetMap contributors, ODbL",
+   "url": "https://www.openstreetmap.org/copyright"
+  }
+ },
+ "timeline": [
+  {
+   "y": 1776,
+   "t": "Parliament authorises six locks to make the River Ure navigable as far as Ripon.",
+   "src": [
+    "loop"
+   ]
+  },
+  {
+   "y": 1823,
+   "t": "Baines's directory lists the Blue Bell and White Horse at Kirby Hill, and the Fox & Hounds and Red Lion at Langthorpe.",
+   "src": [
+    "baines1823"
+   ]
+  },
+  {
+   "y": 1847,
+   "t": "The River Ure Navigation, insolvent, is sold to the Leeds and Thirsk Railway Company.",
+   "src": [
+    "btc_history"
+   ]
+  },
+  {
+   "y": 1848,
+   "t": "The railway arrives, with a station on the Milby road. (Wikipedia gives 17 June 1847 for the first station.)",
+   "src": [
+    "btc_history",
+    "loop",
+    "wiki_station"
+   ]
+  },
+  {
+   "y": 1853,
+   "t": "Stagecoach transport has disappeared, and seven of the town's 22 inns have been lost.",
+   "src": [
+    "btc_history"
+   ]
+  },
+  {
+   "y": 1875,
+   "t": "A second station opens on 1 April.",
+   "src": [
+    "wiki_station"
+   ]
+  },
+  {
+   "y": 1890,
+   "t": "Bulmer's directory lists the Anchor, Fox and Hounds, Old Red Lion, Grantham Arms, Blue Bell, and the Ship Inn and Railway Tavern beerhouses.",
+   "src": [
+    "bulmer1890"
+   ]
+  },
+  {
+   "y": 1930,
+   "t": "Around this year the Three Horse Shoes is rebuilt as a roadhouse for the Great North Road.",
+   "src": [
+    "he_horseshoes"
+   ],
+   "approx": true
+  },
+  {
+   "y": 1945,
+   "t": "The A1 bridge over the Ure collapses; the army puts up a Bailey bridge.",
+   "src": [
+    "wiki_bb"
+   ]
+  },
+  {
+   "y": 1950,
+   "t": "Passenger trains stop calling at Boroughbridge on 25 September.",
+   "src": [
+    "wiki_station"
+   ]
+  },
+  {
+   "y": 1962,
+   "t": "The Great North Road is moved west to become the A1. (The town council's history gives 1963 for the bypass.)",
+   "src": [
+    "loop",
+    "btc_history"
+   ]
+  },
+  {
+   "y": 1964,
+   "t": "The station closes completely.",
+   "src": [
+    "wiki_station"
+   ]
+  },
+  {
+   "y": 2005,
+   "t": "Eight pubs or hotels are still trading in the town.",
+   "src": [
+    "btc_history"
+   ]
+  },
+  {
+   "y": 2010,
+   "t": "Bernard Porter compiles Hostelries in Boroughbridge, recording 36 sites and what their buildings were then used for.",
+   "src": [
+    "porter2010"
+   ]
+  },
+  {
+   "y": 2011,
+   "t": "The Malt Shovel closes permanently on 1 January, according to CAMRA.",
+   "src": [
+    "camra_place"
+   ]
+  },
+  {
+   "y": 2026,
+   "t": "The Wild Swan at Minskip closes suddenly in January. In October the Tap on the Tutt closes for refurbishment.",
+   "src": [
+    "ferret_wildswan",
+    "camra_tap"
+   ]
+  }
+ ],
+ "trails": [
+  {
+   "id": "bridge",
+   "name": "Bridge Street and the River Ure",
+   "stops": [
+    "three-horse-shoes",
+    "blinking-owl",
+    "crown-hotel"
+   ],
+   "walk": "Start by the Ure at the Borough Bridge. The Three Horse Shoes and Riverside Court (once the Blinking Owl) face each other on Bridge Street. Walk south up Bridge Street to the Crown at the junction with Horsefair and Fishergate."
+  },
+  {
+   "id": "horsefair",
+   "name": "Horsefair and St James Square",
+   "stops": [
+    "crown-hotel",
+    "three-greyhounds",
+    "black-bull"
+   ],
+   "walk": "From the Crown, the old post office building next door on Horsefair is the listed former annexe of the Three Greyhounds Hotel. Return to the Crown and follow Fishergate and the High Street south to St James Square for the Black Bull."
+  },
+  {
+   "id": "highstreet",
+   "name": "High Street and the coaching inns",
+   "stops": [
+    "crown-hotel",
+    "black-bull"
+   ],
+   "walk": "The Crown and the Black Bull bookend the High Street. The Black Horse, Black Swan, Saddle and White Hart all stood on this street, but their exact buildings are not yet confirmed, so they are not marked. Look up as you walk."
+  },
+  {
+   "id": "langthorpe",
+   "name": "Langthorpe and Milby",
+   "stops": [
+    "grantham-arms",
+    "anchor-inn",
+    "fox-and-hounds"
+   ],
+   "walk": "Cross the Borough Bridge north. The Grantham Arms is on the Milby side; the Anchor stands on Leeming Lane; and the Fox and Hounds is west along Skelton Road. The Langthorpe Loop guide from the town council covers the brewery buildings in more detail."
+  },
+  {
+   "id": "kirby",
+   "name": "Kirby Hill and the old Great North Road",
+   "stops": [
+    "blue-bell",
+    "milestone"
+   ],
+   "walk": "The Blue Bell stands on Leeming Lane, the old Great North Road, north of Langthorpe. The listed milestone is about 10 metres south of the pub."
+  }
+ ],
+ "landmarks": {
+  "milestone": {
+   "name": "Great North Road milestone",
+   "lat": 54.1094,
+   "lon": -1.4069,
+   "note": "Listed early 19th-century milestone, about 10 metres south of the Blue Bell.",
+   "src": [
+    "he_milestone"
+   ]
+  }
+ },
+ "pubs": [
+  {
+   "id": "three-horse-shoes",
+   "n": 1,
+   "name": "Three Horse Shoes",
+   "aka": [
+    "Tap on the Tutt"
+   ],
+   "area": "town",
+   "street": "Bridge Street",
+   "address": "Bridge Street, Boroughbridge",
+   "kind": "public house",
+   "intro": "A former Great North Road pub, notable for its surviving 1930s interior.",
+   "history": [
+    {
+     "t": "This former Great North Road pub is especially notable for its surviving 1930s interior, retaining original features including wood panelling, a fireplace and unusual shutters above its bar counters. CAMRA recognises the interior as being of outstanding national historic importance.",
+     "src": [
+      "porter2010",
+      "camra_tap"
+     ]
+    },
+    {
+     "t": "Historic England dates the present building to about 1930, designed by Sydney Blenkhorn of Knaresborough for Hepworth & Co., brewers of Ripon. It was listed Grade II in 2001 as an increasingly rare inter-war pub interior.",
+     "src": [
+      "he_horseshoes"
+     ]
+    },
+    {
+     "t": "Bernard Porter's family memories name Samuel Morrel (1822) and John Morrel (1828) among its 19th-century landlords, and recall that the army took over the back half of the hotel for about four years during the Second World War.",
+     "src": [
+      "porter_memories"
+     ]
+    },
+    {
+     "t": "The premises later traded as the Tap on the Tutt.",
+     "src": [
+      "camra_tap"
+     ]
+    }
+   ],
+   "status": {
+    "code": "temporary",
+    "text": "Temporarily closed for refurbishment from 18 October 2026, expected to reopen on or before 24 November 2026.",
+    "checked": "2026-10-28",
+    "src": [
+     "camra_tap"
+    ]
+   },
+   "dates": [
+    {
+     "what": "Earliest landlord named",
+     "when": "1822",
+     "conf": "Recollection",
+     "src": [
+      "porter_memories"
+     ]
+    },
+    {
+     "what": "Present building",
+     "when": "c.1930",
+     "conf": "Approximate",
+     "src": [
+      "he_horseshoes"
+     ]
+    },
+    {
+     "what": "Listed Grade II",
+     "when": "3 July 2001",
+     "conf": "Documented",
+     "src": [
+      "he_horseshoes"
+     ]
+    }
+   ],
+   "loc": {
+    "conf": "verified",
+    "lat": 54.09679,
+    "lon": -1.39594,
+    "src": [
+     "he_horseshoes",
+     "osm"
+    ]
+   },
+   "questions": [
+    "When did the name change to Tap on the Tutt?",
+    "What did the pub look like before the 1930 rebuild?"
+   ]
+  },
+  {
+   "id": "crown-hotel",
+   "n": 2,
+   "name": "Crown Hotel",
+   "aka": [],
+   "area": "town",
+   "street": "Horsefair",
+   "address": "Horsefair, Boroughbridge",
+   "kind": "coaching inn",
+   "intro": "One of Boroughbridge’s most important coaching inns.",
+   "history": [
+    {
+     "t": "One of Boroughbridge’s most important coaching inns. The Crown’s stables once accommodated around 100 horses, showing how essential the town was to travellers on the Great North Road.",
+     "src": [
+      "btc_history"
+     ]
+    },
+    {
+     "t": "Coaches through Boroughbridge connected places including Leeds, Newcastle, Durham and Sunderland. The town council's history names the North Star (for Carlisle and Edinburgh), the Defence (for Durham) and the Royal Charlotte (for Sunderland).",
+     "src": [
+      "btc_history"
+     ]
+    },
+    {
+     "t": "Historic England records the site as the former manor house of the Tancred family, with a stone gable surviving on the Fishergate side, and describes the building as an important coaching inn in the later 18th century. It was listed Grade II in 1952.",
+     "src": [
+      "he_crown"
+     ]
+    }
+   ],
+   "status": {
+    "code": "trading",
+    "text": "Trading as a hotel, restaurant and bar.",
+    "checked": "2026-10-28",
+    "src": [
+     "camra_crown"
+    ]
+   },
+   "dates": [
+    {
+     "what": "Important coaching inn",
+     "when": "later 18th century",
+     "conf": "Approximate",
+     "src": [
+      "he_crown"
+     ]
+    },
+    {
+     "what": "Listed Grade II",
+     "when": "8 March 1952",
+     "conf": "Documented",
+     "src": [
+      "he_crown"
+     ]
+    }
+   ],
+   "loc": {
+    "conf": "verified",
+    "lat": 54.09621,
+    "lon": -1.39574,
+    "src": [
+     "he_crown",
+     "osm"
+    ]
+   },
+   "questions": [
+    "Which coaches called at the Crown, rather than elsewhere in the town?",
+    "Names of coaching-era innkeepers.",
+    "The Crown Hotel's own published history has not yet been reviewed for this archive."
+   ]
+  },
+  {
+   "id": "blinking-owl",
+   "n": 3,
+   "name": "Blinking Owl",
+   "aka": [],
+   "area": "town",
+   "street": "Bridge Street",
+   "address": "Bridge Street, Boroughbridge",
+   "kind": "inn",
+   "intro": "A former hostelry on Bridge Street, facing the Three Horse Shoes across the road.",
+   "history": [
+    {
+     "t": "Recorded among the historic hostelries of Bridge Street. Bernard Porter's 2010 notes identify the former premises as a care home, showing how former hospitality buildings took on new uses as coaching and local trade changed.",
+     "src": [
+      "porter2010"
+     ]
+    },
+    {
+     "t": "His memories add that it stood opposite the Three Horse Shoes, overlooking the river, and was a licensed restaurant in 1985.",
+     "src": [
+      "porter_memories"
+     ]
+    },
+    {
+     "t": "Historic England's listing for Riverside Court, Bridge Street, says it was formerly listed as The Blinking Owl Public House: an early-to-mid 19th-century former pub.",
+     "src": [
+      "he_riverside"
+     ]
+    }
+   ],
+   "status": {
+    "code": "closed",
+    "text": "Former inn. A care home in 2010; present use not yet re-checked.",
+    "checked": "2010",
+    "src": [
+     "porter2010"
+    ]
+   },
+   "dates": [
+    {
+     "what": "Building",
+     "when": "early to mid 19th century",
+     "conf": "Approximate",
+     "src": [
+      "he_riverside"
+     ]
+    },
+    {
+     "what": "Licensed restaurant",
+     "when": "1985",
+     "conf": "Recollection",
+     "src": [
+      "porter_memories"
+     ]
+    }
+   ],
+   "loc": {
+    "conf": "verified",
+    "lat": 54.0969,
+    "lon": -1.3953,
+    "src": [
+     "he_riverside"
+    ]
+   },
+   "questions": [
+    "When did it stop trading?",
+    "Is this the inn by the bridge, once a warehouse, that the town council says became homes for the elderly?"
+   ]
+  },
+  {
+   "id": "black-horse",
+   "n": 4,
+   "name": "Black Horse",
+   "aka": [],
+   "area": "town",
+   "street": "High Street",
+   "address": "High Street, Boroughbridge",
+   "kind": "inn",
+   "intro": "A former High Street hostelry.",
+   "history": [
+    {
+     "t": "A former High Street hostelry. The 2010 compilation associates its premises with a business called Gone to Pot.",
+     "src": [
+      "porter2010"
+     ]
+    }
+   ],
+   "status": {
+    "code": "closed",
+    "text": "Former pub. Its premises were Gone to Pot in 2010.",
+    "checked": "2010",
+    "src": [
+     "porter2010"
+    ]
+   },
+   "dates": [],
+   "loc": {
+    "conf": "none"
+   },
+   "questions": [
+    "Which building on the High Street?",
+    "When did it close?"
+   ]
+  },
+  {
+   "id": "black-swan",
+   "n": 5,
+   "name": "Black Swan",
+   "aka": [],
+   "area": "town",
+   "street": "High Street",
+   "address": "High Street, Boroughbridge",
+   "kind": "inn",
+   "intro": "One of the historic inns of Boroughbridge High Street.",
+   "history": [
+    {
+     "t": "Recorded as one of the historic inns of Boroughbridge High Street. In the 2010 compilation, its former premises were associated with Karbits.",
+     "src": [
+      "porter2010"
+     ]
+    },
+    {
+     "t": "Bernard Porter's memories say the Oddfellows met at the Black Swan, which used to stand by what is now the Spar.",
+     "src": [
+      "porter_memories"
+     ]
+    }
+   ],
+   "status": {
+    "code": "closed",
+    "text": "Former pub. Present use of the building not yet verified.",
+    "checked": "2010",
+    "src": [
+     "porter2010"
+    ]
+   },
+   "dates": [],
+   "loc": {
+    "conf": "none"
+   },
+   "questions": [
+    "Which building on the High Street?",
+    "When did the Oddfellows meet there?"
+   ]
+  },
+  {
+   "id": "the-saddle",
+   "n": 6,
+   "name": "The Saddle",
+   "aka": [],
+   "area": "town",
+   "street": "High Street",
+   "address": "High Street, Boroughbridge",
+   "kind": "inn",
+   "intro": "One of the former High Street drinking establishments.",
+   "history": [
+    {
+     "t": "The Saddle is listed among the former High Street drinking establishments. The historical compilation links the building with a later business called Saddlers.",
+     "src": [
+      "porter2010"
+     ]
+    }
+   ],
+   "status": {
+    "code": "closed",
+    "text": "Former pub. Its premises were Saddlers in 2010.",
+    "checked": "2010",
+    "src": [
+     "porter2010"
+    ]
+   },
+   "dates": [],
+   "loc": {
+    "conf": "none"
+   },
+   "questions": [
+    "Which building on the High Street?",
+    "When did it close?"
+   ]
+  },
+  {
+   "id": "white-hart",
+   "n": 7,
+   "name": "White Hart",
+   "aka": [],
+   "area": "town",
+   "street": "High Street",
+   "address": "High Street, Boroughbridge",
+   "kind": "inn",
+   "intro": "Another historic High Street inn.",
+   "history": [
+    {
+     "t": "Another historic High Street inn. Its former premises were associated with Pybus in the 2010 historical record.",
+     "src": [
+      "porter2010"
+     ]
+    }
+   ],
+   "status": {
+    "code": "closed",
+    "text": "Former pub. Exact address and present use need confirming.",
+    "checked": "2010",
+    "src": [
+     "porter2010"
+    ]
+   },
+   "dates": [],
+   "loc": {
+    "conf": "none"
+   },
+   "questions": [
+    "Exact address",
+    "When did it close?"
+   ]
+  },
+  {
+   "id": "black-lion",
+   "n": 8,
+   "name": "Black Lion",
+   "aka": [],
+   "area": "town",
+   "street": "Fishergate",
+   "address": "Fishergate, Boroughbridge",
+   "kind": "inn",
+   "intro": "A former Fishergate hostelry.",
+   "history": [
+    {
+     "t": "A former Fishergate hostelry. Bernard Porter identified the former premises with Craggs Electricals in 2010.",
+     "src": [
+      "porter2010"
+     ]
+    }
+   ],
+   "status": {
+    "code": "closed",
+    "text": "Former pub, later commercial premises (Craggs Electricals in 2010).",
+    "checked": "2010",
+    "src": [
+     "porter2010"
+    ]
+   },
+   "dates": [],
+   "loc": {
+    "conf": "none"
+   },
+   "questions": [
+    "Which building on Fishergate?",
+    "When did it close?"
+   ]
+  },
+  {
+   "id": "white-horse-fishergate",
+   "n": 9,
+   "name": "White Horse",
+   "aka": [],
+   "area": "town",
+   "street": "Fishergate",
+   "address": "Fishergate, opposite the Crown, Boroughbridge",
+   "kind": "inn",
+   "intro": "An inn historically recorded on Fishergate, opposite the Crown.",
+   "history": [
+    {
+     "t": "An inn historically recorded on Fishergate. The 2010 compilation locates it opposite the Crown.",
+     "src": [
+      "porter2010"
+     ]
+    }
+   ],
+   "status": {
+    "code": "closed",
+    "text": "Former pub. Specific building and closing date unknown.",
+    "checked": "2010",
+    "src": [
+     "porter2010"
+    ]
+   },
+   "dates": [],
+   "loc": {
+    "conf": "none"
+   },
+   "questions": [
+    "Which building opposite the Crown?",
+    "When did it close?"
+   ]
+  },
+  {
+   "id": "three-greyhounds",
+   "n": 10,
+   "name": "Three Greyhounds",
+   "aka": [
+    "Musketeer",
+    "Three Grey Hounds"
+   ],
+   "area": "town",
+   "street": "Horsefair",
+   "address": "Horsefair, beside the old post office, Boroughbridge",
+   "kind": "coaching inn",
+   "intro": "Named for the three greyhounds of the Mauleverer family crest.",
+   "history": [
+    {
+     "t": "The Three Greyhounds is associated with the Mauleverer family, whose crest featured three greyhounds. The town council's history records the Three Greyhounds building beside the old post office on Horsefair, once the Mauleverer family home, as converted into flats and still carrying the greyhounds of the crest.",
+     "src": [
+      "btc_history"
+     ]
+    },
+    {
+     "t": "The building next door, the Post Office and former annexe to the Three Greyhounds Hotel, is listed Grade II and has an early 19th-century appearance.",
+     "src": [
+      "he_greyhounds"
+     ]
+    },
+    {
+     "t": "Bernard Porter's list also associates the Three Greyhounds name with the Musketeer. The Musketeer was among the eight pubs and hotels the town council recorded as trading in 2005.",
+     "src": [
+      "porter2010",
+      "btc_history"
+     ]
+    }
+   ],
+   "note": "These accounts still need reconciling. We have not assumed that the converted flats and the Musketeer were one continuously identifiable pub site.",
+   "status": {
+    "code": "closed",
+    "text": "The Three Greyhounds building is now flats. The Musketeer was trading in 2005 and later closed, according to pub-directory records.",
+    "checked": "2026-10-28",
+    "src": [
+     "btc_history",
+     "pubsgalore"
+    ]
+   },
+   "dates": [
+    {
+     "what": "Musketeer trading",
+     "when": "2005",
+     "conf": "Documented",
+     "src": [
+      "btc_history"
+     ]
+    },
+    {
+     "what": "Annexe listed Grade II",
+     "when": "25 August 1976",
+     "conf": "Documented",
+     "src": [
+      "he_greyhounds"
+     ]
+    }
+   ],
+   "loc": {
+    "conf": "approximate",
+    "lat": 54.0964,
+    "lon": -1.3966,
+    "basis": "The pin marks the listed former annexe (the old post office). The council's history places the Greyhounds next to it.",
+    "src": [
+     "he_greyhounds",
+     "btc_history"
+    ]
+   },
+   "questions": [
+    "Were the Three Greyhounds and the Musketeer the same building?",
+    "When did the Musketeer close?",
+    "When did the hotel stop trading?"
+   ]
+  },
+  {
+   "id": "new-inn",
+   "n": 11,
+   "name": "New Inn",
+   "aka": [
+    "Copper Kettle",
+    "LJ’s",
+    "Farndale Town House"
+   ],
+   "area": "town",
+   "street": "Horsefair",
+   "address": "Horsefair, near the pedestrian crossing, Boroughbridge",
+   "kind": "inn",
+   "intro": "One site, four names.",
+   "history": [
+    {
+     "t": "This site is notable for the succession of names recorded in the historical compilation: New Inn, Copper Kettle, LJ’s and Farndale Town House. The changes reflect the evolving commercial character of the town centre.",
+     "src": [
+      "porter2010"
+     ]
+    },
+    {
+     "t": "A \"Farndale House\" was among the eight pubs and hotels trading in the town in 2005.",
+     "src": [
+      "btc_history"
+     ]
+    }
+   ],
+   "status": {
+    "code": "unknown",
+    "text": "Historic hospitality premises. Present use needs verifying.",
+    "checked": "2010",
+    "src": [
+     "porter2010"
+    ]
+   },
+   "dates": [
+    {
+     "what": "Farndale House trading",
+     "when": "2005",
+     "conf": "Documented",
+     "src": [
+      "btc_history"
+     ]
+    }
+   ],
+   "loc": {
+    "conf": "none"
+   },
+   "questions": [
+    "In what order did the names change, and when?",
+    "Is the 2005 Farndale House the same as Farndale Town House?",
+    "What is the building used for now?"
+   ]
+  },
+  {
+   "id": "royal-oak",
+   "n": 12,
+   "name": "Royal Oak",
+   "aka": [
+    "Green Tree"
+   ],
+   "area": "town",
+   "street": "Horsefair",
+   "address": "Horsefair, Boroughbridge",
+   "kind": "inn",
+   "intro": "Recorded under two names, Royal Oak and Green Tree.",
+   "history": [
+    {
+     "t": "Recorded under the names Royal Oak and Green Tree. The 2010 compilation connects the former location with North Road Garage.",
+     "src": [
+      "porter2010"
+     ]
+    }
+   ],
+   "status": {
+    "code": "closed",
+    "text": "Former pub. The exact site and later development need verifying.",
+    "checked": "2010",
+    "src": [
+     "porter2010"
+    ]
+   },
+   "dates": [],
+   "loc": {
+    "conf": "none"
+   },
+   "questions": [
+    "Were the Royal Oak and the Green Tree one house under two names, at different times?",
+    "Where exactly was North Road Garage?"
+   ]
+  },
+  {
+   "id": "black-bull",
+   "n": 13,
+   "name": "Black Bull Inn",
+   "aka": [
+    "Black Bull"
+   ],
+   "area": "town",
+   "street": "St James Square",
+   "address": "6 St James Square, Boroughbridge",
+   "kind": "inn",
+   "intro": "An old market-town inn in the corner of St James Square.",
+   "history": [
+    {
+     "t": "The Black Bull keeps the character of an old market-town inn, with intimate drinking rooms and open fires. CAMRA describes it as a Grade II-listed 13th-century building.",
+     "src": [
+      "camra_blackbull"
+     ]
+    },
+    {
+     "t": "Historic England's listing, made in 1984, gives the building a probable 17th-century origin, much altered in the 18th century and later, with a chamfered ceiling beam and fireplace beam inside. The two dates do not agree, and we have not yet seen evidence for the earlier one.",
+     "src": [
+      "he_blackbull"
+     ]
+    }
+   ],
+   "status": {
+    "code": "trading",
+    "text": "Trading inn with rooms.",
+    "checked": "2026-10-28",
+    "src": [
+     "camra_blackbull"
+    ]
+   },
+   "dates": [
+    {
+     "what": "Origin of the building",
+     "when": "13th century (CAMRA) or probably 17th century (Historic England)",
+     "conf": "Sources disagree",
+     "src": [
+      "camra_blackbull",
+      "he_blackbull"
+     ]
+    },
+    {
+     "what": "Listed Grade II",
+     "when": "19 December 1984",
+     "conf": "Documented",
+     "src": [
+      "he_blackbull"
+     ]
+    }
+   ],
+   "loc": {
+    "conf": "verified",
+    "lat": 54.09418,
+    "lon": -1.39578,
+    "src": [
+     "he_blackbull",
+     "osm"
+    ]
+   },
+   "questions": [
+    "Is there documentary evidence for a medieval building on the site?",
+    "Earliest record of the Black Bull as an inn."
+   ]
+  },
+  {
+   "id": "malt-shovel",
+   "n": 14,
+   "name": "Malt Shovel",
+   "aka": [
+    "Yorkshire Rose"
+   ],
+   "area": "town",
+   "street": "St James Square",
+   "address": "St James Square / York Road, Boroughbridge",
+   "kind": "public house",
+   "intro": "A St James Square pub that lasted into the 21st century.",
+   "history": [
+    {
+     "t": "Known historically as the Malt Shovel, with the Yorkshire Rose also recorded as an earlier name. The Malt Shovel survived into the 21st century and was among Boroughbridge's trading pubs in 2005.",
+     "src": [
+      "porter2010",
+      "btc_history"
+     ]
+    },
+    {
+     "t": "CAMRA records its permanent closure from 1 January 2011, with the premises later used as a shop.",
+     "src": [
+      "camra_place"
+     ]
+    }
+   ],
+   "note": "Historic England lists an early 18th-century former pub on Church Lane, near St James Square, as \"formerly listed as Yorkshire Rose Public House\" (now Stonefield House). It may be this building, but that is not yet confirmed, so no pin is shown.",
+   "status": {
+    "code": "closed",
+    "text": "Closed permanently on 1 January 2011, according to CAMRA.",
+    "checked": "2026-10-28",
+    "src": [
+     "camra_place"
+    ]
+   },
+   "dates": [
+    {
+     "what": "Trading",
+     "when": "2005",
+     "conf": "Documented",
+     "src": [
+      "btc_history"
+     ]
+    },
+    {
+     "what": "Closed",
+     "when": "1 January 2011",
+     "conf": "Documented",
+     "src": [
+      "camra_place"
+     ]
+    }
+   ],
+   "loc": {
+    "conf": "none"
+   },
+   "questions": [
+    "Is the listed former Yorkshire Rose on Church Lane the same building?",
+    "When did the Yorkshire Rose become the Malt Shovel?"
+   ],
+   "leads": [
+    "he_yorkrose"
+   ]
+  },
+  {
+   "id": "windmill",
+   "n": 15,
+   "name": "Windmill",
+   "aka": [],
+   "area": "town",
+   "street": "St James Square",
+   "address": "St James Square, Boroughbridge",
+   "kind": "inn",
+   "intro": "A former hostelry in St James Square.",
+   "history": [
+    {
+     "t": "The Windmill was a former hostelry in St James Square. Bernard Porter's 2010 account identifies the premises as having become a business called the Dining Room.",
+     "src": [
+      "porter2010"
+     ]
+    },
+    {
+     "t": "His memories add that the Druids met at the Windmill.",
+     "src": [
+      "porter_memories"
+     ]
+    }
+   ],
+   "status": {
+    "code": "closed",
+    "text": "Former pub. Present building use not yet verified.",
+    "checked": "2010",
+    "src": [
+     "porter2010"
+    ]
+   },
+   "dates": [],
+   "loc": {
+    "conf": "none"
+   },
+   "questions": [
+    "Which building in the square?",
+    "When did it close?"
+   ]
+  },
+  {
+   "id": "three-arrows",
+   "n": 16,
+   "name": "Three Arrows",
+   "aka": [
+    "Rose Manor",
+    "Arrowfield"
+   ],
+   "area": "town",
+   "street": "Wetherby Road",
+   "address": "Wetherby Road, Boroughbridge",
+   "kind": "hotel",
+   "intro": "A building that passed between private and hospitality use.",
+   "history": [
+    {
+     "t": "The town council's historical overview gives the building's origins as a private house called Arrowfield. It later became the Three Arrows and then the Rose Manor, which was trading as a hotel in 2005.",
+     "src": [
+      "btc_history"
+     ]
+    },
+    {
+     "t": "The 2010 compilation describes it as a nursing home.",
+     "src": [
+      "porter2010"
+     ]
+    }
+   ],
+   "status": {
+    "code": "closed",
+    "text": "Former inn and hotel. A nursing home in 2010; present use needs verifying.",
+    "checked": "2010",
+    "src": [
+     "porter2010"
+    ]
+   },
+   "dates": [
+    {
+     "what": "Rose Manor trading",
+     "when": "2005",
+     "conf": "Documented",
+     "src": [
+      "btc_history"
+     ]
+    }
+   ],
+   "loc": {
+    "conf": "none"
+   },
+   "questions": [
+    "When did Arrowfield become the Three Arrows?",
+    "When did the Rose Manor close?"
+   ]
+  },
+  {
+   "id": "hotel-cottages",
+   "n": 17,
+   "name": "Hotel Cottages",
+   "aka": [
+    "The Chase"
+   ],
+   "area": "town",
+   "street": "Wetherby Road",
+   "address": "Wetherby Road, Boroughbridge",
+   "kind": "hotel-related",
+   "intro": "An entry on Bernard Porter's list whose story is still to be worked out.",
+   "history": [
+    {
+     "t": "Bernard Porter's list records Hotel Cottages in connection with The Chase. How the cottages related to any hotel needs further investigation.",
+     "src": [
+      "porter2010"
+     ]
+    }
+   ],
+   "status": {
+    "code": "unknown",
+    "text": "Hospitality-related entry. No evidence yet of a separately licensed pub.",
+    "checked": "2010",
+    "src": [
+     "porter2010"
+    ]
+   },
+   "dates": [],
+   "loc": {
+    "conf": "none"
+   },
+   "questions": [
+    "Which hotel were the cottages connected with?",
+    "Was there ever a licence here?"
+   ]
+  },
+  {
+   "id": "griffin",
+   "n": 18,
+   "name": "Griffin",
+   "aka": [],
+   "area": "town",
+   "street": "St Helena",
+   "address": "St Helena, Boroughbridge",
+   "kind": "inn",
+   "intro": "A former hostelry on St Helena, across the River Tutt from Horsefair.",
+   "history": [
+    {
+     "t": "A former hostelry identified in the historical list with Griffin House. The area lies across the River Tutt from Horsefair and formed part of the historic town's network of streets and squares.",
+     "src": [
+      "porter2010"
+     ]
+    }
+   ],
+   "status": {
+    "code": "closed",
+    "text": "Former inn. Present use and dates need investigating.",
+    "checked": "2010",
+    "src": [
+     "porter2010"
+    ]
+   },
+   "dates": [],
+   "loc": {
+    "conf": "none"
+   },
+   "questions": [
+    "Is Griffin House the inn building itself?",
+    "When did it trade?"
+   ]
+  },
+  {
+   "id": "queens-head",
+   "n": 19,
+   "name": "Queen’s Head",
+   "aka": [
+    "Queens Head"
+   ],
+   "area": "town",
+   "street": "Hall Square",
+   "address": "Hall Square (also called Butter Tub Square), Boroughbridge",
+   "kind": "inn",
+   "intro": "A former inn in one of the oldest parts of Boroughbridge.",
+   "history": [
+    {
+     "t": "The Queen’s Head was a former inn in this old part of Boroughbridge. Bernard Porter's 2010 compilation records that the building had become a private house.",
+     "src": [
+      "porter2010"
+     ]
+    },
+    {
+     "t": "His memories add that the Foresters met at the Queen’s Head by Hall Square.",
+     "src": [
+      "porter_memories"
+     ]
+    }
+   ],
+   "status": {
+    "code": "closed",
+    "text": "Former pub. A private house in 2010.",
+    "checked": "2010",
+    "src": [
+     "porter2010"
+    ]
+   },
+   "dates": [],
+   "loc": {
+    "conf": "none"
+   },
+   "questions": [
+    "Which house on Hall Square?",
+    "When did it close?"
+   ]
+  },
+  {
+   "id": "anchor-inn",
+   "n": 20,
+   "name": "Anchor Inn",
+   "aka": [
+    "Free Masons",
+    "Oddfellows",
+    "Steam Mill"
+   ],
+   "area": "langthorpe",
+   "street": "Leeming Lane",
+   "address": "Leeming Lane, Langthorpe",
+   "kind": "public house",
+   "intro": "The flagship inn of the old Anchor Brewery.",
+   "history": [
+    {
+     "t": "A surviving village pub closely tied to the area's brewing history. The Langthorpe Loop guide calls the Anchor the flagship inn of the old Anchor Brewery, whose brewery and maltings buildings are now converted to housing.",
+     "src": [
+      "loop"
+     ]
+    },
+    {
+     "t": "Bulmer's 1890 directory lists William Stevenson, tailor and victualler, at the Anchor Inn.",
+     "src": [
+      "bulmer1890"
+     ]
+    },
+    {
+     "t": "Bernard Porter's memories give its earlier names: the Free Masons, which became the Oddfellows, then the Steam Mill, which later became the Anchor.",
+     "src": [
+      "porter_memories"
+     ]
+    }
+   ],
+   "status": {
+    "code": "trading",
+    "text": "Trading pub.",
+    "checked": "2026-10-28",
+    "src": [
+     "camra_anchor"
+    ]
+   },
+   "dates": [
+    {
+     "what": "William Stevenson, victualler",
+     "when": "1890",
+     "conf": "Documented",
+     "src": [
+      "bulmer1890"
+     ]
+    }
+   ],
+   "loc": {
+    "conf": "verified",
+    "lat": 54.0989,
+    "lon": -1.39859,
+    "src": [
+     "osm"
+    ]
+   },
+   "questions": [
+    "When did each change of name happen?"
+   ]
+  },
+  {
+   "id": "fox-and-hounds",
+   "n": 21,
+   "name": "Fox and Hounds",
+   "aka": [
+    "Fox & Hounds"
+   ],
+   "area": "langthorpe",
+   "street": "Skelton Road",
+   "address": "Skelton Road, Langthorpe",
+   "kind": "public house",
+   "intro": "A longstanding Langthorpe pub.",
+   "history": [
+    {
+     "t": "Bulmer's 1890 directory lists Welbury Watson as victualler at the Fox and Hounds Inn, showing the pub was trading in the late Victorian period.",
+     "src": [
+      "bulmer1890"
+     ]
+    },
+    {
+     "t": "A Fox & Hounds at Langthorpe also appears in Baines's 1823 directory, kept by Richard Farmery.",
+     "src": [
+      "baines1823"
+     ]
+    },
+    {
+     "t": "The pub remains a familiar part of Langthorpe's hospitality history.",
+     "src": [
+      "camra_fox"
+     ]
+    }
+   ],
+   "status": {
+    "code": "trading",
+    "text": "Trading pub.",
+    "checked": "2026-10-28",
+    "src": [
+     "camra_fox"
+    ]
+   },
+   "dates": [
+    {
+     "what": "Richard Farmery, victualler",
+     "when": "1823",
+     "conf": "Documented",
+     "src": [
+      "baines1823"
+     ]
+    },
+    {
+     "what": "Welbury Watson, victualler",
+     "when": "1890",
+     "conf": "Documented",
+     "src": [
+      "bulmer1890"
+     ]
+    }
+   ],
+   "loc": {
+    "conf": "verified",
+    "lat": 54.09969,
+    "lon": -1.40666,
+    "src": [
+     "osm"
+    ]
+   },
+   "questions": [
+    "Has the pub always been in the present building?"
+   ]
+  },
+  {
+   "id": "railway-tavern",
+   "n": 22,
+   "name": "Railway Tavern",
+   "aka": [],
+   "area": "langthorpe",
+   "street": "Station Terrace",
+   "address": "Station Terrace, Langthorpe",
+   "kind": "beerhouse",
+   "intro": "A former beerhouse linked by name and place with the railway.",
+   "history": [
+    {
+     "t": "A former beerhouse associated by name and location with the railway area. Bulmer's 1890 directory lists Miss Emma Shaw running the Railway Tavern as a beerhouse.",
+     "src": [
+      "porter2010",
+      "bulmer1890"
+     ]
+    },
+    {
+     "t": "The railway reached the area in 1848 and the line closed in the 1960s. We have found no evidence that the railway caused the tavern to open or close.",
+     "src": [
+      "loop",
+      "btc_history"
+     ]
+    }
+   ],
+   "status": {
+    "code": "closed",
+    "text": "Former beerhouse. The building and closing date need investigating.",
+    "checked": "2010",
+    "src": [
+     "porter2010"
+    ]
+   },
+   "dates": [
+    {
+     "what": "Miss Emma Shaw, beerhouse keeper",
+     "when": "1890",
+     "conf": "Documented",
+     "src": [
+      "bulmer1890"
+     ]
+    }
+   ],
+   "loc": {
+    "conf": "none"
+   },
+   "questions": [
+    "Which house on Station Terrace?",
+    "When did it open and close?"
+   ]
+  },
+  {
+   "id": "old-red-lion",
+   "n": 23,
+   "name": "Old Red Lion",
+   "aka": [
+    "Red Lion"
+   ],
+   "area": "langthorpe",
+   "street": "Near the Fox and Hounds",
+   "address": "Langthorpe, near the Fox and Hounds",
+   "kind": "inn",
+   "intro": "A Langthorpe inn, now believed to be cottages.",
+   "history": [
+    {
+     "t": "The Old Red Lion appears in Bulmer's 1890 directory, with Mrs Eliza Whytell as victualler. Bernard Porter's 2010 notes place its former premises among cottages just beyond the Fox and Hounds.",
+     "src": [
+      "bulmer1890",
+      "porter2010"
+     ]
+    },
+    {
+     "t": "Baines's 1823 directory lists a Red Lion at Langthorpe kept by John Wincup. It may be the same house, but that is not confirmed.",
+     "src": [
+      "baines1823"
+     ]
+    }
+   ],
+   "status": {
+    "code": "closed",
+    "text": "Former inn, believed to survive as cottages in 2010.",
+    "checked": "2010",
+    "src": [
+     "porter2010"
+    ]
+   },
+   "dates": [
+    {
+     "what": "Red Lion, John Wincup (possibly the same house)",
+     "when": "1823",
+     "conf": "Unconfirmed",
+     "src": [
+      "baines1823"
+     ]
+    },
+    {
+     "what": "Mrs Eliza Whytell, victualler",
+     "when": "1890",
+     "conf": "Documented",
+     "src": [
+      "bulmer1890"
+     ]
+    }
+   ],
+   "loc": {
+    "conf": "none"
+   },
+   "questions": [
+    "Which cottages?",
+    "Was the 1823 Red Lion the same house?",
+    "When did it close?"
+   ]
+  },
+  {
+   "id": "ship-inn-langthorpe",
+   "n": 24,
+   "name": "Ship Inn",
+   "aka": [],
+   "area": "langthorpe",
+   "street": "First right after the bridge",
+   "address": "Langthorpe, first right after crossing the Boroughbridge bridge",
+   "kind": "beerhouse",
+   "intro": "A Langthorpe beerhouse; not the Ship Inn at Aldborough.",
+   "history": [
+    {
+     "t": "A former Langthorpe beerhouse. Bulmer's 1890 directory lists William Kay at the Ship Inn, as a beerhouse. The 2010 compilation gives its later building as Guisley House.",
+     "src": [
+      "bulmer1890",
+      "porter2010"
+     ]
+    },
+    {
+     "t": "This is a different establishment from the Ship Inn in Aldborough.",
+     "src": [
+      "porter2010"
+     ]
+    }
+   ],
+   "status": {
+    "code": "closed",
+    "text": "Former pub. The building was Guisley House in 2010.",
+    "checked": "2010",
+    "src": [
+     "porter2010"
+    ]
+   },
+   "dates": [
+    {
+     "what": "William Kay, beerhouse keeper",
+     "when": "1890",
+     "conf": "Documented",
+     "src": [
+      "bulmer1890"
+     ]
+    }
+   ],
+   "loc": {
+    "conf": "none"
+   },
+   "questions": [
+    "Exact location of Guisley House",
+    "When did it close?"
+   ]
+  },
+  {
+   "id": "four-alls",
+   "n": 25,
+   "name": "Four Alls",
+   "aka": [
+    "4 Alls"
+   ],
+   "area": "langthorpe",
+   "street": "Not confirmed",
+   "address": "Langthorpe or Milby (not confirmed)",
+   "kind": "inn",
+   "intro": "A lost inn whose name came from an old rhyme.",
+   "history": [
+    {
+     "t": "The Four Alls was one of the former hostelries of the Langthorpe area. Bernard Porter's compilation records that its premises were a private house by 2010.",
+     "src": [
+      "porter2010"
+     ]
+    },
+    {
+     "t": "His memories place it in Milby and quote the verse behind the name: \"King — I rule for All. Priest — I pray for All. Soldier — I fight for All. Everyman — I pay for All.\"",
+     "src": [
+      "porter_memories"
+     ]
+    }
+   ],
+   "status": {
+    "code": "closed",
+    "text": "Former pub, a private house in 2010. Location not confirmed.",
+    "checked": "2010",
+    "src": [
+     "porter2010"
+    ]
+   },
+   "dates": [],
+   "loc": {
+    "conf": "none"
+   },
+   "questions": [
+    "Exact original site",
+    "Is it connected with Four Alls Farm on Tinkler Lane in Milby?"
+   ]
+  },
+  {
+   "id": "grantham-arms",
+   "n": 26,
+   "name": "Grantham Arms",
+   "aka": [],
+   "area": "milby",
+   "street": "Milby",
+   "address": "Milby, Boroughbridge YO51 9BW",
+   "kind": "inn",
+   "intro": "A surviving inn and hotel on the northern side of Boroughbridge.",
+   "history": [
+    {
+     "t": "A surviving inn and hotel on the northern side of Boroughbridge. Bernard Porter's list puts the Grantham Arms under Langthorpe, while its present address uses Milby.",
+     "src": [
+      "porter2010"
+     ]
+    },
+    {
+     "t": "Bulmer's 1890 directory lists William Alfred Lister as victualler at the Grantham Arms, Milby. Bernard Porter's memories say it was named after Lord Grantham of Newby Hall.",
+     "src": [
+      "bulmer1890",
+      "porter_memories"
+     ]
+    }
+   ],
+   "status": {
+    "code": "trading",
+    "text": "Trading pub and hotel.",
+    "checked": "2026-10-28",
+    "src": [
+     "camra_grantham"
+    ]
+   },
+   "dates": [
+    {
+     "what": "William Alfred Lister, victualler",
+     "when": "1890",
+     "conf": "Documented",
+     "src": [
+      "bulmer1890"
+     ]
+    }
+   ],
+   "loc": {
+    "conf": "verified",
+    "lat": 54.09896,
+    "lon": -1.39672,
+    "src": [
+     "osm"
+    ]
+   },
+   "questions": [
+    "When was it first licensed?"
+   ]
+  },
+  {
+   "id": "ship-inn-aldborough",
+   "n": 27,
+   "name": "Ship Inn",
+   "aka": [],
+   "area": "aldborough",
+   "street": "Low Road",
+   "address": "Low Road, Aldborough",
+   "kind": "inn",
+   "intro": "A longstanding village inn close to Roman Aldborough.",
+   "history": [
+    {
+     "t": "A longstanding village inn in historic Aldborough, close to the remains of the Roman town of Isurium Brigantum. The town council's overview names the Ship among the pubs trading in 2005, and it is still listed by CAMRA.",
+     "src": [
+      "btc_history",
+      "camra_ship"
+     ]
+    },
+    {
+     "t": "Historic England lists the building at Grade II as a probable late 16th-century public house.",
+     "src": [
+      "he_ship"
+     ]
+    }
+   ],
+   "status": {
+    "code": "trading",
+    "text": "Trading pub.",
+    "checked": "2026-10-28",
+    "src": [
+     "camra_ship"
+    ]
+   },
+   "dates": [
+    {
+     "what": "Building",
+     "when": "probably late 16th century",
+     "conf": "Approximate",
+     "src": [
+      "he_ship"
+     ]
+    },
+    {
+     "what": "Trading",
+     "when": "2005",
+     "conf": "Documented",
+     "src": [
+      "btc_history"
+     ]
+    }
+   ],
+   "loc": {
+    "conf": "verified",
+    "lat": 54.0925,
+    "lon": -1.38057,
+    "src": [
+     "he_ship",
+     "osm"
+    ]
+   },
+   "questions": [
+    "Earliest record of the Ship as an inn."
+   ]
+  },
+  {
+   "id": "aldborough-arms",
+   "n": 28,
+   "name": "Aldborough Arms",
+   "aka": [],
+   "area": "aldborough",
+   "street": "Opposite the Maypole",
+   "address": "Aldborough, opposite the Maypole",
+   "kind": "inn",
+   "intro": "A former village hostelry opposite the Maypole.",
+   "history": [
+    {
+     "t": "A former village hostelry identified in the local history list. The reference to the Maypole gives a starting point for finding the original building on historic maps.",
+     "src": [
+      "porter2010"
+     ]
+    }
+   ],
+   "status": {
+    "code": "closed",
+    "text": "Former inn. Exact site and dates unknown.",
+    "checked": "2010",
+    "src": [
+     "porter2010"
+    ]
+   },
+   "dates": [],
+   "loc": {
+    "conf": "none"
+   },
+   "questions": [
+    "Which building faces the Maypole?",
+    "When did it trade?"
+   ]
+  },
+  {
+   "id": "newcastle-arms",
+   "n": 29,
+   "name": "Newcastle Arms",
+   "aka": [],
+   "area": "aldborough",
+   "street": "Near York Road",
+   "address": "Aldborough, near York Road",
+   "kind": "inn",
+   "intro": "Another former Aldborough inn.",
+   "history": [
+    {
+     "t": "Another former village inn identified in the 2010 compilation. Its location is given in relation to York Road, but more research is needed to identify the building.",
+     "src": [
+      "porter2010"
+     ]
+    }
+   ],
+   "status": {
+    "code": "closed",
+    "text": "Former inn. Further research needed.",
+    "checked": "2010",
+    "src": [
+     "porter2010"
+    ]
+   },
+   "dates": [],
+   "loc": {
+    "conf": "none"
+   },
+   "questions": [
+    "Which building?",
+    "When did it trade?"
+   ]
+  },
+  {
+   "id": "crown-inn-roecliffe",
+   "n": 30,
+   "name": "Crown Inn",
+   "aka": [],
+   "area": "roecliffe",
+   "street": "Bar Lane",
+   "address": "Bar Lane, Roecliffe YO51 9LY",
+   "kind": "coaching inn",
+   "intro": "A surviving village inn in a 16th-century building.",
+   "history": [
+    {
+     "t": "A surviving village inn in a building CAMRA describes as a 16th-century coaching inn, with three rooms and a stone-floored main bar.",
+     "src": [
+      "camra_roecliffe"
+     ]
+    }
+   ],
+   "status": {
+    "code": "trading",
+    "text": "Trading pub and restaurant.",
+    "checked": "2026-10-28",
+    "src": [
+     "camra_roecliffe"
+    ]
+   },
+   "dates": [
+    {
+     "what": "Building",
+     "when": "16th century",
+     "conf": "Approximate",
+     "src": [
+      "camra_roecliffe"
+     ]
+    }
+   ],
+   "loc": {
+    "conf": "none"
+   },
+   "questions": [
+    "The pub is not yet mapped on OpenStreetMap, so it has no pin: where exactly on Bar Lane?",
+    "Is the building listed?",
+    "Earliest record as an inn."
+   ]
+  },
+  {
+   "id": "white-swan-minskip",
+   "n": 31,
+   "name": "White Swan",
+   "aka": [
+    "Wild Swan"
+   ],
+   "area": "minskip",
+   "street": "Main Street",
+   "address": "Main Street, Minskip",
+   "kind": "inn",
+   "intro": "A village inn that grew into a dining pub.",
+   "history": [
+    {
+     "t": "This traditional village pub was known as the White Swan and later traded as the Wild Swan. It grew from a small village inn into a larger dining pub.",
+     "src": [
+      "porter2010",
+      "camra_wildswan"
+     ]
+    },
+    {
+     "t": "The White Swan (Minskip) was among the pubs near the town still trading in 2005.",
+     "src": [
+      "btc_history"
+     ]
+    },
+    {
+     "t": "The Stray Ferret reported on 8 January 2026 that the Wild Swan had closed suddenly, with its future uncertain.",
+     "src": [
+      "ferret_wildswan"
+     ]
+    }
+   ],
+   "status": {
+    "code": "uncertain",
+    "text": "Closed since January 2026; future uncertain.",
+    "checked": "2026-10-28",
+    "src": [
+     "ferret_wildswan"
+    ]
+   },
+   "dates": [
+    {
+     "what": "Trading as the White Swan",
+     "when": "2005",
+     "conf": "Documented",
+     "src": [
+      "btc_history"
+     ]
+    },
+    {
+     "what": "Closed suddenly",
+     "when": "January 2026",
+     "conf": "Documented",
+     "src": [
+      "ferret_wildswan"
+     ]
+    }
+   ],
+   "loc": {
+    "conf": "verified",
+    "lat": 54.07793,
+    "lon": -1.40688,
+    "src": [
+     "osm"
+    ]
+   },
+   "questions": [
+    "When did the White Swan become the Wild Swan?",
+    "Will it reopen?"
+   ]
+  },
+  {
+   "id": "crown-minskip",
+   "n": 32,
+   "name": "Crown",
+   "aka": [],
+   "area": "minskip",
+   "street": "Near the Staveley T-junction",
+   "address": "Minskip, near the Staveley T-junction",
+   "kind": "inn",
+   "intro": "A former Minskip hostelry by the old Staveley road junction.",
+   "history": [
+    {
+     "t": "A former Minskip hostelry identified by its relation to the old Staveley road junction. Its name, the location clue and its place in the 2010 compilation give a basis for map research.",
+     "src": [
+      "porter2010"
+     ]
+    }
+   ],
+   "status": {
+    "code": "closed",
+    "text": "Former pub. Exact site not verified.",
+    "checked": "2010",
+    "src": [
+     "porter2010"
+    ]
+   },
+   "dates": [],
+   "loc": {
+    "conf": "none"
+   },
+   "questions": [
+    "Which building by the junction?",
+    "When did it trade?"
+   ]
+  },
+  {
+   "id": "bull-and-dog",
+   "n": 33,
+   "name": "Bull and Dog",
+   "aka": [],
+   "area": "minskip",
+   "street": "Further up from the White Swan",
+   "address": "Minskip, further up from the White Swan",
+   "kind": "inn",
+   "intro": "Another former Minskip pub.",
+   "history": [
+    {
+     "t": "Another former Minskip pub recorded in Bernard Porter's local history list. Its position relative to the White Swan may help find the building on old maps.",
+     "src": [
+      "porter2010"
+     ]
+    }
+   ],
+   "status": {
+    "code": "closed",
+    "text": "Former pub. Exact site not verified.",
+    "checked": "2010",
+    "src": [
+     "porter2010"
+    ]
+   },
+   "dates": [],
+   "loc": {
+    "conf": "none"
+   },
+   "questions": [
+    "Which building?",
+    "When did it trade?"
+   ]
+  },
+  {
+   "id": "blue-bell",
+   "n": 34,
+   "name": "Blue Bell Inn",
+   "aka": [
+    "Bluebell"
+   ],
+   "area": "kirby-hill",
+   "street": "Leeming Lane",
+   "address": "Leeming Lane, Kirby Hill",
+   "kind": "coaching inn",
+   "intro": "An old coaching inn on the road between London and Scotland.",
+   "history": [
+    {
+     "t": "The Langthorpe Loop guide calls the Blue Bell an old coaching inn that still has a cell in its grounds, where prisoners bound for York could be chained up overnight.",
+     "src": [
+      "loop"
+     ]
+    },
+    {
+     "t": "The guide also points out the nearby milestone, which it says marks the spot exactly halfway between the Scottish and English capitals. The milestone is listed by Historic England.",
+     "src": [
+      "loop",
+      "he_milestone"
+     ]
+    },
+    {
+     "t": "Baines's 1823 directory lists Grace Pickering, common brewer, maltster and victualler, at the Blue Bell. Bulmer's 1890 directory lists Francis Kirk, victualler and farmer.",
+     "src": [
+      "baines1823",
+      "bulmer1890"
+     ]
+    }
+   ],
+   "status": {
+    "code": "trading",
+    "text": "Trading pub with rooms.",
+    "checked": "2026-10-28",
+    "src": [
+     "camra_bluebell"
+    ]
+   },
+   "dates": [
+    {
+     "what": "Grace Pickering, brewer and victualler",
+     "when": "1823",
+     "conf": "Documented",
+     "src": [
+      "baines1823"
+     ]
+    },
+    {
+     "what": "Francis Kirk, victualler",
+     "when": "1890",
+     "conf": "Documented",
+     "src": [
+      "bulmer1890"
+     ]
+    }
+   ],
+   "loc": {
+    "conf": "verified",
+    "lat": 54.10953,
+    "lon": -1.40714,
+    "src": [
+     "osm",
+     "he_milestone"
+    ]
+   },
+   "questions": [
+    "How old is the prisoners' cell?"
+   ]
+  },
+  {
+   "id": "white-horse-kirby-hill",
+   "n": 35,
+   "name": "White Horse",
+   "aka": [
+    "White Swan"
+   ],
+   "area": "kirby-hill",
+   "street": "Kirby Hill",
+   "address": "Kirby Hill",
+   "kind": "inn",
+   "intro": "A former Kirby Hill hostelry known by two names.",
+   "history": [
+    {
+     "t": "Bernard Porter's compilation identifies this former hostelry under the names White Horse and White Swan. The dates of the different names and the original location need further investigation.",
+     "src": [
+      "porter2010"
+     ]
+    },
+    {
+     "t": "Baines's 1823 directory lists Matthew Hanby, victualler, at the White Horse, Kirby Hill.",
+     "src": [
+      "baines1823"
+     ]
+    }
+   ],
+   "status": {
+    "code": "closed",
+    "text": "Former inn. Exact site not verified.",
+    "checked": "2010",
+    "src": [
+     "porter2010"
+    ]
+   },
+   "dates": [
+    {
+     "what": "Matthew Hanby, victualler",
+     "when": "1823",
+     "conf": "Documented",
+     "src": [
+      "baines1823"
+     ]
+    }
+   ],
+   "loc": {
+    "conf": "none"
+   },
+   "questions": [
+    "Where did it stand?",
+    "Which name came first?"
+   ]
+  },
+  {
+   "id": "wellesley-arms",
+   "n": 36,
+   "name": "Wellesley Arms",
+   "aka": [],
+   "area": "kirby-hill",
+   "street": "Kirby Hill",
+   "address": "Kirby Hill",
+   "kind": "inn",
+   "intro": "Demolished to make way for the A1(M).",
+   "history": [
+    {
+     "t": "A former Kirby Hill hostelry named after Sir J. R. A. Wellesley, identified in the historical compilation as Lord of the Manor of Kirby Hill.",
+     "src": [
+      "porter2010"
+     ]
+    },
+    {
+     "t": "The 2010 account says the inn was eventually demolished to make way for what is now the A1(M).",
+     "src": [
+      "porter2010"
+     ]
+    }
+   ],
+   "status": {
+    "code": "demolished",
+    "text": "Demolished for the A1(M).",
+    "checked": "2010",
+    "src": [
+     "porter2010"
+    ]
+   },
+   "dates": [],
+   "loc": {
+    "conf": "none"
+   },
+   "questions": [
+    "Where exactly did it stand? A comparison of maps from before and after the A1(M) could show this.",
+    "When was it demolished?"
+   ]
+  }
+ ],
+ "supplementary": [
+  {
+   "id": "boroughbridge-social-club",
+   "name": "Boroughbridge Social Club",
+   "aka": [],
+   "area": "town",
+   "street": "Fishergate",
+   "address": "14 Fishergate, Boroughbridge",
+   "kind": "social club",
+   "intro": "A modern social club, not a historic inn.",
+   "history": [
+    {
+     "t": "A surviving social club recorded by CAMRA. Its opening date and earlier history need further research.",
+     "src": [
+      "camra_place"
+     ]
+    }
+   ],
+   "status": {
+    "code": "trading",
+    "text": "Open club.",
+    "checked": "2026-10-28",
+    "src": [
+     "camra_place"
+    ]
+   },
+   "dates": [],
+   "loc": {
+    "conf": "none"
+   },
+   "questions": [
+    "When did it open?",
+    "What was the building before?"
+   ]
+  },
+  {
+   "id": "temperance-hotel",
+   "name": "Temperance Hotel",
+   "aka": [],
+   "area": "town",
+   "street": "Next to the Crown car park entrance",
+   "address": "Next to the Crown Hotel car park entrance, Boroughbridge",
+   "kind": "temperance hotel",
+   "intro": "A hotel without a bar, upstairs over a café and sweet shop.",
+   "history": [
+    {
+     "t": "Bernard Porter's memories record that the building next to the Crown Hotel car park entrance was the Temperance Hotel upstairs, with a double-fronted café and sweet shop downstairs.",
+     "src": [
+      "porter_memories"
+     ]
+    }
+   ],
+   "status": {
+    "code": "closed",
+    "text": "No longer a hotel.",
+    "checked": "2010",
+    "src": [
+     "porter_memories"
+    ]
+   },
+   "dates": [],
+   "loc": {
+    "conf": "none"
+   },
+   "questions": [
+    "When did it operate?"
+   ]
+  }
+ ]
+}

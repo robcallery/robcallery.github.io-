@@ -76,7 +76,9 @@
   .page .pno{font-family:"Space Mono",monospace;letter-spacing:0;font-size:.95em}
   .page .wm{position:absolute;inset:0;display:grid;place-items:center;pointer-events:none;opacity:.07}
   .page .wm svg{width:70%;height:auto}
-  .mrz{margin-top:auto;font-family:"Space Mono",monospace;font-size:.62em;letter-spacing:.12em;color:#6f6450;line-height:1.5;white-space:nowrap;overflow:hidden;border-top:1px solid var(--line);padding-top:.45em}
+  .mrz{margin-top:auto;flex:none;border-top:1px solid var(--line);padding-top:.45em}
+  .mrz svg{display:block;width:100%;height:auto;overflow:visible}
+  .mrz text{font-family:"Space Mono","Courier New",monospace;font-size:10px;fill:#6f6450}
 
   /* cover */
   .cover{background:#0e1a33;color:var(--gold);align-items:center;text-align:center;justify-content:flex-end;padding:0 1em .55em;overflow:hidden}
@@ -101,7 +103,8 @@
   .idnote{font-size:.68em;color:#6f6450;margin-top:1em;line-height:1.45}
 
   /* beer page */
-  .stampbox{position:relative;height:42%;display:grid;place-items:center;margin:.5em 0 .3em}
+  .stampbox{position:relative;height:42%;min-height:0;flex-shrink:1;display:grid;place-items:center;margin:.5em 0 .3em}
+  .stampbox .stamp{max-height:100%;width:auto;max-width:72%}
   .stamp{width:72%;height:auto;mix-blend-mode:multiply;opacity:.88}
   .fields{display:grid;grid-template-columns:1fr 1fr;gap:.25em .9em}
   .fields .full{grid-column:1/-1}
@@ -115,6 +118,17 @@
   .says .v{font-family:Inter,system-ui,sans-serif;font-weight:400;font-style:italic;font-size:.72em;line-height:1.4;border-bottom:0}
   .unk{color:#a39675;font-style:normal;font-weight:400}
   .stampbox{height:50%}
+  .grp h2{font-family:"DM Serif Display",serif;font-weight:400;font-size:1.9em;line-height:1.02;margin:.5em 0 .15em;color:#1b2b4d}
+  .grp .gsub{font-family:"Space Mono",monospace;font-size:.62em;letter-spacing:.06em;color:#8a7a58;margin-bottom:.7em;text-transform:uppercase}
+  .glist{columns:2;column-gap:1.1em;font-family:"Space Mono",monospace;font-size:.56em;line-height:1.55}
+  .glist a,.toc a{display:flex;gap:.4em;color:inherit;text-decoration:none;break-inside:avoid;cursor:pointer}
+  .glist a span:first-child,.toc a span:first-child{flex:1;min-width:0;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+  .glist a:hover,.toc a:hover{color:#b3262b}
+  .glist .pg,.toc .pg{color:#8a7a58}
+  .toc{margin-top:.8em;font-size:.82em}
+  .toc a{padding:.32em 0;border-bottom:1px dotted var(--line);align-items:baseline}
+  .toc a span:first-child{font-family:"DM Serif Display",serif;font-size:1.05em}
+  .toc .n{font-family:"Space Mono",monospace;font-size:.7em;color:#6f6450}
   .await-msg{text-align:center;font-family:"Caveat",cursive;font-size:1.35em;color:#8a7a58;margin-top:.6em}
   .backin{background:linear-gradient(135deg,var(--burg2),var(--burg));}
 
@@ -252,7 +266,7 @@
   <p class="tip">Tap a page, swipe, use the arrow keys, or grab a packet.</p>
   </div>
 </main>
-<footer>© <span id="yr">2026</span> Rob Callery · callery.co.uk · Drink responsibly</footer>
+<footer>© <span id="yr">2026</span> Rob Callery · callery.co.uk · Drink responsibly · <!-- legal --><a href="/privacy/">Privacy</a> · <a href="/cookies/">Cookies</a><!-- /legal --></footer>
 <script src="/travel-guides/guides.js?v=5bf5f0b6"></script><script>(function(){function shelfOf(g){
     if(g.shelf)return g.shelf;
     if(g.group==='Airports')return 'airports';
@@ -394,11 +408,13 @@
     document.getElementById('next').disabled=cur>=maxC;
     var label;
     if(cur===0) label='Closed';
-    else if(single){ label=cur<=C?'Contents':(pages[cur]&&pages[cur].gi!=null?beers[pages[cur].gi].city+' · '+(pages[cur].gi+1)+' of '+beers.length:'Next stop'); }
+    else if(single){ label=cur===1?'Holder page':((pages[cur]&&pages[cur].lbl)||''); }
     else { var a=2*cur-2; label=(cur===1||a<=C)?'Contents':(pages[a]&&pages[a].gi!=null)?beers[pages[a].gi].city+' · pages '+a+'–'+(a+1):(cur===N?'Page '+a:'Pages '+a+'–'+(a+1)); }
     document.getElementById('count').textContent=label;
     if(moving>=0) setTimeout(function(){layout(-1)},1000);
   }
+  function pageTo(p){return single?p:Math.floor(p/2)+1}
+  stage.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('[data-go]');if(!a)return;e.stopPropagation();e.preventDefault();go(pageTo(+a.getAttribute('data-go')))},true);
   function go(n){
     n=Math.max(0,Math.min(maxCur(),n)); if(n===cur) return;
     var moving=n>cur?cur:n; cur=n; layout(moving);
