@@ -3,8 +3,21 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- seo -->
+<meta name="description" content="Rob Callery's gaming blog: what I'm playing, what's good and what's a rage-quit.">
+<link rel="canonical" href="https://callery.co.uk/gaming/blog/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Rob Callery">
+<meta property="og:title" content="The Gaming Blog - Callery Gaming - Rob Callery">
+<meta property="og:description" content="Rob Callery's gaming blog: what I'm playing, what's good and what's a rage-quit.">
+<meta property="og:url" content="https://callery.co.uk/gaming/blog/">
+<meta property="og:image" content="https://callery.co.uk/og-image.png">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@calz88">
+<meta name="twitter:image" content="https://callery.co.uk/og-image.png">
+<!-- /seo -->
 <title>The Gaming Blog - Callery Gaming - Rob Callery</title>
-<meta name="description" content="Rob Callery&#x27;s gaming blog: what I&#x27;m playing, what&#x27;s good and what&#x27;s a rage-quit.">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="icon" href="/favicon.ico" sizes="any"><link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Serif+Display&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
@@ -61,7 +74,26 @@ footer{text-align:center;padding:22px 16px;color:var(--muted);font-size:.85rem;b
 .art h1{font-family:"DM Serif Display",Georgia,serif;font-weight:400;font-size:clamp(1.9rem,4.6vw,2.8rem);line-height:1.08;color:var(--navy)}
 .art .by{margin:.7rem 0 1.4rem;font-size:.9rem;color:#5a6278}
 .art p{font-family:Georgia,serif;font-size:1.08rem;line-height:1.72;margin:0 0 1.05em}
-.art h2{font-family:"Bebas Neue",Impact,sans-serif;font-weight:400;font-size:1.7rem;letter-spacing:.05em;color:#1d428a;margin:1.4em 0 .4em}
+.art h2{font-family:"Bebas Neue",Impact,sans-serif;font-weight:400;font-size:1.8rem;letter-spacing:.05em;color:#3b1d8f;margin:1.5em 0 .4em;border-bottom:3px solid var(--yellow);display:inline-block}
+.art blockquote{font-family:"DM Serif Display",Georgia,serif;font-size:clamp(1.35rem,3.2vw,1.8rem);line-height:1.2;color:#14123a;border-left:6px solid var(--purple);padding:.15em 0 .15em .7em;margin:1.1em 0}
+.art .aside{font-style:italic;color:#5a6278}
+.art .mot{font-family:"Bebas Neue",Impact,sans-serif;font-size:1.6rem;letter-spacing:.08em;line-height:1.15;color:#1d428a;margin-top:1.2em}
+.art hr{border:0;border-top:2px dashed #c9c2b0;margin:2em 0 1.2em}
+.art .boxh{font-family:"Bebas Neue",Impact,sans-serif;font-weight:400;font-size:1.5rem;letter-spacing:.05em;color:#fff;background:#14123a;margin:0;padding:.5em .9em;border-radius:12px 12px 0 0}
+.art .facts{list-style:none;margin:0 0 1.4em;padding:.6em .9em .8em;background:#ece6d6;border-radius:0 0 12px 12px;font-family:Inter,sans-serif;font-size:.97rem}
+.art .facts li{padding:.35em 0;border-bottom:1px dashed #cfc6ae}.art .facts li:last-child{border-bottom:0}
+.art .verdict{background:#14123a;color:var(--cream);border-radius:12px;padding:16px 20px;margin:1.6em 0 1em}
+.art .verdict small{display:block;font-family:"Bebas Neue",Impact,sans-serif;letter-spacing:.18em;color:var(--yellow);font-size:1rem}
+.art .verdict span{font-family:"DM Serif Display",Georgia,serif;font-size:1.4rem}
+.art .verdict span:empty{display:none}
+.banner{position:relative;background:linear-gradient(135deg,#2b0f5e,#14123a 60%,#0a1838);border:3px solid rgba(255,255,255,.85);border-radius:14px;overflow:hidden;margin-bottom:22px;box-shadow:0 20px 40px rgba(0,0,0,.4)}
+.bn-top{display:flex;justify-content:space-between;gap:10px;background:var(--yellow);color:#14123a;font-family:"Bebas Neue",Impact,sans-serif;letter-spacing:.12em;font-size:1.02rem;padding:6px 16px}
+.bn-title{font-family:"Bebas Neue",Impact,sans-serif;font-size:clamp(2.6rem,9vw,4.6rem);letter-spacing:.04em;text-align:center;color:#fff;padding:20px 16px 26px;line-height:1;text-shadow:0 0 18px rgba(155,92,255,.8)}
+.sticker{position:absolute;right:14px;bottom:12px;transform:rotate(-6deg);background:#d7263d;color:#fff;font-weight:700;font-size:.8rem;padding:.35em .7em;border-radius:6px;box-shadow:0 4px 10px rgba(0,0,0,.4)}
+.pnav{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+.pnav a{background:var(--cream);color:#14123a;text-decoration:none;font-weight:700;padding:.55em 1.1em;border-radius:999px;font-size:.92rem}
+.pnav a:hover,.pnav a:focus-visible{background:var(--yellow)}
+@media (max-width:520px){.sticker{position:static;display:inline-block;margin:0 0 14px 16px}}
 </style>
 </head>
 <body>
@@ -70,8 +102,8 @@ footer{text-align:center;padding:22px 16px;color:var(--muted);font-size:.85rem;b
   <a class="back" href="/gaming/">← Back to the setup</a>
 </header>
 <main>
-<div class="blog"><section class="intro"><h1>The gaming <span>blog</span></h1><p>Games, streams and the odd controller thrown across the room.</p></section><div class="empty"><b>Loading...</b><p>The first post is on its way: what I'm playing, what's good and what's a rage-quit. Until then, catch me live on <a href="https://www.twitch.tv/robcallery" target="_blank" rel="noopener">Twitch</a>.</p><p class="blink">PRESS START</p></div></div>
+<div class="blog"><section class="intro"><h1>The gaming <span>blog</span></h1><p>Games, streams and the odd controller thrown across the room.</p></section><ol class="posts"><li><a class="post" href="fm27-free-launch-preview/"><small>29 October 2026</small><h2>Football Manager 27 Is Free This Weekend – What&#x27;s the Catch?</h2><p>Football Manager 27 is free to play until Tuesday. So what&#x27;s the catch?</p></a></li></ol></div>
 </main>
-<footer>© <span>2026</span> Rob Callery · callery.co.uk · Drink responsibly</footer>
+<footer>© <span>2026</span> Rob Callery · callery.co.uk · Drink responsibly · <!-- legal --><a href="/privacy/">Privacy</a> · <a href="/cookies/">Cookies</a><!-- /legal --></footer>
 </body>
 </html>
