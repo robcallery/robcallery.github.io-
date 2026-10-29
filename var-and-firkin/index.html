@@ -34,6 +34,11 @@
   .back{font-size:.92rem;font-weight:600;text-decoration:none;opacity:.85;padding:.45em .9em;border:1.5px solid rgba(247,242,228,.4);border-radius:999px;transition:opacity .15s,border-color .15s}
   .back:hover,.back:focus-visible{opacity:1;border-color:var(--yellow)}
   main{flex:1;width:100%}
+  /* Explore: the bar always sits on the footer; any spare height becomes wall above, with the heading centred in it */
+  .hubmain{display:flex;flex-direction:column}
+  .hubmain .intro{margin-block:auto}
+  .hubmain .bar{margin-top:0}
+  .hubmain .intro{padding-bottom:36px}
   .intro{text-align:center;max-width:720px;margin:0 auto;padding:18px 16px 8px}
   .intro h1{font-family:"DM Serif Display",Georgia,serif;font-weight:400;font-size:clamp(2.2rem,5.5vw,3.6rem);line-height:1.05;letter-spacing:-.01em}
   .intro h1 em{color:var(--yellow);font-style:italic}
