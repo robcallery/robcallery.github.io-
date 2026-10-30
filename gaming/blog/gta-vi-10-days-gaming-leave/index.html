@@ -434,6 +434,9 @@ body.vice{overflow-x:hidden;overflow-x:clip}
 .grid2 input:focus,.grid2 select:focus{border-color:#F47BA5;outline:none;box-shadow:0 0 0 3px rgba(244,123,165,.3)}
 .lv-end{align-self:end;margin:0!important;font-size:.95rem!important;font-family:inherit!important;color:#253B71;padding:10px 0}
 .dept-fine{font-size:.8rem!important;color:#5a5570;margin:10px 0 0!important;text-align:center;font-family:inherit!important;max-width:none}
+.legend-pick{display:grid;gap:4px;margin-top:10px;font-size:.82rem;font-weight:700;color:#253B71}
+.legend-pick select{font:600 1rem Inter,system-ui,sans-serif;min-height:48px;padding:8px 10px;border:2px solid #F47BA5;border-radius:10px;background:#fff0f5;color:#1d1633;width:100%}
+.legend-pick select:focus{outline:3px solid #253B71;outline-offset:2px}
 /* certificate */
 .cert{margin:22px 0;outline:none}
 .cert-in{position:relative;text-align:center;padding:26px 18px 20px;background:#fffdf6;border-radius:6px;color:#2a1638;
@@ -543,7 +546,8 @@ body.vice{overflow-x:hidden;overflow-x:clip}
   <div class="dept-head"><svg class="crest" viewBox="0 0 80 80" aria-hidden="true" focusable="false"><circle cx="40" cy="40" r="37" fill="none" stroke="currentColor" stroke-width="3"/><circle cx="40" cy="40" r="31" fill="none" stroke="currentColor" stroke-width="1"/><circle cx="40" cy="44" r="13" fill="currentColor" opacity=".25"/><path d="M22 54 h36" stroke="currentColor" stroke-width="2"/><path d="M40 54 Q38 40 41 26" stroke="currentColor" stroke-width="2.4" fill="none"/><path d="M41 26 q-10 -2 -15 5 M41 26 q10 -3 15 4 M41 26 q-4 -8 -12 -9 M41 26 q4 -8 12 -8" stroke="currentColor" stroke-width="2.2" fill="none" stroke-linecap="round"/></svg><div><p class="dept-k">Form VC-2026/10A · Application</p><h2 id="dept-h">The Department of Vice City Gaming Leave</h2>
     <p class="dept-sub">Processing applications for uninterrupted gaming since 2013. Apparently.</p></div></div>
   <form id="leave-form" novalidate>
-    <fieldset><legend><span>1</span> Who are you asking for permission?</legend><div class="whos"><label class="who"><input type="radio" name="who" value="partner" data-rel="Partner" checked><span>Partner or spouse</span></label><label class="who"><input type="radio" name="who" value="family" data-rel="Family member"><span>Parents or family</span></label><label class="who"><input type="radio" name="who" value="housemates" data-rel="Housemate"><span>Housemates</span></label><label class="who"><input type="radio" name="who" value="employer" data-rel="Employer"><span>Employer</span></label><label class="who"><input type="radio" name="who" value="nobody" data-rel="Myself"><span>Nobody. I’m a grown adult and make my own terrible decisions.</span></label></div>
+    <fieldset><legend><span>1</span> Who are you asking for permission?</legend><div class="whos"><label class="who"><input type="radio" name="who" value="partner" data-rel="Partner" checked><span>Partner or spouse</span></label><label class="who"><input type="radio" name="who" value="family" data-rel="Family member"><span>Parents or family</span></label><label class="who"><input type="radio" name="who" value="housemates" data-rel="Housemate"><span>Housemates</span></label><label class="who"><input type="radio" name="who" value="employer" data-rel="Employer"><span>Employer</span></label><label class="who"><input type="radio" name="who" value="legend" data-rel="GTA legend"><span>A GTA legend. Pick one below.</span></label><label class="who"><input type="radio" name="who" value="nobody" data-rel="Myself"><span>Nobody. I’m a grown adult and make my own terrible decisions.</span></label></div>
+      <label class="legend-pick" id="legend-pick">Choose your GTA legend<select id="lv-legend"><option value="">Pick a protagonist…</option><option value="0" data-from="Grand Theft Auto III" data-say="Claude has read your application and said absolutely nothing. The department is treating this as a yes.">Claude (Grand Theft Auto III)</option><option value="1" data-from="Vice City" data-say="Tommy approves, on the condition you wear a Hawaiian shirt for the full duration.">Tommy Vercetti (Vice City)</option><option value="2" data-from="Liberty City Stories" data-say="Toni approves, but warns that his mother will be ringing every day to check on you.">Toni Cipriani (Liberty City Stories)</option><option value="3" data-from="Vice City Stories" data-say="Vic approves. Ten days off is more leave than the army ever gave him.">Victor Vance (Vice City Stories)</option><option value="4" data-from="San Andreas" data-say="CJ approves, but reminds you to hit the gym between missions.">Carl “CJ” Johnson (San Andreas)</option><option value="5" data-from="Grand Theft Auto IV" data-say="Niko approves, provided you stop answering when your cousin rings to ask if you want to go bowling.">Niko Bellic (Grand Theft Auto IV)</option><option value="6" data-from="The Lost and Damned" data-say="Johnny approves and says the lads will cover for you. You are not one of the lads.">Johnny Klebitz (The Lost and Damned)</option><option value="7" data-from="The Ballad of Gay Tony" data-say="Luis approves, as long as you’re back in time for the club opening.">Luis Lopez (The Ballad of Gay Tony)</option><option value="8" data-from="Chinatown Wars" data-say="Huang approves. He once lost a priceless sword, so he understands losing track of things. Like days.">Huang Lee (Chinatown Wars)</option><option value="9" data-from="Grand Theft Auto V" data-say="Michael approves from a sun lounger and recommends a long session with his therapist afterwards.">Michael De Santa (Grand Theft Auto V)</option><option value="10" data-from="Grand Theft Auto V" data-say="Franklin approves and offers to take the dog out while you’re busy.">Franklin Clinton (Grand Theft Auto V)</option><option value="11" data-from="Grand Theft Auto V" data-say="Trevor approved this before you’d finished asking. The department is slightly concerned.">Trevor Philips (Grand Theft Auto V)</option></select></label>
       <p class="dept-msg" id="who-msg" aria-live="polite"></p></fieldset>
     <fieldset><legend><span>2</span> How many days of gaming leave?</legend>
       <div class="days"><button type="button" class="step" data-step="-1" aria-label="One day fewer">−</button>
@@ -565,7 +569,7 @@ body.vice{overflow-x:hidden;overflow-x:clip}
   <div class="cert-in"><svg class="crest" viewBox="0 0 80 80" aria-hidden="true" focusable="false"><circle cx="40" cy="40" r="37" fill="none" stroke="currentColor" stroke-width="3"/><circle cx="40" cy="40" r="31" fill="none" stroke="currentColor" stroke-width="1"/><circle cx="40" cy="44" r="13" fill="currentColor" opacity=".25"/><path d="M22 54 h36" stroke="currentColor" stroke-width="2"/><path d="M40 54 Q38 40 41 26" stroke="currentColor" stroke-width="2.4" fill="none"/><path d="M41 26 q-10 -2 -15 5 M41 26 q10 -3 15 4 M41 26 q-4 -8 -12 -9 M41 26 q4 -8 12 -8" stroke="currentColor" stroke-width="2.2" fill="none" stroke-linecap="round"/></svg><p class="cert-k">Department of Vice City Gaming Leave</p><h2 id="cert-h">Application approved</h2>
     <p class="cert-q">“This department has reviewed your application and determined that thirteen years is a perfectly reasonable amount of time to wait before requesting <span class="c-daysword">ten</span> days of uninterrupted gaming.”</p>
     <dl class="cert-dl"><div><dt>Applicant</dt><dd id="ce-name">—</dd></div><div><dt>Approved dates</dt><dd id="ce-dates">—</dd></div>
-      <div><dt>Total gaming days</dt><dd id="ce-days">10</dd></div><div><dt>Platform</dt><dd id="ce-platform">—</dd></div></dl>
+      <div id="ce-by-row" hidden><dt>Approved by</dt><dd id="ce-by">—</dd></div><div><dt>Total gaming days</dt><dd id="ce-days">10</dd></div><div><dt>Platform</dt><dd id="ce-platform">—</dd></div></dl>
     <p class="cert-status">Status: <b>Provisionally approved</b></p><p class="cert-sub">Subject to obtaining the necessary household signatures.</p>
     <div class="stamp" aria-hidden="true"><span>Approved for</span><b>Vice City</b><span>duty</span></div>
     <p class="cert-novelty">A novelty approval from a made-up department. It is not your employer’s or anybody else’s actual consent. For that, you need the signatures below.</p>
@@ -650,6 +654,7 @@ document.querySelectorAll('.copy').forEach(function(b){b.addEventListener('click
     family:'Family gatherings and garden centre expeditions may be rescheduled.',
     housemates:'Shared-living clause activated: you will still be expected to take the bins out. Probably on day four.',
     employer:'Annual leave approval remains subject to company policy. Unfortunately, Vice City has not yet been recognised as a bank holiday.',
+    legend:'Pick your GTA legend from the list and they’ll give you their verdict.',
     nobody:'Congratulations. Your application has been approved by yourself. Your greatest challenge is now remembering to eat.'};
   function dayMsg(n){if(n<=2)return n+(n===1?' day':' days')+'? That’s barely enough time to choose a radio station. Brave.';
     if(n<=6)return n+' days. Modest. Sensible. You’ll get through the opening missions and not much else.';
@@ -663,9 +668,16 @@ document.querySelectorAll('.copy').forEach(function(b){b.addEventListener('click
   function words(n){document.querySelectorAll('.c-daysword').forEach(function(x){x.textContent=W[n]||n});
     document.querySelectorAll('.c-daysword-cap').forEach(function(x){var w=W[n]||String(n);x.textContent=w.charAt(0).toUpperCase()+w.slice(1)});
     document.querySelectorAll('.c-days').forEach(function(x){x.textContent=n});}
+  var lg=document.getElementById('lv-legend'),lgWrap=document.getElementById('legend-pick'),appr=document.getElementById('lv-approver');
+  function legend(){var o=lg.options[lg.selectedIndex];return o&&o.value!==''?{name:o.textContent.replace(/ \(.*\)$/,''),from:o.getAttribute('data-from'),say:o.getAttribute('data-say')}:null}
   function upd(){var n=+days.value;out.textContent=n;dMsg.textContent=dayMsg(n);var r=range();endTxt.textContent=fmt(r[1]);
-    var w=f.querySelector('input[name=who]:checked');whoMsg.textContent=w?WHO[w.value]:'';}
-  f.querySelectorAll('input[name=who]').forEach(function(r){r.addEventListener('change',function(){rel.value=r.getAttribute('data-rel');upd();})});
+    var w=f.querySelector('input[name=who]:checked');var L=legend();
+    whoMsg.textContent=w?(w.value==='legend'&&L?L.say:WHO[w.value]):'';}
+  lg.addEventListener('change',function(){var L=legend();if(!L)return;var t=f.querySelector('input[value=legend]');t.checked=true;
+    appr.value=L.name;rel.value='GTA legend ('+L.from+')';upd();});
+  f.querySelectorAll('input[name=who]').forEach(function(r){r.addEventListener('change',function(){var L=legend();
+    if(r.value==='legend'){if(L){appr.value=L.name;rel.value='GTA legend ('+L.from+')';}else{rel.value='GTA legend';lg.focus();}}
+    else{rel.value=r.getAttribute('data-rel');if(legend()&&appr.value===legend().name)appr.value='';}upd();})});
   days.addEventListener('input',upd);start.addEventListener('change',upd);
   f.querySelectorAll('.step').forEach(function(b){b.addEventListener('click',function(){days.value=Math.max(1,Math.min(30,+days.value+(+b.getAttribute('data-step'))));upd();})});
   upd();
@@ -675,11 +687,12 @@ document.querySelectorAll('.copy').forEach(function(b){b.addEventListener('click
     C('ct-name').value=name;C('ct-approver').value=approver;C('ct-rel').value=rel.value;C('ct-platform').value=C('lv-platform').value;
     C('ct-start').value=fmt(r[0]);C('ct-end').value=fmt(r[1]);C('ct-days').value=n;C('ct-date').value=new Date().toLocaleDateString('en-GB',{day:'numeric',month:'long',year:'numeric'});
     words(n);
+    var byRow=C('ce-by-row');if(approver){C('ce-by').textContent=approver;byRow.hidden=false}else byRow.hidden=true;
     C('ce-name').textContent=name||'The applicant';C('ce-dates').textContent=fmt(r[0])+' – '+fmt(r[1]);C('ce-days').textContent=n;C('ce-platform').textContent=C('lv-platform').value;
     var cert=C('cert');cert.hidden=false;cert.focus();cert.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'start'});});
   C('ct-days').addEventListener('input',function(){var n=parseInt(this.value,10);if(n>0&&n<=30)words(n);});
   C('lv-reset').addEventListener('click',function(){f.reset();document.querySelectorAll('#contract input').forEach(function(i){i.value=i.defaultValue});
-    rel.value='Partner';days.value=10;words(10);upd();C('cert').hidden=true;C('ag-status').textContent='Form reset. Nothing was saved anywhere.';});
+    rel.value='Partner';lg.value='';C('ce-by-row').hidden=true;days.value=10;words(10);upd();C('cert').hidden=true;C('ag-status').textContent='Form reset. Nothing was saved anywhere.';});
 
   /* ---------- printing: copy the agreement into a print-only container, inputs turned into filled-in lines ---------- */
   function prep(){var old=document.getElementById('print-root');if(old)old.remove();
