@@ -1,10 +1,15 @@
 // Cloudflare Workers config for callery.co.uk.
-// The site is static files only, served by the "callery" Worker's static assets.
+// The site is static files, served by the "callery" Worker's static assets.
+// worker.js only runs for /api/* (run_worker_first); every other request is served straight from the files.
+//   /api/waits/<park>  live theme park wait times (Queue-Times.com), used by /travel-guides/disney/magickingdom/
 // Cloudflare Workers Builds deploys this on every push to main (deploy command: npx wrangler deploy).
 {
   "name": "callery",
   "compatibility_date": "2026-10-28",
+  "main": "worker.js",
   "assets": {
-    "directory": "."
+    "directory": ".",
+    "binding": "ASSETS",
+    "run_worker_first": ["/api/*"]
   }
 }

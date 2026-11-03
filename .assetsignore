@@ -8,3 +8,4 @@ CNAME
 .nojekyll
 node_modules
 .wrangler
+worker.js
