@@ -166,6 +166,91 @@ footer{text-align:center;padding:22px 16px;color:var(--muted);font-size:.85rem;b
 @media (max-width:640px){.board .mat{width:62px;height:62px;font-size:.85rem;top:-30px;right:-4px}.board .kick{padding-right:56px}}
 @media (max-width:520px){.brand{font-size:1.3rem}.brand svg{width:30px;height:30px}.back{font-size:.8rem}}
 @media (prefers-reduced-motion:reduce){.mats a{transition:none}}
+/* ===== the pub hub ===== */
+body{background:
+  radial-gradient(ellipse 70% 40% at 50% -5%,rgba(255,176,60,.28),transparent 70%),
+  repeating-linear-gradient(90deg,rgba(0,0,0,.18) 0 2px,transparent 2px 120px),
+  linear-gradient(180deg,#3a2414,#24150b 900px,#1a0f08) #1a0f08}
+main.wide{max-width:1160px}
+footer{border-top:3px solid #b8893a}
+footer p{margin:.2em 0}
+footer .susp{font-family:"Caveat","Comic Sans MS",cursive;font-size:1.3rem;color:#f0d9a8}
+.crumbs ol{color:#d9c7a6}
+.hero{text-align:center;padding:28px 18px 26px;margin-top:4px;border-color:#6b4423;box-shadow:inset 0 0 50px rgba(0,0,0,.5),0 0 0 3px #b8893a,0 22px 40px rgba(0,0,0,.5)}
+.hero h1{font-size:clamp(3.4rem,15vw,6.2rem);line-height:.95;margin:.08em 0 .1em}
+.hero .tag{font-family:"Caveat","Comic Sans MS",cursive;font-size:clamp(1.5rem,5.4vw,2.1rem);color:var(--yellow);line-height:1.15}
+.quote{margin:18px auto 0;max-width:620px;padding:14px 16px 12px;border-top:2px dashed rgba(244,239,226,.3);border-bottom:2px dashed rgba(244,239,226,.3)}
+.quote p{font-family:"Cabin Sketch","Bebas Neue",Impact,sans-serif;font-size:clamp(1.3rem,4.8vw,1.75rem);line-height:1.2;min-height:2.4em;display:flex;align-items:center;justify-content:center;text-wrap:balance}
+.quote figcaption{margin-top:8px;font-size:.85rem;color:var(--muted);display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;justify-content:center}
+.qb{font:700 .85rem Inter,system-ui,sans-serif;min-height:44px;padding:0 1.1em;border-radius:999px;border:2px solid var(--yellow);background:transparent;color:var(--yellow);cursor:pointer}
+.qb:hover{background:var(--yellow);color:#1e1a14}
+.hero-s{margin-top:14px;font-size:.95rem;color:#dfe8da}
+.hero .mat{top:-20px;right:6px;font-size:.95rem}
+.feat{margin-top:34px}
+.feat a{display:grid;text-decoration:none;color:var(--ink);background:#fff8e6;border-radius:14px;overflow:hidden;box-shadow:0 0 0 3px #b8893a,0 20px 38px rgba(0,0,0,.5)}
+@media (min-width:760px){.feat a{grid-template-columns:1.15fr 1fr}}
+.ft-img{position:relative;aspect-ratio:1200/630;overflow:hidden;background:#5a3a1e;display:flex;align-items:center}
+@media (min-width:760px){.ft-img{aspect-ratio:auto;min-height:100%}}
+.ft-img svg{display:block;width:100%;height:100%}
+.special{position:absolute;left:12px;top:12px;font-family:"Bebas Neue",Impact,sans-serif;letter-spacing:.12em;background:var(--red);color:#fff;padding:.3em .7em .2em;border-radius:4px;transform:rotate(-3deg);box-shadow:0 4px 10px rgba(0,0,0,.35)}
+.ft-b{padding:20px 20px 22px;display:flex;flex-direction:column;gap:.55rem}
+@media (min-width:760px){.ft-b{padding:30px 30px 28px;justify-content:center}}
+.fresh{font-family:"Bebas Neue",Impact,sans-serif;letter-spacing:.18em;color:#8a5a12;font-size:1rem}
+.ft-cat{font-size:.9rem;font-style:italic;color:#5a4a33}
+.ft-cat span{font-style:normal;font-family:"Bebas Neue",Impact,sans-serif;letter-spacing:.1em;background:#1f4a33;color:#fff;padding:.2em .55em .1em;border-radius:4px;margin-right:.35em}
+.feat h2{font-family:"DM Serif Display",Georgia,serif;font-weight:400;font-size:clamp(1.7rem,5.6vw,2.4rem);line-height:1.08;text-wrap:balance}
+.ft-t{font-size:1.02rem;color:#3d3426}
+.ft-m{font-size:.85rem;font-weight:700;color:#6a5f4c}
+.ft-go{align-self:flex-start;margin-top:4px;font-weight:800;background:var(--yellow);color:#1e1a14;padding:.6em 1.1em;border-radius:999px}
+.feat a:hover .ft-go,.feat a:focus-visible .ft-go{background:#1e1a14;color:var(--yellow)}
+.split{display:grid;gap:34px;margin-top:38px;align-items:start}
+@media (min-width:980px){.split{grid-template-columns:minmax(0,1fr) 340px}}
+.board-wrap{position:relative;background:#b8875a;background-image:radial-gradient(rgba(70,40,15,.35) 1px,transparent 1.4px),radial-gradient(rgba(255,240,210,.25) 1px,transparent 1.4px);
+  background-size:7px 7px,11px 11px;background-position:0 0,3px 4px;border:14px solid #4a2c15;border-radius:8px;padding:20px 16px 24px;
+  box-shadow:inset 0 0 30px rgba(60,30,10,.45),0 0 0 2px #b8893a,0 18px 34px rgba(0,0,0,.5)}
+.cork-h{display:inline-block;font-family:"Bebas Neue",Impact,sans-serif;font-weight:400;font-size:clamp(1.8rem,6.6vw,2.4rem);letter-spacing:.06em;line-height:1;background:#fff8e6;color:var(--red);
+  padding:.18em .5em .1em;transform:rotate(-1.5deg);box-shadow:0 6px 12px rgba(0,0,0,.3)}
+.cork-s{margin:10px 0 0;color:#2a1a0c;font-weight:600;font-size:.95rem}
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 4px}
+.fb{font:700 .9rem Inter,system-ui,sans-serif;min-height:44px;padding:0 1em;border-radius:999px;border:2px solid #2a1a0c;background:#fff8e6;color:#2a1a0c;cursor:pointer}
+.fb span{display:inline-block;min-width:1.6em;margin-left:.3em;padding:.05em .4em;border-radius:999px;background:#2a1a0c;color:#fff8e6;font-size:.78rem}
+.fb[aria-pressed="true"]{background:#2a1a0c;color:var(--yellow)}.fb[aria-pressed="true"] span{background:var(--yellow);color:#2a1a0c}
+.notes{list-style:none;display:grid;gap:22px;grid-template-columns:repeat(auto-fill,minmax(min(100%,230px),1fr));margin-top:20px}
+.note a{position:relative;display:flex;flex-direction:column;gap:.4rem;height:100%;padding:26px 16px 16px;text-decoration:none;color:#1e1a14;background:#fffdf3;box-shadow:0 10px 16px rgba(40,20,5,.35);transform:rotate(var(--r,-1deg));transition:transform .15s}
+.note.n1 a{background:#fff2a6;--r:1.2deg}.note.n2 a{--r:-.6deg;background:#e6f0f7 linear-gradient(transparent 27px,#b9d0e4 27px 28px) 0 6px/100% 28px}
+.note a:hover,.note a:focus-visible{transform:rotate(0) translateY(-3px)}
+.pin{position:absolute;top:7px;left:50%;width:16px;height:16px;margin-left:-8px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#ff8a8a,#c0182f 60%,#7a0e1e);box-shadow:0 3px 4px rgba(0,0,0,.4)}
+.note.n1 .pin{background:radial-gradient(circle at 35% 35%,#9ad0ff,#1d5fa8 60%,#0e2f5a)}.note.n2 .pin{background:radial-gradient(circle at 35% 35%,#fff0a0,#d9a400 60%,#7a5c00)}
+.nl{font-size:.74rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#7a2a12}.nl i{font-weight:600;letter-spacing:0;text-transform:none;color:#5a4a33}
+.note h3{font-family:"DM Serif Display",Georgia,serif;font-weight:400;font-size:1.3rem;line-height:1.15}
+.note p{font-size:.92rem;color:#3d3426}
+.note time{margin-top:auto;padding-top:4px;font-size:.78rem;font-weight:700;color:#5a4f3c}
+.note[hidden]{display:none}
+.empty{margin-top:16px;font-family:"Caveat","Comic Sans MS",cursive;font-size:1.4rem;color:#2a1a0c}
+.door{position:relative}
+.door-in{position:relative;display:flex;flex-direction:column;gap:.55rem;text-decoration:none;color:#f4efe2;padding:24px 24px 28px;border-radius:6px 6px 0 0;min-height:420px;
+  background:linear-gradient(90deg,rgba(0,0,0,.18),transparent 8%,transparent 92%,rgba(0,0,0,.22)),#2e5e4a;
+  box-shadow:inset 0 0 0 10px #284f3f,inset 0 0 0 12px rgba(0,0,0,.35),0 0 0 6px #4a2c15,0 0 0 8px #b8893a,0 20px 36px rgba(0,0,0,.55)}
+.door-top{display:flex;justify-content:space-between;align-items:center;gap:10px;margin:4px 4px 4px}
+.plate{font-family:Georgia,serif;font-size:1.05rem;letter-spacing:.25em;text-transform:uppercase;color:#3b2312;background:linear-gradient(135deg,#f0d48a,#b8893a 55%,#e8c878);padding:.35em .8em .3em;border-radius:3px;box-shadow:0 2px 0 #6b4a1a,0 4px 8px rgba(0,0,0,.4)}
+.lock{display:inline-flex;align-items:center;gap:6px;font:800 .72rem Inter,system-ui,sans-serif;letter-spacing:.12em;text-transform:uppercase;background:#d9d4c4;color:#1e1a14;padding:.35em .6em;border-radius:3px}
+.lock i{width:10px;height:10px;border-radius:50%;background:#1f9a4a}
+.door .kick{margin:10px 4px 0;font-size:.9rem}
+.door-h{margin:0 4px;font-family:"Permanent Marker","Comic Sans MS",cursive;font-weight:400;font-size:clamp(2rem,8vw,2.5rem);line-height:1.05;color:#fff;transform:rotate(-2deg);text-shadow:2px 2px 0 #b3121f}
+.door-sub{margin:0 4px;font-size:.95rem;color:#dbe8df}
+.door-latest{margin:6px 4px 0;background:#fffdf3;color:#1e1a14;padding:10px 12px;font-family:"Caveat","Comic Sans MS",cursive;font-size:1.3rem;line-height:1.15;transform:rotate(1deg);box-shadow:0 6px 10px rgba(0,0,0,.35)}
+.door-latest small{display:block;font:800 .68rem Inter,system-ui,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#b3121f;margin-bottom:2px}
+.push{margin:auto 4px 0;align-self:flex-start;font:800 .9rem Inter,system-ui,sans-serif;color:#3b2312;background:linear-gradient(135deg,#f0d48a,#b8893a);padding:.7em 1.1em;border-radius:3px;box-shadow:0 2px 0 #6b4a1a}
+.handle{position:absolute;right:20px;top:58%;width:16px;height:16px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#f6e2a6,#a07628);box-shadow:0 2px 3px rgba(0,0,0,.5)}
+.door-in:hover .push,.door-in:focus-visible .push{background:var(--yellow)}
+.scrawl{list-style:none;margin:0;padding:16px 14px 18px;background:#e8e3d3;background-image:linear-gradient(#cfc8b2 1px,transparent 1px),linear-gradient(90deg,#cfc8b2 1px,transparent 1px);background-size:34px 22px;
+  border-radius:0 0 6px 6px;box-shadow:0 0 0 6px #4a2c15,0 0 0 8px #b8893a,0 20px 36px rgba(0,0,0,.45);display:grid;gap:10px}
+.scrawl li{font-family:"Permanent Marker","Comic Sans MS",cursive;font-size:1rem;line-height:1.2;color:var(--c);transform:rotate(var(--r))}
+.scrawl li:nth-child(even){justify-self:end;text-align:right}
+.rel{margin-top:38px}
+.rel .notes{margin-top:18px}
+@media (max-width:520px){.board-wrap{border-width:10px;padding:16px 12px 20px}.notes{gap:18px}.door-in{min-height:0}}
+@media (prefers-reduced-motion:reduce){.note a{transition:none}}
 </style>
 </head>
 <body>
@@ -188,8 +273,8 @@ footer{text-align:center;padding:22px 16px;color:var(--muted);font-size:.85rem;b
       <p class="tell">Tell me in the chat next time I’m live on <a href="https://www.twitch.tv/robcallery" target="_blank" rel="noopener">Twitch</a>, or on <a href="https://x.com/calz88" target="_blank" rel="noopener">X @calz88</a>.</p></aside>
     <section class="share" aria-labelledby="sh-h"><h2 id="sh-h">Pass it on</h2><div class="sbtns"><a class="sb wa" href="https://wa.me/?text=Beat%20Luke%20Littler%3A%20Since%20When%20Did%20Fallon%20Sherrock%20Become%20an%20Amateur%3F%20https%3A//callery.co.uk/var-and-firkin/bar-talk/beat-luke-littler-fallon-sherrock/" target="_blank" rel="noopener">WhatsApp<span class="vh"> (opens WhatsApp)</span></a><a class="sb rd" href="https://www.reddit.com/submit?url=https%3A%2F%2Fcallery.co.uk%2Fvar-and-firkin%2Fbar-talk%2Fbeat-luke-littler-fallon-sherrock%2F&amp;title=Beat%20Luke%20Littler%3A%20Since%20When%20Did%20Fallon%20Sherrock%20Become%20an%20Amateur%3F" target="_blank" rel="noopener">Reddit<span class="vh"> (opens Reddit)</span></a><button class="sb copy" type="button" data-url="https://callery.co.uk/var-and-firkin/bar-talk/beat-luke-littler-fallon-sherrock/">Copy link</button><span class="copied" role="status" aria-live="polite"></span></div></section>
   </div>
-  <section aria-labelledby="more-h"><h2 id="more-h" class="kick" style="margin-top:34px;font-size:1.3rem">More Bar Talk</h2><ul class="mats"><li><a href="/var-and-firkin/bar-talk/banana-ball-barmy-cricket/"><div class="t"><svg viewBox="0 0 1200 630" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false"><defs><radialGradient id="rbananaballbarmycricketg" cx=".35" cy=".35" r=".9"><stop offset="0" stop-color="#3a4a40"/><stop offset="1" stop-color="#1c2620"/></radialGradient></defs><rect width="1200" height="630" fill="#5a3a1e"/><rect x="22" y="22" width="1156" height="586" rx="10" fill="url(#rbananaballbarmycricketg)"/><g stroke="#f4efe2" stroke-opacity=".08" stroke-width="14"><path d="M80 60 q60 40 140 10"/><path d="M340 60 q60 40 140 10"/><path d="M600 60 q60 40 140 10"/><path d="M860 60 q60 40 140 10"/></g><rect x="820" y="150" width="20" height="300" rx="6" fill="#efe3c4"/><rect x="880" y="150" width="20" height="300" rx="6" fill="#efe3c4"/><rect x="940" y="150" width="20" height="300" rx="6" fill="#efe3c4"/><rect x="814" y="140" width="76" height="12" rx="6" fill="#d9b45a" transform="rotate(-24 852 146)"/><rect x="900" y="132" width="70" height="12" rx="6" fill="#d9b45a" transform="rotate(30 935 138)"/><circle cx="1040" cy="230" r="62" fill="#b3121f"/><path d="M990 196 Q1040 232 1090 196 M990 266 Q1040 230 1090 266" fill="none" stroke="#f4efe2" stroke-width="5" stroke-dasharray="7 6"/><g stroke="#ffcd00" stroke-width="6" stroke-linecap="round" opacity=".8"><path d="M1120 180 l40 -24 M1124 236 l48 0 M1120 288 l40 24"/></g><path d="M640 470 Q760 330 980 300" fill="none" stroke="#f4efe2" stroke-opacity=".25" stroke-width="5" stroke-dasharray="14 12"/><text x="70" y="140" font-family="Bebas Neue,Impact,sans-serif" font-size="110" fill="#ffcd00" letter-spacing="4">BAR TALK</text><text x="74" y="200" font-family="Georgia,serif" font-style="italic" font-size="38" fill="#f4efe2" opacity=".85">from the VAR &amp; Firkin</text><text x="70" y="560" font-family="Bebas Neue,Impact,sans-serif" font-size="96" fill="#f4efe2" letter-spacing="2" textLength="336" lengthAdjust="spacingAndGlyphs">CRICKET</text><rect x="74" y="580" width="160" height="8" fill="#ffcd00"/></svg></div><div class="b"><span class="sp">Cricket</span><h2>From TikTok to Banana Ball Obsession: Could Cricket Be Next?</h2><p>A TikTok rabbit hole, a lot of late-night Banana Ball and one daft idea: what if cricket became a show? Introducing Barmy Cricket.</p></div></a></li></ul></section>
-  <nav class="wayout" aria-label="Elsewhere"><a href="/var-and-firkin/bar-talk/"><b>Bar Talk</b><span>Every rant from the bar stool</span></a><a href="/var-and-firkin/"><b>The VAR &amp; Firkin</b><span>Back to the pub</span></a><a href="/blog/"><b>The Callery Chronicle</b><span>Every blog in one place</span></a></nav>
+  <section class="board-wrap rel" aria-labelledby="more-h"><h2 id="more-h" class="cork-h">While you’re at the bar…</h2><ul class="notes"><li class="note n0" data-cat="cricket"><a href="/var-and-firkin/bar-talk/banana-ball-barmy-cricket/"><span class="pin" aria-hidden="true"></span><span class="nl">Cricket · <i>Leather, willow &amp; bananas</i></span><h3>From TikTok to Banana Ball Obsession: Could Cricket Be Next?</h3><p>A TikTok rabbit hole, a lot of late-night Banana Ball and one daft idea: what if cricket became a show? Introducing Barmy Cricket.</p><time datetime="2026-11-02">2 November 2026 · 11 min read</time></a></li><li class="note n1" data-cat="make-it-make-sense"><a href="/var-and-firkin/bar-talk/make-it-make-sense/razor-blade-rip-off/"><span class="pin" aria-hidden="true"></span><span class="nl">The gents · <i>Thoughts from the gents</i></span><h3>The Great Razor Blade Rip-Off</h3><p>The handle is free, the blades cost a fortune, and the cheapest way to buy blades is to buy a handle. My bathroom drawer is now a museum.</p><time datetime="2026-10-31">31 October 2026 · 3 min read</time></a></li></ul></section>
+  <nav class="wayout" aria-label="Elsewhere on callery.co.uk"><a href="/var-and-firkin/"><b>Back to the pub</b><span>The VAR &amp; Firkin</span></a><a href="/blog/"><b>The Callery Chronicle</b><span>Every blog in one place</span></a><a href="/"><b>Callery.co.uk</b><span>The front door</span></a></nav>
 </article><script>
 document.querySelectorAll('.copy').forEach(function(b){b.addEventListener('click',function(){
   var u=b.getAttribute('data-url'),s=b.parentNode.querySelector('.copied');
@@ -209,6 +294,7 @@ document.querySelectorAll('.copy').forEach(function(b){b.addEventListener('click
 })();
 </script>
 </main>
-<footer>© <span>2026</span> Rob Callery · callery.co.uk · Drink responsibly · <!-- legal --><a href="/privacy/">Privacy</a> · <a href="/cookies/">Cookies</a><!-- /legal --></footer>
+<footer><p class="susp">All opinions expressed after the third pint should be treated with suspicion.</p><p>© <span>2026</span> Rob Callery · callery.co.uk · Drink responsibly</p></footer>
+<!-- legal --><nav class="legal-mini" aria-label="Legal" style="position:fixed;right:10px;bottom:8px;z-index:9999;font:600 12px/1.2 Inter,system-ui,sans-serif;background:rgba(10,24,56,.78);color:#f7f2e4;padding:5px 10px;border-radius:999px;border:1px solid rgba(247,242,228,.25)"><a href="/privacy/" style="color:inherit;text-decoration:none">Privacy</a> · <a href="/cookies/" style="color:inherit;text-decoration:none">Cookies</a></nav><!-- /legal -->
 </body>
 </html>
