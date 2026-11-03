@@ -27,6 +27,11 @@ header{display:flex;align-items:center;justify-content:space-between;gap:12px;ma
 .trial{background:var(--gold);color:var(--navy);padding:.2em .6em;border-radius:4px;letter-spacing:.08em}
 h1{font-family:"DM Serif Display",Georgia,serif;font-weight:400;font-size:clamp(2.4rem,9vw,3.6rem);line-height:1.02;margin:.15em 0 .2em}
 .clock{font-size:1rem;color:#dfe3ff}
+.parks{display:flex;gap:6px;overflow-x:auto;margin:4px 0 14px;padding-bottom:2px;scrollbar-width:none}
+.parks::-webkit-scrollbar{display:none}
+.parks a{flex:none;font-size:.85rem;font-weight:700;text-decoration:none;color:#dfe3ff;padding:.55em .95em;border-radius:999px;border:1px solid rgba(255,255,255,.3);min-height:40px;display:inline-flex;align-items:center}
+.parks a[aria-current="page"]{background:#fff;color:var(--navy);border-color:#fff}
+.parks a:hover{border-color:var(--gold)}
 .clock b{color:#fff}
 .powered{display:inline-flex;align-items:center;gap:6px;margin-top:12px;font-size:.88rem;font-weight:700;color:#fff;text-decoration:none;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.3);border-radius:999px;padding:.4em .9em}
 .powered:hover{background:rgba(255,255,255,.2)}
@@ -73,6 +78,7 @@ footer{text-align:center;padding:18px 16px;font-size:.82rem;color:var(--muted);b
 <section class="hero" aria-labelledby="h">
   <p class="kick">Walt Disney World · Live wait times <span class="trial">Trial</span></p>
   <h1 id="h">Magic Kingdom</h1>
+  <nav class="parks" aria-label="Walt Disney World parks"><a href="/travel-guides/disney/magickingdom/" aria-current="page">Magic Kingdom</a><a href="/travel-guides/disney/epcot/">EPCOT</a><a href="/travel-guides/disney/hollywoodstudios/">Hollywood Studios</a><a href="/travel-guides/disney/animalkingdom/">Animal Kingdom</a></nav>
   <p class="clock">It’s <b id="clock">–</b> in Orlando right now.</p>
   <a class="powered" href="https://queue-times.com/" target="_blank" rel="noopener">Powered by Queue-Times.com<span class="vh"> (opens in a new tab)</span></a>
   <div class="stats" aria-live="polite">
