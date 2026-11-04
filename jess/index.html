@@ -108,8 +108,8 @@ footer{position:fixed;z-index:2;left:0;right:0;bottom:4px;text-align:center;font
     <div><b id="u-m">--</b><span>Minutes</span></div>
     <div><b id="u-s">--</b><span>Seconds</span></div>
   </div>
-  <p class="done" id="done" hidden>Rob’s back! 🎄</p>
-  <div class="lines"><p id="lines">Rob finishes at <b>5pm on Friday 6 November</b>.<br>He’s back at <b>9am sharp on Wednesday 23 December</b>.</p>
+  <p class="done" id="done" hidden>Rob’s back! 🎉</p>
+  <div class="lines"><p id="lines">Rob finishes at <b>5pm on Friday 6 November</b>.<br>He’s back at <b>9am sharp on Monday 23 November</b>.</p>
   <p class="tap">Tap a ride as it goes by for a surprise.</p></div>
 </main>
 <p class="testbar" id="testbar" hidden>Test mode: pretending it’s <b></b> · <a href="/jess/">Back to now</a></p>
@@ -117,7 +117,7 @@ footer{position:fixed;z-index:2;left:0;right:0;bottom:4px;text-align:center;font
 <footer>Made with love · callery.co.uk</footer>
 <script>
 (function(){
-  var END=Date.parse('2026-11-06T17:00:00Z'),BACK=Date.parse('2026-12-23T09:00:00Z');
+  var END=Date.parse('2026-11-06T17:00:00Z'),BACK=Date.parse('2026-11-23T09:00:00Z');
   var $=function(id){return document.getElementById(id)};
   var pad=function(n){return (n<10?'0':'')+n};
   var sc=document.querySelector('.scene');function fit(){sc.setAttribute('preserveAspectRatio',sc.clientWidth/sc.clientHeight>2.4?'xMidYMax meet':'xMidYMax slice');}fit();addEventListener('resize',fit);
@@ -135,9 +135,9 @@ footer{position:fixed;z-index:2;left:0;right:0;bottom:4px;text-align:center;font
     var now=Date.now()+SHIFT,p=now<END?0:now<BACK?1:2;
     if(p!==phase){phase=p;
       if(p===0){$('label').textContent='Rob finishes in';
-        $('lines').innerHTML='Rob finishes at <b>5pm on Friday 6 November</b>.<br>He’s back at <b>9am sharp on Wednesday 23 December</b>.';}
+        $('lines').innerHTML='Rob finishes at <b>5pm on Friday 6 November</b>.<br>He’s back at <b>9am sharp on Monday 23 November</b>.';}
       else if(p===1){$('label').textContent='Rob’s back in';
-        $('lines').innerHTML='Rob’s back at <b>9am sharp on Wednesday 23 December</b>.';}
+        $('lines').innerHTML='Rob’s back at <b>9am sharp on Monday 23 November</b>.';}
       else{$('label').hidden=true;$('units').hidden=true;$('done').hidden=false;$('lines').innerHTML='';}}
     if(p===2)return;
     show((p===0?END:BACK)-now);
