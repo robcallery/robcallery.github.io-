@@ -43,7 +43,7 @@
    "airline_name": "KLM",
    "color": "#d95926",
    "flight": "KLM863",
-   "callsign": "",
+   "callsign": "KLM863",
    "dep": "AMS",
    "arr": "NRT",
    "sched_dep": "12:30",
