@@ -16,7 +16,7 @@ function delay(m){
   if(m===0)return{t:'On time',c:'ok'};
   if(m<=15)return{t:m+' min late',c:'ok'};
   return{t:m+' min late',c:m<45?'late':'vlate'};}
-function status(f){var a=delay(f.arr_delay);if(f.arr_delay==null)return{t:'Landed',c:'na'};if(f.arr_delay<=0)return{t:f.arr_delay<0?'Early':'On time',c:'ok'};return f.arr_delay<=15?{t:'On time',c:'ok'}:{t:'Late',c:a.c};}
+function status(f){var a=delay(f.arr_delay);if(f.arr_delay==null&&f.est_arr_delay!=null){var h=Math.round(f.est_arr_delay/60);return{t:(f.est_arr_delay>0?'≈'+(h>=1?h+'h':f.est_arr_delay+' min')+' late':'Landed'),c:f.est_arr_delay>=45?'vlate':'late'};}if(f.arr_delay==null)return{t:'Landed',c:'na'};if(f.arr_delay<=0)return{t:f.arr_delay<0?'Early':'On time',c:'ok'};return f.arr_delay<=15?{t:'On time',c:'ok'}:{t:'Late',c:a.c};}
 function apt(c){return D.airports[c]||{name:c,city:c};}
 function miles(n){return n.toLocaleString('en-GB')+' mi';}
 
@@ -121,9 +121,9 @@ function openFlight(id){var f=BY[id];if(!f)return;
     kv('Registration',f.reg?'<a href="/aviation/aircraft/#'+esc(f.reg)+'">'+esc(f.reg)+'</a>':'Not recorded')+
     kv('Callsign',esc(f.callsign||'Not recorded'))+kv('Distance',miles(f.miles))+kv('Flight time',dur(f.duration)+(f.duration_estimated?' <small>(timetable)</small>':''))+
     kv('Departure',(f.sched_dep||'–')+' scheduled'+(f.act_dep?'<br>'+f.act_dep+' actual · <span class="st '+dd.c+'">'+dd.t+'</span>':''))+
-    kv('Arrival',(f.sched_arr||'–')+' scheduled'+nx+(f.act_arr?'<br>'+f.act_arr+' actual · <span class="st '+ad.c+'">'+ad.t+'</span>':''))+
+    kv('Arrival',(f.sched_arr||'–')+' scheduled'+nx+(f.act_arr?'<br>'+f.act_arr+' actual · <span class="st '+ad.c+'">'+ad.t+'</span>':(f.est_arr?'<br>≈'+f.est_arr+' estimated · <span class="st vlate">about '+Math.round(f.est_arr_delay/60)+' hours late</span>':'')))+
     kv('From',esc(A.name)+' <small>'+f.dep+' · '+esc(A.icao)+'</small>')+kv('To',esc(B.name)+' <small>'+f.arr+' · '+esc(B.icao)+'</small>')+
-    '</dl><p class="note">Times are local at each airport. Distance is the great-circle distance between the airports.'+(f.duration_estimated?' No actual times were recorded for this flight, so its flight time comes from the timetable.':'')+'</p></div>';
+    '</dl><p class="note">Times are local at each airport. Distance is the great-circle distance between the airports.'+(f.duration_estimated?' No actual times were recorded for this flight, so its flight time comes from the timetable.':'')+(f.note?' '+esc(f.note):'')+'</p></div>';
   dlg.querySelector('.fd-x').addEventListener('click',function(){dlg.close();});
   if(dlg.showModal)dlg.showModal();else dlg.setAttribute('open','');
   var m=makeMap(dlg.querySelector('.fd-mini'),{label:'Route map'});m.draw([f]);m.fit(D.arcs[f.arc].bb,.35);}

@@ -29,6 +29,9 @@
    "variant": "E190",
    "reg": null,
    "arr_next_day": false,
+   "est_arr": null,
+   "est_arr_delay": null,
+   "note": null,
    "arc": "AMS-LBA|KLM",
    "rev": true
   },
@@ -59,6 +62,9 @@
    "variant": "787-9",
    "reg": null,
    "arr_next_day": true,
+   "est_arr": "12:42",
+   "est_arr_delay": 177,
+   "note": "Arrival estimated from Rob’s photo of the in-flight map (ETA 12:42 Tokyo time), which fits his next photo: collecting his JR Pass at 13:57.",
    "arc": "AMS-NRT|KLM",
    "rev": false
   },
@@ -89,6 +95,9 @@
    "variant": "787-9",
    "reg": null,
    "arr_next_day": false,
+   "est_arr": null,
+   "est_arr_delay": null,
+   "note": null,
    "arc": "AMS-NRT|KLM",
    "rev": true
   },
@@ -119,6 +128,9 @@
    "variant": "E190",
    "reg": null,
    "arr_next_day": false,
+   "est_arr": null,
+   "est_arr_delay": null,
+   "note": null,
    "arc": "AMS-LBA|KLM",
    "rev": false
   },
@@ -149,6 +161,9 @@
    "variant": "737-808",
    "reg": "G-DRTC",
    "arr_next_day": false,
+   "est_arr": null,
+   "est_arr_delay": null,
+   "note": null,
    "arc": "AGP-LBA|Jet2",
    "rev": true
   },
@@ -179,6 +194,9 @@
    "variant": "737-36Q",
    "reg": "G-GDFT",
    "arr_next_day": false,
+   "est_arr": null,
+   "est_arr_delay": null,
+   "note": null,
    "arc": "AGP-LBA|Jet2",
    "rev": false
   },
@@ -209,6 +227,9 @@
    "variant": "737-8AS",
    "reg": "EI-EKL",
    "arr_next_day": false,
+   "est_arr": null,
+   "est_arr_delay": null,
+   "note": null,
    "arc": "DUB-LBA|Ryanair",
    "rev": true
   },
@@ -239,6 +260,9 @@
    "variant": "737-8200",
    "reg": "EI-HES",
    "arr_next_day": true,
+   "est_arr": null,
+   "est_arr_delay": null,
+   "note": null,
    "arc": "DUB-LBA|Ryanair",
    "rev": false
   },
@@ -269,6 +293,9 @@
    "variant": "737-8AL",
    "reg": "G-DRTP",
    "arr_next_day": false,
+   "est_arr": null,
+   "est_arr_delay": null,
+   "note": null,
    "arc": "AGP-LBA|Jet2",
    "rev": true
   },
@@ -299,6 +326,9 @@
    "variant": "737-8AS",
    "reg": "G-DRTY",
    "arr_next_day": false,
+   "est_arr": null,
+   "est_arr_delay": null,
+   "note": null,
    "arc": "AGP-LBA|Jet2",
    "rev": false
   },
@@ -329,6 +359,9 @@
    "variant": "737-8MG",
    "reg": "G-JZHU",
    "arr_next_day": false,
+   "est_arr": null,
+   "est_arr_delay": null,
+   "note": null,
    "arc": "AGP-LBA|Jet2",
    "rev": true
   },
@@ -359,6 +392,9 @@
    "variant": "737-36Q",
    "reg": "G-GDFT",
    "arr_next_day": false,
+   "est_arr": null,
+   "est_arr_delay": null,
+   "note": null,
    "arc": "AGP-LBA|Jet2",
    "rev": false
   },
@@ -389,6 +425,9 @@
    "variant": "A350-1041",
    "reg": "G-VEVE",
    "arr_next_day": false,
+   "est_arr": null,
+   "est_arr_delay": null,
+   "note": null,
    "arc": "MAN-MCO|Virgin Atlantic",
    "rev": false
   },
@@ -419,6 +458,9 @@
    "variant": "A350-1041",
    "reg": "G-VBOB",
    "arr_next_day": true,
+   "est_arr": null,
+   "est_arr_delay": null,
+   "note": null,
    "arc": "MAN-MCO|Virgin Atlantic",
    "rev": true
   },
@@ -449,6 +491,9 @@
    "variant": "A319-111",
    "reg": "OE-LQX",
    "arr_next_day": false,
+   "est_arr": null,
+   "est_arr_delay": null,
+   "note": null,
    "arc": "CDG-LBA|Easyjet",
    "rev": true
   },
@@ -479,6 +524,9 @@
    "variant": "A320-214",
    "reg": "OE-INA",
    "arr_next_day": false,
+   "est_arr": null,
+   "est_arr_delay": null,
+   "note": null,
    "arc": "CDG-LBA|Easyjet",
    "rev": false
   },
@@ -509,6 +557,9 @@
    "variant": "737-8K5",
    "reg": "G-JZHA",
    "arr_next_day": false,
+   "est_arr": null,
+   "est_arr_delay": null,
+   "note": null,
    "arc": "AGP-LBA|Jet2",
    "rev": true
   },
@@ -539,6 +590,9 @@
    "variant": "737-8K2",
    "reg": "G-JZHF",
    "arr_next_day": false,
+   "est_arr": null,
+   "est_arr_delay": null,
+   "note": null,
    "arc": "AGP-LBA|Jet2",
    "rev": false
   },
@@ -569,6 +623,9 @@
    "variant": "737-36Q",
    "reg": "G-GDFG",
    "arr_next_day": false,
+   "est_arr": null,
+   "est_arr_delay": null,
+   "note": null,
    "arc": "AGP-LBA|Jet2",
    "rev": true
   },
@@ -599,6 +656,9 @@
    "variant": "737-36N",
    "reg": "G-GDFL",
    "arr_next_day": false,
+   "est_arr": null,
+   "est_arr_delay": null,
+   "note": null,
    "arc": "AGP-LBA|Jet2",
    "rev": false
   },
@@ -629,6 +689,9 @@
    "variant": "737-36N",
    "reg": "G-GDFL",
    "arr_next_day": false,
+   "est_arr": null,
+   "est_arr_delay": null,
+   "note": null,
    "arc": "AGP-LBA|Jet2",
    "rev": true
   },
@@ -659,6 +722,9 @@
    "variant": "737-33V",
    "reg": "G-GDFN",
    "arr_next_day": false,
+   "est_arr": null,
+   "est_arr_delay": null,
+   "note": null,
    "arc": "AGP-LBA|Jet2",
    "rev": false
   },
@@ -689,6 +755,9 @@
    "variant": "A330-302",
    "reg": "G-EILA",
    "arr_next_day": false,
+   "est_arr": null,
+   "est_arr_delay": null,
+   "note": null,
    "arc": "MAN-MCO|Aer Lingus",
    "rev": false
   },
@@ -719,6 +788,9 @@
    "variant": "A350-900",
    "reg": "F-HTYF",
    "arr_next_day": true,
+   "est_arr": null,
+   "est_arr_delay": null,
+   "note": null,
    "arc": "CDG-MCO|Air France",
    "rev": true
   },
@@ -749,6 +821,9 @@
    "variant": "A220-300",
    "reg": "F-HZUY",
    "arr_next_day": false,
+   "est_arr": null,
+   "est_arr_delay": null,
+   "note": null,
    "arc": "CDG-MAN|Air France",
    "rev": false
   },
@@ -779,6 +854,9 @@
    "variant": "737-8MG",
    "reg": "G-JZBK",
    "arr_next_day": false,
+   "est_arr": null,
+   "est_arr_delay": null,
+   "note": null,
    "arc": "AGP-LBA|Jet2",
    "rev": true
   },
@@ -809,6 +887,9 @@
    "variant": "737-8FP",
    "reg": "G-JZHG",
    "arr_next_day": false,
+   "est_arr": null,
+   "est_arr_delay": null,
+   "note": null,
    "arc": "AGP-LBA|Jet2",
    "rev": false
   }
