@@ -56,7 +56,7 @@ function makeMap(box,o){
     Object.keys(groups).sort(function(a,b){return groups[b].length-groups[a].length;}).forEach(function(k){
       var A=D.arcs[k],n=groups[k].length,w=Math.min(1.6+n*.45,6.5);
       var p=el('path',{d:A.d,'class':'route',stroke:A.color,'stroke-width':w},gR);
-      var lab=apt(A.a).city+' to '+apt(A.b).city+', '+A.airline_name+', '+n+(n===1?' flight':' flights');
+      var lab=apt(A.a).city+' to '+apt(A.b).city+(A.via?' via '+A.via:'')+', '+A.airline_name+', '+n+(n===1?' flight':' flights');
       var h=el('path',{d:A.d,'class':'route hit',tabindex:o.interactive?0:-1,role:'button','aria-label':lab},gH);
       var t=el('title',{},h);t.textContent=lab;
       routes[k]={p:p,h:h,n:n,flights:groups[k]};

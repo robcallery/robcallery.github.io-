@@ -97,9 +97,9 @@
    "arr_next_day": false,
    "est_arr": null,
    "est_arr_delay": null,
-   "note": "Terminal 1, gate 16 at Narita; gate F03 at Schiphol. Landed 1 hour 23 minutes early. The scheduled arrival is 18:05 from Rob’s flight record (his log said 18:00).",
-   "arc": "AMS-NRT|KLM",
-   "rev": true
+   "note": "Terminal 1, gate 16 at Narita; gate F03 at Schiphol. With Russian airspace closed to EU airlines, KLM flew this one over the top: through the Bering Strait and across the Arctic near the North Pole, so the real distance was well over the 5,790-mile great circle. Landed 1 hour 23 minutes early. The scheduled arrival is 18:05 from Rob’s flight record (his log said 18:00).",
+   "arc": "NRT-AMS|KLM|2023-01-29-KLM864",
+   "rev": false
   },
   {
    "id": "2023-01-29-KLM1551",
