@@ -297,7 +297,7 @@
    "family": "Boeing 737",
    "type": "737",
    "variant": "737-8AS",
-   "reg": null,
+   "reg": "G-DRTY",
    "arr_next_day": false,
    "arc": "AGP-LBA|Jet2",
    "rev": false
