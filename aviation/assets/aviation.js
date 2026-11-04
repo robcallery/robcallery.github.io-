@@ -1,4 +1,4 @@
-/* Calz88 Aviation - shared script: data, formatting, the flight detail panel and the zoomable map.
+/* Callery Aviation - shared script: data, formatting, the flight detail panel and the zoomable map.
    Data comes from <script id="calz" type="application/json"> on each page; the world outline from world.js. */
 (function(){
 'use strict';
