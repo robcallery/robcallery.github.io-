@@ -1,4 +1,4 @@
-/* Callery Aviation - shared styles. Dark navy, charcoal, white, aviation blue; departure-board amber for flight data. */
+/* The Window Seat - shared styles. Dark navy, charcoal, white, aviation blue; departure-board amber for flight data. */
 :root{--bg:#0b1426;--bg2:#0e1a31;--panel:#121d33;--panel2:#17243f;--line:#24345a;--ink:#eef3ff;--muted:#a3b3d3;--dim:#7f90b3;
  --blue:#3987e5;--blue2:#6fb0ff;--amber:#ffc845;--good:#3fbf7f;--warn:#e0a33a;--bad:#ef6b6b;--radius:16px}
 *{box-sizing:border-box;margin:0;padding:0}
