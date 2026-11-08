@@ -1,7 +1,9 @@
 // Cloudflare Workers config for callery.co.uk.
 // The site is static files, served by the "callery" Worker's static assets.
 // worker.js only runs for /api/* (run_worker_first); every other request is served straight from the files.
-//   /api/waits/<park>  live theme park wait times (Queue-Times.com), used by /travel-guides/disney/magickingdom/
+//   /api/waits/<park>  live theme park wait times (Queue-Times.com), used by the Disney wait-times pages
+//   /api/checklist     each signed-in person's Disney checklist ticks, kept in the CHECKS KV namespace
+// /travel-guides/disney/*, /api/waits/* and /api/checklist are behind Cloudflare Access ("Callery Disney" app).
 // Cloudflare Workers Builds deploys this on every push to main (deploy command: npx wrangler deploy).
 {
   "name": "callery",
@@ -11,5 +13,8 @@
     "directory": ".",
     "binding": "ASSETS",
     "run_worker_first": ["/api/*"]
-  }
+  },
+  "kv_namespaces": [
+    { "binding": "CHECKS", "id": "b4678a589be64694beb8116a00d04faa" }
+  ]
 }

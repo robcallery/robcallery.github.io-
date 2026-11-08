@@ -13,7 +13,7 @@ function json(body, status = 200, maxAge = 60) {
     status,
     headers: {
       'content-type': 'application/json; charset=utf-8',
-      'cache-control': status === 200 ? `public, max-age=${maxAge}` : 'no-store',
+      'cache-control': status === 200 ? `private, max-age=${maxAge}` : 'no-store',
       'x-content-type-options': 'nosniff',
     },
   });
@@ -82,6 +82,49 @@ async function waits(id, ctx) {
   return res;
 }
 
+// ---- Signed-in pages (Cloudflare Access) ----
+// /travel-guides/disney/*, /api/waits/* and /api/checklist sit behind Cloudflare Access (one-time code by email).
+// Access adds a signed token to every request; we check it here so the checklist knows whose ticks to load and save.
+const ACCESS_TEAM = 'https://cold-snowflake-d804.cloudflareaccess.com';
+const ACCESS_AUD = '76e02c10f55dff8b8102af18e0a130ead64f4371e6a1df59410303e49d23969b';
+let certs = null, certsAt = 0;
+const b64u = s => Uint8Array.from(atob(s.replace(/-/g, '+').replace(/_/g, '/') + '==='.slice((s.length + 3) % 4)), c => c.charCodeAt(0));
+async function who(request) {
+  const tok = request.headers.get('cf-access-jwt-assertion');
+  if (!tok) return null;
+  const [h, p, s] = tok.split('.');
+  if (!s) return null;
+  const head = JSON.parse(new TextDecoder().decode(b64u(h))), body = JSON.parse(new TextDecoder().decode(b64u(p)));
+  if (!certs || Date.now() - certsAt > 3600e3) { certs = (await (await fetch(ACCESS_TEAM + '/cdn-cgi/access/certs')).json()).keys; certsAt = Date.now(); }
+  const jwk = certs.find(k => k.kid === head.kid);
+  if (!jwk || head.alg !== 'RS256') return null;
+  const key = await crypto.subtle.importKey('jwk', jwk, { name: 'RSASSA-PKCS1-v1_5', hash: 'SHA-256' }, false, ['verify']);
+  const ok = await crypto.subtle.verify('RSASSA-PKCS1-v1_5', key, b64u(s), new TextEncoder().encode(h + '.' + p));
+  const aud = [].concat(body.aud || []);
+  if (!ok || !aud.includes(ACCESS_AUD) || body.exp * 1000 < Date.now() || body.iss !== ACCESS_TEAM || !body.email) return null;
+  return String(body.email).toLowerCase();
+}
+// GET /api/checklist -> {email, done:{"<park id>|<ride>": ms}}   PUT the same shape to save (whole list, last write wins)
+async function checklist(request, env) {
+  const email = await who(request);
+  if (!email) return json({ error: 'Please sign in' }, 401);
+  const k = 'u:' + email, noStore = r => { r.headers.set('cache-control', 'no-store, private'); return r; };
+  if (request.method === 'GET') {
+    const v = await env.CHECKS.get(k, 'json');
+    return noStore(json({ email, done: (v && v.done) || {}, updated: (v && v.updated) || 0 }));
+  }
+  if (request.method === 'PUT') {
+    const text = await request.text();
+    if (text.length > 100000) return json({ error: 'Too big' }, 413);
+    const b = JSON.parse(text), done = {};
+    for (const [key, ms] of Object.entries(b.done || {})) if (/^\d+\|.{1,120}$/.test(key) && Number.isFinite(ms)) done[key] = ms;
+    const updated = Date.now();
+    await env.CHECKS.put(k, JSON.stringify({ done, updated }));
+    return noStore(json({ ok: true, updated }));
+  }
+  return json({ error: 'Method not allowed' }, 405);
+}
+
 export default {
   async fetch(request, env, ctx) {
     const url = new URL(request.url);
@@ -92,9 +135,10 @@ export default {
         if (!PARKS[m[1]]) return json({ error: 'Unknown park' }, 404);
         return await waits(m[1], ctx);
       }
+      if (url.pathname === '/api/checklist') return await checklist(request, env);
       if (url.pathname.startsWith('/api/')) return json({ error: 'Not found' }, 404);
     } catch (e) {
-      return json({ error: 'Something went wrong fetching wait times.' }, 500);
+      return json({ error: 'Something went wrong.' }, 500);
     }
     return env.ASSETS.fetch(request);
   },

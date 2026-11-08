@@ -81,6 +81,7 @@ footer span{color:#c89b2c}
 .item input:focus-visible+label{outline:3px solid var(--gold);outline-offset:2px}
 .msg{margin-top:14px;padding:14px;border-radius:14px;background:#faf9fe;font-weight:600;color:var(--muted)}
 .cheer{margin-top:14px;padding:14px 16px;border-radius:14px;background:linear-gradient(120deg,#fff6db,#fdebb7);color:#7a5600;font-weight:800}
+.acct{margin-top:12px;font-size:.84rem;color:var(--muted)}.acct b{color:var(--ink)}.acct a{font-weight:700;color:var(--sky2)}
 .note{margin-top:16px;font-size:.84rem;color:var(--muted);line-height:1.6}
 .note a{font-weight:700;color:var(--sky2)}
 @media (prefers-reduced-motion:reduce){.item label,.item .bx,.item .bx svg{transition:none}}
@@ -99,9 +100,9 @@ footer span{color:#c89b2c}
   <p class="cheer" id="cheer" hidden>✦ Every single one. That’s the whole park done!</p>
   <div class="ctrl"><div class="seg" role="group" aria-label="Show"><button type="button" data-v="all" aria-pressed="true">All</button><button type="button" data-v="todo" aria-pressed="false">To do</button><button type="button" data-v="done" aria-pressed="false">Done</button></div>
   <button type="button" class="reset" id="reset">Start this park again</button></div>
-  <p class="msg" id="nosave" hidden>Your browser isn’t letting this page save, so ticks will be lost if you close it (private browsing does this).</p>
+  <p class="acct"><span id="sync" aria-live="polite">Checking your account…</span><span id="acct" hidden> · Signed in as <b id="who"></b> · <a href="/cdn-cgi/access/logout">Sign out</a></span></p>
   <div id="list"><noscript><p class="msg">The checklists need JavaScript.</p></noscript></div>
-  <p class="note">The list is the same one the <a href="/travel-guides/disney/times/">wait times</a> use, so it leaves out party-only events, rides that have closed for good and long refurbishments. Your ticks are saved on this device only and never leave it, so they won’t appear on another phone. More in the <a href="/cookies/">Cookie Policy</a>.</p>
+  <p class="note">The list is the same one the <a href="/travel-guides/disney/times/">wait times</a> use, so it leaves out party-only events, rides that have closed for good and long refurbishments. Your ticks are saved to your account, so they follow you to any phone or laptop you sign in on, and a copy is kept on this device so it works with a weak signal. Only you can see them. More in the <a href="/privacy/">Privacy Policy</a>.</p>
 </section>
 </main>
 <footer><span aria-hidden="true">✦</span> Enjoy the parks <span aria-hidden="true">✦</span><br>Unofficial, and not affiliated with the Walt Disney Company · © 2026 Rob Callery</footer>
@@ -130,8 +131,20 @@ footer span{color:#c89b2c}
     if(!order.length){$('list').innerHTML='<p class="msg">'+(view==='done'?'Nothing ticked off yet. Go and ride something!':'All done here. What a day.')+'</p>';return;}
     $('list').innerHTML=order.map(function(Ln,li){return '<section class="land"><h3>'+esc(Ln)+' <small>'+lands[Ln].length+'</small></h3><ul class="items">'+lands[Ln].map(function(r,i){var id='c'+li+'-'+i,k=done[key(cur,r.name)];
       return '<li class="item"><input type="checkbox" id="'+id+'" data-n="'+esc(r.name)+'"'+(k?' checked':'')+'><label for="'+id+'"><span class="bx" aria-hidden="true">'+TICK+'</span><span class="t">'+esc(r.name)+(k?'<small>Done at '+t(k)+'</small>':'')+'</span></label></li>';}).join('')+'</ul></section>';}).join('');}
+  /* your account: ticks are saved to your signed-in account, with a copy on this device for weak signal */
+  var syncT,acct=false;
+  function status(s){var e=$('sync');e.textContent=s;}
+  function push(){clearTimeout(syncT);syncT=setTimeout(function(){
+    fetch('/api/checklist',{method:'PUT',headers:{'content-type':'application/json'},body:JSON.stringify({done:done}),credentials:'same-origin'})
+     .then(function(r){if(!r.ok)throw 0;acct=true;status('✓ Saved to your account');}).catch(function(){status('Saved on this phone. It’ll sync to your account when you’re back online.');});},600);}
+  window.addEventListener('online',function(){push();});
+  fetch('/api/checklist',{cache:'no-store',credentials:'same-origin'}).then(function(r){if(!r.ok)throw 0;return r.json()}).then(function(j){
+    var extra=false;Object.keys(done).forEach(function(k){if(!(k in j.done))extra=true;});
+    Object.keys(j.done).forEach(function(k){done[k]=j.done[k];});
+    save(KEY,done);acct=true;$('who').textContent=j.email;$('acct').hidden=false;status('✓ Saved to your account');tabs();if(cur)render();if(extra)push();
+  }).catch(function(){status('Saved on this phone only for now.');});
   $('list').addEventListener('change',function(e){var c=e.target;if(!c.matches('input[type=checkbox]'))return;var k=key(cur,c.getAttribute('data-n'));
-    if(c.checked)done[k]=Date.now();else delete done[k];var ok=save(KEY,done);$('nosave').hidden=ok;
+    if(c.checked)done[k]=Date.now();else delete done[k];save(KEY,done);push();
     var s=c.nextElementSibling.querySelector('.t');var sm=s.querySelector('small');if(c.checked){if(!sm){sm=document.createElement('small');s.appendChild(sm);}sm.textContent='Done at '+t(done[k]);}else if(sm)sm.remove();
     var cc=counts(cur);$('p-ring').innerHTML=ring(cc.d,cc.n);$('p-count').innerHTML=cc.d+' of '+cc.n+' done<small>'+(cc.n-cc.d)+' still to do</small>';$('cheer').hidden=!(cc.n&&cc.d===cc.n);tabs();
     if(view!=='all')setTimeout(render,350);});
@@ -149,7 +162,7 @@ footer span{color:#c89b2c}
     b.addEventListener('keydown',function(e){var d=e.key==='ArrowRight'?1:e.key==='ArrowLeft'?-1:0;if(!d)return;e.preventDefault();var n=PARKS[(i+d+PARKS.length)%PARKS.length];$('tab-'+n.id).focus();pick(n.id);});});
   document.querySelectorAll('.seg button').forEach(function(b){b.addEventListener('click',function(){view=b.getAttribute('data-v');document.querySelectorAll('.seg button').forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false')});render();});});
   var armed=false,armT;function arm(on){armed=on;var r=$('reset');r.classList.toggle('arm',on);r.textContent=on?'Tap again to clear':'Start this park again';clearTimeout(armT);if(on)armT=setTimeout(function(){arm(false)},4000);}
-  $('reset').addEventListener('click',function(){if(!armed){arm(true);return;}Object.keys(done).forEach(function(k){if(+k.split('|')[0]===cur)delete done[k]});save(KEY,done);arm(false);tabs();render();});
+  $('reset').addEventListener('click',function(){if(!armed){arm(true);return;}Object.keys(done).forEach(function(k){if(+k.split('|')[0]===cur)delete done[k]});save(KEY,done);push();arm(false);tabs();render();});
   var want=new URLSearchParams(location.search).get('park'),start=PARKS.filter(function(P){return P.slug===want})[0]||PARKS[0];
   PARKS.forEach(function(P){fetchPark(P.id)});pick(start.id,false);tabs();
 })();
