@@ -19,6 +19,37 @@ function json(body, status = 200, maxAge = 60) {
   });
 }
 
+// ---------- what we leave out ----------
+// Checked November 2026 against Disney Tourist Blog's refurbishment calendar and Pirates & Princesses' closures list.
+// Party-only entries need a separate ticket, so they're not part of a normal day.
+const PARTY = /very merry christmas party|not-so-scary halloween party|jollywood nights|after hours|early morning magic|extended evening/i;
+// Closed for good (or replaced). Names are compared loosely: case, punctuation and quotes ignored.
+const GONE = ['Splash Mountain', 'DINOSAUR', 'TriceraTop Spin', 'Primeval Whirl', 'Fossil Fun Games', 'The Boneyard', 'Liberty Square Riverboat',
+  'Tom Sawyer Island', "Rock 'n' Roller Coaster Starring Aerosmith", 'Muppet*Vision 3D', 'MuppetVision 3D', "It's Tough to be a Bug!",
+  'Voyage of the Little Mermaid', 'Let the Magic Begin'];
+const GONE_LANDS = ['dinoland usa'];                        // Animal Kingdom's DinoLand U.S.A. closed 2 Feb 2026
+// Long refurbishments: hidden until the reopening date, then they come back by themselves.
+const REFURB = { "tianas bayou adventure": '2026-12-18', 'walt disneys carousel of progress': '2027-06-01', 'carousel of progress': '2027-06-01',
+  'petes silly sideshow': '2027-06-01' };
+// Seasonal makeovers listed alongside the original: show whichever one is running.
+const PAIRS = [['jungle cruise', 'jingle cruise']];
+const STALE_DAYS = 14;                                     // an entry the source hasn't updated for a fortnight isn't really there
+const norm = s => String(s || '').toLowerCase().replace(/[’'`"“”*]/g, '').replace(/[^a-z0-9]+/g, ' ').trim();
+const GONE_N = new Set(GONE.map(norm));
+
+export function keep(name, land, ride, now, all) {
+  const n = norm(name);
+  if (PARTY.test(name)) return 'party';
+  if (GONE_N.has(n) || GONE_LANDS.includes(norm(land))) return 'gone';
+  for (const k in REFURB) if (n.includes(k) && now < Date.parse(REFURB[k])) return 'refurb';
+  for (const [a, b] of PAIRS) {
+    const other = n === a ? b : n === b ? a : null;
+    if (other && !ride.open && all.some(r => norm(r.name) === other && r.open)) return 'seasonal';
+  }
+  if (ride.updated && now - Date.parse(ride.updated) > STALE_DAYS * 864e5) return 'stale';
+  return null;
+}
+
 export function tidy(id, raw) {
   const byName = new Map();
   const add = (name, list) => {
@@ -29,8 +60,10 @@ export function tidy(id, raw) {
   };
   for (const land of raw.lands || []) add(land.name || 'Other', land.rides);
   add('Other', raw.rides);
-  const lands = [...byName].map(([name, rides]) => ({ name, rides }));
-  return { park: PARKS[id], parkId: Number(id), source: 'Queue-Times.com', sourceUrl: 'https://queue-times.com/', fetched: new Date().toISOString(), lands };
+  const now = Date.now(), everything = [...byName.values()].flat(), hidden = { party: 0, gone: 0, refurb: 0, seasonal: 0, stale: 0 };
+  const lands = [...byName].map(([name, rides]) => ({ name, rides: rides.filter(r => { const why = keep(r.name, name, r, now, everything); if (why) hidden[why]++; return !why; }) }))
+    .filter(l => l.rides.length);
+  return { hidden, park: PARKS[id], parkId: Number(id), source: 'Queue-Times.com', sourceUrl: 'https://queue-times.com/', fetched: new Date().toISOString(), lands };
 }
 
 async function waits(id, ctx) {
