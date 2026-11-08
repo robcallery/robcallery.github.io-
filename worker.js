@@ -85,7 +85,7 @@ async function waits(id, ctx) {
 // ---- Signed-in pages (Cloudflare Access) ----
 // /travel-guides/disney/*, /api/waits/* and /api/checklist sit behind Cloudflare Access (one-time code by email).
 // Access adds a signed token to every request; we check it here so the checklist knows whose ticks to load and save.
-const ACCESS_TEAM = 'https://cold-snowflake-d804.cloudflareaccess.com';
+const ACCESS_TEAM = 'https://callery-login.cloudflareaccess.com';
 const ACCESS_AUD = '76e02c10f55dff8b8102af18e0a130ead64f4371e6a1df59410303e49d23969b';
 let certs = null, certsAt = 0;
 const b64u = s => Uint8Array.from(atob(s.replace(/-/g, '+').replace(/_/g, '/') + '==='.slice((s.length + 3) % 4)), c => c.charCodeAt(0));
