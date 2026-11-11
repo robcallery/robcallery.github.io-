@@ -125,6 +125,48 @@ async function checklist(request, env) {
   return json({ error: 'Method not allowed' }, 405);
 }
 
+// ---- "What we did today": a shared diary for everyone signed in to the Disney pages ----
+// KV keys: d:<YYYY-MM-DD> (Florida date) -> [{id, at, who, name, park, text}]   n:<email> -> display name
+// GET /api/diary?day=YYYY-MM-DD -> {day, today, me:{name}, entries}   POST {text, park, time?, day?} adds one
+// DELETE /api/diary?day=..&id=.. removes your own entry   PUT /api/diary/name {name} sets what we call you
+const floridaDay = ms => new Date(ms).toLocaleDateString('en-CA', { timeZone: 'America/New_York' });
+const clean = (s, n) => String(s || '').replace(/[\u0000-\u001f]/g, ' ').trim().slice(0, n);
+async function diary(request, env, url) {
+  const email = await who(request);
+  if (!email) return json({ error: 'Please sign in' }, 401);
+  const noStore = r => { r.headers.set('cache-control', 'no-store, private'); return r; };
+  const name = await env.CHECKS.get('n:' + email);
+  if (url.pathname === '/api/diary/name' && request.method === 'PUT') {
+    const n = clean((await request.json()).name, 30);
+    if (!n) return json({ error: 'Name needed' }, 400);
+    await env.CHECKS.put('n:' + email, n);
+    return noStore(json({ ok: true, name: n }));
+  }
+  const today = floridaDay(Date.now());
+  const day = /^\d{4}-\d\d-\d\d$/.test(url.searchParams.get('day') || '') ? url.searchParams.get('day') : today;
+  const key = 'd:' + day, list = (await env.CHECKS.get(key, 'json')) || [];
+  const out = l => l.slice().sort((a, b) => a.at - b.at).map(e => ({ id: e.id, at: e.at, name: e.name, park: e.park, text: e.text, mine: e.who === email }));
+  if (request.method === 'GET') return noStore(json({ day, today, me: { name: name || '' }, entries: out(list) }));
+  if (request.method === 'POST') {
+    const b = await request.json(), text = clean(b.text, 500);
+    if (!text) return json({ error: 'Write something first' }, 400);
+    if (!name) return json({ error: 'Tell us your name first' }, 400);
+    const d = /^\d{4}-\d\d-\d\d$/.test(b.day || '') ? b.day : today, k = 'd:' + d;
+    const l = d === day ? list : ((await env.CHECKS.get(k, 'json')) || []);
+    if (l.length >= 300) return json({ error: 'That day is full' }, 400);
+    const at = Number.isFinite(b.at) ? b.at : Date.now();
+    l.push({ id: crypto.randomUUID().slice(0, 8), at, who: email, name, park: clean(b.park, 40), text });
+    await env.CHECKS.put(k, JSON.stringify(l));
+    return noStore(json({ day: d, today, me: { name }, entries: out(l) }));
+  }
+  if (request.method === 'DELETE') {
+    const id = url.searchParams.get('id'), l = list.filter(e => !(e.id === id && e.who === email));
+    await env.CHECKS.put(key, JSON.stringify(l));
+    return noStore(json({ day, today, me: { name: name || '' }, entries: out(l) }));
+  }
+  return json({ error: 'Method not allowed' }, 405);
+}
+
 export default {
   async fetch(request, env, ctx) {
     const url = new URL(request.url);
@@ -136,6 +178,7 @@ export default {
         return await waits(m[1], ctx);
       }
       if (url.pathname === '/api/checklist') return await checklist(request, env);
+      if (url.pathname === '/api/diary' || url.pathname === '/api/diary/name') return await diary(request, env, url);
       if (url.pathname.startsWith('/api/')) return json({ error: 'Not found' }, 404);
     } catch (e) {
       return json({ error: 'Something went wrong.' }, 500);

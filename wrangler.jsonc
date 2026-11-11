@@ -3,6 +3,7 @@
 // worker.js only runs for /api/* (run_worker_first); every other request is served straight from the files.
 //   /api/waits/<park>  live theme park wait times (Queue-Times.com), used by the Disney wait-times pages
 //   /api/checklist     each signed-in person's Disney checklist ticks, kept in the CHECKS KV namespace
+//   /api/diary         the shared "What we did today" diary (same KV namespace)
 // /travel-guides/disney/*, /api/waits/* and /api/checklist are behind Cloudflare Access ("Callery Disney" app).
 // Cloudflare Workers Builds deploys this on every push to main (deploy command: npx wrangler deploy).
 {
