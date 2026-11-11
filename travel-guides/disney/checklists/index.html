@@ -108,7 +108,7 @@ footer span{color:#c89b2c}
 <footer><span aria-hidden="true">✦</span> Enjoy the parks <span aria-hidden="true">✦</span><br>Unofficial, and not affiliated with the Walt Disney Company · © 2026 Rob Callery</footer>
 <script>
 (function(){
-  var PARKS=[{"id": 6, "name": "Magic Kingdom", "slug": "magickingdom"}, {"id": 5, "name": "EPCOT", "slug": "epcot"}, {"id": 7, "name": "Hollywood Studios", "slug": "hollywoodstudios"}, {"id": 8, "name": "Animal Kingdom", "slug": "animalkingdom"}],KEY='callery-disney-checklist-v1',CACHE='callery-disney-rides-v1';
+  var SINGLE=/single[\s-]*rider/i,PARKS=[{"id": 6, "name": "Magic Kingdom", "slug": "magickingdom"}, {"id": 5, "name": "EPCOT", "slug": "epcot"}, {"id": 7, "name": "Hollywood Studios", "slug": "hollywoodstudios"}, {"id": 8, "name": "Animal Kingdom", "slug": "animalkingdom"}],KEY='callery-disney-checklist-v1',CACHE='callery-disney-rides-v1';
   var $=function(i){return document.getElementById(i)};
   function load(k){try{return JSON.parse(localStorage.getItem(k))||{}}catch(e){return {}}}
   function save(k,v){try{localStorage.setItem(k,JSON.stringify(v));return true}catch(e){return false}}
@@ -149,11 +149,11 @@ footer span{color:#c89b2c}
     var cc=counts(cur);$('p-ring').innerHTML=ring(cc.d,cc.n);$('p-count').innerHTML=cc.d+' of '+cc.n+' done<small>'+(cc.n-cc.d)+' still to do</small>';$('cheer').hidden=!(cc.n&&cc.d===cc.n);tabs();
     if(view!=='all')setTimeout(render,350);});
   function fetchPark(id){
-    if(cache[id]&&cache[id].rides){lists[id]=cache[id].rides;}
+    if(cache[id]&&cache[id].rides){lists[id]=cache[id].rides.filter(function(r){return !SINGLE.test(r.name)});}
     fetch('/api/waits/'+id,{cache:'no-store'}).then(function(r){if(!r.ok)throw 0;return r.json()}).then(function(j){
-      var L=[];(j.lands||[]).forEach(function(Ln){Ln.rides.forEach(function(r){L.push({name:r.name,land:Ln.name})})});
+      var L=[];(j.lands||[]).forEach(function(Ln){Ln.rides.forEach(function(r){if(!SINGLE.test(r.name))L.push({name:r.name,land:Ln.name})})});
       /* keep anything already ticked even if it's dropped off today's list */
-      Object.keys(done).forEach(function(k){var p=k.split('|');if(+p[0]===id&&!L.some(function(r){return r.name===p.slice(1).join('|')}))L.push({name:p.slice(1).join('|'),land:'Ticked earlier'});});
+      Object.keys(done).forEach(function(k){var p=k.split('|');if(+p[0]===id&&!SINGLE.test(k)&&!L.some(function(r){return r.name===p.slice(1).join('|')}))L.push({name:p.slice(1).join('|'),land:'Ticked earlier'});});
       lists[id]=L;cache[id]={rides:L,at:Date.now()};save(CACHE,cache);tabs();if(id===cur)render();
     }).catch(function(){if(!lists[id])lists[id]=[];tabs();if(id===cur)render();});}
   function pick(id,push){cur=id;PARKS.forEach(function(P){var b=$('tab-'+P.id);b.setAttribute('aria-selected',P.id===id?'true':'false');b.tabIndex=P.id===id?0:-1;});
