@@ -50,6 +50,8 @@ export function keep(name, land, ride, now, all) {
   return null;
 }
 
+// Rides the source files under the wrong land: [ride name pattern, the land it really belongs in]
+const MOVE = [[/^toy story mania/i, 'Toy Story Land']];
 export function tidy(id, raw) {
   const byName = new Map();
   const add = (name, list) => {
@@ -60,6 +62,17 @@ export function tidy(id, raw) {
   };
   for (const land of raw.lands || []) add(land.name || 'Other', land.rides);
   add('Other', raw.rides);
+  for (const [re, to] of MOVE) {
+    const dest = [...byName.keys()].find(k => k.toLowerCase() === to.toLowerCase()) || to;
+    for (const [land, rides] of byName) {
+      if (land === dest) continue;
+      const out = rides.filter(r => re.test(r.name));
+      if (!out.length) continue;
+      byName.set(land, rides.filter(r => !re.test(r.name)));
+      if (!byName.has(dest)) byName.set(dest, []);
+      byName.get(dest).push(...out);
+    }
+  }
   const now = Date.now(), everything = [...byName.values()].flat(), hidden = { party: 0, gone: 0, refurb: 0, seasonal: 0, stale: 0 };
   const lands = [...byName].map(([name, rides]) => ({ name, rides: rides.filter(r => { const why = keep(r.name, name, r, now, everything); if (why) hidden[why]++; return !why; }) }))
     .filter(l => l.rides.length);
