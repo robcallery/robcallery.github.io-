@@ -5,6 +5,7 @@
 //   where / city / date ("YYYY-MM-DD") : where you had it
 //   brewerSays: how the brewery describes the beer
 //   rating: 1-5 pints (halves allowed, e.g. 4.5)   notes: a line in your own words   style / abv
+//   sticker / stickerSub: a festival sticker on the page, e.g. sticker: "EPCOT Food & Wine 2026", stickerSub: "Germany"
 //   ink: "red", "blue", "green", "purple", "orange" or "black" (otherwise picked by country)
 window.BEERS = [
   { name: "54° North Lager", added: "2026-10-21", date: "2019-03-23", style: "Helles Lager", abv: 4.5, brewery: "Black Sheep Brewery", brewedIn: "Masham", brewedCountry: "England" },
@@ -133,6 +134,7 @@ window.BEERS = [
   { name: "Santa's Progress", added: "2026-10-21", date: "2021-12-02", style: "Bitter", abv: 4.2, brewery: "Daleside Brewery", brewedIn: "Harrogate", brewedCountry: "England" },
   { name: "Sapporo Premium", added: "2026-10-21", date: "2023-10-14", style: "Lager", abv: 4.9, brewery: "Sapporo Breweries", brewedIn: "Sapporo", brewedCountry: "Japan" },
   { name: "Schöfferhofer Grapefruit", added: "2026-10-21", date: "2019-11-02", style: "Grapefruit Radler", abv: 2.5, brewery: "Schöfferhofer", brewedIn: "Frankfurt", brewedCountry: "Germany" },
+  { name: "Schöfferhofer Orange Spritz Hefeweizen", added: "2026-11-15", date: "2026-11-15", where: "Germany booth, EPCOT International Food & Wine Festival", city: "Orlando", sticker: "EPCOT Food & Wine 2026", stickerSub: "Germany", brewerSays: "Notes of pithy bittersweet orange peel, basking in the sun alongside a refreshing herbal bitterness. A Hefeweizen take on the classic Italian spritz.", style: "Fruit Wheat Beer (Radler)", abv: 2.5, brewery: "Schöfferhofer", brewedIn: "Frankfurt", brewedCountry: "Germany" },
   { name: "Schöfferhofer Watermelon Mint", added: "2026-10-21", date: "2025-03-30", style: "Watermelon Radler", abv: 2.5, brewery: "Schöfferhofer", brewedIn: "Frankfurt", brewedCountry: "Germany" },
   { name: "Sierra Nevada Torpedo Extra IPA", added: "2026-10-21", date: "2016-02-19", style: "American IPA", abv: 7.2, brewery: "Sierra Nevada Brewing Co", brewedIn: "Chico, California", brewedCountry: "USA" },
   { name: "Singha", added: "2026-10-21", date: "2016-02-20", style: "Lager", abv: 5, brewery: "Boon Rawd Brewery", brewedIn: "Bangkok", brewedCountry: "Thailand" },
@@ -155,7 +157,9 @@ window.BEERS = [
   { name: "Uncle Monks", added: "2026-10-21", date: "2019-02-23", brewerSays: "Kilned malt, slightly sweet and growing bitterness - an American-style session IPA with a big hoppy end.", style: "IPA", abv: 4.5, brewery: "Beer Monkey Brew Co", brewedIn: "Skipton", brewedCountry: "England" },
   { name: "Union", added: "2026-10-21", date: "2019-02-23", brewerSays: "A British classic best bitter, brewed to celebrate an England Six Nations victory charge (fingers crossed).", style: "Bitter", abv: 4.1, brewery: "Leeds Brewery", brewedIn: "Leeds", brewedCountry: "England" },
   { name: "Virtuous", added: "2026-10-21", date: "2025-02-21", style: "Session IPA", abv: 4.5, brewery: "Kirkstall Brewery", brewedIn: "Leeds", brewedCountry: "England" },
+  { name: "von Trapp Oktoberfest Märzen-Style Lager", added: "2026-11-15", date: "2026-11-15", where: "Germany booth, EPCOT International Food & Wine Festival", city: "Orlando", sticker: "EPCOT Food & Wine 2026", stickerSub: "Germany", brewerSays: "Pale and dark malts from Munich add richness and a lingering sweetness, and Hallertau and Tettnanger hops give a flowery, spicy aroma. Caramel and toffee notes linger but are balanced by the subtle hop additions.", style: "Märzen", abv: 5.6, brewery: "von Trapp Brewing", brewedIn: "Stowe, Vermont", brewedCountry: "USA" },
   { name: "Wainwright Golden Beer", added: "2026-10-21", date: "2022-05-07", style: "Golden Ale", abv: 4.1, brewery: "Thwaites", brewedIn: "Mellor Brook, Lancashire", brewedCountry: "England" },
+  { name: "Weihenstephaner Festbier", added: "2026-11-15", date: "2026-11-15", where: "Germany booth, EPCOT International Food & Wine Festival", city: "Orlando", sticker: "EPCOT Food & Wine 2026", stickerSub: "Germany", brewerSays: "A crisp, deep-golden German Festbier from Weihenstephan, brewed in the traditional Bavarian festival style: malty and lightly honey-sweet, with a clean finish.", style: "Festbier", abv: 5.8, brewery: "Bayerische Staatsbrauerei Weihenstephan", brewedIn: "Freising", brewedCountry: "Germany" },
   { name: "Wingman", added: "2026-10-20", brewerSays: "Session IPA (4.3%) - 'citrus, biscuit, fruity', with tropical fruit and pine.", style: "Session IPA", abv: 4.3, brewery: "BrewDog", brewedIn: "Ellon, Aberdeenshire", brewedCountry: "Scotland", date: "2023-11-04" },
   { name: "XS", added: "2026-10-21", date: "2019-02-23", brewerSays: "Spicy dark fruit, malty and bitter, with hints of floral and citrus aroma.", style: "IPA", abv: 5.5, brewery: "The Hop Studio", brewedIn: "Elvington, nr York", brewedCountry: "England" },
   { name: "Yankee", added: "2026-10-20", brewerSays: "Light, easy-drinking pale ale (4.3%) - floral and citrus from Cascade hops.", style: "Pale Ale", abv: 4.3, brewery: "Rooster's Brewing Co.", brewedIn: "Harrogate", brewedCountry: "England" },
