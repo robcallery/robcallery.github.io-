@@ -98,29 +98,48 @@ async function waits(id, ctx) {
 // ---- Signed-in pages (Cloudflare Access) ----
 // /travel-guides/disney/*, /api/waits/* and /api/checklist sit behind Cloudflare Access (one-time code by email).
 // Access adds a signed token to every request; we check it here so the checklist knows whose ticks to load and save.
-const ACCESS_TEAM = 'https://callery-login.cloudflareaccess.com';
+// Team domains whose sign-ins we accept. The team was renamed from cold-snowflake-d804 to callery-login on 8 Nov 2026,
+// and devices that signed in before the rename keep a pass from the old name until it runs out, so both are trusted.
+const ACCESS_TEAMS = ['https://callery-login.cloudflareaccess.com', 'https://cold-snowflake-d804.cloudflareaccess.com'];
+const ACCESS_TEAM = ACCESS_TEAMS[0];
 const ACCESS_AUD = '76e02c10f55dff8b8102af18e0a130ead64f4371e6a1df59410303e49d23969b';
-let certs = null, certsAt = 0;
+const certs = {};   // team domain -> {keys, at}
 const b64u = s => Uint8Array.from(atob(s.replace(/-/g, '+').replace(/_/g, '/') + '==='.slice((s.length + 3) % 4)), c => c.charCodeAt(0));
-async function who(request) {
-  const tok = request.headers.get('cf-access-jwt-assertion');
-  if (!tok) return null;
-  const [h, p, s] = tok.split('.');
-  if (!s) return null;
-  const head = JSON.parse(new TextDecoder().decode(b64u(h))), body = JSON.parse(new TextDecoder().decode(b64u(p)));
-  if (!certs || Date.now() - certsAt > 3600e3) { certs = (await (await fetch(ACCESS_TEAM + '/cdn-cgi/access/certs')).json()).keys; certsAt = Date.now(); }
-  const jwk = certs.find(k => k.kid === head.kid);
-  if (!jwk || head.alg !== 'RS256') return null;
-  const key = await crypto.subtle.importKey('jwk', jwk, { name: 'RSASSA-PKCS1-v1_5', hash: 'SHA-256' }, false, ['verify']);
-  const ok = await crypto.subtle.verify('RSASSA-PKCS1-v1_5', key, b64u(s), new TextEncoder().encode(h + '.' + p));
-  const aud = [].concat(body.aud || []);
-  if (!ok || !aud.includes(ACCESS_AUD) || body.exp * 1000 < Date.now() || body.iss !== ACCESS_TEAM || !body.email) return null;
-  return String(body.email).toLowerCase();
+async function keysFor(team, fresh) {
+  const c = certs[team];
+  if (!fresh && c && Date.now() - c.at < 3600e3) return c.keys;
+  const r = await fetch(team + '/cdn-cgi/access/certs');
+  const keys = r.ok ? ((await r.json()).keys || []) : [];
+  certs[team] = { keys, at: Date.now() };
+  return keys;
 }
+// Returns {email} or {why}: none | bad | iss | kid | sig | aud | exp | email
+async function check(request) {
+  const tok = request.headers.get('cf-access-jwt-assertion');
+  if (!tok) return { why: 'none' };
+  const [h, p, s] = tok.split('.');
+  if (!s) return { why: 'bad' };
+  let head, body;
+  try { head = JSON.parse(new TextDecoder().decode(b64u(h))); body = JSON.parse(new TextDecoder().decode(b64u(p))); } catch (e) { return { why: 'bad' }; }
+  const team = String(body.iss || '').replace(/\/$/, '');
+  if (!ACCESS_TEAMS.includes(team)) return { why: 'iss' };
+  if (head.alg !== 'RS256') return { why: 'bad' };
+  let jwk = (await keysFor(team)).find(k => k.kid === head.kid);
+  if (!jwk) jwk = (await keysFor(team, true)).find(k => k.kid === head.kid);   // keys rotate: look again before giving up
+  if (!jwk) return { why: 'kid' };
+  const key = await crypto.subtle.importKey('jwk', jwk, { name: 'RSASSA-PKCS1-v1_5', hash: 'SHA-256' }, false, ['verify']);
+  if (!(await crypto.subtle.verify('RSASSA-PKCS1-v1_5', key, b64u(s), new TextEncoder().encode(h + '.' + p)))) return { why: 'sig' };
+  if (![].concat(body.aud || []).includes(ACCESS_AUD)) return { why: 'aud' };
+  if (body.exp * 1000 < Date.now()) return { why: 'exp' };
+  if (!body.email) return { why: 'email' };
+  return { email: String(body.email).toLowerCase() };
+}
+async function who(request) { return (await check(request)).email || null; }
+const denied = async request => { const r = json({ error: 'Please sign in', why: (await check(request)).why }, 401); r.headers.set('cache-control', 'no-store'); return r; };
 // GET /api/checklist -> {email, done:{"<park id>|<ride>": ms}}   PUT the same shape to save (whole list, last write wins)
 async function checklist(request, env) {
   const email = await who(request);
-  if (!email) return json({ error: 'Please sign in' }, 401);
+  if (!email) return denied(request);
   const k = 'u:' + email, noStore = r => { r.headers.set('cache-control', 'no-store, private'); return r; };
   if (request.method === 'GET') {
     const v = await env.CHECKS.get(k, 'json');
@@ -146,7 +165,7 @@ const floridaDay = ms => new Date(ms).toLocaleDateString('en-CA', { timeZone: 'A
 const clean = (s, n) => String(s || '').replace(/[\u0000-\u001f]/g, ' ').trim().slice(0, n);
 async function diary(request, env, url) {
   const email = await who(request);
-  if (!email) return json({ error: 'Please sign in' }, 401);
+  if (!email) return denied(request);
   const noStore = r => { r.headers.set('cache-control', 'no-store, private'); return r; };
   const name = await env.CHECKS.get('n:' + email);
   if (url.pathname === '/api/diary/name' && request.method === 'PUT') {
