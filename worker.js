@@ -122,6 +122,7 @@ async function check(request) {
   let head, body;
   try { head = JSON.parse(new TextDecoder().decode(b64u(h))); body = JSON.parse(new TextDecoder().decode(b64u(p))); } catch (e) { return { why: 'bad' }; }
   const team = String(body.iss || '').replace(/\/$/, '');
+  check.last = { iss: body.iss, kid: head.kid, alg: head.alg, aud: [].concat(body.aud || []).map(a => a.slice(0, 8)), exp: body.exp, type: body.type, hasEmail: !!body.email };
   if (!ACCESS_TEAMS.includes(team)) return { why: 'iss' };
   if (head.alg !== 'RS256') return { why: 'bad' };
   let jwk = (await keysFor(team)).find(k => k.kid === head.kid);
@@ -135,11 +136,17 @@ async function check(request) {
   return { email: String(body.email).toLowerCase() };
 }
 async function who(request) { return (await check(request)).email || null; }
+// Temporary: remember the last refused sign-in (reason and token shape only, no email) so it can be checked in the dashboard
+async function noteRefusal(request, env) {
+  check.last = null; const c = await check(request);
+  const hdrs = ['cf-access-jwt-assertion', 'cookie'].map(h => h + ':' + (request.headers.get(h) ? (h === 'cookie' ? request.headers.get(h).split(';').map(x => x.trim().split('=')[0]).join(',') : 'yes') : 'no'));
+  try { await env.CHECKS.put('dbg:refused', JSON.stringify({ at: new Date().toISOString(), path: new URL(request.url).pathname, host: new URL(request.url).host, why: c.why, token: check.last, hdrs, ua: (request.headers.get('user-agent') || '').slice(0, 90) }), { expirationTtl: 7 * 86400 }); } catch (e) {}
+}
 const denied = async request => { const r = json({ error: 'Please sign in', why: (await check(request)).why }, 401); r.headers.set('cache-control', 'no-store'); return r; };
 // GET /api/checklist -> {email, done:{"<park id>|<ride>": ms}}   PUT the same shape to save (whole list, last write wins)
 async function checklist(request, env) {
   const email = await who(request);
-  if (!email) return denied(request);
+  if (!email) { await noteRefusal(request, env); return denied(request); }
   const k = 'u:' + email, noStore = r => { r.headers.set('cache-control', 'no-store, private'); return r; };
   if (request.method === 'GET') {
     const v = await env.CHECKS.get(k, 'json');
@@ -165,7 +172,7 @@ const floridaDay = ms => new Date(ms).toLocaleDateString('en-CA', { timeZone: 'A
 const clean = (s, n) => String(s || '').replace(/[\u0000-\u001f]/g, ' ').trim().slice(0, n);
 async function diary(request, env, url) {
   const email = await who(request);
-  if (!email) return denied(request);
+  if (!email) { await noteRefusal(request, env); return denied(request); }
   const noStore = r => { r.headers.set('cache-control', 'no-store, private'); return r; };
   const name = await env.CHECKS.get('n:' + email);
   if (url.pathname === '/api/diary/name' && request.method === 'PUT') {
