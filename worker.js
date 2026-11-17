@@ -125,9 +125,16 @@ async function check(request) {
   check.last = { iss: body.iss, kid: head.kid, alg: head.alg, aud: [].concat(body.aud || []).map(a => a.slice(0, 8)), exp: body.exp, type: body.type, hasEmail: !!body.email };
   if (!ACCESS_TEAMS.includes(team)) return { why: 'iss' };
   if (head.alg !== 'RS256') return { why: 'bad' };
-  let jwk = (await keysFor(team)).find(k => k.kid === head.kid);
-  if (!jwk) jwk = (await keysFor(team, true)).find(k => k.kid === head.kid);   // keys rotate: look again before giving up
-  if (!jwk) return { why: 'kid' };
+  // The key can be listed by either team name after the rename, and keys rotate, so look everywhere (fresh) before giving up
+  const find = async fresh => { for (const tm of [team, ...ACCESS_TEAMS.filter(x => x !== team)]) { const k = (await keysFor(tm, fresh)).find(k => k.kid === head.kid); if (k) return k; } return null; };
+  const jwk = (await find(false)) || (await find(true));
+  if (!jwk) {
+    // Last resort for a pass from our own team whose key is no longer published: Cloudflare Access has already checked this
+    // request at the edge (these paths are behind it), and it tells us who it let in. Accept only if that matches the pass.
+    const edge = (request.headers.get('cf-access-authenticated-user-email') || '').toLowerCase();
+    if (edge && body.email && edge === String(body.email).toLowerCase() && [].concat(body.aud || []).includes(ACCESS_AUD) && body.exp * 1000 > Date.now()) return { email: edge, via: 'edge' };
+    return { why: 'kid' };
+  }
   const key = await crypto.subtle.importKey('jwk', jwk, { name: 'RSASSA-PKCS1-v1_5', hash: 'SHA-256' }, false, ['verify']);
   if (!(await crypto.subtle.verify('RSASSA-PKCS1-v1_5', key, b64u(s), new TextEncoder().encode(h + '.' + p)))) return { why: 'sig' };
   if (![].concat(body.aud || []).includes(ACCESS_AUD)) return { why: 'aud' };

@@ -109,6 +109,11 @@ footer span{color:#c89b2c}
 <script>
 (function(){
   /* left off the checklists: single-rider queues and character meet and greets */
+  /* shows and films the live feed leaves out (it only lists things with a queue). Added to that park's list unless the feed already has them. */
+  var EXTRA={5:[['Reflections of China','World Showcase'],['Canada Far and Wide','World Showcase'],['Impressions de France','World Showcase'],['Beauty and the Beast Sing-Along','World Showcase'],['The American Adventure','World Showcase']]};
+  function norm(s){return String(s).toLowerCase().replace(/[^a-z0-9]/g,'')}
+  function addExtras(id,L){(EXTRA[id]||[]).forEach(function(x){var n=norm(x[0]);if(L.some(function(r){var m=norm(r.name);return m===n||m.indexOf(n)>=0||n.indexOf(m)>=0&&m.length>8}))return;
+    var land=(L.filter(function(r){return norm(r.land)===norm(x[1])})[0]||{land:x[1]}).land;var at=-1;L.forEach(function(r,k){if(r.land===land)at=k});if(at<0)L.push({name:x[0],land:land});else L.splice(at+1,0,{name:x[0],land:land});});return L;}
   var SINGLE=/single[\s-]*rider|\bmeet\b|meet[\s-]*(and|&|n)[\s-]*greet|character spot|princess fairytale hall|royal sommerhus|red carpet dreams|adventurers outpost|town square theat|celebrity spotlight/i,PARKS=[{"id": 6, "name": "Magic Kingdom", "slug": "magickingdom"}, {"id": 5, "name": "EPCOT", "slug": "epcot"}, {"id": 7, "name": "Hollywood Studios", "slug": "hollywoodstudios"}, {"id": 8, "name": "Animal Kingdom", "slug": "animalkingdom"}],KEY='callery-disney-checklist-v1',CACHE='callery-disney-rides-v1';
   var $=function(i){return document.getElementById(i)};
   function load(k){try{return JSON.parse(localStorage.getItem(k))||{}}catch(e){return {}}}
@@ -154,6 +159,7 @@ footer span{color:#c89b2c}
     if(cache[id]&&cache[id].rides){lists[id]=cache[id].rides.filter(function(r){return !SINGLE.test(r.name)});}
     fetch('/api/waits/'+id,{cache:'no-store'}).then(function(r){if(!r.ok)throw 0;return r.json()}).then(function(j){
       var L=[];(j.lands||[]).forEach(function(Ln){Ln.rides.forEach(function(r){if(!SINGLE.test(r.name))L.push({name:r.name,land:Ln.name})})});
+      addExtras(id,L);
       /* keep anything already ticked even if it's dropped off today's list */
       Object.keys(done).forEach(function(k){var p=k.split('|');if(+p[0]===id&&!SINGLE.test(k)&&!L.some(function(r){return r.name===p.slice(1).join('|')}))L.push({name:p.slice(1).join('|'),land:'Ticked earlier'});});
       lists[id]=L;cache[id]={rides:L,at:Date.now()};save(CACHE,cache);tabs();if(id===cur)render();
