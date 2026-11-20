@@ -1,6 +1,6 @@
 # Blog post tools for callery.co.uk
 
-These scripts add posts straight into the published site files in this repo. They live in `_tools/`,
+These scripts add posts (Football Tales, Travel Tales, Calz Plays, Bar Talk and Make It Make Sense?!) straight into the published site files in this repo. They live in `_tools/`,
 which `.assetsignore` keeps off the website. Run them from the repo root, then commit and push to `main`;
 Cloudflare rebuilds the site on every push.
 
@@ -66,6 +66,31 @@ Every tool also updates the Callery Chronicle (`/blog/`, from `data/hub.json`), 
 
 - The monitor art is Rob's `screenshot` if given (location data removed), otherwise the art from the
   newest earlier post in the same category. `new_categories` is only needed for a category that doesn't exist yet.
+
+## Bar Talk and Make It Make Sense?!: `python3 _tools/bartalk.py _tools/posts/<folder>`
+
+A Bar Talk post (`/var-and-firkin/bar-talk/<slug>/`):
+
+```json
+{"slug": "kick-off-times", "date": "2026-11-21", "sport": "Football", "sub": "Kick-off times and other crimes",
+ "icon": "football", "tags": ["Football", "TV"], "dek": "...", "teaser": "...", "description": "...",
+ "ask": "the 'Over to you' question"}
+```
+
+- `sport` is the category (Cricket, Darts, Football…). `sub` is the italic line on its noticeboard pin; only needed for a new category.
+- `icon` draws the chalkboard art: `cricket`, `darts`, `football` or `pint` (the default).
+
+A rant in the toilets (`/var-and-firkin/bar-talk/make-it-make-sense/<slug>/`):
+
+```json
+{"rant": true, "slug": "printer-ink-racket", "date": "2026-11-22",
+ "question": "Why does printer ink cost more than the printer?", "teaser": "...", "description": "...",
+ "ask": "the 'Over to you' question", "scrawl": "graffiti under the latest rant"}
+```
+
+- The rant is numbered automatically, the previous rant gets a "Next rant" link, the toilet-roll menu on every rant
+  is updated, and if the question was on the "coming soon" list it is crossed off.
+- Either kind updates the Bar Talk page: a Bar Talk post goes on the chalkboard as today's special, a rant goes on the gents door.
 
 ## If the Chronicle gets out of step
 
