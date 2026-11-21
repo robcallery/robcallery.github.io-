@@ -98,3 +98,37 @@ If `/blog/index.html` is ever edited by hand, refresh the data from it with:
 `python3 -c "import sys; sys.path.insert(0,'_tools'); import kit; kit.save('hub', kit.Hub.parse())"`
 
 Fonts in `fonts/` are from Google Fonts under the SIL Open Font License (`OFL.txt`), used to draw share images.
+
+## calz88 Live (`/live/`)
+
+No script needed: edit two small JSON files and push.
+
+**Upcoming streams** — `live/schedule.json`. Times in UTC (`Z`) or with an offset; the page shows UK time, plus the
+visitor's own time if they're somewhere else. Past streams drop off by themselves (4 hours after `start`, or at `end`).
+
+```json
+{"streams": [
+  {"title": "FC 27 Saturday session", "start": "2026-11-28T19:00:00Z", "end": "2026-11-28T22:00:00Z",
+   "category": "Gaming", "description": "One line about it.", "link": "https://www.twitch.tv/robcallery"}
+]}
+```
+
+`category` is one of `Gaming`, `Football`, `VAR & Firkin` or `Special event` (anything else shows as written).
+`end`, `description` and `link` are optional.
+
+**Highlights** — `live/highlights.json`, newest first, up to 8 shown.
+
+```json
+{"highlights": [
+  {"title": "...", "date": "2026-11-20", "platform": "YouTube", "url": "https://www.youtube.com/watch?v=...",
+   "thumb": "/live/thumbs/my-video.jpg"}
+]}
+```
+
+Thumbnails must be files on this site (a path starting with `/`), so the page never loads images from YouTube or
+Twitch before anyone clicks. Without a `thumb` the card shows a plain branded panel.
+
+**Live status** comes from the Worker at `/api/live`, which asks Twitch's API. It needs two Worker secrets, set in the
+Cloudflare dashboard (Workers & Pages → callery → Settings → Variables and Secrets, type "Secret"):
+`TWITCH_CLIENT_ID` and `TWITCH_CLIENT_SECRET`, from an application registered at dev.twitch.tv/console.
+Without them the page says "Status unavailable" and the stream still works.

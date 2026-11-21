@@ -213,6 +213,71 @@ async function diary(request, env, url) {
   return json({ error: 'Method not allowed' }, 405);
 }
 
+// ---- Live status for /live/ (public, no sign-in) ----
+// GET /api/live -> {status:"live"|"offline"|"unknown", title, category, viewers, startedAt, checkedAt}
+// Asks Twitch's Helix API whether twitch.tv/robcallery is broadcasting. Twitch needs an app access token, made
+// from two Worker secrets set in the Cloudflare dashboard (never in this file): TWITCH_CLIENT_ID and TWITCH_CLIENT_SECRET.
+// Without them, or if Twitch fails, the answer is "unknown" so the page never shows a false LIVE.
+// Answers are cached for 60 seconds per Cloudflare location; the app token is kept in KV until just before it expires.
+const TWITCH_LOGIN = 'robcallery';
+const LIVE_TTL = 60;
+let twitchMem = null;   // {token, exp}
+
+async function twitchToken(env, fresh) {
+  const now = Date.now();
+  if (!fresh && twitchMem && twitchMem.exp > now) return twitchMem.token;
+  if (!fresh) {
+    const kv = await env.CHECKS.get('tw:token', 'json');
+    if (kv && kv.exp > now) { twitchMem = kv; return kv.token; }
+  }
+  const r = await fetch('https://id.twitch.tv/oauth2/token', {
+    method: 'POST',
+    headers: { 'content-type': 'application/x-www-form-urlencoded' },
+    body: new URLSearchParams({ client_id: env.TWITCH_CLIENT_ID, client_secret: env.TWITCH_CLIENT_SECRET, grant_type: 'client_credentials' }),
+  });
+  if (!r.ok) return null;
+  const j = await r.json();
+  if (!j.access_token) return null;
+  const life = Math.max(120, Math.min(Number(j.expires_in) || 3600, 30 * 86400) - 600);   // renew 10 minutes early
+  twitchMem = { token: j.access_token, exp: now + life * 1000 };
+  await env.CHECKS.put('tw:token', JSON.stringify(twitchMem), { expirationTtl: life });
+  return twitchMem.token;
+}
+
+async function askTwitch(env) {
+  if (!env.TWITCH_CLIENT_ID || !env.TWITCH_CLIENT_SECRET) return { status: 'unknown', reason: 'not-configured' };
+  for (const fresh of [false, true]) {
+    const token = await twitchToken(env, fresh);
+    if (!token) return { status: 'unknown', reason: 'token' };
+    const r = await fetch(`https://api.twitch.tv/helix/streams?user_login=${TWITCH_LOGIN}`, {
+      headers: { 'client-id': env.TWITCH_CLIENT_ID, authorization: `Bearer ${token}` },
+    });
+    if (r.status === 401 && !fresh) continue;          // token expired early: get a new one and ask again
+    if (!r.ok) return { status: 'unknown', reason: 'twitch-' + r.status };
+    const j = await r.json();
+    if (!j || !Array.isArray(j.data)) return { status: 'unknown', reason: 'shape' };
+    const s = j.data.find(x => x && x.type === 'live');
+    if (!s) return { status: 'offline' };
+    return { status: 'live', title: String(s.title || '').slice(0, 200), category: String(s.game_name || '').slice(0, 80),
+      viewers: Number.isFinite(s.viewer_count) ? s.viewer_count : null, startedAt: s.started_at || null };
+  }
+  return { status: 'unknown', reason: 'token' };
+}
+
+async function live(env, ctx) {
+  const cache = caches.default;
+  const key = new Request('https://callery.co.uk/api/live');
+  const hit = await cache.match(key);
+  if (hit && Date.now() - Number(hit.headers.get('x-fetched-at') || 0) < LIVE_TTL * 1000) return hit;
+  let body;
+  try { body = await askTwitch(env); } catch (e) { body = { status: 'unknown', reason: 'error' }; }
+  body.checkedAt = new Date().toISOString();
+  const res = json(body, 200, 30);
+  res.headers.set('x-fetched-at', String(Date.now()));
+  if (body.status !== 'unknown') ctx.waitUntil(cache.put(key, res.clone()));
+  return res;
+}
+
 export default {
   async fetch(request, env, ctx) {
     const url = new URL(request.url);
@@ -222,6 +287,10 @@ export default {
         if (request.method !== 'GET' && request.method !== 'HEAD') return json({ error: 'Method not allowed' }, 405);
         if (!PARKS[m[1]]) return json({ error: 'Unknown park' }, 404);
         return await waits(m[1], ctx);
+      }
+      if (url.pathname === '/api/live') {
+        if (request.method !== 'GET' && request.method !== 'HEAD') return json({ error: 'Method not allowed' }, 405);
+        return await live(env, ctx);
       }
       if (url.pathname === '/api/checklist') return await checklist(request, env);
       if (url.pathname === '/api/diary' || url.pathname === '/api/diary/name') return await diary(request, env, url);

@@ -4,59 +4,137 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- seo -->
-<meta name="description" content="Watch Rob Callery live on Twitch, with the stream chat alongside.">
+<meta name="description" content="calz88 Live: Rob Callery's streaming hub. Watch on Twitch with the chat alongside, see what's coming up next and catch the latest highlights.">
 <link rel="canonical" href="https://callery.co.uk/live/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Rob Callery">
-<meta property="og:title" content="Live - Rob Callery">
-<meta property="og:description" content="Watch Rob Callery live on Twitch, with the stream chat alongside.">
+<meta property="og:title" content="calz88 Live - Rob Callery">
+<meta property="og:description" content="calz88 Live: Rob Callery's streaming hub. Watch on Twitch with the chat alongside, see what's coming up next and catch the latest highlights.">
 <meta property="og:url" content="https://callery.co.uk/live/">
-<meta property="og:image" content="https://callery.co.uk/og-image.png">
+<meta property="og:image" content="https://callery.co.uk/live/og.png">
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="calz88 Live: Rob Callery's streaming hub">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@calz88">
-<meta name="twitter:image" content="https://callery.co.uk/og-image.png">
+<meta name="twitter:title" content="calz88 Live - Rob Callery">
+<meta name="twitter:description" content="calz88 Live: Rob Callery's streaming hub. Watch on Twitch with the chat alongside, see what's coming up next and catch the latest highlights.">
+<meta name="twitter:image" content="https://callery.co.uk/live/og.png">
 <!-- /seo -->
-<title>Live - Rob Callery</title>
+<title>calz88 Live - Rob Callery</title>
 <link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="icon" href="/favicon.ico" sizes="any"><link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
-:root{--navy:#0a1838;--yellow:#ffcd00;--cream:#f7f2e4;--muted:#b8c3dc;--purple:#9b5cff}
+:root{--navy:#0a1838;--yellow:#ffcd00;--cream:#f7f2e4;--muted:#b8c3dc;--purple:#9b5cff;--red:#ff4545;--grey:#9aa3ba;--card:#141a33;--line:#2b3360}
 *{box-sizing:border-box;margin:0;padding:0}
 body{min-height:100vh;background:radial-gradient(ellipse 90% 60% at 50% 0,#2a1d5c 0,#141a3d 45%,#0a0e22 100%) no-repeat,#0a0e22;color:var(--cream);font-family:Inter,system-ui,sans-serif;line-height:1.55;display:flex;flex-direction:column}
 a{color:inherit}
-header{display:flex;align-items:center;justify-content:space-between;gap:16px;max-width:1400px;width:100%;margin:0 auto;padding:22px 16px}
+header{display:flex;align-items:center;justify-content:space-between;gap:16px;max-width:1320px;width:100%;margin:0 auto;padding:22px 16px}
 .brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:"Bebas Neue",Impact,sans-serif;font-size:1.6rem;letter-spacing:.06em;white-space:nowrap}
 .brand svg{width:38px;height:38px}
 .back{font-size:.92rem;font-weight:600;text-decoration:none;opacity:.85;padding:.45em .9em;border:1.5px solid rgba(247,242,228,.4);border-radius:999px;white-space:nowrap}
 .back:hover,.back:focus-visible{opacity:1;border-color:var(--yellow)}
 :focus-visible{outline:3px solid var(--yellow);outline-offset:3px}
-main{flex:1;width:100%;max-width:1400px;margin:0 auto;padding:0 16px 40px}
+main{flex:1;width:100%;max-width:1320px;margin:0 auto;padding:0 16px 48px;display:flex;flex-direction:column;gap:36px}
 footer{text-align:center;padding:22px 16px;color:var(--muted);font-size:.85rem;background:#070914}
-.intro{text-align:center;padding:0 0 18px}
-.intro h1{font-family:"Bebas Neue",Impact,sans-serif;font-weight:400;font-size:clamp(2.6rem,7vw,4.4rem);letter-spacing:.06em;line-height:1}
-.intro h1 span{color:var(--yellow)}
-.intro h1 .dot{display:inline-block;width:.42em;height:.42em;border-radius:50%;background:#ff3b3b;margin-right:.3em;vertical-align:.18em;animation:pulse 1.8s infinite}
-@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(255,59,59,.7)}70%{box-shadow:0 0 0 .35em rgba(255,59,59,0)}100%{box-shadow:0 0 0 0 rgba(255,59,59,0)}}
-@media (prefers-reduced-motion:reduce){.intro h1 .dot{animation:none}}
-.intro p{color:var(--muted);margin-top:.4rem}
-.stage{display:grid;grid-template-columns:1fr 360px;gap:14px;align-items:stretch}
-.screen,.chat{border-radius:14px;overflow:hidden;background:#05060f;border:2px solid rgba(155,92,255,.45);box-shadow:0 0 40px rgba(123,60,255,.25)}
-.screen{aspect-ratio:16/9;position:relative}
-.chat{min-height:420px}
-.screen iframe,.chat iframe{display:block;width:100%;height:100%;border:0}
-.gate{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:14px;padding:24px;background:radial-gradient(ellipse at 50% 40%,#2a1d5c,#05060f 75%)}
-.gate b{font-family:"Bebas Neue",Impact,sans-serif;font-weight:400;font-size:clamp(1.8rem,4vw,2.6rem);letter-spacing:.05em}
-.gate small{color:var(--muted);max-width:46ch;font-size:.88rem}
-.go{font:700 1.05rem Inter,sans-serif;background:var(--purple);color:#fff;border:0;border-radius:999px;padding:.8em 1.6em;cursor:pointer}
+h1,h2,.bebas{font-family:"Bebas Neue",Impact,sans-serif;font-weight:400;letter-spacing:.05em;line-height:1}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* top: status and title */
+.top{text-align:center;display:flex;flex-direction:column;align-items:center;gap:10px}
+.pill{display:inline-flex;align-items:center;gap:.5em;min-height:32px;padding:.3em .95em;border-radius:999px;font-weight:700;font-size:.82rem;letter-spacing:.16em;text-transform:uppercase;border:1.5px solid var(--line);color:var(--grey);background:#10142a}
+.pill i{width:.62em;height:.62em;border-radius:50%;background:currentColor}
+.is-live .pill{color:#fff;background:#c81e1e;border-color:#ff6b6b}
+.is-live .pill i{background:#fff}
+@media (prefers-reduced-motion:no-preference){.is-live .pill i{animation:blink 2s ease-in-out infinite}}
+@keyframes blink{50%{opacity:.35}}
+.top h1{font-size:clamp(2.8rem,8vw,4.8rem)}
+.top h1 span{color:var(--yellow)}
+.kick{color:var(--muted);font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;font-weight:600}
+.now{color:var(--muted);max-width:60ch;min-height:1.6em}
+.now b{color:var(--cream)}
+.meta{display:flex;flex-wrap:wrap;justify-content:center;gap:6px 14px;font-size:.9rem;color:var(--muted)}
+.meta span{white-space:nowrap}
+.follow{display:inline-flex;align-items:center;gap:.5em;min-height:44px;padding:.55em 1.2em;border-radius:999px;background:var(--purple);color:#fff;font-weight:700;text-decoration:none}
+.follow:hover{background:#b07dff}
+.ghost{background:transparent;border:1.5px solid rgba(247,242,228,.35);color:var(--cream)}
+.ghost:hover{background:transparent;border-color:var(--yellow)}
+.acts{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
+
+/* the stage */
+.stage{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:14px;align-items:start}
+.screen{position:relative;aspect-ratio:16/9;border-radius:14px;overflow:hidden;background:#05060f;border:2px solid #3a2f7a}
+.is-live .screen{border-color:#8f3a4a}
+.screen iframe,.chatbox iframe{display:block;width:100%;height:100%;border:0}
+.ph{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;text-align:center;padding:20px;background:radial-gradient(ellipse 70% 80% at 50% 45%,#2a1d5c 0,#0b0d1f 72%)}
+.ph svg.art{position:absolute;inset:0;width:100%;height:100%;opacity:.5}
+.ph>*:not(svg){position:relative}
+.ph .word{font-size:clamp(2.4rem,7vw,5rem)}
+.ph .word span{color:var(--yellow)}
+.ph .state{font-size:.82rem;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--grey)}
+.is-live .ph .state{color:#ff8a8a}
+.ph small{color:var(--muted);max-width:52ch;font-size:.85rem}
+.go{font:700 1.05rem Inter,sans-serif;min-height:48px;background:var(--purple);color:#fff;border:0;border-radius:999px;padding:.75em 1.7em;cursor:pointer}
 .go:hover{background:#b07dff}
-.chat .gate{position:static;height:100%;min-height:420px}
-.links{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:18px;font-size:.92rem}
-.links a{text-decoration:none;padding:.45em .9em;border:1.5px solid rgba(247,242,228,.3);border-radius:999px}
-.links a:hover{border-color:var(--yellow)}
-@media (max-width:600px){.screen .gate{gap:8px;padding:12px}.screen .gate b{font-size:1.5rem}.screen .gate small{font-size:.74rem;line-height:1.35}.go{font-size:.95rem;padding:.65em 1.3em}.brand{font-size:1.3rem}}
-@media (max-width:900px){.stage{grid-template-columns:1fr}.chat,.chat .gate{min-height:480px;height:480px}}
+.is-live .go{background:#d42a2a}
+.is-live .go:hover{background:#ea3e3e}
+.chat{border-radius:14px;overflow:hidden;background:#0c0f22;border:2px solid #3a2f7a;display:flex;flex-direction:column}
+.chat summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:10px;min-height:48px;padding:10px 16px;font-weight:700}
+.chat summary::-webkit-details-marker{display:none}
+.chat summary::after{content:"Show";font-weight:600;font-size:.85rem;color:var(--muted)}
+.chat[open] summary::after{content:"Hide"}
+.chatbox{height:min(70vh,560px)}
+.chatbox{display:flex;flex-direction:column}
+.chatbox>*{flex:1;min-height:0}
+.chatgate{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:20px;text-align:center;color:var(--muted);font-size:.9rem}
+.chatgate .go{font-size:.95rem}
+@media (min-width:960px){
+  .chat summary{display:none}
+  .chatbox{height:auto;aspect-ratio:auto}
+  .chat{height:100%;min-height:440px}
+  .chat .chatbox{flex:1;min-height:440px}
+  .stage{align-items:stretch}
+}
+@media (max-width:959px){.stage{grid-template-columns:1fr}}
+.ph .short{display:none}
+@media (max-width:640px){.ph{gap:8px;padding:10px}.ph .word{display:none}.ph .long{display:none}.ph .short{display:inline}.ph small{font-size:.75rem}.go{min-height:44px;padding:.6em 1.3em;font-size:.98rem}.brand{font-size:1.3rem}.brand svg{width:32px;height:32px}}
+
+/* sections */
+.sec h2{font-size:clamp(1.9rem,4vw,2.6rem);margin-bottom:14px}
+.sec h2 span{color:var(--yellow)}
+.empty{background:var(--card);border:1.5px dashed var(--line);border-radius:14px;padding:22px;color:var(--muted)}
+.empty a{color:var(--cream)}
+.sched{list-style:none;display:grid;gap:10px}
+.sched li{display:grid;grid-template-columns:150px minmax(0,1fr);gap:16px;align-items:start;background:var(--card);border:1.5px solid var(--line);border-radius:14px;padding:16px 18px}
+.when b{display:block;font-family:"Bebas Neue",Impact,sans-serif;font-weight:400;font-size:1.6rem;letter-spacing:.04em;line-height:1}
+.when span{display:block;font-size:.85rem;color:var(--muted)}
+.sched h3{font-size:1.08rem;line-height:1.3}
+.sched p{color:var(--muted);font-size:.93rem;margin-top:4px}
+.sched a{display:inline-block;margin-top:6px;font-weight:600;font-size:.9rem}
+.tag{display:inline-block;font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:.2em .6em;border-radius:6px;margin-bottom:6px;background:#2b2160;color:#d9c7ff}
+.tag.football{background:#3a3210;color:#ffe27a}
+.tag.var{background:#3d2410;color:#ffc58a}
+.tag.special{background:#0f3434;color:#8ff0e0}
+@media (max-width:560px){.sched li{grid-template-columns:1fr;gap:6px}}
+.hl{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px;list-style:none}
+.hl a{display:flex;flex-direction:column;height:100%;text-decoration:none;background:var(--card);border:1.5px solid var(--line);border-radius:14px;overflow:hidden}
+.hl a:hover,.hl a:focus-visible{border-color:var(--yellow)}
+.thumb{aspect-ratio:16/9;background:linear-gradient(135deg,#2a1d5c,#0b0d1f);display:flex;align-items:center;justify-content:center}
+.thumb img{width:100%;height:100%;object-fit:cover;display:block}
+.thumb .bebas{font-size:1.8rem;opacity:.7}
+.hl .txt{padding:12px 14px 14px}
+.hl h3{font-size:1rem;line-height:1.3}
+.hl .sub{font-size:.85rem;color:var(--muted);margin-top:4px}
+.more{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.pick{display:block;text-decoration:none;border-radius:12px;padding:14px 18px;background:var(--card);border:1.5px solid var(--line)}
+.pick:hover,.pick:focus-visible{border-color:var(--yellow);background:#1b2245}
+.pick b{display:block;font-family:"Bebas Neue",Impact,sans-serif;font-weight:400;font-size:1.6rem;letter-spacing:.05em;line-height:1.1}
+.pick span{font-size:.9rem;color:var(--muted)}
+/* offline: next stream and highlights come first; live (or watching): player first */
+#stage{order:1}#upcoming{order:2}#highlights{order:3}#more{order:4}
+.is-offline:not(.watching) #upcoming{order:0}
+.is-offline:not(.watching) #highlights{order:1}
+.is-offline:not(.watching) #stage{order:2}
 </style>
 </head>
 <body>
@@ -65,41 +143,168 @@ footer{text-align:center;padding:22px 16px;color:var(--muted);font-size:.85rem;b
   <a class="back" href="/gaming/">← Gaming room</a>
 </header>
 <main>
-<section class="intro">
-  <h1><span class="dot" aria-hidden="true"></span>Rob Callery <span>Live</span></h1>
-  <p>The stream and the chat, all in one place. If I’m not on right now, Twitch shows my offline screen.</p>
+<section class="top" aria-labelledby="title">
+  <p class="pill" id="pill" role="status" aria-live="polite"><i aria-hidden="true"></i><span id="pilltxt">Checking</span></p>
+  <p class="kick">Rob Callery’s streaming hub</p>
+  <h1 id="title">calz88 <span>Live</span></h1>
+  <p class="now" id="now">Gaming, football, VAR &amp; Firkin and the odd special. Press play to watch on Twitch.</p>
+  <p class="meta" id="meta" hidden></p>
+  <div class="acts">
+    <a class="follow" href="https://www.twitch.tv/robcallery" target="_blank" rel="noopener">Follow on Twitch<span class="sr"> (opens twitch.tv in a new tab)</span></a>
+  </div>
 </section>
-<div class="stage">
+
+<section class="stage" id="stage" aria-label="Stream and chat">
   <div class="screen" id="screen">
-    <div class="gate">
-      <b>Turn the stream on</b>
-      <button class="go" type="button" data-load>&#9654; Watch live</button>
-      <small>This loads Twitch’s player and chat from twitch.tv, and Twitch may set its own cookies. Nothing loads from Twitch until you press play.</small>
+    <div class="ph">
+      <svg class="art" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+        <g fill="none" stroke="#9b5cff" stroke-width="3" opacity=".55">
+          <circle cx="800" cy="450" r="170"/><circle cx="800" cy="450" r="290" opacity=".6"/><circle cx="800" cy="450" r="420" opacity=".35"/><circle cx="800" cy="450" r="560" opacity=".18"/>
+        </g>
+        <g stroke="#ffcd00" stroke-width="2" opacity=".25"><path d="M0 760H1600M0 800H1600"/></g>
+      </svg>
+      <p class="word bebas" aria-hidden="true">calz88 <span>Live</span></p>
+      <p class="state" id="phstate">Checking if I’m live</p>
+      <button class="go" type="button" data-watch>&#9654;&#xFE0E; Watch Stream</button>
+      <small><span class="long">Pressing play loads Twitch’s player and chat from twitch.tv, and Twitch may set its own cookies. Nothing loads from Twitch before then.</span><span class="short">Loads Twitch, which may set its own cookies.</span></small>
     </div>
   </div>
-  <div class="chat" id="chat">
-    <div class="gate">
-      <b>Stream chat</b>
-      <button class="go" type="button" data-load>Open the chat</button>
-      <small>Sign in to Twitch inside the chat to say hello.</small>
+  <details class="chat" id="chat">
+    <summary>Stream chat</summary>
+    <div class="chatbox" id="chatbox">
+      <div class="chatgate">
+        <p>The Twitch chat appears here once you press play.</p>
+        <button class="go" type="button" data-watch>Load the chat</button>
+      </div>
     </div>
-  </div>
-</div>
-<p class="links"><a href="https://www.twitch.tv/robcallery" target="_blank" rel="noopener">Open on twitch.tv ↗</a><a href="/gaming/blog/">The gaming blog</a></p>
+  </details>
+</section>
+
+<section class="sec" id="upcoming" aria-labelledby="up-h">
+  <h2 id="up-h">Upcoming <span>Streams</span></h2>
+  <div id="uplist"><p class="empty">Nothing on the schedule just yet. Follow on <a href="https://www.twitch.tv/robcallery" target="_blank" rel="noopener">Twitch</a> and you’ll get a shout when I go live.</p></div>
+</section>
+
+<section class="sec" id="highlights" aria-labelledby="hl-h">
+  <h2 id="hl-h">Latest <span>Highlights</span></h2>
+  <div id="hllist"><p class="empty">No highlights posted here yet. Past streams are on <a href="https://www.twitch.tv/robcallery/videos" target="_blank" rel="noopener">Twitch</a> and videos are on <a href="https://www.youtube.com/@calz88" target="_blank" rel="noopener">YouTube</a>.</p></div>
+</section>
+
+<section class="sec" id="more" aria-labelledby="more-h">
+  <h2 id="more-h">More from <span>Rob</span></h2>
+  <nav class="more" aria-labelledby="more-h">
+    <a class="pick" href="/gaming/blog/"><b>The gaming blog</b><span>What I’m playing, and what I think of it.</span></a>
+    <a class="pick" href="https://www.youtube.com/@calz88" target="_blank" rel="noopener"><b>YouTube</b><span>youtube.com/@calz88</span></a>
+    <a class="pick" href="/var-and-firkin/"><b>The VAR &amp; Firkin</b><span>Football, bar talk and the beer passport.</span></a>
+    <a class="pick" href="/football-tales/"><b>Football Tales</b><span>Match days following Leeds.</span></a>
+  </nav>
+</section>
 </main>
 <footer>© <span>2026</span> Rob Callery · callery.co.uk · Drink responsibly · <!-- legal --><a href="/privacy/">Privacy</a> · <a href="/cookies/">Cookies</a><!-- /legal --></footer>
 <script>
 (function(){
-  var ch='robcallery';
-  var p=['callery.co.uk','www.callery.co.uk'];
-  if(p.indexOf(location.hostname)<0)p.push(location.hostname);
-  var q=p.map(function(h){return 'parent='+encodeURIComponent(h)}).join('&');
+  'use strict';
+  var CH='robcallery', B=document.body, $=function(i){return document.getElementById(i)};
+  var parents=['callery.co.uk','www.callery.co.uk'];
+  if(parents.indexOf(location.hostname)<0)parents.push(location.hostname);
+  var pq=parents.map(function(h){return 'parent='+encodeURIComponent(h)}).join('&');
+  var watching=false, chatOn=false, state='checking', nextStream=null;
+  var wide=window.matchMedia('(min-width:960px)');
+  function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
+  function safeUrl(u){try{var x=new URL(u,location.href);return /^https?:$/.test(x.protocol)?x.href:null}catch(e){return null}}
   function frame(src,title,allow){var f=document.createElement('iframe');f.src=src;f.title=title;f.setAttribute('allowfullscreen','');if(allow)f.setAttribute('allow',allow);return f}
-  function load(){
-    document.getElementById('screen').replaceChildren(frame('https://player.twitch.tv/?channel='+ch+'&'+q+'&autoplay=true','Rob Callery live on Twitch','autoplay; fullscreen; picture-in-picture'));
-    document.getElementById('chat').replaceChildren(frame('https://www.twitch.tv/embed/'+ch+'/chat?darkpopout&'+q,'Twitch chat'));
+
+  // ---- chat panel: always open on wide screens, collapsible on phones (closed to start) ----
+  var chat=$('chat');
+  function fitChat(){ if(wide.matches) chat.open=true; }
+  fitChat(); (wide.addEventListener?wide.addEventListener('change',fitChat):wide.addListener(fitChat));
+  function loadChat(){ if(chatOn) return; chatOn=true; $('chatbox').replaceChildren(frame('https://www.twitch.tv/embed/'+CH+'/chat?darkpopout&'+pq,'Twitch chat for robcallery')); }
+  chat.addEventListener('toggle',function(){ if(chat.open && watching) loadChat(); });
+
+  // ---- consent: nothing from Twitch until a Watch button is pressed ----
+  function watch(e){
+    watching=true; B.classList.add('watching');
+    $('screen').replaceChildren(frame('https://player.twitch.tv/?channel='+CH+'&'+pq+'&autoplay=true','Rob Callery’s Twitch stream','autoplay; fullscreen; picture-in-picture'));
+    if(e && e.currentTarget && e.currentTarget.closest('#chat')) chat.open=true;
+    if(chat.open) loadChat();
+    $('stage').scrollIntoView({block:'start',behavior:matchMedia('(prefers-reduced-motion:reduce)').matches?'auto':'smooth'});
   }
-  document.querySelectorAll('[data-load]').forEach(function(b){b.addEventListener('click',load)});
+  Array.prototype.forEach.call(document.querySelectorAll('[data-watch]'),function(b){b.addEventListener('click',watch)});
+
+  // ---- dates: UK time first, plus the visitor's own time if that's different ----
+  var UK='Europe/London', here=(Intl.DateTimeFormat().resolvedOptions().timeZone||UK);
+  function fmt(d,tz,o){return new Intl.DateTimeFormat('en-GB',Object.assign({timeZone:tz},o)).format(d)}
+  function time(d,tz){return fmt(d,tz,{hour:'numeric',minute:'2-digit',hour12:true}).replace(' ','').toLowerCase()}
+  function sameOffset(d){return fmt(d,UK,{hour:'2-digit',minute:'2-digit',day:'2-digit'})===fmt(d,here,{hour:'2-digit',minute:'2-digit',day:'2-digit'})}
+  function when(d){
+    var s={day:fmt(d,UK,{weekday:'short',day:'numeric',month:'short'}),uk:time(d,UK)+' UK'};
+    if(!sameOffset(d)) s.local=fmt(d,here,{weekday:'short'})+' '+time(d,here)+' your time';
+    return s;
+  }
+
+  // ---- upcoming streams from /live/schedule.json ----
+  var CATS={gaming:['Gaming',''],football:['Football','football'],'var & firkin':['VAR & Firkin','var'],'var and firkin':['VAR & Firkin','var'],special:['Special event','special'],'special events':['Special event','special'],'special event':['Special event','special']};
+  function cat(c){var k=String(c||'').trim().toLowerCase();return CATS[k]||[String(c||'Stream'),'']}
+  fetch('/live/schedule.json',{cache:'no-cache'}).then(function(r){return r.ok?r.json():null}).then(function(j){
+    var now=Date.now(), list=((j&&j.streams)||[]).map(function(s){var d=new Date(s.start);return {s:s,d:d,end:s.end?new Date(s.end):new Date(d.getTime()+4*3600e3)}})
+      .filter(function(x){return !isNaN(x.d) && x.end.getTime()>now && x.s.title}).sort(function(a,b){return a.d-b.d}).slice(0,6);
+    if(!list.length) return;
+    nextStream=list[0];
+    $('uplist').innerHTML='<ul class="sched">'+list.map(function(x){
+      var w=when(x.d), c=cat(x.s.category), u=x.s.link&&safeUrl(x.s.link);
+      return '<li><p class="when"><time datetime="'+esc(x.d.toISOString())+'"><b>'+esc(w.day)+'</b><span>'+esc(w.uk)+'</span>'+(w.local?'<span>'+esc(w.local)+'</span>':'')+'</time></p>'+
+        '<div><span class="tag '+c[1]+'">'+esc(c[0])+'</span><h3>'+esc(x.s.title)+'</h3>'+(x.s.description?'<p>'+esc(x.s.description)+'</p>':'')+
+        (u?'<a href="'+esc(u)+'"'+(/^https?:\/\/(www\.)?callery\.co\.uk/.test(u)?'':' target="_blank" rel="noopener"')+'>More about this stream →</a>':'')+'</div></li>';
+    }).join('')+'</ul>';
+    paint();
+  }).catch(function(){});
+
+  // ---- highlights from /live/highlights.json (no third-party images: thumbnails must be files on this site) ----
+  fetch('/live/highlights.json',{cache:'no-cache'}).then(function(r){return r.ok?r.json():null}).then(function(j){
+    var list=((j&&j.highlights)||[]).filter(function(h){return h.title&&h.url&&safeUrl(h.url)}).slice(0,8);
+    if(!list.length) return;
+    $('hllist').innerHTML='<ul class="hl">'+list.map(function(h){
+      var d=h.date?new Date(h.date+'T12:00:00Z'):null, p=h.platform||(/youtu/.test(h.url)?'YouTube':/twitch/.test(h.url)?'Twitch':'');
+      var img=(h.thumb&&/^\/[^\/]/.test(h.thumb))?'<img src="'+esc(h.thumb)+'" alt="" loading="lazy" decoding="async" width="480" height="270">':'<span class="bebas" aria-hidden="true">'+esc(p||'Watch')+'</span>';
+      var sub=[d&&!isNaN(d)?fmt(d,UK,{day:'numeric',month:'short',year:'numeric'}):'',p?'on '+p:''].filter(Boolean).join(' · ');
+      return '<li><a href="'+esc(safeUrl(h.url))+'" target="_blank" rel="noopener"><span class="thumb">'+img+'</span><span class="txt"><h3>'+esc(h.title)+'</h3>'+(sub?'<p class="sub">'+esc(sub)+'</p>':'')+'<span class="sr"> (opens in a new tab)</span></span></a></li>';
+    }).join('')+'</ul>';
+  }).catch(function(){});
+
+  // ---- live status from our own /api/live (the Twitch keys stay in the Worker) ----
+  var last=null;
+  function paint(){
+    B.classList.toggle('is-live',state==='live'); B.classList.toggle('is-offline',state==='offline');
+    var pill=$('pilltxt'), now=$('now'), meta=$('meta'), ph=$('phstate');
+    if(state==='live'){
+      pill.textContent='Live now'; ph.textContent='Live now';
+      now.innerHTML=last.title?'<b>'+esc(last.title)+'</b>':'I’m live on Twitch right now.';
+      var m=[]; if(last.category)m.push('<span>'+esc(last.category)+'</span>');
+      if(last.viewers!=null)m.push('<span>'+esc(last.viewers.toLocaleString('en-GB'))+(last.viewers===1?' viewer':' viewers')+'</span>');
+      if(last.startedAt){var t=new Date(last.startedAt);if(!isNaN(t))m.push('<span>Live since '+esc(time(t,here))+'</span>')}
+      meta.innerHTML=m.join(''); meta.hidden=!m.length;
+    }else if(state==='offline'){
+      pill.textContent='Offline'; ph.textContent='Offline right now'; meta.hidden=true;
+      if(nextStream){var w=when(nextStream.d);now.innerHTML='Not live right now. Next up: <b>'+esc(nextStream.s.title)+'</b>, '+esc(w.day)+' at '+esc(w.uk)+(w.local?' ('+esc(w.local)+')':'')+'.'}
+      else now.textContent='Not live right now. Catch the highlights below, or follow on Twitch to hear when I’m on next.';
+    }else{
+      pill.textContent=state==='checking'?'Checking':'Status unavailable'; ph.textContent=state==='checking'?'Checking if I’m live':'Press play to see if I’m live'; meta.hidden=true;
+      if(state!=='checking') now.textContent='Can’t check right now if I’m live. Press play and Twitch will show the stream, or my offline screen.';
+    }
+  }
+  var timer=null, delay=60000;
+  function poll(){
+    clearTimeout(timer);
+    if(document.hidden) return;
+    var ctl=('AbortController' in window)?new AbortController():null; var to=setTimeout(function(){ctl&&ctl.abort()},8000);
+    fetch('/api/live',{cache:'no-store',signal:ctl&&ctl.signal}).then(function(r){return r.ok?r.json():null}).then(function(j){
+      clearTimeout(to);
+      if(j&&(j.status==='live'||j.status==='offline')){last=j;state=j.status;delay=60000}else{state='unknown';delay=180000}
+      paint();
+    }).catch(function(){clearTimeout(to);state='unknown';delay=180000;paint()}).then(function(){timer=setTimeout(poll,delay)});
+  }
+  document.addEventListener('visibilitychange',function(){if(!document.hidden)poll();else clearTimeout(timer)});
+  poll();
 })();
 </script>
 </body>
