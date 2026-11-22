@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-15",
+ "generated": "2026-11-22",
  "note": "Completed flights only.",
  "flights": [
   {
@@ -925,6 +925,39 @@
    "note": null,
    "arc": "MAN-MCO|Virgin Atlantic",
    "rev": false
+  },
+  {
+   "id": "2026-11-21-VS74",
+   "date": "2026-11-21",
+   "year": 2026,
+   "airline": "Virgin Atlantic",
+   "airline_name": "Virgin Atlantic",
+   "color": "#199e70",
+   "flight": "VS74",
+   "callsign": null,
+   "dep": "MCO",
+   "arr": "MAN",
+   "sched_dep": "21:40",
+   "act_dep": "21:48",
+   "sched_arr": "10:30",
+   "act_arr": "11:00",
+   "dep_delay": 8,
+   "arr_delay": 30,
+   "duration": 492,
+   "duration_estimated": false,
+   "miles": 4228,
+   "miles_recorded": 4236,
+   "maker": "Airbus",
+   "family": "Airbus A350",
+   "type": "A350",
+   "variant": "A350-1041",
+   "reg": "G-VPOP",
+   "arr_next_day": true,
+   "est_arr": null,
+   "est_arr_delay": null,
+   "note": null,
+   "arc": "MAN-MCO|Virgin Atlantic",
+   "rev": true
   }
  ]
 }

@@ -132,3 +132,18 @@ Twitch before anyone clicks. Without a `thumb` the card shows a plain branded pa
 Cloudflare dashboard (Workers & Pages → callery → Settings → Variables and Secrets, type "Secret"):
 `TWITCH_CLIENT_ID` and `TWITCH_CLIENT_SECRET`, from an application registered at dev.twitch.tv/console.
 Without them the page says "Status unavailable" and the stream still works.
+
+## The Window Seat (`/aviation/`)
+
+Add a flight from a small JSON file of local times (each at its own airport), then push:
+
+```json
+{"date": "2026-11-21", "flight": "VS74", "dep": "MCO", "arr": "MAN",
+ "sched_dep": "21:40", "act_dep": "21:48", "sched_arr": "10:30", "act_arr": "11:00",
+ "reg": "G-VPOP", "variant": "A350-1041", "arr_next_day": true, "callsign": null}
+```
+
+`python3 _tools/aviation.py add flight.json` works out the delays, flight time (actual departure to actual arrival),
+airline, colour, aircraft family and distance from earlier flights, then rebuilds all six pages.
+`python3 _tools/aviation.py check` should then say "No page would change."
+A new airline, aircraft type or route needs extra fields (and, for a new route, a map arc), and the script says so.
