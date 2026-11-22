@@ -1,6 +1,17 @@
 {
  "posts": [
   {
+   "url": "/football-tales/chelsea-1-4-leeds-2026-11-21/",
+   "section": "Football Tales",
+   "date": "2026-11-21",
+   "title": "Chelsea 1–4 Leeds United: Bridge Demolished, London Conquered!",
+   "kick": "Leeds United",
+   "teaser": "Okafor scores twice, Leeds win at Stamford Bridge for the first time since 1999 and climb above Chelsea into sixth.",
+   "standfirst": "Okafor scores twice, Leeds win at Stamford Bridge for the first time since 1999 and climb above Chelsea into sixth.",
+   "dek": "Chelsea 1–4 Leeds United: Noah Okafor's double, a Calvert-Lewin penalty and a late Aaronson goal end 27 years without a win at Stamford Bridge.",
+   "thumb": "<svg viewBox=\"0 0 1200 630\" preserveAspectRatio=\"xMidYMid slice\" aria-hidden=\"true\" focusable=\"false\"><defs><linearGradient id=\"ft5g\" x1=\"0\" y1=\"0\" x2=\"1\" y2=\"1\"><stop offset=\"0\" stop-color=\"#0a1838\"/><stop offset=\"1\" stop-color=\"#1d428a\"/></linearGradient></defs><rect width=\"1200\" height=\"630\" fill=\"url(#ft5g)\"/><rect x=\"1020\" y=\"0\" width=\"60\" height=\"630\" fill=\"#ffffff\" opacity=\".9\"/><rect x=\"1080\" y=\"0\" width=\"60\" height=\"630\" fill=\"#ffcd00\" opacity=\".9\"/><rect x=\"1140\" y=\"0\" width=\"60\" height=\"630\" fill=\"#1d428a\" opacity=\".9\"/><rect x=\"40\" y=\"40\" width=\"330\" height=\"62\" rx=\"6\" fill=\"#ffcd00\"/><text x=\"205\" y=\"86\" text-anchor=\"middle\" font-family=\"Bebas Neue,Impact,sans-serif\" font-size=\"46\" letter-spacing=\"4\" fill=\"#0a1838\" textLength=\"290\" lengthAdjust=\"spacingAndGlyphs\">FOOTBALL TALES</text><text x=\"980\" y=\"86\" text-anchor=\"end\" font-family=\"Bebas Neue,Impact,sans-serif\" font-size=\"44\" letter-spacing=\"4\" fill=\"#ffcd00\">CARD 5</text><g font-family=\"Bebas Neue,Impact,sans-serif\" text-anchor=\"middle\"><rect x=\"60\" y=\"190\" width=\"260\" height=\"230\" rx=\"14\" fill=\"#034694\"/><text x=\"190\" y=\"352\" font-size=\"130\" fill=\"#ffffff\" textLength=\"190\" lengthAdjust=\"spacingAndGlyphs\">CHE</text><rect x=\"680\" y=\"190\" width=\"260\" height=\"230\" rx=\"14\" fill=\"#ffcd00\"/><text x=\"810\" y=\"352\" font-size=\"130\" fill=\"#1d428a\" textLength=\"190\" lengthAdjust=\"spacingAndGlyphs\">LEE</text><text x=\"500\" y=\"360\" font-size=\"170\" fill=\"#fff\" textLength=\"230\" lengthAdjust=\"spacingAndGlyphs\">1–4</text></g><text x=\"60\" y=\"560\" font-family=\"Inter,sans-serif\" font-weight=\"800\" font-size=\"40\" fill=\"#fff\">Stamford Bridge</text></svg>"
+  },
+  {
    "url": "/travel-tales/amphicar-disney-springs/",
    "section": "Travel Tales",
    "date": "2026-11-14",
