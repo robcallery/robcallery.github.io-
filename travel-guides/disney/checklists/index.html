@@ -114,11 +114,11 @@ footer span{color:#c89b2c}
   function norm(s){return String(s).toLowerCase().replace(/[^a-z0-9]/g,'')}
   function addExtras(id,L){(EXTRA[id]||[]).forEach(function(x){var n=norm(x[0]);if(L.some(function(r){var m=norm(r.name);return m===n||m.indexOf(n)>=0||n.indexOf(m)>=0&&m.length>8}))return;
     var land=(L.filter(function(r){return norm(r.land)===norm(x[1])})[0]||{land:x[1]}).land;var at=-1;L.forEach(function(r,k){if(r.land===land)at=k});if(at<0)L.push({name:x[0],land:land});else L.splice(at+1,0,{name:x[0],land:land});});return L;}
-  var SINGLE=/single[\s-]*rider|\bmeet\b|meet[\s-]*(and|&|n)[\s-]*greet|character spot|princess fairytale hall|royal sommerhus|red carpet dreams|adventurers outpost|town square theat|celebrity spotlight/i,PARKS=[{"id": 6, "name": "Magic Kingdom", "slug": "magickingdom"}, {"id": 5, "name": "EPCOT", "slug": "epcot"}, {"id": 7, "name": "Hollywood Studios", "slug": "hollywoodstudios"}, {"id": 8, "name": "Animal Kingdom", "slug": "animalkingdom"}],KEY='callery-disney-checklist-v1',CACHE='callery-disney-rides-v1';
+  var SINGLE=/single[\s-]*rider|\bmeet\b|meet[\s-]*(and|&|n)[\s-]*greet|character spot|princess fairytale hall|royal sommerhus|red carpet dreams|adventurers outpost|town square theat|celebrity spotlight/i,PARKS=[{"id": 6, "name": "Magic Kingdom", "slug": "magickingdom"}, {"id": 5, "name": "EPCOT", "slug": "epcot"}, {"id": 7, "name": "Hollywood Studios", "slug": "hollywoodstudios"}, {"id": 8, "name": "Animal Kingdom", "slug": "animalkingdom"}],KEY='callery-disney-checklist-v1',CACHE='callery-disney-rides-v1',EPOCH='callery-disney-trip';
   var $=function(i){return document.getElementById(i)};
   function load(k){try{return JSON.parse(localStorage.getItem(k))||{}}catch(e){return {}}}
   function save(k,v){try{localStorage.setItem(k,JSON.stringify(v));return true}catch(e){return false}}
-  var done=load(KEY),cache=load(CACHE),view='all',cur=null,lists={};
+  var epoch=(function(){try{return localStorage.getItem(EPOCH)||''}catch(e){return ''}})(),done=load(KEY),cache=load(CACHE),view='all',cur=null,lists={};
   function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
   function t(ms){return new Date(ms).toLocaleTimeString('en-US',{timeZone:'America/New_York',hour:'numeric',minute:'2-digit'})+' on '+new Date(ms).toLocaleDateString('en-GB',{timeZone:'America/New_York',day:'numeric',month:'short'});}
   function key(p,n){return p+'|'+n}
@@ -142,11 +142,13 @@ footer span{color:#c89b2c}
   function status(s,signin){var e=$('sync');e.textContent=s;if(signin){var a=document.createElement('a');a.href='/cdn-cgi/access/logout';a.textContent=' Sign in again';a.style.fontWeight='800';e.appendChild(a);}}
   var NEEDS='Your sign-in on this device needs refreshing, so ticks are saved on this phone only for now.';
   function push(){clearTimeout(syncT);syncT=setTimeout(function(){
-    fetch('/api/checklist',{method:'PUT',headers:{'content-type':'application/json'},body:JSON.stringify({done:done}),credentials:'same-origin'})
-     .then(function(r){if(r.status===401)throw 401;if(!r.ok)throw 0;acct=true;status('✓ Saved to your account');}).catch(function(e){if(e===401)status(NEEDS,true);else status('Saved on this phone. It’ll sync to your account when you’re back online.');});},600);}
+    fetch('/api/checklist',{method:'PUT',headers:{'content-type':'application/json'},body:JSON.stringify({done:done,epoch:epoch}),credentials:'same-origin'})
+     .then(function(r){if(r.status===409){location.reload();return}if(r.status===401)throw 401;if(!r.ok)throw 0;acct=true;status('✓ Saved to your account');}).catch(function(e){if(e===401)status(NEEDS,true);else status('Saved on this phone. It’ll sync to your account when you’re back online.');});},600);}
   window.addEventListener('online',function(){push();});
   fetch('/api/checklist',{cache:'no-store',credentials:'same-origin'}).then(function(r){if(r.status===401)throw 401;if(!r.ok)throw 0;return r.json()}).then(function(j){
-    var extra=false;Object.keys(done).forEach(function(k){if(!(k in j.done))extra=true;});
+    var extra=false;
+    if((j.epoch||'')!==epoch){done={};epoch=j.epoch||'';try{localStorage.setItem(EPOCH,epoch)}catch(e){}}  // a past trip was archived: start fresh
+    else Object.keys(done).forEach(function(k){if(!(k in j.done))extra=true;});
     Object.keys(j.done).forEach(function(k){done[k]=j.done[k];});
     save(KEY,done);acct=true;$('who').textContent=j.email;$('acct').hidden=false;status('✓ Saved to your account');tabs();if(cur)render();if(extra)push();
   }).catch(function(e){if(e===401)status(NEEDS,true);else status('Saved on this phone only for now. It’ll sync when you’re back online.');});

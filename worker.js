@@ -156,13 +156,16 @@ async function checklist(request, env) {
   if (!email) { await noteRefusal(request, env); return denied(request); }
   const k = 'u:' + email, noStore = r => { r.headers.set('cache-control', 'no-store, private'); return r; };
   if (request.method === 'GET') {
-    const v = await env.CHECKS.get(k, 'json');
-    return noStore(json({ email, done: (v && v.done) || {}, updated: (v && v.updated) || 0 }));
+    const [v, epoch] = await Promise.all([env.CHECKS.get(k, 'json'), env.CHECKS.get('epoch')]);
+    return noStore(json({ email, done: (v && v.done) || {}, updated: (v && v.updated) || 0, epoch: epoch || '' }));
   }
   if (request.method === 'PUT') {
     const text = await request.text();
     if (text.length > 100000) return json({ error: 'Too big' }, 413);
     const b = JSON.parse(text), done = {};
+    // After a trip is archived the epoch changes; a device still holding the old trip's ticks is told to start fresh
+    const epoch = (await env.CHECKS.get('epoch')) || '';
+    if ((b.epoch || '') !== epoch) return noStore(json({ error: 'archived', epoch }, 409));
     for (const [key, ms] of Object.entries(b.done || {})) if (/^\d+\|.{1,120}$/.test(key) && Number.isFinite(ms)) done[key] = ms;
     const updated = Date.now();
     await env.CHECKS.put(k, JSON.stringify({ done, updated }));
@@ -175,6 +178,8 @@ async function checklist(request, env) {
 // KV keys: d:<YYYY-MM-DD> (Florida date) -> [{id, at, who, name, park, text}]   n:<email> -> display name
 // GET /api/diary?day=YYYY-MM-DD -> {day, today, me:{name}, entries}   POST {text, park, time?, day?} adds one
 // DELETE /api/diary?day=..&id=.. removes your own entry   PUT /api/diary/name {name} sets what we call you
+// Archived trips: a:index -> [{id,label,archivedAt,days,ticks}], a:<id> -> {label, archivedAt, checklists:{email:{done,updated}}, diary:{day:[...]}}.
+// Archiving moves every u:* and d:* key into a:<id> and sets a new 'epoch' so devices drop their old ticks.
 const floridaDay = ms => new Date(ms).toLocaleDateString('en-CA', { timeZone: 'America/New_York' });
 const clean = (s, n) => String(s || '').replace(/[\u0000-\u001f]/g, ' ').trim().slice(0, n);
 async function diary(request, env, url) {
@@ -182,6 +187,18 @@ async function diary(request, env, url) {
   if (!email) { await noteRefusal(request, env); return denied(request); }
   const noStore = r => { r.headers.set('cache-control', 'no-store, private'); return r; };
   const name = await env.CHECKS.get('n:' + email);
+  // Past trips: GET /api/diary/archive -> {trips:[{id,label,archivedAt,days,ticks}]}; ?id=<trip> -> the diary plus your own ticks
+  if (url.pathname === '/api/diary/archive' && request.method === 'GET') {
+    const idx = (await env.CHECKS.get('a:index', 'json')) || [];
+    const id = url.searchParams.get('id');
+    if (!id) return noStore(json({ trips: idx }));
+    if (!idx.some(x => x.id === id)) return json({ error: 'No such trip' }, 404);
+    const a = (await env.CHECKS.get('a:' + id, 'json')) || {};
+    const diaryOut = {};
+    for (const [d, l] of Object.entries(a.diary || {})) diaryOut[d] = l.slice().sort((x, y) => x.at - y.at).map(e => ({ at: e.at, name: e.name, park: e.park, text: e.text }));
+    const mine = (a.checklists || {})[email] || { done: {} };
+    return noStore(json({ id, label: a.label, archivedAt: a.archivedAt, diary: diaryOut, done: mine.done || {} }));
+  }
   if (url.pathname === '/api/diary/name' && request.method === 'PUT') {
     const n = clean((await request.json()).name, 30);
     if (!n) return json({ error: 'Name needed' }, 400);
@@ -293,7 +310,7 @@ export default {
         return await live(env, ctx);
       }
       if (url.pathname === '/api/checklist') return await checklist(request, env);
-      if (url.pathname === '/api/diary' || url.pathname === '/api/diary/name') return await diary(request, env, url);
+      if (url.pathname === '/api/diary' || url.pathname === '/api/diary/name' || url.pathname === '/api/diary/archive') return await diary(request, env, url);
       if (url.pathname.startsWith('/api/')) return json({ error: 'Not found' }, 404);
     } catch (e) {
       return json({ error: 'Something went wrong.' }, 500);
